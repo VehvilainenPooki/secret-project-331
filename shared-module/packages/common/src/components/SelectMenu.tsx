@@ -4,7 +4,7 @@ import { css, cx } from "@emotion/css"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface SelectOption<T> {
   value: T
@@ -57,7 +57,7 @@ const SelectMenu = <T extends string = string>({
         css`
           margin-bottom: 1rem;
           ${rest.disabled && `filter: opacity(0.5);`}: hover {
-            background: #f9f9f9;
+            background: var(--tone-bg-neutral-17);
           }
 
           select {
@@ -69,16 +69,16 @@ const SelectMenu = <T extends string = string>({
             font-size: 18px;
             cursor: pointer;
             /* Gray 400 from the design system: >= 3:1 contrast against white (WCAG 1.4.11) */
-            border: 3px solid ${baseTheme.colors.gray[400]};
+            border: 3px solid ${tones.toneNeutral39};
             background: none;
             min-height: 40px;
             grid-template-areas: "select";
             align-items: center;
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
             appearance: none;
             background: transparent;
             ${rest.disabled && `cursor: not-allowed;`}: hover {
-              background: #f9f9f9;
+              background: var(--tone-bg-neutral-17);
             }
           }
 
@@ -99,7 +99,7 @@ const SelectMenu = <T extends string = string>({
           }
 
           label {
-            color: #333;
+            color: var(--tone-fg-neutral-36);
             font-size: 14px;
             font-weight: 500;
           }

@@ -6,12 +6,12 @@ import { useTranslation } from "react-i18next"
 
 import type { NavigationProps } from "."
 import MOOCfi from "../../../img/moocfiLogo.svg"
-import { baseTheme } from "../../../styles"
 import { respondToOrLarger } from "../../../styles/respond"
 import { runCallbackIfEnterPressed } from "../../../utils/accessibility"
 import Button from "../../Button"
 import LoginControls from "../../LoginControls"
 import Hamburger from "./Menu/Hamburger/Hamburger"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const swingHorizontal = keyframes`
 15% {
@@ -47,8 +47,8 @@ const navbarItems = css`
   font-size: 1rem;
 
   padding: 0em 4em;
-  background: ${baseTheme.colors.clear[100]};
-  border-bottom: 2px solid #333;
+  background: ${tones.toneNeutral12};
+  border-bottom: 2px solid var(--tone-border-neutral-59);
   z-index: 100;
 
   h1 {
@@ -64,7 +64,7 @@ const navbarItems = css`
 `
 
 const navbarLogo = css`
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   display: flex;
   justify-self: start;
   margin: 0;
@@ -111,7 +111,7 @@ const navMenu = css`
   overflow-y: hidden;
 
   justify-content: end;
-  background: ${baseTheme.colors.clear[100]};
+  background: ${tones.toneNeutral12};
 
   ${respondToOrLarger.lg} {
     display: inline-block;
@@ -126,7 +126,7 @@ const navMenu = css`
   }
 `
 const navLinks = css`
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   text-decoration: none;
   position: relative;
   line-height: 1.5rem;
@@ -141,7 +141,7 @@ const navLinks = css`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: ${baseTheme.colors.gray[700]};
+    background-color: ${tones.toneNeutral46};
     transform-origin: bottom right;
     transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 
@@ -153,7 +153,7 @@ const navLinks = css`
 
   &:hover {
     text-decoration: none;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
 
     &:after {
       transform: scaleX(1);
@@ -171,7 +171,7 @@ const navLinks = css`
   width: 100%;
   padding: 2rem;
   display: table;
-  border-bottom: 2px solid #f1f1f1;
+  border-bottom: 2px solid var(--tone-border-neutral-3);
   ${respondToOrLarger.lg} {
     font-weight: 600;
     margin: 0 0.8rem;

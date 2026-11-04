@@ -34,11 +34,11 @@ const iconButtonStyles = css`
   align-items: center;
   justify-content: center;
   padding: 4px;
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--color-green-600);
+    color: var(--tone-fg-accent-7);
   }
 `
 

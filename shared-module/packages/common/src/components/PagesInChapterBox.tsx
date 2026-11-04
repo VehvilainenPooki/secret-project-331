@@ -6,7 +6,8 @@ import Link from "next/link"
 import React from "react"
 
 import ArrowSVGIcon from "../img/blackArrow.svg"
-import { baseTheme, monospaceFont, primaryFont } from "../styles"
+import { monospaceFont, primaryFont } from "../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   border-radius: 10px;
@@ -20,11 +21,11 @@ const PageNumberBox = styled.div`
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: ${baseTheme.colors.blue[200]};
+  background: ${tones.toneInfo7};
   margin-right: 8px;
 
   span {
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     font-family: ${monospaceFont};
     line-height: 1;
     font-size: 12px !important;
@@ -37,36 +38,36 @@ const ChapterParts = styled.div`
   margin-left: 0em;
   padding: 0.6em 1em;
   list-style-type: none;
-  color: rgb(17, 24, 36);
+  color: var(--tone-fg-neutral-41);
   text-decoration: none;
   border-radius: 2px;
   margin-bottom: 0.4em;
-  background: rgb(242, 245, 247);
+  background: var(--tone-bg-info-2);
   display: flex;
   align-items: center;
 
   ${({ selected }: PagesInChapterBoxExtraProps) =>
     selected &&
     `
-    background-color: #D8D8D8;
+    background-color: var(--tone-bg-neutral-68);
     font-weight: 500;
 
     :hover {
-      background-color: rgb(235, 239, 242) !important;
+      background-color: var(--tone-bg-neutral-49) !important;
     }
   `}: hover {
-    background-color: rgb(235, 239, 242);
+    background-color: var(--tone-bg-neutral-49);
   }
 
   svg {
     position: absolute;
     right: 30px;
     top: 40%;
-    fill: ${baseTheme.colors.gray[300]};
+    fill: ${tones.toneNeutral37};
   }
 
   :hover svg {
-    fill: ${baseTheme.colors.gray[600]};
+    fill: ${tones.toneNeutral44};
   }
 
   span {
@@ -98,17 +99,17 @@ const PagesInChapterBox: React.FC<React.PropsWithChildren<PagesInChapterBoxProps
         href={props.url}
         data-testid={`page-in-chapter-link-${props.chapterIndex}`}
         className={css`
-          color: #1c3b40;
+          color: var(--tone-fg-accent-12);
           box-shadow: none;
           text-decoration: none;
           &:focus-visible {
-            outline: 2px solid ${baseTheme.colors.green[500]};
+            outline: 2px solid ${tones.toneAccent19};
             outline-offset: 2px;
           }
 
           &:focus-visible .chapter-parts {
-            background-color: rgb(235, 239, 242);
-            box-shadow: 0 0 0 2px ${baseTheme.colors.green[500]};
+            background-color: var(--tone-bg-neutral-49);
+            box-shadow: 0 0 0 2px ${tones.toneAccent19};
           }
 
           :hover {

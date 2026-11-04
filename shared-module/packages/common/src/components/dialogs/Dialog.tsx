@@ -100,7 +100,7 @@ const Dialog: React.FC<DialogProps> = ({
         className={css`
           position: fixed;
           inset: 0;
-          background: rgba(0, 0, 0, 0.4);
+          background: var(--tone-bg-neutral-83);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -117,7 +117,7 @@ const Dialog: React.FC<DialogProps> = ({
             className={cx(
               props.className,
               css`
-                background: white;
+                background: var(--color-surface);
                 border-radius: 5px;
                 width: 95%;
                 max-width: ${width === "normal" ? "700px" : "1200px"};

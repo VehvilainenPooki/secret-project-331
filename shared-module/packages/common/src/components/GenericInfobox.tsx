@@ -3,16 +3,16 @@
 import { css } from "@emotion/css"
 import { InfoCircle } from "@vectopus/atlas-icons-react"
 
-import { baseTheme } from "../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const GenericInfobox: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <div
       className={css`
         padding: 0.875rem 1rem;
-        border-left: 3px solid ${baseTheme.colors.blue[500]};
+        border-left: 3px solid ${tones.toneInfo20};
         border-radius: 0 6px 6px 0;
-        background: ${baseTheme.colors.blue[25]};
+        background: ${tones.toneInfo1};
         display: flex;
         align-items: flex-start;
 
@@ -21,7 +21,7 @@ const GenericInfobox: React.FC<React.PropsWithChildren> = ({ children }) => {
     >
       <InfoCircle
         className={css`
-          color: ${baseTheme.colors.blue[500]};
+          color: ${tones.toneInfo20};
           flex: none;
           margin-right: 0.5rem;
         `}

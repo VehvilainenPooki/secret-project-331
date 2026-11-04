@@ -6,9 +6,9 @@ import React, { useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { usePopper } from "react-popper"
 
-import { baseTheme } from "../../styles"
 import type { DropdownMenuItemType } from "./DropdownMenuItem"
 import DropdownMenuItem from "./DropdownMenuItem"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface DropdownMenuProps {
   items: (DropdownMenuItemType | null)[]
@@ -86,12 +86,12 @@ const DropdownMenu: React.FC<React.PropsWithChildren<DropdownMenuProps>> = ({ it
         className={css`
           background-color: transparent;
           border: none;
-          color: ${baseTheme.colors.gray[400]};
+          color: ${tones.toneNeutral39};
           cursor: pointer;
           padding: 0 0.66em;
           margin: 0 0.66em;
           &:hover {
-            background-color: ${baseTheme.colors.clear[200]};
+            background-color: ${tones.toneNeutral22};
             border-radius: 50px;
           }
         `}
@@ -111,7 +111,7 @@ const DropdownMenu: React.FC<React.PropsWithChildren<DropdownMenuProps>> = ({ it
         >
           <ul
             className={css`
-              box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+              box-shadow: 0px 8px 40px var(--tone-shadow-neutral-10);
               width: fit-content;
               list-style: none;
               padding: 0;
@@ -120,7 +120,7 @@ const DropdownMenu: React.FC<React.PropsWithChildren<DropdownMenuProps>> = ({ it
               font-size: 17px;
 
               li + li {
-                border-top: 2px solid ${baseTheme.colors.clear[200]};
+                border-top: 2px solid ${tones.toneNeutral22};
               }
 
               li:hover {

@@ -4,8 +4,9 @@ import styled from "@emotion/styled"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme, headingFont } from "../styles"
+import { headingFont } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Container = styled.div`
   margin: 6rem 0;
@@ -15,7 +16,7 @@ const Container = styled.div`
     font-family: ${headingFont};
     font-weight: 700;
     font-size: clamp(28px, 3vw, 30px);
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     text-align: center;
     margin-bottom: 1rem;
     opacity: 0.9;

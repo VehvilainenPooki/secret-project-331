@@ -10,7 +10,7 @@ import { METER_KIND, TONE } from "@/shared-module/components/lib/displayConstant
 
 const Wrapper = styled.div`
   width: 100%;
-  background: #e9efef;
+  background: var(--tone-bg-neutral-51);
   padding: 1.75rem 2rem;
   display: flex;
   align-items: center;

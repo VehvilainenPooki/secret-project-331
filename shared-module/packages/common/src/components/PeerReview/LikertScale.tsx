@@ -10,7 +10,7 @@ import Disagree from "../../img/likert/disagree.svg"
 import Neutral from "../../img/likert/neutral.svg"
 import StronglyAgree from "../../img/likert/stronglyAgree.svg"
 import StronglyDisagree from "../../img/likert/stronglyDisagree.svg"
-import { baseTheme } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   margin: 1.5rem auto;
@@ -21,10 +21,10 @@ const Question = styled.span`
   margin: 0 auto;
   margin-bottom: 1rem;
   display: block;
-  color: #1a2333;
+  color: var(--color-text);
 `
 const Likerts = styled.div`
-  background: #f9f9f9;
+  background: var(--tone-bg-neutral-17);
   min-height: 100px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -38,14 +38,14 @@ const StyledToggleButton = styled(ToggleButton)<StyledProps>`
   flex-direction: column;
   align-items: center;
   padding: 15px 0;
-  background-color: ${({ active }: StyledProps) => (active ? "#313947" : "#f9f9f9")};
+  background-color: ${({ active }: StyledProps) => (active ? "var(--tone-tone-neutral-44)" : "var(--tone-tone-neutral-5)")};
   cursor: pointer;
   transition: all 0.2s;
   border: 0;
   outline-offset: -4px;
 
   svg .bg {
-    fill: ${({ active }) => active && "#ffd93b"};
+    fill: ${({ active }) => active && "var(--tone-tone-warning-7)"};
   }
 
   svg {
@@ -54,22 +54,22 @@ const StyledToggleButton = styled(ToggleButton)<StyledProps>`
   }
 
   &:hover {
-    background: ${({ active }: StyledProps) => (active ? "#313947" : "#babdc2")};
+    background: ${({ active }: StyledProps) => (active ? "var(--tone-tone-neutral-44)" : "var(--tone-tone-neutral-35)")};
     svg .bg {
-      fill: #ffd93b;
+      fill: var(--tone-fg-warning-1);
     }
   }
 
   &:focus {
     outline: 3px solid
-      ${({ active }) => (active ? baseTheme.colors.green[200] : baseTheme.colors.green[400])};
+      ${({ active }) => (active ? tones.toneAccent9 : tones.toneAccent16)};
   }
 
   .likert-scale-text {
     margin-top: 6px;
     font-size: 15px;
     font-weight: 500;
-    color: ${({ active }) => (active ? "#ffffff" : "#313947")};
+    color: ${({ active }) => (active ? "var(--tone-tone-neutral-1)" : "var(--tone-tone-neutral-44)")};
     text-align: center;
     line-height: 1.2;
     padding: 0 0.5rem;

@@ -7,8 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import MOOCfi from "../img/moocfiTextLogo.svg"
 import UHLogo from "../img/UHBrandLogo.svg"
-import { baseTheme, headingFont } from "../styles"
+import { headingFont } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const PRIVACY_LINK_FI = "https://www.mooc.fi/faq/tietosuojaseloste/"
 const PRIVACY_LINK_EN = "https://www.mooc.fi/en/faq/tietosuojaseloste/"
@@ -27,7 +28,7 @@ const ACCESSIBILITY_STATEMENT_LINK_SV =
 const Container = styled.div`
   margin-top: 5em;
   padding: 1rem;
-  background: #f7f8f9;
+  background: var(--tone-bg-neutral-20);
 
   ${respondToOrLarger.sm} {
     padding: 4rem;
@@ -42,7 +43,7 @@ const Container = styled.div`
     line-height: 1;
     font-weight: 600;
     font-size: clamp(24px, 2vw, 30px);
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     padding: 0;
 
     ${respondToOrLarger.sm} {
@@ -56,7 +57,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   display: grid;
   grid-template-rows: 1fr;
-  color: #231f20;
+  color: var(--tone-fg-neutral-39);
   position: relative;
   row-gap: 20px;
 
@@ -75,7 +76,7 @@ const Wrapper = styled.div`
 
 const StyledLink = styled.a`
   text-decoration: none;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 18px;
   font-weight: 500;
   opacity: 0.8;
@@ -113,7 +114,7 @@ const Text = styled.div`
   p {
     font-size: 18px;
     padding-right: 0;
-    color: ${baseTheme.colors.gray[600]};
+    color: ${tones.toneNeutral44};
   }
 
   .mooc-description {
@@ -172,7 +173,7 @@ const Footer: React.FC<React.PropsWithChildren<Props>> = ({ privacyLinks = null 
         margin-top: 2rem;
 
         a {
-          color: #065853;
+          color: var(--tone-fg-accent-8);
           font-weight: 600;
         }
       `}

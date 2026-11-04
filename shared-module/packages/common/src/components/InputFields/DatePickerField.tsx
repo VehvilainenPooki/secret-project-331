@@ -33,13 +33,13 @@ const DatePicker = ({ onChange, onChangeByValue, className, ...rest }: DatePicke
             input {
               max-width: 22ch;
               padding: 8px 10px 10px 10px;
-              border: 2px solid #dedede;
+              border: 2px solid var(--tone-border-neutral-26);
               border-radius: 3px;
               outline: none;
 
               &:focus,
               &:active {
-                border-color: #55b3f5;
+                border-color: var(--tone-border-info-3);
               }
 
               @media (max-width: 767.98px) {
@@ -48,7 +48,7 @@ const DatePicker = ({ onChange, onChangeByValue, className, ...rest }: DatePicke
             }
 
             span {
-              color: #333;
+              color: var(--tone-fg-neutral-36);
               font-size: 14px;
               font-weight: 500;
               margin-bottom: 0.2rem;

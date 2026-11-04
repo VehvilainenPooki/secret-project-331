@@ -5,7 +5,6 @@ import { useEffect, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import Spinner from "../../components/Spinner"
-import { baseTheme } from "../../styles"
 import { monospaceFont } from "../../styles/typography"
 import {
   DYNAMIC_IMPORT_MAX_ATTEMPTS,
@@ -17,6 +16,7 @@ import {
   DYNAMIC_IMPORT_STATE_RENDER_ERROR,
   useDynamicImportStatus,
 } from "./dynamicImportStore"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const DYNAMIC_LOADING_SLOW_WARNING_KEY = "dynamic-loading-slow-warning"
 const DYNAMIC_LOADING_VERY_SLOW_WARNING_KEY = "dynamic-loading-very-slow-warning"
@@ -36,22 +36,22 @@ const loadingWarningTextClass = css`
   margin: 0.25rem 0 0;
   max-width: 32rem;
   text-align: center;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
 `
 
 const loadingWarningBoxClass = css`
   margin-top: 0.75rem;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
-  background-color: ${baseTheme.colors.gray[25]};
+  border: 1px solid ${tones.toneNeutral35};
+  background-color: ${tones.toneNeutral3};
 `
 
 const technicalDetailsClass = css`
   margin: 0.5rem 0 0;
   font-family: ${monospaceFont};
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   white-space: pre-wrap;
   overflow-wrap: anywhere;
 `
@@ -60,14 +60,14 @@ const reloadButtonClass = css`
   margin-top: 0.75rem;
   padding: 0.4rem 0.9rem;
   border-radius: 9999px;
-  border: 1px solid ${baseTheme.colors.gray[300]};
-  background-color: white;
-  color: ${baseTheme.colors.gray[800]};
+  border: 1px solid ${tones.toneNeutral37};
+  background-color: var(--color-surface);
+  color: ${tones.toneNeutral47};
   font-size: 0.9rem;
   cursor: pointer;
 
   &:hover {
-    background-color: ${baseTheme.colors.gray[100]};
+    background-color: ${tones.toneNeutral29};
   }
 `
 

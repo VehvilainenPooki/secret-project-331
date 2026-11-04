@@ -3,7 +3,8 @@
 import { css, cx } from "@emotion/css"
 import type { DetailedHTMLProps, InputHTMLAttributes } from "react"
 
-import { baseTheme, primaryFont } from "../../styles"
+import { primaryFont } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const labelClass = css`
   font-family: ${primaryFont};
@@ -16,12 +17,12 @@ const labelClass = css`
 
   input[type="radio"] {
     appearance: none;
-    background-color: #fff;
+    background-color: var(--color-surface);
     margin: 0;
     font-family: ${primaryFont};
     width: 1.15em;
     height: 1.15em;
-    border: 1.5px solid #787878;
+    border: 1.5px solid var(--tone-border-neutral-55);
     border-radius: 50%;
     transform: translateY(-0.075em);
     display: grid;
@@ -35,7 +36,7 @@ const labelClass = css`
     border-radius: 50%;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    background-color: ${baseTheme.colors.green[600]};
+    background-color: ${tones.toneAccent21};
   }
 
   span {
@@ -46,7 +47,7 @@ const labelClass = css`
 
   input[type="radio"]:checked::before {
     transform: scale(1);
-    background: #1f6964;
+    background: var(--color-accent);
   }
 `
 

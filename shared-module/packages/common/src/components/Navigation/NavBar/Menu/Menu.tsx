@@ -5,8 +5,8 @@ import type { ReactNode } from "react"
 import { useId, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "../../../../styles"
 import Hamburger from "./Hamburger/Hamburger"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const NavMenu = css`
   padding: 0px;
@@ -25,7 +25,7 @@ const MenuIcon = css`
   color: inherit;
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 `
@@ -53,23 +53,23 @@ export const menuEntryLayout = css`
 `
 
 const ToolTip = css`
-  background: #fff;
-  border-color: #cacaca;
+  background: var(--color-surface);
+  border-color: var(--tone-border-neutral-43);
   padding: 0;
   border-radius: 4px;
   position: absolute;
   margin-bottom: 10px;
   margin-left: -95px;
   z-index: 901;
-  box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.1);
+  box-shadow: 0px 0px 5px var(--tone-shadow-neutral-9);
 
   li {
     text-decoration: none;
 
-    border-bottom: 2px solid #e1e1e1;
+    border-bottom: 2px solid var(--tone-border-neutral-22);
     list-style: none;
     margin: 0;
-    background-color: white;
+    background-color: var(--color-surface);
 
     &:last-child {
       border-bottom: none;
@@ -81,12 +81,12 @@ const ToolTip = css`
 
     Button {
       ${MENU_ENTRY_LAYOUT}
-      color: ${baseTheme.colors.green[500]};
+      color: ${tones.toneAccent19};
     }
 
     Button:hover {
       background: inherit;
-      color: ${baseTheme.colors.green[700]};
+      color: ${tones.toneAccent23};
     }
   }
 `

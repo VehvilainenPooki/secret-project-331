@@ -5,8 +5,9 @@ import styled from "@emotion/styled"
 import Link from "next/link"
 import React from "react"
 
-import { baseTheme, monospaceFont, primaryFont, secondaryFont } from "../../styles"
+import { monospaceFont, primaryFont, secondaryFont } from "../../styles"
 import CircularProgressBar from "../CircularProgressBar"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   border-radius: 10px;
@@ -16,7 +17,7 @@ const Wrapper = styled.div`
 
   h2 {
     text-align: center;
-    color: #3b4754;
+    color: var(--tone-fg-info-14);
     font-family: ${secondaryFont};
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -46,7 +47,7 @@ const ImageBox = styled.div`
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background: ${baseTheme.colors.blue[200]};
+    background: ${tones.toneInfo7};
     opacity: 0.8;
   }
 
@@ -54,7 +55,7 @@ const ImageBox = styled.div`
     text-align: center;
     z-index: 3;
     font-family: ${monospaceFont};
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     font-weight: 600;
     line-height: 1.8;
     font-size: 12px;
@@ -67,14 +68,14 @@ const ExercisePart = styled.div<StyledProps>`
   margin-left: 0em;
   padding-left: 1em;
   list-style-type: none;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   text-decoration: none;
   background: ${({ bg }) => bg && bg};
   display: flex;
   align-items: center;
 
   :hover {
-    background-color: rgb(235, 239, 242);
+    background-color: var(--tone-bg-neutral-49);
   }
 
   span {
@@ -124,8 +125,8 @@ const ExerciseBox: React.FC<React.PropsWithChildren<ExerciseBoxProps>> = ({
             text-decoration: none;
             &:focus-visible {
               & > div {
-                background-color: ${baseTheme.colors.gray[500]};
-                color: ${baseTheme.colors.clear[100]};
+                background-color: ${tones.toneNeutral41};
+                color: ${tones.toneNeutral12};
               }
             }
           `}
@@ -139,7 +140,7 @@ const ExerciseBox: React.FC<React.PropsWithChildren<ExerciseBoxProps>> = ({
             <span>{exerciseTitle}</span>
             <div
               className={css`
-                background: rgb(235, 239, 242);
+                background: var(--tone-bg-neutral-49);
                 width: 65px;
                 height: 62px;
                 display: flex;

@@ -18,9 +18,9 @@ import LoadingNotification from "../components/Notifications/Loading"
 import { errorNotificationMessage } from "../components/Notifications/notificationHelpers"
 import SuccessNotification from "../components/Notifications/Success"
 import { isAppApiError } from "../errors/AppApiError"
-import { baseTheme } from "../styles"
 import { includeIf, omitUndefined } from "../utils/nullability"
 import useSetShowStuffInfinitelyInSystemTestScreenshots from "./useShowToastInfinitely"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface EnableNotifications {
   notify: true
@@ -124,8 +124,8 @@ export default function useToastMutation<
           message: notificationOptions.successMessage,
           deleteVariant: isDeleteMethod,
           ...includeIf(isDeleteMethod, {
-            icon: <BellXmark color={baseTheme.colors.red[700]} size={20} />,
-            closeHoverBackgroundColor: baseTheme.colors.gray[100],
+            icon: <BellXmark color={tones.toneDanger19} size={20} />,
+            closeHoverBackgroundColor: tones.fgNeutral6,
           }),
         }
         switch (notificationOptions.method) {

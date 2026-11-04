@@ -3,8 +3,8 @@
 import { css, cx } from "@emotion/css"
 import React from "react"
 
-import { baseTheme } from "../styles"
 import { runCallbackIfEnterPressed } from "../utils/accessibility"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 export interface SpeechBalloonProps {
   className?: string
@@ -20,11 +20,11 @@ const POINTER_SIZE = "12px"
 
 // Clean white background with green accents
 const COLORS = {
-  bg: "#ffffff",
-  border: baseTheme.colors.green[400],
-  text: baseTheme.colors.gray[700],
-  shadow: "rgba(0, 0, 0, 0.4)",
-  shadowArrow: "rgba(0, 0, 0, 0.2)",
+  bg: "var(--color-surface)",
+  border: tones.borderAccent8,
+  text: colors.text,
+  shadow: "var(--tone-shadow-neutral-27)",
+  shadowArrow: "var(--tone-shadow-neutral-21)",
 }
 
 const SpeechBalloon = React.forwardRef<HTMLDivElement, SpeechBalloonProps>(

@@ -6,13 +6,13 @@ import type { InputHTMLAttributes } from "react"
 import React, { forwardRef } from "react"
 import type { FieldError } from "react-hook-form"
 
-import { baseTheme } from "../../styles"
 import { primaryFont } from "../../styles/typography"
 import { errorToDescription } from "../../utils/strings"
+import { tones } from "@/shared-module/components/styles/themes"
 
-const ERRORCOLOR = baseTheme.colors.red[600]
+const ERRORCOLOR = tones.toneDanger17
 // gray[400] keeps border contrast >= 3:1 against the field background (WCAG 1.4.11).
-const DEFAULTCOLOR = baseTheme.colors.gray[400]
+const DEFAULTCOLOR = tones.toneNeutral39
 
 interface InputExtraProps {
   error?: string | undefined
@@ -23,7 +23,7 @@ interface InputExtraProps {
 const NO_COLOR_FIELD_PADDING = "padding: 8px 10px 10px 10px;"
 
 const Input = styled.input<InputExtraProps>`
-  background: #fcfcfc;
+  background: var(--tone-bg-neutral-11);
   border-width: 2px;
   border-style: solid;
   border-radius: 3px;
@@ -42,8 +42,8 @@ const Input = styled.input<InputExtraProps>`
 
   &:focus,
   &:active {
-    border-color: #215887;
-    box-shadow: 0 0 0 2px #215887;
+    border-color: var(--tone-border-info-9);
+    box-shadow: 0 0 0 2px var(--tone-shadow-info-16);
   }
 
   @media (max-width: 767.98px) {
@@ -52,7 +52,7 @@ const Input = styled.input<InputExtraProps>`
 `
 
 const errorClass = css`
-  color: ${baseTheme.colors.red[600]};
+  color: ${tones.toneDanger17};
   font-size: 14px;
   display: inline-block;
 `
@@ -97,13 +97,13 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
         <label
           className={cx(
             css`
-              color: #333;
+              color: var(--tone-fg-neutral-36);
               font-family: ${primaryFont};
               font-weight: 500;
               font-size: 14px;
               display: block;
               margin-bottom: 2px;
-              ${disabled && `color: ${baseTheme.colors.gray[400]};`}
+              ${disabled && `color: ${tones.toneNeutral39};`}
               ${disabled && `cursor: not-allowed;`}
             `,
             rest.labelStyle,

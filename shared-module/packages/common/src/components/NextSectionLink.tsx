@@ -9,10 +9,11 @@ import { useTranslation } from "react-i18next"
 import ArrowSVGIcon from "../img/arrow.svg"
 import BackArrowIcon from "../img/backarrow.svg"
 import TopArrowSVGIcon from "../img/up-arrow.svg"
-import { baseTheme, headingFont, typography } from "../styles"
+import { headingFont, typography } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
 import LinkOrNoLink from "./LinkOrNoLink"
 import HideTextInSystemTests from "./system-tests/HideTextInSystemTests"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface NextSectionLinkProps {
   title: string
@@ -36,15 +37,15 @@ const Wrapper = styled.div`
     margin-bottom: 2rem;
     padding: 3rem 0 3.5rem 0;
   }
-  background: #f4f6f8;
+  background: var(--tone-bg-neutral-25);
   padding: 1.5rem 1rem 2rem 1.4rem;
 `
 
 // oxlint-disable-next-line i18next/no-literal-string
 const StyledLink = styled(Link)`
-  border: 1px solid ${baseTheme.colors.blue[200]};
+  border: 1px solid ${tones.toneInfo7};
   padding: 0.3rem 1rem;
-  background: #fff;
+  background: var(--color-surface);
   display: inline-block;
   justify-content: center;
   align-items: center;
@@ -57,23 +58,23 @@ const StyledLink = styled(Link)`
     font-size: 15px;
     font-weight: 500;
     padding-left: 8px;
-    color: ${baseTheme.colors.blue[700]};
+    color: ${tones.toneInfo26};
   }
 
   .arrow {
-    fill: ${baseTheme.colors.blue[500]};
+    fill: ${tones.toneInfo20};
   }
 
   &:hover {
     cursor: pointer;
-    background: ${baseTheme.colors.blue[100]};
+    background: ${tones.toneInfo5};
 
     span {
-      color: ${baseTheme.colors.blue[600]};
+      color: ${tones.toneInfo23};
     }
 
     .arrow {
-      fill: ${baseTheme.colors.blue[600]};
+      fill: ${tones.toneInfo23};
     }
   }
 `
@@ -111,7 +112,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
             line-height: 1.3;
             font-weight: 600;
             opacity: 0.9;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
         >
           {title}
@@ -119,7 +120,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
         <p
           className={css`
             font-size: 18px;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             font-weight: 500;
             margin: 0.3rem 0;
             padding: 0;
@@ -149,7 +150,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
             <Link href={previous} aria-label={t("previous-page")}>
               <div
                 className={css`
-                  background: ${baseTheme.colors.green[100]};
+                  background: ${tones.toneAccent7};
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -161,7 +162,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
                   }
 
                   svg {
-                    fill: #44827e;
+                    fill: var(--tone-fg-accent-5);
                     width: 30%;
                     ${respondToOrLarger.md} {
                       width: 100%;
@@ -186,7 +187,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
               overflow: hidden;
               text-decoration: none;
               &:focus-visible {
-                outline: 2px solid ${baseTheme.colors.green[500]};
+                outline: 2px solid ${tones.toneAccent19};
                 outline-offset: 2px;
               }
             `}
@@ -207,7 +208,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
               <div
                 className={css`
                   background-color: ${
-                    url ? baseTheme.colors.green[600] : baseTheme.colors.gray[600]
+                    url ? tones.toneAccent21 : tones.toneNeutral44
                   };
 
                   flex: 1;
@@ -225,14 +226,14 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
                     width: 100%;
                     font-size: ${typography.h5};
                     font-weight: 600;
-                    color: #fff;
+                    color: var(--color-text-on-accent);
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
                   }
                   .next-page-subtitle {
                     font-weight: medium;
-                    color: #dae6e5;
+                    color: var(--tone-fg-neutral-5);
                     font-size: 15px;
 
                     ${respondToOrLarger.md} {
@@ -256,17 +257,17 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
               </div>
               <div
                 className={css`
-                  color: white;
+                  color: var(--color-text-on-accent);
                   padding: 16px 16px 16px 0;
                   background-color: ${
-                    url ? baseTheme.colors.green[600] : baseTheme.colors.gray[600]
+                    url ? tones.toneAccent21 : tones.toneNeutral44
                   };
                   display: flex;
                   justify-content: center;
                   align-items: center;
 
                   .arrow {
-                    fill: #fff;
+                    fill: var(--color-text-on-accent);
                   }
 
                   ${respondToOrLarger.sm} {

@@ -5,16 +5,16 @@ import { useTranslation } from "react-i18next"
 
 import type { NavigationProps } from "."
 import MOOCfi from "../../../img/moocfiLogo.svg"
-import { baseTheme } from "../../../styles"
 import { respondToOrLarger } from "../../../styles/respond"
 import { MARGIN_BETWEEN_NAVBAR_AND_CONTENT } from "../../../utils/constants"
 import SkipLink from "../../SkipLink"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const StyledIcon = css`
   font-size: 1.8rem;
 
   path {
-    color: ${baseTheme.colors.gray[600]} !important;
+    color: ${tones.toneNeutral44} !important;
   }
 `
 const Navbar = css`
@@ -26,10 +26,10 @@ const Navbar = css`
   font-size: 1rem;
   padding: 0 1.4rem;
   margin-bottom: ${MARGIN_BETWEEN_NAVBAR_AND_CONTENT};
-  border-bottom: 2px solid ${baseTheme.colors.gray[100]};
+  border-bottom: 2px solid ${tones.toneNeutral29};
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 
@@ -39,10 +39,10 @@ const Navbar = css`
 `
 const NavbarLogo = css`
   cursor: pointer;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 
   & > a:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 `

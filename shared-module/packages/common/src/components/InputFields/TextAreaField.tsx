@@ -5,7 +5,7 @@ import type { TextareaHTMLAttributes } from "react"
 import React, { forwardRef, useEffect, useId, useRef } from "react"
 import type { FieldError } from "react-hook-form"
 
-import { baseTheme } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string
@@ -152,9 +152,9 @@ const TextAreaField = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               display: grid;
 
               textarea {
-                background: #fcfcfc;
+                background: var(--tone-bg-neutral-11);
                 /* gray[400] keeps the border contrast >= 3:1 against the field background (WCAG 1.4.11). */
-                border: 1.6px solid ${baseTheme.colors.gray[400]};
+                border: 1.6px solid ${tones.toneNeutral39};
                 border-radius: 3px;
                 padding: 10px 12px;
                 resize: ${resize};
@@ -163,11 +163,11 @@ const TextAreaField = forwardRef<HTMLTextAreaElement, TextAreaProps>(
               textarea:focus,
               textarea:focus-visible {
                 /* Visible focus indicator with >= 3:1 contrast against the background. */
-                border-color: #215887;
-                box-shadow: 0 0 0 2px #215887;
+                border-color: var(--tone-border-info-9);
+                box-shadow: 0 0 0 2px var(--tone-shadow-info-16);
               }
               span {
-                color: #333;
+                color: var(--tone-fg-neutral-36);
                 font-size: 14px;
                 font-weight: 500;
                 margin-bottom: 0.2rem;

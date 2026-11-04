@@ -3,8 +3,8 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme } from "../../styles"
 import Button from "../Button"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface LanguageOptionProps {
   label: string
@@ -21,12 +21,12 @@ const LanguageOption: React.FC<LanguageOptionProps> = ({ label, onClick, isActiv
         text-decoration: none !important;
         list-style: none !important;
         margin: 0 !important;
-        background: #fff;
+        background: var(--color-surface);
 
         min-width: 10rem !important;
         border-width: 0 0 2px !important;
         border-style: solid !important;
-        border-color: #e1e1e1 !important;
+        border-color: var(--tone-border-neutral-22) !important;
       `}
     >
       <Button
@@ -37,20 +37,20 @@ const LanguageOption: React.FC<LanguageOptionProps> = ({ label, onClick, isActiv
           margin: 0 !important;
           padding: 0.7rem 1rem !important;
           font-size: 16px !important;
-          background: ${isActive ? baseTheme.colors.green[100] : "#fff"} !important;
-          color: ${isActive ? baseTheme.colors.green[600] : baseTheme.colors.green[500]} !important;
+          background: ${isActive ? tones.toneAccent7 : "#fff"} !important;
+          color: ${isActive ? tones.toneAccent21 : tones.toneAccent19} !important;
           border: 0 !important;
           width: 100%;
           text-align: left;
           font-weight: ${isActive ? "600" : "normal"} !important;
 
           :hover {
-            color: ${baseTheme.colors.green[700]};
+            color: ${tones.toneAccent23};
             filter: brightness(92%) contrast(110%);
           }
 
           :focus-visible {
-            outline: 2px solid ${baseTheme.colors.green[500]};
+            outline: 2px solid ${tones.toneAccent19};
             outline-offset: -2px;
           }
         `}

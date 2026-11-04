@@ -2,12 +2,12 @@
 
 import styled from "@emotion/styled"
 
-import { baseTheme } from "../../styles"
 import { respondToOrLarger } from "../../styles/respond"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export const NotificationWrapper = styled.div`
   width: 150px;
-  background: ${baseTheme.colors.clear[200]};
+  background: ${tones.toneNeutral22};
   height: 50px;
 
   ${respondToOrLarger.xs} {

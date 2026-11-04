@@ -3,7 +3,8 @@
 import styled from "@emotion/styled"
 import React from "react"
 
-import { baseTheme, headingFont } from "../styles"
+import { headingFont } from "../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CircularProgressBarExtraProps {
   scoreMaximum: number
@@ -36,13 +37,13 @@ const CircleBox = styled.div`
 
   .progress-circle-bg {
     fill: none;
-    stroke: ${baseTheme.colors.green[200]};
+    stroke: ${tones.toneAccent9};
     stroke-width: 7px;
     stroke-linecap: round;
   }
   .progress-circle-value {
     fill: none;
-    stroke: ${baseTheme.colors.green[600]};
+    stroke: ${tones.toneAccent21};
     stroke-width: 7px;
     stroke-linecap: round;
     stroke-dasharray: 131 131;
