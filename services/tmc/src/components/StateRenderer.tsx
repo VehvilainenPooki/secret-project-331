@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next"
 
 import type { AnswerArchiveError } from "@/hooks/useIframeProtocol"
 import Button from "@/shared-module/common/components/Button"
-import { baseTheme } from "@/shared-module/common/styles"
 import { EXERCISE_SERVICE_CONTENT_ID } from "@/shared-module/exercise-protocol/core/constants"
 import type { UploadResultMessage } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types"
 import withErrorBoundary from "@/shared-module/exercise-react/react/components/withErrorBoundary"
@@ -15,6 +14,7 @@ import type { ExerciseFile, ExerciseIframeState } from "@/util/stateInterfaces"
 import AnswerExercise from "./AnswerExercise"
 import ExerciseEditor from "./ExerciseEditor"
 import ViewSubmission from "./ViewSubmission"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   state: ExerciseIframeState | null
@@ -44,8 +44,8 @@ const ArchiveErrorNotice: React.FC<{ error: AnswerArchiveError; onRetry: () => v
         margin-bottom: 1rem;
         padding: 0.75rem 1rem;
         border-radius: 0.5rem;
-        background-color: ${baseTheme.colors.yellow[100]};
-        color: ${baseTheme.colors.yellow[800]};
+        background-color: ${tones.toneWarning3};
+        color: ${tones.toneWarning12};
         font-size: 0.9375rem;
       `}
     >

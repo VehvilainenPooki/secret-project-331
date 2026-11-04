@@ -3,20 +3,20 @@ import styled from "@emotion/styled"
 import { monospaceFont } from "@/shared-module/exercise-react/styles"
 
 const colors = {
-  primary: "#0275d8",
-  accent: "#ff7518",
-  accentHover: "#e66a14",
-  danger: "#f44141",
-  success: "#4caf50",
-  successHover: "#228b22",
-  error: "#f44336",
-  surface: "#fff",
-  text: "#252525",
+  primary: "var(--tone-tone-info-15)",
+  accent: "var(--tone-tone-warning-15)",
+  accentHover: "var(--tone-tone-warning-16)",
+  danger: "var(--tone-tone-danger-12)",
+  success: "var(--tone-tone-accent-15)",
+  successHover: "var(--tone-tone-accent-18)",
+  error: "var(--tone-tone-danger-11)",
+  surface: "var(--color-surface)",
+  text: "var(--tone-fg-neutral-37)",
   textMuted: "#666",
-  border: "#e0e0e0",
-  muted: "#ebebeb",
-  mutedHover: "#d5d5d5",
-  stdinBg: "#e8e8e8",
+  border: "var(--tone-border-neutral-25)",
+  muted: "var(--tone-tone-neutral-23)",
+  mutedHover: "var(--tone-tone-neutral-31)",
+  stdinBg: "var(--tone-bg-neutral-53)",
 } as const
 
 export const Card = styled.div`
@@ -24,8 +24,8 @@ export const Card = styled.div`
   max-width: 100%;
   border-radius: 8px;
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.12),
-    0 1px 2px rgba(0, 0, 0, 0.08);
+    0 1px 3px var(--tone-shadow-neutral-13),
+    0 1px 2px var(--tone-shadow-neutral-8);
   background: ${colors.surface};
   padding: 1rem;
   box-sizing: border-box;
@@ -75,7 +75,7 @@ export const RunButton = styled(StyledButton)`
   background-color: ${colors.primary};
   color: ${colors.surface};
   &:hover:not(:disabled) {
-    background-color: #0262bd;
+    background-color: var(--tone-bg-info-7);
     color: ${colors.surface};
   }
 `
@@ -84,7 +84,7 @@ export const StopButton = styled(StyledButton)`
   background-color: ${colors.primary};
   color: ${colors.surface};
   &:hover:not(:disabled) {
-    background-color: #0262bd;
+    background-color: var(--tone-bg-info-7);
     color: ${colors.surface};
   }
 `
@@ -111,7 +111,7 @@ export const ResetButton = styled(StyledButton)`
 export const ConfirmOverlay = styled.div`
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: var(--tone-bg-neutral-83);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,7 +122,7 @@ export const ConfirmDialog = styled.div`
   background: ${colors.surface};
   padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px var(--tone-shadow-neutral-21);
   min-width: 280px;
 `
 
@@ -151,16 +151,16 @@ export const OutputContainer = styled.div`
   width: 100%;
   min-height: 100px;
   box-shadow:
-    -2px 3px 2px 1px rgba(0, 0, 0, 0.2),
-    0px 1px 1px 0px rgba(0, 0, 0, 0.14),
-    0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    -2px 3px 2px 1px var(--tone-shadow-neutral-21),
+    0px 1px 1px 0px var(--tone-shadow-neutral-15),
+    0px 1px 3px 0px var(--tone-shadow-neutral-13);
   border-radius: 4px 4px 0 0;
   position: relative;
 `
 
 export const OutputHeader = styled.div<{ color: "orange" | "gray" }>`
-  background-color: ${(p) => (p.color === "orange" ? "rgb(255, 128, 0)" : colors.stdinBg)};
-  color: black;
+  background-color: ${(p) => (p.color === "orange" ? "var(--tone-tone-warning-14)" : colors.stdinBg)};
+  color: var(--tone-fg-neutral-44);
   border-radius: 3px 3px 0 0;
   padding: 5px;
 `
@@ -190,7 +190,7 @@ export const OutputPre = styled.pre`
 `
 
 export const StdinWaitingBanner = styled.div`
-  background-color: rgb(255, 128, 0);
+  background-color: var(--tone-bg-warning-8);
   color: ${colors.text};
   padding: 8px 10px;
   margin: 0 -10px 10px -10px;
@@ -238,7 +238,7 @@ export const StdinInput = styled.input`
   font-family: ${monospaceFont};
   font-size: 0.875rem;
   padding: 6px 8px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--tone-border-neutral-41);
   border-radius: 4px;
   width: 100%;
   max-width: 400px;

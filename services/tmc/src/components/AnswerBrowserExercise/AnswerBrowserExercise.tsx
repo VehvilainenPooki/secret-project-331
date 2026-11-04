@@ -87,8 +87,8 @@ const AnswerBrowserExercise: React.FC<React.PropsWithChildren<AnswerBrowserExerc
             margin-bottom: 1rem;
             padding: 0.75rem 1rem;
             border-radius: 0.5rem;
-            background-color: ${passed ? "#dcfce7" : "#fef3c7"};
-            color: ${passed ? "#166534" : "#92400e"};
+            background-color: ${passed ? "var(--tone-tone-accent-3)" : "var(--tone-tone-warning-4)"};
+            color: ${passed ? "var(--tone-tone-accent-22)" : "var(--tone-tone-warning-17)"};
             font-size: 0.9375rem;
           `}
         >
