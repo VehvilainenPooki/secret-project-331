@@ -13,6 +13,7 @@ import type {
 } from "@/generated/api/types.generated"
 import { baseTheme } from "@/shared-module/common/styles"
 import { includeIf, omitUndefined } from "@/shared-module/common/utils/nullability"
+import { withAlpha } from "@/shared-module/components/styles/themes"
 
 import { SCHEDULE_STAGE_ORDER } from "../../schedule/scheduleConstants"
 import { useStageTimelineMeasurements } from "../hooks/useStageTimelineMeasurements"
@@ -136,7 +137,7 @@ const todayLineStyles = css`
   background: linear-gradient(
     to bottom,
     ${baseTheme.colors.red[600]},
-    ${baseTheme.colors.red[600]}40
+    ${withAlpha(baseTheme.colors.red[600], 25.1)}
   );
 `
 

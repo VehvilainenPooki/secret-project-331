@@ -18,6 +18,7 @@ import SendIcon from "@/imgs/send.svg"
 import StopIcon from "@/imgs/stop.svg"
 import { baseTheme } from "@/shared-module/common/styles"
 import { Button, LoadingRegion, TextArea, ErrorNotice } from "@/shared-module/components"
+import { withAlpha } from "@/shared-module/components/styles/themes"
 
 import { CHATBOX_HEIGHT_PX } from "../Chatbot/ChatbotDialog"
 import { useChatbotContext } from "./ChatbotContext"
@@ -211,7 +212,7 @@ const composerShellStyle = css`
   border: 1.5px solid var(--field-border-color);
   border-radius: 14px;
   background-color: var(--field-bg);
-  box-shadow: 0 1px 2px ${baseTheme.colors.gray[700]}14;
+  box-shadow: 0 1px 2px ${withAlpha(baseTheme.colors.gray[700], 7.84)};
   transition:
     border-color 0.15s,
     box-shadow 0.15s;

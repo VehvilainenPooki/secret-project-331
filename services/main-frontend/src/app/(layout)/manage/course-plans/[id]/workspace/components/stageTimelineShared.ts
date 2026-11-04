@@ -3,6 +3,7 @@ import { css } from "@emotion/css"
 import type { StageMonth } from "@/app/(layout)/manage/course-plans/[id]/schedule/scheduleMappers"
 import type { CourseDesignerStage } from "@/generated/api/types.generated"
 import { baseTheme } from "@/shared-module/common/styles"
+import { withAlpha } from "@/shared-module/components/styles/themes"
 
 export const STAGE_ACCENTS: Record<CourseDesignerStage, string> = {
   Analysis: baseTheme.colors.green[600],
@@ -53,7 +54,7 @@ export const tabBandUnselectedStyles = css`
 `
 
 export const tabBandSelectedStyles = (accent: string) => css`
-  background: ${accent}20;
+  background: ${withAlpha(accent, 12.55)};
   box-shadow:
     0 2px 6px rgba(15, 23, 42, 0.08),
     0 1px 3px rgba(15, 23, 42, 0.05);
@@ -102,7 +103,7 @@ export const stagePillSelectedStyles = (accent: string) => css`
   color: white;
   box-shadow:
     0 1px 4px rgba(15, 23, 42, 0.15),
-    0 0 0 1px ${accent}33;
+    0 0 0 1px ${withAlpha(accent, 20)};
 `
 
 export const stagePillCompletedStyles = css`
@@ -112,8 +113,8 @@ export const stagePillCompletedStyles = css`
 `
 
 export const stagePillFutureStyles = (accent: string) => css`
-  border-color: ${accent}80;
-  color: ${accent}b3;
+  border-color: ${withAlpha(accent, 50.2)};
+  color: ${withAlpha(accent, 70.2)};
 `
 
 export const stageMonthsRowStyles = css`

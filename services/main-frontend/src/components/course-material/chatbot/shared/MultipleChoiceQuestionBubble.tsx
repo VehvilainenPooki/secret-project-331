@@ -7,6 +7,7 @@ import { VisuallyHidden } from "react-aria"
 import { useTranslation } from "react-i18next"
 
 import { baseTheme } from "@/shared-module/common/styles"
+import { withAlpha } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import {
@@ -30,8 +31,8 @@ type BubbleVisualState =
 // `baseTheme.colors.green`'s own pale tints (75-200) are so desaturated they read as near-white,
 // indistinguishable from an equally pale gray at a glance. A visible tint still made of that same
 // theme color comes from lowering its opacity instead of picking a paler step of the scale.
-const QUESTION_TINT_STRONG = `${baseTheme.colors.green[400]}26`
-const QUESTION_TINT_FAINT = `${baseTheme.colors.green[400]}14`
+const QUESTION_TINT_STRONG = withAlpha(baseTheme.colors.green[400], 14.9)
+const QUESTION_TINT_FAINT = withAlpha(baseTheme.colors.green[400], 7.84)
 
 const bubbleBaseStyle = css`
   align-self: flex-start;

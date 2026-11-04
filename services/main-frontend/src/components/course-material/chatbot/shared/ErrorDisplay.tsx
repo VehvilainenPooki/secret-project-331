@@ -9,6 +9,7 @@ import { zStreamEventError } from "@/generated/course-material-api/zod.generated
 import { normalizeErrorForDisplay } from "@/shared-module/common/errors/normalizeErrorForDisplay"
 import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
 import { Disclosure } from "@/shared-module/components"
+import { withAlpha } from "@/shared-module/components/styles/themes"
 
 interface ErrorDisplayProps {
   /// An unknown error type, can also be StreamEventError
@@ -90,11 +91,11 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
           margin: 16px 12px;
           border: 1px solid ${baseTheme.colors.red[300]};
           border-left: 4px solid ${baseTheme.colors.red[400]};
-          background: ${baseTheme.colors.red[100]}40;
+          background: ${withAlpha(baseTheme.colors.red[100], 25.1)};
           border-radius: 8px;
           box-shadow:
-            0 2px 8px ${baseTheme.colors.red[200]}60,
-            0 1px 3px ${baseTheme.colors.red[300]}40;
+            0 2px 8px ${withAlpha(baseTheme.colors.red[200], 37.65)},
+            0 1px 3px ${withAlpha(baseTheme.colors.red[300], 25.1)};
           overflow: auto;
           backdrop-filter: blur(4px);
         `}
@@ -105,7 +106,7 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
           role="alert"
           className={css`
             padding: 16px 20px;
-            background: ${baseTheme.colors.red[100]}20;
+            background: ${withAlpha(baseTheme.colors.red[100], 12.55)};
             color: ${baseTheme.colors.red[700]};
             font-weight: 500;
             font-size: 0.9rem;
@@ -133,8 +134,8 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
           <div
             className={css`
               padding: 12px 20px;
-              background-color: ${baseTheme.colors.red[100]}25;
-              border-top: 1px solid ${baseTheme.colors.red[200]}50;
+              background-color: ${withAlpha(baseTheme.colors.red[100], 14.51)};
+              border-top: 1px solid ${withAlpha(baseTheme.colors.red[200], 31.37)};
             `}
           >
             <Disclosure
@@ -149,7 +150,7 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
                   className={css`
                     margin-bottom: 8px;
                     padding: 8px 12px;
-                    background-color: ${baseTheme.colors.red[100]}20;
+                    background-color: ${withAlpha(baseTheme.colors.red[100], 12.55)};
                     border-radius: 4px;
                     font-size: 0.85rem;
                     color: ${baseTheme.colors.red[600]};
@@ -171,7 +172,7 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
                   className={css`
                     margin: 0;
                     font-size: 0.75rem;
-                    background-color: ${baseTheme.colors.red[100]}15;
+                    background-color: ${withAlpha(baseTheme.colors.red[100], 8.24)};
                     padding: 16px;
                     border: none;
                     overflow-x: auto;

@@ -4,6 +4,8 @@ import styled from "@emotion/styled"
 import type { Ref } from "react"
 import React, { forwardRef } from "react"
 
+import { withAlpha } from "@/shared-module/components/styles/themes"
+
 import { baseTheme, fontWeights, headingFont, theme } from "../styles"
 import { defaultFontSizePx } from "../styles/constants"
 import { respondToOrLarger } from "../styles/respond"
@@ -278,14 +280,14 @@ export const GreenButtonStyles = (props: ButtonProps) => {
     &:hover,
     &:focus {
     color: ${baseTheme.colors.gray[700]};
-      background-color: ${baseTheme.colors.green[700]}4D;
+      background-color: ${withAlpha(baseTheme.colors.green[700], 30.2)};
       border-color: transparent;
 
     }
 
     &:active {
-      background-color: ${baseTheme.colors.green[700]}4D;
-      border-color: ${baseTheme.colors.green[700]}4D;
+      background-color: ${withAlpha(baseTheme.colors.green[700], 30.2)};
+      border-color: ${withAlpha(baseTheme.colors.green[700], 30.2)};
     }
 
     &:disabled {
