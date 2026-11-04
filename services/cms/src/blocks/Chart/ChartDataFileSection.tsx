@@ -6,12 +6,13 @@ import { Placeholder } from "@wordpress/components"
 import { image as icon } from "@wordpress/icons"
 import React from "react"
 
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { ErrorNotice, Link } from "@/shared-module/components"
 import { Button } from "@/shared-module/components/components/Button"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import type { ChartDataFile } from "./useChartDataFile"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ALLOWED_DATA_FILE_MIMETYPES = ["text/csv", "application/json"]
 
@@ -33,7 +34,7 @@ const dataFileNoticeStyles = css`
   margin: 0;
   font-family: ${primaryFont};
   font-size: 0.8125rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 // The attached data file's name as shown to the teacher. decodeURIComponent throws on a malformed
@@ -69,7 +70,7 @@ const ChartDataFileSection: React.FC<ChartDataFileSectionProps> = ({ dataFile, d
             className={css`
               font-family: ${primaryFont};
               font-size: 0.8125rem;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               margin: 0 0 0.5rem;
             `}
           >
@@ -81,12 +82,12 @@ const ChartDataFileSection: React.FC<ChartDataFileSectionProps> = ({ dataFile, d
             className={css`
               padding: 0.75rem 1rem;
               margin-bottom: 0.5rem;
-              background: ${baseTheme.colors.yellow[100]};
-              border: 1px solid ${baseTheme.colors.yellow[300]};
+              background: ${tones.toneWarning3};
+              border: 1px solid ${tones.toneWarning6};
               border-radius: 4px;
               font-family: ${primaryFont};
               font-size: 0.8125rem;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
             `}
           >
             {t("chart-data-extracted-warning")}{" "}

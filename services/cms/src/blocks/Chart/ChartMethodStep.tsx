@@ -3,11 +3,12 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components/components/Button"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import ChartStepLayout, { stepActionsStyles, stepInstructionStyles } from "./ChartStepLayout"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const AI_OPTION_DESCRIPTION_ID = "chart-block-ai-option-description"
 const MANUAL_OPTION_DESCRIPTION_ID = "chart-block-manual-option-description"
@@ -22,7 +23,7 @@ const methodOptionStyles = css`
   align-items: flex-start;
   gap: 0.5rem;
   padding: 1rem;
-  border: 1px solid ${baseTheme.colors.gray[300]};
+  border: 1px solid ${tones.toneNeutral37};
   border-radius: 4px;
 `
 
@@ -30,7 +31,7 @@ const methodOptionDescriptionStyles = css`
   margin: 0;
   font-family: ${primaryFont};
   font-size: 0.8125rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 const methodOptionLinkStyles = css`

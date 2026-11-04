@@ -32,7 +32,7 @@ const InfoBoxEditor: React.FC<React.PropsWithChildren<BlockEditProps<InfoBoxComp
         <BackgroundColorCustomizer
           attributes={attributes}
           setAttributes={setAttributes}
-          defaultBackgroundColor="#faf5f3"
+          defaultBackgroundColor="var(--tone-tone-neutral-11)"
         />
 
         <div

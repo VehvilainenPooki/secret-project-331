@@ -24,7 +24,7 @@ const InfoBoxConfiguration: BlockConfiguration<InfoBoxComponentProps> = {
     backgroundColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: "#faf5f3",
+      default: "var(--tone-tone-neutral-11)",
     },
     noPadding: {
       type: "boolean",

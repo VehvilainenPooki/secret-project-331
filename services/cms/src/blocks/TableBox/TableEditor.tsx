@@ -4,7 +4,7 @@ import { css } from "@emotion/css"
 import { InspectorControls } from "@wordpress/block-editor"
 import React from "react"
 
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
@@ -12,6 +12,7 @@ import { useTranslation } from "@/utils/useCmsTranslation"
 import type { TableBoxAttributes } from "."
 import TableBoxWidthCustomizer from "../../components/blocks/TableBoxWidthCustomizer"
 import BlockWrapper from "../BlockWrapper"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const TableEditor: React.FC<React.PropsWithChildren<BlockEditProps<TableBoxAttributes>>> = ({
   attributes,
@@ -27,7 +28,7 @@ const TableEditor: React.FC<React.PropsWithChildren<BlockEditProps<TableBoxAttri
         <div
           className={css`
             padding: 1rem;
-            background: #ecf3f2;
+            background: var(--tone-bg-neutral-41);
             text-align: center;
             font-family: ${headingFont};
           `}
@@ -35,7 +36,7 @@ const TableEditor: React.FC<React.PropsWithChildren<BlockEditProps<TableBoxAttri
           <h4>{t("table-box")}</h4>
           <span
             className={css`
-              color: ${baseTheme.colors.green[600]};
+              color: ${tones.toneAccent21};
               text-align: center;
               font-weight: 600;
               font-family: ${headingFont};

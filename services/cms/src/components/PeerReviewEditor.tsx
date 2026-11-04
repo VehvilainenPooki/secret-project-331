@@ -17,7 +17,6 @@ import {
   getCmsCourseDefaultPeerReviewOptions,
   getCmsCourseOptions,
 } from "@/generated/api/@tanstack/react-query.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { editCourseDefaultPeerOrSelfReviewConfigRoute } from "@/shared-module/common/utils/routes"
 import { Button, Checkbox, Link, Select, TextArea, TextField } from "@/shared-module/components"
 import { QueryResult } from "@/shared-module/components/components/queryResult/QueryResult"
@@ -26,6 +25,7 @@ import { useAttributeForm } from "@/utils/useAttributeForm"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import type { ExerciseAttributes } from "../blocks/Exercise"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   display: flex;
@@ -58,8 +58,8 @@ const List = styled.div`
   }
 `
 const QuestionCell = styled.div`
-  background: var(--color-gray-50);
-  border: 1.5px solid var(--color-gray-300);
+  background: var(--tone-bg-neutral-31);
+  border: 1.5px solid var(--tone-border-neutral-52);
   border-radius: var(--radius-2);
   width: 100%;
   padding: var(--space-3) var(--space-4);
@@ -561,7 +561,7 @@ const PeerReviewEditor: React.FC<PeerReviewEditorProps> = ({
                   className={css`
                     margin: 0.5rem 0 0 0;
                     font-size: 0.875rem;
-                    color: ${baseTheme.colors.gray[600]};
+                    color: ${tones.toneNeutral44};
                     font-style: italic;
                   `}
                 >
@@ -629,7 +629,7 @@ const PeerReviewEditor: React.FC<PeerReviewEditorProps> = ({
                       className={css`
                         margin: 0;
                         font-size: 1.125rem;
-                        color: ${baseTheme.colors.crimson[700]};
+                        color: ${tones.toneDanger22};
                       `}
                     >
                       {t("peer-reviews-to-receive-and-give-error-message")}
@@ -665,8 +665,8 @@ const PeerReviewEditor: React.FC<PeerReviewEditorProps> = ({
                     <div
                       className={css`
                         padding: 1rem;
-                        background-color: ${baseTheme.colors.red[100]};
-                        color: ${baseTheme.colors.red[700]};
+                        background-color: ${tones.toneDanger2};
+                        color: ${tones.toneDanger19};
                       `}
                     >
                       {t("warning-points-are-all-or-nothing-disabled")}

@@ -15,7 +15,7 @@ const LogoLinkEditor: React.FC<
     <BlockWrapper>
       <div
         className={css`
-          background: #fafbfb;
+          background: var(--tone-bg-neutral-13);
           width: 100%;
         `}
       >

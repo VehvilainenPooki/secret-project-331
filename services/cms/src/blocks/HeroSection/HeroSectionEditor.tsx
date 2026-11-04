@@ -8,7 +8,6 @@ import React, { useContext, useEffect } from "react"
 
 import { getCmsPageNavigationOptions } from "@/generated/api/@tanstack/react-query.generated"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import {
   CMS_EDITOR_SIDEBAR_THRESHOLD,
@@ -20,6 +19,7 @@ import type { HeroSectionAttributes } from "."
 import BackgroundAndColorCustomizer from "../../components/blocks/BackgroundAndColorCustomizer"
 import PageContext from "../../contexts/PageContext"
 import BlockWrapper from "../BlockWrapper"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 const HeroSectionEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<HeroSectionAttributes>>
@@ -42,11 +42,11 @@ const HeroSectionEditor: React.FC<
 
   const backgroundVerticalAlignment = alignBottom ? "bottom" : "center"
 
-  const DEFAULT_BACKGROUND_COLOR = baseTheme.colors.clear[100]
+  const DEFAULT_BACKGROUND_COLOR = tones.toneNeutral12
 
   useEffect(() => {
     if (!attributes.fontColor) {
-      setAttributes({ fontColor: baseTheme.colors.gray[700] })
+      setAttributes({ fontColor: colors.text })
     }
     if (!attributes.backgroundColor) {
       setAttributes({ backgroundColor: DEFAULT_BACKGROUND_COLOR })

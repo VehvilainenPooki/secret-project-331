@@ -10,7 +10,7 @@ import ExerciseServiceBadges from "@/components/ExerciseServiceBadges"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import Centered from "@/shared-module/common/components/Centering/Centered"
 import DebugModal from "@/shared-module/common/components/DebugModal"
-import { baseTheme, primaryFont, typography } from "@/shared-module/common/styles"
+import { primaryFont, typography } from "@/shared-module/common/styles"
 import { runCallbackIfEnterPressed } from "@/shared-module/common/utils/accessibility"
 import { includeIf } from "@/shared-module/common/utils/nullability"
 import { ErrorNotice } from "@/shared-module/components"
@@ -25,6 +25,7 @@ import { gutenbergControlsVisible } from "../../../styles/EditorStyles"
 import breakFromCenteredProps from "../../../utils/breakfromCenteredProps"
 import ChooseExerciseTaskType from "./ChooseExerciseTaskType"
 import ExerciseTaskIFrameEditor from "./IFrameEditor"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ExerciseTaskEditorCard = styled.div`
   padding: 2rem 0;
@@ -40,7 +41,7 @@ const svgSquare = css`
 `
 
 const gray400WithHover = css`
-  background-color: ${baseTheme.colors.gray[200]};
+  background-color: ${tones.toneNeutral35};
 
   :hover {
     filter: brightness(92%) contrast(110%);
@@ -48,7 +49,7 @@ const gray400WithHover = css`
 `
 
 const gray500WithHover = css`
-  background-color: ${baseTheme.colors.gray[300]};
+  background-color: ${tones.toneNeutral37};
 
   :hover {
     filter: brightness(92%) contrast(110%);
@@ -57,7 +58,7 @@ const gray500WithHover = css`
 
 const assignmentBox = css`
   padding: 1rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  border: 1px solid ${tones.toneNeutral35};
   border-radius: 2px;
   margin-bottom: 2rem;
   /* Gutenberg pins the inner block appender to the bottom right of the nearest positioned
@@ -151,7 +152,7 @@ const ExerciseTaskEditor: React.FC<
             <div
               className={css`
                 align-items: center;
-                background-color: ${baseTheme.colors.gray[100]};
+                background-color: ${tones.toneNeutral29};
                 display: flex;
                 flex: 1;
                 font-family: ${primaryFont};
@@ -176,7 +177,7 @@ const ExerciseTaskEditor: React.FC<
                 <XmarkCircle
                   size={16}
                   className={css`
-                    color: ${baseTheme.colors.gray[700]};
+                    color: ${tones.toneNeutral46};
                     margin: 1.5rem;
                   `}
                 />
@@ -184,7 +185,7 @@ const ExerciseTaskEditor: React.FC<
                 <PencilBox
                   size={16}
                   className={css`
-                    color: ${baseTheme.colors.gray[700]};
+                    color: ${tones.toneNeutral46};
                     margin: 1.5rem;
                   `}
                 />
@@ -202,7 +203,7 @@ const ExerciseTaskEditor: React.FC<
               <Trash
                 size={16}
                 className={css`
-                  color: ${baseTheme.colors.gray[700]};
+                  color: ${tones.toneNeutral46};
                   margin: 1.5rem;
                 `}
               />
@@ -213,7 +214,7 @@ const ExerciseTaskEditor: React.FC<
           <BreakFromCentered {...breakFromCenteredProps}>
             <div
               className={css`
-                background-color: white;
+                background-color: var(--color-surface);
               `}
             >
               <Centered variant="narrow">

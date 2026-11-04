@@ -3,16 +3,17 @@
 import styled from "@emotion/styled"
 import React from "react"
 
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import BlockWrapper from "../BlockWrapper"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   margin: 2rem auto;
-  background: #f0f5f5;
+  background: var(--tone-bg-neutral-34);
   padding: 0.5rem 1.5rem;
   @media (min-width: 768px) {
     padding: 1.5rem 2.2rem;
@@ -25,19 +26,19 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 3px ${baseTheme.colors.green[200]} dashed;
+  border-bottom: 3px ${tones.toneAccent9} dashed;
 
   h2 {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.2;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     display: inline-block;
   }
 `
 const Content = styled.div`
   padding: 1rem 0;
-  background: rgba(229, 224, 241, 0.05);
+  background: var(--tone-bg-neutral-8);
   display: grid;
   grid-template-columns: 1fr;
   @media (min-width: 768px) {
@@ -60,9 +61,9 @@ const Content = styled.div`
     grid-template-columns: 20px 1fr;
     align-items: start;
     column-gap: 0.75rem;
-    border: 1px dashed ${baseTheme.colors.gray[600]};
+    border: 1px dashed ${tones.toneNeutral44};
     border-radius: 4px;
-    background: #ffffff;
+    background: var(--color-surface);
     padding: 0.5rem 0.75rem 0.55rem 0.6rem;
     margin-bottom: 0.75rem;
     list-style: none;
@@ -70,7 +71,7 @@ const Content = styled.div`
 
   .wp-block-list li::before {
     content: "✓";
-    color: ${baseTheme.colors.green[500]};
+    color: ${tones.toneAccent19};
     font-weight: 700;
     font-size: 1.35rem;
     line-height: 1;
@@ -83,7 +84,7 @@ const Content = styled.div`
     font-weight: 500;
     font-size: 18px;
     line-height: 1.3;
-    color: #535a66;
+    color: var(--color-text-muted);
   }
 
   .wp-block-list li > * > * {

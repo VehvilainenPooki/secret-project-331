@@ -2,13 +2,13 @@
 
 /* oxlint-disable i18next/no-literal-string */
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { HEX_COLOR_OR_EMPTY, URL_REFERENCE } from "@/utils/Gutenberg/agentSchema"
 import type { BlockConfiguration } from "@/utils/Gutenberg/types"
 
 import { MOOCFI_CATEGORY_SLUG } from "../../utils/Gutenberg/modifyGutenbergCategories"
 import HeroSectionEditor from "./HeroSectionEditor"
 import HeroSectionSave from "./HeroSectionSave"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface HeroSectionAttributes {
   title: string
@@ -51,12 +51,12 @@ const HeroSectionConfiguration: BlockConfiguration<HeroSectionAttributes> = {
     backgroundColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: baseTheme.colors.green[200],
+      default: tones.toneAccent9,
     },
     fontColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: baseTheme.colors.gray[700],
+      default: tones.toneNeutral46,
     },
     backgroundImage: {
       type: "string",

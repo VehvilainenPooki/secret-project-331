@@ -119,7 +119,7 @@ const UpdateEmailDetailsForm: React.FC<React.PropsWithChildren<UpdateEmailDetail
               className={css`
                 margin-top: var(--space-2);
                 font-size: 0.875rem;
-                color: #6c757d;
+                color: var(--tone-fg-neutral-19);
               `}
             >
               {templateTypeHelperText}
@@ -137,7 +137,7 @@ const UpdateEmailDetailsForm: React.FC<React.PropsWithChildren<UpdateEmailDetail
             className={css`
               margin-top: var(--space-2);
               font-size: 0.875rem;
-              color: #6c757d;
+              color: var(--tone-fg-neutral-19);
             `}
           >
             {t("email-subject-helper-text")}

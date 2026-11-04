@@ -5,7 +5,6 @@ import { RichText } from "@wordpress/block-editor"
 import React from "react"
 
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
-import { baseTheme } from "@/shared-module/common/styles"
 import {
   CMS_EDITOR_SIDEBAR_THRESHOLD,
   CMS_EDITOR_SIDEBAR_WIDTH,
@@ -15,6 +14,7 @@ import type { BlockEditProps } from "@/utils/Gutenberg/types"
 
 import type { CourseObjectiveSectionAttributes } from "."
 import BlockWrapper from "../BlockWrapper"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const CourseObjectiveSectionEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<CourseObjectiveSectionAttributes>>
@@ -30,7 +30,7 @@ const CourseObjectiveSectionEditor: React.FC<
       >
         <div
           className={css`
-            background: ${baseTheme.colors.clear[100]};
+            background: ${tones.toneNeutral12};
             width: 100%;
             border-radius: 1px;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

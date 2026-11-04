@@ -15,7 +15,7 @@ export interface MarkupProblem {
   fix: string
 }
 
-const TRANSPARENT_BACKGROUND = "rgba(0, 0, 0, 0)"
+const TRANSPARENT_BACKGROUND = "var(--tone-tone-neutral-2)"
 const CSS_CLASS_LIST_PATTERN = new RegExp(CSS_CLASS_LIST)
 const TEXT_COLOR_STYLE = new RegExp(
   `^background-color:(?:${escapeRegExp(TRANSPARENT_BACKGROUND)}|${HEX_COLOR})(?:;color:${HEX_COLOR})?$`,
@@ -179,7 +179,7 @@ export const RICH_TEXT_FORMATS = {
     tag: "mark",
     check: checkTextColor,
     markup:
-      '<mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-red-color">text</mark> with a palette colour, or <mark style="background-color:rgba(0, 0, 0, 0);color:#123456" class="has-inline-color">text</mark>; a highlight replaces rgba(0, 0, 0, 0) with a #rrggbb colour',
+      '<mark style="background-color:var(--tone-bg-neutral-3)" class="has-inline-color has-vivid-red-color">text</mark> with a palette colour, or <mark style="background-color:var(--tone-bg-neutral-3);color:var(--tone-fg-info-21)" class="has-inline-color">text</mark>; a highlight replaces var(--tone-tone-neutral-2) with a #rrggbb colour',
   },
   "core/subscript": { tag: "sub", check: withoutAttributes, markup: "<sub>text</sub>" },
   "core/superscript": { tag: "sup", check: withoutAttributes, markup: "<sup>text</sup>" },

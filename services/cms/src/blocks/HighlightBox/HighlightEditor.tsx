@@ -4,12 +4,13 @@ import { css } from "@emotion/css"
 import { RichText } from "@wordpress/block-editor"
 import React, { useId } from "react"
 
-import { baseTheme, fontWeights, monospaceFont, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, monospaceFont, primaryFont } from "@/shared-module/common/styles"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import type { HighlightAttributes } from "."
 import BlockWrapper from "../BlockWrapper"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const HighlightEditor: React.FC<React.PropsWithChildren<BlockEditProps<HighlightAttributes>>> = ({
   attributes,
@@ -24,8 +25,8 @@ const HighlightEditor: React.FC<React.PropsWithChildren<BlockEditProps<Highlight
     <BlockWrapper>
       <div
         className={css`
-          background: #fafbfb;
-          border: 1px solid #e2e4e6;
+          background: var(--tone-bg-neutral-13);
+          border: 1px solid var(--color-border);
           padding: 1rem 0;
         `}
       >
@@ -43,7 +44,7 @@ const HighlightEditor: React.FC<React.PropsWithChildren<BlockEditProps<Highlight
               margin: 0 0 0.5rem 0;
               font-family: ${primaryFont};
               font-size: 0.8125rem;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               font-weight: ${fontWeights.medium};
             `}
           >
@@ -53,11 +54,11 @@ const HighlightEditor: React.FC<React.PropsWithChildren<BlockEditProps<Highlight
             className={css`
               display: block;
               width: 100%;
-              border: 1px solid ${baseTheme.colors.gray[500]};
+              border: 1px solid ${tones.toneNeutral41};
               border-radius: 4px;
               padding: 0.5rem 0.75rem;
-              background: ${baseTheme.colors.clear[100]};
-              color: ${baseTheme.colors.green[700]};
+              background: ${tones.toneNeutral12};
+              color: ${tones.toneAccent23};
               font-weight: ${fontWeights.bold};
               font-family: ${monospaceFont};
               margin-bottom: 0.875rem;
@@ -74,7 +75,7 @@ const HighlightEditor: React.FC<React.PropsWithChildren<BlockEditProps<Highlight
               margin: 0 0 0.5rem 0;
               font-family: ${primaryFont};
               font-size: 0.8125rem;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               font-weight: ${fontWeights.medium};
             `}
           >
@@ -85,10 +86,10 @@ const HighlightEditor: React.FC<React.PropsWithChildren<BlockEditProps<Highlight
               display: block;
               width: 100%;
               min-height: 2rem;
-              border: 1px solid ${baseTheme.colors.gray[500]};
+              border: 1px solid ${tones.toneNeutral41};
               border-radius: 4px;
               padding: 0.5rem 0.75rem;
-              background: ${baseTheme.colors.clear[100]};
+              background: ${tones.toneNeutral12};
             `}
             tagName="div"
             aria-labelledby={highlightContentLabelId}

@@ -3,12 +3,13 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import BlockWrapper from "../BlockWrapper"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const AuthorEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<Record<string, never>>>
@@ -20,7 +21,7 @@ const AuthorEditor: React.FC<
         <div
           className={css`
             padding: 1rem;
-            background: ${baseTheme.colors.clear[100]};
+            background: ${tones.toneNeutral12};
             text-align: center;
             font-family: ${headingFont};
           `}
@@ -28,7 +29,7 @@ const AuthorEditor: React.FC<
           <h4>{t("authors-block")}</h4>
           <span
             className={css`
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               text-align: center;
               font-weight: 500;
               display: inline-block;

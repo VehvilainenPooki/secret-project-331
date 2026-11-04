@@ -3,8 +3,9 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme, fontWeights, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { useTranslation } from "@/utils/useCmsTranslation"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const stepLayoutStyles = css`
   display: flex;
@@ -20,14 +21,14 @@ const stepCounterStyles = css`
   font-family: ${primaryFont};
   font-size: 0.8125rem;
   font-weight: ${fontWeights.medium};
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 export const stepInstructionStyles = css`
   margin: 0;
   font-family: ${primaryFont};
   font-size: 0.9375rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 // Keeps a step's buttons at their natural width inside the column layout.

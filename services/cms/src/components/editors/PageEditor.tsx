@@ -278,7 +278,7 @@ const PageEditor: React.FC<React.PropsWithChildren<PageEditorProps>> = ({
           flex-wrap: wrap;
           justify-content: center;
           gap: var(--space-3);
-          background: #f5f6f7;
+          background: var(--color-surface-sunken);
           padding: 1rem;
           /* Gutenberg's own stylesheet loads last and can disable pointer events on the inspector. */
           pointer-events: auto;

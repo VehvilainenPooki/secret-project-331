@@ -15,7 +15,7 @@ const VisibleBlockWrapper: React.FC<React.PropsWithChildren<VisibleBlockWrapperP
       className={css`
         padding: var(--space-4);
         margin: var(--space-4) 0;
-        border: 1px solid var(--color-gray-300);
+        border: 1px solid var(--tone-border-neutral-52);
 
         h2 {
           margin: 0 0 var(--space-3);

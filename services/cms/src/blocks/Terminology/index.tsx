@@ -2,13 +2,13 @@
 
 /* oxlint-disable i18next/no-literal-string */
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { HEX_COLOR_OR_EMPTY } from "@/utils/Gutenberg/agentSchema"
 import type { BlockConfiguration } from "@/utils/Gutenberg/types"
 
 import { MOOCFI_CATEGORY_SLUG } from "../../utils/Gutenberg/modifyGutenbergCategories"
 import LandingPageHeroSectionEditor from "./TerminologyBlockEditor"
 import LandingPageHeroSectionSave from "./TerminologyBlockSave"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface TerminologyBlockAttributes {
   title: string
@@ -36,7 +36,7 @@ const TerminologyBlockConfiguration: BlockConfiguration<TerminologyBlockAttribut
     primaryColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: baseTheme.colors.purple[600],
+      default: tones.toneSpecial2,
     },
     content: {
       type: "string",

@@ -3,18 +3,19 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme, fontWeights, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { ErrorNotice } from "@/shared-module/components"
 import { Button } from "@/shared-module/components/components/Button"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import ChartPreview from "./ChartPreview"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const paneTitleStyles = css`
   margin: 0 0 0.5rem;
   font-family: ${primaryFont};
   font-size: 0.8125rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-weight: ${fontWeights.medium};
 `
 
@@ -70,8 +71,8 @@ const ChartPreviewPane: React.FC<ChartPreviewPaneProps> = ({
             flex-shrink: 0;
             margin-top: 0.75rem;
             padding: 0.75rem 1rem;
-            background: ${baseTheme.colors.red[100]};
-            border: 1px solid ${baseTheme.colors.red[400]};
+            background: ${tones.toneDanger2};
+            border: 1px solid ${tones.toneDanger10};
             border-radius: 4px;
           `}
         >
@@ -81,7 +82,7 @@ const ChartPreviewPane: React.FC<ChartPreviewPaneProps> = ({
               font-family: ${primaryFont};
               font-size: 0.8125rem;
               font-weight: ${fontWeights.medium};
-              color: ${baseTheme.colors.red[700]};
+              color: ${tones.toneDanger19};
             `}
           >
             {isValidJson ? t("chart-render-error") : t("invalid-json")}
@@ -91,7 +92,7 @@ const ChartPreviewPane: React.FC<ChartPreviewPaneProps> = ({
               margin: 0 0 0.75rem;
               font-family: ${primaryFont};
               font-size: 0.75rem;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               overflow-wrap: break-word;
             `}
           >

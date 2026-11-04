@@ -23,12 +23,12 @@ const AsideEditor = ({
         <BackgroundColorCustomizer
           attributes={attributes}
           setAttributes={setAttributes}
-          defaultBackgroundColor="#ebf5fb"
+          defaultBackgroundColor="var(--tone-tone-neutral-15)"
         />
         <BackgroundColorCustomizer
           attributes={attributes}
           setAttributes={setAttributes}
-          defaultBackgroundColor="#007acc"
+          defaultBackgroundColor="var(--tone-tone-info-13)"
           // oxlint-disable-next-line i18next/no-literal-string
           customAttributeName="separatorColor"
           customTitle={t("separator-color")}

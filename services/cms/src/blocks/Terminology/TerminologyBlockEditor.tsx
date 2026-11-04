@@ -25,7 +25,7 @@ const TerminologyBlockEditor: React.FC<
         <BackgroundColorCustomizer
           attributes={attributes}
           setAttributes={setAttributes}
-          defaultBackgroundColor="rgb(53, 63, 75)"
+          defaultBackgroundColor="var(--tone-tone-neutral-43)"
           // oxlint-disable-next-line i18next/no-literal-string
           customAttributeName="primaryColor"
           customTitle={t("primary-color")}
@@ -33,7 +33,7 @@ const TerminologyBlockEditor: React.FC<
       </InspectorControls>
       <div
         className={css`
-          box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 12px 0px;
+          box-shadow: var(--tone-shadow-neutral-8) 0px 2px 12px 0px;
           margin: 3rem 0;
         `}
       >
@@ -44,13 +44,13 @@ const TerminologyBlockEditor: React.FC<
             border-left: 8px solid ${attributes.primaryColor};
 
             p {
-              color: rgb(53, 63, 75);
+              color: var(--tone-fg-neutral-34);
               font-size: 16px;
             }
 
             h2 {
               margin-top: 20px;
-              color: #1a2333;
+              color: var(--color-text);
               font-weight: 650;
               font-family: ${primaryFont};
               margin-bottom: 0rem;

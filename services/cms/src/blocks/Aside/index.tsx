@@ -24,12 +24,12 @@ const AsideConfiguration: BlockConfiguration<AsideComponentProps> = {
     backgroundColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: "#ebf5fb",
+      default: "var(--tone-tone-neutral-15)",
     },
     separatorColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: "#007acc",
+      default: "var(--tone-tone-info-13)",
     },
   },
   innerBlocksArea: {},

@@ -110,7 +110,7 @@ const ResearchFormEditor: React.FC<React.PropsWithChildren<ResearchFormEditorPro
           flex-wrap: wrap;
           justify-content: center;
           gap: var(--space-3);
-          background: #f5f6f7;
+          background: var(--color-surface-sunken);
           padding: 1rem;
           /* Gutenberg's own stylesheet loads last and can disable pointer events on the inspector. */
           pointer-events: auto;

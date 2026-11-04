@@ -20,13 +20,13 @@ const IngressEditor: React.FC<
     <BlockWrapper>
       <div
         className={css`
-          background: #fafbfb;
+          background: var(--tone-bg-neutral-13);
           padding: 2rem;
         `}
       >
         <RichText
           className={css`
-            color: #1a2333;
+            color: var(--color-text);
             font-weight: 700;
             font-size: 3.5rem;
             line-height: 4.375rem;
@@ -41,7 +41,7 @@ const IngressEditor: React.FC<
         />
         <RichText
           className={css`
-            color: #1a2333;
+            color: var(--color-text);
             font-weight: normal;
             font-size: 1.75rem;
             line-height: 1.35;

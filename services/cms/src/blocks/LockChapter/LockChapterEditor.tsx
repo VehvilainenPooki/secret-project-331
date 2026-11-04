@@ -6,10 +6,11 @@ import { useBlockProps } from "@wordpress/block-editor"
 import { Notice } from "@wordpress/components"
 import React from "react"
 
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const LockChapterEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<Record<string, never>>>
@@ -22,8 +23,8 @@ const LockChapterEditor: React.FC<
     <div {...blockProps}>
       <div
         className={css`
-          background: ${baseTheme.colors.clear[100]};
-          border: 1px solid ${baseTheme.colors.gray[300]};
+          background: ${tones.toneNeutral12};
+          border: 1px solid ${tones.toneNeutral37};
           border-radius: 4px;
           padding: 1.5rem;
           margin: 1rem 0;
@@ -36,12 +37,12 @@ const LockChapterEditor: React.FC<
             gap: 0.75rem;
             margin-bottom: 1.25rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid ${baseTheme.colors.gray[200]};
+            border-bottom: 1px solid ${tones.toneNeutral35};
           `}
         >
           <div
             className={css`
-              color: ${baseTheme.colors.blue[600]};
+              color: ${tones.toneInfo23};
               display: flex;
               align-items: center;
             `}
@@ -54,7 +55,7 @@ const LockChapterEditor: React.FC<
               font-family: ${primaryFont};
               font-size: 1.25rem;
               font-weight: 600;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
             `}
           >
             {t("lock-chapter-editor-title")}
@@ -72,7 +73,7 @@ const LockChapterEditor: React.FC<
               font-family: ${primaryFont};
               font-size: 0.9375rem;
               line-height: 1.6;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
             `}
           >
             {t("lock-chapter-editor-description")}
@@ -93,7 +94,7 @@ const LockChapterEditor: React.FC<
           className={css`
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid ${baseTheme.colors.gray[200]};
+            border-top: 1px solid ${tones.toneNeutral35};
             width: 100%;
             box-sizing: border-box;
           `}
@@ -105,15 +106,15 @@ const LockChapterEditor: React.FC<
               font-family: ${primaryFont};
               font-size: 0.875rem;
               font-weight: 600;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
             `}
           >
             {t("lock-chapter-inner-blocks-label")}
           </label>
           <div
             className={css`
-              background: ${baseTheme.colors.clear[100]};
-              border: 1px dashed ${baseTheme.colors.gray[300]};
+              background: ${tones.toneNeutral12};
+              border: 1px dashed ${tones.toneNeutral37};
               border-radius: 4px;
               padding: 1rem;
               min-height: 100px;

@@ -8,7 +8,6 @@ import { useWatch } from "react-hook-form"
 
 import type { ExerciseAttributes } from "@/blocks/Exercise"
 import { getCmsCourseOptions } from "@/generated/api/@tanstack/react-query.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Checkbox, Disclosure, TextField } from "@/shared-module/components"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
@@ -19,6 +18,7 @@ import { useTranslation } from "@/utils/useCmsTranslation"
 import PeerReviewEditor from "../../../components/PeerReviewEditor"
 import ExerciseBlockContext from "../../../contexts/ExerciseBlockContext"
 import PageContext from "../../../contexts/PageContext"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface SettingsValues {
   name: string
@@ -163,8 +163,8 @@ const ExerciseSettingsEditor = () => {
   const chapterLockingEnabled = courseQuery.data?.chapter_locking_enabled ?? false
   const blockProps = useBlockProps({
     className: css`
-      background-color: white;
-      border: 1px solid ${baseTheme.colors.clear[100]};
+      background-color: var(--color-surface);
+      border: 1px solid ${tones.toneNeutral12};
       border-radius: 2px;
       padding: 1rem 2rem;
       margin-bottom: 1rem;
@@ -194,7 +194,7 @@ const ExerciseSettingsEditor = () => {
             instructionsEditor={
               <div
                 className={css`
-                  border: 1px solid ${baseTheme.colors.gray[100]};
+                  border: 1px solid ${tones.toneNeutral29};
                   padding: 1rem;
                 `}
               >
