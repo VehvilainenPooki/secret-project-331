@@ -2,6 +2,7 @@ import { injectGlobal } from "@emotion/css"
 
 import { DURATION_MS, EASING, LOOP_DURATION_MS } from "./motion"
 import { paletteCustomProperties } from "./palette"
+import { colors, withAlpha } from "./themes"
 import { themesGlobal } from "./themes/global"
 
 // The color roles are injected alongside these tokens.
@@ -57,25 +58,24 @@ export const tokensGlobal = injectGlobal`
     --radius-full: 9999px;
 
     /* elevation — one neutral shadow colour; each step layers a tight contact shadow with a
-       wide ambient one. Never brand-tinted: a shadow is a light model, not a colour choice. */
-    --shadow-rgb: 10 15 23;
-
+       wide ambient one. Never brand-tinted: a shadow is a light model, not a colour choice.
+       The colour is the theme's shadow role. */
     --elevation-0: none;
     --elevation-1:
-      0 1px 2px rgb(var(--shadow-rgb) / 0.06),
-      0 1px 3px rgb(var(--shadow-rgb) / 0.1);
+      0 1px 2px ${withAlpha(colors.shadow, 6)},
+      0 1px 3px ${withAlpha(colors.shadow, 10)};
     --elevation-2:
-      0 2px 4px rgb(var(--shadow-rgb) / 0.06),
-      0 4px 10px rgb(var(--shadow-rgb) / 0.1);
+      0 2px 4px ${withAlpha(colors.shadow, 6)},
+      0 4px 10px ${withAlpha(colors.shadow, 10)};
     --elevation-3:
-      0 4px 8px rgb(var(--shadow-rgb) / 0.07),
-      0 12px 24px rgb(var(--shadow-rgb) / 0.14);
+      0 4px 8px ${withAlpha(colors.shadow, 7)},
+      0 12px 24px ${withAlpha(colors.shadow, 14)};
     --elevation-4:
-      0 8px 16px rgb(var(--shadow-rgb) / 0.08),
-      0 24px 48px rgb(var(--shadow-rgb) / 0.18);
-    --elevation-inset-pressed: inset 0 2px 4px rgb(var(--shadow-rgb) / 0.1);
+      0 8px 16px ${withAlpha(colors.shadow, 8)},
+      0 24px 48px ${withAlpha(colors.shadow, 18)};
+    --elevation-inset-pressed: inset 0 2px 4px ${withAlpha(colors.shadow, 10)};
 
-    --scrim: rgb(var(--shadow-rgb) / 0.55);
+    --scrim: var(--color-scrim);
 
     /* layering — every portalled overlay (dialog, popover, menu, listbox, tooltip) shares
        --layer-overlay; open order is DOM order, so the last-opened overlay paints on top
@@ -128,7 +128,7 @@ export const tokensGlobal = injectGlobal`
     --focus-ring-width: 2px;
     --focus-ring-offset: 2px;
     --focus-ring-offset-color: transparent;
-    --focus-ring-color: rgba(31, 105, 100, 0.6);
+    --focus-ring-color: var(--color-focus-ring);
 
     /* disabled */
     --btn-disabled-opacity: 0.55;
@@ -138,7 +138,7 @@ export const tokensGlobal = injectGlobal`
 
     /* pressed */
     --btn-pressed-offset: 2px;
-    --btn-pressed-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    --btn-pressed-shadow: inset 0 2px 4px ${withAlpha(colors.tint, 10)};
 
     /* transitions */
     --btn-transition: all 0.2s;
@@ -149,77 +149,77 @@ export const tokensGlobal = injectGlobal`
 
     /* link. Blue, not the brand green: a green link is read as a status in a table of statuses,
        and every other link in the app is blue. */
-    --link-fg: var(--color-blue-700);
-    --link-fg-hover: var(--color-blue-800);
+    --link-fg: var(--color-link);
+    --link-fg-hover: var(--color-link-hover);
 
     /* primary */
-    --btn-primary-bg: var(--color-green-600);
-    --btn-primary-fg: var(--color-primary-100);
-    --btn-primary-border: var(--color-green-600);
-    --btn-primary-bg-hover: var(--color-primary-100);
-    --btn-primary-fg-hover: var(--color-green-700);
-    --btn-primary-border-hover: var(--color-primary-100);
-    --btn-primary-bg-pressed: var(--color-green-800);
-    --btn-primary-shadow-hover: 0 4px 12px rgba(31, 105, 100, 0.15);
+    --btn-primary-bg: var(--color-accent);
+    --btn-primary-fg: var(--color-text-on-accent);
+    --btn-primary-border: var(--color-accent);
+    --btn-primary-bg-hover: var(--color-surface);
+    --btn-primary-fg-hover: var(--color-accent-hover);
+    --btn-primary-border-hover: var(--color-surface);
+    --btn-primary-bg-pressed: var(--color-accent-pressed);
+    --btn-primary-shadow-hover: 0 4px 12px ${withAlpha(colors.accent, 15)};
     --btn-primary-outline-width: 3px;
 
     /* secondary */
-    --btn-secondary-bg: var(--color-clear-200);
-    --btn-secondary-fg: var(--color-gray-700);
-    --btn-secondary-border: var(--color-clear-200);
-    --btn-secondary-bg-hover: var(--color-gray-700);
-    --btn-secondary-fg-hover: var(--color-clear-50);
-    --btn-secondary-border-hover: var(--color-gray-700);
-    --btn-secondary-bg-pressed: var(--color-clear-400);
-    --btn-secondary-shadow-hover: 0 4px 12px rgba(26, 35, 51, 0.15);
+    --btn-secondary-bg: var(--color-control-bg);
+    --btn-secondary-fg: var(--color-text);
+    --btn-secondary-border: var(--color-control-bg);
+    --btn-secondary-bg-hover: var(--color-surface-inverse);
+    --btn-secondary-fg-hover: var(--color-text-inverse);
+    --btn-secondary-border-hover: var(--color-surface-inverse);
+    --btn-secondary-bg-pressed: var(--color-control-bg-pressed);
+    --btn-secondary-shadow-hover: 0 4px 12px ${withAlpha(colors.surfaceInverse, 15)};
     --btn-secondary-outline-width: 3px;
 
     /* tertiary */
     --btn-tertiary-bg: transparent;
-    --btn-tertiary-fg: var(--color-gray-700);
-    --btn-tertiary-border: var(--color-clear-400);
-    --btn-tertiary-bg-hover: var(--color-gray-700);
-    --btn-tertiary-fg-hover: var(--color-primary-100);
-    --btn-tertiary-border-hover: var(--color-gray-700);
-    --btn-tertiary-bg-pressed: var(--color-clear-300);
-    --btn-tertiary-shadow-hover: 0 4px 12px rgba(26, 35, 51, 0.15);
+    --btn-tertiary-fg: var(--color-text);
+    --btn-tertiary-border: var(--color-control-border);
+    --btn-tertiary-bg-hover: var(--color-surface-inverse);
+    --btn-tertiary-fg-hover: var(--color-text-inverse);
+    --btn-tertiary-border-hover: var(--color-surface-inverse);
+    --btn-tertiary-bg-pressed: var(--color-control-ghost-bg-pressed);
+    --btn-tertiary-shadow-hover: 0 4px 12px ${withAlpha(colors.surfaceInverse, 15)};
     --btn-tertiary-outline-width: 3px;
 
     /* icon */
     --btn-icon-bg: transparent;
-    --btn-icon-fg: var(--color-gray-700);
+    --btn-icon-fg: var(--color-text);
     --btn-icon-border: transparent;
     --btn-icon-bg-hover: transparent;
-    --btn-icon-fg-hover: var(--color-gray-800);
+    --btn-icon-fg-hover: var(--color-text-strong);
     --btn-icon-border-hover: transparent;
     --btn-icon-bg-pressed: transparent;
-    --btn-icon-fg-pressed: var(--color-gray-900);
+    --btn-icon-fg-pressed: var(--color-text-stronger);
     --btn-icon-shadow-hover: none;
     --btn-icon-padding-x-sm: var(--space-3);
     --btn-icon-padding-x-md: calc(var(--space-4) - (var(--space-1) * 2));
     --btn-icon-padding-x-lg: var(--space-4);
 
     /* danger */
-    --btn-danger-bg: var(--color-crimson-700);
-    --btn-danger-fg: var(--color-clear-50);
-    --btn-danger-border: var(--color-crimson-700);
-    --btn-danger-bg-hover: var(--color-crimson-800);
-    --btn-danger-bg-pressed: var(--color-crimson-900);
+    --btn-danger-bg: var(--color-danger-fill);
+    --btn-danger-fg: var(--color-text-on-accent);
+    --btn-danger-border: var(--color-danger-fill);
+    --btn-danger-bg-hover: var(--color-danger-fill-hover);
+    --btn-danger-bg-pressed: var(--color-danger-fill-pressed);
 
     /* field */
-    --field-bg: #ffffff;
-    --field-bg-disabled: var(--color-gray-50);
-    --field-border-color: var(--color-gray-400);
-    --field-border-color-focus: var(--color-green-500);
-    --field-border-color-invalid: var(--color-crimson-600);
-    --field-text-color: var(--color-gray-800);
-    --field-text-color-disabled: var(--color-gray-400);
-    --field-label-color: var(--color-gray-500);
-    --field-label-color-focus: var(--color-green-600);
-    --field-label-color-invalid: var(--color-crimson-700);
-    --field-message-color: var(--color-gray-500);
-    --field-message-color-invalid: var(--color-crimson-700);
-    --field-icon-color: var(--color-gray-400);
+    --field-bg: var(--color-surface);
+    --field-bg-disabled: var(--color-surface-disabled);
+    --field-border-color: var(--color-border-strong);
+    --field-border-color-focus: var(--color-border-focus);
+    --field-border-color-invalid: var(--color-danger-border);
+    --field-text-color: var(--color-text-strong);
+    --field-text-color-disabled: var(--color-text-disabled);
+    --field-label-color: var(--color-text-muted);
+    --field-label-color-focus: var(--color-accent);
+    --field-label-color-invalid: var(--color-danger-text);
+    --field-message-color: var(--color-text-muted);
+    --field-message-color-invalid: var(--color-danger-text);
+    --field-icon-color: var(--color-text-subtle);
     --field-icon-slot-width: 2.5rem;
     --field-transition:
       border-color 160ms ease,
@@ -231,7 +231,7 @@ export const tokensGlobal = injectGlobal`
     --field-fg: var(--field-text-color);
     --field-label: var(--field-label-color);
     --field-description: var(--field-message-color);
-    --field-placeholder: var(--color-gray-400);
+    --field-placeholder: var(--color-text-subtle);
     --field-chrome: var(--field-icon-color);
     --field-border: var(--field-border-color);
     --field-border-focus: var(--field-border-color-focus);
@@ -240,39 +240,41 @@ export const tokensGlobal = injectGlobal`
     --field-disabled-bg: var(--field-bg-disabled);
     --field-disabled-fg: var(--field-text-color-disabled);
     --field-disabled-border: var(--field-border-color);
-    --field-readonly-bg: var(--color-blue-25);
-    --field-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
-    --field-notice: var(--color-yellow-900);
-    --field-option-highlight: var(--color-blue-50);
-    --field-option-selected: var(--color-green-50);
+    --field-readonly-bg: var(--color-surface-readonly);
+    --field-shadow: inset 0 1px 0 ${withAlpha(colors.sheen, 70)};
+    --field-notice: var(--color-warning-text);
+    --field-option-highlight: var(--color-surface-highlight);
+    --field-option-selected: var(--color-surface-selected);
 
-    --switch-track-off: var(--color-clear-800);
-    --switch-track-on: var(--color-green-600);
+    --switch-track-off: var(--color-control-track-off);
+    --switch-track-on: var(--color-accent);
 
     /* switch-specific */
-    --switch-thumb: var(--color-primary-100);
-    --switch-focus-ring: rgba(31, 105, 100, 0.18);
+    --switch-thumb: var(--color-control-thumb);
+    --switch-focus-ring: ${withAlpha(colors.accent, 18)};
 
-    /* query result */
+    /* query result. The light set sits on the theme's own surface and follows its tint and sheen
+       roles. The dark set is for a dark backdrop placed on the page, which stays dark in every
+       theme, so it keeps a fixed white. */
     --query-skeleton-surface-light:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.65)),
-      rgba(0, 0, 0, 0.03);
-    --query-skeleton-surface-border-light: rgba(0, 0, 0, 0.06);
-    --query-skeleton-block-light: rgba(0, 0, 0, 0.05);
+      linear-gradient(180deg, ${withAlpha(colors.sheen, 80)}, ${withAlpha(colors.sheen, 65)}),
+      ${withAlpha(colors.tint, 3)};
+    --query-skeleton-surface-border-light: ${withAlpha(colors.tint, 6)};
+    --query-skeleton-block-light: ${withAlpha(colors.tint, 5)};
 
     --query-skeleton-surface-dark:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02)),
-      rgba(255, 255, 255, 0.03);
-    --query-skeleton-surface-border-dark: rgba(255, 255, 255, 0.07);
-    --query-skeleton-block-dark: rgba(255, 255, 255, 0.06);
+      linear-gradient(180deg, ${withAlpha("var(--color-white)", 4)}, ${withAlpha("var(--color-white)", 2)}),
+      ${withAlpha("var(--color-white)", 3)};
+    --query-skeleton-surface-border-dark: ${withAlpha("var(--color-white)", 7)};
+    --query-skeleton-block-dark: ${withAlpha("var(--color-white)", 6)};
 
-    --query-shimmer-mid: rgba(255, 255, 255, 0.18);
-    --query-shimmer-edge: rgba(255, 255, 255, 0.05);
+    --query-shimmer-mid: ${withAlpha(colors.sheen, 18)};
+    --query-shimmer-edge: ${withAlpha(colors.sheen, 5)};
 
-    --query-progress-track-light: rgba(0, 0, 0, 0.05);
-    --query-progress-beam-light: rgba(255, 255, 255, 0.6);
-    --query-progress-track-dark: rgba(255, 255, 255, 0.06);
-    --query-progress-beam-dark: rgba(255, 255, 255, 0.45);
+    --query-progress-track-light: ${withAlpha(colors.tint, 5)};
+    --query-progress-beam-light: ${withAlpha(colors.sheen, 60)};
+    --query-progress-track-dark: ${withAlpha("var(--color-white)", 6)};
+    --query-progress-beam-dark: ${withAlpha("var(--color-white)", 45)};
 
     --query-refresh-content-opacity: 0.6;
     --query-refresh-blur: 6px;

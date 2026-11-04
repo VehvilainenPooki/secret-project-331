@@ -81,17 +81,34 @@ describe("tokens.ts custom properties", () => {
 
   test("elevation scale is neutral and two-layered, plus the pressed inset and scrim", () => {
     const root = rootDeclarations()
-    expect(root.getPropertyValue("--shadow-rgb")).toBe("10 15 23")
     expect(root.getPropertyValue("--elevation-0")).toBe("none")
     for (const step of [1, 2, 3, 4]) {
       const layers = root.getPropertyValue(`--elevation-${step}`).split("),")
       expect(layers).toHaveLength(2)
       for (const layer of layers) {
-        expect(layer).toContain("rgb(var(--shadow-rgb)")
+        expect(layer).toContain("color-mix(in srgb, var(--color-shadow) ")
       }
     }
     expect(root.getPropertyValue("--elevation-inset-pressed")).toContain("inset")
-    expect(root.getPropertyValue("--scrim")).toBe("rgb(var(--shadow-rgb) / 0.55)")
+    expect(root.getPropertyValue("--scrim")).toBe("var(--color-scrim)")
+  })
+
+  test("color tokens refer to theme roles, not palette steps or literals", () => {
+    const root = rootDeclarations()
+    const colorTokens = Array.from(root).filter((name) =>
+      /^--(btn|field|link|switch|query|elevation|focus-ring-color|scrim)/.test(name),
+    )
+    expect(colorTokens.length).toBeGreaterThan(50)
+    for (const name of colorTokens) {
+      // The query set for dark backdrops keeps a fixed white on purpose.
+      const value = root.getPropertyValue(name).replaceAll("var(--color-white)", "")
+      expect({ name, value }).toEqual({
+        name,
+        value: expect.not.stringMatching(
+          /#[0-9a-f]{3,8}\b|rgba?\(|--color-(blue|green|crimson|red|yellow|purple|gray|clear|primary)-/i,
+        ),
+      })
+    }
   })
 
   test("layering scale", () => {

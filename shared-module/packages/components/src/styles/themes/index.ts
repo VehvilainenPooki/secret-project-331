@@ -55,6 +55,14 @@ export const colors: Readonly<Record<keyof ThemeColorRoles, string>> = roleVars(
   colorVarName,
 )
 
+/**
+ * `color` at `percent`% opacity. Unlike appending a hex alpha to a string, this also works when
+ * `color` is a `var(...)` reference: `withAlpha(colors.shadow, 6)`.
+ */
+export function withAlpha(color: string, percent: number): string {
+  return `color-mix(in srgb, ${color} ${percent}%, transparent)`
+}
+
 /** CMS-only color roles, as `var(...)` references: `cmsColors.blockBg === "var(--color-cms-block-bg)"`. */
 export const cmsColors: Readonly<Record<keyof CmsColorRoles, string>> = roleVars(
   lightTheme.cms,
