@@ -70,6 +70,7 @@ export const lightTheme: Theme = {
     badgeIcon: "#394F77",
     controlIconStrong: "#333D45",
     progressRingTrack: "#EDF2F4",
+    dangerSurfaceSubtle: crimson[25],
     sheen: white,
 
     chart1: blue[600],

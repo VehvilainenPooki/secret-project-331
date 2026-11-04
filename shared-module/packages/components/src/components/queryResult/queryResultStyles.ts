@@ -209,7 +209,7 @@ export const blockingErrorCss = css`
   padding: var(--space-4);
   border-radius: calc(var(--space-3) + var(--space-2));
   border: var(--query-border-width) solid var(--field-border-color-invalid);
-  background: var(--color-crimson-25);
+  background: var(--color-danger-surface-subtle);
 `
 
 export const staleStatusCss = css`

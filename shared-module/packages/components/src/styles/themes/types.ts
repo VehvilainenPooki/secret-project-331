@@ -114,6 +114,8 @@ export interface ThemeColorRoles {
   controlIconStrong: string
   /** Unfilled track of the circular course progress ring. */
   progressRingTrack: string
+  /** Faint background of an error state, such as a failed query. */
+  dangerSurfaceSubtle: string
 }
 
 /**

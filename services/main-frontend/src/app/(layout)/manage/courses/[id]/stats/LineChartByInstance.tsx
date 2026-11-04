@@ -61,7 +61,7 @@ const getTooltipDotStyle = (color: Color | undefined) => css`
   height: 10px;
   border-radius: 50%;
   margin-right: 8px;
-  background-color: ${typeof color === "object" ? "#000" : (color ?? "#000")};
+  background-color: ${typeof color === "object" ? tones.bgNeutral94 : (color ?? tones.bgNeutral94)};
 `
 
 const tooltipContainer = css`
