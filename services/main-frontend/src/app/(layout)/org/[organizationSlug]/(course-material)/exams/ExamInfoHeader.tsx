@@ -5,8 +5,9 @@ import { Trans, useTranslation } from "react-i18next"
 
 import type { ExamData } from "@/generated/course-material-api/types.generated"
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
-import { baseTheme, headingFont, primaryFont, typography } from "@/shared-module/common/styles"
+import { headingFont, primaryFont, typography } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ExamInfoHeaderProps {
   examData: ExamData
@@ -28,7 +29,7 @@ export default function ExamInfoHeader({ examData }: ExamInfoHeaderProps) {
       className={css`
         padding-bottom: 1rem;
         margin-bottom: 1rem;
-        border-bottom: 1px solid ${baseTheme.colors.clear[300]};
+        border-bottom: 1px solid ${tones.toneNeutral26};
       `}
     >
       <h1
@@ -37,7 +38,7 @@ export default function ExamInfoHeader({ examData }: ExamInfoHeaderProps) {
           font-size: ${typography.h4};
           font-weight: 700;
           line-height: 1.2;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           margin: 0;
         `}
       >
@@ -53,7 +54,7 @@ export default function ExamInfoHeader({ examData }: ExamInfoHeaderProps) {
             font-family: ${primaryFont};
             font-size: 0.9375rem;
             line-height: 1.5;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
           `}
         >
           <div>
@@ -106,7 +107,7 @@ export default function ExamInfoHeader({ examData }: ExamInfoHeaderProps) {
           </div>
           <div
             className={css`
-              color: ${baseTheme.colors.green[700]};
+              color: ${tones.toneAccent23};
               font-weight: 600;
             `}
           >

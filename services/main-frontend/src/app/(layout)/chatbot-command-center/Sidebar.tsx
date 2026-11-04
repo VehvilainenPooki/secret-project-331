@@ -16,13 +16,13 @@ import DropdownMenu from "@/components/DropdownMenu"
 import type { ChatbotConfiguration } from "@/generated/api/types.generated"
 import type { ChatbotConversation } from "@/generated/course-material-api/types.generated"
 import OnlyRenderIfPermissions from "@/shared-module/common/components/OnlyRenderIfPermissions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button } from "@/shared-module/components"
 
 import ConversationHistory from "./ConversationHistory"
 import { MobileSidebarButton } from "./sidebar/MobileSidebarButton"
 import MobileSidebarOverlay from "./sidebar/MobileSidebarOverlay"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface SideBarProps {
   setChatbotDialog: React.Dispatch<boolean>
@@ -36,7 +36,7 @@ const sideBarContainerCss = css`
   border-radius: 10px;
   margin: 0;
   padding: 0;
-  box-shadow: inset 0 0 0 1px ${baseTheme.colors.gray[100]};
+  box-shadow: inset 0 0 0 1px ${tones.toneNeutral29};
   /* Applied when sidebar is open */
   &:has([data-expanded]) {
     overflow-y: auto;
@@ -61,7 +61,7 @@ const sidebarButtonCss = css`
   padding: 12px 16px;
   border-radius: 12px;
   &:hover {
-    background: ${baseTheme.colors.clear[100]};
+    background: ${tones.toneNeutral12};
     cursor: pointer;
   }
 `
@@ -122,7 +122,7 @@ const Sidebar: React.FC<SideBarProps> = (props) => {
       icon: (
         <PlusCircle
           className={css`
-            color: ${baseTheme.colors.green[700]};
+            color: ${tones.toneAccent23};
             position: relative;
             top: -0.25rem;
           `}
@@ -143,7 +143,7 @@ const Sidebar: React.FC<SideBarProps> = (props) => {
             align-items: baseline;
             justify-content: space-between;
             flex-direction: ${state.isExpanded ? "row" : "column-reverse"};
-            border-bottom: ${state.isExpanded ? `1px solid ${baseTheme.colors.gray[75]}` : "none"};
+            border-bottom: ${state.isExpanded ? `1px solid ${tones.toneNeutral19}` : "none"};
           }
 
           flex-direction: column-reverse;
@@ -169,7 +169,7 @@ const Sidebar: React.FC<SideBarProps> = (props) => {
               // oxlint-disable-next-line i18next/no-literal-string
               menuButtonTestId="sidebar-header-menu-button"
               controlButtonClassName={dropdownMenuCss}
-              controlButtonIconColor={`${baseTheme.colors.green[700]}`}
+              controlButtonIconColor={`${tones.toneAccent23}`}
               controlButtonAriaLabel={t("label-actions")}
               controlButtonTooltipText={t("label-actions")}
               controlButtonIconWidth={16}
@@ -192,7 +192,7 @@ const Sidebar: React.FC<SideBarProps> = (props) => {
               icon={
                 <AddMessage
                   className={css`
-                    color: ${baseTheme.colors.green[700]};
+                    color: ${tones.toneAccent23};
                   `}
                 />
               }

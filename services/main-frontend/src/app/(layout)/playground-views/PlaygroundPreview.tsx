@@ -13,7 +13,6 @@ import { useTranslation } from "react-i18next"
 import type { PlaygroundSettings } from "@/app/(layout)/playground-tabs/page"
 import type { UseParsedPrivateSpecResult } from "@/hooks/playground/useParsedPrivateSpec"
 import DebugModal from "@/shared-module/common/components/DebugModal"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Checkbox } from "@/shared-module/components"
 import type {
@@ -28,6 +27,7 @@ import { playgroundSubmissionFiles, recordPlaygroundUploads } from "@/utils/play
 import PlaygroundExerciseEditorIframe from "./PlaygroundExerciseEditorIframe"
 import PlaygroundExerciseIframe from "./PlaygroundExerciseIframe"
 import PlaygroundViewSubmissionIframe from "./PlaygroundViewSubmissionIframe"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const PUBLIC_ADDRESS = isServer ? "https://courses.mooc.fi" : new URL(window.location.href).origin
 
@@ -50,7 +50,7 @@ const FULL_WIDTH = "100vw"
 const HALF_WIDTH = "50vw"
 
 const StyledPre = styled.pre<{ fullWidth: boolean }>`
-  background-color: rgba(218, 230, 229, 0.4);
+  background-color: var(--tone-bg-neutral-33);
   border-radius: 6px;
   padding: 1rem;
   font-size: 13px;
@@ -138,11 +138,11 @@ const PlaygroundPreview: React.FC<PlaygroundPreviewProps> = ({
         <div>
           <div
             className={css`
-              background-color: ${baseTheme.colors.clear[200]};
+              background-color: ${tones.toneNeutral22};
               padding: 0.75rem;
 
               button {
-                background-color: ${baseTheme.colors.clear[200]};
+                background-color: ${tones.toneNeutral22};
                 border-radius: 0.5rem;
                 border: none;
                 padding: 0.5rem;
@@ -154,7 +154,7 @@ const PlaygroundPreview: React.FC<PlaygroundPreviewProps> = ({
                 }
 
                 &[data-active="1"] {
-                  background-color: white;
+                  background-color: var(--color-surface);
 
                   &:hover {
                     filter: unset;

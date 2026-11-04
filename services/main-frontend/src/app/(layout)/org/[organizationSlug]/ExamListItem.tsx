@@ -7,10 +7,10 @@ import { useTranslation } from "react-i18next"
 
 import type { OrgExam } from "@/generated/api/types.generated"
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
-import { baseTheme } from "@/shared-module/common/styles"
 import { examRoute, manageExamRoute } from "@/shared-module/common/utils/routes"
 import { dateToDateTimeLocalString, dateToString } from "@/shared-module/common/utils/time"
 import { Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 type Exam = Pick<
   OrgExam,
@@ -25,8 +25,8 @@ interface Props {
 const ListItem = styled.li`
   margin: 0.5rem 0;
   padding: 1.5rem;
-  background-color: ${baseTheme.colors.primary[100]};
-  border: 1px solid ${baseTheme.colors.clear[300]};
+  background-color: ${tones.toneNeutral1};
+  border: 1px solid ${tones.toneNeutral26};
   border-radius: 6px;
 `
 
@@ -37,7 +37,7 @@ const ExamHeader = styled.div`
   margin-bottom: 0.5rem;
 
   a {
-    color: ${baseTheme.colors.blue[600]};
+    color: ${tones.toneInfo23};
     font-size: 1.1rem;
     font-weight: bold;
   }
@@ -48,7 +48,7 @@ const ExamDetails = styled.div`
   flex-wrap: wrap;
   gap: 1rem;
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const Detail = styled.div`
@@ -61,7 +61,7 @@ const Detail = styled.div`
   }
 
   .value {
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   }
 `
 
@@ -69,7 +69,7 @@ const ManageLink = styled.div`
   margin-top: 0.5rem;
 
   a {
-    color: ${baseTheme.colors.blue[600]};
+    color: ${tones.toneInfo23};
   }
 `
 

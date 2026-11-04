@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next"
 
 import { DENSITY_COMPACT } from "@/components/credit-registration/constants"
 import { useStatusJobs } from "@/hooks/useStatusJobs"
-import { baseTheme } from "@/shared-module/common/styles"
 import { QueryResult, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const iconRowCss = css`
   display: flex;
@@ -39,11 +39,11 @@ const StatusJobs: React.FC = () => {
               cell: (job) => (
                 <div className={iconRowCss}>
                   {(job.succeeded ?? 0) > 0 && (
-                    <CheckCircle size={16} color={baseTheme.colors.green[600]} />
+                    <CheckCircle size={16} color={tones.toneAccent21} />
                   )}
                   <span
                     className={css`
-                      color: ${baseTheme.colors.green[600]};
+                      color: ${tones.toneAccent21};
                       font-weight: ${(job.succeeded ?? 0) > 0 ? "600" : "normal"};
                     `}
                   >
@@ -58,10 +58,10 @@ const StatusJobs: React.FC = () => {
                 const hasFailures = (job.failed ?? 0) > 0
                 return (
                   <div className={iconRowCss}>
-                    {hasFailures && <XmarkCircle size={16} color={baseTheme.colors.red[600]} />}
+                    {hasFailures && <XmarkCircle size={16} color={tones.toneDanger17} />}
                     <span
                       className={css`
-                        color: ${baseTheme.colors.red[600]};
+                        color: ${tones.toneDanger17};
                         font-weight: ${hasFailures ? "600" : "normal"};
                       `}
                     >
@@ -77,10 +77,10 @@ const StatusJobs: React.FC = () => {
                 const isActive = (job.active ?? 0) > 0
                 return (
                   <div className={iconRowCss}>
-                    {isActive && <Clock size={16} color={baseTheme.colors.blue[700]} />}
+                    {isActive && <Clock size={16} color={tones.toneInfo26} />}
                     <span
                       className={css`
-                        color: ${baseTheme.colors.blue[700]};
+                        color: ${tones.toneInfo26};
                         font-weight: ${isActive ? "600" : "normal"};
                       `}
                     >

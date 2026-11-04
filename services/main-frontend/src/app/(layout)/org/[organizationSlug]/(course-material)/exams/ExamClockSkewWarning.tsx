@@ -7,7 +7,8 @@ import { useTranslation } from "react-i18next"
 
 import { getCurrentTime } from "@/generated/api/sdk.generated"
 import useTime from "@/hooks/course-material/useTime"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const MINUTE_MS = 60_000
 const SAMPLE_COUNT = 7
@@ -117,16 +118,16 @@ const formatUtcOffset = (now: Date): string => {
 const severityStyles = (isSevere: boolean) => css`
   background: ${
     isSevere
-      ? `linear-gradient(140deg, ${baseTheme.colors.red[100]}, ${baseTheme.colors.clear[100]})`
-      : `linear-gradient(140deg, ${baseTheme.colors.yellow[100]}, ${baseTheme.colors.clear[100]})`
+      ? `linear-gradient(140deg, ${tones.toneDanger2}, ${tones.toneNeutral12})`
+      : `linear-gradient(140deg, ${tones.toneWarning3}, ${tones.toneNeutral12})`
   };
-  border: 1px solid ${isSevere ? baseTheme.colors.red[300] : baseTheme.colors.yellow[300]};
-  border-left: 10px solid ${isSevere ? baseTheme.colors.red[600] : baseTheme.colors.yellow[600]};
+  border: 1px solid ${isSevere ? tones.toneDanger8 : tones.toneWarning6};
+  border-left: 10px solid ${isSevere ? tones.toneDanger17 : tones.toneWarning10};
   border-radius: 10px;
   padding: 1rem 1.15rem;
   margin-bottom: 1rem;
-  box-shadow: 0 6px 20px ${baseTheme.colors.clear[300]};
-  color: ${baseTheme.colors.gray[700]};
+  box-shadow: 0 6px 20px ${tones.toneNeutral26};
+  color: ${tones.toneNeutral46};
   font-family: ${primaryFont};
 `
 
@@ -161,15 +162,15 @@ const detailRowClass = css`
   margin: 0;
   line-height: 1.45;
   padding: 0.55rem 0.65rem;
-  border: 1px solid ${baseTheme.colors.clear[300]};
+  border: 1px solid ${tones.toneNeutral26};
   border-radius: 6px;
-  background: ${baseTheme.colors.clear[50]};
+  background: ${tones.toneNeutral1};
 `
 
 const highlightedDetailRowClass = (isSevere: boolean) => css`
-  border-color: ${isSevere ? baseTheme.colors.red[300] : baseTheme.colors.yellow[400]};
-  background: ${isSevere ? baseTheme.colors.red[75] : baseTheme.colors.yellow[75]};
-  color: ${baseTheme.colors.gray[700]};
+  border-color: ${isSevere ? tones.toneDanger8 : tones.toneWarning8};
+  background: ${isSevere ? tones.toneDanger1 : tones.toneWarning2};
+  color: ${tones.toneNeutral46};
   font-weight: 600;
 `
 
@@ -179,8 +180,8 @@ const labelClass = (isSevere: boolean) => css`
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
-  color: ${baseTheme.colors.clear[50]};
-  background: ${isSevere ? baseTheme.colors.red[700] : baseTheme.colors.yellow[500]};
+  color: ${tones.toneNeutral1};
+  background: ${isSevere ? tones.toneDanger19 : tones.toneWarning9};
   border-radius: 999px;
   padding: 0.25rem 0.7rem;
 `

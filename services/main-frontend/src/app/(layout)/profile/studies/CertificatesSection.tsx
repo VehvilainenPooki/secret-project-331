@@ -22,7 +22,7 @@ import {
 
 const titleCss = css`
   font-weight: 500;
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 /**

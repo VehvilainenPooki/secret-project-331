@@ -9,9 +9,10 @@ import { useTranslation } from "react-i18next"
 import PseudoContentLink from "@/components/PseudoContentLink"
 import SettingIcon from "@/imgs/setting.svg"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
-import { baseTheme, headingFont, primaryFont } from "@/shared-module/common/styles"
+import { headingFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import ietfLanguageTagToHumanReadableName from "@/shared-module/common/utils/ietfLanguageTagToHumanReadableName"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const CourseGrid = styled.div`
   margin: 0 auto;
@@ -36,28 +37,28 @@ const StyledCourseCard = styled.div`
   max-width: 100%;
   width: 100%;
   min-height: 220px;
-  background: #f5f6f7;
+  background: var(--color-surface-sunken);
   border-radius: 6px;
 
-  border: 2px solid #e5e7e9;
+  border: 2px solid var(--tone-border-neutral-14);
   :focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 
   :hover {
     cursor: pointer;
-    background: #ebedee;
+    background: var(--tone-bg-neutral-52);
   }
 `
 
 const CourseWrapper = styled.div`
   width: 100%;
-  background: #f5f6f7;
+  background: var(--color-surface-sunken);
   border-radius: 6px;
   :hover {
     cursor: pointer;
-    background: #ebedee;
+    background: var(--tone-bg-neutral-52);
   }
 `
 
@@ -70,7 +71,7 @@ const CourseHeading = styled.div`
   font-weight: 550;
   font-size: 24px;
   line-height: 120%;
-  color: #1a2333;
+  color: var(--color-text);
   margin-bottom: 13px;
 `
 
@@ -88,7 +89,7 @@ const CourseDescription = styled.div`
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
-  color: #1a2333;
+  color: var(--color-text);
   opacity: 0.75;
 `
 
@@ -107,7 +108,7 @@ const LanguageCode = styled.div`
   font-family: ${primaryFont};
   font-weight: 450;
   font-size: 18px;
-  color: #1a2333;
+  color: var(--color-text);
 `
 
 interface CourseCardProps {
@@ -162,7 +163,7 @@ const CourseCard: React.FC<React.PropsWithChildren<CourseCardProps>> = ({
             padding: 4px;
             border: none;
             background: transparent;
-            color: #1a2333;
+            color: var(--color-text);
             opacity: 0.6;
             border-radius: 4px;
 
@@ -172,7 +173,7 @@ const CourseCard: React.FC<React.PropsWithChildren<CourseCardProps>> = ({
             }
 
             :focus-visible {
-              outline: 2px solid ${baseTheme.colors.green[500]};
+              outline: 2px solid ${tones.toneAccent19};
               outline-offset: 2px;
             }
           `}
@@ -186,7 +187,7 @@ const CourseCard: React.FC<React.PropsWithChildren<CourseCardProps>> = ({
         <a
           className={css`
             :focus-visible > * {
-              outline: 2px solid ${baseTheme.colors.green[500]};
+              outline: 2px solid ${tones.toneAccent19};
               outline-offset: 2px;
             }
             outline: none;

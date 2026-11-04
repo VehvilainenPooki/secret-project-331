@@ -10,10 +10,11 @@ import ChangeUserPasswordForm from "@/components/forms/ChangeUserPasswordForm"
 import { EditUserInformationForm } from "@/components/forms/EditUserInformationForm"
 import { useUserDetailsForUserQuery } from "@/hooks/useUserDetailsForUserQuery"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { QueryResult } from "@/shared-module/components"
 import { settingsCardCss } from "@/styles/sharedStyles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const AccountSettingsPage: React.FC = () => {
   const { t } = useTranslation()
@@ -54,7 +55,7 @@ const AccountSettingsPage: React.FC = () => {
                 gap: 0.625rem;
                 margin-bottom: 1.25rem;
                 padding-bottom: 1rem;
-                border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+                border-bottom: 1px solid ${tones.toneNeutral29};
               `}
             >
               <div
@@ -64,7 +65,7 @@ const AccountSettingsPage: React.FC = () => {
                   justify-content: center;
                   width: 32px;
                   height: 32px;
-                  background: ${baseTheme.colors.green[75]};
+                  background: ${tones.toneAccent4};
                   border-radius: 6px;
                   flex-shrink: 0;
                 `}
@@ -72,7 +73,7 @@ const AccountSettingsPage: React.FC = () => {
                 <Padlock
                   size={16}
                   className={css`
-                    color: ${baseTheme.colors.green[700]};
+                    color: ${tones.toneAccent23};
                   `}
                 />
               </div>
@@ -80,7 +81,7 @@ const AccountSettingsPage: React.FC = () => {
                 className={css`
                   font-size: 1.0625rem;
                   font-weight: ${fontWeights.semibold};
-                  color: ${baseTheme.colors.gray[700]};
+                  color: ${tones.toneNeutral46};
                   margin: 0;
                 `}
               >

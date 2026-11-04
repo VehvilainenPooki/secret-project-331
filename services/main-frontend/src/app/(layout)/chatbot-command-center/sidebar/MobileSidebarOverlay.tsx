@@ -33,8 +33,8 @@ const dialogCss = css`
   bottom: 0;
   width: 100%;
   max-width: ${SIDEBAR_WIDTH_PX};
-  background: #ffffff;
-  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+  background: var(--color-surface);
+  box-shadow: -4px 0 24px var(--tone-shadow-neutral-16);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -59,15 +59,15 @@ const closeButtonCss = css`
   line-height: 1;
   width: 40px;
   height: 40px;
-  color: #000;
+  color: var(--tone-fg-neutral-44);
 
   &:active {
-    background: #d1d5db;
+    background: var(--tone-bg-neutral-71);
   }
 
   &:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px #111827;
+    box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
   }
 `
 

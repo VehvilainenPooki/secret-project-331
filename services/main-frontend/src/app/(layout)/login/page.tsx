@@ -12,10 +12,10 @@ import { useLoginFlow } from "@/hooks/useLoginFlow"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import useQueryParameter from "@/shared-module/common/hooks/useQueryParameter"
-import { baseTheme } from "@/shared-module/common/styles"
 import { validateReturnToRouteOrDefault } from "@/shared-module/common/utils/redirectBackAfterLoginOrSignup"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Dialog, LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Login: React.FC = () => {
   const { t } = useTranslation()
@@ -56,7 +56,7 @@ const Login: React.FC = () => {
         a {
           /* Underline links so they are distinguishable by more than colour alone (WCAG 1.4.1). */
           text-decoration: underline;
-          color: ${baseTheme.colors.blue[600]};
+          color: ${tones.toneInfo23};
         }
       `}
     >

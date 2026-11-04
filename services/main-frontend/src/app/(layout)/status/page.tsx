@@ -24,11 +24,11 @@ import StatusSummary from "./StatusSummary"
 
 const createFavicon = (status: "healthy" | "warning" | "error"): string => {
   const colors = {
-    healthy: "#22c55e",
+    healthy: "var(--tone-tone-accent-13)",
 
-    warning: "#eab308",
+    warning: "var(--tone-tone-warning-13)",
 
-    error: "#ef4444",
+    error: "var(--tone-tone-danger-13)",
   }
   const icons = {
     // oxlint-disable-next-line i18next/no-literal-string

@@ -9,9 +9,10 @@ import { useTranslation } from "react-i18next"
 import { DENSITY_COMPACT } from "@/components/credit-registration/constants"
 import { useStatusPodLogs } from "@/hooks/useStatusPodLogs"
 import { useStatusPods } from "@/hooks/useStatusPods"
-import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
+import { monospaceFont } from "@/shared-module/common/styles"
 import { Button, Dialog, QueryResult, Select, Table } from "@/shared-module/components"
 import { parseAnsiToReact } from "@/utils/parseAnsiToReact"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const StatusPods: React.FC = () => {
   const { t } = useTranslation()
@@ -58,12 +59,12 @@ const StatusPods: React.FC = () => {
                         gap: 0.5rem;
                       `}
                     >
-                      {isHealthy && <CheckCircle size={16} color={baseTheme.colors.green[600]} />}
-                      {isFailed && <XmarkCircle size={16} color={baseTheme.colors.red[600]} />}
-                      {isPending && <Clock size={16} color={baseTheme.colors.yellow[700]} />}
-                      {isSucceeded && <CheckCircle size={16} color={baseTheme.colors.green[600]} />}
+                      {isHealthy && <CheckCircle size={16} color={tones.toneAccent21} />}
+                      {isFailed && <XmarkCircle size={16} color={tones.toneDanger17} />}
+                      {isPending && <Clock size={16} color={tones.toneWarning11} />}
+                      {isSucceeded && <CheckCircle size={16} color={tones.toneAccent21} />}
                       {!isHealthy && !isFailed && !isPending && !isSucceeded && (
-                        <Question size={16} color={baseTheme.colors.gray[500]} />
+                        <Question size={16} color={tones.toneNeutral41} />
                       )}
                       <span
                         className={css`
@@ -73,25 +74,25 @@ const StatusPods: React.FC = () => {
                           font-weight: 600;
                           background-color: ${
                             isHealthy
-                              ? baseTheme.colors.green[100]
+                              ? tones.toneAccent7
                               : isFailed
-                                ? baseTheme.colors.red[100]
+                                ? tones.toneDanger2
                                 : isPending
-                                  ? baseTheme.colors.yellow[100]
+                                  ? tones.toneWarning3
                                   : isSucceeded
-                                    ? baseTheme.colors.green[100]
-                                    : baseTheme.colors.clear[300]
+                                    ? tones.toneAccent7
+                                    : tones.toneNeutral26
                           };
                           color: ${
                             isHealthy
-                              ? baseTheme.colors.green[700]
+                              ? tones.toneAccent23
                               : isFailed
-                                ? baseTheme.colors.red[700]
+                                ? tones.toneDanger19
                                 : isPending
-                                  ? baseTheme.colors.yellow[700]
+                                  ? tones.toneWarning11
                                   : isSucceeded
-                                    ? baseTheme.colors.green[700]
-                                    : baseTheme.colors.gray[600]
+                                    ? tones.toneAccent23
+                                    : tones.toneNeutral44
                           };
                         `}
                       >
@@ -112,13 +113,13 @@ const StatusPods: React.FC = () => {
                     `}
                   >
                     {pod.ready === true ? (
-                      <CheckCircle size={20} color={baseTheme.colors.green[600]} />
+                      <CheckCircle size={20} color={tones.toneAccent21} />
                     ) : pod.phase === "Succeeded" ? (
-                      <CheckCircle size={20} color={baseTheme.colors.gray[400]} />
+                      <CheckCircle size={20} color={tones.toneNeutral39} />
                     ) : pod.ready === false ? (
-                      <XmarkCircle size={20} color={baseTheme.colors.red[600]} />
+                      <XmarkCircle size={20} color={tones.toneDanger17} />
                     ) : (
-                      <Question size={20} color={baseTheme.colors.yellow[600]} />
+                      <Question size={20} color={tones.toneWarning10} />
                     )}
                   </div>
                 ),
@@ -168,11 +169,11 @@ const StatusPods: React.FC = () => {
             <div
               ref={logsContainerRef}
               className={css`
-                border: 1px solid ${baseTheme.colors.clear[300]};
+                border: 1px solid ${tones.toneNeutral26};
                 border-radius: 4px;
                 padding: 1rem;
-                background-color: #1e1e1e;
-                color: #d4d4d4;
+                background-color: var(--tone-bg-neutral-91);
+                color: var(--tone-fg-neutral-9);
                 font-family: ${monospaceFont};
                 font-size: 12px;
                 line-height: 1.4;

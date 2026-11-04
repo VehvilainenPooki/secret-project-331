@@ -13,7 +13,7 @@ import useTime from "@/hooks/course-material/useTime"
 import Centered from "@/shared-module/common/components/Centering/Centered"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
 import { courseMaterialAtom } from "@/state/course-material"
@@ -27,6 +27,7 @@ import ExamClockSkewWarning from "./ExamClockSkewWarning"
 import ExamInfoHeader from "./ExamInfoHeader"
 import ExamRunningSection from "./ExamRunningSection"
 import ExamStartBanner from "./ExamStartBanner"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export type ExamPageShellMode = "exam" | "testexam"
 
@@ -169,18 +170,18 @@ export default function ExamPageShell({
     const timeUpMessageClass = css`
       background: linear-gradient(
         140deg,
-        ${baseTheme.colors.blue[100]},
-        ${baseTheme.colors.clear[100]}
+        ${tones.toneInfo5},
+        ${tones.toneNeutral12}
       );
-      border: 1px solid ${baseTheme.colors.blue[300]};
-      border-left: 8px solid ${baseTheme.colors.blue[600]};
+      border: 1px solid ${tones.toneInfo8};
+      border-left: 8px solid ${tones.toneInfo23};
       border-radius: 8px;
       padding: 0.75rem 1rem;
       margin: 1rem 0;
       font-family: ${primaryFont};
       font-size: clamp(0.95rem, 2.2vw, 1rem);
       line-height: 1.45;
-      color: ${baseTheme.colors.gray[700]};
+      color: ${tones.toneNeutral46};
     `
     return (
       <Centered variant="default">

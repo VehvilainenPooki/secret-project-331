@@ -10,7 +10,6 @@ import { DEFAULT_SERVICE_INFO_URL } from "@/constants/playground"
 import useParsedPrivateSpec from "@/hooks/playground/useParsedPrivateSpec"
 import usePlaygroundQueriesAndMutations from "@/hooks/playground/usePlaygroundQueriesAndMutations"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
-import { baseTheme } from "@/shared-module/common/styles"
 import { narrowContainerWidthPx } from "@/shared-module/common/styles/constants"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 
@@ -18,6 +17,7 @@ import PlaygroundAnswers from "../playground-views/PlaygroundAnswers"
 import PlaygroundPreview from "../playground-views/PlaygroundPreview"
 import PlayGroundSettings from "../playground-views/PlaygroundSettings"
 import PlaygroundSpecs from "../playground-views/PlaygroundSpecs"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const TABS = [
   {
@@ -95,11 +95,11 @@ let PlaygroudTabs = () => {
     <div>
       <div
         className={css`
-          background-color: ${baseTheme.colors.clear[200]};
+          background-color: ${tones.toneNeutral22};
           padding: 0.75rem;
 
           button {
-            background-color: ${baseTheme.colors.clear[200]};
+            background-color: ${tones.toneNeutral22};
             border-radius: 0.5rem;
             border: none;
             padding: 0.5rem;
@@ -111,7 +111,7 @@ let PlaygroudTabs = () => {
             }
 
             &[data-active="1"] {
-              background-color: white;
+              background-color: var(--color-surface);
 
               &:hover {
                 filter: unset;

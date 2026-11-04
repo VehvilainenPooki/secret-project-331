@@ -19,7 +19,7 @@ import DebugModal from "@/shared-module/common/components/DebugModal"
 import HideChildrenInSystemTests from "@/shared-module/common/components/system-tests/HideChildrenInSystemTests"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
+import { monospaceFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withNoSsr from "@/shared-module/common/utils/withNoSsr"
@@ -47,6 +47,7 @@ import { playgroundSubmissionFiles, recordPlaygroundUploads } from "@/utils/play
 import PlaygroundExerciseEditorIframe from "./PlaygroundExerciseEditorIframe"
 import PlaygroundExerciseIframe from "./PlaygroundExerciseIframe"
 import PlaygroundViewSubmissionIframe from "./PlaygroundViewSubmissionIframe"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface PlaygroundFields {
   url: string
@@ -69,7 +70,7 @@ const PLAYGROUND_VIEWS_GRADING_PATH: ReceivePlaygroundGradingData["url"] =
   "/api/v0/main-frontend/playground-views/grading/{websocket_id}"
 
 const StyledPre = styled.pre<{ fullWidth: boolean }>`
-  background-color: rgba(218, 230, 229, 0.4);
+  background-color: var(--tone-bg-neutral-33);
   border-radius: 6px;
   padding: 1rem;
   font-size: 13px;
@@ -434,9 +435,9 @@ const IframeViewPlayground: React.FC = () => {
             {!serviceInfoQuery.isLoading && (
               <div className={serviceInfoStatusRow}>
                 {isValidServiceInfo ? (
-                  <CheckCircle color={baseTheme.colors.green[400]} size={16} />
+                  <CheckCircle color={tones.toneAccent16} size={16} />
                 ) : (
-                  <BellXmark color={baseTheme.colors.red[500]} size={16} />
+                  <BellXmark color={tones.toneDanger15} size={16} />
                 )}
                 <span>
                   {isValidServiceInfo ? t("valid-service-info") : t("invalid-service-info")}
@@ -633,11 +634,11 @@ const IframeViewPlayground: React.FC = () => {
         <Area>
           <div
             className={css`
-              background-color: ${baseTheme.colors.clear[200]};
+              background-color: ${tones.toneNeutral22};
               padding: 0.75rem;
 
               button {
-                background-color: ${baseTheme.colors.clear[200]};
+                background-color: ${tones.toneNeutral22};
                 border-radius: 0.5rem;
                 border: none;
                 padding: 0.5rem;
@@ -649,7 +650,7 @@ const IframeViewPlayground: React.FC = () => {
                 }
 
                 &[data-active="1"] {
-                  background-color: white;
+                  background-color: var(--color-surface);
 
                   &:hover {
                     filter: unset;
@@ -879,7 +880,7 @@ const IframeViewPlayground: React.FC = () => {
             right: 10px;
             width: 50px;
             height: 50px;
-            background-color: black;
+            background-color: var(--tone-bg-neutral-94);
             border: 2px solid black;
             z-index: 500;
             border-radius: 100px;
@@ -889,14 +890,14 @@ const IframeViewPlayground: React.FC = () => {
             overflow: hidden;
 
             svg {
-              color: white;
+              color: var(--color-text-on-accent);
             }
 
             &:hover {
-              background-color: white;
+              background-color: var(--color-surface);
               cursor: pointer;
               svg {
-                color: black;
+                color: var(--tone-fg-neutral-44);
               }
             }
           `}

@@ -91,7 +91,7 @@ const Submission: React.FC = () => {
                     padding: 1.5rem 2rem;
                     font-size: 35px;
                     font-weight: ${fontWeights.semibold};
-                    color: #333333;
+                    color: var(--tone-fg-neutral-36);
                     opacity: 80%;
                   `}
                 >

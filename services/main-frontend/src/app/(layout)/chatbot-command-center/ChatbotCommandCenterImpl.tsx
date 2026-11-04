@@ -7,13 +7,13 @@ import { useTranslation } from "react-i18next"
 import ChatbotChatBox from "@/components/course-material/ContentRenderer/moocfi/ChatbotBlock/ChatbotChatBox"
 import type { ChatbotConfiguration, Course } from "@/generated/api/types.generated"
 import type { ChatbotConversation } from "@/generated/course-material-api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { SIDEBAR_WIDTH_PX } from "@/shared-module/common/utils/constants"
 import { EmptyState } from "@/shared-module/components"
 
 import NewConversationDialog from "./NewConversationDialog"
 import Sidebar from "./Sidebar"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const gridContainer = css`
   display: grid;
@@ -44,7 +44,7 @@ const chatbotPlaceHolder = css`
   align-items: center;
   height: inherit;
   border-radius: 10px;
-  box-shadow: inset 0 0 0 1px ${baseTheme.colors.gray[100]};
+  box-shadow: inset 0 0 0 1px ${tones.toneNeutral29};
 `
 
 interface ChatbotCommandCenterImplProps {

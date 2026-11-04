@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next"
 
 import { headingCss } from "@/components/credit-registration/styles"
 import type { ExamEnrollmentData } from "@/generated/course-material-api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ExamInstructionsProps {
   onStart: () => Promise<void>
@@ -47,18 +47,18 @@ const ExamStartBanner: React.FC<React.PropsWithChildren<ExamInstructionsProps>> 
       className={css`
         border-radius: 8px;
         overflow: hidden;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-        border: 1px solid ${baseTheme.colors.clear[300]};
+        box-shadow: 0 2px 12px var(--tone-shadow-neutral-7);
+        border: 1px solid ${tones.toneNeutral26};
       `}
     >
       <div
         className={css`
           background: linear-gradient(
             140deg,
-            ${baseTheme.colors.blue[500]},
-            ${baseTheme.colors.blue[600]}
+            ${tones.toneInfo20},
+            ${tones.toneInfo23}
           );
-          color: white;
+          color: var(--color-text-on-accent);
           flex: 1;
           padding: 0.75rem 1rem;
           text-align: center;

@@ -8,11 +8,12 @@ import { useTranslation } from "react-i18next"
 import ExamTimeOverModal from "@/components/course-material/modals/ExamTimeOverModal"
 import Page from "@/components/course-material/Page"
 import type { ExamData } from "@/generated/course-material-api/types.generated"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 
 import CenteredClockSkewWarning from "./CenteredClockSkewWarning"
 import ExamInfoHeader from "./ExamInfoHeader"
 import ExamTimer from "./ExamTimer"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ExamRunningSectionProps {
   examData: ExamData
@@ -49,11 +50,11 @@ export default function ExamRunningSection({
   const warningMessageClass = css`
     background: linear-gradient(
       140deg,
-      ${baseTheme.colors.yellow[100]},
-      ${baseTheme.colors.clear[100]}
+      ${tones.toneWarning3},
+      ${tones.toneNeutral12}
     );
-    border: 1px solid ${baseTheme.colors.yellow[300]};
-    border-left: 8px solid ${baseTheme.colors.yellow[600]};
+    border: 1px solid ${tones.toneWarning6};
+    border-left: 8px solid ${tones.toneWarning10};
     border-radius: 8px;
     padding: 0.75rem 1rem;
     margin: 1rem 0;
@@ -61,11 +62,11 @@ export default function ExamRunningSection({
   const infoMessageClass = css`
     background: linear-gradient(
       140deg,
-      ${baseTheme.colors.blue[100]},
-      ${baseTheme.colors.clear[100]}
+      ${tones.toneInfo5},
+      ${tones.toneNeutral12}
     );
-    border: 1px solid ${baseTheme.colors.blue[300]};
-    border-left: 8px solid ${baseTheme.colors.blue[600]};
+    border: 1px solid ${tones.toneInfo8};
+    border-left: 8px solid ${tones.toneInfo23};
     border-radius: 8px;
     padding: 0.75rem 1rem;
     margin: 1rem 0;
@@ -75,7 +76,7 @@ export default function ExamRunningSection({
     font-family: ${primaryFont};
     font-size: clamp(0.95rem, 2.2vw, 1rem);
     line-height: 1.45;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   `
 
   return (

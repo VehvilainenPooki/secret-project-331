@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 
 import { LINK_INHERIT } from "@/components/credit-registration/constants"
 import OnlyRenderIfPermissions from "@/shared-module/common/components/OnlyRenderIfPermissions"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import {
@@ -15,6 +15,7 @@ import {
   organizationFrontPageRoute,
 } from "@/shared-module/common/utils/routes"
 import { Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   organization: {
@@ -34,10 +35,10 @@ const OrganizationBanner: React.FC<Props> = ({ organization }) => {
       aria-label={organization.name || organization.slug}
       className={css`
         padding: 0em 0.4em;
-        color: #656565;
+        color: var(--tone-fg-neutral-27);
 
         &:focus-visible > div {
-          outline: 2px solid ${baseTheme.colors.green[500]};
+          outline: 2px solid ${tones.toneAccent19};
           outline-offset: 2px;
         }
 
@@ -55,7 +56,7 @@ const OrganizationBanner: React.FC<Props> = ({ organization }) => {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          background-color: rgb(255, 255, 255);
+          background-color: var(--color-surface);
           padding: 0.25rem 0.5rem;
           gap: 0.3rem;
           width: 100%;
@@ -96,7 +97,7 @@ const OrganizationBanner: React.FC<Props> = ({ organization }) => {
                 width: 25px;
                 height: 25px;
                 border-radius: 50%;
-                background-color: rgba(237, 238, 240, 1);
+                background-color: var(--tone-bg-neutral-50);
                 border: none;
                 margin-right: 0.5rem;
                 cursor: pointer;
@@ -106,7 +107,7 @@ const OrganizationBanner: React.FC<Props> = ({ organization }) => {
                 text-decoration: none;
 
                 &:hover {
-                  background-color: rgb(216, 216, 216);
+                  background-color: var(--tone-bg-neutral-68);
                 }
               `}
             >
@@ -114,7 +115,7 @@ const OrganizationBanner: React.FC<Props> = ({ organization }) => {
                 className={css`
                   width: 14px;
                   height: 13px;
-                  color: rgba(26, 35, 51, 1);
+                  color: var(--color-text);
                 `}
               />
             </Link>
@@ -137,7 +138,7 @@ const OrganizationBanner: React.FC<Props> = ({ organization }) => {
 const OrganizationIcon: React.FC = () => (
   <div
     className={css`
-      background: #1a2333;
+      background: var(--tone-bg-neutral-90);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -157,7 +158,7 @@ const OrganizationIcon: React.FC = () => (
       className={css`
         width: 21px;
         height: 20px;
-        color: white;
+        color: var(--color-text-on-accent);
         display: block;
         margin: auto;
         object-fit: contain;

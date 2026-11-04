@@ -12,9 +12,10 @@ import {
 } from "@/generated/course-material-api/sdk.generated"
 import type { ExamData } from "@/generated/course-material-api/types.generated"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, fontWeights, headingFont } from "@/shared-module/common/styles"
+import { fontWeights, headingFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button, Checkbox } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface TestExamTeacherToolsProps {
   examId: string
@@ -112,7 +113,7 @@ export default function TestExamTeacherTools({ examId, examData }: TestExamTeach
           font-size: 20px;
           font-family: ${headingFont};
           font-weight: ${fontWeights.semibold};
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
         }
       `}
     >
