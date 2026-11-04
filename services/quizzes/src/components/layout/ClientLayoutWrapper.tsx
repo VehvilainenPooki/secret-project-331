@@ -3,6 +3,7 @@ import { OverlayProvider } from "@react-aria/overlays"
 import React, { useEffect } from "react"
 
 import initI18n from "@/shared-module/common/utils/initI18n"
+import { themesGlobal } from "@/shared-module/components/styles/themes/global"
 import GlobalStyles from "@/shared-module/exercise-react/react/components/GlobalStyles"
 import withErrorBoundary from "@/shared-module/exercise-react/react/components/withErrorBoundary"
 import useLanguage from "@/shared-module/exercise-react/react/hooks/useLanguage"
@@ -13,6 +14,10 @@ html {
   overflow: hidden;
 }
 `
+
+// Theme colors (roles and tones) as CSS custom properties; this service's GlobalStyles comes
+// from exercise-react, which does not load them.
+void themesGlobal
 
 const SERVICE_NAME = "quizzes"
 
