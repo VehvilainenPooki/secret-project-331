@@ -79,7 +79,7 @@ export const segmentEditableCss = css`
   font-variant-numeric: tabular-nums;
 
   &[data-focus-visible="true"] {
-    background: var(--color-blue-50);
+    background: var(--tone-bg-info-2);
   }
 `
 
@@ -113,9 +113,9 @@ export const datePickerButtonCss = css`
 
   &:focus-visible {
     outline: none;
-    background: var(--color-blue-50);
-    color: var(--color-blue-700);
-    box-shadow: 0 0 0 var(--focus-ring-width) rgba(8, 69, 122, 0.14);
+    background: var(--tone-bg-info-2);
+    color: var(--color-link);
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--tone-shadow-info-9);
   }
 
   &:disabled {
@@ -124,8 +124,8 @@ export const datePickerButtonCss = css`
   }
 
   &:hover:not(:disabled) {
-    background: var(--color-blue-50);
-    color: var(--color-blue-700);
+    background: var(--tone-bg-info-2);
+    color: var(--color-link);
   }
 `
 

@@ -31,29 +31,29 @@ export interface BadgeProps {
 // warning carries its hue in the background and border only.
 const toneCss: Record<BadgeTone, string> = {
   neutral: css`
-    background: var(--color-gray-50);
-    border-color: var(--color-gray-200);
-    color: var(--color-gray-700);
+    background: var(--tone-bg-neutral-31);
+    border-color: var(--tone-border-neutral-49);
+    color: var(--color-text);
   `,
   info: css`
-    background: var(--color-blue-50);
-    border-color: var(--color-blue-200);
-    color: var(--color-blue-700);
+    background: var(--tone-bg-info-2);
+    border-color: var(--tone-border-info-2);
+    color: var(--color-link);
   `,
   success: css`
-    background: var(--color-green-100);
-    border-color: var(--color-green-300);
-    color: var(--color-green-700);
+    background: var(--tone-bg-accent-4);
+    border-color: var(--tone-border-accent-6);
+    color: var(--tone-fg-accent-8);
   `,
   warning: css`
-    background: var(--color-yellow-100);
-    border-color: var(--color-yellow-700);
-    color: var(--color-gray-800);
+    background: var(--tone-bg-warning-2);
+    border-color: var(--tone-border-warning-3);
+    color: var(--tone-fg-neutral-43);
   `,
   danger: css`
-    background: var(--color-crimson-100);
-    border-color: var(--color-crimson-300);
-    color: var(--color-crimson-800);
+    background: var(--tone-bg-danger-7);
+    border-color: var(--tone-border-danger-5);
+    color: var(--tone-fg-danger-15);
   `,
 }
 
@@ -95,7 +95,7 @@ const wrapCss = css`
 const descriptionCss = css`
   font-size: var(--font-size-1);
   font-weight: 400;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 /** Status pill. Statuses only: a count or a plain fact reads better as text than as a chip. */

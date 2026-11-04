@@ -41,7 +41,7 @@ const labelRowCss = css`
 const valueOutputCss = css`
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 const trackRowCss = css`
@@ -58,14 +58,14 @@ const trackLineCss = css`
   width: 100%;
   height: 4px;
   border-radius: 999px;
-  background: var(--color-gray-100);
+  background: var(--tone-bg-neutral-67);
 `
 
 const fillCss = css`
   position: absolute;
   inset: 0 auto 0 0;
   border-radius: 999px;
-  background: var(--color-blue-500);
+  background: var(--tone-bg-info-5);
 `
 
 const markCss = css`
@@ -73,7 +73,7 @@ const markCss = css`
   top: -2px;
   bottom: -2px;
   width: 2px;
-  background: var(--color-gray-300);
+  background: var(--tone-bg-neutral-82);
   transform: translateX(-1px);
 `
 
@@ -87,10 +87,10 @@ const thumbCss = css`
   position: absolute;
   top: 50%;
   border-radius: 50%;
-  background: var(--color-clear-50);
+  background: var(--color-surface);
   box-shadow:
-    0 0 0 1px var(--color-gray-400),
-    0 1px 2px rgba(0, 0, 0, 0.15);
+    0 0 0 1px var(--tone-shadow-neutral-29),
+    0 1px 2px var(--tone-shadow-neutral-16);
   transform: translate(-50%, -50%);
   cursor: grab;
   touch-action: none;
@@ -102,7 +102,7 @@ const thumbCss = css`
   &[data-focus-visible="true"] {
     outline: none;
     box-shadow:
-      0 0 0 1px var(--color-blue-500),
+      0 0 0 1px var(--tone-shadow-info-15),
       0 0 0 var(--focus-ring-width) var(--focus-ring-color);
   }
 

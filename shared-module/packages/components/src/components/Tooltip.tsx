@@ -18,7 +18,7 @@ const contentCss = css`
   padding: var(--space-3) var(--space-4);
   max-width: 320px;
   font-size: var(--font-size-1);
-  color: var(--color-gray-700);
+  color: var(--color-text);
   line-height: 1.4;
 `
 

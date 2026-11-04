@@ -87,7 +87,7 @@ const rootCss = css`
   border: 1px solid transparent;
   border-left-width: 4px;
   border-radius: var(--radius-3);
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-family: var(--font-sans);
   font-size: var(--font-size-2);
   line-height: 1.5;
@@ -116,28 +116,28 @@ const densityCss: Record<ErrorNoticeDensity, string> = {
 
 const severityCss: Record<ErrorSeverity, string> = {
   error: css`
-    background: var(--color-crimson-50);
-    border-left-color: var(--color-crimson-700);
+    background: var(--tone-bg-danger-2);
+    border-left-color: var(--tone-border-danger-11);
   `,
   warning: css`
-    background: var(--color-red-50);
-    border-left-color: var(--color-red-700);
+    background: var(--tone-bg-danger-1);
+    border-left-color: var(--tone-border-danger-9);
   `,
   info: css`
-    background: var(--color-blue-50);
-    border-left-color: var(--color-blue-600);
+    background: var(--tone-bg-info-2);
+    border-left-color: var(--tone-border-info-9);
   `,
 }
 
 const iconSeverityCss: Record<ErrorSeverity, string> = {
   error: css`
-    color: var(--color-crimson-700);
+    color: var(--tone-fg-danger-14);
   `,
   warning: css`
-    color: var(--color-red-700);
+    color: var(--tone-fg-danger-10);
   `,
   info: css`
-    color: var(--color-blue-600);
+    color: var(--tone-fg-info-11);
   `,
 }
 
@@ -163,7 +163,7 @@ const titleCss = css`
 
 const paragraphCss = css`
   margin: 0;
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
   overflow-wrap: anywhere;
 `
 
@@ -172,14 +172,14 @@ const issuesCss = css`
   padding-left: var(--space-4);
   display: grid;
   gap: var(--space-2);
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
 `
 
 const issueLocationCss = css`
   margin-right: var(--space-2);
   font-family: var(--font-mono);
   font-size: var(--font-size-1);
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 const requestIdCss = css`
@@ -187,9 +187,9 @@ const requestIdCss = css`
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--color-clear-400);
+  border: 1px solid var(--tone-border-neutral-31);
   border-radius: var(--radius-2);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
 `
 
 const requestIdListCss = css`
@@ -203,7 +203,7 @@ const requestIdListCss = css`
 
 const requestIdLabelCss = css`
   flex: none;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-weight: 600;
 `
@@ -213,7 +213,7 @@ const requestIdValueCss = css`
   margin: 0;
   font-family: var(--font-mono);
   font-size: var(--font-size-1);
-  color: var(--color-gray-700);
+  color: var(--color-text);
   overflow-wrap: anywhere;
   /* One click grabs the whole id: it is always copied or read out whole. */
   user-select: all;
@@ -227,7 +227,7 @@ const actionsCss = css`
 `
 
 const linkCss = css`
-  color: var(--color-blue-700);
+  color: var(--color-link);
 
   &:focus-visible {
     outline: var(--focus-ring-width) solid var(--focus-ring-color);
@@ -244,7 +244,7 @@ const detailsPanelCss = css`
 const blockLabelCss = css`
   display: block;
   margin-bottom: var(--space-2);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-weight: 500;
 `
@@ -253,8 +253,8 @@ const blockCss = css`
   margin: 0;
   padding: var(--space-3);
   border-radius: var(--radius-2);
-  background: var(--color-gray-50);
-  color: var(--color-gray-700);
+  background: var(--tone-bg-neutral-31);
+  color: var(--color-text);
   font-family: var(--font-mono);
   font-size: var(--font-size-1);
   line-height: 1.6;

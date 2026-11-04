@@ -28,22 +28,22 @@ const rootCss = css`
 // shape and the explanation beside it rather than with colour.
 const stateCss: Record<RegistrationStatusState, string> = {
   done: css`
-    color: var(--color-green-700);
+    color: var(--tone-fg-accent-8);
   `,
   current: css`
-    color: var(--color-blue-700);
+    color: var(--color-link);
   `,
   "action-needed": css`
-    color: var(--color-gray-800);
+    color: var(--tone-fg-neutral-43);
   `,
   failed: css`
-    color: var(--color-crimson-700);
+    color: var(--tone-fg-danger-14);
   `,
   superseded: css`
-    color: var(--color-gray-600);
+    color: var(--tone-fg-neutral-35);
   `,
   upcoming: css`
-    color: var(--color-gray-600);
+    color: var(--tone-fg-neutral-35);
   `,
 }
 

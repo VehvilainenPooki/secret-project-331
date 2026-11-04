@@ -88,7 +88,7 @@ const messageCss = css`
 
 const descriptionCss = css`
   margin: 0;
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
 `
 
 const EXIT_HANDOFF = "handoff"

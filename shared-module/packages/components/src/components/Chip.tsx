@@ -10,10 +10,10 @@ const rootCss = css`
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-1) var(--space-2) var(--space-1) var(--space-3);
-  border: 1px solid var(--color-clear-400);
+  border: 1px solid var(--tone-border-neutral-31);
   border-radius: 999px;
-  background: var(--color-clear-100);
-  color: var(--color-gray-700);
+  background: var(--color-surface-sunken);
+  color: var(--color-text);
   font-size: var(--font-size-1);
   font-weight: 600;
   line-height: 1.2;
@@ -38,7 +38,7 @@ const removeButtonCss = css`
   line-height: 1;
 
   &:hover {
-    background: var(--color-clear-300);
+    background: var(--tone-bg-neutral-62);
   }
 
   &:focus-visible {

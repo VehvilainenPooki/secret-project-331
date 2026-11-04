@@ -44,7 +44,7 @@ const nowrapCss = css`
 const absoluteTimeCss = css`
   white-space: nowrap;
   font-size: var(--font-size-1);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 /**

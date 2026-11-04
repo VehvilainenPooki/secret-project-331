@@ -33,14 +33,14 @@ export const tableCompactCss = css`
 export const captionCss = css`
   text-align: start;
   padding-bottom: var(--space-3);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
 `
 
 export const cellCss = css`
   text-align: start;
   padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--color-clear-300);
+  border-bottom: 1px solid var(--color-border);
   vertical-align: top;
 `
 
@@ -49,13 +49,13 @@ export const cellCompactCss = css`
 `
 
 export const headerCellCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-weight: 600;
   white-space: nowrap;
 `
 
 export const bodyCellCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   /* Unlike "anywhere", leaves min-content alone, so auto layout never squeezes a short cell
      (a link, a date) into mid-word breaks. */
   overflow-wrap: break-word;
@@ -75,7 +75,7 @@ export const wrapCss = css`
 `
 
 export const emptyStateCellCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 export const growFixedCss = css`
@@ -99,7 +99,7 @@ export const alignCss = {
 
 export const rowHoverCss = css`
   & tbody tr:hover > * {
-    background: var(--color-clear-100);
+    background: var(--color-surface-sunken);
   }
 `
 
@@ -121,14 +121,14 @@ export const overflowMaskStartCss = css`
   left: 0;
   background: linear-gradient(
     to right,
-    var(--table-fade-color, var(--color-clear-50)),
+    var(--table-fade-color, var(--color-surface)),
     transparent
   );
 `
 
 export const overflowMaskEndCss = css`
   right: 0;
-  background: linear-gradient(to left, var(--table-fade-color, var(--color-clear-50)), transparent);
+  background: linear-gradient(to left, var(--table-fade-color, var(--color-surface)), transparent);
 `
 
 export const overflowMaskVisibleCss = css`
@@ -139,12 +139,12 @@ export const overflowMaskVisibleCss = css`
 export const stickyCellCss = css`
   position: sticky;
   z-index: 1;
-  background: var(--table-sticky-bg, var(--color-clear-50));
+  background: var(--table-sticky-bg, var(--color-surface));
 `
 
 /** Edge shadow for a pinned cell; only earns its place once something has scrolled under it. */
 export const stickyCellScrolledCss = css`
-  box-shadow: 6px 0 6px -6px rgba(10, 15, 23, 0.25);
+  box-shadow: 6px 0 6px -6px var(--tone-shadow-neutral-23);
 `
 
 export function stickyOffsetCss(offset: string): string {
@@ -176,7 +176,7 @@ export const checkboxShellCss = css`
   }
 
   & input:focus-visible + span {
-    box-shadow: 0 0 0 var(--focus-ring-width) rgba(8, 69, 122, 0.18);
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--tone-shadow-info-12);
   }
 `
 
@@ -200,7 +200,7 @@ export const sortButtonCss = css`
   }
 
   &:hover {
-    color: var(--color-gray-700);
+    color: var(--color-text);
   }
 `
 
@@ -239,7 +239,7 @@ export const expandButtonCss = css`
   border: 0;
   border-radius: var(--space-2);
   background: none;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   cursor: pointer;
 
   &:focus-visible {
@@ -248,8 +248,8 @@ export const expandButtonCss = css`
   }
 
   &:hover {
-    background: var(--color-clear-200);
-    color: var(--color-gray-700);
+    background: var(--tone-bg-neutral-52);
+    color: var(--color-text);
   }
 `
 
@@ -268,16 +268,16 @@ export const expandIconCss = css`
 
 export const detailCellCss = css`
   padding: var(--space-3) var(--space-4);
-  border-bottom: 1px solid var(--color-clear-300);
-  background: var(--color-clear-100);
-  color: var(--color-gray-700);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-sunken);
+  color: var(--color-text);
 `
 
 /** A `rowGroup` heading row: spans the table and introduces the rows under it. */
 export const groupHeaderCellCss = css`
   padding: var(--space-4) var(--space-4) var(--space-2);
-  border-bottom: 1px solid var(--color-clear-300);
-  color: var(--color-gray-700);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
   font-size: var(--font-size-1);
   font-weight: 600;
   text-align: start;
@@ -325,7 +325,7 @@ export const stackCss = css`
     & tr {
       display: block;
       padding: var(--space-3);
-      border: 1px solid var(--color-clear-300);
+      border: 1px solid var(--color-border);
       border-radius: var(--surface-radius);
     }
 
@@ -414,7 +414,7 @@ export const stackCss = css`
     & [data-table-stack-label="true"] {
       display: block;
       flex: 0 0 40%;
-      color: var(--color-gray-500);
+      color: var(--color-text-muted);
       font-size: var(--font-size-0);
       font-weight: 600;
       /* A numeric column's end alignment lands on the label too, sending it to the opposite

@@ -7,9 +7,9 @@ const DIAMETER_PX: Record<SpinnerSize, number> = { sm: 16, md: 20, lg: 24 }
 const STROKE_PX: Record<SpinnerSize, number> = { sm: 2, md: 2, lg: 3 }
 
 const TONE_COLOR: Record<SpinnerTone, string> = {
-  accent: "var(--color-green-600)",
+  accent: "var(--tone-tone-accent-21)",
   current: "currentColor",
-  inverse: "var(--color-clear-50)",
+  inverse: "var(--tone-tone-neutral-1)",
 }
 
 const spin = keyframes`

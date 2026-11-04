@@ -84,16 +84,16 @@ const crumbTextCss = css`
 
 const currentCrumbCss = css`
   max-inline-size: 40ch;
-  color: var(--color-gray-800);
+  color: var(--tone-fg-neutral-43);
   font-weight: 600;
 `
 
 const linkCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   text-decoration: none;
 
   &:hover {
-    color: var(--color-gray-800);
+    color: var(--tone-fg-neutral-43);
     text-decoration: underline;
   }
 `
@@ -101,7 +101,7 @@ const linkCss = css`
 const separatorCss = css`
   flex: none;
   font-size: 12px;
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
 `
 
 const pendingCss = css`
@@ -111,16 +111,16 @@ const pendingCss = css`
   border-radius: var(--radius-1);
   background: linear-gradient(
     90deg,
-    var(--color-clear-200) 25%,
-    var(--color-clear-100) 50%,
-    var(--color-clear-200) 75%
+    var(--tone-bg-neutral-52) 25%,
+    var(--color-surface-sunken) 50%,
+    var(--tone-bg-neutral-52) 75%
   );
   background-size: 200% 100%;
   animation: ${shimmer} var(--duration-shimmer) linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
     animation: none;
-    background: var(--color-clear-200);
+    background: var(--tone-bg-neutral-52);
   }
 `
 

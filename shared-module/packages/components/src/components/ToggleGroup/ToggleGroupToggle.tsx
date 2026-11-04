@@ -13,14 +13,14 @@ import { resolveButtonRootCss } from "../primitives/buttonStyles"
 const buttonCss = (selected: boolean) => css`
   ${resolveButtonRootCss({ size: "medium", variant: "secondary" })}
   border-radius: 30px;
-  border: 2px solid #0a0f17;
+  border: 2px solid var(--tone-border-neutral-62);
 
   ${
     selected &&
     `
-    color: white;
-    background: #0A0F17;
-    border: white;
+    color: var(--color-text-on-accent);
+    background: var(--tone-bg-neutral-93);
+    border: var(--tone-border-neutral-1);
   `
   }
 `
