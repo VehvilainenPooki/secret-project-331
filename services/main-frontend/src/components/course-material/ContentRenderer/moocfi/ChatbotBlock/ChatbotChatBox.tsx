@@ -5,7 +5,7 @@ import React from "react"
 
 import ChatbotChatBody from "@/components/course-material/chatbot/shared/ChatbotChatBody"
 import ChatbotChatHeader from "@/components/course-material/chatbot/shared/ChatbotChatHeader"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ChatbotChatBox: React.FC = () => {
   return (
@@ -15,8 +15,8 @@ const ChatbotChatBox: React.FC = () => {
         flex-direction: column;
         height: inherit;
         width: inherit;
-        box-shadow: inset 0 0 0 1px ${baseTheme.colors.gray[100]};
-        background: white;
+        box-shadow: inset 0 0 0 1px ${tones.toneNeutral29};
+        background: var(--color-surface);
         border-radius: 10px;
       `}
     >

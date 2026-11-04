@@ -10,6 +10,7 @@ import type { CourseMaterialOEmbedResponse } from "@/generated/course-material-a
 import { baseTheme } from "@/shared-module/common/styles"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export const MentimeterEmbedBlock: React.FC<React.PropsWithChildren<EmbedAttributes>> = (props) => {
   const [embedHtml, setEmbedHtml] = useState<string | undefined>(undefined)
@@ -75,7 +76,7 @@ export const MentimeterEmbedBlock: React.FC<React.PropsWithChildren<EmbedAttribu
               font-size: ${baseTheme.fontSizes[0]}px;
               margin-top: 0.5em;
               margin-bottom: 1em;
-              color: ${baseTheme.colors.gray[400]};
+              color: ${tones.toneNeutral39};
             `}
             dangerouslySetInnerHTML={{ __html: sanitizeCourseMaterialHtml(props.caption ?? "") }}
           ></figcaption>

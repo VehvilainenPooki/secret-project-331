@@ -7,11 +7,11 @@ import { useFocusWithin } from "react-aria"
 import { useTranslation } from "react-i18next"
 
 import type { NewProposedBlockEdit } from "@/generated/course-material-api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { selectedBlockIdAtom } from "@/stores/course-material/materialFeedbackStore"
 
 import { getEditableHoverStyles, getEditingStyles } from "../styles"
 import { useParagraphEditing } from "./hooks/useParagraphEditing"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface EditableParagraphProps {
   id: string
@@ -49,7 +49,7 @@ const EditableParagraphContent = memo(
           border-radius: 4px;
 
           &:focus {
-            outline: 2px solid ${baseTheme.colors.green[500]};
+            outline: 2px solid ${tones.toneAccent19};
             outline-offset: 2px;
           }
         `}`}

@@ -15,7 +15,7 @@ import {
   refetchUserChapterLocks,
   useUserChapterLocks,
 } from "@/hooks/course-material/useUserChapterLocks"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { LoadingRegion, useDialog, ErrorNotice } from "@/shared-module/components"
 import { courseMaterialAtom } from "@/state/course-material"
 import { refetchViewAtom } from "@/state/course-material/selectors"
@@ -25,6 +25,7 @@ import LockAnimation from "./LockAnimation"
 import LockChapterLoadingView from "./LockChapterLoadingView"
 import LockChapterLockedView from "./LockChapterLockedView"
 import LockChapterUnlockedView from "./LockChapterUnlockedView"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface LockChapterProps {
   chapterId: string
@@ -91,7 +92,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
           <p
             className={css`
               margin: 0 0 1rem 0;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
             `}
           >
             {t("lock-chapter-confirm-message")}
@@ -110,7 +111,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
             <p
               className={css`
                 margin: 0 0 1.5rem 0;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
               `}
             >
               {t("lock-chapter-confirm-message")}
@@ -118,8 +119,8 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
             <div
               className={css`
                 padding: 1rem;
-                background-color: ${baseTheme.colors.yellow[50]};
-                border-left: 4px solid ${baseTheme.colors.yellow[500]};
+                background-color: ${tones.toneWarning1};
+                border-left: 4px solid ${tones.toneWarning9};
                 border-radius: 4px;
                 margin-top: 1rem;
               `}
@@ -128,7 +129,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
                 className={css`
                   margin: 0 0 0.5rem 0;
                   font-weight: 600;
-                  color: ${baseTheme.colors.gray[900]};
+                  color: ${tones.toneNeutral48};
                 `}
               >
                 {t("lock-chapter-unreturned-warning-title")}
@@ -136,7 +137,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
               <p
                 className={css`
                   margin: 0 0 0.75rem 0;
-                  color: ${baseTheme.colors.gray[700]};
+                  color: ${tones.toneNeutral46};
                 `}
               >
                 {t("lock-chapter-unreturned-warning-message", {
@@ -147,7 +148,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
                 className={css`
                   margin: 0;
                   padding-left: 1.5rem;
-                  color: ${baseTheme.colors.gray[700]};
+                  color: ${tones.toneNeutral46};
                 `}
               >
                 {preview.unreturned_exercises.map((exercise) => (
@@ -213,8 +214,8 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
       ) : currentChapterIsNotAccessible ? (
         <div
           className={css`
-            background: ${baseTheme.colors.clear[100]};
-            border: 1px solid ${baseTheme.colors.gray[300]};
+            background: ${tones.toneNeutral12};
+            border: 1px solid ${tones.toneNeutral37};
             border-radius: 8px;
             padding: 2.5rem 2rem;
             display: flex;
@@ -226,7 +227,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
         >
           <div
             className={css`
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               display: flex;
               align-items: center;
               justify-content: center;
@@ -248,7 +249,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
                 font-family: ${primaryFont};
                 font-size: 1.25rem;
                 font-weight: 600;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
               `}
             >
               {t("lock-chapter-title")}
@@ -259,7 +260,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
                 font-family: ${primaryFont};
                 font-size: 0.9375rem;
                 line-height: 1.6;
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
               `}
             >
               {t("chapter-locked-complete-previous")}
@@ -285,7 +286,7 @@ const LockChapter: React.FC<LockChapterProps> = ({ chapterId, blockProps }) => {
           z-index: 10;
           display: ${showAnimation ? "grid" : "none"};
           place-items: center;
-          background: rgba(255, 255, 255, 0.9);
+          background: var(--tone-bg-neutral-7);
           border-radius: 8px;
           pointer-events: ${showAnimation ? "auto" : "none"};
         `}

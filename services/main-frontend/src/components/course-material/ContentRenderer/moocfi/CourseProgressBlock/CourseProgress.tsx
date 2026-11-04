@@ -34,7 +34,7 @@ const CourseProgress: React.FC<React.PropsWithChildren<CourseProgressProps>> = (
           font-size: clamp(30px, 3.5vw, 46px);
           margin: 1rem;
           font-weight: 700;
-          color: #1a2333;
+          color: var(--color-text);
           text-align: center;
           opacity: 0.9;
         `}

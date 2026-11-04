@@ -6,10 +6,10 @@ import styled from "@emotion/styled"
 import React from "react"
 
 import type { HeadingAttributes, ListAttributes } from "@/../types/GutenbergBlockAttributes"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import type { Block } from "@/types/courseMaterialBlock"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface StyledObjectiveProps {
   index: number
@@ -39,7 +39,7 @@ const Wrapper = styled.div<WrapperProps>`
     font-weight: 700;
     text-align: center;
     margin: 0 auto;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     padding-bottom: 1em;
     line-height: 120%;
   }
@@ -73,11 +73,11 @@ const TextBox = styled.div`
 const Objective = styled.div<StyledObjectiveProps>`
   width: 100%;
   height: 100%;
-  background: #f7f8f9;
+  background: var(--tone-bg-neutral-20);
   position: relative;
   overflow: hidden;
   padding: 1.25rem;
-  border: 2px solid #edf0f2;
+  border: 2px solid var(--tone-border-neutral-5);
 
   .paragraph {
     text-align: left;

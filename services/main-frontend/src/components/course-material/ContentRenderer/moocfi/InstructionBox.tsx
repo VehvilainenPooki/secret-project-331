@@ -4,11 +4,11 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import ParsedText from "@/components/course-material/ParsedText"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 
 import type { BlockRendererProps } from ".."
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface InstructionBoxAttributes {
   content: string
@@ -21,9 +21,9 @@ const InstructionBlock: React.FC<
     <div
       className={css`
         padding: 1rem 0rem;
-        background-color: #f2f7fc;
+        background-color: var(--tone-bg-neutral-23);
         margin: 1rem 0;
-        border: 2px ${baseTheme.colors.purple[300]} dashed;
+        border: 2px ${tones.toneSpecial1} dashed;
         ${respondToOrLarger.md} {
           padding: 1rem 1.5rem;
         }
@@ -42,7 +42,7 @@ const InstructionBlock: React.FC<
 
           span {
             font-size: 18px;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
 
             ${respondToOrLarger.md} {
               font-size: 20px;

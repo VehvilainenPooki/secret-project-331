@@ -4,13 +4,14 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import ParsedText from "@/components/course-material/ParsedText"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 
 import type { BlockRendererProps } from ".."
 import { ImageInteractivityContext } from "../core/common/Image/ImageInteractivityContext"
 import InnerBlocks from "../util/InnerBlocks"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface AsideWithImageBlockAttributes {
   title: string
@@ -29,7 +30,7 @@ const headingStyles = css`
   margin-bottom: 1.125rem;
   font-weight: 550;
   font-size: 1.5rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 const AsideWithImageBlock: React.FC<
@@ -45,7 +46,7 @@ const AsideWithImageBlock: React.FC<
         display: grid;
         grid-template-columns: 1fr;
         row-gap: 2rem;
-        border-bottom: 2px solid #eaedf0;
+        border-bottom: 2px solid var(--tone-border-neutral-8);
 
         ${respondToOrLarger.sm} {
           grid-template-columns: 0.2fr 1fr;

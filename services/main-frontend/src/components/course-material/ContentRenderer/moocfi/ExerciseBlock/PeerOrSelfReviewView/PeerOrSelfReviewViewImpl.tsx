@@ -264,7 +264,7 @@ const PeerOrSelfReviewViewImpl: React.FC<React.PropsWithChildren<PeerOrSelfRevie
           className={css`
             border: 0;
             margin-bottom: 1rem;
-            background-color: #fff;
+            background-color: var(--color-surface);
             padding: 0.8rem 1.25rem;
             border-radius: 0.625rem;
           `}
@@ -354,7 +354,7 @@ const PeerOrSelfReviewViewImpl: React.FC<React.PropsWithChildren<PeerOrSelfRevie
         className={css`
           margin-top: 3rem;
           margin-bottom: 2rem;
-          background-color: #e0e0e0;
+          background-color: var(--tone-bg-neutral-65);
           height: 5px;
           border: none;
         `}

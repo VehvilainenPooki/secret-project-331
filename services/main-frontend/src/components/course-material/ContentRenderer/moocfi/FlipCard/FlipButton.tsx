@@ -6,7 +6,7 @@ import React from "react"
 import { useButton } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface FlipButtonProps {
   onPress: () => void
@@ -38,14 +38,14 @@ const FlipButton: React.FC<FlipButtonProps> = ({ onPress, ariaLabel, ref }) => {
         border-radius: 10px;
         width: 54px;
         height: 42px;
-        background: ${baseTheme.colors.clear[100]};
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background: ${tones.toneNeutral12};
+        box-shadow: 0 2px 4px var(--tone-shadow-neutral-10);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        color: ${baseTheme.colors.gray[700]};
-        border: 2px solid ${baseTheme.colors.gray[600]};
+        color: ${tones.toneNeutral46};
+        border: 2px solid ${tones.toneNeutral44};
         cursor: pointer;
         padding: 0;
         font-size: 9px;
@@ -65,7 +65,7 @@ const FlipButton: React.FC<FlipButtonProps> = ({ onPress, ariaLabel, ref }) => {
         }
 
         &:focus-visible {
-          outline: 2px solid ${baseTheme.colors.blue[500]};
+          outline: 2px solid ${tones.toneInfo20};
           outline-offset: 2px;
         }
 

@@ -5,11 +5,11 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import type { CellAttributes, Cells, TableAttributes } from "@/../types/GutenbergBlockAttributes"
 import ParsedText from "@/components/course-material/ParsedText"
-import { baseTheme } from "@/shared-module/common/styles"
 import { stringToNumberOrPlaceholder } from "@/shared-module/common/utils/numbers"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 
 import type { BlockRendererProps } from "../.."
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExtraAttributes {
   className?: string
@@ -35,12 +35,12 @@ const edgeShadowBaseStyles = css`
 
 const rightShadowStyles = css`
   right: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.16));
+  background: linear-gradient(to right, var(--tone-bg-neutral-3), var(--tone-bg-neutral-70));
 `
 
 const leftShadowStyles = css`
   left: 0;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.16));
+  background: linear-gradient(to left, var(--tone-bg-neutral-3), var(--tone-bg-neutral-70));
 `
 
 const fetchAlignment = (align: string | undefined) => {
@@ -130,7 +130,7 @@ const TableBlock: React.FC<
             }
             /* stylelint-disable-next-line block-no-empty */
             tbody tr:nth-child(odd) {
-              ${isStriped && `background-color: ${baseTheme.colors.gray[100]};`}
+              ${isStriped && `background-color: ${tones.toneNeutral29};`}
             }
             ${hasFixedLayout && "table-layout: fixed;"}
             thead {

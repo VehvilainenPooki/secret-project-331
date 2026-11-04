@@ -17,7 +17,7 @@ const highlightItemStyle = css`
 `
 
 const highlightItemLeftBorder = css`
-  border-left: 2px solid #e4eaee;
+  border-left: 2px solid var(--tone-border-neutral-11);
 `
 
 interface HighlightItemProps {

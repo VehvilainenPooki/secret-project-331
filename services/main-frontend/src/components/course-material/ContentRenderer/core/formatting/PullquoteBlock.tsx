@@ -3,12 +3,13 @@
 import { css } from "@emotion/css"
 
 import type { PullquoteAttributes } from "@/../types/GutenbergBlockAttributes"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
 import type { BlockRendererProps } from "../.."
+import { tones } from "@/shared-module/components/styles/themes"
 
 const FONT_SIZES: Record<string, string> = {
   small: "18px",
@@ -51,8 +52,8 @@ const PullquoteBlock: React.FC<
         className={css`
           text-align: center;
           ${textAlign && `text-align: ${textAlign};`}
-          border-top: 0.25rem solid #d5dbdf;
-          border-bottom: 0.25rem solid #d5dbdf;
+          border-top: 0.25rem solid var(--tone-border-neutral-32);
+          border-bottom: 0.25rem solid var(--tone-border-neutral-32);
           padding: 3rem 0rem !important;
         `}
       >
@@ -76,7 +77,7 @@ const PullquoteBlock: React.FC<
             font-style: normal;
             text-transform: capitalize !important;
             margin-top: 1.2rem;
-            color: ${baseTheme.colors.green[700]};
+            color: ${tones.toneAccent23};
           `}
           dangerouslySetInnerHTML={{ __html: sanitizeCourseMaterialHtml(citation) }}
         ></cite>

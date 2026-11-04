@@ -5,10 +5,11 @@ import { MinusCircle, PlusCircle } from "@vectopus/atlas-icons-react"
 import React, { useState } from "react"
 
 import InnerBlocks from "@/components/course-material/ContentRenderer/util/InnerBlocks"
-import { baseTheme, fontWeights, headingFont } from "@/shared-module/common/styles"
+import { fontWeights, headingFont } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 
 import type { BlockRendererProps } from "../.."
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExpandableContentInnerBlockProps {
   name: string
@@ -32,7 +33,7 @@ const ExpandableContentInnerBlock: React.FC<
         flex-direction: column;
         padding: 1rem;
         border-radius: 4px;
-        background: #dfdfe480;
+        background: var(--tone-bg-neutral-47);
       `}
     >
       <h4
@@ -52,7 +53,7 @@ const ExpandableContentInnerBlock: React.FC<
             font-family: ${headingFont};
             font-weight: inherit;
             font-size: inherit;
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
             cursor: pointer;
             border: 0;
             width: 100%;
@@ -79,7 +80,7 @@ const ExpandableContentInnerBlock: React.FC<
           role="region"
           aria-labelledby={headingId}
           className={css`
-            background: ${baseTheme.colors.primary[100]};
+            background: ${tones.toneNeutral1};
             border-radius: 2px;
 
             p,

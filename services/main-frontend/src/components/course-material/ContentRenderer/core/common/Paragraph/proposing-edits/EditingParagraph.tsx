@@ -7,7 +7,6 @@ import { useButton } from "react-aria"
 import { useTranslation } from "react-i18next"
 
 import type { ParagraphAttributes } from "@/../types/GutenbergBlockAttributes"
-import { baseTheme } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import {
   blockEditsAtom,
@@ -19,6 +18,7 @@ import { getEditableHoverStyles, getParagraphStyles } from "../styles"
 import EditableParagraph from "./EditableParagraph"
 import { useParagraphEditing } from "./hooks/useParagraphEditing"
 import PreviewableParagraph from "./PreviewableParagraph"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const editButtonStyles = css`
   display: inline-block;
@@ -26,19 +26,19 @@ const editButtonStyles = css`
   vertical-align: baseline;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
-  background-color: ${baseTheme.colors.green[700]};
-  color: ${baseTheme.colors.primary[100]};
+  background-color: ${tones.toneAccent23};
+  color: ${tones.toneNeutral1};
   border: none;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
 
   &:hover {
-    background-color: ${baseTheme.colors.green[700]};
+    background-color: ${tones.toneAccent23};
   }
 
   &:focus {
-    outline: 2px solid ${baseTheme.colors.green[600]};
+    outline: 2px solid ${tones.toneAccent21};
     outline-offset: 2px;
   }
 `
@@ -125,8 +125,8 @@ const EditingParagraph: React.FC<React.PropsWithChildren<EditingParagraphProps>>
 
           &:has(p:hover),
           &:has(.edit-button:hover) {
-            background-color: rgba(121, 247, 96, 0.05);
-            box-shadow: 0 0 0 2px rgba(93, 163, 36, 0.2);
+            background-color: var(--tone-bg-accent-1);
+            box-shadow: 0 0 0 2px var(--tone-shadow-accent-1);
           }
 
           p {
@@ -175,8 +175,8 @@ const EditingParagraph: React.FC<React.PropsWithChildren<EditingParagraphProps>>
 
         &:has(> div:hover),
         &:has(.edit-button:hover) {
-          background-color: rgba(121, 247, 96, 0.05);
-          box-shadow: 0 0 0 2px rgba(93, 163, 36, 0.2);
+          background-color: var(--tone-bg-accent-1);
+          box-shadow: 0 0 0 2px var(--tone-shadow-accent-1);
         }
       `}
     >

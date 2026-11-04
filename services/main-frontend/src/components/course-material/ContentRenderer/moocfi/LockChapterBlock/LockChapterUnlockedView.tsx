@@ -5,8 +5,9 @@ import { Padlock } from "@vectopus/atlas-icons-react"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { Button, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface LockChapterUnlockedViewProps {
   onLock: () => void
@@ -28,8 +29,8 @@ const LockChapterUnlockedView: React.FC<LockChapterUnlockedViewProps> = ({
   return (
     <div
       className={css`
-        background: ${baseTheme.colors.clear[100]};
-        border: 1px solid ${baseTheme.colors.gray[300]};
+        background: ${tones.toneNeutral12};
+        border: 1px solid ${tones.toneNeutral37};
         border-radius: 8px;
         padding: 2.5rem 2rem;
         display: flex;
@@ -41,7 +42,7 @@ const LockChapterUnlockedView: React.FC<LockChapterUnlockedViewProps> = ({
     >
       <div
         className={css`
-          color: ${baseTheme.colors.blue[600]};
+          color: ${tones.toneInfo23};
           display: flex;
           align-items: center;
           justify-content: center;
@@ -63,7 +64,7 @@ const LockChapterUnlockedView: React.FC<LockChapterUnlockedViewProps> = ({
             font-family: ${primaryFont};
             font-size: 1.25rem;
             font-weight: 600;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
         >
           {t("lock-chapter-title")}
@@ -74,7 +75,7 @@ const LockChapterUnlockedView: React.FC<LockChapterUnlockedViewProps> = ({
             font-family: ${primaryFont};
             font-size: 0.9375rem;
             line-height: 1.6;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
           `}
         >
           {t("lock-chapter-description")}

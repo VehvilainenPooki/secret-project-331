@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseMaterialExercise } from "@/generated/course-material-api/types.generated"
 import { courseMaterialExerciseQueryKey } from "@/hooks/course-material/useCourseMaterialExerciseQuery"
-import { baseTheme } from "@/shared-module/common/styles"
 
 import { exerciseButtonStyles, makeExerciseButtonMutedStyles } from ".."
+import { tones } from "@/shared-module/components/styles/themes"
 
 const WaitingForPeerReviews: React.FC<React.PropsWithChildren<{ exerciseId: string }>> = ({
   exerciseId,
@@ -33,7 +33,7 @@ const WaitingForPeerReviews: React.FC<React.PropsWithChildren<{ exerciseId: stri
           text-align: center;
           margin-bottom: 1rem;
 
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
         `}
       >
         {t("title-waiting-for-peer-reviews")}

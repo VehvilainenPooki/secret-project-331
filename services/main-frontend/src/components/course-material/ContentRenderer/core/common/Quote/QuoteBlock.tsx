@@ -20,14 +20,14 @@ const QuoteBlock: React.FC<BlockRendererProps<QuoteAttributes & ExtraAttributes>
     padding: 0.4rem 1rem;
     margin: 2.5rem 0;
     max-width: 100%;
-    border-left: 7px solid #bdc7d1;
-    background: #f6f8fa;
+    border-left: 7px solid var(--tone-border-neutral-46);
+    background: var(--tone-bg-neutral-21);
   `
   const styleRightDefault = css`
     padding: 0.5rem 2rem;
     margin: 2.5rem 0;
     max-width: 650px;
-    border-right: 7px solid #bfbfbf;
+    border-right: 7px solid var(--tone-border-neutral-48);
     text-align: right;
   `
   const styleCenterDefault = css`

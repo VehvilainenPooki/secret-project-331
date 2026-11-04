@@ -35,12 +35,12 @@ export interface NextPageProps {
 }
 
 const ChapterProgress = styled.div`
-  background: #f4f6f8;
+  background: var(--tone-bg-neutral-25);
   padding: 1rem 1.25rem;
   display: flex;
   justify-content: space-between;
   min-height: 6rem;
-  color: #1a2333;
+  color: var(--color-text);
   margin-bottom: 1rem;
   flex-direction: column;
 

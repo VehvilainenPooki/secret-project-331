@@ -77,12 +77,12 @@ const AudioPlayer: React.FC<React.PropsWithChildren<AudioPlayerProps>> = ({
         tabIndex={-1}
         className={css`
           width: 100vw;
-          background: #fff;
+          background: var(--color-surface);
           position: relative;
           border-radius: 10px;
-          border: 2px solid #e3d2f2;
+          border: 2px solid var(--tone-border-special-1);
           padding: 30px 20px;
-          box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 8px 40px var(--tone-shadow-neutral-10);
 
           ${respondToOrLarger.md} {
             width: 700px;
@@ -131,7 +131,7 @@ const AudioPlayer: React.FC<React.PropsWithChildren<AudioPlayerProps>> = ({
               ${
                 isCloseFocusVisible &&
                 css`
-                  outline: 2px solid #4a90e2;
+                  outline: 2px solid var(--tone-border-info-5);
                   outline-offset: 2px;
                 `
               }

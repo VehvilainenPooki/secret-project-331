@@ -182,7 +182,7 @@ const Controls = ({
             ${
               isRewindFocusVisible &&
               css`
-                outline: 2px solid #4a90e2;
+                outline: 2px solid var(--tone-border-info-5);
                 outline-offset: 2px;
               `
             }
@@ -200,7 +200,7 @@ const Controls = ({
             ${
               isPlayPauseFocusVisible &&
               css`
-                outline: 2px solid #4a90e2;
+                outline: 2px solid var(--tone-border-info-5);
                 outline-offset: 2px;
               `
             }
@@ -216,7 +216,7 @@ const Controls = ({
             ${
               isFastForwardFocusVisible &&
               css`
-                outline: 2px solid #4a90e2;
+                outline: 2px solid var(--tone-border-info-5);
                 outline-offset: 2px;
               `
             }
@@ -235,7 +235,7 @@ const Controls = ({
             ${
               isMuteFocusVisible &&
               css`
-                outline: 2px solid #4a90e2;
+                outline: 2px solid var(--tone-border-info-5);
                 outline-offset: 2px;
               `
             }
@@ -265,7 +265,7 @@ const Controls = ({
           className={css`
             background: linear-gradient(
               to right,
-              #767b85 ${volume}%, #dddee0 ${volume}%
+              var(--tone-bg-neutral-86) ${volume}%, var(--tone-tone-neutral-29) ${volume}%
             ) !important;
           `}
         />

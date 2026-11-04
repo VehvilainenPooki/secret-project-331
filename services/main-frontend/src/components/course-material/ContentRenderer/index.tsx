@@ -8,7 +8,6 @@ import React, { createContext, useContext } from "react"
 import { useTranslation } from "react-i18next"
 
 import { BreakFromCenteredDisabledContext } from "@/shared-module/common/components/Centering/BreakFromCentered"
-import { baseTheme } from "@/shared-module/common/styles"
 import { linkWithExtraIconClass } from "@/shared-module/common/styles/constants"
 import dynamicImport from "@/shared-module/common/utils/dynamicImport"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
@@ -81,6 +80,7 @@ import RevealableHiddenContentBlock from "./moocfi/RevealableContentBlock/Reveal
 import TableBox from "./moocfi/TableBox"
 import TerminologyBlock from "./moocfi/TerminologyBlock"
 import TopLevelPageBlock from "./moocfi/TopLevelPagesBlock/index"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /** The props that this component receives */
 export interface ContentRendererProps {
@@ -198,7 +198,7 @@ export const blockToRendererMap: Record<string, any> = {
 export const BlockRendererOverridesContext = createContext<Record<string, any>>({})
 
 const highlightedBlockStyles = css`
-  outline: 2px solid ${baseTheme.colors.red[400]};
+  outline: 2px solid ${tones.toneDanger10};
   outline-offset: 10px;
 `
 
@@ -331,21 +331,21 @@ const ContentRenderer: React.FC<React.PropsWithChildren<ContentRendererProps>> =
           text-underline-offset: 4.6px;
           text-decoration-thickness: 1.6px;
           a {
-            color: #1072ea;
+            color: var(--tone-fg-info-3);
             &:hover {
-              color: #096df1;
+              color: var(--tone-fg-info-5);
             }
             &:active {
-              color: #0870d9;
+              color: var(--tone-fg-info-7);
             }
             &:visited {
-              color: #8050f2;
+              color: var(--tone-fg-info-6);
             }
           }
 
           /* Styling for inline code elements */
           code:not(pre code) {
-            background: #e5e5e5;
+            background: var(--tone-bg-neutral-58);
             padding: 0 0.4rem 0.2rem 0.4rem;
             border-radius: 3px;
           }

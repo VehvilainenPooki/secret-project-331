@@ -9,6 +9,7 @@ import BreakFromCentered from "@/shared-module/common/components/Centering/Break
 import { baseTheme } from "@/shared-module/common/styles/theme"
 import aspectRatioFromClassName from "@/utils/course-material/aspectRatioFromClassName"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const YOUTUBE_EMBED_BASE_URL = "https://www.youtube-nocookie.com/embed/"
 const YOUTUBE_PLAYLIST_TYPE = "playlist"
@@ -361,9 +362,9 @@ export const YoutubeEmbedBlock: React.FC<EmbedAttributes> = (props) => {
               display: flex;
               justify-content: center;
               align-items: center;
-              background-color: ${baseTheme.colors.gray[100]};
+              background-color: ${tones.toneNeutral29};
               aspect-ratio: ${aspectRatioFromClassName(className) || "16/9"};
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               font-size: ${baseTheme.fontSizes[1]}px;
               padding: 1rem;
               text-align: center;
@@ -392,8 +393,8 @@ export const YoutubeEmbedBlock: React.FC<EmbedAttributes> = (props) => {
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  background-color: ${baseTheme.colors.gray[700]};
-                  color: ${baseTheme.colors.gray[300]};
+                  background-color: ${tones.toneNeutral46};
+                  color: ${tones.toneNeutral37};
                   transition: opacity 0.3s ease;
                   z-index: 1;
                 `}
@@ -446,7 +447,7 @@ export const YoutubeEmbedBlock: React.FC<EmbedAttributes> = (props) => {
               font-size: ${baseTheme.fontSizes[0]}px;
               margin-top: 0.5em;
               margin-bottom: 1em;
-              color: ${baseTheme.colors.gray[400]};
+              color: ${tones.toneNeutral39};
             `}
             dangerouslySetInnerHTML={{ __html: sanitizeCourseMaterialHtml(caption) }}
           ></figcaption>

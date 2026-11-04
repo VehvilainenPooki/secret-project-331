@@ -15,7 +15,7 @@ import ModuleCard from "./ModuleCard"
 
 const Wrapper = styled.div`
   font-family: ${headingFont};
-  background: #1f6964;
+  background: var(--color-accent);
   width: 100%;
   border-radius: 4px;
   min-height: 100vh;
@@ -34,7 +34,7 @@ const Content = styled.div`
   z-index: 99;
 
   .heading {
-    color: #fff;
+    color: var(--color-text-on-accent);
     font-weight: 800;
     font-size: clamp(30px, 5vw, 70px) !important;
   }
@@ -44,7 +44,7 @@ const Content = styled.div`
     font-size: 22px;
     font-weight: 500;
     width: 100%;
-    color: #fff;
+    color: var(--color-text-on-accent);
     line-height: 150%;
     opacity: 1;
 
@@ -56,12 +56,12 @@ const Content = styled.div`
 
 export const RegisterLink = styled.a`
   padding: 1rem 2rem;
-  background: #1a2333;
+  background: var(--tone-bg-neutral-90);
   font-size: 18px;
   margin-right: 10px;
   font-weight: bold;
   height: 100%;
-  color: #6fb27e;
+  color: var(--tone-fg-accent-4);
 
   ${respondToOrLarger.md} {
     font-size: 20px;

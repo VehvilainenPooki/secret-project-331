@@ -27,12 +27,12 @@ export interface CourseModuleProgressBarsProps {
 }
 
 const Wrapper = styled.div`
-  background-color: rgba(242, 245, 247, 0.8);
+  background-color: var(--tone-bg-neutral-22);
   margin: 3px 0 6px 0;
   padding: 0;
 `
 const TotalWrapper = styled.div`
-  background-color: rgb(242, 245, 247);
+  background-color: var(--tone-bg-info-2);
   margin: 3px 0 3px 0;
   padding: 0.8rem 3rem 0 3rem;
 `

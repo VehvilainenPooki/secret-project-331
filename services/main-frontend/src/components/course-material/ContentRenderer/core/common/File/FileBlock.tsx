@@ -70,7 +70,7 @@ const FileBlock: React.FC<React.PropsWithChildren<BlockRendererProps<FileAttribu
               width: 100%;
               height: ${previewHeight ?? 600}px;
               margin-bottom: var(--space-3);
-              border: 1px solid var(--color-gray-100);
+              border: 1px solid var(--tone-border-neutral-27);
               border-radius: var(--surface-radius);
             `}
           />

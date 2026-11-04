@@ -3,16 +3,16 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const skeletonPulse = css`
   @keyframes pulse {
     0%,
     100% {
-      background-color: ${baseTheme.colors.gray[200]};
+      background-color: ${tones.toneNeutral35};
     }
     50% {
-      background-color: ${baseTheme.colors.gray[300]};
+      background-color: ${tones.toneNeutral37};
     }
   }
 
@@ -23,8 +23,8 @@ const LockChapterLoadingView: React.FC = () => {
   return (
     <div
       className={css`
-        background: ${baseTheme.colors.clear[100]};
-        border: 1px solid ${baseTheme.colors.gray[300]};
+        background: ${tones.toneNeutral12};
+        border: 1px solid ${tones.toneNeutral37};
         border-radius: 8px;
         padding: 2.5rem 2rem;
         display: flex;

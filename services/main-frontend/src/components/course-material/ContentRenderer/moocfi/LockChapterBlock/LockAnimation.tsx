@@ -236,7 +236,7 @@ const LockAnimation: React.FC<LockAnimationProps> = ({ onComplete, size = 260, p
             left: "50%",
             top: "66%",
             borderRadius: 999,
-            border: i === 0 ? "2px solid rgba(0,0,0,0.22)" : "2px solid rgba(0,0,0,0.13)",
+            border: i === 0 ? "2px solid var(--tone-border-neutral-45)" : "2px solid var(--tone-border-neutral-28)",
             transform: to([spr.s], (s) => `translate(-50%, -50%) scale(${s})`),
             opacity: spr.o,
             pointerEvents: "none",
@@ -255,7 +255,7 @@ const LockAnimation: React.FC<LockAnimationProps> = ({ onComplete, size = 260, p
             width: 10,
             height: 10,
             borderRadius: 999,
-            background: "rgba(0,0,0,0.22)",
+            background: "var(--tone-bg-neutral-77)",
             transform: to(
               [spr.x, spr.y, spr.s, spr.r],
               (x, y, s, r) =>
@@ -310,7 +310,7 @@ function LockSVG({ shackle, size }: { shackle: { a: SpringValue<number> }; size:
       style={{
         width: size,
         height: "auto",
-        color: "#111",
+        color: "var(--tone-fg-neutral-42)",
         overflow: "visible",
         display: "block",
         shapeRendering: "geometricPrecision",

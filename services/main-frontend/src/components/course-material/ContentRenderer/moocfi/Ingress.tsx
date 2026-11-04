@@ -4,10 +4,11 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import ParsedText from "@/components/course-material/ParsedText"
-import { baseTheme, headingFont, primaryFont } from "@/shared-module/common/styles"
+import { headingFont, primaryFont } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 
 import type { BlockRendererProps } from ".."
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface IngressBlockAttributes {
   title: string
@@ -17,7 +18,7 @@ interface IngressBlockAttributes {
 const Ingress: React.FC<React.PropsWithChildren<BlockRendererProps<IngressBlockAttributes>>> = (
   props,
 ) => {
-  const textColor = baseTheme.colors.gray[700]
+  const textColor = tones.toneNeutral46
 
   return (
     <div

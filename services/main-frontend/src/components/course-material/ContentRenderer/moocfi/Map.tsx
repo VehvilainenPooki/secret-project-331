@@ -15,25 +15,25 @@ import {
 } from "@/generated/course-material-api/sdk.generated"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import useUserInfo from "@/shared-module/common/hooks/useUserInfo"
-import { baseTheme } from "@/shared-module/common/styles"
 import { LoadingRegion, Select } from "@/shared-module/components"
 import { courseMaterialAtom } from "@/state/course-material"
 import { currentPageDataAtom } from "@/state/course-material/selectors"
 
 import { countryList } from "./../util/Countries"
 import WorldMap from "./worldMap.svg"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   display: relative;
   height: auto;
-  background: #f7f8f9;
+  background: var(--tone-bg-neutral-20);
   display: grid;
   padding: 2rem 0 1rem 2rem;
 
   h3 {
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #edf0f2;
+    border-bottom: 2px solid var(--tone-border-neutral-5);
     font-weight: 500;
     font-size: 22px;
   }
@@ -53,7 +53,7 @@ const StyledForm = styled.form`
 
 const StyledMap = styled(WorldMap)`
   ${({ codes }) => codes} {
-    fill: #374461 !important;
+    fill: var(--tone-fg-info-15) !important;
     opacity: 1;
   }
 `
@@ -300,7 +300,7 @@ const Map: React.FC<React.PropsWithChildren<MapProps>> = () => {
             <span
               className={css`
                 display: inline-block;
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
                 width: 40rem;
                 font-size: 18px;
                 line-height: 120%;
@@ -316,15 +316,15 @@ const Map: React.FC<React.PropsWithChildren<MapProps>> = () => {
               className={css`
                 input[type="submit"] {
                   border: none;
-                  color: #fff;
+                  color: var(--color-text-on-accent);
                   cursor: pointer;
                   width: 100px;
                   font-size: 17px;
                   padding: 8px 10px 10px 10px;
                   transition: background 0.2s ease-in-out;
-                  background: ${baseTheme.colors.gray[600]};
+                  background: ${tones.toneNeutral44};
                   margin: auto 0 1rem 15px;
-                  border: 1px solid #374461;
+                  border: 1px solid var(--tone-border-info-11);
                 }
               `}
             >
@@ -339,7 +339,7 @@ const Map: React.FC<React.PropsWithChildren<MapProps>> = () => {
             <span
               className={css`
                 display: inline-block;
-                color: ${baseTheme.colors.gray[400]};
+                color: ${tones.toneNeutral39};
                 width: 30rem;
                 font-size: 15px;
                 line-height: 120%;
@@ -361,18 +361,18 @@ const Map: React.FC<React.PropsWithChildren<MapProps>> = () => {
             border-collapse: collapse;
 
             tr {
-              border-bottom: 2px solid ${baseTheme.colors.gray[100]};
+              border-bottom: 2px solid ${tones.toneNeutral29};
             }
 
             th {
-              color: ${baseTheme.colors.gray[500]};
+              color: ${tones.toneNeutral41};
               padding: 0.4rem 0;
               font-weight: 600;
               font-size: 18px;
             }
 
             td {
-              color: ${baseTheme.colors.gray[400]};
+              color: ${tones.toneNeutral39};
               padding: 0.4rem 0;
               font-size: 18px;
             }

@@ -9,16 +9,17 @@ import type { UserModuleCompletionStatus } from "@/generated/course-material-api
 import FailedIcon from "@/img/course-material/failed-icon.svg"
 import Badge from "@/img/course-material/grade-badge.svg"
 import PassedIcon from "@/img/course-material/passed-icon.svg"
-import { baseTheme, headingFont, monospaceFont, typography } from "@/shared-module/common/styles"
+import { headingFont, monospaceFont, typography } from "@/shared-module/common/styles"
 
 import CongratulationsLinks from "./CongratulationsLinks"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   font-family: ${headingFont};
   max-width: 480px;
   min-height: 100%;
-  background: #6fb37e;
-  box-shadow: 0px 10px 20px rgba(68, 130, 126, 0.2);
+  background: var(--tone-bg-accent-10);
+  box-shadow: 0px 10px 20px var(--tone-shadow-accent-2);
   border-radius: 4px;
   text-align: left;
   padding: 1.5rem 1.5rem 1.8rem 1.5rem;
@@ -30,7 +31,7 @@ const Wrapper = styled.div`
   }
 
   h3 {
-    color: #1a2333;
+    color: var(--color-text);
     font-style: normal;
     font-weight: 600;
     font-size: 22px;
@@ -53,7 +54,7 @@ const BadgeWrapper = styled.div`
     left: 18px;
     font-family: ${monospaceFont};
     font-size: 10px;
-    color: #535a66;
+    color: var(--color-text-muted);
     text-transform: lowercase;
   }
   .points {
@@ -66,7 +67,7 @@ const BadgeWrapper = styled.div`
     font-family: ${headingFont};
     font-size: 22px;
     font-weight: 700;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   }
 `
 
@@ -111,7 +112,7 @@ const ModuleCard: React.FC<React.PropsWithChildren<ModuleCardProps>> = ({
       <h3
         className={css`
           font-size: ${typography.h5};
-          color: #04312e;
+          color: var(--tone-fg-accent-14);
           font-weight: 600;
         `}
       >

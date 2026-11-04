@@ -4,7 +4,7 @@ import { css, cx } from "@emotion/css"
 import React, { useEffect, useId, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ExerciseSubmitButtonProps {
   isPending: boolean
@@ -19,7 +19,7 @@ const blockerListStyles = css`
   /* Muted grey tuned to sit just above WCAG AA (4.5:1) on the exercise card's #f2f2f2 background:
      4.66:1 here (5.2:1 on white). gray[400] would fall to ~3.8:1, so this is as light as the text
      can go while staying accessible. */
-  color: #666d79;
+  color: var(--tone-fg-neutral-23);
   font-size: 0.875rem;
   line-height: 140%;
   text-align: center;
@@ -32,7 +32,7 @@ const blockerListStyles = css`
 `
 
 const blockerListEmphasizedStyles = css`
-  color: ${baseTheme.colors.red[700]};
+  color: ${tones.toneDanger19};
   font-weight: 500;
 `
 

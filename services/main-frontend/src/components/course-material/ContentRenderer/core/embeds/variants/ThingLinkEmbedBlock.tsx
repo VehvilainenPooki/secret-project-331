@@ -6,6 +6,7 @@ import type { EmbedAttributes } from "@/../types/GutenbergBlockAttributes"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import { baseTheme } from "@/shared-module/common/styles/theme"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const THINGLINK = "thinglink"
 
@@ -40,7 +41,7 @@ export const ThingLinkEmbedBlock: React.FC<React.PropsWithChildren<EmbedAttribut
             font-size: ${baseTheme.fontSizes[0]}px;
             margin-top: 0.5em;
             margin-bottom: 1em;
-            color: ${baseTheme.colors.gray[400]};
+            color: ${tones.toneNeutral39};
           `}
         >
           {props.caption && (

@@ -13,7 +13,8 @@ import type {
   GradingProgress,
   ReviewingStage,
 } from "@/generated/course-material-api/types.generated"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExerciseStatusMessageProps {
   gradingProgress: GradingProgress | undefined
@@ -28,7 +29,7 @@ interface ExerciseStatusMessageProps {
 const feedbackHeadingCss = css`
   font-family: ${primaryFont};
   font-weight: 600;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   margin-bottom: 0.25rem;
 `
 

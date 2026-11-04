@@ -20,7 +20,7 @@ const CTAWrapper = styled.div`
 
   /* Override ContentRenderer's blue link color; needs contrast against the green card. */
   a:not(:hover):not(:focus-visible) {
-    color: #04312e;
+    color: var(--tone-fg-accent-14);
   }
 `
 
@@ -28,7 +28,7 @@ const StyledLink = styled.a`
   padding: 1rem;
   font-size: 18px;
   line-height: 1.1;
-  color: #044743 !important;
+  color: var(--tone-fg-accent-10) !important;
   text-decoration: underline;
 `
 
@@ -71,7 +71,7 @@ const CongratulationsLinks: React.FC<React.PropsWithChildren<CongratulationsLink
     <CTAWrapper
       className={css`
         button:disabled {
-          color: #91ac97 !important;
+          color: var(--tone-fg-accent-3) !important;
         }
       `}
     >

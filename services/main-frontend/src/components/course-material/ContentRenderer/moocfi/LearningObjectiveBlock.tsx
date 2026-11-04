@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next"
 
 import useIsPageChapterFrontPage from "@/hooks/course-material/useIsPageChapterFrontPage"
 import Check from "@/img/course-material/checkmark.svg"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { currentPageDataAtom } from "@/state/course-material/selectors"
@@ -15,11 +15,12 @@ import type { Block } from "@/types/courseMaterialBlock"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
 import type { BlockRendererProps } from ".."
+import { tones } from "@/shared-module/components/styles/themes"
 
 // Restricts the width even further than the centered. Centered still used to get some padding on left and right on mobile screens.
 const Wrapper = styled.div`
   margin: 2rem auto;
-  background: #f0f5f5;
+  background: var(--tone-bg-neutral-34);
   padding: 0.5rem 1.5rem;
 
   ${respondToOrLarger.md} {
@@ -32,19 +33,19 @@ const Header = styled.div`
   min-height: 55px;
   display: flex;
   padding: 1rem 0;
-  border-bottom: 3px ${baseTheme.colors.green[200]} dashed;
+  border-bottom: 3px ${tones.toneAccent9} dashed;
 
   h2 {
     font-size: 24px;
     font-weight: 500;
     line-height: 1.2;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     display: inline-block;
   }
 `
 const Content = styled.div`
   padding: 1rem 0;
-  background: rgba(229, 224, 241, 0.05);
+  background: var(--tone-bg-neutral-8);
   display: grid;
   grid-template-columns: 1fr;
 
@@ -64,7 +65,7 @@ const StyledObjectives = styled.div`
     font-size: 18px;
     line-height: 1.3;
     font-style: normal;
-    color: #535a66;
+    color: var(--color-text-muted);
   }
 `
 
