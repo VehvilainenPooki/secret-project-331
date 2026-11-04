@@ -140,6 +140,22 @@ export const gradients = {
   blue: "linear-gradient(-70deg, #020344 0%, #28b8d5 100%)",
 }
 
+/**
+ * Colors in use that are not on any scale, at their exact current values so no theme moves when it
+ * starts using them. Snapping one to the nearest scale step is a visible change and gets its own
+ * commit.
+ */
+export const offPalette = {
+  /** green 600 at 60% opacity */
+  focusRing: "rgba(31, 105, 100, 0.6)",
+  /** gray 800 at 55% opacity, the same value as `--scrim` */
+  scrim: "rgb(10 15 23 / 0.55)",
+  cmsBlockBg: "#FAFBFB",
+  /** `$gray-300` in `@wordpress/base-styles`, Gutenberg's border color */
+  gutenbergGray300: "#DDDDDD",
+  cmsInlineCodeBg: "#E5E5E5",
+}
+
 /** The palette as `--color-white`, `--color-<scale>-<step>` and `--gradient-<name>` declarations. */
 export const paletteCustomProperties = [
   `--color-white: ${white};`,

@@ -2,6 +2,10 @@ import { injectGlobal } from "@emotion/css"
 
 import { DURATION_MS, EASING, LOOP_DURATION_MS } from "./motion"
 import { paletteCustomProperties } from "./palette"
+import { themesGlobal } from "./themes/global"
+
+// The color roles are injected alongside these tokens.
+void themesGlobal
 
 export const tokensGlobal = injectGlobal`
   :root {

@@ -11,7 +11,10 @@ import "../src/styles/tokens"
 /** The `:root` declaration block that `tokensGlobal` injects, as a live `CSSStyleDeclaration`. */
 function rootDeclarations(): CSSStyleDeclaration {
   const sheet = document.styleSheets[0]
-  const rule = sheet && Array.from(sheet.cssRules).find((r) => r.cssText.startsWith(":root"))
+  // Exactly `:root`: the default theme's roles are injected under `:root, [data-theme=...]`.
+  const rule =
+    sheet &&
+    Array.from(sheet.cssRules).find((r) => r instanceof CSSStyleRule && r.selectorText === ":root")
   if (!(rule instanceof CSSStyleRule)) {
     throw new Error("tokensGlobal did not inject a :root rule")
   }
