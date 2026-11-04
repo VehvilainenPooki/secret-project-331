@@ -6,13 +6,14 @@ import TextField from "@/shared-module/common/components/InputFields/TextField"
 import { includeIf } from "@/shared-module/common/utils/nullability"
 import { stripNonPrintableCharacters } from "@/shared-module/common/utils/strings"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
-import { baseTheme, primaryFont } from "@/shared-module/exercise-react/styles"
+import { primaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemComponentProps } from "."
 import type { UserItemAnswerClosedEndedQuestion } from "../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemClosedEndedQuestion } from "../../../../../types/quizTypes/publicSpec"
 import ParsedText from "../../../ParsedText"
 import CloseEndedQuestionWrapper from "../../../Shared/CloseEndedQuestionWrapper"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ClosedEndedQuestion: React.FC<
   QuizItemComponentProps<PublicSpecQuizItemClosedEndedQuestion, UserItemAnswerClosedEndedQuestion>
@@ -76,16 +77,16 @@ const ClosedEndedQuestion: React.FC<
           className={css`
             label {
               font-weight: 500;
-              color: #4c5868;
+              color: var(--tone-fg-info-10);
               font-family: ${primaryFont};
               font-size: 0.938rem;
               margin-bottom: 1rem;
             }
             input {
-              background: #f4f5f7 !important;
+              background: var(--tone-bg-neutral-28) !important;
               border-radius: 0.25rem;
               /* gray[400] for sufficient contrast against the field background */
-              border: 0.188rem solid ${baseTheme.colors.gray[400]} !important;
+              border: 0.188rem solid ${tones.toneNeutral39} !important;
             }
           `}
           value={quizItemAnswerState?.textData ?? ""}

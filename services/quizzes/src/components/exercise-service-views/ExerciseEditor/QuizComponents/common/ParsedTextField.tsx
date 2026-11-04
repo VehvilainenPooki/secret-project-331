@@ -35,12 +35,12 @@ const ParsedTextContainer = styled.div`
 const StyledButton = styled(Button)`
   display: flex !important;
   align-items: center;
-  border: 1px solid #dae6e5 !important;
+  border: 1px solid var(--tone-border-accent-2) !important;
   margin: 2px 0px 4px 0px !important;
   height: 24px;
   cursor: pointer;
   :hover {
-    border: 1px solid #bcd1d0;
+    border: 1px solid var(--tone-border-neutral-40);
   }
 `
 

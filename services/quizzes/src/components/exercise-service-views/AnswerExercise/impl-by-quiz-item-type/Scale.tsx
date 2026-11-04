@@ -5,7 +5,6 @@ import React, { useRef } from "react"
 import { mergeProps, useFocusRing, useRadio, useRadioGroup, VisuallyHidden } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 
@@ -14,6 +13,7 @@ import type { UserItemAnswerScale } from "../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemScale } from "../../../../../types/quizTypes/publicSpec"
 import ParsedText from "../../../ParsedText"
 import { QUIZ_TITLE_STYLE } from "./AnswerQuizStyles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const optionStyle = css`
   display: flex;
@@ -29,7 +29,7 @@ const optionStyle = css`
 `
 
 const optionValueStyle = css`
-  color: #4c5868;
+  color: var(--tone-fg-info-10);
   font-size: 1.125rem;
   min-width: 1.25em;
 `
@@ -40,19 +40,19 @@ const optionCircleStyle = css`
   width: 1.35rem;
   height: 1.35rem;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--color-surface);
   margin-left: 0.375em;
   transition: 0.25s ease;
   /* gray[400] for sufficient contrast against white */
-  box-shadow: inset 0 0 0 0.15em ${baseTheme.colors.gray[400]};
+  box-shadow: inset 0 0 0 0.15em ${tones.toneNeutral39};
 
   &[data-selected="true"] {
-    box-shadow: inset 0 0 0 0.371rem #627ba7;
-    border: 0.188rem solid #718dbf;
+    box-shadow: inset 0 0 0 0.371rem var(--tone-shadow-info-14);
+    border: 0.188rem solid var(--tone-border-info-6);
   }
 
   &[data-focus-visible="true"] {
-    outline: 3px solid #2d4a7f;
+    outline: 3px solid var(--tone-border-info-10);
     outline-offset: 2px;
   }
 `
@@ -128,7 +128,7 @@ const Scale: React.FC<QuizItemComponentProps<PublicSpecQuizItemScale, UserItemAn
         padding: 0.625rem;
         flex-direction: column;
         margin-bottom: 0.625rem;
-        background: white;
+        background: var(--color-surface);
         ${respondToOrLarger.md} {
           flex-direction: row;
           flex-wrap: wrap;

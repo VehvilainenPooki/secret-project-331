@@ -16,15 +16,15 @@ const loadingWarningTextClass = css`
   margin: 0.25rem 0 0;
   max-width: 28rem;
   text-align: center;
-  color: #4b5563;
+  color: var(--tone-fg-info-12);
 `
 
 const loadingWarningBoxClass = css`
   margin-top: 0.75rem;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
-  border: 1px solid #e5e7eb;
-  background-color: #f9fafb;
+  border: 1px solid var(--tone-border-neutral-13);
+  background-color: var(--tone-bg-neutral-16);
 `
 
 const DynamicallyLoadingComponentPlaceholder = () => {

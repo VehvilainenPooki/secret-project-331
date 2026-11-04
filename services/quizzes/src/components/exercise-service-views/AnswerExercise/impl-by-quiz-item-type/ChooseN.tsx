@@ -124,13 +124,13 @@ const ChooseN: React.FunctionComponent<
                   ${
                     visuallyMuted &&
                     css`
-                      background-color: #f8f8f9;
-                      border-color: #d0d0d8;
+                      background-color: var(--tone-bg-neutral-19);
+                      border-color: var(--tone-border-neutral-38);
                       box-shadow:
-                        rgba(45, 35, 66, 0) 0 2px 4px,
-                        rgba(45, 35, 66, 0) 0 7px 13px -3px,
-                        #d0d0d8 0 -2px 0 inset;
-                      color: #2d3a4a;
+                        var(--tone-shadow-info-1) 0 2px 4px,
+                        var(--tone-shadow-info-1) 0 7px 13px -3px,
+                        var(--tone-shadow-neutral-20) 0 -2px 0 inset;
+                      color: var(--tone-fg-info-19);
                       cursor: not-allowed;
                     `
                   }
@@ -172,7 +172,7 @@ const ChooseN: React.FunctionComponent<
           className={css`
             margin-top: 0.75rem;
             font-size: 0.875rem;
-            color: #4a4a4a;
+            color: var(--tone-fg-neutral-31);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -224,9 +224,9 @@ const ChooseN: React.FunctionComponent<
               className={css`
                 padding: 0.875rem;
                 border-radius: 0.5rem;
-                background-color: #fff4e6;
-                border: 2px solid #cc7a00;
-                color: #b83900;
+                background-color: var(--tone-bg-warning-3);
+                border: 2px solid var(--tone-border-warning-4);
+                color: var(--tone-fg-danger-7);
                 font-size: 1rem;
                 line-height: 1.5;
               `}

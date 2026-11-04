@@ -74,8 +74,8 @@ const ClosedEndedQuestionFeedback: React.FC<
           className={css`
             padding: 0.5rem;
             border-radius: 0.25rem;
-            border: 0.188rem solid #dfe1e6;
-            background-color: #f4f5f7;
+            border: 0.188rem solid var(--tone-border-neutral-23);
+            background-color: var(--tone-bg-neutral-28);
             min-height: 1.5rem;
             margin: 0;
           `}

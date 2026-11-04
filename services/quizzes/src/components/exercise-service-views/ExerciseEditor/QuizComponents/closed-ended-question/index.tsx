@@ -114,27 +114,27 @@ const TestTable = styled.table`
 `
 
 const RegexTableHeaderCell = styled.th`
-  background-color: #f9f9f9;
+  background-color: var(--tone-bg-neutral-17);
   padding: 8px;
 `
 
 const RegexTableStringCell = styled.td`
-  background-color: #f9f9f9;
+  background-color: var(--tone-bg-neutral-17);
   padding: 6px;
   min-width: 150px;
 `
 
 const RegexTableCorrectCell = styled.td`
-  background-color: #dae6e5;
-  color: #065853;
+  background-color: var(--tone-bg-accent-4);
+  color: var(--tone-fg-accent-8);
   padding: 4px;
   text-align: center;
   text-transform: uppercase;
 `
 
 const RegexTableFailedCell = styled.td`
-  background-color: #f0e1dd;
-  color: #a84835;
+  background-color: var(--tone-bg-neutral-61);
+  color: var(--tone-fg-danger-6);
   padding: 4px;
   text-align: center;
   text-transform: uppercase;
@@ -541,11 +541,11 @@ const ClosedEndedQuestionEditor: React.FC<ClosedEndedQuestionEditorProps> = ({ q
               >
                 <PlusCircle
                   className={css`
-                    background-color: #dae6e5;
+                    background-color: var(--tone-bg-accent-4);
                     display: inline;
                     border-radius: 50%;
                     :hover {
-                      background-color: #bcd1d0;
+                      background-color: var(--tone-bg-neutral-73);
                     }
                   `}
                   size={18}

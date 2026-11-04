@@ -40,7 +40,7 @@ const FlexWrapper = styled.div`
 const PreviewWrapper = styled.div`
   width: 100%;
   height: 100%;
-  background-color: white;
+  background-color: var(--color-surface);
   border: 2px rounded black;
   border-radius: 16px;
   padding: 6px;

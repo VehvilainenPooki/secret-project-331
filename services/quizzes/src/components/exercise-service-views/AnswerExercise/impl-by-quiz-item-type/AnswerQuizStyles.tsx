@@ -5,14 +5,14 @@ export const TWO_DIMENSIONAL_BUTTON_STYLES = `
   align-items: center;
   flex-grow: 1;
   appearance: none;
-  background-color: #fcfcfd;
+  background-color: var(--tone-bg-neutral-10);
   border-radius: 0.625rem;
-  border: 0.188rem solid #b8b8c8;
+  border: 0.188rem solid var(--tone-border-neutral-50);
   box-shadow:
-    rgba(45, 35, 66, 0) 0 2px 4px,
-    rgba(45, 35, 66, 0) 0 7px 13px -3px,
-    #b8b8c8 0 -2px 0 inset;
-  color: #36395a;
+    var(--tone-shadow-info-1) 0 2px 4px,
+    var(--tone-shadow-info-1) 0 7px 13px -3px,
+    var(--tone-shadow-neutral-26) 0 -2px 0 inset;
+  color: var(--tone-fg-info-17);
   cursor: pointer;
   display: flex;
   min-height: 3rem;
@@ -34,7 +34,7 @@ export const TWO_DIMENSIONAL_BUTTON_STYLES = `
   margin-right: 0.625rem;
 
   &:focus-visible {
-    outline: 3px solid #2d4a7f;
+    outline: 3px solid var(--tone-border-info-10);
     outline-offset: 2px;
   }
 
@@ -44,29 +44,29 @@ export const TWO_DIMENSIONAL_BUTTON_STYLES = `
   }
 
   &:hover {
-    background: #f1f4f9;
-    border-color: #718dbf;
+    background: var(--tone-bg-neutral-37);
+    border-color: var(--tone-border-info-6);
     box-shadow:
-      rgba(45, 35, 66, 0) 0 4px 8px,
-      rgba(45, 35, 66, 0) 0 7px 13px -3px,
-      #718dbf 0 -2px 0 inset;
+      var(--tone-shadow-info-1) 0 4px 8px,
+      var(--tone-shadow-info-1) 0 7px 13px -3px,
+      var(--tone-shadow-info-13) 0 -2px 0 inset;
   }
 `
 
 export const QUIZ_TITLE_STYLE = `
   font-weight: 500;
-  color: #4c5868;
+  color: var(--tone-fg-info-10);
   font-family: ${primaryFont};
   font-size: 1.25rem;
   margin-bottom: 1rem;
 `
 
 export const TWO_DIMENSIONAL_BUTTON_SELECTED = `
-  background: #f1f4f9;
-  border-color: #2d4a7f;
+  background: var(--tone-bg-neutral-37);
+  border-color: var(--tone-border-info-10);
   box-shadow:
-    rgba(45, 35, 66, 0) 0 4px 8px,
-    rgba(45, 35, 66, 0) 0 7px 13px -3px,
-    #2d4a7f 0 -2px 0 inset;
-  color: #2d3a4a;
+    var(--tone-shadow-info-1) 0 4px 8px,
+    var(--tone-shadow-info-1) 0 7px 13px -3px,
+    var(--tone-shadow-info-17) 0 -2px 0 inset;
+  color: var(--tone-fg-info-19);
 `

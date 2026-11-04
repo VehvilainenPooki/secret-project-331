@@ -20,7 +20,7 @@ import FeedbackMessagesEditor, {
 const OptionCard = styled.div`
   height: 50px;
   width: 100%;
-  background-color: #f7f8f9;
+  background-color: var(--tone-bg-neutral-20);
   display: flex;
   align-items: center;
 `
@@ -43,13 +43,13 @@ const ChoiceTitle = styled.div`
 const CorrectTag = styled.div`
   height: 24px;
   padding: 0 10px;
-  background-color: #dae6e5;
+  background-color: var(--tone-bg-accent-4);
   font-size: 14px;
   border-radius: 26px;
   margin: 8px;
   font-weight: bold;
   align-self: center;
-  color: #44827e;
+  color: var(--tone-fg-accent-5);
   font-family: ${primaryFont};
 `
 
@@ -71,18 +71,18 @@ const CheckboxContainer = styled.div`
 const MessageDialogContainer = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #f7f8f9;
+  background-color: var(--tone-bg-neutral-20);
   margin-bottom: 3px;
 `
 
 const MessageDialogTextFieldContainer = styled.div`
   margin: 4px;
-  color: #535a66;
+  color: var(--color-text-muted);
 `
 
 const MessageDialogTitle = styled.div`
-  background-color: #dae6e5;
-  color: #44827e;
+  background-color: var(--tone-bg-accent-4);
+  color: var(--tone-fg-accent-5);
   font-size: 17px;
   font-weight: bold;
   width: 100%;
@@ -91,7 +91,7 @@ const MessageDialogTitle = styled.div`
 `
 
 const MessageDialogDescription = styled.div<{ isNull: boolean }>`
-  color: #535a66;
+  color: var(--color-text-muted);
   padding: 16px;
   min-height: 60px;
 `
@@ -156,7 +156,7 @@ const MultipleChoiceOption: React.FC<MultipleChoiceOptionProps> = ({
               <CheckCircle
                 size={16}
                 className={css`
-                  color: #6d757b;
+                  color: var(--tone-fg-neutral-18);
                   :hover {
                     opacity: 1;
                   }
@@ -180,7 +180,7 @@ const MultipleChoiceOption: React.FC<MultipleChoiceOptionProps> = ({
                 className={css`
                   opacity: 0.9;
                   cursor: pointer;
-                  color: #6d757b;
+                  color: var(--tone-fg-neutral-18);
                   :hover {
                     opacity: 1;
                   }
@@ -194,13 +194,13 @@ const MultipleChoiceOption: React.FC<MultipleChoiceOptionProps> = ({
               display: flex;
               align-items: center;
               justify-content: center;
-              background-color: #d3d7db !important;
+              background-color: var(--tone-bg-neutral-69) !important;
               height: 50px;
               width: 48px;
               cursor: pointer;
-              color: #6d757b;
+              color: var(--tone-fg-neutral-18);
               :hover {
-                background-color: #bcc0c4;
+                background-color: var(--tone-bg-neutral-78);
               }
             `}
             variant="icon"
@@ -228,9 +228,9 @@ const MultipleChoiceOption: React.FC<MultipleChoiceOptionProps> = ({
               height: 50px;
               width: 48px;
               cursor: pointer;
-              background-color: #c4c9cd !important;
+              background-color: var(--tone-bg-neutral-76) !important;
               :hover {
-                background-color: #aaafb3 !important;
+                background-color: var(--tone-bg-neutral-80) !important;
               }
             `}
             variant="icon"

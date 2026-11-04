@@ -2,40 +2,40 @@
 
 import { css } from "@emotion/css"
 
-import { baseTheme } from "@/shared-module/exercise-react/styles"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 export const quizTheme = {
-  gradingCorrectItemBackground: "#d5eadf",
-  gradingWrongItemBackground: "#fbeef0",
-  gradingCorrectItemColor: "#4c5868",
-  gradingSelectedItemBorderColor: "#d8d8d8",
+  gradingCorrectItemBackground: "var(--tone-bg-neutral-59)",
+  gradingWrongItemBackground: "var(--tone-bg-neutral-43)",
+  gradingCorrectItemColor: "var(--tone-fg-info-10)",
+  gradingSelectedItemBorderColor: "var(--tone-fg-neutral-8)",
   // Darkened for >= 3:1 non-text contrast (WCAG 1.4.11) against the white page and the
   // light fill; matches the green[700]/red[700] icons in the submission view.
-  gradingWrongItemBorderColor: baseTheme.colors.red[700],
-  gradingCorrectItemBorderColor: baseTheme.colors.green[700],
-  gradingSelectedItemBackground: "#f4f4f4",
-  gradingSelectedItemColor: baseTheme.colors.clear[200],
-  errorItemForegroundColor: baseTheme.colors.clear[200],
-  errorItemBackgroundColor: baseTheme.colors.crimson[500],
-  successItemBackgroundColor: baseTheme.colors.green[600],
-  successItemForegroundColor: baseTheme.colors.clear[200],
-  feedbackBackground: baseTheme.colors.clear[100],
-  gradingWrongItemColor: "#4c5868",
-  quizBodyColor: baseTheme.colors.gray[700],
+  gradingWrongItemBorderColor: tones.fgDanger10,
+  gradingCorrectItemBorderColor: tones.fgAccent8,
+  gradingSelectedItemBackground: "var(--tone-bg-neutral-32)",
+  gradingSelectedItemColor: tones.fgNeutral4,
+  errorItemForegroundColor: tones.fgNeutral4,
+  errorItemBackgroundColor: tones.fgDanger8,
+  successItemBackgroundColor: tones.fgAccent7,
+  successItemForegroundColor: tones.fgNeutral4,
+  feedbackBackground: colors.surfaceSunken,
+  gradingWrongItemColor: "var(--tone-fg-info-10)",
+  quizBodyColor: colors.text,
   quizBodyFontSize: "24px",
   quizItemBackground: "fff",
   quizTitleFontSize: "20px",
-  selectedItemBackground: baseTheme.colors.gray[700],
-  selectedItemColor: baseTheme.colors.clear[100],
+  selectedItemBackground: tones.bgNeutral90,
+  selectedItemColor: tones.fgNeutral3,
   // Quiz multiplechoices editor
-  quizAnswer: baseTheme.colors.clear[100],
-  quizWrongAnswer: baseTheme.colors.crimson[600],
-  quizWrongAnswerHover: baseTheme.colors.crimson[500],
-  quizCorrectAnswer: baseTheme.colors.green[600],
-  quizCorrectAnswerHover: baseTheme.colors.green[500],
+  quizAnswer: tones.toneNeutral12,
+  quizWrongAnswer: tones.toneDanger21,
+  quizWrongAnswerHover: tones.toneDanger18,
+  quizCorrectAnswer: tones.toneAccent21,
+  quizCorrectAnswerHover: tones.toneAccent19,
 }
 
 export const SelectedQuizItem = css`
-  background: ${baseTheme.colors.green[100]};
-  color: ${baseTheme.colors.gray[100]};
+  background: ${tones.toneAccent7};
+  color: ${tones.toneNeutral29};
 `

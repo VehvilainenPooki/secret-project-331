@@ -36,7 +36,7 @@ const OptionTitle = styled.div`
 
 const OptionDescription = styled.div`
   font-size: 17px;
-  color: #b3b3b3;
+  color: var(--tone-fg-neutral-10);
   margin-bottom: 12px;
 `
 
@@ -73,8 +73,8 @@ const OptionCreationWrapper = styled.div`
 `
 
 const OptionCreationContainer = styled.div`
-  background-color: #fbfbfb;
-  border: 1px solid #e2e4e6;
+  background-color: var(--tone-bg-neutral-12);
+  border: 1px solid var(--color-border);
   width: 100%;
   margin-top: 28px;
   padding: 20px;
@@ -320,7 +320,7 @@ const MultipleChoiceEditor: React.FC<MultipleChoiceEditorProps> = ({ quizItemId 
             />
             <span
               className={css`
-                color: #414246;
+                color: var(--tone-fg-neutral-33);
                 font-size: 14px;
                 font-family: ${primaryFont};
                 display: block;

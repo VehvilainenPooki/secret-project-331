@@ -21,8 +21,8 @@ const NONE = "none"
 const UNSET = "unset"
 
 const ToggleCardContainer = styled.div<{ disabled: boolean }>`
-  background-color: #fafafa;
-  border: 2px solid #e0e0e0;
+  background-color: var(--tone-bg-neutral-15);
+  border: 2px solid var(--tone-border-neutral-25);
   border-radius: 4px;
   padding: 16px;
   display: flex;
@@ -43,14 +43,14 @@ const ToggleCardTitle = styled.label`
   font-size: 18px;
   font-weight: bold;
   font-family: ${primaryFont};
-  color: #333333;
+  color: var(--tone-fg-neutral-36);
 `
 
 const ToggleCardDescription = styled.div`
   font-size: 15px;
   font-weight: light;
   font-family: ${primaryFont};
-  color: #989ca3;
+  color: var(--tone-fg-neutral-12);
 `
 
 const RectangularSwitch: React.FC<ToggleSwitchProps> = ({ checked, onChange, id }) => (

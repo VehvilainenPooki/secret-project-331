@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
-import { baseTheme, primaryFont } from "@/shared-module/exercise-react/styles"
+import { primaryFont } from "@/shared-module/exercise-react/styles"
 import { resolveDisplayedFeedback } from "@/util/feedbackMessages"
 
 import type { QuizItemSubmissionComponentProps } from "."
@@ -19,6 +19,7 @@ import type {
 } from "../../../../../types/quizTypes/publicSpec"
 import { quizTheme } from "../../../../styles/QuizStyles"
 import ParsedText from "../../../ParsedText"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const SelectIcon = () => {
   return (
@@ -84,7 +85,7 @@ const MultipleChoiceDropdownFeedback: React.FC<
                 className={css`
                   font-size: ${quizTheme.quizTitleFontSize} !important;
                   font-weight: 500;
-                  color: #4c5868;
+                  color: var(--tone-fg-info-10);
                   font-family: ${primaryFont};
                   margin-bottom: 1rem;
                 `}
@@ -160,7 +161,7 @@ const MultipleChoiceDropdownFeedback: React.FC<
                 min-height: 2.5rem;
                 grid-template-areas: "select";
                 align-items: center;
-                color: #7e8894;
+                color: var(--tone-fg-neutral-15);
                 appearance: none;
                 white-space: nowrap;
                 overflow: hidden;
@@ -207,7 +208,7 @@ const MultipleChoiceDropdownFeedback: React.FC<
                   <CheckCircle
                     size={24}
                     className={css`
-                      color: ${baseTheme.colors.green[700]};
+                      color: ${tones.toneAccent23};
                     `}
                   />
                 </span>
@@ -219,7 +220,7 @@ const MultipleChoiceDropdownFeedback: React.FC<
                   <XmarkCircle
                     size={24}
                     className={css`
-                      color: ${baseTheme.colors.red[700]};
+                      color: ${tones.toneDanger19};
                     `}
                   />
                 </span>
@@ -234,7 +235,7 @@ const MultipleChoiceDropdownFeedback: React.FC<
           className={css`
             margin: 0.5rem 0.5rem 0.5rem 0;
             font-size: 1.125rem;
-            color: #57606f;
+            color: var(--tone-fg-info-9);
           `}
         >
           {t("correct-option")}: {correctOption?.title || correctOption?.body}
@@ -293,11 +294,11 @@ const SubmissionFeedbackMessage: React.FC<
           margin: 0.5rem 0.5rem 1rem 0;
           display: flex;
           font-size: 1.125rem;
-          color: #3c4551;
+          color: var(--tone-fg-neutral-32);
           border-left: ${
             correctAnswer
               ? `6px solid ${quizTheme.gradingCorrectItemBackground}`
-              : `6px solid #ebcbcd`
+              : `6px solid var(--tone-tone-danger-6)`
           };
           box-sizing: border-box;
           background: ${quizTheme.feedbackBackground};

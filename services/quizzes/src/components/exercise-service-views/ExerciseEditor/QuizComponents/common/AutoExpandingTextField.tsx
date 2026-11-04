@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 `
 
 const Label = styled.span`
-  color: #333;
+  color: var(--tone-fg-neutral-36);
   font-family: ${primaryFont};
   font-weight: 500;
   font-size: 14px;
@@ -28,8 +28,8 @@ const Label = styled.span`
 `
 
 const StyledTextArea = styled.textarea`
-  background: #fcfcfc;
-  border: 2px solid #dedede;
+  background: var(--tone-bg-neutral-11);
+  border: 2px solid var(--tone-border-neutral-26);
   border-radius: 3px;
   padding: 8px 10px 10px 10px;
   font-size: 16px;
@@ -45,7 +45,7 @@ const StyledTextArea = styled.textarea`
 
   &:focus,
   &:active {
-    border-color: #55b3f5;
+    border-color: var(--tone-border-info-3);
   }
 
   @media (max-width: 767.98px) {

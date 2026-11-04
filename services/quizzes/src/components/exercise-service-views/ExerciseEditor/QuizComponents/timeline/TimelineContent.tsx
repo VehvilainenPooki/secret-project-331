@@ -7,7 +7,6 @@ import { useTranslation } from "react-i18next"
 import { v4 } from "uuid"
 
 import TextField from "@/shared-module/common/components/InputFields/TextField"
-import { baseTheme } from "@/shared-module/exercise-react/styles"
 
 import type { OldNormalizedQuizItemTimelineItem } from "../../../../../../types/oldQuizTypes"
 import type { PrivateSpecQuizItemTimeline } from "../../../../../../types/quizTypes/privateSpec"
@@ -15,6 +14,7 @@ import useQuizzesExerciseServiceOutputState from "../../../../../hooks/useQuizze
 import { TIMELINE_YEAR } from "../../../../../util/validatePrivateSpec"
 import findQuizItem from "../../utils/general"
 import UnaddedDraftNotice from "../common/UnaddedDraftNotice"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface TimelineContentProps {
   quizItemId: string
@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     display: inline-block;
     font-size: 18px;
     margin-bottom: 10px;
-    color: #1a2333;
+    color: var(--color-text);
   }
 
   h2 {
@@ -57,7 +57,7 @@ const StyledBtn = styled.button`
   ${BASE_BUTTON_STYLES}
   width: 50px;
   height: 49px;
-  background: #dae3eb;
+  background: var(--tone-bg-neutral-64);
   border: none;
   outline: none;
   display: flex;
@@ -71,7 +71,7 @@ const StyledBtn = styled.button`
     transform: scale(1.2);
     width: 20px;
     .bg {
-      fill: #08457a;
+      fill: var(--color-link);
     }
   }
 
@@ -88,7 +88,7 @@ const DeleteBtn = styled.button`
   ${BASE_BUTTON_STYLES}
   width: 50px;
   height: 49px;
-  background: #e2c2bc;
+  background: var(--tone-bg-danger-11);
   outline: none;
   display: flex;
   justify-content: center;
@@ -97,7 +97,7 @@ const DeleteBtn = styled.button`
   border: none;
   position: relative;
   top: 18%;
-  color: ${baseTheme.colors.red[700]};
+  color: ${tones.toneDanger19};
   svg {
     transform: scale(1.2);
   }
@@ -128,8 +128,8 @@ const List = styled.div`
 
 const alreadyInputtedTextFieldStyles = css`
   input:not(:focus) {
-    background: #f5f6f7;
-    border: 1.5px solid #e2e4e6;
+    background: var(--color-surface-sunken);
+    border: 1.5px solid var(--color-border);
   }
 `
 
@@ -261,7 +261,7 @@ const TimelineContent: React.FC<React.PropsWithChildren<TimelineContentProps>> =
       <h2
         className={css`
           font-size: 20px !important;
-          color: ${baseTheme.colors.gray[500]};
+          color: ${tones.toneNeutral41};
           margin-top: 2rem;
         `}
       >

@@ -32,7 +32,7 @@ const formatTolerance = (limit: number | null): string =>
   limit === null ? "" : String(Number(limit.toPrecision(6)))
 
 const descriptionStyle = css`
-  color: #414246;
+  color: var(--tone-fg-neutral-33);
   font-size: 14px;
   font-family: ${primaryFont};
   display: block;

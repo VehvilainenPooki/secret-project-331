@@ -4,12 +4,13 @@ import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
-import { baseTheme, primaryFont } from "@/shared-module/exercise-react/styles"
+import { primaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemComponentProps } from "."
 import type { UserItemAnswerMultiplechoiceDropdown } from "../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemMultiplechoiceDropdown } from "../../../../../types/quizTypes/publicSpec"
 import { quizTheme } from "../../../../styles/QuizStyles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const SelectInputIcon = () => {
   return (
@@ -76,7 +77,7 @@ const MultipleChoiceDropdown: React.FunctionComponent<
                 display: block;
                 font-size: ${quizTheme.quizTitleFontSize} !important;
                 font-weight: 500;
-                color: #4c5868;
+                color: var(--tone-fg-info-10);
                 font-family: ${primaryFont};
                 margin-bottom: 1rem;
               `}
@@ -139,12 +140,12 @@ const MultipleChoiceDropdown: React.FunctionComponent<
             font-size: 1.125rem;
             cursor: pointer;
             /* gray[400] for sufficient contrast against white */
-            border: 0.188rem solid ${baseTheme.colors.gray[400]};
+            border: 0.188rem solid ${tones.toneNeutral39};
             background: none;
             min-height: 2.5rem;
             grid-template-areas: "select";
             align-items: center;
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
             appearance: none;
             background: transparent;
             white-space: nowrap;
@@ -152,7 +153,7 @@ const MultipleChoiceDropdown: React.FunctionComponent<
             text-overflow: ellipsis;
 
             :hover {
-              background: #f9f9f9;
+              background: var(--tone-bg-neutral-17);
             }
           `}
         >

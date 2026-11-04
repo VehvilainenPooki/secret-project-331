@@ -17,12 +17,12 @@ interface EditorCardProps {
 }
 
 const EditorWrapper = styled.div`
-  border: 2px solid #e3e3e3;
+  border: 2px solid var(--tone-border-neutral-18);
 `
 
 const EditorTitle = styled.div`
   font-size: 20px;
-  color: #333333;
+  color: var(--tone-fg-neutral-36);
   font-weight: bold;
   display: inline;
   margin-right: 16px;
@@ -30,7 +30,7 @@ const EditorTitle = styled.div`
 
 const EditorSection = styled.div`
   padding: 16px;
-  border-bottom: 2px solid #e3e3e3;
+  border-bottom: 2px solid var(--tone-border-neutral-18);
   width: 100%;
 `
 
@@ -130,7 +130,7 @@ const EditorCard: React.FC<React.PropsWithChildren<EditorCardProps>> = ({
               margin-left: 2px;
 
               :hover {
-                background-color: #c9c9c9;
+                background-color: var(--tone-bg-neutral-75);
               }
             `}
           />
@@ -196,7 +196,7 @@ const EditorCard: React.FC<React.PropsWithChildren<EditorCardProps>> = ({
               margin-left: 2px;
 
               :hover {
-                background-color: #c9c9c9;
+                background-color: var(--tone-bg-neutral-75);
               }
             `}
           />

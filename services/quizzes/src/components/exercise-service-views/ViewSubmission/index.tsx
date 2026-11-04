@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next"
 
 import GenericInfobox from "@/shared-module/common/components/GenericInfobox"
 import type { UserInformation } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types"
-import { baseTheme } from "@/shared-module/exercise-react/styles"
 import { COLUMN } from "@/util/constants"
 import type { FlexDirection } from "@/util/css-sanitization"
 import { sanitizeFlexDirection } from "@/util/css-sanitization"
@@ -54,6 +53,7 @@ import MultipleChoiceDropdownFeedback from "./impl-by-quiz-item-type/MultipleCho
 import ScaleSubmissionViewComponent from "./impl-by-quiz-item-type/Scale"
 import Timeline from "./impl-by-quiz-item-type/Timeline"
 import type Unsupported from "./impl-by-quiz-item-type/Unsupported"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface SubmissionProps {
   user_answer: UserAnswer
@@ -133,20 +133,20 @@ const SubmissionFeedback: React.FC<{
 }> = ({ itemFeedback, itemModelSolution, questionType, submitMessage, showScore = true }) => {
   const { t } = useTranslation()
 
-  let backgroundColor = "#f5f5f5" // Default grey for unknown
-  let textColor = "#292929" // Dark text for better contrast
+  let backgroundColor = "var(--tone-tone-neutral-13)" // Default grey for unknown
+  let textColor = "var(--tone-tone-neutral-45)" // Dark text for better contrast
 
   const userScore = showScore ? (itemFeedback?.correctnessCoefficient ?? itemFeedback?.score) : null
   if (showScore) {
     if (userScore === 1) {
-      backgroundColor = "#e8f5e8"
-      textColor = "#292929"
+      backgroundColor = "var(--tone-tone-neutral-17)"
+      textColor = "var(--tone-tone-neutral-45)"
     } else if (userScore === 0) {
-      backgroundColor = "#fdeaea"
-      textColor = "#292929"
+      backgroundColor = "var(--tone-tone-neutral-20)"
+      textColor = "var(--tone-tone-neutral-45)"
     } else if (userScore !== null && userScore !== undefined) {
-      backgroundColor = "#f5f5f5"
-      textColor = "#292929"
+      backgroundColor = "var(--tone-tone-neutral-13)"
+      textColor = "var(--tone-tone-neutral-45)"
     }
   }
 
@@ -355,7 +355,7 @@ const Submission: React.FC<React.PropsWithChildren<SubmissionProps>> = ({
           <div
             className={css`
               padding: 1rem;
-              background-color: ${baseTheme.colors.gray[100]};
+              background-color: ${tones.toneNeutral29};
             `}
           >
             {t("error-quiz-item-added-after-answering")}

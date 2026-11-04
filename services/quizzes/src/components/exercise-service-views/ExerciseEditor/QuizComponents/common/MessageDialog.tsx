@@ -16,7 +16,7 @@ const MessageDialog: React.FC<MessageDialogProps> = ({ title, description, open,
     <StandardDialog open={open} {...includeIf(onClose, { onClose })} title={title}>
       <div
         className={css`
-          color: #535a66;
+          color: var(--color-text-muted);
           padding: 16px 0;
         `}
       >
