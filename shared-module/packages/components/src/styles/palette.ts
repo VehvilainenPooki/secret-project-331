@@ -1,0 +1,150 @@
+/**
+ * The raw color palette: every scale's literal values, shared by all themes.
+ *
+ * `tokens.ts` emits these as the `--color-*` / `--gradient-*` custom properties and common's
+ * `baseTheme.colors` re-exports them, so the CSS and JS copies of the palette cannot drift apart.
+ * Common may import from this package; this package must not import from common.
+ */
+
+export const white = "#FFFFFF"
+
+export const colorScales = {
+  blue: {
+    25: "#FBFCFD",
+    50: "#F2F5F7",
+    75: "#EDF1F5",
+    100: "#DAE3EB",
+    200: "#B5C7D7",
+    300: "#90ABC3",
+    400: "#6B8FAF",
+    500: "#46749B",
+    600: "#215887",
+    700: "#08457A",
+    800: "#0E3657",
+    900: "#0F263B",
+    1000: "#0A1722",
+  },
+  green: {
+    25: "#FBFCFC",
+    50: "#F2F5F5",
+    75: "#EDF3F2",
+    100: "#DAE6E5",
+    200: "#B4CDCB",
+    300: "#8FB4B2",
+    400: "#6A9B98",
+    500: "#44827E",
+    600: "#1F6964",
+    700: "#065853",
+    800: "#154541",
+    900: "#163331",
+    1000: "#122221",
+  },
+  crimson: {
+    25: "#FDFBFB",
+    50: "#F7F3F4",
+    75: "#F4EDEE",
+    100: "#EADBDD",
+    200: "#D5B7BA",
+    300: "#C09397",
+    400: "#AC6E75",
+    500: "#974A53",
+    600: "#822630",
+    700: "#740E19",
+    800: "#57141C",
+    900: "#3D1316",
+    1000: "#260E0F",
+  },
+  red: {
+    25: "#FDFBFB",
+    50: "#F9F4F3",
+    75: "#F7F0EF",
+    100: "#F0E1DD",
+    200: "#E2C2BC",
+    300: "#D3A49A",
+    400: "#C58579",
+    500: "#B66757",
+    600: "#A84835",
+    700: "#9E341F",
+    800: "#823425",
+    900: "#693126",
+    1000: "#512C24",
+  },
+  yellow: {
+    25: "#FDFCF6",
+    50: "#FCF9E8",
+    75: "#FBF8E6",
+    100: "#FAF6E3",
+    200: "#F6EDC6",
+    300: "#F1E4A9",
+    400: "#ECDB8D",
+    500: "#E8D270",
+    600: "#E3C954",
+    700: "#E0C341",
+    800: "#D5BF5B",
+    900: "#CBBA6E",
+    1000: "#C2B57C",
+  },
+  purple: {
+    25: "#FCFBFD",
+    50: "#F5F3F9",
+    75: "#F2F0F8",
+    100: "#E5E0F1",
+    200: "#CBC1E2",
+    300: "#B1A2D4",
+    400: "#9783C5",
+    500: "#7C64B7",
+    600: "#6245A9",
+    700: "#51309F",
+    800: "#422B77",
+    900: "#312455",
+    1000: "#221B38",
+  },
+  gray: {
+    25: "#FCFCFC",
+    50: "#F4F4F5",
+    75: "#EEEFF0",
+    100: "#DDDEE0",
+    200: "#BABDC2",
+    300: "#989CA3",
+    400: "#767B85",
+    500: "#535A66",
+    600: "#313947",
+    700: "#1A2333",
+    800: "#0A0F17",
+    900: "#010203",
+    1000: "#000000",
+  },
+  clear: {
+    25: "#FBFCFC",
+    50: white,
+    75: "#FBFCFC",
+    100: "#F5F6F7",
+    200: "#EBEDEE",
+    300: "#E2E4E6",
+    400: "#D8DBDD",
+    500: "#CED2D5",
+    600: "#C4C9CD",
+    700: "#BEC3C7",
+    800: "#B8BDC1",
+    900: "#B3B7BA",
+    1000: "#ADB1B4",
+  },
+  primary: {
+    100: white,
+    200: "#000000",
+  },
+}
+
+export const gradients = {
+  green: "linear-gradient(to bottom right, #075854, #4DE2C5)",
+  blue: "linear-gradient(-70deg, #020344 0%, #28b8d5 100%)",
+}
+
+/** The palette as `--color-white`, `--color-<scale>-<step>` and `--gradient-<name>` declarations. */
+export const paletteCustomProperties = [
+  `--color-white: ${white};`,
+  ...Object.entries(colorScales).flatMap(([scale, steps]) =>
+    Object.entries(steps).map(([step, value]) => `--color-${scale}-${step}: ${value};`),
+  ),
+  ...Object.entries(gradients).map(([name, value]) => `--gradient-${name}: ${value};`),
+].join("\n")
