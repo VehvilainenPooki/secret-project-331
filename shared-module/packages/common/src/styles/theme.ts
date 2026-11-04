@@ -74,7 +74,7 @@ export const baseTheme = {
     },
     yellow: {
       25: "#FDFCF6",
-      50: "#FFFFFF",
+      50: "#FCF9E8",
       75: "#FDFCF6",
       100: "#FAF6E3",
       200: "#F6EDC6",
