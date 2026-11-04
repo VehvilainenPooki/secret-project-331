@@ -32,8 +32,8 @@ export const resolveHeroBackgroundImages = ({
 
 const READABILITY_SHADOW = `
   text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.55),
-    0 0 6px rgba(0, 0, 0, 0.4);
+    0 1px 2px var(--tone-shadow-neutral-30),
+    0 0 6px var(--tone-shadow-neutral-27);
   paint-order: stroke fill;
 `
 

@@ -56,7 +56,7 @@ const LanguageDisplay: React.FC<{ langCode: string }> = ({ langCode }) => {
         className={css`
           font-size: 14px;
           font-weight: 600;
-          color: #111827;
+          color: var(--tone-fg-neutral-40);
           margin-left: 6px;
         `}
       >

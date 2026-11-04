@@ -42,7 +42,7 @@ const PartnersSectionBlock: React.FC<PartnersBlockProps> = ({ courseId }) => {
         <div
           data-test-id="partners-block"
           className={css`
-            background: #f3f4f4;
+            background: var(--tone-bg-neutral-36);
             padding: 3rem 5rem;
             margin-bottom: -80px;
             display: flex;

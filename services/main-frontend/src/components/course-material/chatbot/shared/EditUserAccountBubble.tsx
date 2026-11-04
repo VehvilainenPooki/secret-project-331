@@ -4,12 +4,12 @@ import { css } from "@emotion/css"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import ConfirmActionBubble from "./ConfirmActionBubble"
 import { EDIT_USER_ACCOUNT_TOOL } from "./editUserAccountCalls"
 import type { EditUserAccountCall } from "./editUserAccountCalls"
+import { tones } from "@/shared-module/components/styles/themes"
 
 type EditUserAccountBubbleProps = ClientToolBubbleProps<EditUserAccountCall>
 
@@ -20,7 +20,7 @@ const rowStyle = css`
 const footnoteStyle = css`
   margin: 0.5rem 0 0;
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 /**

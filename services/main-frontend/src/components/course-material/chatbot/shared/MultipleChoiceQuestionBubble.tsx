@@ -6,8 +6,7 @@ import React, { useId, useState } from "react"
 import { VisuallyHidden } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
-import { withAlpha } from "@/shared-module/components/styles/themes"
+import { tones, withAlpha } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import {
@@ -31,8 +30,8 @@ type BubbleVisualState =
 // `baseTheme.colors.green`'s own pale tints (75-200) are so desaturated they read as near-white,
 // indistinguishable from an equally pale gray at a glance. A visible tint still made of that same
 // theme color comes from lowering its opacity instead of picking a paler step of the scale.
-const QUESTION_TINT_STRONG = withAlpha(baseTheme.colors.green[400], 14.9)
-const QUESTION_TINT_FAINT = withAlpha(baseTheme.colors.green[400], 7.84)
+const QUESTION_TINT_STRONG = withAlpha(tones.toneAccent16, 14.9)
+const QUESTION_TINT_FAINT = withAlpha(tones.toneAccent16, 7.84)
 
 const bubbleBaseStyle = css`
   align-self: flex-start;
@@ -57,22 +56,22 @@ const BUBBLE_CLASS_BY_VISUAL_STATE: Record<BubbleVisualState, string> = {
     bubbleBaseStyle,
     css`
       background-color: ${QUESTION_TINT_STRONG};
-      border: 2px solid ${baseTheme.colors.green[400]};
+      border: 2px solid ${tones.toneAccent16};
     `,
   ),
   answered: cx(
     bubbleBaseStyle,
     css`
       background-color: ${QUESTION_TINT_FAINT};
-      border: 2px solid ${baseTheme.colors.green[300]};
+      border: 2px solid ${tones.toneAccent12};
     `,
   ),
   aborted: cx(
     bubbleBaseStyle,
     css`
-      background-color: ${baseTheme.colors.gray[100]};
-      border: 2px solid ${baseTheme.colors.gray[200]};
-      color: ${baseTheme.colors.gray[600]};
+      background-color: ${tones.toneNeutral29};
+      border: 2px solid ${tones.toneNeutral35};
+      color: ${tones.toneNeutral44};
     `,
   ),
 }
@@ -85,7 +84,7 @@ const questionStyle = css`
 const hintStyle = css`
   margin: 0.25rem 0 0.75rem;
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 // A choice needs to stay at least this wide, or a short word ("morning", "afternoon") wraps onto
@@ -113,10 +112,10 @@ const choiceStyle = css`
   gap: 0.5rem;
   text-align: start;
   padding: 0.6rem 0.8rem;
-  border: 1px solid ${baseTheme.colors.green[400]};
+  border: 1px solid ${tones.toneAccent16};
   border-radius: 8px;
-  background-color: ${baseTheme.colors.clear[50]};
-  color: ${baseTheme.colors.gray[700]};
+  background-color: ${tones.toneNeutral1};
+  color: ${tones.toneNeutral46};
   cursor: pointer;
   transition: filter 0.2s;
 
@@ -126,7 +125,7 @@ const choiceStyle = css`
   }
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[600]};
+    outline: 2px solid ${tones.toneAccent21};
     outline-offset: 2px;
   }
 
@@ -142,9 +141,9 @@ const choiceStyle = css`
 // Kept at full opacity, unlike a merely-disabled choice, so it reads as "this is the answer" and
 // not as "this option is unavailable".
 const selectedChoiceStyle = css`
-  border-color: ${baseTheme.colors.green[600]};
+  border-color: ${tones.toneAccent21};
   background-color: ${QUESTION_TINT_STRONG};
-  color: ${baseTheme.colors.green[700]};
+  color: ${tones.toneAccent23};
   font-weight: 600;
 
   &:disabled {
@@ -159,7 +158,7 @@ const checkmarkStyle = css`
   flex: none;
   width: 1.1rem;
   height: 1.1rem;
-  color: ${baseTheme.colors.green[600]};
+  color: ${tones.toneAccent21};
 `
 
 /** A clarifying question the chatbot suspended its turn on, with the choices it offered. */

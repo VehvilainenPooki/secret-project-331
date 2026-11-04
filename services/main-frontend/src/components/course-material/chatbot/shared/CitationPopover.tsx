@@ -10,11 +10,11 @@ import { useTranslation } from "react-i18next"
 
 import type { ChatbotConversationMessageCitation } from "@/generated/course-material-api/types.generated"
 import SpeechBalloonPopover from "@/shared-module/common/components/SpeechBalloonPopover"
-import { baseTheme } from "@/shared-module/common/styles"
 import { getRemarkable } from "@/utils/course-material/getRemarkable"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
 import { citationId } from "./CitationButton"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface CitationPopoverProps {
   citation: ChatbotConversationMessageCitation
@@ -175,7 +175,7 @@ const CitationPopover: React.FC<CitationPopoverProps> = ({
           <a
             href={citation.document_url}
             className={css`
-              color: ${baseTheme.colors.blue[700]};
+              color: ${tones.toneInfo26};
               &::after {
                 content: "";
                 position: absolute;
@@ -185,7 +185,7 @@ const CitationPopover: React.FC<CitationPopoverProps> = ({
                 height: 100%;
               }
               &:focus {
-                outline: 2px solid ${baseTheme.colors.green[400]};
+                outline: 2px solid ${tones.toneAccent16};
               }
             `}
           >

@@ -6,9 +6,9 @@ import { animated, useSpring } from "@react-spring/web"
 import React, { useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { parseSentenceDifference } from "@/utils/course-material/typingDemoSentenceUtils"
+import { tones } from "@/shared-module/components/styles/themes"
 
 type Phase = "initial" | "mouseMove" | "mouseClick" | "showCaret" | "deleting" | "typing"
 
@@ -216,11 +216,11 @@ const ImprovementExample: React.FC = () => {
           position: absolute;
           top: -0.75rem;
           left: 1rem;
-          background: white;
+          background: var(--color-surface);
           padding: 0.125rem 0.5rem;
           font-size: 0.75rem;
-          color: ${baseTheme.colors.gray[600]};
-          border: 1px solid ${baseTheme.colors.gray[200]};
+          color: ${tones.toneNeutral44};
+          border: 1px solid ${tones.toneNeutral35};
           border-radius: 8px;
           z-index: 1;
 
@@ -235,8 +235,8 @@ const ImprovementExample: React.FC = () => {
       <div
         ref={containerRef}
         className={css`
-          background: white;
-          color: ${baseTheme.colors.gray[700]};
+          background: var(--color-surface);
+          color: ${tones.toneNeutral46};
           font-size: 0.875rem;
           display: flex;
           flex-wrap: wrap;
@@ -245,7 +245,7 @@ const ImprovementExample: React.FC = () => {
           position: relative;
           padding: 0.75rem;
           border-radius: 4px;
-          border: 1px solid ${baseTheme.colors.gray[200]};
+          border: 1px solid ${tones.toneNeutral35};
           pointer-events: none;
           min-height: 40px;
           overflow: visible;
@@ -296,7 +296,7 @@ const ImprovementExample: React.FC = () => {
               position: "absolute",
               width: "12px",
               height: "12px",
-              background: "#333",
+              background: "var(--tone-bg-neutral-88)",
               borderRadius: "50%",
               pointerEvents: "none",
               zIndex: 10,

@@ -7,10 +7,10 @@ import { useTranslation } from "react-i18next"
 
 import useCourseInfo from "@/hooks/course-material/useCourseInfo"
 import useOrganization from "@/hooks/course-material/useOrganization"
-import { baseTheme } from "@/shared-module/common/styles"
 import { navigateToCourseRoute } from "@/shared-module/common/utils/routes"
 import { Dialog, Link, LoadingRegion, ErrorNotice } from "@/shared-module/components"
 import { materialCourseAtom } from "@/state/course-material/selectors"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ClosedCourseWarningDialog = () => {
   const { t } = useTranslation()
@@ -52,8 +52,8 @@ const ClosedCourseWarningDialog = () => {
             className={css`
               margin-top: 0.25rem;
               padding: 0.75rem 1rem;
-              background-color: ${baseTheme.colors.yellow[100]};
-              border-left: 4px solid ${baseTheme.colors.yellow[600]};
+              background-color: ${tones.toneWarning3};
+              border-left: 4px solid ${tones.toneWarning10};
               border-radius: 8px;
             `}
           >
@@ -63,8 +63,8 @@ const ClosedCourseWarningDialog = () => {
                 align-self: flex-start;
                 padding: 0.125rem 0.5rem;
                 border-radius: 999px;
-                background-color: ${baseTheme.colors.yellow[600]};
-                color: ${baseTheme.colors.gray[600]};
+                background-color: ${tones.toneWarning10};
+                color: ${tones.toneNeutral44};
                 font-weight: 700;
                 text-transform: uppercase;
                 font-size: 12px;

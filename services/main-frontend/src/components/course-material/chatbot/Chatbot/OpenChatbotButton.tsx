@@ -8,27 +8,27 @@ import { Button } from "react-aria-components"
 import { useTranslation } from "react-i18next"
 
 import AIChat from "@/img/course-material/ai-chat.svg"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const buttonStyle = (hide: boolean) => css`
   position: fixed;
   bottom: 62px;
   right: 14px;
   z-index: 1000;
-  background: white;
+  background: var(--color-surface);
   border-radius: 100px;
   width: 60px;
   height: 60px;
   cursor: pointer;
   border: none;
-  color: white;
+  color: var(--color-text-on-accent);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 0.2s;
-  background-color: ${baseTheme.colors.green[600]};
+  background-color: ${tones.toneAccent21};
   &:hover {
-    background-color: ${baseTheme.colors.green[700]};
+    background-color: ${tones.toneAccent23};
   }
   ${hide ? `visibility: hidden;` : ``}
 `

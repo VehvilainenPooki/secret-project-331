@@ -16,9 +16,8 @@ import type {
 } from "@/generated/course-material-api/types.generated"
 import SendIcon from "@/imgs/send.svg"
 import StopIcon from "@/imgs/stop.svg"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, LoadingRegion, TextArea, ErrorNotice } from "@/shared-module/components"
-import { withAlpha } from "@/shared-module/components/styles/themes"
+import { tones, withAlpha } from "@/shared-module/components/styles/themes"
 
 import { CHATBOX_HEIGHT_PX } from "../Chatbot/ChatbotDialog"
 import { useChatbotContext } from "./ChatbotContext"
@@ -197,7 +196,7 @@ const suggestionsRowStyle = css`
 const disclaimerFooterStyle = css`
   margin: 0.5rem 1rem 0.75rem;
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   text-align: center;
 `
 
@@ -212,7 +211,7 @@ const composerShellStyle = css`
   border: 1.5px solid var(--field-border-color);
   border-radius: 14px;
   background-color: var(--field-bg);
-  box-shadow: 0 1px 2px ${withAlpha(baseTheme.colors.gray[700], 7.84)};
+  box-shadow: 0 1px 2px ${withAlpha(tones.toneNeutral46, 7.84)};
   transition:
     border-color 0.15s,
     box-shadow 0.15s;
@@ -257,7 +256,7 @@ const composerButtonStyle = css`
   height: 2.25rem;
   border: none;
   border-radius: 50%;
-  color: ${baseTheme.colors.primary[100]};
+  color: ${tones.toneNeutral1};
   cursor: pointer;
   transition:
     background-color 0.2s,
@@ -273,13 +272,13 @@ const composerButtonStyle = css`
   }
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[600]};
+    outline: 2px solid ${tones.toneAccent21};
     outline-offset: 2px;
   }
 `
 
 const sendButtonStyle = css`
-  background-color: ${baseTheme.colors.green[600]};
+  background-color: ${tones.toneAccent21};
 
   /* The glyph points right; the rotation aims it up-right, so it applies to the send state only. */
   svg {
@@ -289,20 +288,20 @@ const sendButtonStyle = css`
   }
 
   &:disabled {
-    background-color: ${baseTheme.colors.clear[500]};
-    color: ${baseTheme.colors.gray[300]};
+    background-color: ${tones.toneNeutral32};
+    color: ${tones.toneNeutral37};
   }
 
   &:hover:not(:disabled) {
-    background-color: ${baseTheme.colors.green[700]};
+    background-color: ${tones.toneAccent23};
   }
 `
 
 const stopButtonStyle = css`
-  background-color: ${baseTheme.colors.red[600]};
+  background-color: ${tones.toneDanger17};
 
   &:hover:not(:disabled) {
-    background-color: ${baseTheme.colors.red[700]};
+    background-color: ${tones.toneDanger19};
   }
 `
 

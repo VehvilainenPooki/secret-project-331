@@ -10,7 +10,6 @@ import { usePopper } from "react-popper"
 
 import AIChat from "@/img/course-material/ai-chat.svg"
 import SpeechBalloon from "@/shared-module/common/components/SpeechBalloon"
-import { baseTheme } from "@/shared-module/common/styles"
 import { textSelectionTooltipTestId } from "@/shared-module/common/styles/constants"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import {
@@ -21,6 +20,7 @@ import {
   currentlyOpenFeedbackDialogAtom,
   selectionAtom,
 } from "@/stores/course-material/materialFeedbackStore"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export const TEXT_SELECTION_TOOLTIP_ID = "text-selection-tooltip"
 
@@ -30,7 +30,7 @@ const CHATBOT_TEXT_SELECTION_ACTIONS = [
 ] as const
 
 const svgCss = css`
-  color: ${baseTheme.colors.green[1000]};
+  color: ${tones.toneAccent26};
   height: 1.25rem;
   position: relative;
   top: 4px;
@@ -174,7 +174,7 @@ const TextSelectionTooltip: React.FC<React.PropsWithChildren<Props>> = ({
     user-select: none;
 
     button {
-      color: ${baseTheme.colors.green[1000]};
+      color: ${tones.toneAccent26};
       border: none;
       border-radius: 5px;
       background-color: transparent;
@@ -185,7 +185,7 @@ const TextSelectionTooltip: React.FC<React.PropsWithChildren<Props>> = ({
 
       &:hover {
         filter: brightness(0.925);
-        background: ${baseTheme.colors.gray[25]};
+        background: ${tones.toneNeutral3};
       }
     }
 

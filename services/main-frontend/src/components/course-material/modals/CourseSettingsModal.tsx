@@ -15,7 +15,7 @@ import { refetchUserChapterLocks } from "@/hooks/course-material/useUserChapterL
 import useUserMarketingConsent from "@/hooks/course-material/useUserMarketingConsent"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, fontWeights, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Dialog, QueryResult, ErrorNotice } from "@/shared-module/components"
@@ -32,6 +32,7 @@ import { useChangeCourseMaterialLanguage } from "@/utils/course-material/languag
 import SelectCourseInstanceForm from "../forms/SelectCourseInstanceForm"
 import SelectCourseLanguage from "../SelectCourseLanguage"
 import { getLanguageName } from "./ChooseCourseLanguage"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseSettingsModalProps {
   onClose: () => void
@@ -203,7 +204,7 @@ const CourseSettingsModal: React.FC<React.PropsWithChildren<CourseSettingsModalP
       {languageChanged && (
         <div
           className={css`
-            background: ${baseTheme.colors.green[100]};
+            background: ${tones.toneAccent7};
             margin-top: 1.5rem;
             min-height: 57px;
             display: flex;
@@ -220,7 +221,7 @@ const CourseSettingsModal: React.FC<React.PropsWithChildren<CourseSettingsModalP
               max-width: 400px;
               line-height: 17px;
               text-align: center;
-              color: ${baseTheme.colors.green[700]};
+              color: ${tones.toneAccent23};
               margin: 0;
             `}
           >

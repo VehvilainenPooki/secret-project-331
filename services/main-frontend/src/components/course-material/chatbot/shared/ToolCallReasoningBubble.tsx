@@ -9,27 +9,27 @@ import {
   zChatbotConversationMessageReasoning,
   zChatbotConversationMessageToolCall,
 } from "@/generated/course-material-api/zod.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Disclosure } from "@/shared-module/components"
 
 import type { ChatbotConversationMessageWithStatus } from "./ChatbotChatBody"
 import ChatbotStatusRow from "./ChatbotStatusRow"
 import { ASK_MULTIPLE_CHOICE_QUESTION_TOOL } from "./multipleChoiceQuestions"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const textStyle = css`
   padding: 0 0.5rem;
-  color: rgb(0 0 0 / 70%);
+  color: var(--tone-fg-neutral-30);
   margin: 0.25rem 0;
 `
 
 const detailsStyle = css`
-  color: rgb(0 0 0 / 70%);
+  color: var(--tone-fg-neutral-30);
   border-radius: 10px;
   padding: 0.25rem;
   width: fit-content;
   max-width: stretch;
-  border: 2px dashed ${baseTheme.colors.blue[200]};
-  background-color: ${baseTheme.colors.blue[50]};
+  border: 2px dashed ${tones.toneInfo7};
+  background-color: ${tones.toneInfo2};
 `
 
 // Hoisted because emotion re-serializes and re-hashes the result on every call.

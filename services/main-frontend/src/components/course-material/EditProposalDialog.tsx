@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next"
 import { postCourseMaterialProposedEdits } from "@/generated/course-material-api/sdk.generated"
 import type { NewProposedBlockEdit } from "@/generated/course-material-api/types.generated"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, monospaceFont, primaryFont } from "@/shared-module/common/styles"
+import { monospaceFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button } from "@/shared-module/components"
 import {
@@ -20,6 +20,7 @@ import {
 import { formatKeyboardShortcut, getModifierKey } from "@/utils/course-material/platformDetection"
 
 import { FEEDBACK_DIALOG_CONTENT_ID } from "./SelectionListener"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   courseId: string
@@ -141,10 +142,10 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
         position: fixed;
         max-width: 500px;
         width: calc(100% - 40px);
-        background: ${baseTheme.colors.primary[100]};
-        border: 2px solid ${baseTheme.colors.gray[200]};
+        background: ${tones.toneNeutral1};
+        border: 2px solid ${tones.toneNeutral35};
         border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px var(--tone-shadow-neutral-10);
         bottom: 20px;
         right: 20px;
         left: 20px;
@@ -170,11 +171,11 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
           padding: 1rem 1.5rem;
           position: sticky;
           top: 0;
-          background: ${baseTheme.colors.primary[100]};
+          background: ${tones.toneNeutral1};
           display: flex;
           justify-content: space-between;
           align-items: center;
-          border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+          border-bottom: 1px solid ${tones.toneNeutral29};
           z-index: 1;
         `}
       >
@@ -183,7 +184,7 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
             font-family: ${primaryFont};
             font-size: 1.25rem;
             font-weight: 600;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             margin: 0;
           `}
         >
@@ -208,17 +209,17 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
             width: 40px;
             height: 40px;
             margin-right: -0.5rem;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
 
             &:hover {
-              background-color: ${baseTheme.colors.gray[100]};
+              background-color: ${tones.toneNeutral29};
             }
 
             &:focus {
               outline: none;
               box-shadow:
-                0 0 0 2px ${baseTheme.colors.primary[100]},
-                0 0 0 4px ${baseTheme.colors.gray[200]};
+                0 0 0 2px ${tones.toneNeutral1},
+                0 0 0 4px ${tones.toneNeutral35};
             }
           `}
           aria-label={t("close")}
@@ -240,7 +241,7 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
         {mutation.isError && (
           <div
             className={css`
-              color: ${baseTheme.colors.red[600]};
+              color: ${tones.toneDanger17};
               margin-bottom: 1rem;
               font-size: 0.875rem;
             `}
@@ -252,7 +253,7 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
         {bottomMessage && (
           <div
             className={css`
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               margin-bottom: 1rem;
               font-size: 0.875rem;
               line-height: 1.5;
@@ -284,7 +285,7 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
               align-items: center;
               gap: 0.25rem;
               font-size: 0.75rem;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
 
               @media (hover: none) and (pointer: coarse) {
                 display: none;
@@ -293,8 +294,8 @@ const EditProposalDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId
           >
             <kbd
               className={css`
-                background-color: white;
-                border: 1px solid ${baseTheme.colors.gray[300]};
+                background-color: var(--color-surface);
+                border: 1px solid ${tones.toneNeutral37};
                 border-radius: 3px;
                 padding: 0.125rem 0.375rem;
                 font-family: ${monospaceFont};

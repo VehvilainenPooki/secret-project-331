@@ -16,10 +16,10 @@ import {
 import type { PageSearchResult } from "@/generated/course-material-api/types.generated"
 import { isAbortError } from "@/shared-module/common/errors/AppApiError"
 import { normalizeErrorForDisplay } from "@/shared-module/common/errors/normalizeErrorForDisplay"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button, Dialog, LoadingRegion } from "@/shared-module/components"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface SearchDialogProps {
   courseId: string
@@ -66,7 +66,7 @@ const EmptyState = styled.div`
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-5) var(--space-4) var(--space-4-5);
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   text-align: center;
 
   h3 {
@@ -84,23 +84,23 @@ const ResultCard = styled(Link)`
   text-decoration: none;
   color: unset;
   display: block;
-  background: #ffffff;
+  background: var(--color-surface);
   margin-bottom: 0.5rem;
   padding: 1rem;
   border-radius: 6px;
   transition: all 0.2s ease;
-  border: 1px solid ${baseTheme.colors.gray[100]};
+  border: 1px solid ${tones.toneNeutral29};
 
   &:hover {
-    background: ${baseTheme.colors.green[100]};
-    border-color: ${baseTheme.colors.green[200]};
+    background: ${tones.toneAccent7};
+    border-color: ${tones.toneAccent9};
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px var(--tone-shadow-neutral-6);
   }
 
   .chapter-name {
     font-size: 0.75rem;
-    color: ${baseTheme.colors.gray[500]};
+    color: ${tones.toneNeutral41};
     margin: 0 0 0.25rem;
     line-height: 1.4;
   }
@@ -119,7 +119,7 @@ const ResultCard = styled(Link)`
     font-size: 0.875rem;
     margin: 0;
     line-height: 1.5;
-    color: ${baseTheme.colors.gray[600]};
+    color: ${tones.toneNeutral44};
 
     ${respondToOrLarger.md} {
       font-size: 0.875rem;
@@ -132,15 +132,15 @@ const StyledInput = styled.input`
   width: 100%;
   height: 48px;
   padding: 0 var(--space-4) 0 calc(var(--space-4) + 20px + var(--space-3));
-  background: #ffffff;
+  background: var(--color-surface);
   border: none;
   border-radius: 8px;
-  outline: 1px solid ${baseTheme.colors.gray[200]};
+  outline: 1px solid ${tones.toneNeutral35};
   font-size: 1rem;
   transition: outline-color 0.2s ease;
 
   &:focus {
-    outline: 2px solid ${baseTheme.colors.green[400]};
+    outline: 2px solid ${tones.toneAccent16};
   }
 `
 
@@ -149,7 +149,7 @@ const SearchIcon = styled(MagnifyingGlass)`
   left: var(--space-4);
   top: 50%;
   transform: translateY(-50%);
-  color: ${baseTheme.colors.gray[400]};
+  color: ${tones.toneNeutral39};
   pointer-events: none;
 `
 
@@ -169,7 +169,7 @@ const StyledIcon = css`
     cursor: pointer;
   }
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 `
@@ -345,9 +345,9 @@ const SearchDialog: React.FC<React.PropsWithChildren<SearchDialogProps>> = ({
               <div
                 className={css`
                   padding: 1rem;
-                  background-color: ${baseTheme.colors.red[100]};
-                  border-left: 4px solid ${baseTheme.colors.red[500]};
-                  color: ${baseTheme.colors.red[700]};
+                  background-color: ${tones.toneDanger2};
+                  border-left: 4px solid ${tones.toneDanger15};
+                  color: ${tones.toneDanger19};
                   margin-bottom: 1rem;
                   border-radius: 4px;
                 `}
@@ -390,7 +390,7 @@ const SearchDialog: React.FC<React.PropsWithChildren<SearchDialogProps>> = ({
                       <div
                         className={css`
                           font-size: 0.75rem;
-                          color: ${baseTheme.colors.gray[500]};
+                          color: ${tones.toneNeutral41};
                           margin: 0 0 0.25rem;
                           line-height: 1.4;
                         `}
@@ -401,7 +401,7 @@ const SearchDialog: React.FC<React.PropsWithChildren<SearchDialogProps>> = ({
                   {result.content_headline && (
                     <p
                       className={css`
-                        color: #5a5757;
+                        color: var(--tone-fg-neutral-28);
                       `}
                       dangerouslySetInnerHTML={{
                         __html: sanitizeCourseMaterialHtml(result.content_headline),

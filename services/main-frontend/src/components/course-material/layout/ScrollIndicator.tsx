@@ -44,7 +44,7 @@ const ScrollIndicator: React.FC = () => {
         <div
           className={css`
             height: 5px;
-            background: #27f09d;
+            background: var(--tone-bg-accent-6);
             width: ${scrolled};
           `}
         />

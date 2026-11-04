@@ -1,1 +1,1 @@
-export const LIGHT_GREEN = "#e3f0e9ff"
+export const LIGHT_GREEN = "var(--tone-tone-neutral-21)"

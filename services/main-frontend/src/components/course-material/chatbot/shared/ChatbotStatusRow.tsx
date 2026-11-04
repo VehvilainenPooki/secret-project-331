@@ -3,9 +3,9 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
 
 import ThinkingIndicator from "./ThinkingIndicator"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const statusRowStyle = css`
   display: flex;
@@ -16,9 +16,9 @@ const statusRowStyle = css`
   width: fit-content;
   max-width: stretch;
   border-radius: 10px;
-  border: 2px dashed ${baseTheme.colors.blue[200]};
-  background-color: ${baseTheme.colors.blue[50]};
-  color: ${baseTheme.colors.gray[600]};
+  border: 2px dashed ${tones.toneInfo7};
+  background-color: ${tones.toneInfo2};
+  color: ${tones.toneNeutral44};
 `
 
 // No border/background here: with no text, the pill would just be a gray box around three dots.

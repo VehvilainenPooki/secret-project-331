@@ -4,7 +4,7 @@ import { css, keyframes } from "@emotion/css"
 import { Button } from "react-aria-components"
 
 import Idea from "@/img/course-material/idea.svg"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const loadAnimation = keyframes`
 100%{
@@ -36,14 +36,14 @@ const SuggestedMessageChip: React.FC<SuggestedMessageChipProps> = ({
         font-size: 0.8rem;
         background: linear-gradient(
           120deg,
-          ${baseTheme.colors.blue[100]} 30%,
-          #ffffff 38%,
-          #f2f2f2 40%,
-          ${baseTheme.colors.blue[100]} 48%
+          ${tones.toneInfo5} 30%,
+          var(--tone-tone-neutral-1) 38%,
+          var(--tone-tone-neutral-16) 40%,
+          ${tones.toneInfo5} 48%
         );
         background-size: 200% 100%;
         background-position: 100% 0;
-        ${isLoading ? `animation: ${loadAnimation} 2s infinite; color: rgb(0 0 0 / 0%);` : ""}
+        ${isLoading ? `animation: ${loadAnimation} 2s infinite; color: var(--tone-fg-neutral-1);` : ""}
         &:hover {
           filter: brightness(0.9) contrast(1.1);
           cursor: pointer;

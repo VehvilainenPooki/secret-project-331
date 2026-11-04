@@ -5,7 +5,6 @@ import React, { useMemo, useRef, useState } from "react"
 import { useHover } from "react-aria"
 
 import type { ChatbotConversationMessageCitation } from "@/generated/course-material-api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { MATCH_CITATIONS_REGEX } from "@/utils/course-material/chatbotCitationRegexes"
 
 import ChatbotReferenceList from "./ChatbotReferenceList"
@@ -13,6 +12,7 @@ import CitationPopovers from "./CitationPopovers"
 import RenderedMessage, { MessageRenderType } from "./RenderedMessage"
 import { LIGHT_GREEN } from "./styles"
 import ThinkingIndicator from "./ThinkingIndicator"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export const renumberFilterCitations = (
   message: string,
@@ -98,8 +98,8 @@ const bubbleStyle = (isFromChatbot: boolean) => css`
       : `
       margin-left: 2rem;
       align-self: flex-end;
-      border: 2px solid ${baseTheme.colors.green[200]};
-      background-color: #ffffff;
+      border: 2px solid ${tones.toneAccent9};
+      background-color: var(--color-surface);
     `
   }
 `

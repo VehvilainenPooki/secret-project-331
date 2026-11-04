@@ -10,7 +10,6 @@ import { menuEntryLayout } from "@/shared-module/common/components/Navigation/Na
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import useAuthorizeMultiple from "@/shared-module/common/hooks/useAuthorizeMultiple"
 import useLogout from "@/shared-module/common/hooks/useLogout"
-import { baseTheme } from "@/shared-module/common/styles"
 import "@/shared-module/common/init/registerAuthApiClients"
 import { useCurrentPagePathForReturnTo } from "@/shared-module/common/utils/redirectBackAfterLoginOrSignup"
 import { manageCourseRoute } from "@/shared-module/common/utils/routes"
@@ -18,6 +17,7 @@ import { Button, LoadingRegion } from "@/shared-module/components"
 import { currentCourseIdAtom } from "@/state/course-material/selectors"
 
 import CourseSettingsModal from "../modals/CourseSettingsModal"
+import { tones } from "@/shared-module/components/styles/themes"
 
 // Styles an anchor to match the menu-tooltip buttons, so page-navigation entries are single
 // links, not a link wrapping a button. Menu owns layout via menuEntryLayout; only the
@@ -25,17 +25,17 @@ import CourseSettingsModal from "../modals/CourseSettingsModal"
 const menuLink = cx(
   menuEntryLayout,
   css`
-    color: ${baseTheme.colors.green[600]};
+    color: ${tones.toneAccent21};
 
     &:hover {
       background: inherit;
-      color: ${baseTheme.colors.green[700]};
+      color: ${tones.toneAccent23};
     }
   `,
 )
 
 const menuButtonColor = css`
-  color: ${baseTheme.colors.green[600]} !important;
+  color: ${tones.toneAccent21} !important;
 `
 
 export interface UserNavigationControlsProps {

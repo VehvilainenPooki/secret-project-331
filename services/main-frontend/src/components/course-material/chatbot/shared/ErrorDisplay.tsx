@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import { zStreamEventError } from "@/generated/course-material-api/zod.generated"
 import { normalizeErrorForDisplay } from "@/shared-module/common/errors/normalizeErrorForDisplay"
-import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
+import { monospaceFont } from "@/shared-module/common/styles"
 import { Disclosure } from "@/shared-module/components"
-import { withAlpha } from "@/shared-module/components/styles/themes"
+import { tones, withAlpha } from "@/shared-module/components/styles/themes"
 
 interface ErrorDisplayProps {
   /// An unknown error type, can also be StreamEventError
@@ -89,13 +89,13 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
       <div
         className={css`
           margin: 16px 12px;
-          border: 1px solid ${baseTheme.colors.red[300]};
-          border-left: 4px solid ${baseTheme.colors.red[400]};
-          background: ${withAlpha(baseTheme.colors.red[100], 25.1)};
+          border: 1px solid ${tones.toneDanger8};
+          border-left: 4px solid ${tones.toneDanger10};
+          background: ${withAlpha(tones.toneDanger2, 25.1)};
           border-radius: 8px;
           box-shadow:
-            0 2px 8px ${withAlpha(baseTheme.colors.red[200], 37.65)},
-            0 1px 3px ${withAlpha(baseTheme.colors.red[300], 25.1)};
+            0 2px 8px ${withAlpha(tones.toneDanger7, 37.65)},
+            0 1px 3px ${withAlpha(tones.toneDanger8, 25.1)};
           overflow: auto;
           backdrop-filter: blur(4px);
         `}
@@ -106,8 +106,8 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
           role="alert"
           className={css`
             padding: 16px 20px;
-            background: ${withAlpha(baseTheme.colors.red[100], 12.55)};
-            color: ${baseTheme.colors.red[700]};
+            background: ${withAlpha(tones.toneDanger2, 12.55)};
+            color: ${tones.toneDanger19};
             font-weight: 500;
             font-size: 0.9rem;
             line-height: 1.4;
@@ -134,8 +134,8 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
           <div
             className={css`
               padding: 12px 20px;
-              background-color: ${withAlpha(baseTheme.colors.red[100], 14.51)};
-              border-top: 1px solid ${withAlpha(baseTheme.colors.red[200], 31.37)};
+              background-color: ${withAlpha(tones.toneDanger2, 14.51)};
+              border-top: 1px solid ${withAlpha(tones.toneDanger7, 31.37)};
             `}
           >
             <Disclosure
@@ -150,10 +150,10 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
                   className={css`
                     margin-bottom: 8px;
                     padding: 8px 12px;
-                    background-color: ${withAlpha(baseTheme.colors.red[100], 12.55)};
+                    background-color: ${withAlpha(tones.toneDanger2, 12.55)};
                     border-radius: 4px;
                     font-size: 0.85rem;
-                    color: ${baseTheme.colors.red[600]};
+                    color: ${tones.toneDanger17};
                     font-family: ${monospaceFont};
                   `}
                 >
@@ -172,14 +172,14 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ error }) => {
                   className={css`
                     margin: 0;
                     font-size: 0.75rem;
-                    background-color: ${withAlpha(baseTheme.colors.red[100], 8.24)};
+                    background-color: ${withAlpha(tones.toneDanger2, 8.24)};
                     padding: 16px;
                     border: none;
                     overflow-x: auto;
                     white-space: pre-wrap;
                     overflow-wrap: break-word;
                     font-family: ${monospaceFont};
-                    color: ${baseTheme.colors.red[600]};
+                    color: ${tones.toneDanger17};
                     line-height: 1.5;
                     max-height: 400px;
                     overflow-y: auto;

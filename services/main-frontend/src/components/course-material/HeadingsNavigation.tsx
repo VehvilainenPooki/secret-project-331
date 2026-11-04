@@ -12,10 +12,10 @@ import { useMediaQuery } from "usehooks-ts"
 import useHeadingData from "@/hooks/course-material/useHeadingData"
 import useIsPageChapterFrontPage from "@/hooks/course-material/useIsPageChapterFrontPage"
 import useShouldHideStuffFromSystemTestScreenshots from "@/shared-module/common/hooks/useShouldHideStuffForSystemTestScreenshots"
-import { baseTheme } from "@/shared-module/common/styles/theme"
 import { isElementFullyInViewport } from "@/shared-module/common/utils/dom"
 import { currentPageIdAtom, examDataAtom } from "@/state/course-material/selectors"
 import { courseMaterialBlockClass } from "@/utils/course-material/constants"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const HERO_SECTION_Y_OFFSET_PX = 700
 const TOP_OFFSET_PX = 50
@@ -28,14 +28,14 @@ const Z_INDEX = 1000
 const WIDTH_PX = 300
 
 const StyledTopics = styled.div`
-  border-left: 3px solid #ebedee;
+  border-left: 3px solid var(--tone-border-neutral-7);
   margin-top: 1rem;
 `
 const StTopic = styled.div`
   display: flex;
   text-decoration: none;
   list-style: none;
-  color: #333;
+  color: var(--tone-fg-neutral-36);
   justify-content: space-between;
   position: relative;
 
@@ -49,7 +49,7 @@ const StTopic = styled.div`
 
   div {
     max-width: 100%;
-    color: #333;
+    color: var(--tone-fg-neutral-36);
 
     a {
       max-width: 30ch;
@@ -57,7 +57,7 @@ const StTopic = styled.div`
       text-overflow: ellipsis;
       white-space: nowrap;
       text-decoration: none;
-      color: #1a2333;
+      color: var(--color-text);
       font-size: 11px;
       font-weight: 400;
       display: inline-block;
@@ -241,7 +241,7 @@ const HeadingsNavigation: React.FC<React.PropsWithChildren<HeadingsNavigationPro
             padding: 1.5rem;
             padding-top: 12px;
             z-index: 1000;
-            background-color: rgb(246, 248, 250);
+            background-color: var(--tone-bg-neutral-21);
 
             h3 {
               margin-bottom: 1rem;
@@ -256,7 +256,7 @@ const HeadingsNavigation: React.FC<React.PropsWithChildren<HeadingsNavigationPro
             <h3
               className={css`
                 font-size: 16px;
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
                 font-weight: 700;
                 display: inline;
                 position: relative;
@@ -318,9 +318,9 @@ const HeadingsNavigation: React.FC<React.PropsWithChildren<HeadingsNavigationPro
                           className={css`
                             ${
                               activeHeading === headingsNavigationIndex &&
-                              `background: #DAE6E5;
+                              `background: var(--tone-bg-accent-4);
                         &:before{
-                          background: #1F6964 !important
+                          background: var(--color-accent) !important
                         }`
                             }
                           `}
@@ -344,7 +344,7 @@ const HeadingsNavigation: React.FC<React.PropsWithChildren<HeadingsNavigationPro
             top: ${fixed ? offsetpx : 0}px;
             cursor: pointer;
             transition: background-color 0.2s;
-            background-color: ${realCollapsed ? "#f8f8f8" : "transparent"};
+            background-color: ${realCollapsed ? "var(--tone-tone-neutral-7)" : "transparent"};
             width: 40px;
             height: 40px;
             z-index: ${Z_INDEX + 5};
@@ -355,7 +355,7 @@ const HeadingsNavigation: React.FC<React.PropsWithChildren<HeadingsNavigationPro
             pointer-events: auto;
 
             &:focus-visible {
-              outline: 2px solid ${baseTheme.colors.green[500]};
+              outline: 2px solid ${tones.toneAccent19};
               outline-offset: 2px;
             }
           `}

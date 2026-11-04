@@ -4,12 +4,12 @@ import { css } from "@emotion/css"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import ConfirmActionBubble from "./ConfirmActionBubble"
 import { UPDATE_CERTIFICATE_TOOL } from "./updateCertificateCalls"
 import type { UpdateCertificateCall } from "./updateCertificateCalls"
+import { tones } from "@/shared-module/components/styles/themes"
 
 type UpdateCertificateBubbleProps = ClientToolBubbleProps<UpdateCertificateCall>
 
@@ -20,7 +20,7 @@ const rowStyle = css`
 const footnoteStyle = css`
   margin: 0.5rem 0 0;
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 /**

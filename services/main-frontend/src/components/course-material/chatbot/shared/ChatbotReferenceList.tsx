@@ -7,15 +7,15 @@ import { useTranslation } from "react-i18next"
 
 import type { ChatbotConversationMessageCitation } from "@/generated/course-material-api/types.generated"
 import DownIcon from "@/shared-module/common/img/down.svg"
-import { baseTheme } from "@/shared-module/common/styles"
 import { assertNotNullOrUndefined } from "@/shared-module/common/utils/nullability"
 import { Link } from "@/shared-module/components"
 
 import { LIGHT_GREEN } from "./styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const referenceStyle = css`
   margin: 4px 4px 4px 0;
-  background-color: ${baseTheme.colors.green[200]};
+  background-color: ${tones.toneAccent9};
   padding: 2px 7px 2px 7px;
   border-radius: 10px;
   font-size: 90%;
@@ -24,13 +24,13 @@ const referenceStyle = css`
     flex-flow: row nowrap;
     justify-content: space-between;
     gap: 1em;
-    color: #000000;
+    color: var(--tone-fg-neutral-44);
     text-decoration: none;
   }
   a {
     &:hover {
       .link {
-        color: ${baseTheme.colors.blue[700]};
+        color: ${tones.toneInfo26};
         text-decoration: underline;
       }
     }
@@ -67,7 +67,7 @@ const expandButtonStyle = css`
   background-color: ${LIGHT_GREEN};
   border: none;
   margin: 0 0.5rem;
-  color: ${baseTheme.colors.green[400]};
+  color: ${tones.toneAccent16};
   transition: filter 0.2s;
 
   &:hover {
@@ -139,7 +139,7 @@ const ChatbotReferenceList: React.FC<ChatbotReferenceListProps> = ({
                         <span
                           className={css`
                             flex: 7;
-                            color: #000000;
+                            color: var(--tone-fg-neutral-44);
                           `}
                         >
                           <b
@@ -163,7 +163,7 @@ const ChatbotReferenceList: React.FC<ChatbotReferenceListProps> = ({
                             padding: 2px;
                             margin-right: -1em;
                             align-self: flex-end;
-                            color: #000000;
+                            color: var(--tone-fg-neutral-44);
                           `}
                         />
                       </Link>

@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface CourseTestModeNotificationProps {
   isTestMode: boolean
@@ -24,8 +25,8 @@ const CourseTestModeNotification: React.FC<
       <div
         className={css`
           text-align: center;
-          background: ${baseTheme.colors.red[600]};
-          color: ${baseTheme.colors.clear[100]};
+          background: ${tones.toneDanger17};
+          color: ${tones.toneNeutral12};
           padding: 2rem 0rem;
           font-size: ${baseTheme.fontSizes[3]}px;
         `}
