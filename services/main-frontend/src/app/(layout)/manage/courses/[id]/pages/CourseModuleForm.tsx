@@ -121,7 +121,7 @@ const fieldRowCss = css`
 `
 
 const deleteButtonCss = css`
-  color: var(--color-red-600);
+  color: var(--tone-fg-danger-6);
 `
 
 const actionsCss = css`

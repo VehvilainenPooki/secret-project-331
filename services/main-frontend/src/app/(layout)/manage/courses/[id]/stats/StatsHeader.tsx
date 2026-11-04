@@ -5,7 +5,8 @@ import styled from "@emotion/styled"
 import React from "react"
 
 import DebugModal from "@/shared-module/common/components/DebugModal"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface StatsHeaderProps {
   heading: string
@@ -15,7 +16,7 @@ interface StatsHeaderProps {
 
 export const StatHeading = styled.h2`
   font-size: 1.8rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   font-family: ${headingFont};
   margin-bottom: 1rem;
   margin-top: 1rem;

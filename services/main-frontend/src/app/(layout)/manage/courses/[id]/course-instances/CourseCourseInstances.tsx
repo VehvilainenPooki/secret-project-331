@@ -21,6 +21,7 @@ import {
 import ModuleCompletionReprocessButton from "./ModuleCompletionReprocessButton"
 import NewCourseInstanceDialog from "./NewCourseInstanceDialog"
 import PointExportButton from "./PointExportButton"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const containerStyles = css`
   max-width: 1200px;
@@ -37,7 +38,7 @@ const headerContainerStyles = css`
 
 const titleStyles = css`
   font-size: clamp(2rem, 3.6vh, 36px);
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-family: ${headingFont};
   font-weight: bold;
   margin: 0;
@@ -50,25 +51,25 @@ const cardContainerStyles = css`
 `
 
 const cardStyles = css`
-  background: ${baseTheme.colors.primary[100]};
-  border: 1px solid ${baseTheme.colors.clear[200]};
+  background: ${tones.toneNeutral1};
+  border: 1px solid ${tones.toneNeutral22};
   border-radius: 0.5rem;
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px var(--tone-shadow-neutral-6);
   transition: box-shadow 0.2s ease;
 
   &:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--tone-shadow-neutral-10);
   }
 `
 
 const cardTitleStyles = css`
   font-size: ${baseTheme.fontSizes[3]}px;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-weight: bold;
   margin: 0 0 1.5rem 0;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid ${baseTheme.colors.clear[200]};
+  border-bottom: 1px solid ${tones.toneNeutral22};
 `
 
 const actionButtonsContainerStyles = css`

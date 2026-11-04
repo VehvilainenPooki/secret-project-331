@@ -9,10 +9,10 @@ import {
   useTotalUsersReturnedExercisesQuery,
   useTotalUsersStartedAllLanguageVersionsQuery,
 } from "@/hooks/stats"
-import { baseTheme } from "@/shared-module/common/styles"
 import { formatNumber } from "@/shared-module/common/utils/numbers"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface AllLanguageTotalStatsProps {
   courseId: string
@@ -21,24 +21,24 @@ interface AllLanguageTotalStatsProps {
 const statBoxStyles = css`
   flex: 1;
   max-width: 300px;
-  border: 3px solid ${baseTheme.colors.clear[200]};
+  border: 3px solid ${tones.toneNeutral22};
   border-radius: 12px;
   padding: 2rem;
   text-align: center;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: var(--color-surface);
+  box-shadow: 0 2px 4px var(--tone-shadow-neutral-6);
 `
 
 const statValueStyles = css`
   font-size: 2.8rem;
   font-weight: bold;
-  color: ${baseTheme.colors.green[600]};
+  color: ${tones.toneAccent21};
   margin-bottom: 0.5rem;
 `
 
 const statTitleStyles = css`
   margin: 0;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -49,10 +49,10 @@ const loadingValueStyles = css`
   @keyframes pulse {
     0%,
     100% {
-      background-color: ${baseTheme.colors.gray[200]};
+      background-color: ${tones.toneNeutral35};
     }
     50% {
-      background-color: ${baseTheme.colors.gray[300]};
+      background-color: ${tones.toneNeutral37};
     }
   }
 
@@ -60,7 +60,7 @@ const loadingValueStyles = css`
   width: 120px;
   margin: 0 auto 0.5rem;
   border-radius: 4px;
-  background-color: white;
+  background-color: var(--color-surface);
   animation: pulse 1.5s ease-in-out infinite;
   animation-delay: 500ms;
 `

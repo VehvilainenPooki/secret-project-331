@@ -95,8 +95,8 @@ const iconBtnStyle = css`
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  border: 1px solid #d0d5dd;
-  background: #fff;
+  border: 1px solid var(--tone-border-neutral-36);
+  background: var(--color-surface);
   cursor: pointer;
 `
 
@@ -338,7 +338,7 @@ export const CertificatesTabContent: React.FC = () => {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: #f5f5f5;
+                background: var(--tone-bg-neutral-26);
                 border-radius: 4px;
               `}
             >
@@ -373,7 +373,7 @@ export const CertificatesTabContent: React.FC = () => {
                 flex-direction: column;
                 gap: 0.5rem;
                 padding: 1rem;
-                border-top: 1px solid #e5e5e5;
+                border-top: 1px solid var(--tone-border-neutral-15);
               `}
             >
               <div

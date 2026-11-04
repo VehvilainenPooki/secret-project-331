@@ -8,11 +8,12 @@ import { useTranslation } from "react-i18next"
 import type { CourseManagementPagesProps } from "@/app/(layout)/manage/courses/[id]/types"
 import { getCourseGlossaryOptions } from "@/generated/api/@tanstack/react-query.generated"
 import type { Term as GlossaryTerm } from "@/generated/api/types.generated"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { QueryResult } from "@/shared-module/components"
 
 import CreateTermForm from "./CreateTermForm"
 import TermItem from "./TermItem"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const pageCss = css`
   display: grid;
@@ -27,7 +28,7 @@ const listCss = css`
 
   > li {
     padding-block: var(--space-4);
-    border-top: 1px solid var(--color-clear-300);
+    border-top: 1px solid var(--color-border);
   }
 
   > li:first-of-type {
@@ -55,7 +56,7 @@ const CourseGlossary: React.FC<React.PropsWithChildren<CourseManagementPagesProp
       <h1
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}

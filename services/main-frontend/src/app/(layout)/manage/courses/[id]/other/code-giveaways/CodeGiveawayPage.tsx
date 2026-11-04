@@ -8,11 +8,12 @@ import { useTranslation } from "react-i18next"
 
 import { getCodeGiveawaysByCourseOptions } from "@/generated/api/@tanstack/react-query.generated"
 import type { CodeGiveaway } from "@/generated/api/types.generated"
-import { baseTheme, headingFont, typography } from "@/shared-module/common/styles"
+import { headingFont, typography } from "@/shared-module/common/styles"
 import { codeGiveawayRoute } from "@/shared-module/common/utils/routes"
 import { Button, QueryResult } from "@/shared-module/components"
 
 import NewCodeGiveawayForm from "./NewCodeGiveawayForm"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface CodeGiveawayPageProps {
   courseId: string
@@ -25,17 +26,17 @@ const Content = styled.div`
 // oxlint-disable-next-line i18next/no-literal-string
 const CodeGiveawayCard = styled.a`
   padding: 1rem;
-  border: 1px solid ${baseTheme.colors.gray[300]};
+  border: 1px solid ${tones.toneNeutral37};
   border-radius: 0.5rem;
   margin: 1rem 0;
   cursor: pointer;
   transition: background-color 0.2s;
   display: block;
   text-decoration: none;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 
   &:hover {
-    background-color: ${baseTheme.colors.gray[100]};
+    background-color: ${tones.toneNeutral29};
   }
 
   h2 {
@@ -61,7 +62,7 @@ const CodeGiveawayPage: React.FC<CodeGiveawayPageProps> = ({ courseId }) => {
       <h1
         className={css`
           font-size: ${typography.h4};
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}

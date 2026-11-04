@@ -8,13 +8,13 @@ import { useTranslation } from "react-i18next"
 import Echarts from "@/components/charts/Echarts"
 import { getCoursePageVisitDatumSummaryByCountriesOptions } from "@/generated/api/@tanstack/react-query.generated"
 import type countries from "@/shared-module/common/locales/en/countries.json"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
 
 import { InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
 import NoDataMessage from "../NoDataMessage"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseVisitorsByCountryProps {
   courseId: string
@@ -94,7 +94,7 @@ const CourseVisitorsByCountry: React.FC<React.PropsWithChildren<CourseVisitorsBy
       <div
         className={css`
           margin-bottom: 2rem;
-          border: 3px solid ${baseTheme.colors.clear[200]};
+          border: 3px solid ${tones.toneNeutral22};
           border-radius: 6px;
           padding: 1rem;
           min-height: 300px;

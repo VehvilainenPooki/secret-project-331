@@ -12,7 +12,7 @@ import { RouteTabPageTitle } from "@/components/Navigation/RouteTabList/RouteTab
 import useCourseBreadcrumbInfoQuery from "@/hooks/useCourseBreadcrumbInfoQuery"
 import useCourseInstancesQuery from "@/hooks/useCourseInstancesQuery"
 import useCourseLanguageVersions from "@/hooks/useCourseLanguageVersions"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import {
   manageCourseStatsAllLanguagesRoute,
   manageCourseStatsCountryStatsRoute,
@@ -21,6 +21,7 @@ import {
   manageCourseStatsUserActivityRoute,
   manageCourseStatsVisitorsRoute,
 } from "@/shared-module/common/utils/routes"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const KEY_OVERVIEW = "overview"
 const KEY_USER_ACTIVITY = "user-activity"
@@ -106,7 +107,7 @@ export default function StatsLayout({ children }: { children: React.ReactNode })
       <h1
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}

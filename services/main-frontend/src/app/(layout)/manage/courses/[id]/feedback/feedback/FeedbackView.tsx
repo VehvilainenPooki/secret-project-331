@@ -30,7 +30,7 @@ export interface FeedbackViewProps {
 
 const ImportantText = styled.div`
   white-space: pre-wrap;
-  border: 1px solid #ccc;
+  border: 1px solid var(--tone-border-neutral-41);
   padding: 0.5rem;
   margin: 0;
   font-family: ${primaryFont};
@@ -84,7 +84,7 @@ const FeedbackView: React.FC<React.PropsWithChildren<FeedbackViewProps>> = ({
   return (
     <div
       className={css`
-        border: 1px solid #e5e5e5;
+        border: 1px solid var(--tone-border-neutral-15);
         margin-bottom: 2rem;
         margin-top: 2rem;
         padding: 1rem;

@@ -4,10 +4,11 @@ import { css } from "@emotion/css"
 import { useTranslation } from "react-i18next"
 
 import type { CourseManagementPagesProps } from "@/app/(layout)/manage/courses/[id]/types"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 
 import ExerciseList from "./ExerciseList"
 import ExerciseRepositories from "./ExerciseRepositories"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const CourseExercises: React.FC<React.PropsWithChildren<CourseManagementPagesProps>> = ({
   courseId,
@@ -18,7 +19,7 @@ const CourseExercises: React.FC<React.PropsWithChildren<CourseManagementPagesPro
       <h2
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}
@@ -29,7 +30,7 @@ const CourseExercises: React.FC<React.PropsWithChildren<CourseManagementPagesPro
       <h2
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
           padding-top: 1rem;

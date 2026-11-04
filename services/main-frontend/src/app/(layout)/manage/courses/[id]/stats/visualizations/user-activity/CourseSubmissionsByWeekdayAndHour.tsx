@@ -11,12 +11,12 @@ import Echarts from "@/components/charts/Echarts"
 import { getCourseWeekdayHourSubmissionCountsOptions } from "@/generated/api/@tanstack/react-query.generated"
 import type { ExerciseSlideSubmissionCountByWeekAndHour } from "@/generated/api/types.generated"
 import DebugModal from "@/shared-module/common/components/DebugModal"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
 
 import { InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseSubmissionsByWeekdayAndHourProps {
   courseId: string
@@ -99,7 +99,7 @@ const CourseSubmissionsByWeekdayAndHour: React.FC<
             <div
               className={css`
                 margin-bottom: 2rem;
-                border: 3px solid ${baseTheme.colors.clear[200]};
+                border: 3px solid ${tones.toneNeutral22};
                 border-radius: 6px;
                 padding: 1rem;
               `}

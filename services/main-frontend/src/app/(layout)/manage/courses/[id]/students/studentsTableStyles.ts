@@ -12,9 +12,9 @@ export const COMPLETIONS_LEAF_MIN_WIDTH = 60
 export const tableViewportCss = css`
   position: relative;
   width: 100%;
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--surface-radius);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
 `
 
 // Fixed-position clone of the header shown once the real thead scrolls above the viewport.
@@ -34,8 +34,8 @@ export const floatingHeaderShellDynamic = (left: number, width: number) => css`
 `
 
 export const floatingHeaderInnerCss = css`
-  background: var(--color-clear-50);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  background: var(--color-surface);
+  box-shadow: 0 1px 0 var(--tone-shadow-neutral-7);
   overflow: hidden;
   display: inline-block;
   pointer-events: auto;
@@ -118,14 +118,14 @@ export const resizeHandleCss = css`
 
   &:hover::after,
   &:focus-visible::after {
-    background: var(--color-green-700);
+    background: var(--tone-bg-accent-13);
     right: -1px;
     width: 3px;
   }
 `
 
 export const headerRowStyle = css`
-  background: var(--color-clear-100);
+  background: var(--color-surface-sunken);
   height: 40px;
 
   ${respondToOrLarger.md} {
@@ -134,7 +134,7 @@ export const headerRowStyle = css`
 `
 
 export const thStyle = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 500;
   font-size: 12px;
   line-height: 140%;
@@ -142,10 +142,10 @@ export const thStyle = css`
   padding-right: 8px;
   text-align: left;
   height: 40px;
-  background: var(--color-clear-100);
-  border-bottom: 1px solid var(--color-clear-300);
+  background: var(--color-surface-sunken);
+  border-bottom: 1px solid var(--color-border);
   vertical-align: middle;
-  border-right: 1px solid var(--color-clear-300);
+  border-right: 1px solid var(--color-border);
 
   ${respondToOrLarger.md} {
     font-size: 14px;
@@ -172,7 +172,7 @@ export const sortableThCss = css`
   user-select: none;
 
   &:focus-visible {
-    outline: 2px solid var(--color-green-700);
+    outline: 2px solid var(--tone-border-accent-11);
     outline-offset: -2px;
   }
 `
@@ -186,7 +186,7 @@ export const rowStyle = css`
 `
 
 export const tdStyle = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 400;
   font-size: 12px;
   line-height: 140%;
@@ -195,9 +195,9 @@ export const tdStyle = css`
   padding-right: 8px;
   height: 42px;
   vertical-align: middle;
-  background: var(--color-clear-50);
-  border-bottom: 1px solid var(--color-clear-300);
-  border-right: 1px solid var(--color-clear-300);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
 
   ${respondToOrLarger.md} {
     font-size: 14px;
@@ -227,7 +227,7 @@ export const noLeftBorder = css`
 export const tableEmptyCell = css`
   text-align: center;
   padding: 32px 16px;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: 14px;
 `
 

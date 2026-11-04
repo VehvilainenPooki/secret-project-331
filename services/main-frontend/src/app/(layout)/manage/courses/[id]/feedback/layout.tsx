@@ -11,12 +11,13 @@ import { RouteTabList } from "@/components/Navigation/RouteTabList/RouteTabList"
 import { RouteTabPageTitle } from "@/components/Navigation/RouteTabList/RouteTabPageTitle"
 import createFeedbackEditProposalCountsHook from "@/hooks/count/useFeedbackEditProposalCounts"
 import useCourseBreadcrumbInfoQuery from "@/hooks/useCourseBreadcrumbInfoQuery"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import {
   manageCourseFeedbackRoute,
   manageCourseFeedbackFeedbackRoute,
   manageCourseFeedbackChangeRequestsRoute,
 } from "@/shared-module/common/utils/routes"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const KEY_CHANGE_REQUESTS = "change-requests"
 const KEY_FEEDBACK = "feedback"
@@ -66,7 +67,7 @@ export default function FeedbackLayout({ children }: { children: React.ReactNode
       <h3
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}

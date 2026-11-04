@@ -6,13 +6,13 @@ import { useTranslation } from "react-i18next"
 
 import Echarts from "@/components/charts/Echarts"
 import useCoursePageVisitDatumSummary from "@/hooks/useCoursePageVisitDatumSummary"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
 import NoDataMessage from "../NoDataMessage"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface TopReferrersProps {
   courseId: string
@@ -20,7 +20,7 @@ export interface TopReferrersProps {
 
 const containerStyles = css`
   margin-bottom: 2rem;
-  border: 3px solid ${baseTheme.colors.clear[200]};
+  border: 3px solid ${tones.toneNeutral22};
   border-radius: 6px;
   padding: 1rem;
   min-height: ${DEFAULT_CHART_HEIGHT}px;

@@ -11,13 +11,14 @@ import { useTranslation } from "react-i18next"
 import type { CourseManagementPagesProps } from "@/app/(layout)/manage/courses/[id]/types"
 import { getCourseReferencesOptions } from "@/generated/api/@tanstack/react-query.generated"
 import type { MaterialReference } from "@/generated/api/types.generated"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, QueryResult, ErrorNotice } from "@/shared-module/components"
 
 import EditReferenceDialog from "./EditReferenceDialog"
 import NewReferenceDialog from "./NewReferenceDialog"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const TYPE = "string"
 const STYLE = "vancouver"
@@ -48,7 +49,7 @@ const References: React.FC<React.PropsWithChildren<CourseManagementPagesProps>> 
       <h2
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}

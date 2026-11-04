@@ -8,12 +8,13 @@ import { deletePageMutation as deletePageMutationOptions } from "@/generated/api
 import type { Chapter, Page } from "@/generated/api/types.generated"
 import type { ManagePageOrderAction } from "@/reducers/managePageOrderReducer"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme, typography } from "@/shared-module/common/styles"
+import { typography } from "@/shared-module/common/styles"
 import { includeIf, omitUndefined } from "@/shared-module/common/utils/nullability"
 import { Button, useDialog } from "@/shared-module/components"
 
 import NewOrEditPageForm from "../NewOrEditPageForm"
 import PagesTable from "./PagesTable"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   data: Page[]
@@ -64,9 +65,9 @@ const PageList: React.FC<React.PropsWithChildren<Props>> = ({
     <div
       className={css`
         margin: 2rem 0;
-        border: 2px solid ${baseTheme.colors.clear[500]};
+        border: 2px solid ${tones.toneNeutral32};
         border-radius: 8px;
-        background-color: white;
+        background-color: var(--color-surface);
         padding: 1.4rem 1.25rem;
       `}
     >

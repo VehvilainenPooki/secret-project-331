@@ -6,9 +6,10 @@ import { useTranslation } from "react-i18next"
 
 import type { Chapter, Page } from "@/generated/api/types.generated"
 import type { ManagePageOrderAction } from "@/reducers/managePageOrderReducer"
-import { baseTheme, typography } from "@/shared-module/common/styles"
+import { typography } from "@/shared-module/common/styles"
 
 import PagesTable from "./PagesTable"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   data: Page | null | undefined
@@ -33,9 +34,9 @@ const FrontPage: React.FC<React.PropsWithChildren<Props>> = ({
     <div
       className={css`
         margin: 2rem 0;
-        border: 2px solid ${baseTheme.colors.clear[500]};
+        border: 2px solid ${tones.toneNeutral32};
         border-radius: 8px;
-        background-color: white;
+        background-color: var(--color-surface);
         padding: 1.4rem 1.25rem;
       `}
     >

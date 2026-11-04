@@ -23,7 +23,7 @@ const lineCss = css`
 `
 
 const failedCss = css`
-  color: var(--color-crimson-700);
+  color: var(--tone-fg-danger-14);
 `
 
 /**
