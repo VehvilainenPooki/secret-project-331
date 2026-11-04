@@ -1,3 +1,5 @@
+import type { ToneName } from "./tones"
+
 /**
  * Semantic color roles. Leaf code refers to these, never to a palette shade, so a theme can give
  * every role its own value without touching components.
@@ -127,6 +129,8 @@ export interface Theme {
   name: string
   colors: ThemeColorRoles
   cms: CmsColorRoles
+  /** Exact-value tones for leaf code that has no purpose-named role yet; see `tones.ts`. */
+  tones: Record<ToneName, string>
   /** Monaco theme name for code editors. */
   codeEditorTheme: string
 }

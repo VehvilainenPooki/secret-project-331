@@ -1,4 +1,5 @@
 import { colorScales, offPalette, white } from "../palette"
+import { lightTones } from "./tones"
 import type { Theme } from "./types"
 
 const { blue, green, crimson, yellow, purple, gray, clear } = colorScales
@@ -80,5 +81,6 @@ export const lightTheme: Theme = {
     editorBorder: offPalette.gutenbergGray300,
     inlineCodeBg: offPalette.cmsInlineCodeBg,
   },
+  tones: lightTones,
   codeEditorTheme: "vs",
 }

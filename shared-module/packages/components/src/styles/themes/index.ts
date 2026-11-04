@@ -2,6 +2,7 @@ import { lightTheme } from "./light"
 import type { CmsColorRoles, Theme, ThemeColorRoles } from "./types"
 
 export type { CmsColorRoles, Theme, ThemeColorRoles } from "./types"
+export type { ToneName } from "./tones"
 export { lightTheme } from "./light"
 
 /** Every theme that gets a CSS block. The first one is also the `:root` default. */
@@ -14,12 +15,14 @@ function kebabCase(name: string): string {
 
 const colorVarName = (role: string) => `--color-${kebabCase(role)}`
 const cmsColorVarName = (role: string) => `--color-cms-${kebabCase(role)}`
+const toneVarName = (tone: string) => `--tone-${kebabCase(tone)}`
 
 /** One theme's roles as custom property declarations. */
 export function themeCustomProperties(theme: Theme): string {
   return [
     ...Object.entries(theme.colors).map(([role, value]) => `${colorVarName(role)}: ${value};`),
     ...Object.entries(theme.cms).map(([role, value]) => `${cmsColorVarName(role)}: ${value};`),
+    ...Object.entries(theme.tones).map(([tone, value]) => `${toneVarName(tone)}: ${value};`),
     `--code-editor-theme: ${theme.codeEditorTheme};`,
   ].join("\n")
 }
@@ -67,4 +70,13 @@ export function withAlpha(color: string, percent: number): string {
 export const cmsColors: Readonly<Record<keyof CmsColorRoles, string>> = roleVars(
   lightTheme.cms,
   cmsColorVarName,
+)
+
+/**
+ * Tones as `var(...)` references: `tones.fgNeutral9 === "var(--tone-fg-neutral-9)"`. See `tones.ts`
+ * for what the names mean.
+ */
+export const tones: Readonly<Record<keyof typeof lightTheme.tones, string>> = roleVars(
+  lightTheme.tones,
+  toneVarName,
 )
