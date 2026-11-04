@@ -161,7 +161,7 @@
 // that ring on the non-text blocks where it does apply. Style and width must stay explicit —
 // without them the outline paints nothing.
 .wp-block.is-selected[contenteditable="true"] {
-  outline: 1px solid var(--tone-border-neutral-47);
+  outline: 1px solid #bec3c7;
   outline-offset: 5px;
 }
 

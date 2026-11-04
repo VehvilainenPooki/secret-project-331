@@ -64,7 +64,7 @@ export const Deprecated1: BlockDeprecation<Deprecated1InfoBoxComponentProps> = {
     }
     const newAttributes: InfoBoxComponentProps = {
       ...omit(attributes, ["title", "bodyText"]),
-      backgroundColor: "var(--tone-bg-neutral-24)",
+      backgroundColor: "#faf5f3",
       noPadding: false,
     }
     return [newAttributes, newInnerBlocks]

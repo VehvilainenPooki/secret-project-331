@@ -59,8 +59,8 @@ export const Deprecated1: BlockDeprecation<Deprecated1AsideComponentProps> = {
     }
     const newAttributes: AsideComponentProps = {
       ...omit(attributes, ["title", "bodyText"]),
-      backgroundColor: "var(--tone-bg-neutral-38)",
-      separatorColor: "var(--tone-fg-info-2)",
+      backgroundColor: "#ebf5fb",
+      separatorColor: "#007acc",
     }
     return [newAttributes, newInnerBlocks]
   },

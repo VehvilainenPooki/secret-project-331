@@ -1,26 +1,26 @@
 import {
+  baseTheme,
   headingFont,
   monospaceFont,
   primaryFont,
   typography,
 } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
-import { tones } from "@/shared-module/components/styles/themes"
 
 // Course material has no shared tokens for these; the values mirror main-frontend's
 // ContentRenderer (fontSizeMapper defaults, link colours, quote colours, inline code).
 const PARAGRAPH_FONT_SIZE = "20px"
 const PARAGRAPH_FONT_SIZE_MOBILE = "18px"
 const PARAGRAPH_LINE_HEIGHT = "160%"
-const LINK_COLOR = "var(--tone-tone-info-14)"
-const LINK_HOVER_COLOR = "var(--tone-tone-info-16)"
-const LINK_ACTIVE_COLOR = "var(--tone-tone-info-19)"
-const LINK_VISITED_COLOR = "var(--tone-tone-info-18)"
-const INLINE_CODE_BACKGROUND = "var(--tone-tone-neutral-24)"
-const QUOTE_BACKGROUND = "var(--tone-tone-neutral-8)"
-const QUOTE_BORDER_COLOR = "var(--tone-tone-neutral-34)"
-const FILE_BUTTON_BORDER_COLOR = tones.toneNeutral30
-const FILE_PREVIEW_BORDER_COLOR = tones.toneNeutral29
+const LINK_COLOR = "#1072ea"
+const LINK_HOVER_COLOR = "#096df1"
+const LINK_ACTIVE_COLOR = "#0870d9"
+const LINK_VISITED_COLOR = "#8050f2"
+const INLINE_CODE_BACKGROUND = "#e5e5e5"
+const QUOTE_BACKGROUND = "#f6f8fa"
+const QUOTE_BORDER_COLOR = "#bdc7d1"
+const FILE_BUTTON_BORDER_COLOR = baseTheme.colors.clear[400]
+const FILE_PREVIEW_BORDER_COLOR = baseTheme.colors.gray[100]
 
 /* The scope class is repeated below because Gutenberg's scope prefix has zero specificity, which
    would lose to the hand-written .editor-styles-wrapper rules in styles/Gutenberg/editor-styles.scss.
@@ -31,7 +31,7 @@ body,
   font-family: ${primaryFont};
   font-size: ${PARAGRAPH_FONT_SIZE};
   line-height: ${PARAGRAPH_LINE_HEIGHT};
-  color: ${tones.toneNeutral49};
+  color: ${baseTheme.colors.gray[1000]};
   text-underline-offset: 4.6px;
   text-decoration-thickness: 1.6px;
 }
@@ -102,7 +102,7 @@ body ol {
 }
 
 body li::marker {
-  color: ${tones.toneNeutral44};
+  color: ${baseTheme.colors.gray[600]};
 }
 
 body a {

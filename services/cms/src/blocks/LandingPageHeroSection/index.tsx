@@ -35,12 +35,12 @@ const LandingPageHeroSectionConfiguration: BlockConfiguration<LandingPageHeroSec
     backgroundColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: "var(--tone-tone-neutral-1)",
+      default: "#FFFFFF",
     },
     fontColor: {
       type: "string",
       agentSchema: HEX_COLOR_OR_EMPTY,
-      default: "var(--tone-tone-neutral-49)",
+      default: "#000000",
     },
     backgroundImage: {
       type: "string",
