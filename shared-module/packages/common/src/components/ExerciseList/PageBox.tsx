@@ -3,8 +3,9 @@
 import styled from "@emotion/styled"
 import React from "react"
 
-import { headingFont } from "../../styles"
 import { tones } from "@/shared-module/components/styles/themes"
+
+import { headingFont } from "../../styles"
 
 const Wrapper = styled.div`
   border-radius: 10px;

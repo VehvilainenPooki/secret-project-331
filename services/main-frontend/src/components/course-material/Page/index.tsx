@@ -24,6 +24,7 @@ import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withSuspenseBoundary from "@/shared-module/common/utils/withSuspenseBoundary"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import {
   isMaterialPageAtom,
@@ -48,7 +49,6 @@ import CourseSettingsModal from "../modals/CourseSettingsModal"
 import CreditRegistrationEnrolmentBanner from "../notifications/CreditRegistrationEnrolmentBanner"
 import UserOnWrongCourseNotification from "../notifications/UserOnWrongCourseNotification"
 import ReferenceList from "../ReferencesList"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   onRefresh: () => void

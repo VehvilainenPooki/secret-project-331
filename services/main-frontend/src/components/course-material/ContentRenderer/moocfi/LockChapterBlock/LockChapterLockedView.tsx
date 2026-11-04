@@ -6,10 +6,10 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from "../.."
 import InnerBlocks from "../../util/InnerBlocks"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface LockChapterLockedViewProps {
   blockProps: BlockRendererProps<unknown>

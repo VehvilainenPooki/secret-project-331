@@ -21,10 +21,10 @@ import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutati
 import { headingFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { dateToString } from "@/shared-module/common/utils/time"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import FlaggedPeerReviewAccordion from "./FlaggedPeerReviewAccordion"
 import PeerOrSelfReviewAccordion from "./PeerOrSelfReviewAccordion"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   answerRequiringAttention: AnswerRequiringAttentionWithTasks

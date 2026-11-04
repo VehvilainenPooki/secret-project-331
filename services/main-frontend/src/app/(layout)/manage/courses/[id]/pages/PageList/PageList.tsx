@@ -11,10 +11,10 @@ import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutati
 import { typography } from "@/shared-module/common/styles"
 import { includeIf, omitUndefined } from "@/shared-module/common/utils/nullability"
 import { Button, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import NewOrEditPageForm from "../NewOrEditPageForm"
 import PagesTable from "./PagesTable"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   data: Page[]

@@ -12,8 +12,8 @@ import BreakFromCentered from "@/shared-module/common/components/Centering/Break
 import ietfLanguageTagToHumanReadableName from "@/shared-module/common/utils/ietfLanguageTagToHumanReadableName"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Link, LoadingRegion, ErrorNotice } from "@/shared-module/components"
-import { currentPageDataAtom } from "@/state/course-material/selectors"
 import { tones } from "@/shared-module/components/styles/themes"
+import { currentPageDataAtom } from "@/state/course-material/selectors"
 
 export interface CourseData {
   name: string
@@ -205,11 +205,7 @@ const UserOnWrongCourseNotification: React.FC<
     <BreakFromCentered sidebar={false}>
       <div
         className={css`
-          background: linear-gradient(
-            90deg,
-            ${tones.toneWarning3} 0%,
-            ${tones.toneDanger3} 100%
-          );
+          background: linear-gradient(90deg, ${tones.toneWarning3} 0%, ${tones.toneDanger3} 100%);
           box-shadow: 0 2px 12px var(--tone-shadow-danger-1);
           padding: 2.5rem 2rem;
           margin: 2rem 0;

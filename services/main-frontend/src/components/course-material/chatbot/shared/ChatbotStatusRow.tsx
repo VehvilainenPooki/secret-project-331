@@ -3,9 +3,9 @@
 import { css } from "@emotion/css"
 import React from "react"
 
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ThinkingIndicator from "./ThinkingIndicator"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const statusRowStyle = css`
   display: flex;

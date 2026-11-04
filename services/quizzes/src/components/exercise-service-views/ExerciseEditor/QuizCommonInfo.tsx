@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import Accordion from "@/shared-module/common/components/Accordion"
 import RadioButton from "@/shared-module/common/components/InputFields/RadioButton"
+import { tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { PrivateSpecQuiz } from "../../../../types/quizTypes/privateSpec"
@@ -11,7 +12,6 @@ import useQuizzesExerciseServiceOutputState from "../../../hooks/useQuizzesExerc
 import FeedbackMessagesEditor, {
   useItemFeedbackVisibilityOptions,
 } from "./QuizComponents/common/FeedbackMessagesEditor"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const AdvancedOptionsContainer = styled.div`
   padding: 8px;

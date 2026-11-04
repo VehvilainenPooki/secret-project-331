@@ -5,8 +5,9 @@ import type { ReactNode } from "react"
 import { useId, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import Hamburger from "./Hamburger/Hamburger"
 import { tones } from "@/shared-module/components/styles/themes"
+
+import Hamburger from "./Hamburger/Hamburger"
 
 const NavMenu = css`
   padding: 0px;

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 
 import { MatrixInputGrid, useMatrixGrid } from "@/components/Shared/MatrixGrid"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   emptyMatrixGrid,
   isFilledRectangle,
@@ -16,7 +17,6 @@ import {
 import type { QuizItemComponentProps } from ".."
 import type { UserItemAnswerMatrix } from "../../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemMatrix } from "../../../../../../types/quizTypes/publicSpec"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface LeftBorderedDivProps {
   correct: boolean | undefined

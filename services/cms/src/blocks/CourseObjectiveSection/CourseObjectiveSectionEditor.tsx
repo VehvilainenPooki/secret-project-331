@@ -9,12 +9,12 @@ import {
   CMS_EDITOR_SIDEBAR_THRESHOLD,
   CMS_EDITOR_SIDEBAR_WIDTH,
 } from "@/shared-module/common/utils/constants"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 
 import type { CourseObjectiveSectionAttributes } from "."
 import BlockWrapper from "../BlockWrapper"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const CourseObjectiveSectionEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<CourseObjectiveSectionAttributes>>

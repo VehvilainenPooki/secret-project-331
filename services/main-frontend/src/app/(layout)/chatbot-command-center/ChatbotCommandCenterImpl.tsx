@@ -10,10 +10,10 @@ import type { ChatbotConversation } from "@/generated/course-material-api/types.
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { SIDEBAR_WIDTH_PX } from "@/shared-module/common/utils/constants"
 import { EmptyState } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import NewConversationDialog from "./NewConversationDialog"
 import Sidebar from "./Sidebar"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const gridContainer = css`
   display: grid;

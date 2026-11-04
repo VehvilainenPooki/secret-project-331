@@ -11,8 +11,8 @@ import { useStatusPodLogs } from "@/hooks/useStatusPodLogs"
 import { useStatusPods } from "@/hooks/useStatusPods"
 import { monospaceFont } from "@/shared-module/common/styles"
 import { Button, Dialog, QueryResult, Select, Table } from "@/shared-module/components"
-import { parseAnsiToReact } from "@/utils/parseAnsiToReact"
 import { tones } from "@/shared-module/components/styles/themes"
+import { parseAnsiToReact } from "@/utils/parseAnsiToReact"
 
 const StatusPods: React.FC = () => {
   const { t } = useTranslation()

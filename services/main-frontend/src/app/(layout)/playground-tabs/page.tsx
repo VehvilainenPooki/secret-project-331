@@ -12,12 +12,12 @@ import usePlaygroundQueriesAndMutations from "@/hooks/playground/usePlaygroundQu
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import { narrowContainerWidthPx } from "@/shared-module/common/styles/constants"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import PlaygroundAnswers from "../playground-views/PlaygroundAnswers"
 import PlaygroundPreview from "../playground-views/PlaygroundPreview"
 import PlayGroundSettings from "../playground-views/PlaygroundSettings"
 import PlaygroundSpecs from "../playground-views/PlaygroundSpecs"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const TABS = [
   {

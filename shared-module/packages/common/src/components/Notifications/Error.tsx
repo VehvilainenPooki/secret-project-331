@@ -5,10 +5,11 @@ import { BellXmark } from "@vectopus/atlas-icons-react"
 import { toast } from "react-hot-toast"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import CloseIcon from "../../img/close.svg"
 import { respondToOrLarger } from "../../styles/respond"
 import { NotificationWrapper } from "./Base"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ErrorNotificationProps {
   header?: string

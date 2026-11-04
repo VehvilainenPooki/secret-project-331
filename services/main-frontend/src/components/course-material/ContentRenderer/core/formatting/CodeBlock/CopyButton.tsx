@@ -10,9 +10,9 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import CopyIcon from "@/img/course-material/copy.svg"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { useCopyHtmlContentToClipboard } from "./utils"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const COPY_STATUS = {
   DEFAULT: "default",

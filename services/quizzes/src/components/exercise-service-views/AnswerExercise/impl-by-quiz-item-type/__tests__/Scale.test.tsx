@@ -1,10 +1,11 @@
 import { act, fireEvent, render, screen } from "@testing-library/react"
 import { vi } from "vitest"
 
+import { resolveThemeVars } from "@/shared-module/components/styles/themes"
+
 import type { UserItemAnswerScale } from "../../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemScale } from "../../../../../../types/quizTypes/publicSpec"
 import Scale from "../Scale"
-import { resolveThemeVars } from "@/shared-module/components/styles/themes"
 
 // ParsedText renders via dynamicImport (React.lazy); mock it so the question text is present
 // synchronously for the accessible-name assertions.

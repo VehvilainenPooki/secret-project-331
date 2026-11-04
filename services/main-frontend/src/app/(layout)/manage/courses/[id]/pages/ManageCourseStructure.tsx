@@ -28,6 +28,7 @@ import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
 import { headingFont } from "@/shared-module/common/styles"
 import { Button, Menu, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ChapterFormDialog from "./ChapterFormDialog"
 import ChapterImageDialog from "./ChapterImageDialog"
@@ -39,7 +40,6 @@ import {
   MOVING_ALLOWED_ONLY_UP,
   MOVING_NOT_ALLOWED,
 } from "./PageList/PageRowActions"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const MENU_KEY_EDIT = "edit"
 const MENU_KEY_EDIT_IMAGE = "edit-image"
@@ -372,9 +372,13 @@ const ManageCourseStructure: React.FC<React.PropsWithChildren<ManageCourseStruct
         `}
       >
         <span className="header">
-          <BlockProhibited size={18} weight="bold" className={css`
+          <BlockProhibited
+            size={18}
+            weight="bold"
+            className={css`
               color: ${tones.fgInfo10};
-            `} />
+            `}
+          />
           {t("partners-section-heading")}
         </span>
         <p>{t("partners-section-text")}</p>

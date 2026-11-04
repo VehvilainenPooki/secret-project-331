@@ -6,6 +6,7 @@ import TextField from "@/shared-module/common/components/InputFields/TextField"
 import { includeIf } from "@/shared-module/common/utils/nullability"
 import { stripNonPrintableCharacters } from "@/shared-module/common/utils/strings"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemComponentProps } from "."
@@ -13,7 +14,6 @@ import type { UserItemAnswerClosedEndedQuestion } from "../../../../../types/qui
 import type { PublicSpecQuizItemClosedEndedQuestion } from "../../../../../types/quizTypes/publicSpec"
 import ParsedText from "../../../ParsedText"
 import CloseEndedQuestionWrapper from "../../../Shared/CloseEndedQuestionWrapper"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ClosedEndedQuestion: React.FC<
   QuizItemComponentProps<PublicSpecQuizItemClosedEndedQuestion, UserItemAnswerClosedEndedQuestion>

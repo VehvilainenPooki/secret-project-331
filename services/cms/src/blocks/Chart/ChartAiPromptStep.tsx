@@ -8,10 +8,10 @@ import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { ErrorNotice } from "@/shared-module/components"
 import { Button } from "@/shared-module/components/components/Button"
 import { TextArea } from "@/shared-module/components/components/TextArea"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import ChartStepLayout from "./ChartStepLayout"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ChartAiPromptStepProps {
   stepNumber: number | null

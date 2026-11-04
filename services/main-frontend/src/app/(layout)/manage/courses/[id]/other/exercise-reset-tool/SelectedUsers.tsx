@@ -9,9 +9,9 @@ import type { UserDetail } from "@/generated/api/types.generated"
 import { baseTheme, fontWeights } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import { Button, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import UserSearch from "./UserSearch"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   selectedUsers: UserDetail[]

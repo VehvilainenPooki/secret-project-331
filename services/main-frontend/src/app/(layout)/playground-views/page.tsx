@@ -24,6 +24,7 @@ import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withNoSsr from "@/shared-module/common/utils/withNoSsr"
 import { Button, Checkbox, QueryResult, TextArea, TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type {
   CurrentStateMessage,
   IframeViewType,
@@ -47,7 +48,6 @@ import { playgroundSubmissionFiles, recordPlaygroundUploads } from "@/utils/play
 import PlaygroundExerciseEditorIframe from "./PlaygroundExerciseEditorIframe"
 import PlaygroundExerciseIframe from "./PlaygroundExerciseIframe"
 import PlaygroundViewSubmissionIframe from "./PlaygroundViewSubmissionIframe"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface PlaygroundFields {
   url: string

@@ -9,8 +9,8 @@ import useCourseInfo from "@/hooks/course-material/useCourseInfo"
 import useOrganization from "@/hooks/course-material/useOrganization"
 import { navigateToCourseRoute } from "@/shared-module/common/utils/routes"
 import { Dialog, Link, LoadingRegion, ErrorNotice } from "@/shared-module/components"
-import { materialCourseAtom } from "@/state/course-material/selectors"
 import { tones } from "@/shared-module/components/styles/themes"
+import { materialCourseAtom } from "@/state/course-material/selectors"
 
 const ClosedCourseWarningDialog = () => {
   const { t } = useTranslation()

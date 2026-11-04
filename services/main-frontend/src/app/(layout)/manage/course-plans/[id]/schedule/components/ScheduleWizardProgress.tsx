@@ -5,10 +5,10 @@ import { motion, useReducedMotion } from "motion/react"
 import { useProgressBar } from "react-aria"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ScheduleWizardStepId } from "../scheduleConstants"
 import { SCHEDULE_WIZARD_STEPS } from "../scheduleConstants"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const progressTextStyles = css`
   font-size: 0.95rem;

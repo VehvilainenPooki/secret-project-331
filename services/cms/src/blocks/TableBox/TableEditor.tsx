@@ -5,6 +5,7 @@ import { InspectorControls } from "@wordpress/block-editor"
 import React from "react"
 
 import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
@@ -12,7 +13,6 @@ import { useTranslation } from "@/utils/useCmsTranslation"
 import type { TableBoxAttributes } from "."
 import TableBoxWidthCustomizer from "../../components/blocks/TableBoxWidthCustomizer"
 import BlockWrapper from "../BlockWrapper"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const TableEditor: React.FC<React.PropsWithChildren<BlockEditProps<TableBoxAttributes>>> = ({
   attributes,

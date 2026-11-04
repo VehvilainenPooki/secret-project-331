@@ -5,12 +5,12 @@ import { RichText } from "@wordpress/block-editor"
 import React, { useId } from "react"
 
 import { fontWeights, monospaceFont, primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import type { HighlightAttributes } from "."
 import BlockWrapper from "../BlockWrapper"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const HighlightEditor: React.FC<React.PropsWithChildren<BlockEditProps<HighlightAttributes>>> = ({
   attributes,

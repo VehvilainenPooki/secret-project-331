@@ -7,13 +7,13 @@ import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { QuizItemComponentProps } from "."
 import type { UserItemAnswerScale } from "../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemScale } from "../../../../../types/quizTypes/publicSpec"
 import ParsedText from "../../../ParsedText"
 import { QUIZ_TITLE_STYLE } from "./AnswerQuizStyles"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const optionStyle = css`
   display: flex;

@@ -8,8 +8,8 @@ import { useVerticalResizeHandle } from "@/hooks/useVerticalResizeHandle"
 import MonacoEditor from "@/shared-module/common/components/monaco/MonacoEditor"
 import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components/components/Button"
-import { useTranslation } from "@/utils/useCmsTranslation"
 import { tones } from "@/shared-module/components/styles/themes"
+import { useTranslation } from "@/utils/useCmsTranslation"
 
 // Config/identifier strings kept out of i18next/no-literal-string.
 const MONACO_LANGUAGE = "json"
@@ -124,8 +124,7 @@ const VegaJsonEditor: React.FC<VegaJsonEditorProps> = ({
                  include it. */
               flex: 0 0 auto;
               height: ${heightPx}px;
-              border: 1px solid
-                ${isValidJson ? tones.toneNeutral39 : tones.toneDanger10};
+              border: 1px solid ${isValidJson ? tones.toneNeutral39 : tones.toneDanger10};
               border-radius: 4px;
               overflow: hidden;
               /* MonacoEditorImpl adds a height-less wrapper div; force it to fill so the editor can

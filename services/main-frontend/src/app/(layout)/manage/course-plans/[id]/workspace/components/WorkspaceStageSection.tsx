@@ -12,9 +12,9 @@ import {
 import type { CourseDesignerPlanStageWithTasks } from "@/generated/api/types.generated"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
 import { Button, TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import WorkspaceTaskRow from "./WorkspaceTaskRow"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const cardStyles = css`
   background: var(--color-surface);

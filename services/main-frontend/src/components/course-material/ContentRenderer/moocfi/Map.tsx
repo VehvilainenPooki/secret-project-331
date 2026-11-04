@@ -16,12 +16,12 @@ import {
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import useUserInfo from "@/shared-module/common/hooks/useUserInfo"
 import { LoadingRegion, Select } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import { currentPageDataAtom } from "@/state/course-material/selectors"
 
 import { countryList } from "./../util/Countries"
 import WorldMap from "./worldMap.svg"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   display: relative;

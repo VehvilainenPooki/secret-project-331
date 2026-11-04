@@ -22,6 +22,7 @@ import { manageCoursePlanPermissionsRoute } from "@/shared-module/common/utils/r
 import { dateToString } from "@/shared-module/common/utils/time"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Link, QueryResult, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { SCHEDULE_STAGE_ORDER } from "../schedule/scheduleConstants"
 import AnalysisWorkspaceForm from "./components/AnalysisWorkspaceForm"
@@ -29,7 +30,6 @@ import PlanOverviewPanel from "./components/PlanOverviewPanel"
 import StageTimelineTabStrip from "./components/StageTimelineTabStrip"
 import WorkspaceStageSection from "./components/WorkspaceStageSection"
 import { useCoursePlanWorkspacePageState } from "./hooks/useCoursePlanWorkspacePageState"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const pageRootStyles = css`
   padding: 0 0 3rem 0;

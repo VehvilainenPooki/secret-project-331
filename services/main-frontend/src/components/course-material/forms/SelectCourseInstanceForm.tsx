@@ -15,9 +15,9 @@ import type {
 import useAdditionalQuestions from "@/hooks/course-material/useAdditionalQuestions"
 import useCourse from "@/hooks/course-material/useCourse"
 import { Button, Checkbox, Radio, RadioGroup, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import SelectMarketingConsentForm from "./SelectMarketingConsentForm"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const courseInstanceGroupCss = css`
   margin-bottom: 1.5rem;

@@ -119,11 +119,7 @@ export const overflowMaskCss = css`
 
 export const overflowMaskStartCss = css`
   left: 0;
-  background: linear-gradient(
-    to right,
-    var(--table-fade-color, var(--color-surface)),
-    transparent
-  );
+  background: linear-gradient(to right, var(--table-fade-color, var(--color-surface)), transparent);
 `
 
 export const overflowMaskEndCss = css`

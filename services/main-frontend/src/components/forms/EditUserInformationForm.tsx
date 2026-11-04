@@ -15,8 +15,8 @@ import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import countries from "@/shared-module/common/locales/en/countries.json"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button, Checkbox, ComboBox, TextField } from "@/shared-module/components"
-import { settingsCardCss } from "@/styles/sharedStyles"
 import { tones } from "@/shared-module/components/styles/themes"
+import { settingsCardCss } from "@/styles/sharedStyles"
 
 interface SelectUserInfoFormFields {
   email: string

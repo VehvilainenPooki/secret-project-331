@@ -9,9 +9,9 @@ import type { ChatbotConversationMessageCitation } from "@/generated/course-mate
 import DownIcon from "@/shared-module/common/img/down.svg"
 import { assertNotNullOrUndefined } from "@/shared-module/common/utils/nullability"
 import { Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { LIGHT_GREEN } from "./styles"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const referenceStyle = css`
   margin: 4px 4px 4px 0;

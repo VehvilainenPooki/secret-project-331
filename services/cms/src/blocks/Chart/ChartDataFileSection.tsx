@@ -9,10 +9,10 @@ import React from "react"
 import { primaryFont } from "@/shared-module/common/styles"
 import { ErrorNotice, Link } from "@/shared-module/components"
 import { Button } from "@/shared-module/components/components/Button"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import type { ChartDataFile } from "./useChartDataFile"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ALLOWED_DATA_FILE_MIMETYPES = ["text/csv", "application/json"]
 

@@ -5,11 +5,12 @@ import styled from "@emotion/styled"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import MOOCfi from "../img/moocfiTextLogo.svg"
 import UHLogo from "../img/UHBrandLogo.svg"
 import { headingFont } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const PRIVACY_LINK_FI = "https://www.mooc.fi/faq/tietosuojaseloste/"
 const PRIVACY_LINK_EN = "https://www.mooc.fi/en/faq/tietosuojaseloste/"

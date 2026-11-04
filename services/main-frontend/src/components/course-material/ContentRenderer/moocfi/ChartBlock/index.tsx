@@ -9,11 +9,11 @@ import { useDebouncedElementWidth } from "@/shared-module/common/hooks/useDeboun
 import { useFontLoaded } from "@/shared-module/common/hooks/useFontLoaded"
 import { primaryFont } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from "../.."
 import { useChartNaturalHeight } from "./useChartNaturalHeight"
 import { useRenderableChartSpec } from "./useRenderableChartSpec"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ChartBlockAttributes {
   spec: string

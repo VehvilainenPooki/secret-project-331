@@ -3,8 +3,9 @@
 import { css, cx } from "@emotion/css"
 import type { DetailedHTMLProps, InputHTMLAttributes } from "react"
 
-import { primaryFont } from "../../styles"
 import { tones } from "@/shared-module/components/styles/themes"
+
+import { primaryFont } from "../../styles"
 
 const labelClass = css`
   font-family: ${primaryFont};

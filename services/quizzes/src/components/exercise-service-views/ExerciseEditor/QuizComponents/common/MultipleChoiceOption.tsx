@@ -9,6 +9,7 @@ import CheckBox from "@/shared-module/common/components/InputFields/CheckBox"
 import TextField from "@/shared-module/common/components/InputFields/TextField"
 import ArrowDown from "@/shared-module/common/img/caret-arrow-down.svg"
 import ArrowUp from "@/shared-module/common/img/caret-arrow-up.svg"
+import { colors } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemOption } from "../../../../../../types/quizTypes/privateSpec"
@@ -16,7 +17,6 @@ import type { OptionChanges } from "./applyOptionChanges"
 import FeedbackMessagesEditor, {
   useOptionFeedbackVisibilityOptions,
 } from "./FeedbackMessagesEditor"
-import { colors } from "@/shared-module/components/styles/themes"
 
 const OptionCard = styled.div`
   height: 50px;
@@ -238,9 +238,12 @@ const MultipleChoiceOption: React.FC<MultipleChoiceOptionProps> = ({
             size="small"
             onClick={onDelete}
           >
-            <XmarkCircle size={16} className={css`
-              color: ${colors.controlIconStrong};
-            `} />
+            <XmarkCircle
+              size={16}
+              className={css`
+                color: ${colors.controlIconStrong};
+              `}
+            />
           </Button>
         </OptionButtonGroup>
       </OptionCard>

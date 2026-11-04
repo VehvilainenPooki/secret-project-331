@@ -11,6 +11,7 @@ import type { ExerciseStatusSummaryForUser } from "@/generated/api/types.generat
 import { useCourseStructure } from "@/hooks/useCourseStructure"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Dialog, QueryResult, Select, Spinner } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { TeacherChapterLockStatus } from "@/utils/chapterLockingStatus"
 import {
   defaultTeacherChapterLockStatus,
@@ -19,7 +20,6 @@ import {
 } from "@/utils/chapterLockingStatus"
 
 import ExerciseAccordion from "./ExerciseAccordion"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Section = styled.section`
   margin: 3rem 0;

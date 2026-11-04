@@ -6,13 +6,13 @@ import React from "react"
 
 import { fontWeights, headingFont, primaryFont } from "@/shared-module/common/styles"
 import { TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useAttributeForm } from "@/utils/useAttributeForm"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import type { ExpandableContentConfigurationProps } from "."
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ExpandableContentInnerBlockEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<ExpandableContentConfigurationProps>>

@@ -5,8 +5,9 @@ import styled from "@emotion/styled"
 import type { InputHTMLAttributes } from "react"
 import React, { forwardRef, useEffect, useRef } from "react"
 
-import { primaryFont } from "../../styles"
 import { tones } from "@/shared-module/components/styles/themes"
+
+import { primaryFont } from "../../styles"
 
 const ERRORCOLOR = "var(--tone-tone-danger-9)"
 const DEFAULTCOLOR = "var(--tone-tone-neutral-40)"

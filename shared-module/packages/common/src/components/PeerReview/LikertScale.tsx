@@ -5,12 +5,13 @@ import React from "react"
 import { ToggleButton, ToggleButtonGroup } from "react-aria-components"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import Agree from "../../img/likert/agree.svg"
 import Disagree from "../../img/likert/disagree.svg"
 import Neutral from "../../img/likert/neutral.svg"
 import StronglyAgree from "../../img/likert/stronglyAgree.svg"
 import StronglyDisagree from "../../img/likert/stronglyDisagree.svg"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   margin: 1.5rem auto;
@@ -61,8 +62,7 @@ const StyledToggleButton = styled(ToggleButton)<StyledProps>`
   }
 
   &:focus {
-    outline: 3px solid
-      ${({ active }) => (active ? tones.toneAccent9 : tones.toneAccent16)};
+    outline: 3px solid ${({ active }) => (active ? tones.toneAccent9 : tones.toneAccent16)};
   }
 
   .likert-scale-text {

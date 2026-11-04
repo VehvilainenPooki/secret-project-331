@@ -10,10 +10,10 @@ import { getCourseGlossaryOptions } from "@/generated/api/@tanstack/react-query.
 import type { Term as GlossaryTerm } from "@/generated/api/types.generated"
 import { headingFont } from "@/shared-module/common/styles"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import CreateTermForm from "./CreateTermForm"
 import TermItem from "./TermItem"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const pageCss = css`
   display: grid;

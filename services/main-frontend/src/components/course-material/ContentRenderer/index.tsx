@@ -11,6 +11,7 @@ import { BreakFromCenteredDisabledContext } from "@/shared-module/common/compone
 import { linkWithExtraIconClass } from "@/shared-module/common/styles/constants"
 import dynamicImport from "@/shared-module/common/utils/dynamicImport"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 import {
   COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM,
@@ -80,7 +81,6 @@ import RevealableHiddenContentBlock from "./moocfi/RevealableContentBlock/Reveal
 import TableBox from "./moocfi/TableBox"
 import TerminologyBlock from "./moocfi/TerminologyBlock"
 import TopLevelPageBlock from "./moocfi/TopLevelPagesBlock/index"
-import { tones } from "@/shared-module/components/styles/themes"
 
 /** The props that this component receives */
 export interface ContentRendererProps {

@@ -9,8 +9,8 @@ import { getCourseMaterialMentimeterOembed } from "@/generated/course-material-a
 import type { CourseMaterialOEmbedResponse } from "@/generated/course-material-api/types.generated"
 import { baseTheme } from "@/shared-module/common/styles"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
-import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 import { tones } from "@/shared-module/components/styles/themes"
+import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
 export const MentimeterEmbedBlock: React.FC<React.PropsWithChildren<EmbedAttributes>> = (props) => {
   const [embedHtml, setEmbedHtml] = useState<string | undefined>(undefined)

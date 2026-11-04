@@ -13,8 +13,8 @@ import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import { fontWeights } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { QueryResult } from "@/shared-module/components"
-import { settingsCardCss } from "@/styles/sharedStyles"
 import { tones } from "@/shared-module/components/styles/themes"
+import { settingsCardCss } from "@/styles/sharedStyles"
 
 const AccountSettingsPage: React.FC = () => {
   const { t } = useTranslation()

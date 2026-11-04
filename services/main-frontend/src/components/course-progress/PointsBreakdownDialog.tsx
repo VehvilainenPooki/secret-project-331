@@ -16,12 +16,12 @@ import type {
 import { headingFont, secondaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Dialog, Link, type LinkAppearance, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { formatPoints } from "@/utils/completionThresholds"
 import { coursePageSectionRoute } from "@/utils/course-material/routing"
 
 import { hasChartMax, type ProgressMeasure } from "./progressText"
 import { INLINE_ELEMENT, progressColors } from "./progressTheme"
-import { tones } from "@/shared-module/components/styles/themes"
 
 /** Which course instance a module's points breakdown is for, and where its exercise links lead. */
 export interface CourseInstanceLocation {

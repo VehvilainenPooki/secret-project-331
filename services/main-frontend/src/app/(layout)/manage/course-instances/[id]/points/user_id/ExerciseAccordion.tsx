@@ -16,9 +16,9 @@ import HideTextInSystemTests from "@/shared-module/common/components/system-test
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import PeerOrSelfReviewSubmissionSummaryAccordion from "./PeerOrSelfReviewSubmissionSummaryAccordion"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExerciseAccordionProps {
   exerciseStatus: ExerciseStatusSummaryForUser
@@ -141,9 +141,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
         >
           <div
             className={css`
-              color: ${
-                userExerciseState ? tones.toneAccent23 : tones.toneNeutral41
-              };
+              color: ${userExerciseState ? tones.toneAccent23 : tones.toneNeutral41};
               font-size: 1rem;
               font-weight: 600;
               line-height: 1;

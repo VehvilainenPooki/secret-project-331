@@ -10,10 +10,10 @@ import Echarts from "@/components/charts/Echarts"
 import { getCourseUsersCountsByExerciseOptions } from "@/generated/api/@tanstack/react-query.generated"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseUsersCountsByExerciseProps {
   courseId: string

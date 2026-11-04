@@ -10,9 +10,9 @@ import { useFocusRing, useHover, useTab, VisuallyHidden } from "react-aria"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { includeIf, omitUndefined } from "@/shared-module/common/utils/nullability"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 import { tabPillCss } from "../../Tabs/tabStrip"
-import { colors, tones } from "@/shared-module/components/styles/themes"
 
 /** How loud a tab's count is: `danger` is for a backlog someone has to work through. */
 export type RouteTabCountTone = "neutral" | "danger"

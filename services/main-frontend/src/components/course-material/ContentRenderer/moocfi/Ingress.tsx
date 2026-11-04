@@ -6,9 +6,9 @@ import React from "react"
 import ParsedText from "@/components/course-material/ParsedText"
 import { headingFont, primaryFont } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface IngressBlockAttributes {
   title: string

@@ -5,10 +5,10 @@ import React from "react"
 
 import { primaryFont } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components/components/Button"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import ChartStepLayout, { stepActionsStyles, stepInstructionStyles } from "./ChartStepLayout"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const AI_OPTION_DESCRIPTION_ID = "chart-block-ai-option-description"
 const MANUAL_OPTION_DESCRIPTION_ID = "chart-block-manual-option-description"

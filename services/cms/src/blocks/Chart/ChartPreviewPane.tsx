@@ -6,10 +6,10 @@ import React from "react"
 import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { ErrorNotice } from "@/shared-module/components"
 import { Button } from "@/shared-module/components/components/Button"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import ChartPreview from "./ChartPreview"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const paneTitleStyles = css`
   margin: 0 0 0.5rem;

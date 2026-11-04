@@ -13,9 +13,9 @@ import PageBox from "@/shared-module/common/components/ExerciseList/PageBox"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import { primaryFont } from "@/shared-module/common/styles"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import { coursePageSectionRoute } from "@/utils/course-material/routing"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ChapterExerciseListGroupedByPageProps {
   chapterId: string

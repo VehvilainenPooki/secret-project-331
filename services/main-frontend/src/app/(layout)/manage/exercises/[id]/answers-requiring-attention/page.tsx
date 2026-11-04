@@ -17,9 +17,9 @@ import { primaryFont } from "@/shared-module/common/styles"
 import { joinTitleSegments } from "@/shared-module/common/utils/pageTitle"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { EmptyState, Pagination, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import AnswersRequiringAttentionList from "../submissions/AnswersRequiringAttentionList"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ANSWERS_REQUIRING_ATTENTION_ITEMS_PER_PAGE = [15, 50, 100, 1000, 10000]
 const ANSWERS_REQUIRING_ATTENTION_DEFAULT_LIMIT = 50

@@ -117,14 +117,11 @@ const PreviewUserList: React.FC<PreviewUserListProps> = ({ users }) => {
                 className={css`
                   margin-left: auto;
                   padding: 0.25rem 0.75rem;
-                  background-color: ${
-                    user.passed ? tones.toneAccent7 : tones.toneDanger2
-                  };
+                  background-color: ${user.passed ? tones.toneAccent7 : tones.toneDanger2};
                   color: ${user.passed ? tones.toneAccent21 : tones.toneDanger17};
                   border-radius: 4px;
                   font-weight: 500;
-                  border: 1px solid
-                    ${user.passed ? tones.toneAccent9 : tones.toneDanger7};
+                  border: 1px solid ${user.passed ? tones.toneAccent9 : tones.toneDanger7};
                 `}
                 aria-label={`${t("label-new-grade")} ${mapGradeToText(user.grade, user.passed)}`}
               >

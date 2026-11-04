@@ -7,9 +7,10 @@ import React, { forwardRef } from "react"
 import type { FieldError } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { primaryFont } from "../../styles/typography"
 import { errorToDescription } from "../../utils/strings"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ERRORCOLOR = tones.toneDanger17
 const DEFAULTCOLOR = "var(--tone-tone-neutral-28)"

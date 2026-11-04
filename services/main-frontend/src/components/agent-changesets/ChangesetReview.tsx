@@ -22,6 +22,7 @@ import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutati
 import { fontWeights } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Button, ConfirmDialog, ErrorNotice, Infobox, TONE } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import AgentCallList from "./AgentCallList"
 import { STICKY_TOP_PROPERTY } from "./BeforeAfterTabs"
@@ -33,7 +34,6 @@ import EntityChange, {
 } from "./EntityChange"
 import PublishOutcomeNotice, { RejectionNotice } from "./PublishOutcomeNotice"
 import { sortReviewEntities } from "./sortReviewEntities"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const sectionHeadingCss = css`
   font-size: 1.25rem;

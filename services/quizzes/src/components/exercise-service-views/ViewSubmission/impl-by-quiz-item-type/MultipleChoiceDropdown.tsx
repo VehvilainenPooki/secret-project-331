@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 import { resolveDisplayedFeedback } from "@/util/feedbackMessages"
 
@@ -19,7 +20,6 @@ import type {
 } from "../../../../../types/quizTypes/publicSpec"
 import { quizTheme } from "../../../../styles/QuizStyles"
 import ParsedText from "../../../ParsedText"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const SelectIcon = () => {
   return (

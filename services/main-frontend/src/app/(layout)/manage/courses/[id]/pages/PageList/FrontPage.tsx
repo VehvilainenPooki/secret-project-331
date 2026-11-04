@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 import type { Chapter, Page } from "@/generated/api/types.generated"
 import type { ManagePageOrderAction } from "@/reducers/managePageOrderReducer"
 import { typography } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import PagesTable from "./PagesTable"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   data: Page | null | undefined

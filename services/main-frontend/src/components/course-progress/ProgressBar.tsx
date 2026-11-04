@@ -9,11 +9,11 @@ import { useTranslation } from "react-i18next"
 import { headingFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Tooltip } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ChartExplanationList from "./ChartExplanationList"
 import type { ChartExplanation, ChartPart } from "./progressText"
 import { helpButtonCss } from "./progressTheme"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const LinearProgress = styled.div<LinearProgressProps>`
   display: flex;
@@ -47,8 +47,7 @@ const LinearProgressFill = styled.div<LinearProgressFillProps>`
   transition: 1.5s ease-in-out;
   border-radius: 50px;
   width: ${(props) => props.percentage}%;
-  background: ${(props) =>
-    props.light ? tones.toneWarning5 : tones.toneAccent21};
+  background: ${(props) => (props.light ? tones.toneWarning5 : tones.toneAccent21)};
   justify-content: end;
 
   ${respondToOrLarger.sm} {

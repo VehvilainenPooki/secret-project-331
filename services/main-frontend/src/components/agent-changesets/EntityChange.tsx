@@ -16,6 +16,7 @@ import { fontWeights } from "@/shared-module/common/styles"
 import { agentChangesetPagePreviewRoute } from "@/shared-module/common/utils/routes"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Badge, Link, TONE } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 
 import BeforeAfterTabs from "./BeforeAfterTabs"
@@ -26,7 +27,6 @@ import FieldChanges from "./FieldChanges"
 import RiskReasonList from "./RiskReasonList"
 import StagedPageContent, { StagedBlocks } from "./StagedPageContent"
 import { useEntityName } from "./useEntityName"
-import { tones } from "@/shared-module/components/styles/themes"
 
 /** An entity's heading, such as "Page: Variables"; the course default review config has no name. */
 export function useEntityTitle() {

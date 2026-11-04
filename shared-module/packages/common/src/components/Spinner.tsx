@@ -3,8 +3,9 @@
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 
-import { LOADING_SPINNER_TEST_ID } from "../utils/constants"
 import { tones } from "@/shared-module/components/styles/themes"
+
+import { LOADING_SPINNER_TEST_ID } from "../utils/constants"
 
 export interface SpinnerProps {
   variant?: "large" | "medium" | "small" | "placeholder"
@@ -47,7 +48,8 @@ const StyledSpinner = styled.div<SpinnerProps>`
   margin: ${(props) => (props.disableMargin ? "0" : "1rem")};
   width: ${(props) => variantSizes[props.variant || "medium"].width};
   height: ${(props) => variantSizes[props.variant || "medium"].height};
-  border: ${(props) => (props.variant === "placeholder" ? "4px dashed" : "5px solid")} var(--tone-tone-neutral-18);
+  border: ${(props) => (props.variant === "placeholder" ? "4px dashed" : "5px solid")}
+    var(--tone-tone-neutral-18);
   border-bottom-color: ${(props) =>
     props.variant === "placeholder" ? tones.toneInfo20 : tones.toneAccent19};
   border-top-color: ${(props) =>

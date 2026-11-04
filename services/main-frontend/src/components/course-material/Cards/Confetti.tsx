@@ -60,7 +60,14 @@ const ConfettiParticles: React.FC = () => {
           },
           particles: {
             color: {
-              value: ["var(--tone-tone-info-12)", "var(--tone-tone-info-22)", "var(--tone-tone-info-6)", "var(--tone-tone-info-9)", "var(--tone-tone-info-10)", "var(--tone-tone-info-21)"],
+              value: [
+                "var(--tone-tone-info-12)",
+                "var(--tone-tone-info-22)",
+                "var(--tone-tone-info-6)",
+                "var(--tone-tone-info-9)",
+                "var(--tone-tone-info-10)",
+                "var(--tone-tone-info-21)",
+              ],
             },
             move: {
               decay: 0.05,

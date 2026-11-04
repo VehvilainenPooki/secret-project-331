@@ -287,9 +287,12 @@ const PermissionPageComponent: React.FC<React.PropsWithChildren<Props>> = ({ dom
                 resetEditRoleForm({ role: ur.role })
               }}
             >
-              <Pencil size={20} className={css`
-              color: ${colors.text};
-            `} />
+              <Pencil
+                size={20}
+                className={css`
+                  color: ${colors.text};
+                `}
+              />
             </button>
             <button
               aria-label={t("remove-role")}
@@ -298,9 +301,12 @@ const PermissionPageComponent: React.FC<React.PropsWithChildren<Props>> = ({ dom
                 removeMutation.mutate({ body: { email: ur.email, role: ur.role, domain } })
               }
             >
-              <XmarkCircle size={20} className={css`
-              color: ${colors.text};
-            `} />
+              <XmarkCircle
+                size={20}
+                className={css`
+                  color: ${colors.text};
+                `}
+              />
             </button>
           </>
         ),

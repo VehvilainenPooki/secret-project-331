@@ -4,12 +4,12 @@ import { css } from "@emotion/css"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import ConfirmActionBubble from "./ConfirmActionBubble"
 import { EDIT_USER_ACCOUNT_TOOL } from "./editUserAccountCalls"
 import type { EditUserAccountCall } from "./editUserAccountCalls"
-import { tones } from "@/shared-module/components/styles/themes"
 
 type EditUserAccountBubbleProps = ClientToolBubbleProps<EditUserAccountCall>
 

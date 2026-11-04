@@ -3,12 +3,12 @@ import styled from "@emotion/styled"
 import React from "react"
 
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { QuizItemSubmissionComponentProps } from "."
 import type { UserItemAnswerCheckbox } from "../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemCheckbox } from "../../../../../types/quizTypes/publicSpec"
 import ParsedText from "../../../ParsedText"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface StyledProps {
   checked: boolean
@@ -18,8 +18,7 @@ const Option = styled.div<StyledProps>`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 3px solid
-    ${({ checked }) => (checked ? tones.toneAccent16 : tones.toneDanger10)};
+  border: 3px solid ${({ checked }) => (checked ? tones.toneAccent16 : tones.toneDanger10)};
   border-radius: 3px;
   margin-bottom: 10px;
   padding: 5px;

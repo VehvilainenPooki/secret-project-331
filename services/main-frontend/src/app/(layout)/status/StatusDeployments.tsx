@@ -53,9 +53,7 @@ const StatusDeployments: React.FC = () => {
                     <span
                       className={css`
                         font-weight: 600;
-                        color: ${
-                          isHealthy ? tones.toneAccent21 : tones.toneDanger17
-                        };
+                        color: ${isHealthy ? tones.toneAccent21 : tones.toneDanger17};
                       `}
                     >
                       {deployment.ready_replicas}/{deployment.replicas}
@@ -74,9 +72,7 @@ const StatusDeployments: React.FC = () => {
                         className={css`
                           height: 100%;
                           width: ${readinessPercent}%;
-                          background-color: ${
-                            isHealthy ? tones.toneAccent21 : tones.toneDanger17
-                          };
+                          background-color: ${isHealthy ? tones.toneAccent21 : tones.toneDanger17};
                           transition: width 0.3s ease;
                         `}
                       />

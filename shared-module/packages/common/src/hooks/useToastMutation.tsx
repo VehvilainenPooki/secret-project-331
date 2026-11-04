@@ -13,6 +13,8 @@ import type { Toast, ToastOptions } from "react-hot-toast"
 import { toast } from "react-hot-toast"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import ErrorNotification from "../components/Notifications/Error"
 import LoadingNotification from "../components/Notifications/Loading"
 import { errorNotificationMessage } from "../components/Notifications/notificationHelpers"
@@ -20,7 +22,6 @@ import SuccessNotification from "../components/Notifications/Success"
 import { isAppApiError } from "../errors/AppApiError"
 import { includeIf, omitUndefined } from "../utils/nullability"
 import useSetShowStuffInfinitelyInSystemTestScreenshots from "./useShowToastInfinitely"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface EnableNotifications {
   notify: true

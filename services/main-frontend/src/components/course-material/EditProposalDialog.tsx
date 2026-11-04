@@ -12,6 +12,7 @@ import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import { monospaceFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   blockEditsAtom,
   currentlyOpenFeedbackDialogAtom,
@@ -20,7 +21,6 @@ import {
 import { formatKeyboardShortcut, getModifierKey } from "@/utils/course-material/platformDetection"
 
 import { FEEDBACK_DIALOG_CONTENT_ID } from "./SelectionListener"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   courseId: string

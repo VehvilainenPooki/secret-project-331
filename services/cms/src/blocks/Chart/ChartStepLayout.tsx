@@ -4,8 +4,8 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import { fontWeights, primaryFont } from "@/shared-module/common/styles"
-import { useTranslation } from "@/utils/useCmsTranslation"
 import { tones } from "@/shared-module/components/styles/themes"
+import { useTranslation } from "@/utils/useCmsTranslation"
 
 const stepLayoutStyles = css`
   display: flex;

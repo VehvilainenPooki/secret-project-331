@@ -7,9 +7,9 @@ import React from "react"
 
 import type { HeadingAttributes, ListAttributes } from "@/../types/GutenbergBlockAttributes"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface StyledObjectiveProps {
   index: number

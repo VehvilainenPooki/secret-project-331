@@ -1,7 +1,7 @@
 import type { CreditRegistrationState } from "@/generated/api/types.generated"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { CreditRegistrationTFunction } from "../constants"
-import { tones } from "@/shared-module/components/styles/themes"
 
 /** What a row in this state is waiting for, which is what an operator groups the ledger by. */
 export type QueueBucket = "waiting_on_student" | "in_progress" | "needs_a_look" | "failed" | "done"

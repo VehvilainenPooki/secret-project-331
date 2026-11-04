@@ -122,11 +122,7 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
                 left: 0;
                 right: 0;
                 height: 2px;
-                background: linear-gradient(
-                  90deg,
-                  ${tones.toneAccent12},
-                  ${tones.toneAccent16}
-                );
+                background: linear-gradient(90deg, ${tones.toneAccent12}, ${tones.toneAccent16});
                 opacity: 0.3;
               }
 

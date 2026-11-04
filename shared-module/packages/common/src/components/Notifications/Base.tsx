@@ -2,8 +2,9 @@
 
 import styled from "@emotion/styled"
 
-import { respondToOrLarger } from "../../styles/respond"
 import { tones } from "@/shared-module/components/styles/themes"
+
+import { respondToOrLarger } from "../../styles/respond"
 
 export const NotificationWrapper = styled.div`
   width: 150px;

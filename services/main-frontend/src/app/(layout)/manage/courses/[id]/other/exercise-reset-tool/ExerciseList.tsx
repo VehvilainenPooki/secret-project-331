@@ -14,9 +14,9 @@ import type { DatabaseChapter, Exercise, Page } from "@/generated/api/types.gene
 import { useExercises } from "@/hooks/useExercises"
 import { baseTheme, fontWeights, secondaryFont } from "@/shared-module/common/styles"
 import { Button, Checkbox, QueryResults, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ResetFormFields } from "./ResetExercises"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   courseId: string

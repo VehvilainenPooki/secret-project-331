@@ -13,9 +13,9 @@ import useHeadingData from "@/hooks/course-material/useHeadingData"
 import useIsPageChapterFrontPage from "@/hooks/course-material/useIsPageChapterFrontPage"
 import useShouldHideStuffFromSystemTestScreenshots from "@/shared-module/common/hooks/useShouldHideStuffForSystemTestScreenshots"
 import { isElementFullyInViewport } from "@/shared-module/common/utils/dom"
+import { tones } from "@/shared-module/components/styles/themes"
 import { currentPageIdAtom, examDataAtom } from "@/state/course-material/selectors"
 import { courseMaterialBlockClass } from "@/utils/course-material/constants"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const HERO_SECTION_Y_OFFSET_PX = 700
 const TOP_OFFSET_PX = 50

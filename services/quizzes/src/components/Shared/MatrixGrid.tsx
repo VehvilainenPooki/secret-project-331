@@ -3,6 +3,7 @@ import styled from "@emotion/styled"
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 import {
   blankCellsInsideShape,
@@ -10,7 +11,6 @@ import {
   type MatrixShape,
   matrixShape,
 } from "@/util/matrix"
-import { tones } from "@/shared-module/components/styles/themes"
 
 /** Grid look shared by the student answer view and the exercise editor. */
 export const MatrixTable = styled.table`

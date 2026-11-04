@@ -15,6 +15,7 @@ import { runCallbackIfEnterPressed } from "@/shared-module/common/utils/accessib
 import { includeIf } from "@/shared-module/common/utils/nullability"
 import { ErrorNotice } from "@/shared-module/components"
 import { QueryResult } from "@/shared-module/components/components/queryResult/QueryResult"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
@@ -25,7 +26,6 @@ import { gutenbergControlsVisible } from "../../../styles/EditorStyles"
 import breakFromCenteredProps from "../../../utils/breakfromCenteredProps"
 import ChooseExerciseTaskType from "./ChooseExerciseTaskType"
 import ExerciseTaskIFrameEditor from "./IFrameEditor"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ExerciseTaskEditorCard = styled.div`
   padding: 2rem 0;

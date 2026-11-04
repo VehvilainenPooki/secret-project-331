@@ -7,13 +7,13 @@ import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 
 import type { BlockRendererProps } from "../.."
 import ContentRenderer from "../.."
 import { ImageInteractivityContext } from "../../core/common/Image/ImageInteractivityContext"
 import FlipButton from "./FlipButton"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface FlipCardAttributes {
   backgroundColor: string

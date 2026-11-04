@@ -19,6 +19,7 @@ import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Dialog, QueryResult, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { invalidateCourseMaterialStateQueries } from "@/state/course-material/queries"
 import {
   currentCourseIdAtom,
@@ -32,7 +33,6 @@ import { useChangeCourseMaterialLanguage } from "@/utils/course-material/languag
 import SelectCourseInstanceForm from "../forms/SelectCourseInstanceForm"
 import SelectCourseLanguage from "../SelectCourseLanguage"
 import { getLanguageName } from "./ChooseCourseLanguage"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseSettingsModalProps {
   onClose: () => void

@@ -15,9 +15,9 @@ import {
 import { useTranslation } from "react-i18next"
 
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { TooltipBox } from "./TooltipBox"
-import { tones } from "@/shared-module/components/styles/themes"
 
 // oxlint-disable-next-line i18next/no-literal-string
 const StyledButton = styled(ReactAriaButton)`

@@ -11,6 +11,7 @@ import { useContext } from "react"
 import { toast } from "react-hot-toast"
 
 import { LoadingRegion, type PromptControls, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import PageContext from "../../contexts/PageContext"
@@ -29,7 +30,6 @@ import {
   type AiActionLabelKey,
   type AiGroupLabelKey,
 } from "./ai/menu"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const PARAGRAPH_BLOCK_NAME = "core/paragraph"
 

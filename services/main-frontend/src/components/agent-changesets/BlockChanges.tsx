@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next"
 
 import { fontWeights } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 
 import {
@@ -17,7 +18,6 @@ import {
   type VisibleDiffRow,
   visibleRows,
 } from "./blockDiff"
-import { tones } from "@/shared-module/components/styles/themes"
 
 /** Which version of the content blocks come from, for blocks that read their page. */
 export type BlocksVersion = typeof DIFF_SIDE.BEFORE | typeof DIFF_SIDE.AFTER

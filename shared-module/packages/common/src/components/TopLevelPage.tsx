@@ -5,9 +5,10 @@ import styled from "@emotion/styled"
 import Link from "next/link"
 import React from "react"
 
+import { colors } from "@/shared-module/components/styles/themes"
+
 import { primaryFont } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
-import { colors } from "@/shared-module/components/styles/themes"
 
 const Content = styled.div`
   margin: 0 auto;

@@ -53,11 +53,7 @@ const ExamStartBanner: React.FC<React.PropsWithChildren<ExamInstructionsProps>> 
     >
       <div
         className={css`
-          background: linear-gradient(
-            140deg,
-            ${tones.toneInfo20},
-            ${tones.toneInfo23}
-          );
+          background: linear-gradient(140deg, ${tones.toneInfo20}, ${tones.toneInfo23});
           color: var(--color-text-on-accent);
           flex: 1;
           padding: 0.75rem 1rem;

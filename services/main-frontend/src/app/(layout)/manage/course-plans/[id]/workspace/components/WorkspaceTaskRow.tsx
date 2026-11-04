@@ -6,9 +6,9 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseDesignerPlanStageTask } from "@/generated/api/types.generated"
 import { Button, Checkbox } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { useWorkspaceTaskCompletionField } from "../hooks/useWorkspaceTaskCompletionField"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const taskRowStyles = css`
   display: flex;

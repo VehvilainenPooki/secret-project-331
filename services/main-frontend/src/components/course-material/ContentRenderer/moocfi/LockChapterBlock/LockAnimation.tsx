@@ -236,7 +236,10 @@ const LockAnimation: React.FC<LockAnimationProps> = ({ onComplete, size = 260, p
             left: "50%",
             top: "66%",
             borderRadius: 999,
-            border: i === 0 ? "2px solid var(--tone-border-neutral-45)" : "2px solid var(--tone-border-neutral-28)",
+            border:
+              i === 0
+                ? "2px solid var(--tone-border-neutral-45)"
+                : "2px solid var(--tone-border-neutral-28)",
             transform: to([spr.s], (s) => `translate(-50%, -50%) scale(${s})`),
             opacity: spr.o,
             pointerEvents: "none",

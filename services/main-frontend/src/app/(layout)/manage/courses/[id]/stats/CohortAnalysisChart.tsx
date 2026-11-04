@@ -14,12 +14,12 @@ import { useTranslation } from "react-i18next"
 import Echarts from "@/components/charts/Echarts"
 import type { CohortActivity } from "@/generated/api/types.generated"
 import { LoadingRegion, Select, ErrorNotice } from "@/shared-module/components"
+import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "./CourseStatsPage"
 import type { Period } from "./LineChart"
 import { DAILY_PERIOD, MONTHLY_PERIOD } from "./LineChart"
 import StatsHeader from "./StatsHeader"
-import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 
 interface CohortAnalysisFilterValues {
   period: Period

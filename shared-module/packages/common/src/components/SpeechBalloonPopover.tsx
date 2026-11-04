@@ -6,8 +6,9 @@ import React from "react"
 import type { PopoverProps } from "react-aria-components"
 import { Dialog, OverlayArrow, Popover } from "react-aria-components"
 
-import { respondToOrLarger } from "../styles/respond"
 import { colors, tones } from "@/shared-module/components/styles/themes"
+
+import { respondToOrLarger } from "../styles/respond"
 
 interface SpeechBalloonPopoverProps extends Omit<PopoverProps, "children"> {
   children: React.ReactNode

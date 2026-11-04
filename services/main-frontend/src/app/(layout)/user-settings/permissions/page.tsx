@@ -21,10 +21,10 @@ import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import { courseFrontPageRoute } from "@/shared-module/common/utils/routes"
 import { Button, Link, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { settingsCardCss } from "@/styles/sharedStyles"
 
 import OAuthGrantsSection from "./OAuthGrantsSection"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const PermissionsSettingsPage: React.FC = () => {
   const { t } = useTranslation()

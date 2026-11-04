@@ -20,12 +20,12 @@ import {
 import { editCourseDefaultPeerOrSelfReviewConfigRoute } from "@/shared-module/common/utils/routes"
 import { Button, Checkbox, Link, Select, TextArea, TextField } from "@/shared-module/components"
 import { QueryResult } from "@/shared-module/components/components/queryResult/QueryResult"
+import { tones } from "@/shared-module/components/styles/themes"
 import { optionalGeneratedQueryOptions } from "@/utils/optionalGeneratedQueryOptions"
 import { useAttributeForm } from "@/utils/useAttributeForm"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import type { ExerciseAttributes } from "../blocks/Exercise"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   display: flex;

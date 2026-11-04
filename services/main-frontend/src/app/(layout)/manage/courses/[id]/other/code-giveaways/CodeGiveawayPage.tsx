@@ -11,9 +11,9 @@ import type { CodeGiveaway } from "@/generated/api/types.generated"
 import { headingFont, typography } from "@/shared-module/common/styles"
 import { codeGiveawayRoute } from "@/shared-module/common/utils/routes"
 import { Button, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import NewCodeGiveawayForm from "./NewCodeGiveawayForm"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface CodeGiveawayPageProps {
   courseId: string

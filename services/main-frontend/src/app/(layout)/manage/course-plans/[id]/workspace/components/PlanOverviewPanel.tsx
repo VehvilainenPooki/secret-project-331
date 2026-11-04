@@ -7,10 +7,10 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseDesignerStage } from "@/generated/api/types.generated"
 import { Button, Dialog, Meter, METER_KIND, Select, TONE } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { SCHEDULE_STAGE_ORDER } from "../../schedule/scheduleConstants"
 import { useAdjustScheduleDialogState } from "../hooks/useAdjustScheduleDialogState"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const NODE_COLUMN_WIDTH = 28
 const SPINE_OFFSET = 13

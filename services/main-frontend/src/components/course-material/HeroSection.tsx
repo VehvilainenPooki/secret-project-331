@@ -8,6 +8,7 @@ import { useCornerTapFlip } from "@/hooks/course-material/useCornerTapFlip"
 import { respondToOrLarger } from "@/shared-module/common//styles/respond"
 import { headingFont } from "@/shared-module/common/styles"
 import { INCLUDE_THIS_HEADING_IN_HEADINGS_NAVIGATION_CLASS } from "@/shared-module/common/utils/constants"
+import { tones } from "@/shared-module/components/styles/themes"
 import { COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM } from "@/utils/course-material/constants"
 import { escapeUrlForCss } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
@@ -17,7 +18,6 @@ import {
   resolveHeroBackgroundImages,
 } from "./heroBackgroundImages"
 import ParsedText from "./ParsedText"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface TextBoxProps {
   fontColor?: string

@@ -5,10 +5,10 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseManagementPagesProps } from "@/app/(layout)/manage/courses/[id]/types"
 import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ExerciseList from "./ExerciseList"
 import ExerciseRepositories from "./ExerciseRepositories"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const CourseExercises: React.FC<React.PropsWithChildren<CourseManagementPagesProps>> = ({
   courseId,

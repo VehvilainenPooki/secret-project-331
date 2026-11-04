@@ -10,10 +10,10 @@ import { useTranslation } from "react-i18next"
 import Echarts from "@/components/charts/Echarts"
 import type { CountResult } from "@/generated/api/types.generated"
 import { DateField, LoadingRegion, Select, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "./CourseStatsPage"
 import StatsHeader from "./StatsHeader"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export const MONTHLY_PERIOD = "Month" as const
 export const DAILY_PERIOD = "Day" as const

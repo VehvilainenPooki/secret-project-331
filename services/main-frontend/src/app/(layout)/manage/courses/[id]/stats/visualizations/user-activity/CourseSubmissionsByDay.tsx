@@ -10,11 +10,11 @@ import Echarts from "@/components/charts/Echarts"
 import { getCourseDailySubmissionCountsOptions } from "@/generated/api/@tanstack/react-query.generated"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
 import NoDataMessage from "../NoDataMessage"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseSubmissionsByDayProps {
   courseId: string

@@ -18,8 +18,8 @@ import { isAbortError } from "@/shared-module/common/errors/AppApiError"
 import { normalizeErrorForDisplay } from "@/shared-module/common/errors/normalizeErrorForDisplay"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button, Dialog, LoadingRegion } from "@/shared-module/components"
-import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 import { tones } from "@/shared-module/components/styles/themes"
+import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
 export interface SearchDialogProps {
   courseId: string

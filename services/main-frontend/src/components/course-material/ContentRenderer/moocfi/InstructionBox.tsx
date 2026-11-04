@@ -6,9 +6,9 @@ import React from "react"
 import ParsedText from "@/components/course-material/ParsedText"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface InstructionBoxAttributes {
   content: string

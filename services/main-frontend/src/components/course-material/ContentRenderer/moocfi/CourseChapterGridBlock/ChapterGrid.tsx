@@ -15,9 +15,9 @@ import { headingFont, secondaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { stringToRandomNumber } from "@/shared-module/common/utils/strings"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import Grid from "./Grid"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const COLORS_ARRAY = [
   "var(--tone-tone-info-23)",

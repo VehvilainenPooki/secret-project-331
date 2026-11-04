@@ -49,7 +49,10 @@ export const TIME_AXIS_LABEL = {
 } as const
 
 /** Subtle alternating background bands for the time axis (splitArea): faint gray tint / transparent. */
-export const SPLIT_AREA_COLORS = [getActiveTheme().tones.chartNeutral4, getActiveTheme().tones.chartNeutral2]
+export const SPLIT_AREA_COLORS = [
+  getActiveTheme().tones.chartNeutral4,
+  getActiveTheme().tones.chartNeutral2,
+]
 
 /** Line break for the (raw-HTML) echarts tooltip strings both timelines build. */
 export const LINE_BREAK = "<br />"

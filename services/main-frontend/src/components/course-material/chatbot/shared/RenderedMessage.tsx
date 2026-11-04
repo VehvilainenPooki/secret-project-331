@@ -10,6 +10,7 @@ import "highlight.js/styles/atom-one-dark.css"
 import { createPortal } from "react-dom"
 
 import { monospaceFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import { planCitationPortals } from "@/utils/course-material/chatbotCitationPortals"
 import { REMOVE_CITATIONS_REGEX } from "@/utils/course-material/chatbotCitationRegexes"
 import { getRemarkable } from "@/utils/course-material/getRemarkable"
@@ -20,7 +21,6 @@ import {
   getPreStyles,
 } from "../../ContentRenderer/core/formatting/CodeBlock/styles"
 import CitationButton from "./CitationButton"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const PORTAL_PLACEHOLDER_QUERY_SELECTOR = "[data-chatbot-citation='true']"
 

@@ -10,10 +10,10 @@ import { useCourseQuery } from "@/hooks/useCourseQuery"
 import { queryClient } from "@/shared-module/common/services/appQueryClient"
 import { headingFont } from "@/shared-module/common/styles"
 import { Button, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import CourseLanguageVersionsList from "./CourseLanguageVersionsList"
 import NewCourseLanguageVersionDialog from "./NewCourseLanguageVersionDialog"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const CourseLanguageVersionsPage: React.FC<React.PropsWithChildren<CourseManagementPagesProps>> = ({
   courseId,

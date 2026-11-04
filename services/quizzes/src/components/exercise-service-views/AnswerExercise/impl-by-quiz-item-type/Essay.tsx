@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next"
 import TextArea from "@/shared-module/common/components/InputFields/TextAreaField"
 import { wordCount } from "@/shared-module/common/utils/strings"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import useParentDialog from "@/shared-module/exercise-react/react/hooks/useParentDialog"
 import { headingFont, secondaryFont } from "@/shared-module/exercise-react/styles"
 
@@ -13,7 +14,6 @@ import type { UserItemAnswerEssay } from "../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemEssay } from "../../../../../types/quizTypes/publicSpec"
 import QuizzesUserItemAnswerContext from "../../../../contexts/QuizzesUserItemAnswerContext"
 import { getEssayPasteWarning } from "./essayPaste"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export const container = css`
   font-size: 0.563rem;

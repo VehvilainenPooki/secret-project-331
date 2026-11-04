@@ -13,9 +13,9 @@ import type { PeerOrSelfReviewsReceived as PeerOrSelfReviewsReceivedData } from 
 import useUserInfo from "@/shared-module/common/hooks/useUserInfo"
 import { headingFont } from "@/shared-module/common/styles"
 import { Button, Disclosure, QueryResult, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ReceivedPeerOrSelfReview from "./ReceivedPeerOrSelfReview"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Notification = styled.span`
   display: inline-block;

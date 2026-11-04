@@ -7,9 +7,9 @@ import React, { useState } from "react"
 import InnerBlocks from "@/components/course-material/ContentRenderer/util/InnerBlocks"
 import { fontWeights, headingFont } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from "../.."
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExpandableContentInnerBlockProps {
   name: string
@@ -66,13 +66,19 @@ const ExpandableContentInnerBlock: React.FC<
           onClick={() => setOpen((prev) => !prev)}
         >
           {open ? (
-            <MinusCircle size={18} className={css`
-              color: ${tones.fgInfo10};
-            `} />
+            <MinusCircle
+              size={18}
+              className={css`
+                color: ${tones.fgInfo10};
+              `}
+            />
           ) : (
-            <PlusCircle size={18} className={css`
-              color: ${tones.fgInfo10};
-            `} />
+            <PlusCircle
+              size={18}
+              className={css`
+                color: ${tones.fgInfo10};
+              `}
+            />
           )}
           {heading}
         </button>

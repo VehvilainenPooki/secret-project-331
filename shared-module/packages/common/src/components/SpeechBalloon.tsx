@@ -3,8 +3,9 @@
 import { css, cx } from "@emotion/css"
 import React from "react"
 
-import { runCallbackIfEnterPressed } from "../utils/accessibility"
 import { colors, tones } from "@/shared-module/components/styles/themes"
+
+import { runCallbackIfEnterPressed } from "../utils/accessibility"
 
 export interface SpeechBalloonProps {
   className?: string

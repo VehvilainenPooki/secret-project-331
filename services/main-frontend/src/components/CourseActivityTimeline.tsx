@@ -15,6 +15,7 @@ import {
 } from "@/generated/api/@tanstack/react-query.generated"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Disclosure, ErrorNotice, LoadingRegion, Table } from "@/shared-module/components"
+import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 import { computeModuleRows, formatDuration } from "@/utils/moduleTimeline"
 import {
   colorAt,
@@ -28,7 +29,6 @@ import {
   TIME_AXIS_LABEL,
   timeAxisBounds,
 } from "@/utils/timelineChart"
-import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseActivityTimelineProps {
   courseId: string

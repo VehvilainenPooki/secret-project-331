@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseMaterialExercise } from "@/generated/course-material-api/types.generated"
 import { courseMaterialExerciseQueryKey } from "@/hooks/course-material/useCourseMaterialExerciseQuery"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { exerciseButtonStyles, makeExerciseButtonMutedStyles } from ".."
-import { tones } from "@/shared-module/components/styles/themes"
 
 const WaitingForPeerReviews: React.FC<React.PropsWithChildren<{ exerciseId: string }>> = ({
   exerciseId,

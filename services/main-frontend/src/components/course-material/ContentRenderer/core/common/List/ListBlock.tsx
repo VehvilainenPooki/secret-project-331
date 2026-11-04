@@ -8,11 +8,11 @@ import InnerBlocks from "@/components/course-material/ContentRenderer/util/Inner
 import ParsedText from "@/components/course-material/ParsedText"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import { fontSizeMapper, mobileFontSizeMapper } from "@/styles/course-material/fontSizeMapper"
 
 import type { BlockRendererProps } from "../../.."
 import ListFontSizeContext from "./listFontSizeContext"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const LIST_BLOCK_CLASS_NAME = "course-material-list-block"
 

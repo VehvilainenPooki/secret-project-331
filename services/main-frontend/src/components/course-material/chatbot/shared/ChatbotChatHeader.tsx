@@ -15,13 +15,13 @@ import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import DownIcon from "@/shared-module/common/img/down.svg"
 import { manageChatbotRoute } from "@/shared-module/common/utils/routes"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { removeSavedChatbotAnonymousToken } from "@/utils/anonymousTokenLocalStorage"
 import { createChatbotTranscript } from "@/utils/course-material/createChatbotTranscript"
 import { downloadStringAsFile } from "@/utils/course-material/downloadStringAsFile"
 
 import ClarificationTooltip from "../../../ClarificationTooltip"
 import { useChatbotContext } from "./ChatbotContext"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ERROR_DETAILS_MAX_HEIGHT = "35vh"
 

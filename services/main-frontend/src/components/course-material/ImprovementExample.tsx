@@ -7,8 +7,8 @@ import React, { useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
-import { parseSentenceDifference } from "@/utils/course-material/typingDemoSentenceUtils"
 import { tones } from "@/shared-module/components/styles/themes"
+import { parseSentenceDifference } from "@/utils/course-material/typingDemoSentenceUtils"
 
 type Phase = "initial" | "mouseMove" | "mouseClick" | "showCaret" | "deleting" | "typing"
 

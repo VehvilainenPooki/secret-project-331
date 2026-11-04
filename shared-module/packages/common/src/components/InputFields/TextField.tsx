@@ -6,9 +6,10 @@ import type { InputHTMLAttributes } from "react"
 import React, { forwardRef } from "react"
 import type { FieldError } from "react-hook-form"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { primaryFont } from "../../styles/typography"
 import { errorToDescription } from "../../utils/strings"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ERRORCOLOR = tones.toneDanger17
 // gray[400] keeps border contrast >= 3:1 against the field background (WCAG 1.4.11).

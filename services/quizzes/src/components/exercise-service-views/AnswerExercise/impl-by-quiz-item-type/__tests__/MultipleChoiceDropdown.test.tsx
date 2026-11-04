@@ -1,10 +1,11 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import { vi } from "vitest"
 
+import { resolveThemeVars } from "@/shared-module/components/styles/themes"
+
 import type { UserItemAnswerMultiplechoiceDropdown } from "../../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemMultiplechoiceDropdown } from "../../../../../../types/quizTypes/publicSpec"
 import MultipleChoiceDropdown from "../MultipleChoiceDropdown"
-import { resolveThemeVars } from "@/shared-module/components/styles/themes"
 
 const baseItem: PublicSpecQuizItemMultiplechoiceDropdown = {
   type: "multiple-choice-dropdown",

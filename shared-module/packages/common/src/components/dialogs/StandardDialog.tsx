@@ -4,11 +4,12 @@ import { css } from "@emotion/css"
 import React, { useEffect, useId, useRef } from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { typography } from "../../styles"
 import type { ButtonProps } from "../Button"
 import Button from "../Button"
 import Dialog from "./Dialog"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface StandardDialogProps {
   open: boolean

@@ -6,6 +6,8 @@ import Link from "next/link"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import ArrowSVGIcon from "../img/arrow.svg"
 import BackArrowIcon from "../img/backarrow.svg"
 import TopArrowSVGIcon from "../img/up-arrow.svg"
@@ -13,7 +15,6 @@ import { headingFont, typography } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
 import LinkOrNoLink from "./LinkOrNoLink"
 import HideTextInSystemTests from "./system-tests/HideTextInSystemTests"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface NextSectionLinkProps {
   title: string
@@ -207,9 +208,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
             >
               <div
                 className={css`
-                  background-color: ${
-                    url ? tones.toneAccent21 : tones.toneNeutral44
-                  };
+                  background-color: ${url ? tones.toneAccent21 : tones.toneNeutral44};
 
                   flex: 1;
                   line-height: 1.3;
@@ -259,9 +258,7 @@ const NextSectionLink: React.FC<React.PropsWithChildren<NextSectionLinkProps>> =
                 className={css`
                   color: var(--color-text-on-accent);
                   padding: 16px 16px 16px 0;
-                  background-color: ${
-                    url ? tones.toneAccent21 : tones.toneNeutral44
-                  };
+                  background-color: ${url ? tones.toneAccent21 : tones.toneNeutral44};
                   display: flex;
                   justify-content: center;
                   align-items: center;

@@ -4,6 +4,8 @@ import { css, cx, keyframes } from "@emotion/css"
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import type { NavigationProps } from "."
 import MOOCfi from "../../../img/moocfiLogo.svg"
 import { respondToOrLarger } from "../../../styles/respond"
@@ -11,7 +13,6 @@ import { runCallbackIfEnterPressed } from "../../../utils/accessibility"
 import Button from "../../Button"
 import LoginControls from "../../LoginControls"
 import Hamburger from "./Menu/Hamburger/Hamburger"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const swingHorizontal = keyframes`
 15% {

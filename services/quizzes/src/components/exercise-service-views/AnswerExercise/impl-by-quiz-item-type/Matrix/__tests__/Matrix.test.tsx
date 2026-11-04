@@ -1,10 +1,11 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import { vi } from "vitest"
 
+import { resolveThemeVars } from "@/shared-module/components/styles/themes"
+
 import type { UserItemAnswerMatrix } from "../../../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemMatrix } from "../../../../../../../types/quizTypes/publicSpec"
 import Matrix from "../Matrix"
-import { resolveThemeVars } from "@/shared-module/components/styles/themes"
 
 // Override the global identity i18n mock so interpolation values (row/column) are visible.
 vi.mock("react-i18next", () => ({

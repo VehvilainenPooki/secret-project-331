@@ -9,11 +9,11 @@ import ExamTimeOverModal from "@/components/course-material/modals/ExamTimeOverM
 import Page from "@/components/course-material/Page"
 import type { ExamData } from "@/generated/course-material-api/types.generated"
 import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import CenteredClockSkewWarning from "./CenteredClockSkewWarning"
 import ExamInfoHeader from "./ExamInfoHeader"
 import ExamTimer from "./ExamTimer"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ExamRunningSectionProps {
   examData: ExamData
@@ -48,11 +48,7 @@ export default function ExamRunningSection({
   const secondsLeft = differenceInSeconds(endsAt, now)
 
   const warningMessageClass = css`
-    background: linear-gradient(
-      140deg,
-      ${tones.toneWarning3},
-      ${tones.toneNeutral12}
-    );
+    background: linear-gradient(140deg, ${tones.toneWarning3}, ${tones.toneNeutral12});
     border: 1px solid ${tones.toneWarning6};
     border-left: 8px solid ${tones.toneWarning10};
     border-radius: 8px;
@@ -60,11 +56,7 @@ export default function ExamRunningSection({
     margin: 1rem 0;
   `
   const infoMessageClass = css`
-    background: linear-gradient(
-      140deg,
-      ${tones.toneInfo5},
-      ${tones.toneNeutral12}
-    );
+    background: linear-gradient(140deg, ${tones.toneInfo5}, ${tones.toneNeutral12});
     border: 1px solid ${tones.toneInfo8};
     border-left: 8px solid ${tones.toneInfo23};
     border-radius: 8px;

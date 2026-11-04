@@ -15,6 +15,7 @@ import type { UseParsedPrivateSpecResult } from "@/hooks/playground/useParsedPri
 import DebugModal from "@/shared-module/common/components/DebugModal"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Checkbox } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type {
   CurrentStateMessage,
   IframeViewType,
@@ -27,7 +28,6 @@ import { playgroundSubmissionFiles, recordPlaygroundUploads } from "@/utils/play
 import PlaygroundExerciseEditorIframe from "./PlaygroundExerciseEditorIframe"
 import PlaygroundExerciseIframe from "./PlaygroundExerciseIframe"
 import PlaygroundViewSubmissionIframe from "./PlaygroundViewSubmissionIframe"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const PUBLIC_ADDRESS = isServer ? "https://courses.mooc.fi" : new URL(window.location.href).origin
 

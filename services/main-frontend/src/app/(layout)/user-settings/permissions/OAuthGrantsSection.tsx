@@ -25,8 +25,8 @@ import {
   MIDDLE_DOT,
   QueryResult,
 } from "@/shared-module/components"
-import { settingsCardCss } from "@/styles/sharedStyles"
 import { tones } from "@/shared-module/components/styles/themes"
+import { settingsCardCss } from "@/styles/sharedStyles"
 
 const listCss = css`
   display: flex;

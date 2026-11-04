@@ -5,10 +5,10 @@ import { t } from "i18next"
 import React from "react"
 
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   background: var(--tone-bg-neutral-20);

@@ -6,9 +6,10 @@ import React, { useCallback, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { usePopper } from "react-popper"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import type { DropdownMenuItemType } from "./DropdownMenuItem"
 import DropdownMenuItem from "./DropdownMenuItem"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface DropdownMenuProps {
   items: (DropdownMenuItemType | null)[]

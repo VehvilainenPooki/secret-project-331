@@ -7,12 +7,12 @@ import { VegaLite } from "react-vega"
 import { useDebouncedElementWidth } from "@/shared-module/common/hooks/useDebouncedElementWidth"
 import { useFontLoaded } from "@/shared-module/common/hooks/useFontLoaded"
 import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import { wouldSideScrollOnMobile } from "./chartSpec"
 import { useChartNaturalSize } from "./useChartNaturalSize"
 import { useRenderableChartSpec } from "./useRenderableChartSpec"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const MIN_HEIGHT = 200
 // Debounce redraws to once the resize settles, not per tick (avoids a stale canvas width).
@@ -94,23 +94,13 @@ const ChartPreview: React.FC<ChartPreviewProps> = ({
       `}
     >
       {!isValidJson && (
-        <div
-          className={messageStyle(
-            tones.toneDanger2,
-            tones.toneDanger10,
-            tones.toneDanger19,
-          )}
-        >
+        <div className={messageStyle(tones.toneDanger2, tones.toneDanger10, tones.toneDanger19)}>
           {t("chart-block-invalid-spec-error")}
         </div>
       )}
       {isValidJson && !hasData && (
         <div
-          className={messageStyle(
-            tones.toneNeutral29,
-            tones.toneNeutral39,
-            tones.toneNeutral46,
-          )}
+          className={messageStyle(tones.toneNeutral29, tones.toneNeutral39, tones.toneNeutral46)}
         >
           {t("chart-block-no-data-file")}
         </div>

@@ -5,9 +5,10 @@ import styled from "@emotion/styled"
 import Link from "next/link"
 import React from "react"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import ArrowSVGIcon from "../img/blackArrow.svg"
 import { monospaceFont, primaryFont } from "../styles"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   border-radius: 10px;

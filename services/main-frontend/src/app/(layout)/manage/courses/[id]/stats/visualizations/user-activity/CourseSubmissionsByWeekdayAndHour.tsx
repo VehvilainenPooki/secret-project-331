@@ -13,10 +13,10 @@ import type { ExerciseSlideSubmissionCountByWeekAndHour } from "@/generated/api/
 import DebugModal from "@/shared-module/common/components/DebugModal"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseSubmissionsByWeekdayAndHourProps {
   courseId: string

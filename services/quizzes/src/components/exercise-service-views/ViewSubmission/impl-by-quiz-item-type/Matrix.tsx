@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 
 import { MatrixFrame, MatrixTable } from "@/components/Shared/MatrixGrid"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 import { type MatrixShape, matrixShape } from "@/util/matrix"
 
@@ -15,7 +16,6 @@ import type { UserItemAnswerMatrix } from "../../../../../types/quizTypes/answer
 import type { MatrixCellVerdict } from "../../../../../types/quizTypes/grading"
 import type { ModelSolutionQuizItemMatrix } from "../../../../../types/quizTypes/modelSolutionSpec"
 import type { PublicSpecQuizItemMatrix } from "../../../../../types/quizTypes/publicSpec"
-import { colors, tones } from "@/shared-module/components/styles/themes"
 
 const SubmissionMatrixTable = styled(MatrixTable)`
   margin-top: 1rem;

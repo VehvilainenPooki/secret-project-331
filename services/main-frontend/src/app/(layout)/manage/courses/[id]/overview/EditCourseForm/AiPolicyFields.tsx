@@ -8,9 +8,9 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseAiPolicy } from "@/generated/api/types.generated"
 import { Radio, RadioGroup } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { EditCourseFormValues } from "."
-import { tones } from "@/shared-module/components/styles/themes"
 
 const FieldSet = styled.fieldset`
   margin-bottom: 1rem;

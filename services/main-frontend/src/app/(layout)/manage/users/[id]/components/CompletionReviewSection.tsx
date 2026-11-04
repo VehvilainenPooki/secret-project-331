@@ -15,9 +15,9 @@ import type {
 import { manageCourseOtherCheatersSuspectedRoute } from "@/shared-module/common/utils/routes"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Badge, Meter, MIDDLE_DOT, QueryResult, Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { ratioPercent, toHours } from "../lib/durations"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CompletionReviewSectionProps {
   userId: string

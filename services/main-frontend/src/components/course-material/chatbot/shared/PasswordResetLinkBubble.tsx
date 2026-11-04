@@ -5,12 +5,12 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import ConfirmActionBubble from "./ConfirmActionBubble"
 import { GENERATE_PASSWORD_RESET_LINK_TOOL, resetLinkOf } from "./passwordResetLinkCalls"
 import type { PasswordResetLinkCall } from "./passwordResetLinkCalls"
-import { tones } from "@/shared-module/components/styles/themes"
 
 type PasswordResetLinkBubbleProps = ClientToolBubbleProps<PasswordResetLinkCall>
 

@@ -9,6 +9,7 @@ import BreakFromCentered from "@/shared-module/common/components/Centering/Break
 import Centered from "@/shared-module/common/components/Centering/Centered"
 import { primaryFont, typography } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
@@ -17,7 +18,6 @@ import type { ExerciseAttributes } from "."
 import { EditorContentDispatch } from "../../contexts/EditorContentContext"
 import ExerciseBlockContext from "../../contexts/ExerciseBlockContext"
 import breakFromCenteredProps from "../../utils/breakfromCenteredProps"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const ExerciseEditorCard = styled.div`
   padding: 2rem 1rem;

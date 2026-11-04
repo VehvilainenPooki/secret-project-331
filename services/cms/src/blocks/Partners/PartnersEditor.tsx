@@ -4,12 +4,12 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import BlockWrapper from "../BlockWrapper"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const PartnerEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<Record<string, never>>>

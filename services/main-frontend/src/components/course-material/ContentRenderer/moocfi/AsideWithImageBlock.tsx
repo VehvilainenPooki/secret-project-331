@@ -7,11 +7,11 @@ import ParsedText from "@/components/course-material/ParsedText"
 import { primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import { ImageInteractivityContext } from "../core/common/Image/ImageInteractivityContext"
 import InnerBlocks from "../util/InnerBlocks"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface AsideWithImageBlockAttributes {
   title: string

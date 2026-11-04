@@ -33,10 +33,10 @@ import {
   TextField,
   ErrorNotice,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { examPointsCsvHref, examSubmissionsCsvHref } from "@/utils/exportDownloadUrls"
 
 import EditExamDialog from "../EditExamDialog"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const GET_ORGANIZATION_QUERY_KEY = "getOrganization"
 

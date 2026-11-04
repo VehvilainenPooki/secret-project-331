@@ -4,12 +4,12 @@ import { css } from "@emotion/css"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import ConfirmActionBubble from "./ConfirmActionBubble"
 import { UPDATE_CERTIFICATE_TOOL } from "./updateCertificateCalls"
 import type { UpdateCertificateCall } from "./updateCertificateCalls"
-import { tones } from "@/shared-module/components/styles/themes"
 
 type UpdateCertificateBubbleProps = ClientToolBubbleProps<UpdateCertificateCall>
 

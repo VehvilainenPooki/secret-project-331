@@ -17,6 +17,7 @@ import {
 } from "@/hooks/course-material/useUserChapterLocks"
 import { primaryFont } from "@/shared-module/common/styles"
 import { LoadingRegion, useDialog, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import { refetchViewAtom } from "@/state/course-material/selectors"
 
@@ -25,7 +26,6 @@ import LockAnimation from "./LockAnimation"
 import LockChapterLoadingView from "./LockChapterLoadingView"
 import LockChapterLockedView from "./LockChapterLockedView"
 import LockChapterUnlockedView from "./LockChapterUnlockedView"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface LockChapterProps {
   chapterId: string

@@ -38,9 +38,7 @@ const StatusJobs: React.FC = () => {
               header: t("status-succeeded"),
               cell: (job) => (
                 <div className={iconRowCss}>
-                  {(job.succeeded ?? 0) > 0 && (
-                    <CheckCircle size={16} color={tones.toneAccent21} />
-                  )}
+                  {(job.succeeded ?? 0) > 0 && <CheckCircle size={16} color={tones.toneAccent21} />}
                   <span
                     className={css`
                       color: ${tones.toneAccent21};

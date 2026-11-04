@@ -4,10 +4,11 @@ import { keyframes } from "@emotion/css"
 import styled from "@emotion/styled"
 import React, { useContext } from "react"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { secondaryFont } from "../../styles"
 import { respondToOrLarger } from "../../styles/respond"
 import { AccordionContext } from "./accordionContext"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const openAnimation = keyframes`
   0% { opacity: 0; }

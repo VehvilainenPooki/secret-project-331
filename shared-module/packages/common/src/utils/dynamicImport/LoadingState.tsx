@@ -4,6 +4,8 @@ import { css } from "@emotion/css"
 import { useEffect, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import Spinner from "../../components/Spinner"
 import { monospaceFont } from "../../styles/typography"
 import {
@@ -16,7 +18,6 @@ import {
   DYNAMIC_IMPORT_STATE_RENDER_ERROR,
   useDynamicImportStatus,
 } from "./dynamicImportStore"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const DYNAMIC_LOADING_SLOW_WARNING_KEY = "dynamic-loading-slow-warning"
 const DYNAMIC_LOADING_VERY_SLOW_WARNING_KEY = "dynamic-loading-very-slow-warning"

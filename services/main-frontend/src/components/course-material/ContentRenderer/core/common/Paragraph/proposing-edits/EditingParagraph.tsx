@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next"
 
 import type { ParagraphAttributes } from "@/../types/GutenbergBlockAttributes"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   blockEditsAtom,
   currentlyOpenFeedbackDialogAtom,
@@ -18,7 +19,6 @@ import { getEditableHoverStyles, getParagraphStyles } from "../styles"
 import EditableParagraph from "./EditableParagraph"
 import { useParagraphEditing } from "./hooks/useParagraphEditing"
 import PreviewableParagraph from "./PreviewableParagraph"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const editButtonStyles = css`
   display: inline-block;

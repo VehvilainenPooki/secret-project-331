@@ -12,8 +12,8 @@ import { DEFAULT_SERVICE_INFO_URL } from "@/constants/playground"
 import DebugModal from "@/shared-module/common/components/DebugModal"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Checkbox, TextField } from "@/shared-module/components"
-import type { ExerciseServiceInfoApi } from "@/utils/playgroundSchemas"
 import { tones } from "@/shared-module/components/styles/themes"
+import type { ExerciseServiceInfoApi } from "@/utils/playgroundSchemas"
 
 const serviceInfoStatusRow = css`
   display: flex;

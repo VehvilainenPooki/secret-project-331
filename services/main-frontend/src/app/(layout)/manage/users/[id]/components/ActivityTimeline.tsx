@@ -18,6 +18,7 @@ import type { CourseEnrollmentInfo } from "@/generated/api/types.generated"
 import { includeIf } from "@/shared-module/common/utils/nullability"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Disclosure, Table, type TableColumn } from "@/shared-module/components"
+import { getActiveTheme } from "@/shared-module/components/styles/themes"
 import {
   computeModuleRows,
   durationSeconds,
@@ -39,7 +40,6 @@ import { clipRect } from "../lib/clipRect"
 import { completedModuleCount } from "../lib/completions"
 import { computeLaneBoxes, packLanes } from "../lib/lanePacking"
 import { buildCourseDensity, courseSpan, maxStackedPerExercise } from "../lib/violinDensity"
-import { getActiveTheme } from "@/shared-module/components/styles/themes"
 
 export interface ActivityTimelineProps {
   enrollments: CourseEnrollmentInfo[]
@@ -108,7 +108,8 @@ const BADGE_LABEL_WEIGHT = "bold" as const
 const COMPLETION_CLUSTER_FRACTION = 0.012
 const MIN_CLUSTER_MS = 60 * 60 * 1000
 // Separator between the stacked completions listed in a merged tooltip.
-const TOOLTIP_DIVIDER = '<div style="border-top:1px solid var(--tone-chart-neutral-13);margin:5px 0"></div>'
+const TOOLTIP_DIVIDER =
+  '<div style="border-top:1px solid var(--tone-chart-neutral-13);margin:5px 0"></div>'
 
 // A grid item's `min-width: auto` lets any too-wide descendant widen the whole page rather than
 // shrink; the chart and the raw table are both wider than a phone.

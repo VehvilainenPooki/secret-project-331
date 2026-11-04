@@ -8,13 +8,13 @@ import { useTranslation } from "react-i18next"
 import type { CourseMaterialExerciseTask } from "@/generated/course-material-api/types.generated"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { ExerciseIframeState } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types"
 import type { Block } from "@/types/courseMaterialBlock"
 import type { CapturedExerciseTaskAnswer } from "@/utils/course-material/exerciseTaskAnswer"
 
 import ContentRenderer from "../.."
 import ExerciseTaskIframe from "./ExerciseTaskIframe"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExerciseTaskProps {
   canPostSubmission: boolean

@@ -14,6 +14,7 @@ import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import { monospaceFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button, TextArea } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   currentlyOpenFeedbackDialogAtom,
   selectionAtom,
@@ -21,7 +22,6 @@ import {
 import { courseMaterialBlockClass } from "@/utils/course-material/constants"
 
 import { FEEDBACK_DIALOG_CONTENT_ID } from "./SelectionListener"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   courseId: string

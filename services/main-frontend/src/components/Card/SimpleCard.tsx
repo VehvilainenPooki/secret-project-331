@@ -12,12 +12,12 @@ import { headingFont } from "@/shared-module/common/styles"
 import { cardMaxWidth } from "@/shared-module/common/styles/constants"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { dateToString } from "@/shared-module/common/utils/time"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 import type { CardExtraProps } from "."
 import CardDeadlineOverlay, { cardTopBandStyle } from "./CardDeadlineOverlay"
 import CardOpensText from "./CardOpensText"
 import CardOpensTextOverlay from "./CardOpenTextOverlay"
-import { colors, tones } from "@/shared-module/components/styles/themes"
 
 export interface BackgroundProps {
   bg: string | undefined

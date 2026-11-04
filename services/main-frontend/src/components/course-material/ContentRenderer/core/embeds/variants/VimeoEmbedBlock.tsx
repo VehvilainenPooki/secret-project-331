@@ -8,9 +8,9 @@ import type { EmbedAttributes } from "@/../types/GutenbergBlockAttributes"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import { baseTheme } from "@/shared-module/common/styles/theme"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import aspectRatioFromClassName from "@/utils/course-material/aspectRatioFromClassName"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const VIMEO_MAX_WIDTH = 780
 

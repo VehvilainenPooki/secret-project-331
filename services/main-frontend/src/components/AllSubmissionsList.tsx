@@ -87,15 +87,9 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
                       padding: 1rem 1.5rem;
                       border-radius: 8px;
                       border: 2px solid
-                        ${
-                          isCurrentSubmission
-                            ? tones.toneAccent19
-                            : tones.toneNeutral35
-                        };
+                        ${isCurrentSubmission ? tones.toneAccent19 : tones.toneNeutral35};
                       background-color: ${
-                        isCurrentSubmission
-                          ? tones.toneAccent7
-                          : tones.toneNeutral12
+                        isCurrentSubmission ? tones.toneAccent7 : tones.toneNeutral12
                       };
                       position: relative;
 

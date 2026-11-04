@@ -13,13 +13,13 @@ import {
   CMS_EDITOR_SIDEBAR_THRESHOLD,
   CMS_EDITOR_SIDEBAR_WIDTH,
 } from "@/shared-module/common/utils/constants"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 
 import type { HeroSectionAttributes } from "."
 import BackgroundAndColorCustomizer from "../../components/blocks/BackgroundAndColorCustomizer"
 import PageContext from "../../contexts/PageContext"
 import BlockWrapper from "../BlockWrapper"
-import { colors, tones } from "@/shared-module/components/styles/themes"
 
 const HeroSectionEditor: React.FC<
   React.PropsWithChildren<BlockEditProps<HeroSectionAttributes>>

@@ -28,10 +28,10 @@ import {
   type TriStateToggleStates,
   Tooltip,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import CourseCard from "./CourseCard/CourseCard"
 import CourseDataFilterForm from "./CourseDataFilterForm"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseFilter {
   search_course: string

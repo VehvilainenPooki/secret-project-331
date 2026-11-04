@@ -11,12 +11,12 @@ import Echarts from "@/components/charts/Echarts"
 import type { CountResult } from "@/generated/api/types.generated"
 import useCourseInstancesQuery from "@/hooks/useCourseInstancesQuery"
 import { LoadingRegion, Select, ErrorNotice } from "@/shared-module/components"
+import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "./CourseStatsPage"
 import type { Period } from "./LineChart"
 import { DAILY_PERIOD, MONTHLY_PERIOD } from "./LineChart"
 import StatsHeader from "./StatsHeader"
-import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 
 interface LineChartByInstanceFilterValues {
   period: Period

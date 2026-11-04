@@ -6,8 +6,8 @@ import { ColorPalette, PanelBody, Placeholder } from "@wordpress/components"
 import { cover as icon } from "@wordpress/icons"
 import React from "react"
 
-import { useTranslation } from "@/utils/useCmsTranslation"
 import { tones } from "@/shared-module/components/styles/themes"
+import { useTranslation } from "@/utils/useCmsTranslation"
 
 const placeHolderFixHeightStyles = css`
   min-height: unset !important;

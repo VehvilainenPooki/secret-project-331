@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemComponentProps } from "."
 import type { UserItemAnswerMultiplechoiceDropdown } from "../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemMultiplechoiceDropdown } from "../../../../../types/quizTypes/publicSpec"
 import { quizTheme } from "../../../../styles/QuizStyles"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const SelectInputIcon = () => {
   return (

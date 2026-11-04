@@ -47,12 +47,12 @@ import {
   TONE,
   ErrorNotice,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { contentRowStyles, FieldSet, Legend, type CourseDataFilter } from "../page"
 import ContentDisplayBox from "./ContentDisplayBox"
 import CourseMetadata from "./CourseMetadata"
 import EditModuleFields from "./EditModuleFields"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const linkStyles = css`
   color: ${tones.toneAccent23};

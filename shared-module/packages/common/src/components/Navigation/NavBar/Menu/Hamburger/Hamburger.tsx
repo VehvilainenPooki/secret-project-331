@@ -1,7 +1,8 @@
 "use client"
 
-import { HamburgerSpring } from "./HamburgerSpring"
 import { tones } from "@/shared-module/components/styles/themes"
+
+import { HamburgerSpring } from "./HamburgerSpring"
 
 interface HamburgerProps {
   isActive: boolean
@@ -9,7 +10,11 @@ interface HamburgerProps {
   buttonWidth?: number
 }
 
-const Hamburger: React.FC<HamburgerProps> = ({ isActive, barColor = tones.bgNeutral88, buttonWidth = 30 }) => {
+const Hamburger: React.FC<HamburgerProps> = ({
+  isActive,
+  barColor = tones.bgNeutral88,
+  buttonWidth = 30,
+}) => {
   return <HamburgerSpring barColor={barColor} buttonWidth={buttonWidth} isActive={isActive} />
 }
 

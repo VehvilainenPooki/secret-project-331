@@ -8,10 +8,10 @@ import { headingFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withNoSsr from "@/shared-module/common/utils/withNoSsr"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface TableBoxAttributes {
   width: string

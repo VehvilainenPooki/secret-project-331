@@ -23,9 +23,9 @@ import {
   useDialog,
   ErrorNotice,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ContentDisplayBox from "../manage/course-auditing/CourseCard/ContentDisplayBox"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExternalCourseCardProps {
   externalCourse: ExternalCourseOutput

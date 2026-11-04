@@ -16,6 +16,7 @@ import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import { primaryFont } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import { viewParamsAtom } from "@/state/course-material/params"
 import { refetchViewAtom } from "@/state/course-material/selectors"
@@ -27,7 +28,6 @@ import ExamClockSkewWarning from "./ExamClockSkewWarning"
 import ExamInfoHeader from "./ExamInfoHeader"
 import ExamRunningSection from "./ExamRunningSection"
 import ExamStartBanner from "./ExamStartBanner"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export type ExamPageShellMode = "exam" | "testexam"
 
@@ -168,11 +168,7 @@ export default function ExamPageShell({
 
   if (enrollmentTag === "StudentTimeUp") {
     const timeUpMessageClass = css`
-      background: linear-gradient(
-        140deg,
-        ${tones.toneInfo5},
-        ${tones.toneNeutral12}
-      );
+      background: linear-gradient(140deg, ${tones.toneInfo5}, ${tones.toneNeutral12});
       border: 1px solid ${tones.toneInfo8};
       border-left: 8px solid ${tones.toneInfo23};
       border-radius: 8px;

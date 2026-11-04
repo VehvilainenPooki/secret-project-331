@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 
 import type { AnswerArchiveError } from "@/hooks/useIframeProtocol"
 import Button from "@/shared-module/common/components/Button"
+import { tones } from "@/shared-module/components/styles/themes"
 import { EXERCISE_SERVICE_CONTENT_ID } from "@/shared-module/exercise-protocol/core/constants"
 import type { UploadResultMessage } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types"
 import withErrorBoundary from "@/shared-module/exercise-react/react/components/withErrorBoundary"
@@ -14,7 +15,6 @@ import type { ExerciseFile, ExerciseIframeState } from "@/util/stateInterfaces"
 import AnswerExercise from "./AnswerExercise"
 import ExerciseEditor from "./ExerciseEditor"
 import ViewSubmission from "./ViewSubmission"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   state: ExerciseIframeState | null

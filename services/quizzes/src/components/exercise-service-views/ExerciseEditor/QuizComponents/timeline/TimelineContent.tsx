@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 import { v4 } from "uuid"
 
 import TextField from "@/shared-module/common/components/InputFields/TextField"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { OldNormalizedQuizItemTimelineItem } from "../../../../../../types/oldQuizTypes"
 import type { PrivateSpecQuizItemTimeline } from "../../../../../../types/quizTypes/privateSpec"
@@ -14,7 +15,6 @@ import useQuizzesExerciseServiceOutputState from "../../../../../hooks/useQuizze
 import { TIMELINE_YEAR } from "../../../../../util/validatePrivateSpec"
 import findQuizItem from "../../utils/general"
 import UnaddedDraftNotice from "../common/UnaddedDraftNotice"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface TimelineContentProps {
   quizItemId: string

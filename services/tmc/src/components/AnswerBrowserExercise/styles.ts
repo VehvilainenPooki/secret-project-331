@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
-import { monospaceFont } from "@/shared-module/exercise-react/styles"
 import { tones } from "@/shared-module/components/styles/themes"
+import { monospaceFont } from "@/shared-module/exercise-react/styles"
 
 const colors = {
   primary: "var(--tone-tone-info-15)",

@@ -10,11 +10,11 @@ import { useTranslation } from "react-i18next"
 
 import type { ChatbotConversationMessageCitation } from "@/generated/course-material-api/types.generated"
 import SpeechBalloonPopover from "@/shared-module/common/components/SpeechBalloonPopover"
+import { tones } from "@/shared-module/components/styles/themes"
 import { getRemarkable } from "@/utils/course-material/getRemarkable"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
 import { citationId } from "./CitationButton"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface CitationPopoverProps {
   citation: ChatbotConversationMessageCitation

@@ -4,9 +4,10 @@ import styled from "@emotion/styled"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { headingFont } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Container = styled.div`
   margin: 6rem 0;

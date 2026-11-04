@@ -19,9 +19,9 @@ import { normalizeErrorForDisplay } from "@/shared-module/common/errors/normaliz
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { coursePageRoute } from "@/shared-module/common/utils/routes"
 import { Button, Dialog, Spinner } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import useSearchPagesLiveRegion from "./useSearchPagesLiveRegion"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const HeaderBar = styled.div`
   display: flex;

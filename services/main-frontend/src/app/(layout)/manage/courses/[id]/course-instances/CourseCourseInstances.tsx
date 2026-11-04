@@ -9,6 +9,7 @@ import type { CourseManagementPagesProps } from "@/app/(layout)/manage/courses/[
 import useCourseInstancesQuery, { invalidateCourseInstances } from "@/hooks/useCourseInstancesQuery"
 import { baseTheme, headingFont } from "@/shared-module/common/styles"
 import { Button, Link, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   manageCourseInstanceEmailsPageRoute,
   manageCourseInstancePageRoute,
@@ -21,7 +22,6 @@ import {
 import ModuleCompletionReprocessButton from "./ModuleCompletionReprocessButton"
 import NewCourseInstanceDialog from "./NewCourseInstanceDialog"
 import PointExportButton from "./PointExportButton"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const containerStyles = css`
   max-width: 1200px;

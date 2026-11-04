@@ -5,6 +5,7 @@ import React, { useCallback, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
 import GenericInfobox from "@/shared-module/common/components/GenericInfobox"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { UserInformation } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types"
 import { COLUMN } from "@/util/constants"
 import type { FlexDirection } from "@/util/css-sanitization"
@@ -53,7 +54,6 @@ import MultipleChoiceDropdownFeedback from "./impl-by-quiz-item-type/MultipleCho
 import ScaleSubmissionViewComponent from "./impl-by-quiz-item-type/Scale"
 import Timeline from "./impl-by-quiz-item-type/Timeline"
 import type Unsupported from "./impl-by-quiz-item-type/Unsupported"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface SubmissionProps {
   user_answer: UserAnswer

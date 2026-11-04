@@ -18,11 +18,11 @@ import type { ChatbotConversation } from "@/generated/course-material-api/types.
 import OnlyRenderIfPermissions from "@/shared-module/common/components/OnlyRenderIfPermissions"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ConversationHistory from "./ConversationHistory"
 import { MobileSidebarButton } from "./sidebar/MobileSidebarButton"
 import MobileSidebarOverlay from "./sidebar/MobileSidebarOverlay"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface SideBarProps {
   setChatbotDialog: React.Dispatch<boolean>

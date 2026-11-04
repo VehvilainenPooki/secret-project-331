@@ -4,9 +4,9 @@ import { css } from "@emotion/css"
 import { useTranslation } from "react-i18next"
 
 import { Button, TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { useWizardTextField } from "../../hooks/useWizardStepFields"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const fieldStyles = css`
   display: flex;

@@ -7,6 +7,7 @@ import { useButton } from "react-aria"
 import { useTranslation } from "react-i18next"
 
 import { Dialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   currentlyOpenFeedbackDialogAtom,
   selectionAtom,
@@ -14,7 +15,6 @@ import {
 
 import ImprovementExample from "./ImprovementExample"
 import { FEEDBACK_DIALOG_CONTENT_ID } from "./SelectionListener"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const FeedbackTypeDialog: React.FC = () => {
   const { t } = useTranslation()

@@ -10,11 +10,11 @@ import { extractUserDetail, useUserDetails } from "@/hooks/useUserDetails"
 import { primaryFont } from "@/shared-module/common/styles"
 import { courseUserStatusSummaryRoute } from "@/shared-module/common/utils/routes"
 import { Link, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { CourseProgressSection } from "./CourseProgressSection"
 import { UserDetailsContent } from "./UserDetailsContent"
 import { UserDetailsPopover } from "./UserDetailsPopover"
-import { tones } from "@/shared-module/components/styles/themes"
 
 function hasName(value: string | null | undefined): boolean {
   return !!value && value.trim().length > 0

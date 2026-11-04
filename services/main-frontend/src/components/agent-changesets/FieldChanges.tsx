@@ -15,6 +15,7 @@ import type {
 import { fontWeights } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { ABSENT_LABEL, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 
 import BeforeAfterTabs from "./BeforeAfterTabs"
@@ -22,7 +23,6 @@ import BlockChanges from "./BlockChanges"
 import { DIFF_SIDE, type DiffSide } from "./blockDiff"
 import { StagedBlocks } from "./StagedPageContent"
 import { useEntityName } from "./useEntityName"
-import { tones } from "@/shared-module/components/styles/themes"
 
 function fieldLabels(t: TFunction): Record<EntityField, string> {
   return {

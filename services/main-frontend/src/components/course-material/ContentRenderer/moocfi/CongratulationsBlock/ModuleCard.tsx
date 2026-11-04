@@ -10,9 +10,9 @@ import FailedIcon from "@/img/course-material/failed-icon.svg"
 import Badge from "@/img/course-material/grade-badge.svg"
 import PassedIcon from "@/img/course-material/passed-icon.svg"
 import { headingFont, monospaceFont, typography } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import CongratulationsLinks from "./CongratulationsLinks"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   font-family: ${headingFont};

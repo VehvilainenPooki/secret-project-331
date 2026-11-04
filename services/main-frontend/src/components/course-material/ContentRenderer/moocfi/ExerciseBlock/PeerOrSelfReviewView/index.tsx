@@ -6,9 +6,9 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { CourseMaterialExercise } from "@/generated/course-material-api/types.generated"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import PeerOrSelfReviewViewImpl from "./PeerOrSelfReviewViewImpl"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface PeerOrSelfReviewViewProps {
   exerciseNumber: number

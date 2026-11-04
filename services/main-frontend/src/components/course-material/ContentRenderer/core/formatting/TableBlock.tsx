@@ -7,9 +7,9 @@ import type { CellAttributes, Cells, TableAttributes } from "@/../types/Gutenber
 import ParsedText from "@/components/course-material/ParsedText"
 import { stringToNumberOrPlaceholder } from "@/shared-module/common/utils/numbers"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from "../.."
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExtraAttributes {
   className?: string

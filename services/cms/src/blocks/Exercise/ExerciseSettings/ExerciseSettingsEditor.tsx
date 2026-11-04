@@ -10,6 +10,7 @@ import type { ExerciseAttributes } from "@/blocks/Exercise"
 import { getCmsCourseOptions } from "@/generated/api/@tanstack/react-query.generated"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Checkbox, Disclosure, TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import { optionalGeneratedQueryOptions } from "@/utils/optionalGeneratedQueryOptions"
 import { useAttributeForm } from "@/utils/useAttributeForm"
@@ -18,7 +19,6 @@ import { useTranslation } from "@/utils/useCmsTranslation"
 import PeerReviewEditor from "../../../components/PeerReviewEditor"
 import ExerciseBlockContext from "../../../contexts/ExerciseBlockContext"
 import PageContext from "../../../contexts/PageContext"
-import { tones } from "@/shared-module/components/styles/themes"
 
 interface SettingsValues {
   name: string

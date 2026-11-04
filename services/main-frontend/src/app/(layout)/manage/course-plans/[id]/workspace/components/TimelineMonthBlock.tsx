@@ -4,9 +4,9 @@ import { css } from "@emotion/css"
 import { format } from "date-fns"
 
 import { COURSE_PLAN_MONTH_ICONS } from "@/app/(layout)/manage/course-plans/monthIcons"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { StageMonth } from "../../schedule/scheduleMappers"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const timelineMonthBlockStyles = css`
   min-width: 84px;

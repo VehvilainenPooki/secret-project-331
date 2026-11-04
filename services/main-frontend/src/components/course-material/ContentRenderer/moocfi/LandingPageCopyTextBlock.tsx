@@ -6,10 +6,10 @@ import React from "react"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import Centered from "@/shared-module/common/components/Centering/Centered"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const Wrapper = styled.div`
   margin: 0.5rem auto;

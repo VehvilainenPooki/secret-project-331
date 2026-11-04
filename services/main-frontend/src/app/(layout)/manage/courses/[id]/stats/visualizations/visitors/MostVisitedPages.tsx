@@ -10,11 +10,11 @@ import { getCoursePageVisitDatumSummaryByPagesOptions } from "@/generated/api/@t
 import { useCourseStructure } from "@/hooks/useCourseStructure"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResults } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
 import NoDataMessage from "../NoDataMessage"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface MostVisitedPagesProps {
   courseId: string

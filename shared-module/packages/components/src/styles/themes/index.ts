@@ -92,7 +92,10 @@ export function resolveThemeVars(css: string, theme: Theme = lightTheme): string
       .map((declaration) => {
         const separator = declaration.indexOf(":")
         const name = declaration.slice(0, separator).trim()
-        const value = declaration.slice(separator + 1).trim().replace(/;$/, "")
+        const value = declaration
+          .slice(separator + 1)
+          .trim()
+          .replace(/;$/, "")
         return [name, value]
       }),
   )

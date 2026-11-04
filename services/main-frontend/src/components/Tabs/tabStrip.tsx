@@ -87,11 +87,7 @@ export function tabPillCss({
     cursor: ${isDisabled ? "not-allowed" : "pointer"};
     font-weight: ${isSelected ? fontWeights.semibold : fontWeights.medium};
     color: ${
-      isDisabled
-        ? tones.toneNeutral37
-        : isSelected
-          ? tones.toneAccent23
-          : tones.toneNeutral41
+      isDisabled ? tones.toneNeutral37 : isSelected ? tones.toneAccent23 : tones.toneNeutral41
     };
     background: ${isSelected ? tones.toneNeutral1 : "transparent"};
     ${

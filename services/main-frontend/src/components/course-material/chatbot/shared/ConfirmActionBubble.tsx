@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import type { ClientToolName } from "@/generated/course-material-api/types.generated"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ConfirmActionBubbleProps<TCall> extends ClientToolBubbleProps<TCall> {
   /** The tool this call belongs to, named by the per-tool wrapper that renders this bubble. */

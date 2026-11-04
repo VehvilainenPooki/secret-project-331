@@ -23,6 +23,7 @@ import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import { headingFont, primaryFont, typography } from "@/shared-module/common/styles"
 import { courseMaterialFrontPageHref } from "@/shared-module/common/utils/cross-routing"
 import { Button, Link, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   courseExerciseTasksCsvHref,
   courseInstancesCsvHref,
@@ -35,7 +36,6 @@ import {
 import CourseMetadata from "./CourseMetadata"
 import EditCourseForm from "./EditCourseForm"
 import UpdatePeerReviewQueueReviewsReceivedButton from "./UpdatePeerReviewQueueReviewsReceivedButton"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const actionsCss = css`
   display: flex;

@@ -7,11 +7,11 @@ import { cover as icon } from "@wordpress/icons"
 import React from "react"
 
 import { Checkbox } from "@/shared-module/components"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 import { useAttributeForm } from "@/utils/useAttributeForm"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import BackgroundImageSection from "./BackgroundImageSection"
-import { colors, tones } from "@/shared-module/components/styles/themes"
 
 const placeHolderFixHeightStyles = css`
   min-height: unset !important;

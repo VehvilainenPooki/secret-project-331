@@ -12,6 +12,7 @@ import AIChat from "@/img/course-material/ai-chat.svg"
 import SpeechBalloon from "@/shared-module/common/components/SpeechBalloon"
 import { textSelectionTooltipTestId } from "@/shared-module/common/styles/constants"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   defaultChatbotCommunicationChannel,
   defaultChatbotIsBusy,
@@ -20,7 +21,6 @@ import {
   currentlyOpenFeedbackDialogAtom,
   selectionAtom,
 } from "@/stores/course-material/materialFeedbackStore"
-import { tones } from "@/shared-module/components/styles/themes"
 
 export const TEXT_SELECTION_TOOLTIP_ID = "text-selection-tooltip"
 

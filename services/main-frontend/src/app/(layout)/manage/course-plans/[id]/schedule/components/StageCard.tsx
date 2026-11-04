@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseDesignerStage } from "@/generated/api/types.generated"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { StageMonth } from "../scheduleMappers"
 import MonthBlock from "./MonthBlock"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const stageCardStyles = css`
   border: 1px solid ${tones.toneNeutral35};

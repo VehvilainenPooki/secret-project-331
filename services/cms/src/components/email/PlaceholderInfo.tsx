@@ -166,7 +166,8 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
                 margin-bottom: 0.5rem;
                 border-radius: 4px;
                 background-color: ${isDetected ? "var(--tone-tone-accent-6)" : "var(--tone-tone-neutral-6)"};
-                border: 1px solid ${isDetected ? "var(--tone-tone-accent-8)" : "var(--tone-tone-neutral-27)"};
+                border: 1px solid
+                  ${isDetected ? "var(--tone-tone-accent-8)" : "var(--tone-tone-neutral-27)"};
                 font-size: 0.875rem;
               `}
             >

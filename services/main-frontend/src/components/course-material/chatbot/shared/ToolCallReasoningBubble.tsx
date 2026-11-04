@@ -10,11 +10,11 @@ import {
   zChatbotConversationMessageToolCall,
 } from "@/generated/course-material-api/zod.generated"
 import { Disclosure } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ChatbotConversationMessageWithStatus } from "./ChatbotChatBody"
 import ChatbotStatusRow from "./ChatbotStatusRow"
 import { ASK_MULTIPLE_CHOICE_QUESTION_TOOL } from "./multipleChoiceQuestions"
-import { tones } from "@/shared-module/components/styles/themes"
 
 const textStyle = css`
   padding: 0 0.5rem;
