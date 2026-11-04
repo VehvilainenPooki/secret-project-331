@@ -6,7 +6,7 @@ import { useId } from "react"
 import { useProgressBar } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme, headingFont, secondaryFont } from "@/shared-module/common/styles"
+import { headingFont, secondaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { INCLUDE_THIS_HEADING_IN_HEADINGS_NAVIGATION_CLASS } from "@/shared-module/common/utils/constants"
 import { Tooltip } from "@/shared-module/components"
@@ -14,6 +14,7 @@ import { Tooltip } from "@/shared-module/components"
 import ChartExplanationList from "./ChartExplanationList"
 import type { ChartExplanation, ChartPart } from "./progressText"
 import { helpButtonCss, progressColors } from "./progressTheme"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const StyledSVG = styled.div`
   position: relative;
@@ -36,7 +37,7 @@ const StyledSVG = styled.div`
     width: 100%;
     height: 100%;
     fill: none;
-    stroke: #b4cdcb;
+    stroke: var(--tone-fg-accent-1);
     stroke-width: 40px;
     transition: stroke-dashoffset 0.35s;
     transform: rotate(0deg);
@@ -47,7 +48,7 @@ const StyledSVG = styled.div`
   }
 
   svg circle:nth-of-type(3) {
-    stroke: #1f6964;
+    stroke: var(--tone-fg-accent-7);
   }
 
   p {
@@ -132,8 +133,8 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
             padding-bottom: 14px;
             font-weight: 500;
             font-size: 1.8rem;
-            border-bottom: 3px solid #e2e4e6;
-            color: ${baseTheme.colors.green[700]};
+            border-bottom: 3px solid var(--color-border);
+            color: ${tones.toneAccent23};
           `,
         )}
       >
@@ -163,7 +164,7 @@ const CircularProgress: React.FC<CircularProgressProps> = ({
               id="Ellipse_1"
               transform="translate(801 7718)"
               fill="#fff"
-              stroke={`${baseTheme.colors.green[700]}`}
+              stroke={`${tones.toneAccent23}`}
               strokeLinecap="round"
             >
               <circle cx="160" cy="160" r="160" />

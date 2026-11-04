@@ -47,32 +47,32 @@ export interface StatusBreakdownProps {
  */
 const segmentFillCss: Record<RegistrationStatusState, string> = {
   done: css`
-    background: var(--color-green-600);
+    background: var(--color-accent);
   `,
   current: css`
-    background: var(--color-blue-600);
+    background: var(--tone-bg-info-8);
   `,
   "action-needed": css`
-    background: var(--color-yellow-700);
+    background: var(--tone-bg-warning-7);
   `,
   failed: css`
-    background: var(--color-crimson-700);
+    background: var(--tone-bg-danger-14);
   `,
   superseded: css`
-    background: var(--color-gray-400);
+    background: var(--tone-bg-neutral-86);
   `,
   upcoming: css`
-    background: var(--color-gray-300);
+    background: var(--tone-bg-neutral-82);
   `,
 }
 
 const remainderFillCss = css`
   background: repeating-linear-gradient(
     45deg,
-    var(--color-gray-200) 0,
-    var(--color-gray-200) 4px,
-    var(--color-gray-100) 4px,
-    var(--color-gray-100) 8px
+    var(--tone-bg-neutral-79) 0,
+    var(--tone-bg-neutral-79) 4px,
+    var(--tone-bg-neutral-67) 4px,
+    var(--tone-bg-neutral-67) 8px
   );
 `
 
@@ -87,11 +87,11 @@ const barCss = css`
   width: 100%;
   height: 10px;
   border-radius: 999px;
-  background: var(--color-gray-100);
+  background: var(--tone-bg-neutral-67);
 
   /* Hairlines between slices: two adjacent fills of similar lightness otherwise read as one. */
   > span + span {
-    box-shadow: inset 1px 0 0 var(--color-clear-50);
+    box-shadow: inset 1px 0 0 var(--tone-shadow-neutral-1);
   }
 `
 
@@ -121,7 +121,7 @@ const swatchCss = css`
 `
 
 const countCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 `

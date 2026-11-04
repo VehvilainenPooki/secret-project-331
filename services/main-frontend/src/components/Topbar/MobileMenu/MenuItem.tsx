@@ -27,7 +27,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ item, onAction, onSubmenuOpe
           size={18}
           className={css`
             margin-left: auto;
-            color: #6b7280;
+            color: var(--tone-fg-neutral-20);
           `}
           aria-hidden="true"
         />

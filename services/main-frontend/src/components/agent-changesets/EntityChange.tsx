@@ -12,7 +12,7 @@ import type {
   PublishConflict,
   ReviewEntity,
 } from "@/generated/api/types.generated"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { agentChangesetPagePreviewRoute } from "@/shared-module/common/utils/routes"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Badge, Link, TONE } from "@/shared-module/components"
@@ -26,6 +26,7 @@ import FieldChanges from "./FieldChanges"
 import RiskReasonList from "./RiskReasonList"
 import StagedPageContent, { StagedBlocks } from "./StagedPageContent"
 import { useEntityName } from "./useEntityName"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /** An entity's heading, such as "Page: Variables"; the course default review config has no name. */
 export function useEntityTitle() {
@@ -214,10 +215,10 @@ const EntityChange: React.FC<EntityChangeProps> = ({
       data-testid="agent-entity-change"
       aria-labelledby={headingId}
       className={css`
-        border: 1px solid ${baseTheme.colors.gray[200]};
+        border: 1px solid ${tones.toneNeutral35};
         border-radius: 8px;
         padding: 1.25rem;
-        background: ${baseTheme.colors.gray[25]};
+        background: ${tones.toneNeutral3};
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -236,7 +237,7 @@ const EntityChange: React.FC<EntityChangeProps> = ({
           className={css`
             font-size: 1.125rem;
             font-weight: ${fontWeights.semibold};
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             margin: 0;
             margin-right: auto;
           `}

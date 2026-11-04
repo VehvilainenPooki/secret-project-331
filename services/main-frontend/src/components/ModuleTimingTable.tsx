@@ -13,7 +13,7 @@ const EMPTY_CELL = "—"
 
 export const moduleTimingLegendCss = css`
   margin: 0.25rem 0 0;
-  color: var(--color-gray-500, #535a66);
+  color: var(--color-gray-500, var(--color-text-muted));
   font-size: 0.85rem;
 `
 

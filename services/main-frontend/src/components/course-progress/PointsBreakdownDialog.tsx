@@ -13,7 +13,7 @@ import type {
   ExercisePointsStatus,
   PagePointsBreakdown,
 } from "@/generated/course-material-api/types.generated"
-import { baseTheme, headingFont, secondaryFont } from "@/shared-module/common/styles"
+import { headingFont, secondaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Dialog, Link, type LinkAppearance, QueryResult } from "@/shared-module/components"
 import { formatPoints } from "@/utils/completionThresholds"
@@ -21,6 +21,7 @@ import { coursePageSectionRoute } from "@/utils/course-material/routing"
 
 import { hasChartMax, type ProgressMeasure } from "./progressText"
 import { INLINE_ELEMENT, progressColors } from "./progressTheme"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /** Which course instance a module's points breakdown is for, and where its exercise links lead. */
 export interface CourseInstanceLocation {
@@ -498,7 +499,7 @@ const pageHeadingCss = css`
   min-width: 0;
   margin: 0;
   font: 600 0.9375rem/1.35 ${headingFont};
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 const exerciseListCss = css`
@@ -515,10 +516,10 @@ const exerciseRowCss = css`
   /* Less the inset, so the points column lines up with the page head's. */
   padding: 0.75rem calc(var(--row-padding-inline) - var(--row-inset));
   border-radius: 0.375rem;
-  background: var(--color-clear-50);
+  background: var(--color-surface);
 
   &:hover {
-    background: ${baseTheme.colors.blue[75]};
+    background: ${tones.toneInfo4};
   }
 
   &:has(a:focus-visible) {
@@ -539,16 +540,16 @@ const positionCss = css`
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  background: ${baseTheme.colors.blue[100]};
+  background: ${tones.toneInfo5};
   font-size: 0.75rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 const fullPointsPositionCss = css`
   background: ${progressColors.fill};
-  color: var(--color-clear-50);
+  color: var(--color-text-on-accent);
 `
 
 const exerciseTextCss = css`

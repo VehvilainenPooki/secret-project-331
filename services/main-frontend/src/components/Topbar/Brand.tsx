@@ -11,7 +11,7 @@ const StyledIcon = css`
   font-size: 1.8rem;
 
   path {
-    color: #4b5563 !important;
+    color: var(--tone-fg-info-12) !important;
   }
 `
 
@@ -32,10 +32,10 @@ const Brand: React.FC = () => {
 
           &:hover,
           &[data-hovered] {
-            background: #f3f4f6;
+            background: var(--tone-bg-neutral-35);
           }
           &[data-focus-visible] {
-            box-shadow: 0 0 0 2px #111827;
+            box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
           }
         `}
       >
@@ -43,8 +43,8 @@ const Brand: React.FC = () => {
       </AriaLink>
       <Tooltip
         className={css`
-          background: #111827;
-          color: #fff;
+          background: var(--tone-bg-neutral-92);
+          color: var(--color-text-on-accent);
           padding: 4px 8px;
           border-radius: 6px;
           font-size: 12px;

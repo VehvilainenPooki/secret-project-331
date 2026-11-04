@@ -4,7 +4,7 @@ import { css, cx } from "@emotion/css"
 import React, { useId, useMemo, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
 import type { Block } from "@/types/courseMaterialBlock"
 
@@ -17,6 +17,7 @@ import {
   type VisibleDiffRow,
   visibleRows,
 } from "./blockDiff"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /** Which version of the content blocks come from, for blocks that read their page. */
 export type BlocksVersion = typeof DIFF_SIDE.BEFORE | typeof DIFF_SIDE.AFTER
@@ -27,27 +28,27 @@ const listCss = css`
   gap: 1rem;
 
   ins {
-    color: ${baseTheme.colors.green[800]};
-    background: ${baseTheme.colors.green[100]};
+    color: ${tones.toneAccent25};
+    background: ${tones.toneAccent7};
   }
 
   del {
-    color: ${baseTheme.colors.red[800]};
-    background: ${baseTheme.colors.red[100]};
+    color: ${tones.toneDanger20};
+    background: ${tones.toneDanger2};
   }
 `
 
 const markedBlockCss = css`
-  border-left: 3px solid ${baseTheme.colors.gray[200]};
+  border-left: 3px solid ${tones.toneNeutral35};
   padding-left: 0.75rem;
 `
 
 const addedBlockCss = css`
-  border-left-color: ${baseTheme.colors.green[600]};
+  border-left-color: ${tones.toneAccent21};
 `
 
 const removedBlockCss = css`
-  border-left-color: ${baseTheme.colors.red[600]};
+  border-left-color: ${tones.toneDanger17};
 `
 
 const fadedCss = css`
@@ -58,7 +59,7 @@ const labelCss = css`
   margin: 0 0 0.25rem 0;
   font-size: 0.875rem;
   font-weight: ${fontWeights.semibold};
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 const MARK = {
@@ -94,7 +95,7 @@ const MarkedBlock: React.FC<MarkedBlockProps> = ({ marks, children }) => {
             className={cx(
               symbolCss("+"),
               css`
-                color: ${baseTheme.colors.green[700]};
+                color: ${tones.toneAccent23};
               `,
             )}
           >
@@ -107,7 +108,7 @@ const MarkedBlock: React.FC<MarkedBlockProps> = ({ marks, children }) => {
             className={cx(
               symbolCss("−"),
               css`
-                color: ${baseTheme.colors.red[700]};
+                color: ${tones.toneDanger19};
               `,
             )}
           >
@@ -154,9 +155,9 @@ const UnchangedBlocks: React.FC<UnchangedBlocksProps> = ({ blocks, render }) => 
           display: flex;
           align-items: center;
           gap: 0.75rem;
-          color: ${baseTheme.colors.gray[600]};
-          border-top: 1px dashed ${baseTheme.colors.gray[200]};
-          border-bottom: 1px dashed ${baseTheme.colors.gray[200]};
+          color: ${tones.toneNeutral44};
+          border-top: 1px dashed ${tones.toneNeutral35};
+          border-bottom: 1px dashed ${tones.toneNeutral35};
           padding: 0.25rem 0;
         `}
       >

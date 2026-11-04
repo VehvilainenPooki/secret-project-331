@@ -7,7 +7,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import PseudoContentLink from "@/components/PseudoContentLink"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { cardMaxWidth } from "@/shared-module/common/styles/constants"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { dateToString } from "@/shared-module/common/utils/time"
@@ -16,6 +16,7 @@ import type { CardExtraProps } from "."
 import CardDeadlineOverlay, { cardTopBandStyle } from "./CardDeadlineOverlay"
 import CardOpensText from "./CardOpensText"
 import CardOpensTextOverlay from "./CardOpenTextOverlay"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface BackgroundProps {
   bg: string | undefined
@@ -42,7 +43,7 @@ const CardContentWrapper = styled.div`
     font-weight: 600;
     z-index: 20;
     line-height: 1.2;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     margin-top: 5px;
     font-size: clamp(26px, 2.2vw, 30px);
     opacity: 0.9;
@@ -100,7 +101,7 @@ const IllustrationCard: React.FC<React.PropsWithChildren<CardProps>> = ({
         border-radius: 1px;
         position: relative;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        background: #f2f2f2;
+        background: var(--tone-bg-neutral-40);
         aspect-ratio: 1/1;
         padding: 10px;
       `}
@@ -136,8 +137,8 @@ const IllustrationCard: React.FC<React.PropsWithChildren<CardProps>> = ({
           {isLocked && (
             <div
               className={css`
-                color: #fff;
-                background: rgba(0, 0, 0, 0.5);
+                color: var(--color-text-on-accent);
+                background: var(--tone-bg-neutral-85);
                 padding: 0.5rem;
                 border-radius: 50%;
                 display: flex;
@@ -152,8 +153,8 @@ const IllustrationCard: React.FC<React.PropsWithChildren<CardProps>> = ({
           {points && (
             <div
               className={css`
-                background: rgba(0, 0, 0, 0.5);
-                color: #fff;
+                background: var(--tone-bg-neutral-85);
+                color: var(--color-text-on-accent);
                 padding: 0.4rem 0.8rem;
                 border-radius: 0.5rem;
                 font-size: 0.875rem;
@@ -173,8 +174,8 @@ const IllustrationCard: React.FC<React.PropsWithChildren<CardProps>> = ({
               top: 1rem;
               left: 1rem;
               z-index: 102;
-              color: #fff;
-              background: rgba(0, 0, 0, 0.5);
+              color: var(--color-text-on-accent);
+              background: var(--tone-bg-neutral-85);
               padding: 0.5rem;
               border-radius: 50%;
               display: flex;
@@ -210,7 +211,7 @@ const IllustrationCard: React.FC<React.PropsWithChildren<CardProps>> = ({
           className={css`
             flex: 1 1 auto;
             padding: 1rem;
-            background: #fff;
+            background: var(--color-surface);
 
             ${respondToOrLarger.md} {
               padding: 1.6rem 1.25rem;
@@ -237,9 +238,9 @@ const IllustrationCard: React.FC<React.PropsWithChildren<CardProps>> = ({
                     font-family: ${headingFont};
                     min-width: 18px;
                     font-weight: 500;
-                    color: ${baseTheme.colors.blue[600]} !important;
-                    background: #edf1f4;
-                    border: 3px solid #fff;
+                    color: ${tones.toneInfo23} !important;
+                    background: var(--tone-bg-neutral-44);
+                    border: 3px solid var(--tone-border-neutral-1);
                     border-radius: 20px;
                     font-size: 0.7rem;
                     padding: 0.2rem 0.6rem 0.3rem 0.6rem;
@@ -271,9 +272,9 @@ const IllustrationCard: React.FC<React.PropsWithChildren<CardProps>> = ({
                     font-family: ${headingFont};
                     min-width: 18px;
                     font-weight: 500;
-                    color: ${baseTheme.colors.blue[600]} !important;
-                    background: #edf1f4;
-                    border: 3px solid #fff;
+                    color: ${tones.toneInfo23} !important;
+                    background: var(--tone-bg-neutral-44);
+                    border: 3px solid var(--tone-border-neutral-1);
                     border-radius: 20px;
                     font-size: 0.7rem;
                     padding: 0.2rem 0.6rem 0.3rem 0.6rem;

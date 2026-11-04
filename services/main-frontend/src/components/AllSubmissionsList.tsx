@@ -6,10 +6,10 @@ import { useTranslation } from "react-i18next"
 
 import { LINK_INHERIT } from "@/components/credit-registration/constants"
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
-import { baseTheme } from "@/shared-module/common/styles"
 import { narrowContainerWidthRem } from "@/shared-module/common/styles/constants"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { LoadingRegion, ErrorNotice, Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Submission {
   id: string
@@ -45,7 +45,7 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
           margin-bottom: 1.5rem;
           font-size: 1.5rem;
           font-weight: 600;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
         `}
       >
         {t("all-submissions-by-user")}
@@ -89,18 +89,18 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
                       border: 2px solid
                         ${
                           isCurrentSubmission
-                            ? baseTheme.colors.green[500]
-                            : baseTheme.colors.gray[200]
+                            ? tones.toneAccent19
+                            : tones.toneNeutral35
                         };
                       background-color: ${
                         isCurrentSubmission
-                          ? baseTheme.colors.green[100]
-                          : baseTheme.colors.clear[100]
+                          ? tones.toneAccent7
+                          : tones.toneNeutral12
                       };
                       position: relative;
 
                       &:hover {
-                        border-color: ${baseTheme.colors.blue[400]};
+                        border-color: ${tones.toneInfo11};
                       }
                     `}
                   >
@@ -110,8 +110,8 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
                           position: absolute;
                           top: -8px;
                           right: 12px;
-                          background-color: ${baseTheme.colors.blue[600]};
-                          color: white;
+                          background-color: ${tones.toneInfo23};
+                          color: var(--color-text-on-accent);
                           padding: 0.25rem 0.75rem;
                           border-radius: 12px;
                           font-size: 0.75rem;
@@ -130,8 +130,8 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
                           position: absolute;
                           top: -8px;
                           left: 12px;
-                          background-color: ${baseTheme.colors.green[600]};
-                          color: white;
+                          background-color: ${tones.toneAccent21};
+                          color: var(--color-text-on-accent);
                           padding: 0.25rem 0.75rem;
                           border-radius: 12px;
                           font-size: 0.75rem;
@@ -156,7 +156,7 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
                         <div
                           className={css`
                             font-weight: 600;
-                            color: ${baseTheme.colors.gray[600]};
+                            color: ${tones.toneNeutral44};
                             margin-bottom: 0.25rem;
                           `}
                         >
@@ -168,7 +168,7 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
                         <div
                           className={css`
                             font-size: 0.875rem;
-                            color: ${baseTheme.colors.gray[600]};
+                            color: ${tones.toneNeutral44};
                           `}
                         >
                           {dateToString(submission.created_at)}
@@ -183,7 +183,7 @@ const AllSubmissionsList: React.FC<AllSubmissionsListProps> = ({
                         <div
                           className={css`
                             font-weight: 600;
-                            color: ${baseTheme.colors.gray[700]};
+                            color: ${tones.toneNeutral46};
                             font-size: 0.875rem;
                           `}
                         >

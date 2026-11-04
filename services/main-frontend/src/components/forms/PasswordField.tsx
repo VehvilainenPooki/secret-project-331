@@ -90,7 +90,7 @@ export function PasswordField<T extends FieldValues, N extends Path<T> = Path<T>
                   y1="16.5"
                   x2="16.5"
                   y2="3.5"
-                  stroke="var(--field-bg, #ffffff)"
+                  stroke="var(--field-bg, var(--tone-tone-neutral-1))"
                   strokeWidth={3.5}
                   strokeLinecap="round"
                 />

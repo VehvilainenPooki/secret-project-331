@@ -25,7 +25,7 @@ const ExerciseCardTriesBadge: React.FC<React.PropsWithChildren<ExerciseCardTries
         exerciseCardPillShell,
         css`
           .heading {
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             font-size: 12px;
             display: inline-block;
             margin-bottom: 2px;
@@ -34,7 +34,7 @@ const ExerciseCardTriesBadge: React.FC<React.PropsWithChildren<ExerciseCardTries
           .tries {
             font-family: ${headingFont} !important;
             display: flex;
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             font-size: 14px;
             font-weight: 500;
             line-height: 0.8;

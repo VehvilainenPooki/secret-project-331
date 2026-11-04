@@ -8,11 +8,11 @@ import Link from "next/link"
 import React, { useRef } from "react"
 import { useFocusRing, useHover, useTab, VisuallyHidden } from "react-aria"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { includeIf, omitUndefined } from "@/shared-module/common/utils/nullability"
 
 import { tabPillCss } from "../../Tabs/tabStrip"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 /** How loud a tab's count is: `danger` is for a backlog someone has to work through. */
 export type RouteTabCountTone = "neutral" | "danger"
@@ -41,19 +41,19 @@ const dotCss = css`
   height: 8px;
   margin-left: 4px;
   border-radius: 50%;
-  background: ${baseTheme.colors.red[600]};
+  background: ${tones.toneDanger17};
 `
 
 const COUNT_TONE = {
   neutral: {
-    background: baseTheme.colors.gray[100],
-    text: baseTheme.colors.gray[700],
-    spinner: baseTheme.colors.gray[400],
+    background: tones.bgNeutral67,
+    text: colors.text,
+    spinner: tones.toneNeutral39,
   },
   danger: {
-    background: baseTheme.colors.red[600],
-    text: baseTheme.colors.primary[100],
-    spinner: baseTheme.colors.red[400],
+    background: tones.bgDanger13,
+    text: colors.textOnAccent,
+    spinner: tones.toneDanger10,
   },
 } satisfies Record<RouteTabCountTone, { background: string; text: string; spinner: string }>
 

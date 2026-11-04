@@ -19,7 +19,7 @@ import type {
 } from "@/generated/api/types.generated"
 import { showSuccessNotification } from "@/shared-module/common/components/Notifications/notificationHelpers"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Button, ConfirmDialog, ErrorNotice, Infobox, TONE } from "@/shared-module/components"
 
@@ -33,11 +33,12 @@ import EntityChange, {
 } from "./EntityChange"
 import PublishOutcomeNotice, { RejectionNotice } from "./PublishOutcomeNotice"
 import { sortReviewEntities } from "./sortReviewEntities"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const sectionHeadingCss = css`
   font-size: 1.25rem;
   font-weight: ${fontWeights.semibold};
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   margin: 0;
 `
 
@@ -178,7 +179,7 @@ const ChangesetReview: React.FC<ChangesetReviewProps> = ({
           <p
             className={css`
               margin: 0;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
             `}
           >
             {t("agent-changeset-summary", {
@@ -241,8 +242,8 @@ const ChangesetReview: React.FC<ChangesetReviewProps> = ({
               flex-wrap: wrap;
               gap: 0.75rem;
               padding: 0.75rem 0;
-              background: ${baseTheme.colors.clear[100]};
-              border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+              background: ${tones.toneNeutral12};
+              border-bottom: 1px solid ${tones.toneNeutral29};
             `}
           >
             <Button

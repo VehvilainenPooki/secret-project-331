@@ -30,17 +30,17 @@ const itemRow = css`
   padding: 10px 12px;
   text-decoration: none !important;
   outline: none;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--tone-bg-neutral-16);
+  border: 1px solid var(--tone-border-neutral-13);
   cursor: pointer;
 
   &:where([data-hovered], [data-focused]) {
-    background: #f3f4f6;
-    border-color: #d1d5db;
+    background: var(--tone-bg-neutral-35);
+    border-color: var(--tone-border-neutral-35);
   }
 
   &[data-focus-visible] {
-    outline: 2px solid #111827;
+    outline: 2px solid var(--tone-border-neutral-61);
     outline-offset: 2px;
   }
 
@@ -53,21 +53,21 @@ const itemRow = css`
 `
 
 const selectedItem = css`
-  background: var(--color-green-75);
-  border-color: var(--color-green-300);
+  background: var(--tone-bg-accent-3);
+  border-color: var(--tone-border-accent-6);
 
   &:where([data-hovered], [data-focused]) {
-    background: var(--color-green-100);
-    border-color: var(--color-green-400);
+    background: var(--tone-bg-accent-4);
+    border-color: var(--tone-border-accent-8);
   }
 `
 
 const selectedText = css`
-  color: var(--color-green-800);
+  color: var(--tone-fg-accent-11);
 `
 
 const selectedSubtext = css`
-  color: var(--color-green-600);
+  color: var(--tone-fg-accent-7);
 `
 
 const textCol = css`
@@ -79,7 +79,7 @@ const textCol = css`
 const primaryLine = css`
   font-size: 14px;
   font-weight: 600;
-  color: #111827;
+  color: var(--tone-fg-neutral-40);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -87,7 +87,7 @@ const primaryLine = css`
 
 const secondaryLine = css`
   font-size: 12px;
-  color: #6b7280;
+  color: var(--tone-fg-neutral-20);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -102,7 +102,7 @@ const checkCell = css`
   flex: 0 0 20px;
   font-size: 14px;
   font-weight: bold;
-  color: var(--color-green-700);
+  color: var(--tone-fg-accent-8);
 `
 
 const footerMessage = css`
@@ -111,8 +111,8 @@ const footerMessage = css`
   text-align: center;
   font-size: 13px;
   font-weight: 600;
-  color: #9ca3af;
-  border-top: 1px solid #e5e7eb;
+  color: var(--tone-fg-neutral-11);
+  border-top: 1px solid var(--tone-border-neutral-13);
   letter-spacing: 0.02em;
   font-style: italic;
   white-space: normal;
@@ -185,7 +185,7 @@ const LanguageMenuWithHook: React.FC<
           className={css`
             font-size: 14px;
             font-weight: 600;
-            color: #111827;
+            color: var(--tone-fg-neutral-40);
           `}
         >
           {activeNative}
@@ -198,12 +198,12 @@ const LanguageMenuWithHook: React.FC<
         lang={currentLanguage}
         dir={getDir(currentLanguage)}
         className={css`
-          background: #fff;
-          border: 1px solid #e5e7eb;
+          background: var(--color-surface);
+          border: 1px solid var(--tone-border-neutral-13);
           border-radius: 12px;
           padding: 6px;
           min-width: 260px;
-          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 12px 32px var(--tone-shadow-neutral-13);
           z-index: 999;
           max-width: 300px;
           width: 90vw;

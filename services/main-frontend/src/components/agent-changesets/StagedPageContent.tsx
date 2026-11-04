@@ -25,10 +25,11 @@ import type {
 } from "@/generated/api/types.generated"
 import type { Page } from "@/generated/course-material-api/types.generated"
 import PagesInChapterBox from "@/shared-module/common/components/PagesInChapterBox"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { viewParamsAtom } from "@/state/course-material/params"
 import { inlineColorStyles } from "@/styles/course-material/inlineColorStyles"
 import type { Block } from "@/types/courseMaterialBlock"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /** Blocks that show data about the student viewing them; the preview names them instead. */
 const STUDENT_SPECIFIC_BLOCKS = [
@@ -53,12 +54,12 @@ const STUDENT_SPECIFIC_CONTAINERS = [
 ]
 
 const placeholderCss = css`
-  border: 2px dashed ${baseTheme.colors.gray[300]};
+  border: 2px dashed ${tones.toneNeutral37};
   border-radius: 0.5rem;
   padding: 1rem 1.25rem;
   font-family: ${headingFont};
   font-size: 1rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 /** A block's name as teachers know it, instead of its internal id. */

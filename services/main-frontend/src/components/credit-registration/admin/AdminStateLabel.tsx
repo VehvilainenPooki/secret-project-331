@@ -27,22 +27,22 @@ export const STATE_ICON_SIZE = 16
  */
 export const TONE_INK: Record<RegistrationStatusState, string> = {
   done: css`
-    color: var(--color-green-700);
+    color: var(--tone-fg-accent-8);
   `,
   current: css`
-    color: var(--color-blue-600);
+    color: var(--tone-fg-info-11);
   `,
   "action-needed": css`
-    color: var(--color-red-700);
+    color: var(--tone-fg-danger-10);
   `,
   failed: css`
-    color: var(--color-crimson-700);
+    color: var(--tone-fg-danger-14);
   `,
   superseded: css`
-    color: var(--color-gray-400);
+    color: var(--tone-fg-neutral-16);
   `,
   upcoming: css`
-    color: var(--color-gray-400);
+    color: var(--tone-fg-neutral-16);
   `,
 }
 

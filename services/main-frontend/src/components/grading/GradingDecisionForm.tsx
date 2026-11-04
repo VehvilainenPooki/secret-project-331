@@ -72,8 +72,8 @@ const pointsFieldCss = css`
 
 /* The icon variant's muted grey is too faint for a 2px-stroke glyph this small. */
 const arrowButtonCss = css`
-  --btn-icon-fg: var(--color-gray-700);
-  --btn-icon-fg-hover: var(--color-green-700);
+  --btn-icon-fg: var(--color-text);
+  --btn-icon-fg-hover: var(--tone-tone-accent-23);
 `
 
 const scaleCss = css`
@@ -84,7 +84,7 @@ const scaleCss = css`
   padding: 0 0.625rem;
   font-size: var(--font-size-1);
   font-variant-numeric: tabular-nums;
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
 `
 
 const trackCss = css`
@@ -115,17 +115,17 @@ const reasonGroupCss = css`
 
 const reasonCss = css`
   padding: 0.75rem 0.875rem;
-  border: 1px solid var(--color-clear-400);
+  border: 1px solid var(--tone-border-neutral-31);
   border-radius: var(--control-radius);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
   transition: border-color 160ms ease;
 
   &:hover {
-    border-color: var(--color-gray-300);
+    border-color: var(--tone-border-neutral-52);
   }
 
   &:has(input:checked) {
-    border-color: var(--color-green-600);
+    border-color: var(--tone-border-accent-10);
   }
 `
 
@@ -134,9 +134,9 @@ const resetBlockCss = css`
   flex-direction: column;
   gap: 0.75rem;
   padding: 0.875rem 1rem;
-  border: 1px solid var(--color-crimson-200);
+  border: 1px solid var(--tone-border-danger-3);
   border-radius: var(--control-radius);
-  background: var(--color-crimson-50);
+  background: var(--tone-bg-danger-2);
 `
 
 const footerCss = css`

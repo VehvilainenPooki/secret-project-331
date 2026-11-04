@@ -19,7 +19,7 @@ const faqCss = css`
 
 const faqTitleCss = css`
   margin: 0;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-weight: 600;
 `

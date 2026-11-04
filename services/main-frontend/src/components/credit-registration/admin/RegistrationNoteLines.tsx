@@ -12,7 +12,7 @@ import { formatZonedTimestamp } from "../ZonedTimestamp"
 import { actorName } from "./actorName"
 
 const noteTextCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   white-space: pre-line;
   overflow-wrap: anywhere;
 `

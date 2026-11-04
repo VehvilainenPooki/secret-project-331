@@ -16,12 +16,12 @@ import {
 import type { PageSearchResult } from "@/generated/course-material-api/types.generated"
 import { isAbortError } from "@/shared-module/common/errors/AppApiError"
 import { normalizeErrorForDisplay } from "@/shared-module/common/errors/normalizeErrorForDisplay"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { coursePageRoute } from "@/shared-module/common/utils/routes"
 import { Button, Dialog, Spinner } from "@/shared-module/components"
 
 import useSearchPagesLiveRegion from "./useSearchPagesLiveRegion"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const HeaderBar = styled.div`
   display: flex;
@@ -70,7 +70,7 @@ const EmptyState = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   text-align: center;
   transition: padding 0.2s ease;
 `
@@ -78,24 +78,24 @@ const EmptyState = styled.div`
 const ResultCard = styled.div`
   /* Positioning context for the stretched heading link, which makes the whole card clickable. */
   position: relative;
-  background: #ffffff;
+  background: var(--color-surface);
   margin-bottom: 0.5rem;
   padding: 1rem;
   border-radius: 6px;
   transition: all 0.2s ease;
-  border: 1px solid ${baseTheme.colors.gray[100]};
+  border: 1px solid ${tones.toneNeutral29};
 
   &:hover,
   &:focus-within {
-    background: ${baseTheme.colors.green[100]};
-    border-color: ${baseTheme.colors.green[200]};
+    background: ${tones.toneAccent7};
+    border-color: ${tones.toneAccent9};
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 8px var(--tone-shadow-neutral-6);
   }
 
   .chapter-name {
     font-size: 0.75rem;
-    color: ${baseTheme.colors.gray[500]};
+    color: ${tones.toneNeutral41};
     margin: 0 0 0.25rem;
     line-height: 1.4;
   }
@@ -114,7 +114,7 @@ const ResultCard = styled.div`
     font-size: 0.875rem;
     margin: 0;
     line-height: 1.5;
-    color: ${baseTheme.colors.gray[600]};
+    color: ${tones.toneNeutral44};
 
     ${respondToOrLarger.md} {
       font-size: 0.875rem;
@@ -136,28 +136,28 @@ const ResultHeadingLink = styled(Link)`
   }
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 `
 
 const StyledInput = styled.input`
   display: flex;
-  background: #ffffff;
+  background: var(--color-surface);
   width: 100%;
   padding: 0 3.5rem;
   height: 56px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px var(--tone-shadow-neutral-7);
   border-radius: 8px;
   border: none;
-  outline: 1px solid ${baseTheme.colors.gray[200]};
+  outline: 1px solid ${tones.toneNeutral35};
   margin-right: 0.5rem;
   font-size: 1rem;
   transition: all 0.2s ease;
 
   &:focus {
-    outline: 2px solid ${baseTheme.colors.green[400]};
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    outline: 2px solid ${tones.toneAccent16};
+    box-shadow: 0 12px 24px var(--tone-shadow-neutral-10);
   }
 `
 
@@ -166,7 +166,7 @@ const SearchIcon = styled(MagnifyingGlass)`
   left: 1.5rem;
   top: 50%;
   transform: translateY(-50%);
-  color: ${baseTheme.colors.gray[400]};
+  color: ${tones.toneNeutral39};
   transition: color 0.2s ease;
 `
 
@@ -175,7 +175,7 @@ const StyledIcon = css`
     cursor: pointer;
   }
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 `
@@ -369,9 +369,9 @@ const SearchButton: React.FC<SearchButtonProps> = ({ courseId, organizationSlug 
               <div
                 className={css`
                   padding: 1rem;
-                  background-color: ${baseTheme.colors.red[100]};
-                  border-left: 4px solid ${baseTheme.colors.red[500]};
-                  color: ${baseTheme.colors.red[700]};
+                  background-color: ${tones.toneDanger2};
+                  border-left: 4px solid ${tones.toneDanger15};
+                  color: ${tones.toneDanger19};
                   margin-bottom: 1rem;
                   border-radius: 4px;
                 `}
@@ -428,7 +428,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({ courseId, organizationSlug 
                         <div
                           className={css`
                             font-size: 0.75rem;
-                            color: ${baseTheme.colors.gray[500]};
+                            color: ${tones.toneNeutral41};
                             margin: 0 0 0.25rem;
                             line-height: 1.4;
                           `}
@@ -439,7 +439,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({ courseId, organizationSlug 
                     {result.content_headline && (
                       <p
                         className={css`
-                          color: #5a5757;
+                          color: var(--tone-fg-neutral-28);
                         `}
                         dangerouslySetInnerHTML={{
                           __html: result.content_headline,

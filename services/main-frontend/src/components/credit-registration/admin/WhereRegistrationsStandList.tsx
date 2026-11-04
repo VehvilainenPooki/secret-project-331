@@ -31,8 +31,8 @@ const groupsCss = css`
 const groupNameCss = css`
   display: block;
   padding-bottom: var(--space-2);
-  border-bottom: 1px solid var(--color-clear-300);
-  color: var(--color-gray-700);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
   font-size: var(--font-size-1);
   font-weight: 600;
 `
@@ -50,13 +50,13 @@ const rowLinkCss = css`
   align-items: baseline;
   justify-content: space-between;
   padding: var(--space-2) var(--space-3) var(--space-2) var(--space-4-5);
-  border-bottom: 1px solid var(--color-clear-300);
-  color: var(--color-gray-700);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
   font-size: var(--font-size-1);
   text-decoration: none;
 
   &:hover {
-    background: var(--color-clear-100);
+    background: var(--color-surface-sunken);
   }
   &:hover > span:last-child {
     text-decoration: underline;
@@ -85,7 +85,7 @@ const labelCss = css`
 const attentionIconCss = css`
   flex: none;
   margin-top: 0.2em;
-  color: var(--color-crimson-600);
+  color: var(--tone-fg-danger-12);
 `
 
 const countCss = css`

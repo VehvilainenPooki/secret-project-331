@@ -15,17 +15,17 @@ const chipCss = css`
   align-items: baseline;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-3-5);
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: 999px;
-  background: var(--color-clear-50);
-  color: var(--color-gray-700);
+  background: var(--color-surface);
+  color: var(--color-text);
   font-size: var(--font-size-1);
   font-weight: 500;
   line-height: 1.2;
   cursor: pointer;
 
   &:hover {
-    border-color: var(--color-gray-300);
+    border-color: var(--tone-border-neutral-52);
   }
 
   &:focus-visible {
@@ -36,25 +36,25 @@ const chipCss = css`
 
 // Three cues at once, because a facet row is read by scanning: fill, border weight and type weight.
 const selectedChipCss = css`
-  border-color: var(--color-blue-600);
-  box-shadow: inset 0 0 0 1px var(--color-blue-600);
-  background: var(--color-blue-50);
-  color: var(--color-blue-800);
+  border-color: var(--tone-border-info-9);
+  box-shadow: inset 0 0 0 1px var(--tone-shadow-info-16);
+  background: var(--tone-bg-info-2);
+  color: var(--tone-fg-info-20);
   font-weight: 700;
 
   &:hover {
-    border-color: var(--color-blue-700);
+    border-color: var(--tone-border-info-12);
   }
 `
 
 const countCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-variant-numeric: tabular-nums;
   font-weight: 500;
 `
 
 const selectedCountCss = css`
-  color: var(--color-blue-700);
+  color: var(--color-link);
 `
 
 /**

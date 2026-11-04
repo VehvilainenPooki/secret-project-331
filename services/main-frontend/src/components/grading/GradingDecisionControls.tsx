@@ -24,11 +24,11 @@ const rootCss = css`
 `
 
 const headingCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   margin: 0;
   font-size: var(--font-size-3);
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--color-gray-100);
+  border-bottom: 1px solid var(--tone-border-neutral-27);
 `
 
 /** Fully inline grading controls: no popover, no dialog. Used on the manual-review list page. */

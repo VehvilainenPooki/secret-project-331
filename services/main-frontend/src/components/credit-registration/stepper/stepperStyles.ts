@@ -27,7 +27,7 @@ export const HIDDEN_INLINE = "span"
 
 export const pageHeadingCss = css`
   margin: 0;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-4);
   font-weight: 600;
   line-height: 1.3;
@@ -35,18 +35,18 @@ export const pageHeadingCss = css`
 
 export const sectionTitleCss = css`
   margin: 0;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-3);
   font-weight: 600;
   line-height: 1.3;
 `
 
 export const leadCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 export const captionCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
 `
 
@@ -57,7 +57,7 @@ export const captionCss = css`
  */
 export const noteBoxCss = css`
   padding: var(--space-3-5) var(--space-4);
-  border: 1px solid var(--color-clear-400);
+  border: 1px solid var(--tone-border-neutral-31);
   border-radius: var(--surface-radius);
 
   & > :not(:first-child) {
@@ -77,7 +77,7 @@ export const footerCss = css`
   align-items: center;
   margin-top: var(--space-3);
   padding-top: var(--space-4);
-  border-top: 1px solid var(--color-clear-300);
+  border-top: 1px solid var(--color-border);
 `
 
 export const fullWidthCss = css`
@@ -90,8 +90,8 @@ const digitCircleCss = css`
   flex: none;
   place-items: center;
   border-radius: 50%;
-  background: var(--color-green-75);
-  color: var(--color-green-600);
+  background: var(--tone-bg-accent-3);
+  color: var(--tone-fg-accent-7);
   font-weight: 700;
   line-height: 1;
   font-variant-numeric: tabular-nums;
@@ -144,7 +144,7 @@ export const sectionDividerCss = css`
   gap: var(--space-4);
   margin-top: var(--space-4);
   padding-top: var(--space-4-5);
-  border-top: 1px solid var(--color-clear-300);
+  border-top: 1px solid var(--color-border);
 `
 
 /** The highlighted outcome of the questions, with the button that follows from it. */
@@ -153,7 +153,7 @@ export const decisionCss = css`
   gap: var(--space-3-5);
   padding: var(--space-4) var(--space-4-5);
   border-radius: var(--surface-radius);
-  background: var(--color-green-75);
+  background: var(--tone-bg-accent-3);
   animation: decision-enter 0.35s ease-out;
 
   @keyframes decision-enter {
@@ -193,16 +193,16 @@ const statusMarkCss = css`
 export const statusMarkDoneCss = cx(
   statusMarkCss,
   css`
-    background: var(--color-green-600);
-    color: var(--color-clear-50);
+    background: var(--color-accent);
+    color: var(--color-text-on-accent);
   `,
 )
 
 export const statusMarkWaitingCss = cx(
   statusMarkCss,
   css`
-    background: var(--color-green-75);
-    color: var(--color-green-600);
+    background: var(--tone-bg-accent-3);
+    color: var(--tone-fg-accent-7);
   `,
 )
 

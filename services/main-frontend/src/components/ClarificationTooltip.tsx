@@ -21,13 +21,13 @@ const ClarificationTooltip: React.FC<ClarificationTooltipProps> = ({
       <Tooltip
         offset={offset}
         className={css`
-          background: #111827;
-          color: #fff;
+          background: var(--tone-bg-neutral-92);
+          color: var(--color-text-on-accent);
           padding: 6px 10px;
           border-radius: 6px;
           font-size: 13px;
           font-weight: 500;
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 12px var(--tone-shadow-neutral-16);
           z-index: 1000;
           max-width: 200px;
         `}

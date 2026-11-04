@@ -5,9 +5,9 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { AgentChangesetCallSummary } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Disclosure } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface AgentCallListProps {
   calls: AgentChangesetCallSummary[]
@@ -38,7 +38,7 @@ const AgentCallList: React.FC<AgentCallListProps> = ({ calls }) => {
             <div
               className={css`
                 font-size: 0.875rem;
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
               `}
             >
               {t("agent-call-details", {

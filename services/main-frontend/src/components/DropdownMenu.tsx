@@ -20,16 +20,16 @@ const itemRow = css`
   padding: 10px 12px;
   font-size: 14px;
   font-weight: 500;
-  color: #111827;
+  color: var(--tone-fg-neutral-40);
   outline: none;
   text-decoration: none !important;
   cursor: pointer;
 
   &:where([data-hovered], [data-focused]) {
-    background: #f3f4f6;
+    background: var(--tone-bg-neutral-35);
   }
   &[data-focus-visible] {
-    box-shadow: inset 0 0 0 2px #111827;
+    box-shadow: inset 0 0 0 2px var(--tone-shadow-neutral-32);
   }
 
   &,
@@ -47,12 +47,12 @@ const itemIcon = css`
 `
 
 const popoverStyle = css`
-  background: #fff;
-  border: 1px solid #e5e7eb;
+  background: var(--color-surface);
+  border: 1px solid var(--tone-border-neutral-13);
   border-radius: 12px;
   padding: 6px;
   min-width: 260px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 32px var(--tone-shadow-neutral-13);
   z-index: 999;
 
   &[data-entering] {
@@ -147,7 +147,7 @@ const DropdownMenu: React.FC<MenuProps> = ({
                     key={item.id}
                     className={css`
                       height: 1px;
-                      background: #e5e7eb;
+                      background: var(--tone-bg-neutral-56);
                       margin: 4px 0;
                     `}
                   />
@@ -180,7 +180,7 @@ const DropdownMenu: React.FC<MenuProps> = ({
                   {...omitUndefined({ isDisabled: item.disabled })}
                   className={css`
                     ${itemRow};
-                    ${item.isDestructive ? "color: #dc2626; font-weight: 600;" : ""};
+                    ${item.isDestructive ? "color: var(--tone-fg-danger-4); font-weight: 600;" : ""};
                   `}
                 >
                   {icon}

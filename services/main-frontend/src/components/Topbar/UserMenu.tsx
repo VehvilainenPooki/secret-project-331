@@ -22,17 +22,17 @@ const itemRow = css`
   padding: 10px 12px;
   font-size: 14px;
   font-weight: 500;
-  color: #111827;
+  color: var(--tone-fg-neutral-40);
   outline: none;
   cursor: pointer;
   /* kill link underlines across states */
   text-decoration: none !important;
 
   &:where([data-hovered], [data-focused]) {
-    background: #f3f4f6;
+    background: var(--tone-bg-neutral-35);
   }
   &[data-focus-visible] {
-    box-shadow: inset 0 0 0 2px #111827;
+    box-shadow: inset 0 0 0 2px var(--tone-shadow-neutral-32);
   }
 
   /* ensure anchors inside keep no-underline */
@@ -88,12 +88,12 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
             display: grid;
             place-items: center;
             border-radius: 50%;
-            background: #e5e7eb;
-            color: #374151;
+            background: var(--tone-bg-neutral-56);
+            color: var(--tone-fg-info-16);
             font-weight: 600;
             font-size: 12px;
             user-select: none;
-            border: 1px solid #d1d5db;
+            border: 1px solid var(--tone-border-neutral-35);
           `}
         >
           {displayInitial}
@@ -108,7 +108,7 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            color: #111827;
+            color: var(--tone-fg-neutral-40);
             font-weight: 600;
             font-size: 14px;
             ${respondToOrLarger.md} {
@@ -124,12 +124,12 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
         placement="bottom end"
         offset={8}
         className={css`
-          background: #fff;
-          border: 1px solid #e5e7eb;
+          background: var(--color-surface);
+          border: 1px solid var(--tone-border-neutral-13);
           border-radius: 12px;
           padding: 6px;
           min-width: 260px;
-          box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 12px 32px var(--tone-shadow-neutral-13);
           z-index: 999;
 
           &[data-entering] {
@@ -151,7 +151,7 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
         <div
           className={css`
             padding: 8px 12px;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--tone-border-neutral-13);
             margin-bottom: 4px;
           `}
         >
@@ -159,7 +159,7 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
             className={css`
               font-size: 14px;
               font-weight: 600;
-              color: #111827;
+              color: var(--tone-fg-neutral-40);
             `}
           >
             {fullDisplayName}
@@ -167,7 +167,7 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
           <div
             className={css`
               font-size: 13px;
-              color: #6b7280;
+              color: var(--tone-fg-neutral-20);
               margin-top: 2px;
             `}
           >
@@ -191,7 +191,7 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
                   key={item.id}
                   className={css`
                     height: 1px;
-                    background: #e5e7eb;
+                    background: var(--tone-bg-neutral-56);
                     margin: 4px 0;
                   `}
                 />
@@ -212,7 +212,7 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
                 {...omitUndefined({ onAction: item.onAction })}
                 className={css`
                   ${itemRow};
-                  ${item.isDestructive ? "color: #dc2626; font-weight: 600;" : ""};
+                  ${item.isDestructive ? "color: var(--tone-fg-danger-4); font-weight: 600;" : ""};
                 `}
               >
                 <span>{item.label}</span>

@@ -45,13 +45,13 @@ export default PointsBreakdownButton
 const OPENS_A_DIALOG = "dialog" as const
 
 const triggerCss = css`
-  --btn-tertiary-bg: var(--color-clear-50);
-  --btn-tertiary-fg: var(--color-green-700);
-  --btn-tertiary-border: var(--color-green-600);
-  --btn-tertiary-bg-hover: var(--color-green-700);
-  --btn-tertiary-fg-hover: var(--color-clear-50);
-  --btn-tertiary-border-hover: var(--color-green-700);
-  --btn-tertiary-bg-pressed: var(--color-green-800);
+  --btn-tertiary-bg: var(--color-surface);
+  --btn-tertiary-fg: var(--tone-fg-accent-8);
+  --btn-tertiary-border: var(--tone-border-accent-10);
+  --btn-tertiary-bg-hover: var(--tone-tone-accent-23);
+  --btn-tertiary-fg-hover: var(--tone-tone-neutral-1);
+  --btn-tertiary-border-hover: var(--tone-tone-accent-23);
+  --btn-tertiary-bg-pressed: var(--tone-tone-accent-25);
 
   display: flex;
   justify-content: center;

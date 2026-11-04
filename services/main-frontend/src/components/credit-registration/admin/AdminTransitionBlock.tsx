@@ -110,7 +110,7 @@ const actionRowCss = css`
 
 const housekeepingStartCss = css`
   padding-top: var(--space-4);
-  border-top: 1px solid var(--color-clear-300);
+  border-top: 1px solid var(--color-border);
 `
 
 const compactCss = css`

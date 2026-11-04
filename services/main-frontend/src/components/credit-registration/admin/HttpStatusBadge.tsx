@@ -16,7 +16,7 @@ interface Props {
 
 /** A clean 200 is what most rows are, so it reads as the log's ordinary ink. */
 const plainStatusCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 /**

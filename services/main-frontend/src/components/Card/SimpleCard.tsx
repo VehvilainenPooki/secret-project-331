@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next"
 
 import PseudoContentLink from "@/components/PseudoContentLink"
 import CardSVG from "@/shared-module/common/img/cardNext.svg"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { cardMaxWidth } from "@/shared-module/common/styles/constants"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { dateToString } from "@/shared-module/common/utils/time"
@@ -17,6 +17,7 @@ import type { CardExtraProps } from "."
 import CardDeadlineOverlay, { cardTopBandStyle } from "./CardDeadlineOverlay"
 import CardOpensText from "./CardOpensText"
 import CardOpensTextOverlay from "./CardOpenTextOverlay"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface BackgroundProps {
   bg: string | undefined
@@ -31,7 +32,7 @@ export const BackgroundStyles = ({ bg }: BackgroundProps) => {
 const StCardSvg = styled(CardSVG)`
   width: 40px;
   opacity: 0.8;
-  color: #fff;
+  color: var(--color-text-on-accent);
 `
 
 const CardContentWrapper = styled.div`
@@ -49,7 +50,7 @@ const CardContentWrapper = styled.div`
   span.chapter-title {
     display: block;
     z-index: 20;
-    color: #fff;
+    color: var(--color-text-on-accent);
     font-weight: 500;
     line-height: 110%;
     font-size: 1.875rem;
@@ -60,7 +61,7 @@ const CardContentWrapper = styled.div`
   }
 
   span.chapter-number {
-    color: ${baseTheme.colors.clear[100]};
+    color: ${tones.toneNeutral12};
     font-size: clamp(16px, 1em, 20px);
     opacity: 0.9;
     z-index: 20;
@@ -127,7 +128,7 @@ const SimpleCard: React.FC<React.PropsWithChildren<CardProps>> = ({
         border-radius: 1px;
         position: relative;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        background: #48cfad;
+        background: var(--tone-bg-accent-8);
         aspect-ratio: 1/1;
       `}
     >
@@ -163,8 +164,8 @@ const SimpleCard: React.FC<React.PropsWithChildren<CardProps>> = ({
           {isLocked && (
             <div
               className={css`
-                color: #fff;
-                background: rgba(0, 0, 0, 0.5);
+                color: var(--color-text-on-accent);
+                background: var(--tone-bg-neutral-85);
                 padding: 0.5rem;
                 border-radius: 50%;
                 display: flex;
@@ -179,8 +180,8 @@ const SimpleCard: React.FC<React.PropsWithChildren<CardProps>> = ({
           {points && (
             <div
               className={css`
-                background: rgba(0, 0, 0, 0.5);
-                color: #fff;
+                background: var(--tone-bg-neutral-85);
+                color: var(--color-text-on-accent);
                 padding: 0.4rem 0.8rem;
                 border-radius: 0.5rem;
                 font-size: 0.875rem;
@@ -202,8 +203,8 @@ const SimpleCard: React.FC<React.PropsWithChildren<CardProps>> = ({
               top: 1rem;
               left: 1rem;
               z-index: 102;
-              color: #fff;
-              background: rgba(0, 0, 0, 0.5);
+              color: var(--color-text-on-accent);
+              background: var(--tone-bg-neutral-85);
               padding: 0.5rem;
               border-radius: 50%;
               display: flex;

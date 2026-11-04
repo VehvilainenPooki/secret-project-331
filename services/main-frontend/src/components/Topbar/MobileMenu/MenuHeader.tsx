@@ -33,10 +33,10 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ currentSubmenu, onBack, 
         align-items: center;
         justify-content: space-between;
         padding: 16px 20px;
-        border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid var(--tone-border-neutral-13);
         position: sticky;
         top: 0;
-        background: #ffffff;
+        background: var(--color-surface);
         z-index: 1;
       `}
     >
@@ -55,24 +55,24 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ currentSubmenu, onBack, 
               cursor: pointer;
               font-size: 16px;
               font-weight: 500;
-              color: #111827;
+              color: var(--tone-fg-neutral-40);
               transition: background-color 120ms ease;
               border-radius: 6px;
 
               &:hover {
-                background: #f3f4f6;
+                background: var(--tone-bg-neutral-35);
               }
 
               &:focus-visible {
                 outline: none;
-                box-shadow: 0 0 0 2px #111827;
+                box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
               }
             `}
           >
             <ArrowLeft
               size={20}
               className={css`
-                color: #111827;
+                color: var(--tone-fg-neutral-40);
               `}
               // oxlint-disable-next-line i18next/no-literal-string
               aria-label="Go back"
@@ -89,23 +89,23 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ currentSubmenu, onBack, 
               width: 36px;
               height: 36px;
               border-radius: 8px;
-              background: #f3f4f6;
-              border: 1px solid #e5e7eb;
+              background: var(--tone-bg-neutral-35);
+              border: 1px solid var(--tone-border-neutral-13);
               cursor: pointer;
               transition: all 120ms ease;
 
               &:hover {
-                background: #e5e7eb;
-                border-color: #d1d5db;
+                background: var(--tone-bg-neutral-56);
+                border-color: var(--tone-border-neutral-35);
               }
 
               &:active {
-                background: #d1d5db;
+                background: var(--tone-bg-neutral-71);
               }
 
               &:focus-visible {
                 outline: none;
-                box-shadow: 0 0 0 2px #111827;
+                box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
               }
             `}
           >
@@ -127,7 +127,7 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ currentSubmenu, onBack, 
             className={css`
               font-size: 18px;
               font-weight: 600;
-              color: #111827;
+              color: var(--tone-fg-neutral-40);
               margin: 0;
             `}
           >
@@ -143,23 +143,23 @@ export const MenuHeader: React.FC<MenuHeaderProps> = ({ currentSubmenu, onBack, 
               width: 36px;
               height: 36px;
               border-radius: 8px;
-              background: #f3f4f6;
-              border: 1px solid #e5e7eb;
+              background: var(--tone-bg-neutral-35);
+              border: 1px solid var(--tone-border-neutral-13);
               cursor: pointer;
               transition: all 120ms ease;
 
               &:hover {
-                background: #e5e7eb;
-                border-color: #d1d5db;
+                background: var(--tone-bg-neutral-56);
+                border-color: var(--tone-border-neutral-35);
               }
 
               &:active {
-                background: #d1d5db;
+                background: var(--tone-bg-neutral-71);
               }
 
               &:focus-visible {
                 outline: none;
-                box-shadow: 0 0 0 2px #111827;
+                box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
               }
             `}
           >

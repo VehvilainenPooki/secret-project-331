@@ -17,7 +17,7 @@ const iconCss = css`
   align-items: center;
   height: 1lh;
   vertical-align: top;
-  color: var(--color-gray-300);
+  color: var(--tone-fg-neutral-12);
 `
 
 /** Stands in for a value that does not exist: a muted mark, read out as "None". */

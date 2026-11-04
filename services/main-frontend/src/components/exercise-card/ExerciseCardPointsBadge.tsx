@@ -37,12 +37,12 @@ const ExerciseCardPointsBadge: React.FC<React.PropsWithChildren<ExerciseCardPoin
             align-items: center;
             flex-wrap: nowrap;
             line-height: 100%;
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             z-index: 999;
           }
 
           .heading {
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             font-size: 12px;
             display: inline-block;
             margin-bottom: 2px;
@@ -51,7 +51,7 @@ const ExerciseCardPointsBadge: React.FC<React.PropsWithChildren<ExerciseCardPoin
           sup,
           sub {
             font-family: ${headingFont} !important;
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             font-size: 15px;
             font-weight: 500;
             margin: 0;

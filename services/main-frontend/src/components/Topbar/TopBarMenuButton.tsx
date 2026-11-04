@@ -76,26 +76,26 @@ const TopBarMenuButton: React.FC<TopBarMenuButtonProps> = ({
           height: 44px;
           min-width: fit-content;
           border-radius: 999px;
-          background: rgba(248, 250, 252, 0.8);
-          border: 1px solid rgba(0, 0, 0, 0.08);
+          background: var(--tone-bg-neutral-14);
+          border: 1px solid var(--tone-border-neutral-9);
           cursor: pointer;
           transition: all 120ms ease;
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+          box-shadow: 0 1px 2px var(--tone-shadow-neutral-5);
           position: relative;
 
           &:hover,
           &[data-hovered] {
-            background: rgba(241, 245, 249, 0.95);
-            border-color: rgba(0, 0, 0, 0.12);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+            background: var(--tone-bg-neutral-27);
+            border-color: var(--tone-border-neutral-24);
+            box-shadow: 0 2px 4px var(--tone-shadow-neutral-8);
           }
           &[data-pressed] {
-            background: rgba(226, 232, 240, 1);
-            border-color: rgba(0, 0, 0, 0.16);
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+            background: var(--tone-bg-neutral-54);
+            border-color: var(--tone-border-neutral-34);
+            box-shadow: 0 1px 2px var(--tone-shadow-neutral-13);
           }
           &[data-focus-visible] {
-            box-shadow: 0 0 0 2px #111827;
+            box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
           }
 
           ${className}

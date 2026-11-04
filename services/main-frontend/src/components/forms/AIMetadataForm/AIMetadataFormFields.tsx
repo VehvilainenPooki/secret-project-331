@@ -14,14 +14,14 @@ import type {
   CoursePrerequisite,
   CourseAudience,
 } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { undefinedToNull } from "@/shared-module/common/utils/nullability"
 import { nullIfEmptyString } from "@/shared-module/common/utils/strings"
 import { Button, Checkbox, nullIfEmpty, TextArea, TextField } from "@/shared-module/components/"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const FieldSet = styled.fieldset`
   margin-bottom: 1rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  border: 1px solid ${tones.toneNeutral35};
   border-radius: 4px;
   padding: 0.5rem 1rem;
 `
@@ -34,7 +34,7 @@ const Legend = styled.legend`
 const HelpText = styled.p`
   margin: 0.25rem 0 0.5rem;
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const FieldContainer = styled.div`
@@ -256,7 +256,7 @@ const AIMetadataFormFields: React.FC<React.PropsWithChildren<AIMetadataFormProps
                       content: "•";
                       position: absolute;
                       left: 0;
-                      color: ${baseTheme.colors.green[600]};
+                      color: ${tones.toneAccent21};
                     }
                   `}
                 >
@@ -390,7 +390,7 @@ const AIMetadataFormFields: React.FC<React.PropsWithChildren<AIMetadataFormProps
                       content: "•";
                       position: absolute;
                       left: 0;
-                      color: ${baseTheme.colors.green[600]};
+                      color: ${tones.toneAccent21};
                     }
                   `}
                 >

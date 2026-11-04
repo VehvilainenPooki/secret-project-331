@@ -1,7 +1,7 @@
 import type { CreditRegistrationState } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 
 import type { CreditRegistrationTFunction } from "../constants"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /** What a row in this state is waiting for, which is what an operator groups the ledger by. */
 export type QueueBucket = "waiting_on_student" | "in_progress" | "needs_a_look" | "failed" | "done"
@@ -64,9 +64,9 @@ export const bucketLabel = (t: CreditRegistrationTFunction, bucket: QueueBucket)
  * one green. Red is for failures alone. Hex and not a CSS variable: ECharts cannot resolve one.
  */
 export const BUCKET_COLORS = {
-  waiting_on_student: baseTheme.colors.gray[400],
-  in_progress: baseTheme.colors.blue[600],
-  needs_a_look: baseTheme.colors.yellow[800],
-  failed: baseTheme.colors.crimson[600],
-  done: baseTheme.colors.green[700],
+  waiting_on_student: tones.toneNeutral39,
+  in_progress: tones.toneInfo23,
+  needs_a_look: tones.toneWarning12,
+  failed: tones.toneDanger21,
+  done: tones.toneAccent23,
 } as const satisfies Record<QueueBucket, string>

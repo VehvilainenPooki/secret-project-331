@@ -10,60 +10,60 @@ export const menuItemClass = css`
   margin: 4px 16px 12px 16px;
   font-size: 16px;
   font-weight: 500;
-  color: #111827;
+  color: var(--tone-fg-neutral-40);
   text-decoration: none;
   border-radius: 12px;
   transition: all 150ms ease;
   cursor: pointer;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--tone-bg-neutral-16);
+  border: 1px solid var(--tone-border-neutral-13);
   width: calc(100% - 32px);
   text-align: left;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 2px var(--tone-shadow-neutral-5);
 
   &:hover,
   &:focus {
-    background: #f3f4f6;
-    border-color: #d1d5db;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    background: var(--tone-bg-neutral-35);
+    border-color: var(--tone-border-neutral-35);
+    box-shadow: 0 2px 4px var(--tone-shadow-neutral-8);
     transform: translateY(-1px);
     outline: none;
   }
 
   &:active {
-    background: #e5e7eb;
-    border-color: #9ca3af;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    background: var(--tone-bg-neutral-56);
+    border-color: var(--tone-border-neutral-51);
+    box-shadow: 0 1px 2px var(--tone-shadow-neutral-13);
     transform: translateY(0);
   }
 
   &[data-focus-visible] {
-    outline: 2px solid #111827;
+    outline: 2px solid var(--tone-border-neutral-61);
     outline-offset: 2px;
   }
 
   &[data-destructive="true"] {
-    color: #dc2626;
+    color: var(--tone-fg-danger-4);
     font-weight: 600;
-    background: #fef2f2;
-    border-color: #fecaca;
+    background: var(--tone-bg-neutral-30);
+    border-color: var(--tone-border-danger-2);
 
     &:hover,
     &:focus {
-      background: #fee2e2;
-      border-color: #fca5a5;
+      background: var(--tone-bg-danger-5);
+      border-color: var(--tone-border-danger-4);
     }
 
     &:active {
-      background: #fecaca;
-      border-color: #f87171;
+      background: var(--tone-bg-danger-9);
+      border-color: var(--tone-border-danger-6);
     }
   }
 `
 
 export const separatorClass = css`
   height: 1px;
-  background: #e5e7eb;
+  background: var(--tone-bg-neutral-56);
   margin: 8px 0;
   border: none;
 `

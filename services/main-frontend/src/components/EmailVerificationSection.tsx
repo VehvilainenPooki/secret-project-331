@@ -39,13 +39,13 @@ const headerCss = css`
   gap: var(--space-3);
   margin-bottom: 1.25rem;
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-gray-100);
+  border-bottom: 1px solid var(--tone-border-neutral-27);
 
   h3 {
     margin: 0;
     font-size: 1.0625rem;
     font-weight: 600;
-    color: var(--color-gray-700);
+    color: var(--color-text);
   }
 `
 
@@ -57,8 +57,8 @@ const iconChipCss = css`
   height: 32px;
   flex-shrink: 0;
   border-radius: 6px;
-  background: var(--color-green-75);
-  color: var(--color-green-700);
+  background: var(--tone-bg-accent-3);
+  color: var(--tone-fg-accent-8);
 `
 
 const bodyCss = css`
@@ -69,7 +69,7 @@ const bodyCss = css`
 
   p {
     margin: 0;
-    color: var(--color-gray-700);
+    color: var(--color-text);
   }
 `
 

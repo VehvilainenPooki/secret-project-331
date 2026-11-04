@@ -12,7 +12,7 @@ import type {
   FieldChange,
   FieldValue,
 } from "@/generated/api/types.generated"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { ABSENT_LABEL, Table } from "@/shared-module/components"
 import type { Block } from "@/types/courseMaterialBlock"
@@ -22,6 +22,7 @@ import BlockChanges from "./BlockChanges"
 import { DIFF_SIDE, type DiffSide } from "./blockDiff"
 import { StagedBlocks } from "./StagedPageContent"
 import { useEntityName } from "./useEntityName"
+import { tones } from "@/shared-module/components/styles/themes"
 
 function fieldLabels(t: TFunction): Record<EntityField, string> {
   return {
@@ -142,7 +143,7 @@ const BlocksChange: React.FC<{ change: FieldChange; label: string }> = ({ change
         className={css`
           font-size: 1rem;
           font-weight: ${fontWeights.semibold};
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           margin: 0 0 0.5rem 0;
         `}
       >

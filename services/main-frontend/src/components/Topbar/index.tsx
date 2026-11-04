@@ -130,8 +130,8 @@ const Topbar: React.FC<TopbarProps> = ({
       <header
         className={css`
           width: 100%;
-          border-bottom: 1px solid #e5e7eb;
-          background: rgba(255, 255, 255, 0.8);
+          border-bottom: 1px solid var(--tone-border-neutral-13);
+          background: var(--tone-bg-neutral-6);
           backdrop-filter: saturate(180%) blur(10px);
           position: relative;
           z-index: 100;
@@ -204,7 +204,7 @@ const Topbar: React.FC<TopbarProps> = ({
                   orientation="vertical"
                   className={css`
                     height: 24px;
-                    background: #e5e7eb;
+                    background: var(--tone-bg-neutral-56);
                     margin-inline: 0;
                     display: none;
                     ${respondToOrLarger.md} {
@@ -229,7 +229,7 @@ const Topbar: React.FC<TopbarProps> = ({
                   orientation="vertical"
                   className={css`
                     height: 24px;
-                    background: #e5e7eb;
+                    background: var(--tone-bg-neutral-56);
                     margin-inline: 0;
                     display: none;
                     ${respondToOrLarger.md} {
@@ -249,7 +249,7 @@ const Topbar: React.FC<TopbarProps> = ({
                       orientation="vertical"
                       className={css`
                         height: 24px;
-                        background: #e5e7eb;
+                        background: var(--tone-bg-neutral-56);
                         margin-inline: 0;
                         display: none;
                         ${respondToOrLarger.md} {
@@ -281,32 +281,32 @@ const Topbar: React.FC<TopbarProps> = ({
                       padding: 10px 16px;
                       height: 40px;
                       border-radius: 999px;
-                      background: rgba(248, 250, 252, 0.8);
-                      border: 1px solid rgba(0, 0, 0, 0.08);
+                      background: var(--tone-bg-neutral-14);
+                      border: 1px solid var(--tone-border-neutral-9);
                       cursor: pointer;
                       transition: all 120ms ease;
-                      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+                      box-shadow: 0 1px 2px var(--tone-shadow-neutral-5);
                       text-decoration: none;
-                      color: #374151;
+                      color: var(--tone-fg-info-16);
                       font-weight: 500;
                       font-size: 14px;
 
                       &:hover {
-                        background: rgba(241, 245, 249, 0.95);
-                        border-color: rgba(0, 0, 0, 0.12);
-                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-                        color: #111827;
+                        background: var(--tone-bg-neutral-27);
+                        border-color: var(--tone-border-neutral-24);
+                        box-shadow: 0 2px 4px var(--tone-shadow-neutral-8);
+                        color: var(--tone-fg-neutral-40);
                       }
 
                       &:active {
-                        background: rgba(226, 232, 240, 1);
-                        border-color: rgba(0, 0, 0, 0.16);
-                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+                        background: var(--tone-bg-neutral-54);
+                        border-color: var(--tone-border-neutral-34);
+                        box-shadow: 0 1px 2px var(--tone-shadow-neutral-13);
                       }
 
                       &:focus-visible {
                         outline: none;
-                        box-shadow: 0 0 0 2px #111827;
+                        box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
                       }
                     `}
                   >
@@ -323,31 +323,31 @@ const Topbar: React.FC<TopbarProps> = ({
                       padding: 10px 16px;
                       height: 40px;
                       border-radius: 999px;
-                      background: #111827;
-                      border: 1px solid #111827;
+                      background: var(--tone-bg-neutral-92);
+                      border: 1px solid var(--tone-border-neutral-61);
                       cursor: pointer;
                       transition: all 120ms ease;
-                      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+                      box-shadow: 0 1px 2px var(--tone-shadow-neutral-5);
                       text-decoration: none;
-                      color: #ffffff;
+                      color: var(--color-text-on-accent);
                       font-weight: 500;
                       font-size: 14px;
 
                       &:hover {
-                        background: #374151;
-                        border-color: #374151;
-                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+                        background: var(--tone-bg-info-9);
+                        border-color: var(--tone-border-info-13);
+                        box-shadow: 0 2px 4px var(--tone-shadow-neutral-13);
                       }
 
                       &:active {
-                        background: #1f2937;
-                        border-color: #1f2937;
-                        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+                        background: var(--tone-bg-info-10);
+                        border-color: var(--tone-border-info-14);
+                        box-shadow: 0 1px 2px var(--tone-shadow-neutral-17);
                       }
 
                       &:focus-visible {
                         outline: none;
-                        box-shadow: 0 0 0 2px #111827;
+                        box-shadow: 0 0 0 2px var(--tone-shadow-neutral-32);
                       }
                     `}
                   >

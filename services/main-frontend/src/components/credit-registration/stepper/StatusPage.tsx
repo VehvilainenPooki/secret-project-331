@@ -74,7 +74,7 @@ const progressRowCss = css`
     bottom: 2px;
     left: 10px;
     width: 2px;
-    background: var(--color-clear-300);
+    background: var(--tone-bg-neutral-62);
   }
 
   &:last-child::before {
@@ -84,7 +84,7 @@ const progressRowCss = css`
 
 const doneRowCss = css`
   &::before {
-    background: var(--color-green-600);
+    background: var(--color-accent);
   }
 `
 
@@ -93,16 +93,16 @@ const dotCss = css`
   place-items: center;
   width: 22px;
   height: 22px;
-  border: 2px solid var(--color-clear-400);
+  border: 2px solid var(--tone-border-neutral-31);
   border-radius: 50%;
-  background: var(--color-clear-50);
-  color: var(--color-clear-50);
+  background: var(--color-surface);
+  color: var(--color-text-on-accent);
   font-size: 13px;
 `
 
 const doneDotCss = css`
-  border-color: var(--color-green-600);
-  background: var(--color-green-600);
+  border-color: var(--tone-border-accent-10);
+  background: var(--color-accent);
 `
 
 const rowTitleCss = css`
@@ -111,12 +111,12 @@ const rowTitleCss = css`
 `
 
 const nextRowTitleCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 const reachedAtCss = css`
   margin-left: 10px;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-weight: 400;
 `

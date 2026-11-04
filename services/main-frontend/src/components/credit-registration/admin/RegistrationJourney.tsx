@@ -52,20 +52,20 @@ const bodyCss = css`
 const timelineCss = css`
   --node: 28px;
   --col-gap: var(--space-4);
-  --rail: var(--color-clear-400);
-  --upcoming-dot: var(--color-gray-400);
-  --done: var(--color-green-600);
-  --done-line: var(--color-green-200);
-  --current: var(--color-blue-600);
-  --current-soft: var(--color-blue-100);
-  --attention: var(--color-crimson-600);
-  --inset: var(--color-clear-100);
-  --muted: var(--color-gray-500);
+  --rail: var(--tone-tone-neutral-30);
+  --upcoming-dot: var(--tone-tone-neutral-39);
+  --done: var(--tone-tone-accent-21);
+  --done-line: var(--tone-tone-accent-9);
+  --current: var(--tone-tone-info-23);
+  --current-soft: var(--tone-tone-info-5);
+  --attention: var(--tone-tone-danger-21);
+  --inset: var(--tone-tone-neutral-12);
+  --muted: var(--tone-tone-neutral-41);
 
   margin: 0;
   padding: 0;
   list-style: none;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   overflow-wrap: anywhere;
 
   .tl-node {
@@ -78,7 +78,7 @@ const timelineCss = css`
     box-sizing: border-box;
     border: 2px solid var(--rail);
     border-radius: 50%;
-    background: var(--color-clear-50);
+    background: var(--color-surface);
     color: var(--muted);
     font-size: var(--font-size-0);
     font-weight: 600;
@@ -87,7 +87,7 @@ const timelineCss = css`
   .tl-phase[data-status="done"] .tl-node {
     border-color: var(--done);
     background: var(--done);
-    color: var(--color-clear-50);
+    color: var(--color-text-on-accent);
   }
   .tl-phase[data-status="current"] .tl-node {
     border-color: var(--current);
@@ -97,7 +97,7 @@ const timelineCss = css`
   .tl-phase[data-status="attention"] .tl-node {
     border-color: var(--attention);
     background: var(--attention);
-    color: var(--color-clear-50);
+    color: var(--color-text-on-accent);
   }
   .tl-phase[data-status="skipped"] .tl-node {
     border-style: dashed;
@@ -144,9 +144,9 @@ const timelineCss = css`
   .tl-panel {
     min-width: 0;
     padding: var(--space-3-5);
-    border: 1px solid var(--color-clear-300);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
-    background: var(--color-clear-50);
+    background: var(--color-surface);
   }
   .tl-phase:nth-child(even) .tl-panel {
     border-color: transparent;
@@ -154,7 +154,7 @@ const timelineCss = css`
   }
   .tl-phase[data-status="skipped"] .tl-panel {
     border: 1px dashed var(--upcoming-dot);
-    background: var(--color-clear-50);
+    background: var(--color-surface);
   }
   .tl-note {
     margin: 0;
@@ -200,7 +200,7 @@ const timelineCss = css`
     box-sizing: border-box;
     border: 2px solid var(--upcoming-dot);
     border-radius: 50%;
-    background: var(--color-clear-50);
+    background: var(--color-surface);
   }
   .tl-substep[data-status="done"] > .tl-dot {
     border-color: var(--done);
@@ -213,7 +213,7 @@ const timelineCss = css`
   .tl-substep[data-status="attention"] > .tl-dot {
     border-color: var(--attention);
     background: var(--attention);
-    box-shadow: 0 0 0 3px var(--color-crimson-100);
+    box-shadow: 0 0 0 3px var(--tone-shadow-danger-3);
   }
   .tl-substep > :not(.tl-dot) {
     grid-column: 2;
@@ -289,7 +289,7 @@ const timelineCss = css`
     display: none;
   }
   .tl-phase:nth-child(even) .tl-events {
-    background: var(--color-clear-50);
+    background: var(--color-surface);
   }
   .tl-events li {
     display: grid;
@@ -556,15 +556,15 @@ const problemCss = css`
   align-items: flex-start;
   gap: var(--space-3);
   padding: 14px var(--space-4);
-  border-left: 3px solid var(--color-crimson-600);
+  border-left: 3px solid var(--tone-border-danger-10);
   border-radius: 0 var(--surface-radius) var(--surface-radius) 0;
-  background: var(--color-crimson-75);
+  background: var(--tone-bg-danger-4);
 
   > span:first-child {
     display: inline-flex;
     flex: none;
     margin-top: 2px;
-    color: var(--color-crimson-600);
+    color: var(--tone-fg-danger-12);
   }
 `
 

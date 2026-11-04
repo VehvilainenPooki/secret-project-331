@@ -5,8 +5,8 @@ import { ExclamationMessage } from "@vectopus/atlas-icons-react"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   title: string
@@ -49,8 +49,8 @@ const BottomPanel: React.FC<Props> = ({
         width: 90%;
         max-width: fit-content;
         z-index: 20;
-        background-color: ${baseTheme.colors.clear[100]};
-        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.26);
+        background-color: ${tones.toneNeutral12};
+        box-shadow: 0 2px 12px 0 var(--tone-shadow-neutral-24);
         border-radius: 2px;
       `}
     >
@@ -61,14 +61,14 @@ const BottomPanel: React.FC<Props> = ({
           display: flex;
           align-items: center;
           font-weight: 600;
-          color: ${baseTheme.colors.gray[500]};
+          color: ${tones.toneNeutral41};
         `}
       >
         <ExclamationMessage
           size={40}
           className={css`
             margin-right: 1rem;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
           `}
         />
         {title}
@@ -79,8 +79,8 @@ const BottomPanel: React.FC<Props> = ({
             border-radius: 2px;
             padding: 1rem;
             margin-bottom: 0.6rem;
-            color: ${baseTheme.colors.clear[200]};
-            background-color: ${baseTheme.colors.red[700]};
+            color: ${tones.toneNeutral22};
+            background-color: ${tones.toneDanger19};
           `}
         >{`${t("error-title")}: ${error}`}</div>
       )}

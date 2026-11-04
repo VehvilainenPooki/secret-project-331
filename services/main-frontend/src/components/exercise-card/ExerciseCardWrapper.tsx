@@ -18,7 +18,7 @@ const ExerciseCardWrapper = React.forwardRef<HTMLElement, ExerciseCardWrapperPro
       aria-labelledby={ariaLabelledby}
       className={css`
         width: 100%;
-        background: #f2f2f2;
+        background: var(--tone-bg-neutral-40);
         border-radius: 1rem;
         margin-bottom: 1rem;
         padding-bottom: 1.25rem;

@@ -108,7 +108,7 @@ const alertBodyCss = css`
 
 const alertSentenceCss = css`
   margin: 0;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-2);
   font-weight: 600;
 `
@@ -130,16 +130,16 @@ const alertIconCss = css`
  *  same tab are not two vocabularies of tint. */
 const ALERT_TONE_CSS = {
   critical: css`
-    --alert-ground: var(--color-crimson-75);
-    --alert-edge: var(--color-crimson-600);
-    --alert-icon: var(--color-crimson-600);
+    --alert-ground: var(--tone-bg-danger-4);
+    --alert-edge: var(--tone-border-danger-10);
+    --alert-icon: var(--tone-fg-danger-12);
   `,
   warning: css`
-    --alert-ground: var(--color-yellow-100);
-    --alert-edge: var(--color-yellow-700);
+    --alert-ground: var(--tone-bg-warning-2);
+    --alert-edge: var(--tone-border-warning-3);
     /* The yellow ramp is not contrast-safe as ink, so the glyph stays grey and the fill is what
        carries the severity. */
-    --alert-icon: var(--color-gray-700);
+    --alert-icon: var(--color-text);
   `,
 } as const
 

@@ -5,7 +5,8 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { ExerciseChangeWarning } from "@/generated/api/types.generated"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExerciseWarningListProps {
   warnings: ExerciseChangeWarning[]
@@ -19,10 +20,10 @@ const ExerciseWarningList: React.FC<ExerciseWarningListProps> = ({ warnings }) =
       data-testid="agent-exercise-warnings"
       aria-labelledby="agent-exercise-warnings-heading"
       className={css`
-        border: 1px solid ${baseTheme.colors.gray[300]};
+        border: 1px solid ${tones.toneNeutral37};
         border-radius: 8px;
         padding: 0.75rem 1rem;
-        background: ${baseTheme.colors.clear[100]};
+        background: ${tones.toneNeutral12};
       `}
     >
       <h4
@@ -30,7 +31,7 @@ const ExerciseWarningList: React.FC<ExerciseWarningListProps> = ({ warnings }) =
         className={css`
           font-size: 1rem;
           font-weight: ${fontWeights.semibold};
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           margin: 0 0 0.5rem 0;
         `}
       >

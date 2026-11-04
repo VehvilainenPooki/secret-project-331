@@ -13,10 +13,10 @@ import type { UserDetail } from "@/generated/api/types.generated"
 import { refetchUserDetailsForUser } from "@/hooks/useUserDetailsForUserQuery"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import countries from "@/shared-module/common/locales/en/countries.json"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button, Checkbox, ComboBox, TextField } from "@/shared-module/components"
 import { settingsCardCss } from "@/styles/sharedStyles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface SelectUserInfoFormFields {
   email: string
@@ -129,14 +129,14 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
             align-items: center;
             margin-bottom: 1.25rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+            border-bottom: 1px solid ${tones.toneNeutral29};
           `}
         >
           <h3
             className={css`
               font-size: 1.0625rem;
               font-weight: 600;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               margin: 0;
             `}
           >
@@ -176,7 +176,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 0.03em;
-                color: ${baseTheme.colors.gray[400]};
+                color: ${tones.toneNeutral39};
                 margin-bottom: 0.375rem;
               `}
             >
@@ -186,7 +186,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
               data-testid="personal-info-email-value"
               className={css`
                 font-size: 0.9375rem;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 font-weight: 500;
               `}
             >
@@ -201,7 +201,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 0.03em;
-                color: ${baseTheme.colors.gray[400]};
+                color: ${tones.toneNeutral39};
                 margin-bottom: 0.375rem;
               `}
             >
@@ -211,7 +211,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
               data-testid="personal-info-first-name-value"
               className={css`
                 font-size: 0.9375rem;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 font-weight: 500;
               `}
             >
@@ -226,7 +226,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 0.03em;
-                color: ${baseTheme.colors.gray[400]};
+                color: ${tones.toneNeutral39};
                 margin-bottom: 0.375rem;
               `}
             >
@@ -236,7 +236,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
               data-testid="personal-info-last-name-value"
               className={css`
                 font-size: 0.9375rem;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 font-weight: 500;
               `}
             >
@@ -251,7 +251,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 0.03em;
-                color: ${baseTheme.colors.gray[400]};
+                color: ${tones.toneNeutral39};
                 margin-bottom: 0.375rem;
               `}
             >
@@ -261,7 +261,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
               data-testid="personal-info-country-value"
               className={css`
                 font-size: 0.9375rem;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 font-weight: 500;
               `}
             >
@@ -274,14 +274,14 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
           className={css`
             margin-top: 1.25rem;
             padding-top: 1.25rem;
-            border-top: 1px solid ${baseTheme.colors.gray[100]};
+            border-top: 1px solid ${tones.toneNeutral29};
           `}
         >
           <p
             className={css`
               font-size: 0.875rem;
               line-height: 1.5;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               margin: 0 0 0.75rem 0;
             `}
           >
@@ -293,7 +293,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
               font-weight: 500;
               text-transform: uppercase;
               letter-spacing: 0.03em;
-              color: ${baseTheme.colors.gray[400]};
+              color: ${tones.toneNeutral39};
               margin-bottom: 0.375rem;
             `}
           >
@@ -303,7 +303,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
             data-testid="personal-info-email-consent-value"
             className={css`
               font-size: 0.9375rem;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               font-weight: 500;
             `}
           >
@@ -320,13 +320,13 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
         className={css`
           font-size: 1.0625rem;
           font-weight: 600;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           display: flex;
           align-items: center;
           min-height: 2rem;
           margin: 0 0 1.25rem 0;
           padding-bottom: 1rem;
-          border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+          border-bottom: 1px solid ${tones.toneNeutral29};
         `}
       >
         {t("user-settings-personal-info")}
@@ -414,7 +414,7 @@ export const EditUserInformationForm: React.FC<SelectUserInfoFormProps> = ({
             gap: 0.75rem;
             padding-top: 1.5rem;
             margin-top: 1.5rem;
-            border-top: 1px solid ${baseTheme.colors.gray[100]};
+            border-top: 1px solid ${tones.toneNeutral29};
           `}
         >
           <Button

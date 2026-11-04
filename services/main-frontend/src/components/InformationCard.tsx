@@ -3,8 +3,8 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { narrowContainerWidthRem } from "@/shared-module/common/styles/constants"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface InformationItem {
   label: string
@@ -43,8 +43,8 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
   return (
     <div
       className={css`
-        background-color: ${baseTheme.colors.clear[100]};
-        border: 1px solid ${baseTheme.colors.clear[200]};
+        background-color: ${tones.toneNeutral12};
+        border: 1px solid ${tones.toneNeutral22};
         border-radius: 8px;
         padding: 1.5rem;
         margin-bottom: 2rem;
@@ -58,7 +58,7 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
         className={css`
           margin: 0 0 1rem 0;
           font-size: 1.2rem;
-          color: black;
+          color: var(--tone-fg-neutral-44);
         `}
       >
         {title}
