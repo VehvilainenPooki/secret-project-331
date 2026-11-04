@@ -185,7 +185,7 @@ const OrganizationText: React.FC<{ name: string; hidden?: boolean }> = ({ name, 
     >
       <h2
         className={css`
-          color: ${hidden ? "#666" : "#333"};
+          color: ${hidden ? tones.fgNeutral25 : tones.fgNeutral36};
           font-family: ${primaryFont};
           font-size: 15px;
           line-height: 1.1;

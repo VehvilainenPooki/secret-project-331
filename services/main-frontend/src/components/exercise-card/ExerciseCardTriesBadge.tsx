@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next"
 import { headingFont } from "@/shared-module/common/styles"
 
 import { exerciseCardPillShell } from "./exerciseCardPillShell"
+import { colors } from "@/shared-module/components/styles/themes"
 
 export interface ExerciseCardTriesBadgeProps {
   triesRemaining: number
@@ -56,7 +57,9 @@ const ExerciseCardTriesBadge: React.FC<React.PropsWithChildren<ExerciseCardTries
         <span className="heading">{t("tries")}</span>
         <div className="tries">
           <span aria-hidden="true">
-            <PlusHeart size={16} weight="bold" color="#394F77" />
+            <PlusHeart size={16} weight="bold" className={css`
+            color: ${colors.badgeIcon};
+          `} />
           </span>
           <p>{triesRemaining}</p>
         </div>

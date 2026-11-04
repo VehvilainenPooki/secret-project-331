@@ -108,6 +108,12 @@ export interface ThemeColorRoles {
   chart4: string
   chart5: string
   chart6: string
+  /** Icons in the small exercise card badges (points, tries). */
+  badgeIcon: string
+  /** Strong icon on light controls, such as the quiz editor's remove-option icon. */
+  controlIconStrong: string
+  /** Unfilled track of the circular course progress ring. */
+  progressRingTrack: string
 }
 
 /**

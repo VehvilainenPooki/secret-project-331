@@ -66,9 +66,13 @@ const ExpandableContentInnerBlock: React.FC<
           onClick={() => setOpen((prev) => !prev)}
         >
           {open ? (
-            <MinusCircle size={18} color="#4C5868" />
+            <MinusCircle size={18} className={css`
+              color: ${tones.fgInfo10};
+            `} />
           ) : (
-            <PlusCircle size={18} color="#4C5868" />
+            <PlusCircle size={18} className={css`
+              color: ${tones.fgInfo10};
+            `} />
           )}
           {heading}
         </button>

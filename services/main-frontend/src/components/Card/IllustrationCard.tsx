@@ -16,7 +16,7 @@ import type { CardExtraProps } from "."
 import CardDeadlineOverlay, { cardTopBandStyle } from "./CardDeadlineOverlay"
 import CardOpensText from "./CardOpensText"
 import CardOpensTextOverlay from "./CardOpenTextOverlay"
-import { tones } from "@/shared-module/components/styles/themes"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 export interface BackgroundProps {
   bg: string | undefined
@@ -25,7 +25,7 @@ export interface BackgroundProps {
 
 export const BackgroundStyles = ({ bg }: BackgroundProps) => {
   const CARD_BACKGROUND_STYLES = `
-    background-color: ${bg ? bg : "#fff"};
+    background-color: ${bg ? bg : colors.surface};
   `
   return CARD_BACKGROUND_STYLES
 }

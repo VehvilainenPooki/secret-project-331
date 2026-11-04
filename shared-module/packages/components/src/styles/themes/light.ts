@@ -67,6 +67,9 @@ export const lightTheme: Theme = {
     scrim: offPalette.scrim,
     shadow: gray[800],
     tint: gray[1000],
+    badgeIcon: "#394F77",
+    controlIconStrong: "#333D45",
+    progressRingTrack: "#EDF2F4",
     sheen: white,
 
     chart1: blue[600],

@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next"
 import { headingFont } from "@/shared-module/common/styles"
 
 import { exerciseCardPillShell } from "./exerciseCardPillShell"
+import { colors } from "@/shared-module/components/styles/themes"
 
 export interface ExerciseCardPointsBadgeProps {
   score: number | null
@@ -68,7 +69,9 @@ const ExerciseCardPointsBadge: React.FC<React.PropsWithChildren<ExerciseCardPoin
         <span className="heading">{t("points-label")}</span>
         <div className="points">
           <span aria-hidden="true">
-            <CheckCircle size={16} weight="bold" color="#394F77" />
+            <CheckCircle size={16} weight="bold" className={css`
+            color: ${colors.badgeIcon};
+          `} />
           </span>
           <span data-testid={dataTestId} className={pointsScoreStyles}>
             <sup>{score ?? "-"}</sup>/<sub>{maxScore}</sub>

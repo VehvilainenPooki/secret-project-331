@@ -36,6 +36,7 @@ import {
   TextField,
 } from "@/shared-module/components"
 import type { TableColumn } from "@/shared-module/components"
+import { colors } from "@/shared-module/components/styles/themes"
 
 const iconButtonCss = css`
   cursor: pointer;
@@ -286,7 +287,9 @@ const PermissionPageComponent: React.FC<React.PropsWithChildren<Props>> = ({ dom
                 resetEditRoleForm({ role: ur.role })
               }}
             >
-              <Pencil size={20} color={"#1A2333"} />
+              <Pencil size={20} className={css`
+              color: ${colors.text};
+            `} />
             </button>
             <button
               aria-label={t("remove-role")}
@@ -295,7 +298,9 @@ const PermissionPageComponent: React.FC<React.PropsWithChildren<Props>> = ({ dom
                 removeMutation.mutate({ body: { email: ur.email, role: ur.role, domain } })
               }
             >
-              <XmarkCircle size={20} color={"#1A2333"} />
+              <XmarkCircle size={20} className={css`
+              color: ${colors.text};
+            `} />
             </button>
           </>
         ),

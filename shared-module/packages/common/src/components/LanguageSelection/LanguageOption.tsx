@@ -4,7 +4,7 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import Button from "../Button"
-import { tones } from "@/shared-module/components/styles/themes"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 
 export interface LanguageOptionProps {
   label: string
@@ -37,7 +37,7 @@ const LanguageOption: React.FC<LanguageOptionProps> = ({ label, onClick, isActiv
           margin: 0 !important;
           padding: 0.7rem 1rem !important;
           font-size: 16px !important;
-          background: ${isActive ? tones.toneAccent7 : "#fff"} !important;
+          background: ${isActive ? tones.toneAccent7 : colors.surface} !important;
           color: ${isActive ? tones.toneAccent21 : tones.toneAccent19} !important;
           border: 0 !important;
           width: 100%;

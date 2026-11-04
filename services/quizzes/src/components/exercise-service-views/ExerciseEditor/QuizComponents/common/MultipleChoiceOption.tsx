@@ -16,6 +16,7 @@ import type { OptionChanges } from "./applyOptionChanges"
 import FeedbackMessagesEditor, {
   useOptionFeedbackVisibilityOptions,
 } from "./FeedbackMessagesEditor"
+import { colors } from "@/shared-module/components/styles/themes"
 
 const OptionCard = styled.div`
   height: 50px;
@@ -237,7 +238,9 @@ const MultipleChoiceOption: React.FC<MultipleChoiceOptionProps> = ({
             size="small"
             onClick={onDelete}
           >
-            <XmarkCircle size={16} color="#333d45" />
+            <XmarkCircle size={16} className={css`
+              color: ${colors.controlIconStrong};
+            `} />
           </Button>
         </OptionButtonGroup>
       </OptionCard>

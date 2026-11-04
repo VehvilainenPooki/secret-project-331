@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 
 import { monospaceFont } from "@/shared-module/exercise-react/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const colors = {
   primary: "var(--tone-tone-info-15)",
@@ -12,7 +13,7 @@ const colors = {
   error: "var(--tone-tone-danger-11)",
   surface: "var(--color-surface)",
   text: "var(--tone-fg-neutral-37)",
-  textMuted: "#666",
+  textMuted: tones.fgNeutral25,
   border: "var(--tone-border-neutral-25)",
   muted: "var(--tone-tone-neutral-23)",
   mutedHover: "var(--tone-tone-neutral-31)",

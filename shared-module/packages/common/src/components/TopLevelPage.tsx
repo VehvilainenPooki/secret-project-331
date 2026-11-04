@@ -7,6 +7,7 @@ import React from "react"
 
 import { primaryFont } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
+import { colors } from "@/shared-module/components/styles/themes"
 
 const Content = styled.div`
   margin: 0 auto;
@@ -80,7 +81,7 @@ const TopLevelPage: React.FC<React.PropsWithChildren<TopLevelPageProps>> = ({
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.957 49" className="right-arrow">
           <path
             d="M32.466,0,29.321,3.146l19.123,19.11H0v4.475H48.444L29.321,45.854,32.466,49l24.49-24.506Z"
-            fill="#1a2333"
+            style={{ fill: colors.text }}
           />
         </svg>
       </Content>

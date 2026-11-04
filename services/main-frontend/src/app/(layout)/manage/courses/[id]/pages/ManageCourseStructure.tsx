@@ -372,7 +372,9 @@ const ManageCourseStructure: React.FC<React.PropsWithChildren<ManageCourseStruct
         `}
       >
         <span className="header">
-          <BlockProhibited size={18} weight="bold" color="#4C5868" />
+          <BlockProhibited size={18} weight="bold" className={css`
+              color: ${tones.fgInfo10};
+            `} />
           {t("partners-section-heading")}
         </span>
         <p>{t("partners-section-text")}</p>
