@@ -6,7 +6,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { ManualCompletionPreviewUser } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface PreviewUserListProps {
   users: ManualCompletionPreviewUser[]
@@ -33,7 +33,7 @@ const PreviewUserList: React.FC<PreviewUserListProps> = ({ users }) => {
     <div
       className={css`
         padding: 1rem;
-        background-color: ${baseTheme.colors.clear[100]};
+        background-color: ${tones.toneNeutral12};
         border-radius: 8px;
       `}
     >
@@ -52,19 +52,19 @@ const PreviewUserList: React.FC<PreviewUserListProps> = ({ users }) => {
             key={user.user_id}
             className={css`
               padding: 0.75rem 1rem;
-              background-color: ${baseTheme.colors.primary[100]};
+              background-color: ${tones.toneNeutral1};
               border-radius: 6px;
-              border: 1px solid ${baseTheme.colors.clear[300]};
+              border: 1px solid ${tones.toneNeutral26};
               display: flex;
               justify-content: space-between;
               align-items: center;
               transition: all 0.2s ease;
-              box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+              box-shadow: 0 1px 3px var(--tone-shadow-neutral-6);
 
               &:hover {
-                background-color: ${baseTheme.colors.clear[100]};
+                background-color: ${tones.toneNeutral12};
                 transform: translateX(4px);
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 2px 4px var(--tone-shadow-neutral-10);
               }
             `}
           >
@@ -78,7 +78,7 @@ const PreviewUserList: React.FC<PreviewUserListProps> = ({ users }) => {
               <span
                 className={css`
                   font-weight: 500;
-                  color: ${baseTheme.colors.gray[700]};
+                  color: ${tones.toneNeutral46};
                 `}
               >
                 {user.first_name} {user.last_name}
@@ -86,9 +86,9 @@ const PreviewUserList: React.FC<PreviewUserListProps> = ({ users }) => {
               <span
                 className={css`
                   font-size: 14px;
-                  color: ${baseTheme.colors.gray[500]};
+                  color: ${tones.toneNeutral41};
                   padding-left: 0.5rem;
-                  border-left: 1px solid ${baseTheme.colors.clear[300]};
+                  border-left: 1px solid ${tones.toneNeutral26};
                 `}
               >
                 {t("user-id")}: {user.user_id}
@@ -105,9 +105,9 @@ const PreviewUserList: React.FC<PreviewUserListProps> = ({ users }) => {
               <span
                 className={css`
                   font-size: 14px;
-                  color: ${baseTheme.colors.gray[500]};
+                  color: ${tones.toneNeutral41};
                   padding-right: 0.5rem;
-                  border-right: 1px solid ${baseTheme.colors.clear[300]};
+                  border-right: 1px solid ${tones.toneNeutral26};
                 `}
               >
                 {t("label-previous-grade")}: {formatGrade(user.previous_best_grade, t)}
@@ -118,13 +118,13 @@ const PreviewUserList: React.FC<PreviewUserListProps> = ({ users }) => {
                   margin-left: auto;
                   padding: 0.25rem 0.75rem;
                   background-color: ${
-                    user.passed ? baseTheme.colors.green[100] : baseTheme.colors.red[100]
+                    user.passed ? tones.toneAccent7 : tones.toneDanger2
                   };
-                  color: ${user.passed ? baseTheme.colors.green[600] : baseTheme.colors.red[600]};
+                  color: ${user.passed ? tones.toneAccent21 : tones.toneDanger17};
                   border-radius: 4px;
                   font-weight: 500;
                   border: 1px solid
-                    ${user.passed ? baseTheme.colors.green[200] : baseTheme.colors.red[200]};
+                    ${user.passed ? tones.toneAccent9 : tones.toneDanger7};
                 `}
                 aria-label={`${t("label-new-grade")} ${mapGradeToText(user.grade, user.passed)}`}
               >

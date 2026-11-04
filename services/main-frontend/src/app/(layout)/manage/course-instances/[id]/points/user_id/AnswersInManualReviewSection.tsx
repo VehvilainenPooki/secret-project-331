@@ -5,17 +5,17 @@ import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 
 import type { ExerciseStatusSummaryForUser } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { exerciseAnswersRequiringAttentionRoute } from "@/shared-module/common/utils/routes"
 import { Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Section = styled.section`
   margin: 2rem 0;
 `
 
 const Card = styled.div`
-  background: ${baseTheme.colors.yellow[100]};
-  border: 1px solid ${baseTheme.colors.yellow[400]};
+  background: ${tones.toneWarning3};
+  border: 1px solid ${tones.toneWarning8};
   border-radius: 0.5rem;
   padding: 1.25rem 1.5rem;
 `
@@ -36,7 +36,7 @@ const Item = styled.li`
   justify-content: space-between;
   gap: 0.5rem 1rem;
   padding: 0.5rem 0;
-  border-top: 1px solid ${baseTheme.colors.yellow[300]};
+  border-top: 1px solid ${tones.toneWarning6};
 `
 
 interface AnswersInManualReviewSectionProps {
@@ -62,7 +62,7 @@ const AnswersInManualReviewSection: React.FC<AnswersInManualReviewSectionProps> 
       <h2
         className={css`
           margin-bottom: 1.5rem;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-size: 1.5rem;
         `}
       >
@@ -72,7 +72,7 @@ const AnswersInManualReviewSection: React.FC<AnswersInManualReviewSectionProps> 
         <p
           className={css`
             margin: 0;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
         >
           {t("answers-in-manual-review-explanation")}
@@ -82,7 +82,7 @@ const AnswersInManualReviewSection: React.FC<AnswersInManualReviewSectionProps> 
             <Item key={summary.exercise.id}>
               <span
                 className={css`
-                  color: ${baseTheme.colors.gray[700]};
+                  color: ${tones.toneNeutral46};
                   font-weight: 600;
                 `}
               >
@@ -91,7 +91,7 @@ const AnswersInManualReviewSection: React.FC<AnswersInManualReviewSectionProps> 
               <Link
                 href={exerciseAnswersRequiringAttentionRoute(summary.exercise.id)}
                 className={css`
-                  color: ${baseTheme.colors.blue[600]};
+                  color: ${tones.toneInfo23};
                   white-space: nowrap;
                 `}
               >

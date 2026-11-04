@@ -7,20 +7,20 @@ import { useTranslation } from "react-i18next"
 import { useCourseInstanceProgress } from "@/hooks/useCourseInstanceProgress"
 import { useCourseStructure } from "@/hooks/useCourseStructure"
 import DebugModal from "@/shared-module/common/components/DebugModal"
-import { baseTheme } from "@/shared-module/common/styles"
 import { QueryResults, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Section = styled.section`
   margin: 2rem 0;
 `
 
 const ModuleCard = styled.div`
-  background: white;
-  border: 1px solid ${baseTheme.colors.clear[200]};
+  background: var(--color-surface);
+  border: 1px solid ${tones.toneNeutral22};
   border-radius: 0.75rem;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.125rem 0.25rem var(--tone-shadow-neutral-6);
 `
 
 const ModuleHeader = styled.div`
@@ -29,12 +29,12 @@ const ModuleHeader = styled.div`
   align-items: center;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid ${baseTheme.colors.clear[200]};
+  border-bottom: 1px solid ${tones.toneNeutral22};
 `
 
 const ModuleTitle = styled.h3`
   margin: 0;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 1.25rem;
   font-weight: 600;
 `
@@ -50,19 +50,19 @@ const InfoItem = styled.div`
   flex-direction: column;
   gap: 0.5rem;
   padding: 1rem;
-  background: ${baseTheme.colors.clear[100]};
+  background: ${tones.toneNeutral12};
   border-radius: 0.5rem;
-  border: 1px solid ${baseTheme.colors.clear[200]};
+  border: 1px solid ${tones.toneNeutral22};
 `
 
 const Label = styled.span`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.875rem;
   font-weight: 500;
 `
 
 const Value = styled.span`
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 1.125rem;
   font-weight: 600;
 `
@@ -70,7 +70,7 @@ const Value = styled.span`
 const ProgressBar = styled.div<{ progress: number }>`
   width: 100%;
   height: 0.5rem;
-  background: ${baseTheme.colors.clear[300]};
+  background: ${tones.toneNeutral26};
   border-radius: 0.25rem;
   overflow: hidden;
   margin-top: 0.5rem;
@@ -82,16 +82,16 @@ const ProgressBar = styled.div<{ progress: number }>`
     width: ${(props) => props.progress}%;
     background: ${(props) =>
       props.progress >= 100
-        ? baseTheme.colors.green[500]
+        ? tones.toneAccent19
         : props.progress >= 50
-          ? baseTheme.colors.green[400]
-          : baseTheme.colors.green[300]};
+          ? tones.toneAccent16
+          : tones.toneAccent12};
     transition: width 0.3s ease;
   }
 `
 
 const ProgressValue = styled.span`
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 0.875rem;
   font-weight: 500;
 `
@@ -113,7 +113,7 @@ const CourseInstanceProgressSection: React.FC<CourseInstanceProgressSectionProps
     <h2
       className={css`
         margin-bottom: 1.5rem;
-        color: ${baseTheme.colors.gray[700]};
+        color: ${tones.toneNeutral46};
         font-size: 1.75rem;
         font-weight: 600;
       `}
@@ -130,11 +130,11 @@ const CourseInstanceProgressSection: React.FC<CourseInstanceProgressSectionProps
           {heading}
           <p
             className={css`
-              color: ${baseTheme.colors.gray[500]};
+              color: ${tones.toneNeutral41};
               font-size: 1rem;
               padding: 1.5rem;
-              background: ${baseTheme.colors.clear[100]};
-              border: 1px solid ${baseTheme.colors.clear[200]};
+              background: ${tones.toneNeutral12};
+              border: 1px solid ${tones.toneNeutral22};
               border-radius: 0.5rem;
               text-align: center;
             `}

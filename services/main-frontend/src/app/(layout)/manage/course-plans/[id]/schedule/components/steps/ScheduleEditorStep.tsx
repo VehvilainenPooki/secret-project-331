@@ -35,7 +35,7 @@ const wizardNavStyles = css`
 
 const validationErrorStyles = css`
   margin-top: 0.75rem;
-  color: #8d2323;
+  color: var(--tone-fg-danger-11);
   font-weight: 600;
 `
 

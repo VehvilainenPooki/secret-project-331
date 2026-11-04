@@ -21,7 +21,7 @@ const summaryCss = css`
   margin: 0;
   overflow: hidden;
   font-size: var(--font-size-1);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   text-overflow: ellipsis;
   white-space: nowrap;
 `

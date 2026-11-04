@@ -362,7 +362,7 @@ const content = (
         display: flex;
         gap: 24px;
         margin: 20px 0 0 0;
-        border-bottom: 2px solid rgba(26, 35, 51, 0.2);
+        border-bottom: 2px solid var(--tone-border-info-1);
         font-family: ${primaryFont};
       `}
     >
@@ -390,7 +390,7 @@ const content = (
             padding-bottom: 8px;
             font-size: 16px;
             margin-right: 1.5rem;
-            border-bottom: ${activeTab === GENERAL_TAB ? "2px solid #1A2333" : "none"};
+            border-bottom: ${activeTab === GENERAL_TAB ? "2px solid var(--tone-tone-neutral-46)" : "none"};
             cursor: pointer;
           `}
         >
@@ -412,7 +412,7 @@ const content = (
           className={css`
             padding-bottom: 8px;
             font-size: 16px;
-            border-bottom: ${activeTab === PERMISSIONS_TAB ? "2px solid #1A2333" : "none"};
+            border-bottom: ${activeTab === PERMISSIONS_TAB ? "2px solid var(--tone-tone-neutral-46)" : "none"};
             cursor: pointer;
           `}
         >
@@ -549,7 +549,7 @@ const designContent = (
                   font-size: 14px;
                   font-family: ${primaryFont};
                   line-height: 20px;
-                  color: #1a2333;
+                  color: var(--color-text);
                 `}
               >
                 {fields.slug}
@@ -687,7 +687,7 @@ const permissionContent = (
 
         <hr
           className={css`
-            border: 1px solid #ced1d7;
+            border: 1px solid var(--tone-border-neutral-37);
             margin-bottom: 16px;
           `}
         />
@@ -738,7 +738,7 @@ const permissionContent = (
 
             <hr
               className={css`
-                border: 1px solid #ced1d7;
+                border: 1px solid var(--tone-border-neutral-37);
                 margin-bottom: 16px;
               `}
             />

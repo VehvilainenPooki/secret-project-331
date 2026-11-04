@@ -5,16 +5,16 @@ import { AnimatePresence, motion } from "motion/react"
 import { useTranslation } from "react-i18next"
 
 import type { CourseDesignerStage } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
 
 import type { StageMonth } from "../scheduleMappers"
 import MonthBlock from "./MonthBlock"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const stageCardStyles = css`
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  border: 1px solid ${tones.toneNeutral35};
   border-radius: 14px;
-  background: #fbfcfd;
+  background: var(--tone-bg-info-1);
   padding: 1rem;
 `
 
@@ -48,20 +48,20 @@ const stageTitleStyles = css`
   margin: 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 const stageDescriptionPlaceholderStyles = css`
   margin: 0;
   font-size: 0.88rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const stageDescriptionListStyles = css`
   margin: 0;
   padding-left: 1.1rem;
   font-size: 0.88rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const stageDescriptionItemStyles = css`

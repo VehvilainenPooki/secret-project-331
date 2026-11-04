@@ -22,7 +22,7 @@ const fillCss = css`
   inset: 0;
   overflow: hidden;
   border-radius: inherit;
-  background: var(--color-green-600);
+  background: var(--color-accent);
   transform-origin: left center;
 
   &::after {
@@ -30,7 +30,7 @@ const fillCss = css`
     position: absolute;
     inset: 0;
     width: 40%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+    background: linear-gradient(90deg, transparent, var(--tone-bg-neutral-5), transparent);
     animation: ${beam} var(--query-progress-beam-duration) linear infinite;
   }
 

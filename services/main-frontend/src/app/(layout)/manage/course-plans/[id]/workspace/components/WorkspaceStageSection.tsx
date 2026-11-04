@@ -11,14 +11,14 @@ import {
 } from "@/generated/api/@tanstack/react-query.generated"
 import type { CourseDesignerPlanStageWithTasks } from "@/generated/api/types.generated"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, TextField } from "@/shared-module/components"
 
 import WorkspaceTaskRow from "./WorkspaceTaskRow"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const cardStyles = css`
-  background: white;
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  background: var(--color-surface);
+  border: 1px solid ${tones.toneNeutral35};
   border-radius: 12px;
   padding: 1.25rem;
   margin-bottom: 1rem;
@@ -27,7 +27,7 @@ const cardStyles = css`
 const headerStyles = css`
   font-size: 1.1rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
   margin: 0 0 0.5rem 0;
 `
 
@@ -36,13 +36,13 @@ const dateRowStyles = css`
   align-items: center;
   gap: 0.35rem;
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin-bottom: 0.5rem;
 `
 
 const dateRangeStyles = css`
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const progressBlockStyles = css`
@@ -51,38 +51,38 @@ const progressBlockStyles = css`
 
 const progressLabelStyles = css`
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin-bottom: 0.35rem;
 `
 
 const progressPercentStyles = css`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const progressTrackStyles = css`
   height: 6px;
   border-radius: 999px;
-  background: ${baseTheme.colors.gray[200]};
+  background: ${tones.toneNeutral35};
   overflow: hidden;
 `
 
 const progressFillStyles = css`
   height: 100%;
   border-radius: 999px;
-  background: ${baseTheme.colors.green[600]};
+  background: ${tones.toneAccent21};
   transition: width 200ms ease;
 `
 
 const criteriaBlockStyles = css`
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid ${baseTheme.colors.gray[200]};
+  border-top: 1px solid ${tones.toneNeutral35};
 `
 
 const criteriaTitleStyles = css`
   font-size: 0.8rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0 0 0.4rem 0;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -93,7 +93,7 @@ const criteriaListStyles = css`
   padding: 0;
   margin: 0;
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   line-height: 1.5;
 `
 
@@ -112,7 +112,7 @@ const criteriaItemStyles = css`
     width: 1.1em;
     font-size: 0.8rem;
     line-height: 1;
-    color: ${baseTheme.colors.gray[500]};
+    color: ${tones.toneNeutral41};
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -142,7 +142,7 @@ const taskListStyles = css`
 `
 
 const emptyTasksStyles = css`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.9rem;
   font-style: italic;
   padding: 0.5rem 0;
@@ -233,7 +233,7 @@ export default function WorkspaceStageSection({
                 margin-left: 0.5rem;
                 font-size: 0.85rem;
                 font-weight: 500;
-                color: ${baseTheme.colors.green[600]};
+                color: ${tones.toneAccent21};
               `}
             >
               ({t("course-plans-status-in-progress")})

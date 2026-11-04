@@ -12,8 +12,8 @@ import type {
 } from "@/generated/api/types.generated"
 import MaskOverThisInSystemTests from "@/shared-module/common/components/system-tests/MaskOverThisInSystemTests"
 import SetHeightInSystemTests from "@/shared-module/common/components/system-tests/SetHeightInSystemTests"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, Checkbox, FileField, Select, TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const sectionLabelCss = cx(
   subheadingCss,
@@ -123,7 +123,7 @@ const CertificateForm: React.FC<Props> = ({
       onSubmit={onSubmitWrapper}
       className={css`
         hr {
-          color: ${baseTheme.colors.clear[300]};
+          color: ${tones.toneNeutral26};
         }
       `}
     >

@@ -136,13 +136,13 @@ const statusMarkCss = css`
 
 const statusIconCss = css`
   flex: none;
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 /** Crimson only for a status that needs fixing now; a warning or unchecked module keeps the row's
  *  own ink, matching Badge's own choice not to trust yellow as foreground colour. */
 const statusIconDangerCss = css`
-  color: var(--color-crimson-700);
+  color: var(--tone-fg-danger-14);
 `
 
 /** The row's one status mark; "ok" is muted text with no glyph, as most rows are fine. */

@@ -6,9 +6,9 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { FlaggedAnswer } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Disclosure } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface FlaggedPeerReviewAccordionProps {
   reports: FlaggedAnswer[]
@@ -17,8 +17,8 @@ export interface FlaggedPeerReviewAccordionProps {
 
 // oxlint-disable-next-line i18next/no-literal-string
 const Title = styled.h5`
-  border-top: 1px solid ${baseTheme.colors.clear[600]};
-  border-bottom: 1px solid ${baseTheme.colors.clear[600]};
+  border-top: 1px solid ${tones.toneNeutral33};
+  border-bottom: 1px solid ${tones.toneNeutral33};
   padding: 1rem 1.5rem 1rem;
 `
 
@@ -35,13 +35,13 @@ const FlaggedPeerReviewAccordion: React.FC<FlaggedPeerReviewAccordionProps> = ({
           {title}
           <span
             className={css`
-              background: ${baseTheme.colors.green[400]};
+              background: ${tones.toneAccent16};
               border-radius: 20px;
               line-height: 10px;
               padding: 1px 5px;
               text-align: center;
               font-size: 14px;
-              color: ${baseTheme.colors.primary[100]};
+              color: ${tones.toneNeutral1};
               margin-left: 3px;
               width: 20px;
               height: 20px;
@@ -54,7 +54,7 @@ const FlaggedPeerReviewAccordion: React.FC<FlaggedPeerReviewAccordionProps> = ({
     >
       <div
         className={css`
-          background: ${baseTheme.colors.clear[100]};
+          background: ${tones.toneNeutral12};
         `}
       >
         {reports.map((report, index) => (

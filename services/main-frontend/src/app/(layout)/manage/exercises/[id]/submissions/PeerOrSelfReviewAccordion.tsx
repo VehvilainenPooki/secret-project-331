@@ -12,8 +12,8 @@ import type {
 } from "@/generated/api/types.generated"
 import LikertScale from "@/shared-module/common/components/PeerReview/LikertScale"
 import useUserInfo from "@/shared-module/common/hooks/useUserInfo"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Disclosure } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface PeerOrSelfReviewAccordionProps {
   peerOrSelfReviews: PeerReviewWithQuestionsAndAnswers[]
@@ -26,12 +26,12 @@ const Question = styled.div`
   margin: 0 auto;
   margin-bottom: 1rem;
   display: block;
-  color: #1a2333;
+  color: var(--color-text);
 `
 
 // oxlint-disable-next-line i18next/no-literal-string
 const Title = styled.h5`
-  border-bottom: 1px solid ${baseTheme.colors.clear[600]};
+  border-bottom: 1px solid ${tones.toneNeutral33};
   padding: 0 1.5rem 1rem;
 `
 
@@ -102,13 +102,13 @@ const PeerOrSelfReviewAccordion: React.FC<PeerOrSelfReviewAccordionProps> = ({
           {title}{" "}
           <span
             className={css`
-              background: ${baseTheme.colors.green[400]};
+              background: ${tones.toneAccent16};
               border-radius: 20px;
               line-height: 10px;
               padding: 1px 5px;
               text-align: center;
               font-size: 14px;
-              color: ${baseTheme.colors.primary[100]};
+              color: ${tones.toneNeutral1};
               margin-left: 3px;
               width: 20px;
               height: 20px;
@@ -121,7 +121,7 @@ const PeerOrSelfReviewAccordion: React.FC<PeerOrSelfReviewAccordionProps> = ({
     >
       <div
         className={css`
-          background: ${baseTheme.colors.clear[100]};
+          background: ${tones.toneNeutral12};
           margin: 0.5rem 0;
         `}
       >

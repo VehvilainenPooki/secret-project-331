@@ -14,11 +14,11 @@ import BooleanAsText from "@/shared-module/common/components/BooleanAsText"
 import DebugModal from "@/shared-module/common/components/DebugModal"
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Link } from "@/shared-module/components"
 
 import PeerOrSelfReviewSubmissionSummaryAccordion from "./PeerOrSelfReviewSubmissionSummaryAccordion"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface ExerciseAccordionProps {
   exerciseStatus: ExerciseStatusSummaryForUser
@@ -60,19 +60,19 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
     <div
       className={css`
         margin-bottom: 1rem;
-        border: 1px solid ${baseTheme.colors.clear[300]};
+        border: 1px solid ${tones.toneNeutral26};
         border-radius: 6px;
         overflow: hidden;
-        background-color: ${baseTheme.colors.primary[100]};
-        box-shadow: 0 1px 4px ${baseTheme.colors.clear[300]};
+        background-color: ${tones.toneNeutral1};
+        box-shadow: 0 1px 4px ${tones.toneNeutral26};
         transition:
           border-color 0.2s ease,
           box-shadow 0.2s ease;
         ${
           isExpanded &&
           `
-          border-color: ${baseTheme.colors.green[400]};
-          box-shadow: 0 4px 12px ${baseTheme.colors.clear[400]};
+          border-color: ${tones.toneAccent16};
+          box-shadow: 0 4px 12px ${tones.toneNeutral30};
         `
         }
         ${
@@ -87,7 +87,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
       <div
         className={css`
           padding: 0.75rem 1rem;
-          border-bottom: 1px solid ${baseTheme.colors.clear[200]};
+          border-bottom: 1px solid ${tones.toneNeutral22};
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -105,7 +105,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
         >
           <h2
             className={css`
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               margin: 0;
               font-size: 1rem;
               font-weight: 600;
@@ -119,7 +119,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
           </h2>
           <span
             className={css`
-              color: ${baseTheme.colors.gray[500]};
+              color: ${tones.toneNeutral41};
               font-size: 0.85rem;
               white-space: nowrap;
             `}
@@ -133,7 +133,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
           className={css`
             padding: 0.35rem 0.75rem;
             border-radius: 4px;
-            border: 1px solid ${baseTheme.colors.clear[200]};
+            border: 1px solid ${tones.toneNeutral22};
             text-align: center;
             min-width: 70px;
             white-space: nowrap;
@@ -142,7 +142,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
           <div
             className={css`
               color: ${
-                userExerciseState ? baseTheme.colors.green[700] : baseTheme.colors.gray[500]
+                userExerciseState ? tones.toneAccent23 : tones.toneNeutral41
               };
               font-size: 1rem;
               font-weight: 600;
@@ -156,7 +156,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
             <span
               className={css`
                 font-size: 0.85rem;
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
               `}
             >
               /{exerciseStatus.exercise.score_maximum || 0}
@@ -177,20 +177,20 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
               justify-content: space-between;
               background: none;
               border: none;
-              border-bottom: 1px solid ${baseTheme.colors.clear[200]};
-              color: ${baseTheme.colors.gray[700]};
+              border-bottom: 1px solid ${tones.toneNeutral22};
+              color: ${tones.toneNeutral46};
               font-weight: 500;
               cursor: pointer;
               transition: background-color 0.2s ease;
 
               &:hover {
-                background-color: ${baseTheme.colors.clear[100]};
+                background-color: ${tones.toneNeutral12};
               }
 
               &:focus-visible {
-                outline: 2px solid ${baseTheme.colors.blue[500]};
+                outline: 2px solid ${tones.toneInfo20};
                 outline-offset: 2px;
-                background-color: ${baseTheme.colors.clear[100]};
+                background-color: ${tones.toneNeutral12};
               }
             `}
           >
@@ -209,7 +209,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
           <div
             className={css`
               display: ${isExpanded ? "block" : "none"};
-              background-color: ${baseTheme.colors.primary[100]};
+              background-color: ${tones.toneNeutral1};
             `}
           >
             <div>
@@ -218,11 +218,11 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                   {exerciseStatus.teacher_grading_decision && (
                     <div
                       className={css`
-                        background-color: ${baseTheme.colors.green[100]};
+                        background-color: ${tones.toneAccent7};
                         padding: 0.6rem 1.25rem;
-                        border-left: 3px solid ${baseTheme.colors.green[600]};
+                        border-left: 3px solid ${tones.toneAccent21};
                         font-size: 0.9rem;
-                        color: ${baseTheme.colors.green[700]};
+                        color: ${tones.toneAccent23};
                       `}
                     >
                       {t("teacher-has-graded-this-manually")} (
@@ -233,12 +233,12 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
 
                   <div
                     className={css`
-                      border-bottom: 1px solid ${baseTheme.colors.clear[200]};
+                      border-bottom: 1px solid ${tones.toneNeutral22};
                     `}
                   >
                     <h3
                       className={css`
-                        color: ${baseTheme.colors.gray[700]};
+                        color: ${tones.toneNeutral46};
                         margin: 0;
                         font-size: 0.85rem;
                         font-weight: 700;
@@ -270,7 +270,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                           <Link
                             href={`/submissions/${exerciseSlideSubmission.id}`}
                             className={css`
-                              color: ${baseTheme.colors.blue[600]};
+                              color: ${tones.toneInfo23};
                               text-decoration: none;
                               &:hover {
                                 text-decoration: underline;
@@ -284,7 +284,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                           </Link>
                           <span
                             className={css`
-                              color: ${baseTheme.colors.gray[600]};
+                              color: ${tones.toneNeutral44};
                               font-size: 0.8rem;
                             `}
                           >
@@ -298,13 +298,13 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                   {exerciseStatus.exercise.needs_peer_review && (
                     <div
                       className={css`
-                        border-bottom: 1px solid ${baseTheme.colors.clear[200]};
+                        border-bottom: 1px solid ${tones.toneNeutral22};
                         margin-top: 0.75rem;
                       `}
                     >
                       <h3
                         className={css`
-                          color: ${baseTheme.colors.gray[700]};
+                          color: ${tones.toneNeutral46};
                           margin: 0;
                           font-size: 0.85rem;
                           font-weight: 700;
@@ -330,13 +330,13 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                               align-items: baseline;
                               margin-bottom: 0.75rem;
                               font-size: 0.85rem;
-                              color: ${baseTheme.colors.gray[700]};
+                              color: ${tones.toneNeutral46};
                             `}
                           >
                             <span>{t("given-enough-peer-reviews")}:</span>
                             <span
                               className={css`
-                                color: ${baseTheme.colors.green[600]};
+                                color: ${tones.toneAccent21};
                                 font-weight: 500;
                               `}
                             >
@@ -345,7 +345,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                             <span>{t("received-enough-peer-reviews")}:</span>
                             <span
                               className={css`
-                                color: ${baseTheme.colors.green[600]};
+                                color: ${tones.toneAccent21};
                                 font-weight: 500;
                               `}
                             >
@@ -378,7 +378,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                             <span>{t("label-priority")}:</span>
                             <span
                               className={css`
-                                color: ${baseTheme.colors.green[600]};
+                                color: ${tones.toneAccent21};
                                 font-weight: 500;
                               `}
                             >
@@ -390,13 +390,13 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                             className={css`
                               margin: 0 0 0.75rem;
                               font-size: 0.85rem;
-                              color: ${baseTheme.colors.gray[600]};
+                              color: ${tones.toneNeutral44};
                             `}
                           >
                             {t("given-enough-peer-reviews")}:{" "}
                             <strong
                               className={css`
-                                color: ${baseTheme.colors.gray[700]};
+                                color: ${tones.toneNeutral46};
                               `}
                             >
                               {t("label-false")}
@@ -409,12 +409,12 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                             className={css`
                               margin-bottom: 0.75rem;
                               padding-bottom: 0.75rem;
-                              border-bottom: 1px solid ${baseTheme.colors.clear[200]};
+                              border-bottom: 1px solid ${tones.toneNeutral22};
                             `}
                           >
                             <h4
                               className={css`
-                                color: ${baseTheme.colors.gray[700]};
+                                color: ${tones.toneNeutral46};
                                 margin: 0 0 0.35rem;
                                 font-size: 0.8rem;
                                 font-weight: 600;
@@ -430,8 +430,8 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                                   align-items: center;
                                   padding: 0.05rem 0.45rem;
                                   border-radius: 9999px;
-                                  background-color: ${baseTheme.colors.green[100]};
-                                  color: ${baseTheme.colors.green[700]};
+                                  background-color: ${tones.toneAccent7};
+                                  color: ${tones.toneAccent23};
                                   font-size: 0.7rem;
                                   font-weight: 700;
                                 `}
@@ -467,7 +467,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                         ) : (
                           <p
                             className={css`
-                              color: ${baseTheme.colors.gray[600]};
+                              color: ${tones.toneNeutral44};
                               font-style: italic;
                               margin: 0 0 0.75rem;
                               font-size: 0.85rem;
@@ -481,7 +481,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                           <div>
                             <h4
                               className={css`
-                                color: ${baseTheme.colors.gray[700]};
+                                color: ${tones.toneNeutral46};
                                 margin: 0 0 0.35rem;
                                 font-size: 0.8rem;
                                 font-weight: 600;
@@ -497,8 +497,8 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                                   align-items: center;
                                   padding: 0.05rem 0.45rem;
                                   border-radius: 9999px;
-                                  background-color: ${baseTheme.colors.green[100]};
-                                  color: ${baseTheme.colors.green[700]};
+                                  background-color: ${tones.toneAccent7};
+                                  color: ${tones.toneAccent23};
                                   font-size: 0.7rem;
                                   font-weight: 700;
                                 `}
@@ -529,7 +529,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
                         ) : (
                           <p
                             className={css`
-                              color: ${baseTheme.colors.gray[600]};
+                              color: ${tones.toneNeutral44};
                               font-style: italic;
                               margin: 0;
                               font-size: 0.85rem;
@@ -545,7 +545,7 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
               ) : (
                 <p
                   className={css`
-                    color: ${baseTheme.colors.gray[600]};
+                    color: ${tones.toneNeutral44};
                     font-style: italic;
                     margin: 0;
                     padding: 1.25rem;
@@ -559,8 +559,8 @@ const ExerciseAccordion: React.FC<ExerciseAccordionProps> = ({
             <div
               className={css`
                 padding: 0.75rem 1.25rem;
-                background-color: ${baseTheme.colors.primary[100]};
-                border-top: 1px solid ${baseTheme.colors.clear[300]};
+                background-color: ${tones.toneNeutral1};
+                border-top: 1px solid ${tones.toneNeutral26};
                 display: flex;
                 gap: 1rem;
                 align-items: center;

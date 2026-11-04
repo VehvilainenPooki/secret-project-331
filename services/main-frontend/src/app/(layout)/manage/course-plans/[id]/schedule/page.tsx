@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseDesignerStage } from "@/generated/api/types.generated"
 import { withSignedIn } from "@/shared-module/common/contexts/LoginStateContext"
-import { baseTheme } from "@/shared-module/common/styles"
 import { manageCoursePlanWorkspaceRoute } from "@/shared-module/common/utils/routes"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
@@ -19,6 +18,7 @@ import ScheduleEditorStep from "./components/steps/ScheduleEditorStep"
 import SetupStep from "./components/steps/SetupStep"
 import useScheduleWizardController from "./hooks/useScheduleWizardController"
 import type { ScheduleWizardStepId } from "./scheduleConstants"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const MOTION_PRESENCE_MODE_WAIT = "wait"
 const MOTION_VARIANT_INITIAL = "initial"
@@ -39,34 +39,34 @@ const containerStyles = css`
 const titleStyles = css`
   font-size: 1.75rem;
   font-weight: 700;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
   margin: 0 0 0.5rem 0;
   letter-spacing: -0.02em;
 `
 
 const sectionStyles = css`
-  background: white;
-  border: 1px solid #d9dde4;
+  background: var(--color-surface);
+  border: 1px solid var(--tone-border-neutral-30);
   border-radius: 12px;
   padding: 1rem;
   margin-bottom: 1rem;
 `
 
 const wizardStepCardStyles = css`
-  background: white;
+  background: var(--color-surface);
   border-radius: 16px;
   padding: 2rem 2.25rem;
   margin-bottom: 1rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  border: 1px solid ${tones.toneNeutral35};
   box-shadow:
-    0 4px 24px rgba(0, 0, 0, 0.06),
-    0 0 1px rgba(0, 0, 0, 0.04);
-  border-left: 4px solid ${baseTheme.colors.green[500]};
+    0 4px 24px var(--tone-shadow-neutral-7),
+    0 0 1px var(--tone-shadow-neutral-5);
+  border-left: 4px solid ${tones.toneAccent19};
 
   h2 {
     font-size: 1.35rem;
     font-weight: 700;
-    color: ${baseTheme.colors.gray[800]};
+    color: ${tones.toneNeutral47};
     margin: 0 0 1.5rem 0;
     letter-spacing: -0.02em;
   }

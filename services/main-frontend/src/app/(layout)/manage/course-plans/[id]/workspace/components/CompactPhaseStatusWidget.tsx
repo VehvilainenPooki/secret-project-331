@@ -3,7 +3,7 @@
 import { css } from "@emotion/css"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const widgetCardStyles = css`
   display: inline-flex;
@@ -12,8 +12,8 @@ const widgetCardStyles = css`
   gap: 0.25rem;
   padding: 0.6rem 0.9rem;
   border-radius: 10px;
-  background: white;
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  background: var(--color-surface);
+  border: 1px solid ${tones.toneNeutral35};
   box-shadow: none;
   cursor: pointer;
   transition:
@@ -22,37 +22,37 @@ const widgetCardStyles = css`
   text-align: left;
 
   :hover {
-    border-color: ${baseTheme.colors.gray[300]};
+    border-color: ${tones.toneNeutral37};
   }
 `
 
 const phaseNameStyles = css`
   font-size: 0.95rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   margin: 0;
 `
 
 const statusLineStyles = css`
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   margin: 0;
 `
 
 const statusLineUrgentStyles = css`
-  color: ${baseTheme.colors.crimson[600]};
+  color: ${tones.toneDanger21};
 `
 
 const tasksLineStyles = css`
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0;
 `
 
 const viewPlanLinkStyles = css`
   font-size: 0.85rem;
   font-weight: 500;
-  color: ${baseTheme.colors.green[700]};
+  color: ${tones.toneAccent23};
   margin-top: 0.25rem;
   text-decoration: none;
 

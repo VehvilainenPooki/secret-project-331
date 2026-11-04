@@ -56,7 +56,7 @@ const listCss = css`
   }
 
   & > li + li {
-    border-top: 1px solid var(--color-gray-75);
+    border-top: 1px solid var(--tone-border-neutral-6);
   }
   ${Array.from(
     { length: STAGGERED_ROW_COUNT },
@@ -79,7 +79,7 @@ const rowCss = css`
   text-decoration: none;
 
   &:hover {
-    background: var(--color-gray-50);
+    background: var(--tone-bg-neutral-31);
   }
 
   &:focus-visible {
@@ -89,10 +89,10 @@ const rowCss = css`
 `
 
 const exactRowCss = css`
-  background: var(--color-green-50);
+  background: var(--tone-bg-accent-2);
 
   &:hover {
-    background: var(--color-green-75);
+    background: var(--tone-bg-accent-3);
   }
 `
 
@@ -119,26 +119,26 @@ const nameCss = css`
   }
 
   a:visited & {
-    color: var(--color-purple-600);
+    color: var(--tone-fg-special-1);
   }
 `
 
 const noNameCss = css`
   font-weight: 400;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 const shortIdCss = css`
   flex: none;
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: var(--font-size-0);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 const emailCss = css`
   display: block;
   font-size: var(--font-size-1);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   overflow-wrap: anywhere;
 `
 
@@ -161,11 +161,11 @@ const groupLabelCss = css`
   margin: 0 0 var(--space-2);
   font-size: var(--font-size-1);
   font-weight: 600;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 const exactGroupLabelCss = css`
-  color: var(--color-green-700);
+  color: var(--tone-fg-accent-8);
 `
 
 const groupsCss = css`

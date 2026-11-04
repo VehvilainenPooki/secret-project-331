@@ -17,7 +17,6 @@ import type { CourseDesignerStage } from "@/generated/api/types.generated"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import { withSignedIn } from "@/shared-module/common/contexts/LoginStateContext"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { manageCoursePlanPermissionsRoute } from "@/shared-module/common/utils/routes"
 import { dateToString } from "@/shared-module/common/utils/time"
@@ -30,6 +29,7 @@ import PlanOverviewPanel from "./components/PlanOverviewPanel"
 import StageTimelineTabStrip from "./components/StageTimelineTabStrip"
 import WorkspaceStageSection from "./components/WorkspaceStageSection"
 import { useCoursePlanWorkspacePageState } from "./hooks/useCoursePlanWorkspacePageState"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const pageRootStyles = css`
   padding: 0 0 3rem 0;
@@ -74,26 +74,26 @@ const headerBlockStyles = css`
 const titleStyles = css`
   font-size: 1.75rem;
   font-weight: 700;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   margin: 0 0 0.25rem 0;
 `
 
 const metadataRowStyles = css`
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0;
 `
 
 const manageMembersLinkStyles = css`
   font-size: 0.9rem;
   font-weight: 500;
-  color: ${baseTheme.colors.green[700]};
+  color: ${tones.toneAccent23};
   text-decoration: none;
   white-space: nowrap;
   align-self: center;
 
   &:hover {
-    color: ${baseTheme.colors.green[800]};
+    color: ${tones.toneAccent25};
     text-decoration: underline;
   }
 `
@@ -182,11 +182,11 @@ const chatbotAreaStyles = css`
 `
 
 const cardStyles = css`
-  background: white;
+  background: var(--color-surface);
   border-radius: 12px;
   padding: 1.5rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  box-shadow: 0 4px 16px var(--tone-shadow-neutral-5);
+  border: 1px solid ${tones.toneNeutral35};
 `
 
 const tasksCardStyles = css`
@@ -210,34 +210,34 @@ const chatbotCardStyles = css`
 const sectionTitleStyles = css`
   font-size: 1.1rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   margin: 0 0 0.5rem 0;
 `
 
 const currentStageTitleStyles = css`
   font-size: 1.35rem;
   font-weight: 700;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   margin: 0.55rem 0 0.75rem;
 `
 
 const instructionsSectionTitleStyles = css`
   font-size: 1.15rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   margin: 0 0 0.5rem 0;
 `
 
 const aboutHeadingStyles = css`
   font-size: 0.9rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   margin: 0 0 0.35rem 0;
 `
 
 const aboutTextStyles = css`
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   line-height: 1.55;
   margin: 0 0 0.75rem 0;
 `
@@ -245,7 +245,7 @@ const aboutTextStyles = css`
 const keyGoalsHeadingStyles = css`
   font-size: 0.9rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   margin: 0 0 0.35rem 0;
 `
 
@@ -254,7 +254,7 @@ const keyGoalsListStyles = css`
   padding: 0;
   margin: 0;
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   line-height: 1.5;
 `
 
@@ -267,12 +267,12 @@ const keyGoalItemStyles = css`
     content: "•";
     position: absolute;
     left: 0;
-    color: ${baseTheme.colors.green[600]};
+    color: ${tones.toneAccent21};
   }
 `
 
 const emptyStateStyles = css`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.95rem;
   font-style: italic;
 `
@@ -284,15 +284,15 @@ const stageContextNoticeStyles = css`
   padding: 0.85rem 1rem;
   margin: 0 0 1rem 0;
   border-radius: 10px;
-  background: ${baseTheme.colors.gray[50]};
-  border: 1px solid ${baseTheme.colors.gray[200]};
-  border-left: 3px solid ${baseTheme.colors.gray[300]};
+  background: ${tones.toneNeutral14};
+  border: 1px solid ${tones.toneNeutral35};
+  border-left: 3px solid ${tones.toneNeutral37};
 `
 
 const stageContextNoticeFutureStyles = css`
-  background: ${baseTheme.colors.primary[100]};
-  border-color: ${baseTheme.colors.gray[200]};
-  border-left-color: ${baseTheme.colors.green[400]};
+  background: ${tones.toneNeutral1};
+  border-color: ${tones.toneNeutral35};
+  border-left-color: ${tones.toneAccent16};
 `
 
 const stageContextEyebrowStyles = css`
@@ -300,20 +300,20 @@ const stageContextEyebrowStyles = css`
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0;
 `
 
 const stageContextTitleStyles = css`
   font-size: 1rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
   margin: 0;
 `
 
 const stageContextBodyStyles = css`
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   margin: 0;
   line-height: 1.5;
 `
@@ -330,19 +330,19 @@ const welcomeDialogBodyStyles = css`
   flex-direction: column;
   gap: 0.85rem;
   font-size: 0.95rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   line-height: 1.55;
 `
 
 const welcomeDialogIntroStyles = css`
   margin: 0;
   font-size: 1rem;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
 `
 
 const welcomeDialogBriefStyles = css`
   margin: 0;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 const welcomeDialogGoalsHeadingStyles = css`
@@ -350,7 +350,7 @@ const welcomeDialogGoalsHeadingStyles = css`
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.04em;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
 `
 
 const welcomeDialogGoalsListStyles = css`
@@ -365,14 +365,14 @@ const welcomeDialogGoalsListStyles = css`
 const welcomeDialogGoalItemStyles = css`
   position: relative;
   padding-left: 1.5rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 
   &::before {
     content: "✓";
     position: absolute;
     left: 0;
     top: 0;
-    color: ${baseTheme.colors.green[600]};
+    color: ${tones.toneAccent21};
     font-weight: 700;
   }
 `
@@ -380,7 +380,7 @@ const welcomeDialogGoalItemStyles = css`
 const welcomeDialogHintStyles = css`
   margin: 0;
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 type StageLabelTranslationKey =

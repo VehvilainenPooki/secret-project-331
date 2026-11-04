@@ -24,11 +24,11 @@ import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, EmptyState, Pagination, QueryResult, Table } from "@/shared-module/components"
 
 const positiveCss = css`
-  color: #32bea6;
+  color: var(--tone-fg-accent-2);
 `
 
 const negativeCss = css`
-  color: #f76d82;
+  color: var(--tone-fg-danger-1);
 `
 
 const GradingPage: React.FC = () => {

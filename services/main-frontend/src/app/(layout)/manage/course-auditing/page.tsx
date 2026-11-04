@@ -13,7 +13,6 @@ import { pageTitleCss } from "@/components/credit-registration/styles"
 import { getCoursesForAuditingOptions } from "@/generated/api/@tanstack/react-query.generated"
 import type { CourseAuditingData } from "@/generated/api/types.generated"
 import { withSignedIn } from "@/shared-module/common/contexts/LoginStateContext"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withSuspenseBoundary from "@/shared-module/common/utils/withSuspenseBoundary"
 import {
@@ -32,6 +31,7 @@ import {
 
 import CourseCard from "./CourseCard/CourseCard"
 import CourseDataFilterForm from "./CourseDataFilterForm"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CourseFilter {
   search_course: string
@@ -63,7 +63,7 @@ export const FieldSet = styled.fieldset`
   display: flex;
   flex-flow: column;
   margin-bottom: 1rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  border: 1px solid ${tones.toneNeutral35};
   border-radius: 4px;
   padding: 1rem;
   gap: 1rem;

@@ -5,14 +5,14 @@ import { motion, useReducedMotion } from "motion/react"
 import { useProgressBar } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 
 import type { ScheduleWizardStepId } from "../scheduleConstants"
 import { SCHEDULE_WIZARD_STEPS } from "../scheduleConstants"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const progressTextStyles = css`
   font-size: 0.95rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0 0 2rem 0;
 `
 
@@ -31,7 +31,7 @@ const wizardStepsConnectorStyles = css`
   left: 0;
   right: 0;
   height: 2px;
-  background: ${baseTheme.colors.gray[200]};
+  background: ${tones.toneNeutral35};
   z-index: 0;
   pointer-events: none;
 `
@@ -42,7 +42,7 @@ const wizardProgressFillBaseStyles = css`
   left: 0;
   width: 100%;
   height: 2px;
-  background: ${baseTheme.colors.green[500]};
+  background: ${tones.toneAccent19};
   z-index: 0;
   pointer-events: none;
   transform-origin: left;
@@ -71,18 +71,18 @@ const wizardStepPillStyles = (isActive: boolean, isCompleted: boolean) => css`
       color 0.2s,
       border-color 0.2s,
       box-shadow 0.2s;
-    border: 2px solid ${baseTheme.colors.gray[300]};
-    background: white;
-    color: ${baseTheme.colors.gray[500]};
+    border: 2px solid ${tones.toneNeutral37};
+    background: var(--color-surface);
+    color: ${tones.toneNeutral41};
   }
 
   ${
     isCompleted &&
     css`
       .wizard-step-circle {
-        background: ${baseTheme.colors.green[500]};
-        border-color: ${baseTheme.colors.green[600]};
-        color: white;
+        background: ${tones.toneAccent19};
+        border-color: ${tones.toneAccent21};
+        color: var(--color-text-on-accent);
       }
     `
   }
@@ -91,10 +91,10 @@ const wizardStepPillStyles = (isActive: boolean, isCompleted: boolean) => css`
     isActive &&
     css`
       .wizard-step-circle {
-        background: ${baseTheme.colors.green[600]};
-        border-color: ${baseTheme.colors.green[700]};
-        color: white;
-        box-shadow: 0 0 0 4px ${baseTheme.colors.green[100]};
+        background: ${tones.toneAccent21};
+        border-color: ${tones.toneAccent23};
+        color: var(--color-text-on-accent);
+        box-shadow: 0 0 0 4px ${tones.toneAccent7};
       }
     `
   }
@@ -102,7 +102,7 @@ const wizardStepPillStyles = (isActive: boolean, isCompleted: boolean) => css`
   .wizard-step-label {
     font-size: 0.8rem;
     font-weight: 600;
-    color: ${isActive ? baseTheme.colors.green[700] : baseTheme.colors.gray[500]};
+    color: ${isActive ? tones.toneAccent23 : tones.toneNeutral41};
     text-align: center;
     line-height: 1.2;
   }

@@ -11,9 +11,8 @@ import type {
   CourseDesignerPlanStageWithTasks,
   CourseDesignerStage,
 } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { includeIf, omitUndefined } from "@/shared-module/common/utils/nullability"
-import { withAlpha } from "@/shared-module/components/styles/themes"
+import { tones, withAlpha } from "@/shared-module/components/styles/themes"
 
 import { SCHEDULE_STAGE_ORDER } from "../../schedule/scheduleConstants"
 import { useStageTimelineMeasurements } from "../hooks/useStageTimelineMeasurements"
@@ -30,11 +29,11 @@ const timelineShellStyles = css`
 const cardStyles = css`
   margin: 0;
   border-radius: 12px;
-  border: 1px solid ${baseTheme.colors.gray[200]};
-  border-top: 2px solid ${baseTheme.colors.green[200]};
-  background: ${baseTheme.colors.primary[100]};
+  border: 1px solid ${tones.toneNeutral35};
+  border-top: 2px solid ${tones.toneAccent9};
+  background: ${tones.toneNeutral1};
   padding: 0.7rem 0.9rem 0.2rem;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+  box-shadow: 0 6px 18px var(--tone-shadow-info-3);
 `
 
 const tabListRowStyles = css`
@@ -53,12 +52,12 @@ const currentStageCalloutContainerStyles = css`
   gap: 0.75rem;
   padding: 0.35rem 0.9rem;
   border-radius: 8px;
-  background: ${baseTheme.colors.green[50]};
-  border: 1px solid ${baseTheme.colors.green[200]};
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
+  background: ${tones.toneAccent2};
+  border: 1px solid ${tones.toneAccent9};
+  box-shadow: 0 2px 6px var(--tone-shadow-info-3);
   z-index: 6;
   justify-content: center;
-  border-bottom: 2px solid ${baseTheme.colors.green[200]};
+  border-bottom: 2px solid ${tones.toneAccent9};
   max-width: calc(100% - 0.5rem);
 `
 
@@ -67,28 +66,28 @@ const currentStageLabelStyles = css`
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
 `
 
 const currentStageEditButtonStyles = css`
   background: transparent;
-  border: 1px solid ${baseTheme.colors.gray[300]};
+  border: 1px solid ${tones.toneNeutral37};
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.1rem 0.6rem;
   border-radius: 4px;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   cursor: pointer;
 
   &:hover,
   &:focus-visible {
-    background: ${baseTheme.colors.gray[100]};
-    color: ${baseTheme.colors.gray[800]};
+    background: ${tones.toneNeutral29};
+    color: ${tones.toneNeutral47};
   }
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.gray[700]};
+    outline: 2px solid ${tones.toneNeutral46};
     outline-offset: 1px;
   }
 `
@@ -109,11 +108,11 @@ const todayLabelStyles = css`
   z-index: 5;
   font-size: 0.68rem;
   font-weight: 600;
-  color: ${baseTheme.colors.red[600]};
+  color: ${tones.toneDanger17};
   margin-bottom: 0.1rem;
   text-shadow:
-    0 0 2px ${baseTheme.colors.primary[100]},
-    0 0 6px ${baseTheme.colors.primary[100]};
+    0 0 2px ${tones.toneNeutral1},
+    0 0 6px ${tones.toneNeutral1};
 `
 
 const todayTriangleStyles = css`
@@ -123,7 +122,7 @@ const todayTriangleStyles = css`
   height: 0;
   border-left: 4px solid transparent;
   border-right: 4px solid transparent;
-  border-top: 6px solid ${baseTheme.colors.red[600]};
+  border-top: 6px solid ${tones.toneDanger17};
 `
 
 // Behind the month tiles so it never crosses their text.
@@ -136,8 +135,8 @@ const todayLineStyles = css`
   border-radius: 999px;
   background: linear-gradient(
     to bottom,
-    ${baseTheme.colors.red[600]},
-    ${withAlpha(baseTheme.colors.red[600], 25.1)}
+    ${tones.toneDanger17},
+    ${withAlpha(tones.toneDanger17, 25.1)}
   );
 `
 

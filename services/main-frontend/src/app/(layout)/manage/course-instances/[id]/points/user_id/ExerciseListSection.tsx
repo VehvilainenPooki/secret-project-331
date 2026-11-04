@@ -9,7 +9,6 @@ import { useTranslation } from "react-i18next"
 
 import type { ExerciseStatusSummaryForUser } from "@/generated/api/types.generated"
 import { useCourseStructure } from "@/hooks/useCourseStructure"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Dialog, QueryResult, Select, Spinner } from "@/shared-module/components"
 import type { TeacherChapterLockStatus } from "@/utils/chapterLockingStatus"
@@ -20,6 +19,7 @@ import {
 } from "@/utils/chapterLockingStatus"
 
 import ExerciseAccordion from "./ExerciseAccordion"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Section = styled.section`
   margin: 3rem 0;
@@ -41,11 +41,11 @@ const iconButtonStyle = css`
   justify-content: center;
   width: 2rem;
   height: 2rem;
-  border: 1px solid ${baseTheme.colors.gray[300]};
+  border: 1px solid ${tones.toneNeutral37};
   border-radius: 0.4rem;
-  background: #fff;
+  background: var(--color-surface);
   cursor: pointer;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 const getEditableStatus = (
@@ -214,7 +214,7 @@ const ExerciseListSection: React.FC<ExerciseListSectionProps> = ({
                               data-testid={`teacher-chapter-lock-status-${chapterId}`}
                               className={css`
                                 margin: 0;
-                                color: ${baseTheme.colors.gray[700]};
+                                color: ${tones.toneNeutral46};
                                 display: inline-flex;
                                 align-items: center;
                                 gap: 0.4rem;

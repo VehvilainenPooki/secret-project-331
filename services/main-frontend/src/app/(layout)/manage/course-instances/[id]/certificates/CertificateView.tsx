@@ -7,8 +7,8 @@ import { subheadingCss } from "@/components/credit-registration/styles"
 import type { CertificateConfigurationAndRequirements } from "@/generated/api/types.generated"
 import MaskOverThisInSystemTests from "@/shared-module/common/components/system-tests/MaskOverThisInSystemTests"
 import SetHeightInSystemTests from "@/shared-module/common/components/system-tests/SetHeightInSystemTests"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface Props {
   configurationAndRequirements: CertificateConfigurationAndRequirements
@@ -34,7 +34,7 @@ const CertificateView: React.FC<Props> = ({
           width: 100%;
           margin: var(--space-2) 0;
           border: none;
-          border-top: 1px solid ${baseTheme.colors.clear[300]};
+          border-top: 1px solid ${tones.toneNeutral26};
         }
 
         h3 {

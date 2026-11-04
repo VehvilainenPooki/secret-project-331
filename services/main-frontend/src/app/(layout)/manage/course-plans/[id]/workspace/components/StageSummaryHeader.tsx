@@ -4,8 +4,8 @@ import { css } from "@emotion/css"
 
 import { COURSE_PLAN_MONTH_ICONS } from "@/app/(layout)/manage/course-plans/monthIcons"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const stageHeaderBarStyles = css`
   display: flex;
@@ -24,9 +24,9 @@ const stageHeaderCardStyles = css`
   min-width: 22rem;
   padding: 0.85rem 1.5rem;
   border-radius: 999px;
-  background: white;
-  border: 1px solid ${baseTheme.colors.gray[200]};
-  box-shadow: 0 12px 25px rgba(15, 23, 42, 0.08);
+  background: var(--color-surface);
+  border: 1px solid ${tones.toneNeutral35};
+  box-shadow: 0 12px 25px var(--tone-shadow-info-8);
   cursor: pointer;
   transition:
     box-shadow 150ms ease,
@@ -34,14 +34,14 @@ const stageHeaderCardStyles = css`
     border-color 150ms ease;
 
   :hover {
-    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 18px 35px var(--tone-shadow-info-10);
     transform: translateY(-1px);
-    border-color: ${baseTheme.colors.primary[200]};
+    border-color: ${tones.toneNeutral49};
   }
 
   :active {
     transform: translateY(0);
-    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+    box-shadow: 0 10px 20px var(--tone-shadow-info-8);
   }
 `
 
@@ -54,15 +54,15 @@ const stageHeaderDateBlockStyles = css`
 const stageHeaderMonthIconStyles = css`
   width: 20px;
   height: 20px;
-  color: ${baseTheme.colors.green[600]};
+  color: ${tones.toneAccent21};
   flex-shrink: 0;
 `
 
 const stagePillStyles = css`
   border-radius: 999px;
   padding: 0.35rem 0.75rem;
-  background: ${baseTheme.colors.gray[100]};
-  color: ${baseTheme.colors.gray[800]};
+  background: ${tones.toneNeutral29};
+  color: ${tones.toneNeutral47};
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -79,24 +79,24 @@ const stageHeaderTextStyles = css`
 
 const stageHeaderWelcomeStyles = css`
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin-bottom: 0.15rem;
 `
 
 const stageHeaderPrimaryStyles = css`
   font-size: 0.95rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
 `
 
 const stageHeaderSecondaryStyles = css`
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 const stageHeaderDateStyles = css`
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   white-space: nowrap;
 `
 
