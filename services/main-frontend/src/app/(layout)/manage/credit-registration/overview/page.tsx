@@ -55,8 +55,8 @@ import type {
   CreditRegistrationHistory,
   CreditRegistrationOverview,
 } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Link, QueryResult, StatTile, StatTileList } from "@/shared-module/components"
+import { getActiveTheme } from "@/shared-module/components/styles/themes"
 
 const TREND_CHART_HEIGHT = 300
 const TILE_COLUMNS = 4
@@ -68,11 +68,11 @@ const TREND_PHASES = ["course", "student_number", "registering", "confirmation"]
 
 /** Hex and not a CSS variable: ECharts cannot resolve one. Red is for Needs attention alone. */
 const TREND_COLORS = {
-  course: baseTheme.colors.gray[500],
-  student_number: baseTheme.colors.yellow[800],
-  registering: baseTheme.colors.blue[600],
-  confirmation: baseTheme.colors.green[700],
-  needs_attention: baseTheme.colors.crimson[600],
+  course: getActiveTheme().tones.chartNeutral17,
+  student_number: getActiveTheme().tones.chartWarning32,
+  registering: getActiveTheme().tones.chartInfo4,
+  confirmation: getActiveTheme().tones.chartAccent74,
+  needs_attention: getActiveTheme().tones.chartDanger10,
 } as const
 
 /** How the chosen period's finished registrations ended. The period picker sits in this card's

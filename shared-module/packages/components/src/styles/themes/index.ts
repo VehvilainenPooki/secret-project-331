@@ -98,3 +98,12 @@ export function resolveThemeVars(css: string, theme: Theme = lightTheme): string
   )
   return css.replaceAll(/var\((--[\w-]+)\)/g, (match, name: string) => values.get(name) ?? match)
 }
+
+/**
+ * The theme the page shows, for code that needs color values instead of `var(...)` references,
+ * such as charts drawn on a canvas. Falls back to the default theme outside the browser.
+ */
+export function getActiveTheme(): Theme {
+  const name = typeof document === "undefined" ? undefined : document.documentElement.dataset.theme
+  return themes.find((theme) => theme.name === name) ?? themes[0]
+}
