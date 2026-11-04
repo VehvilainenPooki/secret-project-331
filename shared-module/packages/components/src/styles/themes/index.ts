@@ -80,3 +80,21 @@ export const tones: Readonly<Record<keyof typeof lightTheme.tones, string>> = ro
   lightTheme.tones,
   toneVarName,
 )
+
+/**
+ * `css` with every theme custom property reference replaced by `theme`'s value, so a test can check
+ * the color a style resolves to: `resolveThemeVars("color: var(--color-text)")` gives the text color.
+ */
+export function resolveThemeVars(css: string, theme: Theme = lightTheme): string {
+  const values = new Map(
+    themeCustomProperties(theme)
+      .split("\n")
+      .map((declaration) => {
+        const separator = declaration.indexOf(":")
+        const name = declaration.slice(0, separator).trim()
+        const value = declaration.slice(separator + 1).trim().replace(/;$/, "")
+        return [name, value]
+      }),
+  )
+  return css.replaceAll(/var\((--[\w-]+)\)/g, (match, name: string) => values.get(name) ?? match)
+}
