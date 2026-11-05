@@ -7,6 +7,7 @@ const { blue, green, crimson, yellow, purple, gray, clear } = colorScales
 /** The default theme. Each value is the color the UI already uses for that purpose. */
 export const lightTheme: Theme = {
   name: "light",
+  colorScheme: "light",
   colors: {
     bg: white,
     surface: white,
@@ -43,7 +44,7 @@ export const lightTheme: Theme = {
     controlBgPressed: clear[400],
     controlBorder: clear[400],
     controlGhostBgPressed: clear[300],
-    controlTrackOff: clear[800],
+    controlTrackOff: offPalette.controlTrackOff,
     controlThumb: white,
 
     successFg: green[600],
@@ -52,7 +53,7 @@ export const lightTheme: Theme = {
     warningFg: gray[700],
     warningBg: yellow[100],
     warningBorder: yellow[700],
-    warningText: yellow[900],
+    warningText: offPalette.warningText,
     dangerFg: crimson[600],
     dangerBg: crimson[75],
     dangerBorder: crimson[600],

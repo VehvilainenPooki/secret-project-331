@@ -8,4 +8,16 @@ import { themesCss } from "./index"
  */
 export const themesGlobal = injectGlobal`
   ${themesCss()}
+
+  /* When the system asks for more contrast, muted text and soft borders use the active theme's
+     full-strength text and border colors. */
+  @media (prefers-contrast: more) {
+    :root,
+    [data-theme] {
+      --color-text-muted: var(--color-text);
+      --color-text-subtle: var(--color-text);
+      --color-border: var(--color-border-strong);
+      --color-control-border: var(--color-border-strong);
+    }
+  }
 `

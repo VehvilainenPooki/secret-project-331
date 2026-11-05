@@ -10,6 +10,7 @@ import type {
   ExtendedIframeState,
   MessageFromIframe,
   SetLanguageMessage,
+  SetThemeMessage,
   SetStateMessage,
 } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types"
 import {
@@ -451,6 +452,33 @@ const MessageChannelIFrame: React.FC<React.PropsWithChildren<MessageChannelIFram
       removeEventListener("message", temporaryEventHandler)
     }
   }, [handleInitialReadyMessage])
+
+  // Keep the iframe on the parent page's color theme: the active theme is the `data-theme`
+  // attribute of the parent's <html>, so watch it rather than any React state.
+  useEffect(() => {
+    if (!messageChannel) {
+      return
+    }
+    const root = document.documentElement
+    const postTheme = () => {
+      const name = root.dataset.theme
+      if (!name) {
+        return
+      }
+      const message: SetThemeMessage = {
+        message: "set-theme",
+        data: {
+          name,
+          colorScheme: getComputedStyle(root).colorScheme.includes("dark") ? "dark" : "light",
+        },
+      }
+      messageChannel.port1.postMessage(message)
+    }
+    postTheme()
+    const observer = new MutationObserver(postTheme)
+    observer.observe(root, { attributes: true, attributeFilter: ["data-theme", "style"] })
+    return () => observer.disconnect()
+  }, [messageChannel])
 
   // Keep the iframe informed of the current user interface language
   useEffect(() => {

@@ -1,0 +1,40 @@
+#!/bin/bash
+set -euo pipefail
+source "$(dirname "$0")/.common"
+
+# Colors in front-end code come from the theme (roles and tones in
+# shared-module/packages/components/src/styles/themes), so every theme can give them its own value.
+# This lists hex and rgb()/rgba() literals anywhere else. The excluded files are the palette and
+# theme definitions, and colors that are content or data rather than UI: author-chosen colors,
+# terminal output colors, the block editor canvas, illustrations and logos.
+
+cd "$(dirname "${BASH_SOURCE[0]}")/.."
+
+HEX6_OR_8='(?<![\w&/])#(?:[0-9a-fA-F]{8}|[0-9a-fA-F]{6})(?![\w-])'
+# Three-digit hex only after a colon, quote or parenthesis, so "#185" in a sentence is not a color.
+HEX3='(?:[:"'"'"'`(]\s*)#[0-9a-fA-F]{3}(?![\w-])'
+RGB='\brgba?\(\s*\d'
+
+MATCHES=$(git grep -nP "$HEX6_OR_8|$HEX3|$RGB" -- \
+  services/main-frontend/src services/cms/src services/quizzes/src services/tmc/src \
+  shared-module/packages/common/src shared-module/packages/components/src \
+  shared-module/packages/exercise-client/src shared-module/packages/exercise-iframe-host/src \
+  ':!**/generated/**' ':!*.svg' ':!*.html' ':!**/*.test.*' ':!**/__tests__/**' \
+  ':!**/styles/palette.ts' ':!**/styles/themes/tones.ts' ':!**/styles/themes/light.ts' \
+  ':!**/gutenbergColorPalette.ts' ':!**/colorMapper.tsx' ':!**/inlineColorStyles.tsx' \
+  ':!**/colors/ColorPalette.tsx' ':!**/colors/page.tsx' ':!**/parseAnsiToReact.tsx' \
+  ':!**/LikertSvgs.tsx' ':!**/YoutubeEmbedBlock.tsx' \
+  ':!services/cms/src/blocks/*/index.tsx' ':!services/cms/src/blocks/*/deprecated.tsx' \
+  ':!**/blockValidator/richText.ts' ':!**/styles/Gutenberg/**' \
+  ':!**/utils/Gutenberg/editorContentStyles.ts' ':!**/utils/Gutenberg/emailEditorContentStyles.ts' \
+  || true)
+
+if [ -n "$MATCHES" ]; then
+  echo "Found color literals outside the theme. Use a role (colors.*) or tone (tones.*) from"
+  echo "@/shared-module/components/styles/themes instead:"
+  echo ""
+  echo "$MATCHES"
+  exit 255
+fi
+
+echo "All good"

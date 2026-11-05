@@ -16,7 +16,7 @@ export interface ExerciseSubmitButtonProps {
 
 const blockerListStyles = css`
   margin-bottom: 0.5rem;
-  /* Muted grey tuned to sit just above WCAG AA (4.5:1) on the exercise card's #f2f2f2 background:
+  /* Muted grey tuned to sit just above WCAG AA (4.5:1) on the exercise card's light gray background:
      4.66:1 here (5.2:1 on white). gray[400] would fall to ~3.8:1, so this is as light as the text
      can go while staying accessible. */
   color: var(--tone-fg-neutral-23);

@@ -14,6 +14,7 @@ import dynamicImport from "@/shared-module/common/utils/dynamicImport"
 import generateWebVitalsReporter from "@/shared-module/common/utils/generateWebVitalsReporter"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { LoadingRegion } from "@/shared-module/components"
+import { themeInitScript } from "@/shared-module/components/styles/themes/preference"
 
 import "react-medium-image-zoom/dist/styles.css"
 
@@ -37,6 +38,8 @@ const RootLayout = ({
   return (
     <html lang="en" dir={getDir("en")}>
       <body>
+        {/* Before any content, so the page never paints in the wrong theme. */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <DesignTokensRoot />
         <Script noModule id="outdated-browser-warning">
           {OUTDATED_BROWSER_WARNING_SCRIPT}

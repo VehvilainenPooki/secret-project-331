@@ -135,6 +135,8 @@ export interface CmsColorRoles {
 export interface Theme {
   /** Used as the `data-theme` attribute value. */
   name: string
+  /** Whether the theme is light or dark, for the CSS `color-scheme` of native controls and scrollbars. */
+  colorScheme: "light" | "dark"
   colors: ThemeColorRoles
   cms: CmsColorRoles
   /** Exact-value tones for leaf code that has no purpose-named role yet; see `tones.ts`. */

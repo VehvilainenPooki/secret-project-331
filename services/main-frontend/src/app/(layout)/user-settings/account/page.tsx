@@ -9,6 +9,7 @@ import EmailVerificationSection from "@/components/EmailVerificationSection"
 import ChangeUserPasswordForm from "@/components/forms/ChangeUserPasswordForm"
 import { EditUserInformationForm } from "@/components/forms/EditUserInformationForm"
 import { useUserDetailsForUserQuery } from "@/hooks/useUserDetailsForUserQuery"
+import ThemeSelect from "@/shared-module/common/components/ThemeSelect"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import { fontWeights } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
@@ -46,6 +47,8 @@ const AccountSettingsPage: React.FC = () => {
           />
 
           <EmailVerificationSection />
+
+          <ThemeSelect className={settingsCardCss} />
 
           <div className={settingsCardCss}>
             <div
