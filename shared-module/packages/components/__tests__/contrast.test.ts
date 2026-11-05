@@ -38,6 +38,10 @@ const pairs: Array<[Role, Role, number]> = [
   ["infoFg", "infoBg", UI],
   ["badgeIcon", "surface", UI],
   ["controlIconStrong", "surface", UI],
+  ["codeText", "codeBg", TEXT],
+  ["codeText", "codeTooltipBg", TEXT],
+  ["codeSuccess", "codeBg", UI],
+  ["codeDanger", "codeBg", UI],
 ]
 
 type Rgba = [number, number, number, number]

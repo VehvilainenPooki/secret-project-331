@@ -1,4 +1,5 @@
 import { darkTones } from "./darkTones"
+import { codeRoles } from "./light"
 import type { Theme } from "./types"
 
 /**
@@ -66,6 +67,8 @@ export const darkTheme: Theme = {
     controlIconStrong: "#CDD7DF",
     progressRingTrack: "#1C252D",
     dangerSurfaceSubtle: "#181C22",
+
+    ...codeRoles,
     sheen: "#FFFFFF",
     chart1: "#8FC7FD",
     chart2: "#558582",
