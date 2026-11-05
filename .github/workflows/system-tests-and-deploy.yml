@@ -91,6 +91,9 @@ jobs:
       - name: Make sure we have no focused system-tests
         run: bin/check-no-test-only-in-system-tests
 
+      - name: Make sure colors come from the theme
+        run: bin/check-no-color-literals
+
       - name: Free up disk space
         uses: ./.github/actions/free-disk-space
 
