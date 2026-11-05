@@ -147,7 +147,7 @@ export const gradients = {
  */
 export const offPalette = {
   /** green 600 at 60% opacity */
-  focusRing: "rgba(31, 105, 100, 0.6)",
+  focusRing: "rgba(31, 105, 100, 0.65)",
   /** yellow 900 darkened, keeping its hue, until it passes 4.5:1 as text on white */
   warningText: "#867630",
   /** clear 800 darkened until a switch's off track has 3:1 against white */
