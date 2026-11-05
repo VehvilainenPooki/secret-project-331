@@ -330,7 +330,8 @@ const ContentRenderer: React.FC<React.PropsWithChildren<ContentRendererProps>> =
           font-size: 20px;
           text-underline-offset: 4.6px;
           text-decoration-thickness: 1.6px;
-          a {
+          /* Links styled as buttons keep their button's text color. */
+          a:not([data-styled-as-button]) {
             color: var(--tone-fg-info-3);
             &:hover {
               color: var(--tone-fg-info-5);
