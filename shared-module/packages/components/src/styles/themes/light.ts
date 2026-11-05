@@ -53,7 +53,7 @@ export const lightTheme: Theme = {
     warningFg: gray[700],
     warningBg: yellow[100],
     warningBorder: yellow[700],
-    warningText: yellow[900],
+    warningText: offPalette.warningText,
     dangerFg: crimson[600],
     dangerBg: crimson[75],
     dangerBorder: crimson[600],
