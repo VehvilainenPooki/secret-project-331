@@ -44,7 +44,7 @@ export const lightTheme: Theme = {
     controlBgPressed: clear[400],
     controlBorder: clear[400],
     controlGhostBgPressed: clear[300],
-    controlTrackOff: clear[800],
+    controlTrackOff: offPalette.controlTrackOff,
     controlThumb: white,
 
     successFg: green[600],

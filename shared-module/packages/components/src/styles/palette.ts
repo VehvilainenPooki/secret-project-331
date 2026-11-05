@@ -150,6 +150,8 @@ export const offPalette = {
   focusRing: "rgba(31, 105, 100, 0.6)",
   /** yellow 900 darkened, keeping its hue, until it passes 4.5:1 as text on white */
   warningText: "#867630",
+  /** clear 800 darkened until a switch's off track has 3:1 against white */
+  controlTrackOff: "#8E969D",
   /** gray 800 at 55% opacity, the same value as `--scrim` */
   scrim: "rgb(10 15 23 / 0.55)",
   cmsBlockBg: "#FAFBFB",
