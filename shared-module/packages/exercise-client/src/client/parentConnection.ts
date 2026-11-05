@@ -67,11 +67,13 @@ export function createParentConnection(options: ParentConnectionOptions): Parent
           // The parent's theme applies to the whole iframe document, whatever the service renders.
           document.documentElement.dataset.theme = portMessage.data.data.name
           document.documentElement.style.colorScheme = portMessage.data.data.colorScheme
-        }
-        try {
-          options.onMessage(portMessage.data, receivedPort)
-        } catch (e) {
-          console.error(`Iframe onMessage handler crashed`, e)
+        } else {
+          // Theme messages are handled here in full, so services never see them as unknown.
+          try {
+            options.onMessage(portMessage.data, receivedPort)
+          } catch (e) {
+            console.error(`Iframe onMessage handler crashed`, e)
+          }
         }
 
         console.groupEnd()
