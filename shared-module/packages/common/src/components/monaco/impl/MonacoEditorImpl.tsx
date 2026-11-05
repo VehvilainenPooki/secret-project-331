@@ -4,6 +4,8 @@ import type { EditorProps } from "@monaco-editor/react"
 import { Editor } from "@monaco-editor/react"
 import React from "react"
 
+import { useActiveTheme } from "@/shared-module/components/styles/themes/preference"
+
 import "./loader"
 import { monospaceFont } from "../../../styles"
 import monacoStylesFixer from "../../../styles/monacoStylesFixer"
@@ -11,6 +13,7 @@ import monacoStylesFixer from "../../../styles/monacoStylesFixer"
 const WORDWRAP_DEFAULT_VALUE = "on"
 
 const MonacoEditorImpl: React.FC<React.PropsWithChildren<EditorProps>> = (props) => {
+  const activeTheme = useActiveTheme()
   const options = props.options ?? {}
   options.fontFamily = monospaceFont
   if (!options.wordWrap) {
@@ -18,7 +21,7 @@ const MonacoEditorImpl: React.FC<React.PropsWithChildren<EditorProps>> = (props)
   }
   return (
     <div className={monacoStylesFixer}>
-      <Editor {...props} options={options} />
+      <Editor {...props} theme={props.theme ?? activeTheme.codeEditorTheme} options={options} />
     </div>
   )
 }

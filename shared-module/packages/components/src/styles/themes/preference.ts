@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react"
 
-import { themes } from "./index"
+import { getActiveTheme, themes } from "./index"
 import type { Theme } from "./types"
 
 /**
@@ -66,6 +66,27 @@ export const themeInitScript = `(function () {
     document.documentElement.style.colorScheme = theme.colorScheme;
   } catch (e) {}
 })();`
+
+/**
+ * The theme the page shows, re-rendering the caller when it changes. For code that needs color
+ * values rather than `var(...)` references, such as charts drawn on a canvas or the code editor.
+ */
+export function useActiveTheme(): Theme {
+  const [theme, setTheme] = useState<Theme>(getActiveTheme)
+
+  useEffect(() => {
+    const update = () => setTheme(getActiveTheme())
+    update()
+    const observer = new MutationObserver(update)
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    })
+    return () => observer.disconnect()
+  }, [])
+
+  return theme
+}
 
 /** The preference, the theme it resolves to, and a setter that stores the choice and applies it. */
 export function useThemePreference() {

@@ -4,6 +4,8 @@ import type { DiffEditorProps } from "@monaco-editor/react"
 import { DiffEditor } from "@monaco-editor/react"
 import React from "react"
 
+import { useActiveTheme } from "@/shared-module/components/styles/themes/preference"
+
 import "./loader"
 import { monospaceFont } from "../../../styles"
 import monacoStylesFixer from "../../../styles/monacoStylesFixer"
@@ -11,6 +13,7 @@ import monacoStylesFixer from "../../../styles/monacoStylesFixer"
 const WORDWRAP_DEFAULT_VALUE = "on"
 
 const MonacoDiffEditorImpl: React.FC<React.PropsWithChildren<DiffEditorProps>> = (props) => {
+  const activeTheme = useActiveTheme()
   const options = props.options ?? {}
   options.fontFamily = monospaceFont
   if (!options.wordWrap) {
@@ -18,7 +21,7 @@ const MonacoDiffEditorImpl: React.FC<React.PropsWithChildren<DiffEditorProps>> =
   }
   return (
     <div className={monacoStylesFixer}>
-      <DiffEditor {...props} options={options} />
+      <DiffEditor {...props} theme={props.theme ?? activeTheme.codeEditorTheme} options={options} />
     </div>
   )
 }

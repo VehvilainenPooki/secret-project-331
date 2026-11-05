@@ -3,6 +3,7 @@ import _ from "lodash"
 import React from "react"
 
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
+import { useActiveTheme } from "@/shared-module/components/styles/themes/preference"
 import type { ExerciseFile } from "@/util/stateInterfaces"
 
 import { EditorSection as EditorSectionStyled, EditorWrapper } from "../styles"
@@ -20,6 +21,7 @@ interface EditorSectionProps {
 export const EditorSection: React.FC<EditorSectionProps> = (props) => {
   const { filepath, contents, editorKey, editorFiles, setEditorState, readOnly = false } = props
   const language = extensionToLanguage(filepath)
+  const activeTheme = useActiveTheme()
   const onChange = (newContents: string | undefined) => {
     if (readOnly || newContents === undefined) {
       return
@@ -40,6 +42,7 @@ export const EditorSection: React.FC<EditorSectionProps> = (props) => {
           width="100%"
           {...omitUndefined({ language })}
           value={contents}
+          theme={activeTheme.codeEditorTheme}
           onChange={onChange}
           options={{ readOnly }}
         />
