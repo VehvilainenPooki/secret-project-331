@@ -9,7 +9,7 @@ import { useCornerTapFlip } from "@/hooks/course-material/useCornerTapFlip"
 import DefaultSVG from "@/shared-module/common/img/hero-default-bg-image.svg"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button } from "@/shared-module/components"
-import { tones } from "@/shared-module/components/styles/themes"
+import { themeForAuthorBackground, tones } from "@/shared-module/components/styles/themes"
 import { COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM } from "@/utils/course-material/constants"
 import { escapeUrlForCss } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
@@ -136,6 +136,7 @@ const LandingPageHeroSection: React.FC<React.PropsWithChildren<CardProps>> = ({
 
   return (
     <div
+      data-theme={themeForAuthorBackground(backgroundColor)}
       ref={containerRef}
       onPointerDown={onPointerDown}
       className={css`
