@@ -1,12 +1,14 @@
+import { darkTheme } from "./dark"
 import { lightTheme } from "./light"
 import type { CmsColorRoles, Theme, ThemeColorRoles } from "./types"
 
 export type { CmsColorRoles, Theme, ThemeColorRoles } from "./types"
 export type { ToneName } from "./tones"
+export { darkTheme } from "./dark"
 export { lightTheme } from "./light"
 
 /** Every theme that gets a CSS block. The first one is also the `:root` default. */
-export const themes: readonly [Theme, ...Theme[]] = [lightTheme]
+export const themes: readonly [Theme, ...Theme[]] = [lightTheme, darkTheme]
 
 /** `surfaceRaised` → `surface-raised`, `chart1` → `chart-1`. */
 function kebabCase(name: string): string {
