@@ -167,6 +167,7 @@ export interface OpenDialogMessage {
  */
 export type MessageToIframe =
   | SetLanguageMessage
+  | SetThemeMessage
   | SetStateMessage
   | UploadResultMessage
   | RepositoryExercisesMessage
@@ -177,6 +178,20 @@ export interface SetLanguageMessage {
   message: "set-language"
   // e.g. "en" or "fi"
   data: string
+}
+
+/**
+ * The parent page's color theme. Optional for exercise services: one that ignores it keeps its
+ * default look. The shared exercise client applies it to the iframe's document as the
+ * `data-theme` attribute and the `color-scheme` property.
+ */
+export interface SetThemeMessage {
+  message: "set-theme"
+  data: {
+    // the theme's name, e.g. "light"
+    name: string
+    colorScheme: "light" | "dark"
+  }
 }
 
 export type SetStateMessage = {

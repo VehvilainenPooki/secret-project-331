@@ -2,7 +2,7 @@
  * Generated type guards for "exercise-service-protocol-types.ts".
  * WARNING: Do not manually change this file.
  */
-import type { MessageFromIframe, CurrentStateMessage, HeightChangedMessage, OpenLinkMessage, DownloadFileMessage, FileUploadMessage, FileUploadResultEntry, RequestRepositoryExercisesMessage, RequestIframeReloadMessage, OpenDialogMessage, MessageToIframe, SetLanguageMessage, SetStateMessage, UploadResultMessage, RepositoryExercisesMessage, TestResultsMessage, DialogResponseMessage, UserInformation, UserVariablesMap, AnswerFileRef, AnswerExerciseIframeState, ViewSubmissionIframeState, ExerciseEditorIframeState, CustomViewIframeState, ExerciseIframeState, ExtendedIframeState, IframeViewType, NonGenericGradingRequest, NonGenericGradingResult } from "./exercise-service-protocol-types";
+import type { MessageFromIframe, CurrentStateMessage, HeightChangedMessage, OpenLinkMessage, DownloadFileMessage, FileUploadMessage, FileUploadResultEntry, RequestRepositoryExercisesMessage, RequestIframeReloadMessage, OpenDialogMessage, MessageToIframe, SetLanguageMessage, SetThemeMessage, SetStateMessage, UploadResultMessage, RepositoryExercisesMessage, TestResultsMessage, DialogResponseMessage, UserInformation, UserVariablesMap, AnswerFileRef, AnswerExerciseIframeState, ViewSubmissionIframeState, ExerciseEditorIframeState, CustomViewIframeState, ExerciseIframeState, ExtendedIframeState, IframeViewType, NonGenericGradingRequest, NonGenericGradingResult } from "./exercise-service-protocol-types";
 
 export function isMessageFromIframe(obj: unknown): obj is MessageFromIframe {
     const typedObj = obj as MessageFromIframe
@@ -154,6 +154,7 @@ export function isMessageToIframe(obj: unknown): obj is MessageToIframe {
     const typedObj = obj as MessageToIframe
     return (
         (isSetLanguageMessage(typedObj) as boolean ||
+            isSetThemeMessage(typedObj) as boolean ||
             (typedObj !== null &&
                 typeof typedObj === "object" ||
                 typeof typedObj === "function") &&
@@ -211,6 +212,22 @@ export function isSetLanguageMessage(obj: unknown): obj is SetLanguageMessage {
             typeof typedObj === "function") &&
         typedObj["message"] === "set-language" &&
         typeof typedObj["data"] === "string"
+    )
+}
+
+export function isSetThemeMessage(obj: unknown): obj is SetThemeMessage {
+    const typedObj = obj as SetThemeMessage
+    return (
+        (typedObj !== null &&
+            typeof typedObj === "object" ||
+            typeof typedObj === "function") &&
+        typedObj["message"] === "set-theme" &&
+        (typedObj["data"] !== null &&
+            typeof typedObj["data"] === "object" ||
+            typeof typedObj["data"] === "function") &&
+        typeof typedObj["data"]["name"] === "string" &&
+        (typedObj["data"]["colorScheme"] === "light" ||
+            typedObj["data"]["colorScheme"] === "dark")
     )
 }
 

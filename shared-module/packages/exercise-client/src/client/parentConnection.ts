@@ -9,6 +9,8 @@
 // How the connection establishment works and which messages are allowed is documented at:
 // https://github.com/rage/secret-project-331/blob/master/docs/plugin-system.md
 
+import { isSetThemeMessage } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types.guard"
+
 export interface ParentConnection {
   /** The received `MessagePort`, or `null` until the handshake completes. */
   readonly port: MessagePort | null
@@ -61,6 +63,11 @@ export function createParentConnection(options: ParentConnectionOptions): Parent
         }
 
         console.info(JSON.stringify(portMessage.data, undefined, 2))
+        if (isSetThemeMessage(portMessage.data)) {
+          // The parent's theme applies to the whole iframe document, whatever the service renders.
+          document.documentElement.dataset.theme = portMessage.data.data.name
+          document.documentElement.style.colorScheme = portMessage.data.data.colorScheme
+        }
         try {
           options.onMessage(portMessage.data, receivedPort)
         } catch (e) {
