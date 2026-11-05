@@ -7,6 +7,7 @@ import BreakFromCentered from "@/shared-module/common/components/Centering/Break
 import Centered from "@/shared-module/common/components/Centering/Centered"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { themeForAuthorBackground } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
@@ -22,6 +23,7 @@ const InfoBoxBlock: React.FC<
   return (
     <BreakFromCentered sidebar={false}>
       <div
+        data-theme={themeForAuthorBackground(props.data.attributes.backgroundColor)}
         className={css`
           padding: 1rem 0;
           background-color: ${props.data.attributes.backgroundColor};

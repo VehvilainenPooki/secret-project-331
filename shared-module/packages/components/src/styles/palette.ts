@@ -158,6 +158,13 @@ export const offPalette = {
   /** `$gray-300` in `@wordpress/base-styles`, Gutenberg's border color */
   gutenbergGray300: "#DDDDDD",
   cmsInlineCodeBg: "#E5E5E5",
+  /** Pale yellow wash over a highlighted line on the dark code surface */
+  codeHighlightBg: "rgba(255, 255, 100, 0.1)",
+  codeHighlightBorder: "#FFD700",
+  /** Faint white wash for a hovered control on the dark code surface */
+  codeControlHover: "rgba(255, 255, 255, 0.08)",
+  /** Green that reads on the dark code surface */
+  codeSuccess: "#5CC89B",
 }
 
 /** The palette as `--color-white`, `--color-<scale>-<step>` and `--gradient-<name>` declarations. */

@@ -10,7 +10,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import CopyIcon from "@/img/course-material/copy.svg"
-import { tones } from "@/shared-module/components/styles/themes"
+import { colors } from "@/shared-module/components/styles/themes"
 
 import { useCopyHtmlContentToClipboard } from "./utils"
 
@@ -23,9 +23,9 @@ const COPY_STATUS = {
 type CopyStatus = (typeof COPY_STATUS)[keyof typeof COPY_STATUS]
 
 const ICON_COLORS = {
-  DEFAULT: tones.toneNeutral1,
-  SUCCESS: "var(--tone-tone-accent-10)",
-  ERROR: tones.toneDanger8,
+  DEFAULT: colors.codeText,
+  SUCCESS: colors.codeSuccess,
+  ERROR: colors.codeDanger,
 } as const
 
 /** A code block's content, with `<br>` already normalized to newlines by CodeBlock. */
@@ -51,7 +51,7 @@ const buttonStyles = css`
   justify-content: center;
   width: 32px;
   height: 32px;
-  color: ${tones.toneNeutral1};
+  color: ${colors.codeText};
   &[data-status="success"] {
     color: ${ICON_COLORS.SUCCESS};
   }
@@ -59,19 +59,19 @@ const buttonStyles = css`
     color: ${ICON_COLORS.ERROR};
   }
   &:hover:not([data-status="default"]) {
-    background-color: var(--tone-bg-neutral-1);
+    background-color: ${colors.codeControlHover};
   }
   &:hover[data-status="default"] {
     transform: scale(1.1);
-    background-color: var(--tone-bg-neutral-1);
+    background-color: ${colors.codeControlHover};
   }
 `
 
 const tooltipStyles = css`
   visibility: hidden;
   opacity: 0;
-  background-color: ${tones.toneNeutral46};
-  color: ${tones.toneNeutral1};
+  background-color: ${colors.codeTooltipBg};
+  color: ${colors.codeText};
   text-align: center;
   border-radius: 4px;
   padding: 4px 8px;

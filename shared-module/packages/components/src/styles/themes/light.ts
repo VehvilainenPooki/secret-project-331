@@ -2,7 +2,19 @@ import { colorScales, offPalette, white } from "../palette"
 import { lightTones } from "./tones"
 import type { Theme } from "./types"
 
-const { blue, green, crimson, yellow, purple, gray, clear } = colorScales
+const { blue, green, crimson, red, yellow, purple, gray, clear } = colorScales
+
+/** Code blocks stay dark in every theme; see `codeBg`. */
+export const codeRoles = {
+  codeBg: gray[700],
+  codeText: white,
+  codeControlHover: offPalette.codeControlHover,
+  codeHighlightBg: offPalette.codeHighlightBg,
+  codeHighlightBorder: offPalette.codeHighlightBorder,
+  codeTooltipBg: gray[700],
+  codeSuccess: offPalette.codeSuccess,
+  codeDanger: red[300],
+}
 
 /** The default theme. Each value is the color the UI already uses for that purpose. */
 export const lightTheme: Theme = {
@@ -80,6 +92,8 @@ export const lightTheme: Theme = {
     chart4: yellow[400],
     chart5: purple[600],
     chart6: gray[400],
+
+    ...codeRoles,
   },
   cms: {
     blockBg: offPalette.cmsBlockBg,

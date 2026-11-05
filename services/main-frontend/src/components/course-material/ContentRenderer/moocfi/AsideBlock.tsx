@@ -5,6 +5,7 @@ import React from "react"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { themeForAuthorBackground } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
@@ -19,6 +20,7 @@ const AsideBLock: React.FC<React.PropsWithChildren<BlockRendererProps<AsideBlock
 ) => {
   return (
     <div
+      data-theme={themeForAuthorBackground(props.data.attributes.backgroundColor)}
       className={css`
         padding: 0rem 0.8rem;
         border-top: 0.4rem solid ${props.data.attributes.separatorColor};

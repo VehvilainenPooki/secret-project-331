@@ -291,6 +291,8 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         className: rootClassName,
         tabIndex: finalTabIndex,
         "data-pressed": isPressed,
+        // Lets surrounding styles, such as course material's link colors, leave buttons alone.
+        "data-styled-as-button": styledAsButtonResolved || undefined,
         "data-disabled-reason": disabledReason,
         "data-testid": dataTestId,
         "aria-busy": isLoading || undefined,

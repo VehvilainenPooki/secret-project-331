@@ -8,7 +8,7 @@ import { useCornerTapFlip } from "@/hooks/course-material/useCornerTapFlip"
 import { respondToOrLarger } from "@/shared-module/common//styles/respond"
 import { headingFont } from "@/shared-module/common/styles"
 import { INCLUDE_THIS_HEADING_IN_HEADINGS_NAVIGATION_CLASS } from "@/shared-module/common/utils/constants"
-import { tones } from "@/shared-module/components/styles/themes"
+import { themeForAuthorBackground, tones } from "@/shared-module/components/styles/themes"
 import { COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM } from "@/utils/course-material/constants"
 import { escapeUrlForCss } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
@@ -137,6 +137,7 @@ const HeroSection: React.FC<React.PropsWithChildren<CardProps>> = ({
   return (
     <div
       id="hero-section"
+      data-theme={themeForAuthorBackground(backgroundColor)}
       ref={containerRef}
       onPointerDown={onPointerDown}
       className={css`

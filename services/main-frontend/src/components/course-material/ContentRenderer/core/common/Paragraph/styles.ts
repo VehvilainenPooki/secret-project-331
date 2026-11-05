@@ -55,7 +55,9 @@ export const getParagraphStyles = (
 ) => css`
   ${paragraphBaseDefaults}
   ${hideOverflow && `overflow-x: hidden; overflow-y: hidden;`}
-  color: ${colorMapper(textColor)};
+  /* On an author-picked background the paragraph follows that background's theme (see
+     themeForAuthorBackground), so its default text is that theme's, not the page's. */
+  color: ${colorMapper(textColor, backgroundColor ? "CanvasText" : "unset")};
   background-color: ${colorMapper(backgroundColor, UNSET_COLOR)};
   font-size: ${mobileFontSizeMapper(fontSize)};
   text-align: ${align ?? "left"};

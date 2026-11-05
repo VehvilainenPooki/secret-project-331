@@ -2,6 +2,7 @@
 
 import { css, injectGlobal } from "@emotion/css"
 
+import { colors } from "@/shared-module/components/styles/themes"
 import { themesGlobal } from "@/shared-module/components/styles/themes/global"
 
 import { headingFont, monospaceFont, primaryFont, typography } from "."
@@ -26,6 +27,10 @@ const globalCss = css`
     font-weight: 400;
     font-size: ${defaultFontSizePx}px;
     overflow-x: hidden;
+  }
+  /* Paints the page in the theme's background instead of the browser's default canvas. */
+  body {
+    background-color: ${colors.bg};
   }
   h1,
   h2,

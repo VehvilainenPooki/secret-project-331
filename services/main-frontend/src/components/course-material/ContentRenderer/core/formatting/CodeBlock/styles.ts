@@ -29,7 +29,7 @@ export const getPreStyles = (fontSizePx: number, allowFullWidth: boolean) => css
 export const codeBlockStyles = css`
   /* Must track the .hljs background in highlight.js/styles/atom-one-dark.css. Set here too so the
      colour does not depend on whether emotion or the theme sheet is injected last. */
-  background-color: var(--tone-bg-neutral-89);
+  background-color: var(--color-code-bg);
   border-radius: 4px;
   font-variant-ligatures: none;
   font-feature-settings: "liga" 0;
@@ -37,10 +37,10 @@ export const codeBlockStyles = css`
     display: block;
   }
   .highlighted-line {
-    background-color: var(--tone-bg-warning-1);
+    background-color: var(--color-code-highlight-bg);
     margin: 0 -16px;
     padding: 0 16px 0 13px;
-    border-left: 3px solid var(--tone-border-warning-1);
+    border-left: 3px solid var(--color-code-highlight-border);
   }
 `
 

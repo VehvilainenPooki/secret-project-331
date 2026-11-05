@@ -21,6 +21,7 @@ MATCHES=$(git grep -nP "$HEX6_OR_8|$HEX3|$RGB" -- \
   shared-module/packages/exercise-client/src shared-module/packages/exercise-iframe-host/src \
   ':!**/generated/**' ':!*.svg' ':!*.html' ':!**/*.test.*' ':!**/__tests__/**' \
   ':!**/styles/palette.ts' ':!**/styles/themes/tones.ts' ':!**/styles/themes/light.ts' \
+  ':!**/styles/themes/dark.ts' ':!**/styles/themes/darkTones.ts' \
   ':!**/gutenbergColorPalette.ts' ':!**/colorMapper.tsx' ':!**/inlineColorStyles.tsx' \
   ':!**/colors/ColorPalette.tsx' ':!**/colors/page.tsx' ':!**/parseAnsiToReact.tsx' \
   ':!**/LikertSvgs.tsx' ':!**/YoutubeEmbedBlock.tsx' \

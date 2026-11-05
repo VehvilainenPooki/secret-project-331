@@ -11,7 +11,8 @@ import Echarts from "@/components/charts/Echarts"
 import type { CountResult } from "@/generated/api/types.generated"
 import useCourseInstancesQuery from "@/hooks/useCourseInstancesQuery"
 import { LoadingRegion, Select, ErrorNotice } from "@/shared-module/components"
-import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
+import { tones } from "@/shared-module/components/styles/themes"
+import { useActiveTheme } from "@/shared-module/components/styles/themes/preference"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "./CourseStatsPage"
 import type { Period } from "./LineChart"
@@ -142,6 +143,8 @@ const LineChartByInstance: React.FC<LineChartByInstanceProps> = ({
   disablePeriodSelector = false,
 }) => {
   const { t } = useTranslation()
+  // Chart colors are values on a canvas, so the chart redraws when the theme changes.
+  const activeTheme = useActiveTheme()
   const courseInstancesQuery = useCourseInstancesQuery(courseId)
   const [isLogScale, setIsLogScale] = useState(false)
 
@@ -244,36 +247,36 @@ const LineChartByInstance: React.FC<LineChartByInstanceProps> = ({
 
     return {
       color: [
-        getActiveTheme().tones.chartInfo4,
-        getActiveTheme().tones.chartAccent69,
-        getActiveTheme().tones.chartDanger11,
-        getActiveTheme().tones.chartWarning31,
-        getActiveTheme().tones.chartSpecial4,
-        getActiveTheme().tones.chartNeutral16,
-        getActiveTheme().tones.chartInfo1,
-        getActiveTheme().tones.chartAccent38,
-        getActiveTheme().tones.chartDanger2,
-        getActiveTheme().tones.chartAccent46,
-        getActiveTheme().tones.chartAccent70,
-        getActiveTheme().tones.chartSpecial1,
-        getActiveTheme().tones.chartInfo6,
-        getActiveTheme().tones.chartAccent68,
-        getActiveTheme().tones.chartDanger3,
-        getActiveTheme().tones.chartWarning34,
-        getActiveTheme().tones.chartDanger1,
-        getActiveTheme().tones.chartInfo3,
-        getActiveTheme().tones.chartDanger5,
-        getActiveTheme().tones.chartDanger4,
-        getActiveTheme().tones.chartSpecial2,
-        getActiveTheme().tones.chartAccent72,
-        getActiveTheme().tones.chartWarning35,
-        getActiveTheme().tones.chartDanger7,
-        getActiveTheme().tones.chartAccent71,
-        getActiveTheme().tones.chartDanger6,
-        getActiveTheme().tones.chartInfo2,
-        getActiveTheme().tones.chartWarning33,
-        getActiveTheme().tones.chartSpecial3,
-        getActiveTheme().tones.chartWarning36,
+        activeTheme.tones.chartInfo4,
+        activeTheme.tones.chartAccent69,
+        activeTheme.tones.chartDanger11,
+        activeTheme.tones.chartWarning31,
+        activeTheme.tones.chartSpecial4,
+        activeTheme.tones.chartNeutral16,
+        activeTheme.tones.chartInfo1,
+        activeTheme.tones.chartAccent38,
+        activeTheme.tones.chartDanger2,
+        activeTheme.tones.chartAccent46,
+        activeTheme.tones.chartAccent70,
+        activeTheme.tones.chartSpecial1,
+        activeTheme.tones.chartInfo6,
+        activeTheme.tones.chartAccent68,
+        activeTheme.tones.chartDanger3,
+        activeTheme.tones.chartWarning34,
+        activeTheme.tones.chartDanger1,
+        activeTheme.tones.chartInfo3,
+        activeTheme.tones.chartDanger5,
+        activeTheme.tones.chartDanger4,
+        activeTheme.tones.chartSpecial2,
+        activeTheme.tones.chartAccent72,
+        activeTheme.tones.chartWarning35,
+        activeTheme.tones.chartDanger7,
+        activeTheme.tones.chartAccent71,
+        activeTheme.tones.chartDanger6,
+        activeTheme.tones.chartInfo2,
+        activeTheme.tones.chartWarning33,
+        activeTheme.tones.chartSpecial3,
+        activeTheme.tones.chartWarning36,
       ],
       xAxis: {
         type: "category" as const,
@@ -329,14 +332,14 @@ const LineChartByInstance: React.FC<LineChartByInstanceProps> = ({
               ${rows}
             </div>`
         },
-        backgroundColor: getActiveTheme().tones.chartNeutral3,
+        backgroundColor: activeTheme.tones.chartNeutral3,
         borderWidth: 0,
         shadowBlur: 10,
-        shadowColor: getActiveTheme().tones.chartNeutral14,
+        shadowColor: activeTheme.tones.chartNeutral14,
         shadowOffsetX: 1,
         shadowOffsetY: 2,
         textStyle: {
-          color: getActiveTheme().tones.chartNeutral19,
+          color: activeTheme.tones.chartNeutral19,
         },
         padding: 0,
       },
@@ -347,7 +350,7 @@ const LineChartByInstance: React.FC<LineChartByInstanceProps> = ({
         bottom: 0,
       },
     }
-  }, [data, yAxisName, isLogScale, instanceMap, t, dateFormat, tooltipValueLabel])
+  }, [data, yAxisName, isLogScale, instanceMap, t, dateFormat, tooltipValueLabel, activeTheme])
 
   const isDataEmpty =
     !data || Object.keys(data).length === 0 || Object.values(data).every((arr) => arr.length < 2)

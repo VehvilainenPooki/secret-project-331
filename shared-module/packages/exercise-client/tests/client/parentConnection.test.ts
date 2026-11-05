@@ -94,6 +94,22 @@ describe("createParentConnection", () => {
     connection.dispose()
   })
 
+  it("applies a set-theme message to the document without passing it to onMessage", () => {
+    const onMessage = jest.fn()
+    const connection = createParentConnection({ onMessage })
+
+    const channel = createMockMessageChannel()
+    deliverPort(channel.port2 as unknown as MessagePort)
+
+    const data = { message: "set-theme", data: { name: "dark", colorScheme: "dark" } }
+    channel.port2.onmessage?.({ data } as MessageEvent)
+
+    expect(document.documentElement.dataset.theme).toBe("dark")
+    expect(document.documentElement.style.colorScheme).toBe("dark")
+    expect(onMessage).not.toHaveBeenCalled()
+    connection.dispose()
+  })
+
   it("retries ready with exponential backoff and stops on dispose", () => {
     const connection = createParentConnection({ onMessage: jest.fn() })
     parentPostMessageSpy.mockClear()

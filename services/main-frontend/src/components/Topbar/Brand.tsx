@@ -10,8 +10,9 @@ import MOOCfi from "@/shared-module/common/img/moocfiLogo.svg"
 const StyledIcon = css`
   font-size: 1.8rem;
 
+  /* The svg strokes its paths in gray 600; this draws them in the theme's matching tone instead. */
   path {
-    color: var(--tone-fg-info-12) !important;
+    stroke: var(--tone-fg-neutral-31);
   }
 `
 

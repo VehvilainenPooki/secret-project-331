@@ -116,6 +116,21 @@ export interface ThemeColorRoles {
   progressRingTrack: string
   /** Faint background of an error state, such as a failed query. */
   dangerSurfaceSubtle: string
+
+  /**
+   * Code blocks. Their syntax colors (highlight.js atom-one-dark) are drawn for a dark surface, so
+   * every theme keeps these dark.
+   */
+  codeBg: string
+  /** Icons and tooltip text on `codeBg`. */
+  codeText: string
+  /** Hover fill of a control on `codeBg`, such as the copy button. */
+  codeControlHover: string
+  codeHighlightBg: string
+  codeHighlightBorder: string
+  codeTooltipBg: string
+  codeSuccess: string
+  codeDanger: string
 }
 
 /**

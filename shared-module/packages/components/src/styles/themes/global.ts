@@ -9,6 +9,13 @@ import { themesCss } from "./index"
 export const themesGlobal = injectGlobal`
   ${themesCss()}
 
+  /* An element that sets its own theme, such as a block on an author-picked light background,
+     starts from that theme's default text color instead of inheriting the page's. Zero
+     specificity, so a color the element sets itself, such as an author-picked one, still wins. */
+  :where([data-theme]:not(:root)) {
+    color: CanvasText;
+  }
+
   /* When the system asks for more contrast, muted text and soft borders use the active theme's
      full-strength text and border colors. */
   @media (prefers-contrast: more) {

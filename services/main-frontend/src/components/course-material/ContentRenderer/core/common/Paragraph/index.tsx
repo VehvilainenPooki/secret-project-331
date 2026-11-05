@@ -7,7 +7,9 @@ import type { ParagraphAttributes } from "@/../types/GutenbergBlockAttributes"
 import ParsedText from "@/components/course-material/ParsedText"
 import dynamicImport from "@/shared-module/common/utils/dynamicImport"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { themeForAuthorBackground } from "@/shared-module/components/styles/themes"
 import { currentlyOpenFeedbackDialogAtom } from "@/stores/course-material/materialFeedbackStore"
+import colorMapper from "@/styles/course-material/colorMapper"
 
 import type { BlockRendererProps } from "../../.."
 import { textAlignOf } from "../../../util/textAlign"
@@ -46,6 +48,7 @@ const ParagraphBlock: React.FC<
       return (
         <ParagraphComponent
           ref={ref}
+          data-theme={themeForAuthorBackground(colorMapper(backgroundColor))}
           className={getParagraphStyles(
             textColor,
             backgroundColor,
