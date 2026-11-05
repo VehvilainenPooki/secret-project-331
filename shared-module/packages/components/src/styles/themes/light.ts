@@ -7,6 +7,7 @@ const { blue, green, crimson, yellow, purple, gray, clear } = colorScales
 /** The default theme. Each value is the color the UI already uses for that purpose. */
 export const lightTheme: Theme = {
   name: "light",
+  colorScheme: "light",
   colors: {
     bg: white,
     surface: white,
