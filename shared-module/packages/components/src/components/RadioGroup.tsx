@@ -79,7 +79,7 @@ const segmentedListCss = css`
  * longer form, can pass it as the `label` to get the same weight.
  */
 export const questionLegendCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-3);
   font-weight: 600;
   line-height: 1.3;

@@ -7,8 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import { useStatusPodLogs } from "@/hooks/useStatusPodLogs"
 import { useStatusPods } from "@/hooks/useStatusPods"
-import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
+import { monospaceFont } from "@/shared-module/common/styles"
 import { QueryResult, Select } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const FIELD_SELECTED_POD = "selectedPod" as const
 const FIELD_TAIL_LINES = "tailLines" as const
@@ -82,11 +83,11 @@ const StatusPodLogs: React.FC = () => {
       {selectedPod && (
         <div
           className={css`
-            border: 1px solid ${baseTheme.colors.clear[300]};
+            border: 1px solid ${tones.toneNeutral26};
             border-radius: 4px;
             padding: 1rem;
-            background-color: ${baseTheme.colors.gray[700]};
-            color: ${baseTheme.colors.gray[300]};
+            background-color: ${tones.toneNeutral46};
+            color: ${tones.toneNeutral37};
             font-family: ${monospaceFont};
             font-size: 12px;
             max-height: 600px;

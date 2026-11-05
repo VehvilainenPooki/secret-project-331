@@ -2,6 +2,8 @@
 
 import { css, injectGlobal } from "@emotion/css"
 
+import { themesGlobal } from "@/shared-module/components/styles/themes/global"
+
 import { headingFont, monospaceFont, primaryFont, typography } from "."
 import { defaultFontSizePx, linkWithExtraIconClass } from "./constants"
 import cssReset from "./cssReset"
@@ -10,6 +12,9 @@ import "@fontsource/commit-mono/400.css"
 import "@fontsource/commit-mono/700.css"
 import "@fontsource/inter/400.css"
 import "@fontsource-variable/inter/wght.css"
+
+// Apps that do not load the components tokens still get the color roles.
+void themesGlobal
 
 // Using this instead of directly injectGlobal because stylelint works in this one.
 const globalCss = css`

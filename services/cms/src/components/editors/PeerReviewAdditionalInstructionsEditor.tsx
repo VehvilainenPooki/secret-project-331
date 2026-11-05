@@ -53,7 +53,7 @@ const PeerReviewAdditionalInstructionsEditor = (
   return (
     <div
       className={css`
-        border: 1px solid #e2e8f0;
+        border: 1px solid var(--tone-border-neutral-12);
         padding: 0 0.5rem;
         margin-bottom: 1rem;
         margin-top: 0.5rem;

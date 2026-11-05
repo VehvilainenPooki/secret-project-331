@@ -7,12 +7,13 @@ import { useTranslation } from "react-i18next"
 
 import useCourseExercisesAndCountAnswersRequitingAttentionQuery from "@/hooks/useCourseExercisesAndCountAnswersRequitingAttentionQuery"
 import { useCourseStructure } from "@/hooks/useCourseStructure"
-import { baseTheme, fontWeights, monospaceFont, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, monospaceFont, primaryFont } from "@/shared-module/common/styles"
 import {
   exerciseAnswersRequiringAttentionRoute,
   exerciseSubmissionsRoute,
 } from "@/shared-module/common/utils/routes"
 import { QueryResults, Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface ExerciseListProps {
   courseId: string
@@ -51,7 +52,7 @@ const ExerciseList: React.FC<React.PropsWithChildren<ExerciseListProps>> = ({ co
                     font-size: 22px;
                     line-height: 100%;
                     margin-top: 2rem;
-                    color: ${baseTheme.colors.primary[200]};
+                    color: ${tones.toneNeutral49};
                   `}
                 >
                   {chapter.name}
@@ -78,8 +79,8 @@ const ExerciseList: React.FC<React.PropsWithChildren<ExerciseListProps>> = ({ co
                         <div
                           className={css`
                             box-sizing: border-box;
-                            background-color: #f7f8f9;
-                            border: 2px solid #e1e3e5;
+                            background-color: var(--tone-bg-neutral-20);
+                            border: 2px solid var(--tone-border-neutral-19);
                             margin-top: 20px;
                             padding: 0.8rem 1.25rem;
                             display: flex;
@@ -105,7 +106,7 @@ const ExerciseList: React.FC<React.PropsWithChildren<ExerciseListProps>> = ({ co
                               font-size: 14px;
                               line-height: 24px;
                               text-transform: uppercase;
-                              color: ${baseTheme.colors.green[600]};
+                              color: ${tones.toneAccent21};
                             `}
                           >
                             {t("page-number", { "page-number": page.order_number + 1 })}
@@ -118,17 +119,17 @@ const ExerciseList: React.FC<React.PropsWithChildren<ExerciseListProps>> = ({ co
                             li:last-of-type {
                               border-bottom-right-radius: 4px;
                               border-bottom-left-radius: 4px;
-                              border-bottom: 2px solid #e1e3e5;
+                              border-bottom: 2px solid var(--tone-border-neutral-19);
                             }
                             li:nth-child(even) {
-                              border-right: 2px solid #e1e3e5;
-                              border-left: 2px solid #e1e3e5;
+                              border-right: 2px solid var(--tone-border-neutral-19);
+                              border-left: 2px solid var(--tone-border-neutral-19);
                             }
                             li:nth-child(odd) {
                               &:first-of-type {
                                 border-top: none !important;
                               }
-                              border: 2px solid #e1e3e5;
+                              border: 2px solid var(--tone-border-neutral-19);
                             }
                           `}
                         >
@@ -147,7 +148,7 @@ const ExerciseList: React.FC<React.PropsWithChildren<ExerciseListProps>> = ({ co
                                   a:link,
                                   a:visited {
                                     text-decoration: none;
-                                    color: ${baseTheme.colors.gray[600]};
+                                    color: ${tones.toneNeutral44};
                                   }
                                 `}
                               >
@@ -173,8 +174,8 @@ const ExerciseList: React.FC<React.PropsWithChildren<ExerciseListProps>> = ({ co
                                         font-weight: ${fontWeights.normal};
                                         font-size: 15px;
                                         line-height: 22px;
-                                        color: #1a2333;
-                                        background: #ebd7d3;
+                                        color: var(--color-text);
+                                        background: var(--tone-bg-danger-8);
                                         border-radius: 100px;
                                         padding: 3px 16px 5px;
                                       `}

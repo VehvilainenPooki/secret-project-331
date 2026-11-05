@@ -6,7 +6,7 @@ import { ColorPalette, PanelBody, Placeholder } from "@wordpress/components"
 import { cover as icon } from "@wordpress/icons"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 const placeHolderFixHeightStyles = css`
@@ -15,9 +15,9 @@ const placeHolderFixHeightStyles = css`
 `
 
 const DEFAULT_BACKGROUND_COLORS = [
-  { color: "#FFFFFF", name: "white" },
-  { color: "#663399", name: "rebeccapurple" },
-  { color: baseTheme.colors.blue[100], name: "lightblue" },
+  { color: "var(--color-text-on-accent)", name: "white" },
+  { color: "var(--tone-fg-special-2)", name: "rebeccapurple" },
+  { color: tones.fgInfo1, name: "lightblue" },
 ]
 
 interface RequiredAttributes {

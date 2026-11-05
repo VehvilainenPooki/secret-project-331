@@ -1,6 +1,8 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import { vi } from "vitest"
 
+import { resolveThemeVars } from "@/shared-module/components/styles/themes"
+
 import type { UserItemAnswerMultiplechoiceDropdown } from "../../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemMultiplechoiceDropdown } from "../../../../../../types/quizTypes/publicSpec"
 import MultipleChoiceDropdown from "../MultipleChoiceDropdown"
@@ -76,7 +78,7 @@ describe("MultipleChoiceDropdown accessibility", () => {
       )
       .join("\n")
     // jsdom's CSSOM serializes hex colors to rgb(), so accept either form of #767b85.
-    expect(styleText).toMatch(/#767b85|rgb\(118,\s*123,\s*133\)/i)
+    expect(resolveThemeVars(styleText)).toMatch(/#767b85|rgb\(118,\s*123,\s*133\)/i)
     expect(styleText).not.toContain("#dfe1e6")
   })
 

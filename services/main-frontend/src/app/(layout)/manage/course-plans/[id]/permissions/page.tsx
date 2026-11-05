@@ -17,10 +17,10 @@ import {
 import type { PlanMemberWithDetails } from "@/generated/api/types.generated"
 import { withSignedIn } from "@/shared-module/common/contexts/LoginStateContext"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, QueryResult, TextField, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ADD_MEMBER_FIELD = "email" as const
 
@@ -78,24 +78,24 @@ const memberRowStyles = css`
   gap: 1.5rem;
   align-items: center;
   padding: 0.85rem 0;
-  border-bottom: 1px solid ${baseTheme.colors.gray[200]};
+  border-bottom: 1px solid ${tones.toneNeutral35};
 `
 
 const memberHeaderOnlyStyles = css`
   font-size: 0.85rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   padding-top: 0;
 `
 
 const memberNameStyles = css`
   font-size: 0.95rem;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
 `
 
 const memberEmailStyles = css`
   font-size: 0.95rem;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
   overflow-wrap: anywhere;
 `
 
@@ -105,7 +105,7 @@ const memberActionStyles = css`
 
 const emptyStateStyles = css`
   margin: 0;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.95rem;
 `
 

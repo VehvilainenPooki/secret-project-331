@@ -3,7 +3,8 @@
 import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 
-import { baseTheme } from "../styles"
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { LOADING_SPINNER_TEST_ID } from "../utils/constants"
 
 export interface SpinnerProps {
@@ -47,11 +48,12 @@ const StyledSpinner = styled.div<SpinnerProps>`
   margin: ${(props) => (props.disableMargin ? "0" : "1rem")};
   width: ${(props) => variantSizes[props.variant || "medium"].width};
   height: ${(props) => variantSizes[props.variant || "medium"].height};
-  border: ${(props) => (props.variant === "placeholder" ? "4px dashed" : "5px solid")} #f1f1f1;
+  border: ${(props) => (props.variant === "placeholder" ? "4px dashed" : "5px solid")}
+    var(--tone-tone-neutral-18);
   border-bottom-color: ${(props) =>
-    props.variant === "placeholder" ? baseTheme.colors.blue[500] : baseTheme.colors.green[500]};
+    props.variant === "placeholder" ? tones.toneInfo20 : tones.toneAccent19};
   border-top-color: ${(props) =>
-    props.variant === "placeholder" ? baseTheme.colors.blue[300] : "transparent"};
+    props.variant === "placeholder" ? tones.toneInfo8 : "transparent"};
   border-radius: 50%;
   display: inline-block;
   /** Showing the spinner is delayed because showing a spinner for a moment on fast transitions makes the application to feel like more slow than it is **/

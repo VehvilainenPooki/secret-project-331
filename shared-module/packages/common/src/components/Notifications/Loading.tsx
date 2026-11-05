@@ -4,7 +4,8 @@ import { keyframes } from "@emotion/react"
 import styled from "@emotion/styled"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { respondToOrLarger } from "../../styles/respond"
 import Spinner from "../Spinner"
 import { NotificationWrapper } from "./Base"
@@ -69,7 +70,7 @@ const TextWrapper = styled.div`
 
 const LoadingMessage = styled.div`
   display: none;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   ${respondToOrLarger.xs} {
     display: block;
   }

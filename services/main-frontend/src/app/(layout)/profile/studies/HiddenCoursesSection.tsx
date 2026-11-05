@@ -21,7 +21,7 @@ export interface HiddenCoursesSectionProps {
 
 const courseNameCss = css`
   font-weight: 500;
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 const POST = "POST"

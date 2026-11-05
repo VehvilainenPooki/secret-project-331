@@ -8,28 +8,29 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
 import type { CourseModule, TeacherManualCompletionRequest } from "@/generated/api/types.generated"
-import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
+import { monospaceFont } from "@/shared-module/common/styles"
 import { makeDateStringTimezoneErrorsLessLikely } from "@/shared-module/common/utils/dateUtil"
 import { Button, DateField, Select, TextArea } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const DateHint = styled.p`
   margin: 1.5rem 0 0.5rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 const FormatInstructions = styled.div`
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   padding: 1.5rem;
-  border: 1px solid ${baseTheme.colors.green[200]};
+  border: 1px solid ${tones.toneAccent9};
   border-radius: 4px;
-  background-color: rgb(249 255 251);
+  background-color: var(--tone-bg-neutral-9);
 `
 
 const FormatTitle = styled.p`
   font-weight: bold;
   margin-bottom: 0.75rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 const ColumnList = styled.ul`
@@ -42,12 +43,12 @@ const ExampleTitle = styled.p`
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
 `
 
 // oxlint-disable-next-line i18next/no-literal-string
 const CodeExample = styled.pre`
-  background-color: ${baseTheme.colors.clear[200]};
+  background-color: ${tones.toneNeutral22};
   padding: 0.75rem;
   border-radius: 4px;
   margin-top: 0.5rem;
@@ -59,7 +60,7 @@ const Note = styled.p`
   margin-top: 1rem;
   font-size: 0.9em;
   font-style: italic;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 const COMPLETIONS = "completions"

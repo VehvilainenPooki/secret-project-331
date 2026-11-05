@@ -50,7 +50,7 @@ const OrganizationsList: React.FC = () => {
           line-height: 100%;
           letter-spacing: 0;
           margin: 2em 0em 0.5em 0em;
-          color: #333;
+          color: var(--tone-fg-neutral-36);
         `}
       >
         {t("organizations-heading")}
@@ -63,7 +63,7 @@ const OrganizationsList: React.FC = () => {
           line-height: 100%;
           letter-spacing: 0;
           margin-bottom: 2.5rem;
-          color: #555;
+          color: var(--tone-fg-neutral-29);
         `}
       >
         {t("select-organization")}
@@ -95,7 +95,7 @@ const OrganizationsList: React.FC = () => {
         {(organizations) => (
           <div
             className={css`
-              background-color: rgba(26, 35, 51, 0.05);
+              background-color: var(--tone-bg-info-3);
               padding: 0.5rem 0rem;
               border-radius: 0.5rem;
               width: 95vw;

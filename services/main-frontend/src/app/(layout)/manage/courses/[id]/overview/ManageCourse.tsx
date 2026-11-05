@@ -20,9 +20,10 @@ import type { Course } from "@/generated/api/types.generated"
 import useCourseBreadcrumbInfoQuery from "@/hooks/useCourseBreadcrumbInfoQuery"
 import OnlyRenderIfPermissions from "@/shared-module/common/components/OnlyRenderIfPermissions"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, headingFont, primaryFont, typography } from "@/shared-module/common/styles"
+import { headingFont, primaryFont, typography } from "@/shared-module/common/styles"
 import { courseMaterialFrontPageHref } from "@/shared-module/common/utils/cross-routing"
 import { Button, Link, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   courseExerciseTasksCsvHref,
   courseInstancesCsvHref,
@@ -140,7 +141,7 @@ const ManageCourse: React.FC<React.PropsWithChildren<Props>> = ({ course, refetc
         <p
           className={css`
             font-size: 1.2rem;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             font-family: ${primaryFont};
             font-weight: 450;
             margin-top: 0.4rem;
@@ -154,7 +155,7 @@ const ManageCourse: React.FC<React.PropsWithChildren<Props>> = ({ course, refetc
         <h1
           className={css`
             font-size: ${typography.h4};
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             font-family: ${headingFont};
             font-weight: bold;
           `}
@@ -225,7 +226,7 @@ const ManageCourse: React.FC<React.PropsWithChildren<Props>> = ({ course, refetc
       )}
       <div
         className={css`
-          color: ${baseTheme.colors.gray[500]};
+          color: ${tones.toneNeutral41};
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
           margin: 2rem 0;
@@ -236,8 +237,8 @@ const ManageCourse: React.FC<React.PropsWithChildren<Props>> = ({ course, refetc
         <div
           className={css`
             padding: 1rem;
-            border: 3px solid ${baseTheme.colors.clear[200]};
-            color: ${baseTheme.colors.gray[700]};
+            border: 3px solid ${tones.toneNeutral22};
+            color: ${tones.toneNeutral46};
           `}
         >
           <p

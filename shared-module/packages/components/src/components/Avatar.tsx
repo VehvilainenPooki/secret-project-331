@@ -15,11 +15,11 @@ export interface AvatarProps {
 
 // Decorative monogram; the name is shown as text alongside, so this is aria-hidden.
 const AVATAR_COLORS = [
-  "var(--color-blue-600)",
-  "var(--color-green-600)",
-  "var(--color-purple-600)",
-  "var(--color-crimson-600)",
-  "var(--color-gray-600)",
+  "var(--tone-tone-info-23)",
+  "var(--tone-tone-accent-21)",
+  "var(--tone-tone-special-2)",
+  "var(--tone-tone-danger-21)",
+  "var(--tone-tone-neutral-44)",
 ]
 
 function initials(name: string): string {
@@ -49,7 +49,7 @@ const rootCss = css`
   justify-content: center;
   flex: none;
   border-radius: 50%;
-  color: var(--color-primary-100);
+  color: var(--color-text-on-accent);
   font-weight: 700;
   text-transform: uppercase;
   user-select: none;

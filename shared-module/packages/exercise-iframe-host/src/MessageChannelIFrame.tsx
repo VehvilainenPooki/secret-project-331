@@ -509,7 +509,7 @@ const MessageChannelIFrame: React.FC<React.PropsWithChildren<MessageChannelIFram
           */
         ${showBorders && `border: 1px solid black;`}
         margin-bottom: 1rem;
-        background-color: #fff;
+        background-color: var(--color-surface);
         padding: 0.8rem 1.25rem;
         border-radius: 0.625rem;
       `}
@@ -546,8 +546,8 @@ const MessageChannelIFrame: React.FC<React.PropsWithChildren<MessageChannelIFram
             margin-top: 0.75rem;
             padding: 0.75rem 1rem;
             border-radius: 0.5rem;
-            background-color: #fff3cd;
-            color: #664d03;
+            background-color: var(--tone-bg-warning-4);
+            color: var(--tone-fg-warning-5);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -564,8 +564,8 @@ const MessageChannelIFrame: React.FC<React.PropsWithChildren<MessageChannelIFram
               font-size: 0.9rem;
               font-weight: 500;
               cursor: pointer;
-              background-color: #0d6efd;
-              color: #fff;
+              background-color: var(--tone-bg-info-4);
+              color: var(--color-text-on-accent);
               white-space: nowrap;
             `}
             onClick={() => {

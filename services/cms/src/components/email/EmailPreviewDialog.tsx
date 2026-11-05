@@ -114,7 +114,7 @@ const EmailPreviewDialog: React.FC<EmailPreviewDialogProps> = ({
               <div
                 className={css`
                   font-size: 0.875rem;
-                  color: var(--color-gray-600);
+                  color: var(--tone-fg-neutral-35);
                 `}
               >
                 {t("label-email-subject")}
@@ -169,7 +169,7 @@ const EmailPreviewDialog: React.FC<EmailPreviewDialogProps> = ({
                   flex: 1 1 auto;
                   min-height: 10rem;
                   margin: 0 auto;
-                  border: 1px solid var(--color-gray-300);
+                  border: 1px solid var(--tone-border-neutral-52);
                   border-radius: 4px;
                 `}
               />
@@ -183,8 +183,8 @@ const EmailPreviewDialog: React.FC<EmailPreviewDialogProps> = ({
                   overflow: auto;
                   white-space: pre-wrap;
                   overflow-wrap: anywhere;
-                  background: var(--color-gray-50);
-                  border: 1px solid var(--color-gray-300);
+                  background: var(--tone-bg-neutral-31);
+                  border: 1px solid var(--tone-border-neutral-52);
                   border-radius: 4px;
                 `}
               >
@@ -197,7 +197,7 @@ const EmailPreviewDialog: React.FC<EmailPreviewDialogProps> = ({
           className={css`
             margin: 0;
             font-size: 0.875rem;
-            color: var(--color-gray-600);
+            color: var(--tone-fg-neutral-35);
           `}
         >
           {t("send-test-email-explanation")}

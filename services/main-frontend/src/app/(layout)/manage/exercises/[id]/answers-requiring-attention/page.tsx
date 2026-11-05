@@ -13,10 +13,11 @@ import useExerciseQuery from "@/hooks/useExeciseQuery"
 import { withSignedIn } from "@/shared-module/common/contexts/LoginStateContext"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import usePaginationInfo from "@/shared-module/common/hooks/usePaginationInfo"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { joinTitleSegments } from "@/shared-module/common/utils/pageTitle"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { EmptyState, Pagination, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import AnswersRequiringAttentionList from "../submissions/AnswersRequiringAttentionList"
 
@@ -30,7 +31,7 @@ const ExerciseTitle = ({ children }: { children: React.ReactNode }) => (
       font-weight: 500;
       margin-bottom: 2.5rem;
       margin-top: 0.5rem;
-      color: ${baseTheme.colors.gray[500]};
+      color: ${tones.toneNeutral41};
       font-family: ${primaryFont};
     `}
   >
@@ -91,7 +92,7 @@ const SubmissionsPage: React.FC = () => {
     <div>
       <h4
         className={css`
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${primaryFont};
           font-size: 28px;
           font-weight: 600;

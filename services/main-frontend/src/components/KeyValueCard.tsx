@@ -3,9 +3,9 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { narrowContainerWidthRem } from "@/shared-module/common/styles/constants"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface InformationItem {
   label: string
@@ -64,7 +64,7 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
         className={css`
           margin: 0 0 1rem 0;
           font-size: 1.1rem;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-weight: 600;
           padding-bottom: 0.75rem;
           position: relative;
@@ -78,9 +78,9 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
             height: 2px;
             background: linear-gradient(
               90deg,
-              ${baseTheme.colors.green[400]},
-              ${baseTheme.colors.green[500]},
-              ${baseTheme.colors.clear[200]}
+              ${tones.toneAccent16},
+              ${tones.toneAccent19},
+              ${tones.toneNeutral22}
             );
             border-radius: 1px;
           }
@@ -109,11 +109,11 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
               gap: 0.25rem;
               padding: 0.75rem;
               border-radius: 8px;
-              background-color: ${baseTheme.colors.clear[100]};
-              border: 1px solid ${baseTheme.colors.green[200]};
+              background-color: ${tones.toneNeutral12};
+              border: 1px solid ${tones.toneAccent9};
               position: relative;
               overflow: hidden;
-              box-shadow: 0 2px 8px ${baseTheme.colors.clear[200]};
+              box-shadow: 0 2px 8px ${tones.toneNeutral22};
 
               &::before {
                 content: "";
@@ -122,11 +122,7 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
                 left: 0;
                 right: 0;
                 height: 2px;
-                background: linear-gradient(
-                  90deg,
-                  ${baseTheme.colors.green[300]},
-                  ${baseTheme.colors.green[400]}
-                );
+                background: linear-gradient(90deg, ${tones.toneAccent12}, ${tones.toneAccent16});
                 opacity: 0.3;
               }
 
@@ -138,7 +134,7 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
             <span
               className={css`
                 font-size: 0.75rem;
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
                 font-weight: 600;
@@ -151,7 +147,7 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
               className={css`
                 font-size: 1rem;
                 font-weight: 500;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 line-height: 1.4;
                 overflow-wrap: break-word;
               `}
@@ -167,15 +163,15 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
   return (
     <div
       className={css`
-        background-color: white;
-        border: 1px solid ${baseTheme.colors.green[200]};
+        background-color: var(--color-surface);
+        border: 1px solid ${tones.toneAccent9};
         border-radius: 16px;
         padding: 1.5rem;
         margin-bottom: 2rem;
         max-width: ${maxWidth}rem;
         margin-left: auto;
         margin-right: auto;
-        box-shadow: 0 4px 16px ${baseTheme.colors.clear[200]};
+        box-shadow: 0 4px 16px ${tones.toneNeutral22};
 
         ${respondToOrLarger.md} {
           padding: 2rem;
@@ -190,7 +186,7 @@ const KeyValueCard: React.FC<InformationCardProps> = ({
           className={css`
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid ${baseTheme.colors.clear[200]};
+            border-top: 1px solid ${tones.toneNeutral22};
             display: flex;
             gap: 0.75rem;
             justify-content: flex-end;

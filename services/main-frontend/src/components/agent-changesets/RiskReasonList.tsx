@@ -6,8 +6,9 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { RiskReason } from "@/generated/api/types.generated"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface RiskReasonCopy {
   change: string
@@ -117,21 +118,21 @@ const RiskReasonList: React.FC<RiskReasonListProps> = ({ reasons }) => {
           <li
             key={JSON.stringify(reason)}
             className={css`
-              border-left: 3px solid ${baseTheme.colors.yellow[600]};
+              border-left: 3px solid ${tones.toneWarning10};
               padding-left: 0.75rem;
             `}
           >
             <div
               className={css`
                 font-weight: ${fontWeights.semibold};
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
               `}
             >
               {copy.change}
             </div>
             <div
               className={css`
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
               `}
             >
               {t("agent-risk-what-happens", { consequence: copy.consequence })}

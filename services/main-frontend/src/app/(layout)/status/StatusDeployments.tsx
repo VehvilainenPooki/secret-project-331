@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next"
 
 import { DENSITY_COMPACT } from "@/components/credit-registration/constants"
 import { useStatusDeployments } from "@/hooks/useStatusDeployments"
-import { baseTheme } from "@/shared-module/common/styles"
 import { QueryResult, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const StatusDeployments: React.FC = () => {
   const { t } = useTranslation()
@@ -46,16 +46,14 @@ const StatusDeployments: React.FC = () => {
                     `}
                   >
                     {isHealthy ? (
-                      <CheckCircle size={16} color={baseTheme.colors.green[600]} />
+                      <CheckCircle size={16} color={tones.toneAccent21} />
                     ) : (
-                      <ExclamationTriangle size={16} color={baseTheme.colors.red[600]} />
+                      <ExclamationTriangle size={16} color={tones.toneDanger17} />
                     )}
                     <span
                       className={css`
                         font-weight: 600;
-                        color: ${
-                          isHealthy ? baseTheme.colors.green[600] : baseTheme.colors.red[600]
-                        };
+                        color: ${isHealthy ? tones.toneAccent21 : tones.toneDanger17};
                       `}
                     >
                       {deployment.ready_replicas}/{deployment.replicas}
@@ -65,7 +63,7 @@ const StatusDeployments: React.FC = () => {
                         flex: 1;
                         max-width: 200px;
                         height: 8px;
-                        background-color: ${baseTheme.colors.clear[300]};
+                        background-color: ${tones.toneNeutral26};
                         border-radius: 4px;
                         overflow: hidden;
                       `}
@@ -74,9 +72,7 @@ const StatusDeployments: React.FC = () => {
                         className={css`
                           height: 100%;
                           width: ${readinessPercent}%;
-                          background-color: ${
-                            isHealthy ? baseTheme.colors.green[600] : baseTheme.colors.red[600]
-                          };
+                          background-color: ${isHealthy ? tones.toneAccent21 : tones.toneDanger17};
                           transition: width 0.3s ease;
                         `}
                       />

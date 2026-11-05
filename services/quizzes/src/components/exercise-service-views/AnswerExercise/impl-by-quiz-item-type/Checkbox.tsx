@@ -33,7 +33,7 @@ const Checkbox: React.FC<
         flex: 1;
         flex-direction: row;
         flex-wrap: wrap;
-        border: 3px solid #bec3c7;
+        border: 3px solid var(--tone-border-neutral-47);
         border-radius: 3px;
         margin-bottom: 10px;
         padding: 5px;

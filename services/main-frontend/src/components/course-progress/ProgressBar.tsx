@@ -6,9 +6,10 @@ import { useEffect, useState } from "react"
 import { useProgressBar } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Tooltip } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ChartExplanationList from "./ChartExplanationList"
 import type { ChartExplanation, ChartPart } from "./progressText"
@@ -16,7 +17,7 @@ import { helpButtonCss } from "./progressTheme"
 
 const LinearProgress = styled.div<LinearProgressProps>`
   display: flex;
-  background: ${baseTheme.colors.green[100]};
+  background: ${tones.toneAccent7};
   border-radius: 100px;
   overflow: hidden;
   align-items: center;
@@ -46,8 +47,7 @@ const LinearProgressFill = styled.div<LinearProgressFillProps>`
   transition: 1.5s ease-in-out;
   border-radius: 50px;
   width: ${(props) => props.percentage}%;
-  background: ${(props) =>
-    props.light ? baseTheme.colors.yellow[200] : baseTheme.colors.green[600]};
+  background: ${(props) => (props.light ? tones.toneWarning5 : tones.toneAccent21)};
   justify-content: end;
 
   ${respondToOrLarger.sm} {
@@ -67,7 +67,7 @@ const Label = styled.div`
     font-size: 0.8em;
     font-weight: 500;
     font-family: ${headingFont};
-    color: #313947;
+    color: var(--tone-fg-neutral-35);
   }
   ${respondToOrLarger.sm} {
     > span:first-of-type {
@@ -159,9 +159,9 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
 export default ProgressBar
 
 const BAR_COLORS: Record<ChartPart, string> = {
-  given: baseTheme.colors.green[600],
-  required: baseTheme.colors.yellow[200],
-  max: baseTheme.colors.green[100],
+  given: tones.toneAccent21,
+  required: tones.toneWarning5,
+  max: tones.toneAccent7,
 }
 
 // The ? hangs after the count, so the count itself stays centred over the bar.

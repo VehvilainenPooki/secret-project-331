@@ -4,7 +4,9 @@ import { css } from "@emotion/css"
 import React, { useEffect, useId, useRef } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme, typography } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
+
+import { typography } from "../../styles"
 import type { ButtonProps } from "../Button"
 import Button from "../Button"
 import Dialog from "./Dialog"
@@ -132,7 +134,7 @@ const StandardDialog: React.FC<StandardDialogProps> = ({
                   line-height: 1;
                   width: 40px;
                   height: 40px;
-                  color: #000;
+                  color: var(--tone-fg-neutral-44);
                   ${
                     leftAlignTitle &&
                     `
@@ -140,11 +142,11 @@ const StandardDialog: React.FC<StandardDialogProps> = ({
                   `
                   }
                   &:hover {
-                    background-color: #f0f0f0;
+                    background-color: var(--tone-bg-neutral-45);
                   }
 
                   &:focus-visible {
-                    outline: 3px solid ${baseTheme.colors.green[600]};
+                    outline: 3px solid ${tones.toneAccent21};
                     outline-offset: 2px;
                   }
                 `}
@@ -159,7 +161,7 @@ const StandardDialog: React.FC<StandardDialogProps> = ({
         <div
           className={css`
             padding: ${leftAlignTitle ? "1rem 2rem" : "1.5rem 2rem"};
-            border-bottom: 1px solid #eaeaea;
+            border-bottom: 1px solid var(--tone-border-neutral-10);
             text-align: ${leftAlignTitle ? "left" : "center"};
 
             @media (max-width: 480px) {

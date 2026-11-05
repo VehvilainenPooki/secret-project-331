@@ -3,7 +3,8 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
@@ -20,7 +21,7 @@ const PartnerEditor: React.FC<
         <div
           className={css`
             padding: 1rem;
-            background: #ecf3f2;
+            background: var(--tone-bg-neutral-41);
             text-align: center;
             font-family: ${headingFont};
           `}
@@ -28,7 +29,7 @@ const PartnerEditor: React.FC<
           <h4>{t("partners-block")}</h4>
           <span
             className={css`
-              color: ${baseTheme.colors.green[600]};
+              color: ${tones.toneAccent21};
               text-align: center;
               font-weight: 600;
               font-family: ${headingFont};

@@ -4,7 +4,9 @@ import { keyframes } from "@emotion/css"
 import styled from "@emotion/styled"
 import React, { useContext } from "react"
 
-import { baseTheme, secondaryFont } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
+
+import { secondaryFont } from "../../styles"
 import { respondToOrLarger } from "../../styles/respond"
 import { AccordionContext } from "./accordionContext"
 
@@ -23,13 +25,13 @@ const TextWrapper = styled.div`
   font-family: ${secondaryFont};
 
   details {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--tone-border-neutral-42);
     transition: all 0.3s ease-in-out;
   }
 
   details[open] summary ~ * {
     animation: ${openAnimation} 0.3s ease-in-out;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   }
 
   details[open] > div {
@@ -45,9 +47,9 @@ const TextWrapper = styled.div`
     cursor: pointer;
     font-weight: medium;
     list-style: none;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     outline: 0;
-    background: ${baseTheme.colors.clear[100]};
+    background: ${tones.toneNeutral12};
     ${respondToOrLarger.sm} {
       padding: 1rem 1rem 1rem 2rem;
     }
@@ -58,14 +60,14 @@ const TextWrapper = styled.div`
   }
 
   details[open] > summary {
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   }
 
   details summary:after {
     content: "+";
     position: absolute;
     font-size: 2.4rem;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     line-height: 0;
     margin-top: 0.75rem;
     top: 14px;
@@ -88,7 +90,7 @@ const TextWrapper = styled.div`
     margin: 0;
 
     ${respondToOrLarger.sm} {
-      background: #f9f9f9;
+      background: var(--tone-bg-neutral-17);
       padding: 25px 35px 30px 35px;
     }
   }

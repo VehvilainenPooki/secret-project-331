@@ -18,21 +18,21 @@ export const buttonBase = css`
 
 export const primaryButton = css`
   ${buttonBase};
-  background: #065853;
-  color: white;
+  background: var(--tone-bg-accent-13);
+  color: var(--color-text-on-accent);
   white-space: nowrap;
 `
 
 export const disabledButton = css`
   ${buttonBase};
-  background: #a9acb3;
-  color: #666666;
+  background: var(--tone-bg-neutral-81);
+  color: var(--tone-fg-neutral-25);
   cursor: not-allowed;
 `
 
 export const containerBase = css`
   padding: 20px 0px;
-  color: #1a2333;
+  color: var(--color-text);
   max-width: 100%;
 
   ${respondToOrLarger.lg} {
@@ -55,18 +55,18 @@ export const actionButtonStyle = css`
   border-radius: 4px;
 
   &:hover {
-    background: #f1f1f1;
+    background: var(--tone-bg-neutral-42);
   }
 `
 
 export const settingsCardCss = css`
-  background: var(--color-clear-50);
-  border: 1px solid var(--color-gray-100);
+  background: var(--color-surface);
+  border: 1px solid var(--tone-border-neutral-27);
   border-radius: 12px;
   padding: 1.25rem;
   box-shadow:
-    0 1px 3px rgba(0, 0, 0, 0.04),
-    0 1px 2px rgba(0, 0, 0, 0.02);
+    0 1px 3px var(--tone-shadow-neutral-5),
+    0 1px 2px var(--tone-shadow-neutral-3);
   ${respondToOrLarger.md} {
     padding: 1.75rem;
   }

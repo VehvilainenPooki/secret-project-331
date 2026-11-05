@@ -110,7 +110,7 @@ const inputBaseCss = css`
     box-shadow:
       inset 0 0 0 1px var(--field-border-color-invalid),
       0 0 0 var(--focus-ring-offset) var(--focus-ring-offset-color),
-      0 0 0 calc(var(--focus-ring-offset) + var(--focus-ring-width)) rgba(130, 38, 48, 0.4);
+      0 0 0 calc(var(--focus-ring-offset) + var(--focus-ring-width)) var(--tone-shadow-danger-4);
   }
 
   &:disabled {
@@ -527,7 +527,7 @@ export const controlSurfaceBaseCss = css`
   &:focus-within {
     box-shadow:
       inset 0 0 0 1px var(--field-border-focus),
-      0 0 0 var(--focus-ring-width) rgba(8, 69, 122, 0.14),
+      0 0 0 var(--focus-ring-width) var(--tone-shadow-info-9),
       var(--field-shadow);
   }
 
@@ -540,7 +540,7 @@ export const controlSurfaceBaseCss = css`
   &[data-invalid="true"]:focus-within {
     box-shadow:
       inset 0 0 0 1px var(--field-error-border),
-      0 0 0 var(--focus-ring-width) rgba(158, 52, 31, 0.14),
+      0 0 0 var(--focus-ring-width) var(--tone-shadow-danger-2),
       var(--field-shadow);
   }
 

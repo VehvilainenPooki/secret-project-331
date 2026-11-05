@@ -4,7 +4,7 @@ import { css } from "@emotion/css"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import ConfirmActionBubble from "./ConfirmActionBubble"
@@ -20,7 +20,7 @@ const rowStyle = css`
 const footnoteStyle = css`
   margin: 0.5rem 0 0;
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 /**

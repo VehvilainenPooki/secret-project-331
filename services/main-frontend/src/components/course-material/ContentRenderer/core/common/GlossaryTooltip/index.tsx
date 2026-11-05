@@ -36,14 +36,14 @@ const Tooltip: React.FC<TooltipProps> = ({ term }) => {
           left: calc(100% - 100px);
           /* UI */
           z-index: 2;
-          background: white;
+          background: var(--color-surface);
           padding: 4px;
           font-size: 12px;
           border: 1px solid black;
           width: 220px;
           border-radius: 4px;
-          -webkit-box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+          -webkit-box-shadow: 2px 2px 3px 0px var(--tone-shadow-neutral-21);
+          box-shadow: 2px 2px 3px 0px var(--tone-shadow-neutral-21);
           line-height: 1.4;
         `}
       >

@@ -30,7 +30,7 @@ const TerminologyBlock: React.FC<
         width: 100%;
         padding: 2rem 2rem 4rem 2rem;
         border-left: 8px solid ${props.data.attributes.primaryColor};
-        box-shadow: rgba(25, 35, 51, 0.06) 0px 2px 12px 0px;
+        box-shadow: var(--tone-shadow-info-6) 0px 2px 12px 0px;
 
         p {
           margin: 0 !important;
@@ -48,7 +48,7 @@ const TerminologyBlock: React.FC<
           margin-bottom: 0.8rem;
           font-weight: 600;
           font-size: 30px;
-          color: #1a2333;
+          color: var(--color-text);
         }
       `}
     >

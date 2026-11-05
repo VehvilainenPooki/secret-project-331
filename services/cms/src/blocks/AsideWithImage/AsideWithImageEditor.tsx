@@ -4,7 +4,8 @@ import { css } from "@emotion/css"
 import { BlockControls, HeadingLevelDropdown, RichText } from "@wordpress/block-editor"
 import React from "react"
 
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
@@ -31,7 +32,7 @@ const AsideWithImageEditor: React.FC<
         <div
           className={css`
             padding: 1rem;
-            background: ${baseTheme.colors.clear[100]};
+            background: ${tones.toneNeutral12};
             display: grid;
             grid-template-columns: 0.4fr 1fr;
             font-family: ${headingFont};

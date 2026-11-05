@@ -35,7 +35,7 @@ const itemCss = css`
   border: none;
   border-radius: var(--control-radius);
   background: transparent;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font: inherit;
   text-align: left;
   text-decoration: none;
@@ -52,11 +52,11 @@ const itemCss = css`
   }
 
   &:hover:not(:disabled) {
-    background: var(--color-clear-200);
+    background: var(--tone-bg-neutral-52);
   }
 
   &[data-tone="destructive"] {
-    color: var(--color-crimson-700);
+    color: var(--tone-fg-danger-14);
   }
 `
 

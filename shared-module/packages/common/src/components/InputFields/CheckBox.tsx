@@ -5,10 +5,12 @@ import styled from "@emotion/styled"
 import type { InputHTMLAttributes } from "react"
 import React, { forwardRef, useEffect, useRef } from "react"
 
-import { baseTheme, primaryFont } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
-const ERRORCOLOR = "#F76D82"
-const DEFAULTCOLOR = "#787878"
+import { primaryFont } from "../../styles"
+
+const ERRORCOLOR = "var(--tone-tone-danger-9)"
+const DEFAULTCOLOR = "var(--tone-tone-neutral-40)"
 
 interface LabelExtraProps {
   error?: boolean
@@ -22,11 +24,11 @@ const Label = styled.label<LabelExtraProps>`
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 
   input[type="checkbox"] {
     appearance: none;
-    background-color: #fff;
+    background-color: var(--color-surface);
     margin: 0;
     font: inherit;
     width: 1.15em;
@@ -38,7 +40,7 @@ const Label = styled.label<LabelExtraProps>`
   }
 
   input[type="checkbox"]:hover {
-    background: #f9f9f9;
+    background: var(--tone-bg-neutral-17);
   }
 
   input[type="checkbox"]:before {
@@ -47,26 +49,26 @@ const Label = styled.label<LabelExtraProps>`
     height: 0.65em;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
-    box-shadow: inset 1em 1em #fff;
+    box-shadow: inset 1em 1em var(--tone-shadow-neutral-1);
     clip-path: polygon(28% 38%, 41% 53%, 75% 24%, 86% 38%, 40% 78%, 15% 50%);
   }
 
   input[type="checkbox"]:checked {
-    border-color: ${baseTheme.colors.green[600]};
-    background: ${baseTheme.colors.green[600]};
+    border-color: ${tones.toneAccent21};
+    background: ${tones.toneAccent21};
   }
   input[type="checkbox"]:checked::before {
     transform: scale(1);
   }
 
   input[type="checkbox"]:disabled {
-    color: #959495;
+    color: var(--tone-fg-neutral-13);
     cursor: not-allowed;
   }
 `
 
 const error = css`
-  color: #f76d82;
+  color: var(--tone-fg-danger-1);
   font-size: 14px;
   display: inline-block;
   margin-top: -15px;

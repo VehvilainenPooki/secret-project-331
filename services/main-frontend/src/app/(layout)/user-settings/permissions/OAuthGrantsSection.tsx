@@ -15,7 +15,7 @@ import type { OAuthGrant } from "@/generated/api/types.generated"
 import MaskOverThisInSystemTests from "@/shared-module/common/components/system-tests/MaskOverThisInSystemTests"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import {
   Badge,
@@ -25,6 +25,7 @@ import {
   MIDDLE_DOT,
   QueryResult,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { settingsCardCss } from "@/styles/sharedStyles"
 
 const listCss = css`
@@ -35,7 +36,7 @@ const listCss = css`
 
 const metaCss = css`
   font-size: 0.8125rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 /** The applications and AI agents the user has given access to their account, with revoke. */
@@ -69,7 +70,7 @@ const OAuthGrantsSection: React.FC = () => {
           gap: 0.625rem;
           margin-bottom: 1.25rem;
           padding-bottom: 1rem;
-          border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+          border-bottom: 1px solid ${tones.toneNeutral29};
         `}
       >
         <div
@@ -79,7 +80,7 @@ const OAuthGrantsSection: React.FC = () => {
             justify-content: center;
             width: 32px;
             height: 32px;
-            background: ${baseTheme.colors.green[75]};
+            background: ${tones.toneAccent4};
             border-radius: 6px;
             flex-shrink: 0;
           `}
@@ -87,7 +88,7 @@ const OAuthGrantsSection: React.FC = () => {
           <LinkChain
             size={16}
             className={css`
-              color: ${baseTheme.colors.green[700]};
+              color: ${tones.toneAccent23};
             `}
           />
         </div>
@@ -95,7 +96,7 @@ const OAuthGrantsSection: React.FC = () => {
           className={css`
             font-size: 1.0625rem;
             font-weight: ${fontWeights.semibold};
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             margin: 0;
           `}
         >
@@ -125,8 +126,8 @@ const OAuthGrantsSection: React.FC = () => {
                     align-items: center;
                     gap: 1rem;
                     padding: 0.875rem 1rem;
-                    background: ${baseTheme.colors.gray[50]};
-                    border: 1px solid ${baseTheme.colors.gray[100]};
+                    background: ${tones.toneNeutral14};
+                    border: 1px solid ${tones.toneNeutral29};
                     border-radius: 8px;
                   `}
                 >
@@ -148,7 +149,7 @@ const OAuthGrantsSection: React.FC = () => {
                         data-testid={`app-name-${grant.id}`}
                         className={css`
                           font-weight: 500;
-                          color: ${baseTheme.colors.gray[700]};
+                          color: ${tones.toneNeutral46};
                           font-size: 0.9375rem;
                         `}
                       >

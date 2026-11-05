@@ -6,8 +6,8 @@ import React, { useRef } from "react"
 import { useButton } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { Dialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   currentlyOpenFeedbackDialogAtom,
   selectionAtom,
@@ -93,8 +93,8 @@ const FeedbackTypeDialog: React.FC = () => {
             gap: 0.75rem;
             padding: 1.5rem;
             border-radius: 8px;
-            background-color: white;
-            border: 2px solid ${baseTheme.colors.gray[200]};
+            background-color: var(--color-surface);
+            border: 2px solid ${tones.toneNeutral35};
             cursor: pointer;
             transition: all 0.2s ease;
             position: relative;
@@ -103,9 +103,9 @@ const FeedbackTypeDialog: React.FC = () => {
             text-align: left;
 
             &:hover {
-              background-color: ${baseTheme.colors.gray[100]};
+              background-color: ${tones.toneNeutral29};
               transform: translateY(-2px);
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              box-shadow: 0 4px 12px var(--tone-shadow-neutral-10);
             }
 
             &:active {
@@ -113,7 +113,7 @@ const FeedbackTypeDialog: React.FC = () => {
             }
 
             &:focus-visible {
-              outline: 3px solid ${baseTheme.colors.green[600]};
+              outline: 3px solid ${tones.toneAccent21};
               outline-offset: 2px;
             }
 
@@ -126,7 +126,7 @@ const FeedbackTypeDialog: React.FC = () => {
               height: 0;
               border-style: solid;
               border-width: 0 40px 40px 0;
-              border-color: transparent ${baseTheme.colors.gray[200]} transparent transparent;
+              border-color: transparent ${tones.toneNeutral35} transparent transparent;
             }
           `}
         >
@@ -141,7 +141,7 @@ const FeedbackTypeDialog: React.FC = () => {
               className={css`
                 font-size: 1.25rem;
                 font-weight: 600;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 margin: 0;
               `}
             >
@@ -150,7 +150,7 @@ const FeedbackTypeDialog: React.FC = () => {
             <p
               className={css`
                 font-size: 0.875rem;
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
                 margin: 0;
                 line-height: 1.5;
               `}
@@ -169,8 +169,8 @@ const FeedbackTypeDialog: React.FC = () => {
             gap: 0.75rem;
             padding: 1.5rem;
             border-radius: 8px;
-            background-color: white;
-            border: 2px solid ${baseTheme.colors.green[200]};
+            background-color: var(--color-surface);
+            border: 2px solid ${tones.toneAccent9};
             cursor: pointer;
             transition: all 0.2s ease;
             position: relative;
@@ -179,9 +179,9 @@ const FeedbackTypeDialog: React.FC = () => {
             text-align: left;
 
             &:hover {
-              background-color: ${baseTheme.colors.green[100]};
+              background-color: ${tones.toneAccent7};
               transform: translateY(-2px);
-              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+              box-shadow: 0 4px 12px var(--tone-shadow-neutral-10);
             }
 
             &:active {
@@ -189,7 +189,7 @@ const FeedbackTypeDialog: React.FC = () => {
             }
 
             &:focus-visible {
-              outline: 3px solid ${baseTheme.colors.green[600]};
+              outline: 3px solid ${tones.toneAccent21};
               outline-offset: 2px;
             }
 
@@ -202,7 +202,7 @@ const FeedbackTypeDialog: React.FC = () => {
               height: 0;
               border-style: solid;
               border-width: 0 40px 40px 0;
-              border-color: transparent ${baseTheme.colors.green[200]} transparent transparent;
+              border-color: transparent ${tones.toneAccent9} transparent transparent;
             }
           `}
         >
@@ -217,7 +217,7 @@ const FeedbackTypeDialog: React.FC = () => {
               className={css`
                 font-size: 1.25rem;
                 font-weight: 600;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 margin: 0;
               `}
             >
@@ -226,7 +226,7 @@ const FeedbackTypeDialog: React.FC = () => {
             <p
               className={css`
                 font-size: 0.875rem;
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
                 margin: 0;
                 line-height: 1.5;
               `}

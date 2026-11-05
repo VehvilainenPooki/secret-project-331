@@ -23,8 +23,8 @@ const EmailOneTimeCodeEditor: React.FC<
           width: 100%;
           box-sizing: border-box;
           padding: 16px;
-          background-color: #f7f8f9;
-          border: 1px solid #dddee0;
+          background-color: var(--tone-bg-neutral-20);
+          border: 1px solid var(--tone-border-neutral-27);
           border-radius: 6px;
           text-align: center;
           font-family: SFMono-Regular, Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -32,7 +32,7 @@ const EmailOneTimeCodeEditor: React.FC<
           line-height: 30px;
           font-weight: 600;
           letter-spacing: 4px;
-          color: #1a2333;
+          color: var(--color-text);
           overflow-wrap: anywhere;
           margin: 0 0 18px;
         `}

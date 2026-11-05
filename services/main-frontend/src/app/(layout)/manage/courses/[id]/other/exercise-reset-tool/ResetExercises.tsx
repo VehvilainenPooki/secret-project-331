@@ -141,7 +141,7 @@ const ResetExercises: React.FC<CourseManagementPagesProps> = ({ courseId }) => {
 
       <div
         className={css`
-          border: 1px solid #e4e4e4;
+          border: 1px solid var(--tone-border-neutral-16);
           margin-bottom: 30px;
         `}
       ></div>
@@ -205,7 +205,7 @@ const ResetExercises: React.FC<CourseManagementPagesProps> = ({ courseId }) => {
                   className={css`
                     margin-top: 1rem;
                     opacity: 0.8;
-                    color: #1a2333;
+                    color: var(--color-text);
                   `}
                 >
                   {t("filters")}:

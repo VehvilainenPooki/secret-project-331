@@ -8,8 +8,9 @@ import type { CourseManagementPagesProps } from "@/app/(layout)/manage/courses/[
 import { getCourseLanguageVersionsQueryKey } from "@/hooks/useCourseLanguageVersions"
 import { useCourseQuery } from "@/hooks/useCourseQuery"
 import { queryClient } from "@/shared-module/common/services/appQueryClient"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { Button, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import CourseLanguageVersionsList from "./CourseLanguageVersionsList"
 import NewCourseLanguageVersionDialog from "./NewCourseLanguageVersionDialog"
@@ -44,7 +45,7 @@ const CourseLanguageVersionsPage: React.FC<React.PropsWithChildren<CourseManagem
           <h2
             className={css`
               font-size: clamp(2rem, 3.6vh, 36px);
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               font-family: ${headingFont};
               font-weight: bold;
             `}

@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 `
 const Question = styled.span`
   font-size: 16px;
-  color: #215887;
+  color: var(--tone-fg-info-11);
   line-height: 1.4;
   margin-bottom: 0.8rem;
 `
@@ -50,21 +50,21 @@ const Icon = styled.div<StyledProps>`
   justify-content: center;
   align-items: center;
   padding: 25px 0;
-  background-color: ${({ active }: StyledProps) => (active ? "#313947" : " #f5f6f7")};
+  background-color: ${({ active }: StyledProps) => (active ? "var(--tone-tone-neutral-44)" : " var(--tone-tone-neutral-12)")};
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.2s;
   text-align: center;
 
   svg .bg {
-    fill: ${({ active }) => active && "#ffd93b"};
+    fill: ${({ active }) => active && "var(--tone-tone-warning-7)"};
   }
 
   .likert-scale-text {
     margin-top: 6px;
     font-size: 15px;
     font-weight: 600;
-    color: ${({ active }) => (active ? "#ffffff" : "#313947")};
+    color: ${({ active }) => (active ? "var(--tone-tone-neutral-1)" : "var(--tone-tone-neutral-44)")};
     font-family: ${headingFont};
     height: 25px;
   }

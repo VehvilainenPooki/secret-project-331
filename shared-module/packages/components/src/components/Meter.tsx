@@ -41,16 +41,16 @@ export interface MeterProps {
 
 const fillToneCss: Record<MeterTone, string> = {
   neutral: css`
-    background: var(--color-gray-400);
+    background: var(--tone-bg-neutral-86);
   `,
   success: css`
-    background: var(--color-green-600);
+    background: var(--color-accent);
   `,
   warning: css`
-    background: var(--color-yellow-700);
+    background: var(--tone-bg-warning-7);
   `,
   danger: css`
-    background: var(--color-crimson-700);
+    background: var(--tone-bg-danger-14);
   `,
 }
 
@@ -66,11 +66,11 @@ const labelRowCss = css`
   justify-content: space-between;
   gap: var(--space-3);
   font-size: var(--font-size-1);
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
 `
 
 const valueTextCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 `
@@ -80,7 +80,7 @@ const trackCss = css`
   width: 100%;
   height: 8px;
   border-radius: 999px;
-  background: var(--color-gray-100);
+  background: var(--tone-bg-neutral-67);
   overflow: hidden;
 `
 
@@ -108,7 +108,7 @@ const tickCss = css`
   top: -2px;
   bottom: -2px;
   width: 2px;
-  background: var(--color-gray-600);
+  background: var(--tone-bg-neutral-87);
 `
 
 /**
@@ -256,7 +256,7 @@ const inlineRootFillCss = css`
 `
 
 const inlineValueCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
@@ -268,7 +268,7 @@ const inlineValueCss = css`
 `
 
 const inlineSecondaryCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
 `
@@ -282,7 +282,7 @@ const inlineTrackCss = css`
   min-width: 3rem;
   height: 6px;
   border-radius: 999px;
-  background: var(--color-gray-100);
+  background: var(--tone-bg-neutral-67);
   overflow: hidden;
 `
 
@@ -306,7 +306,7 @@ const inlineTickCss = css`
   top: -1px;
   bottom: -1px;
   width: 2px;
-  background: var(--color-gray-600);
+  background: var(--tone-bg-neutral-87);
 `
 
 /**

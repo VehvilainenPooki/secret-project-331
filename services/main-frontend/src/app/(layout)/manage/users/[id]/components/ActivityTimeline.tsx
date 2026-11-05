@@ -15,10 +15,10 @@ import { DENSITY_COMPACT, PLAIN_DISCLOSURE } from "@/components/credit-registrat
 import { emptyStateCss } from "@/components/credit-registration/styles"
 import { moduleTimingColumns, moduleTimingLegendCss } from "@/components/ModuleTimingTable"
 import type { CourseEnrollmentInfo } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { includeIf } from "@/shared-module/common/utils/nullability"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Disclosure, Table, type TableColumn } from "@/shared-module/components"
+import { getActiveTheme } from "@/shared-module/components/styles/themes"
 import {
   computeModuleRows,
   durationSeconds,
@@ -45,12 +45,12 @@ export interface ActivityTimelineProps {
   enrollments: CourseEnrollmentInfo[]
 }
 
-const DOT_FILL = "#ffffff"
-const DOT_BORDER = baseTheme.colors.gray[700]
-const MARK_BORDER = "#ffffff"
+const DOT_FILL = getActiveTheme().tones.chartNeutral1
+const DOT_BORDER = getActiveTheme().tones.chartNeutral20
+const MARK_BORDER = getActiveTheme().tones.chartNeutral1
 // A completion awaiting cheating review is drawn as a red dot (white ring) instead of the default white.
-const REVIEW_DOT_FILL = "#c4281b" // off-palette review red; no baseTheme token matches
-const REVIEW_DOT_BORDER = "#ffffff"
+const REVIEW_DOT_FILL = getActiveTheme().tones.chartDanger8 // off-palette review red
+const REVIEW_DOT_BORDER = getActiveTheme().tones.chartNeutral1
 // Vertical pixels per lane row; the chart height scales with the lane count.
 const LANE_ROW_PX = 72
 // Axis, zoom slider and grid padding around the lanes.
@@ -90,7 +90,7 @@ const BASELINE_FROM_TOP = 0.58
 const VIOLIN_MAX_FRACTION = 0.5
 const TRACK_PX = 5
 const LABEL_GAP = 3
-const LABEL_FILL = baseTheme.colors.gray[500] // course name under the baseline
+const LABEL_FILL = getActiveTheme().tones.chartNeutral17 // course name under the baseline
 // Completion dots / per-day hit-targets sit at the lane centre; nudge them down onto the baseline.
 const BASELINE_OFFSET_PX = (BASELINE_FROM_TOP - 0.5) * LANE_ROW_PX
 const DIAMOND_FRACTION = 0.55
@@ -108,7 +108,8 @@ const BADGE_LABEL_WEIGHT = "bold" as const
 const COMPLETION_CLUSTER_FRACTION = 0.012
 const MIN_CLUSTER_MS = 60 * 60 * 1000
 // Separator between the stacked completions listed in a merged tooltip.
-const TOOLTIP_DIVIDER = '<div style="border-top:1px solid rgba(0,0,0,0.15);margin:5px 0"></div>'
+const TOOLTIP_DIVIDER =
+  '<div style="border-top:1px solid var(--tone-chart-neutral-13);margin:5px 0"></div>'
 
 // A grid item's `min-width: auto` lets any too-wide descendant widen the whole page rather than
 // shrink; the chart and the raw table are both wider than a phone.

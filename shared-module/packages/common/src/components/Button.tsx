@@ -4,7 +4,9 @@ import styled from "@emotion/styled"
 import type { Ref } from "react"
 import React, { forwardRef } from "react"
 
-import { baseTheme, fontWeights, headingFont, theme } from "../styles"
+import { tones, withAlpha } from "@/shared-module/components/styles/themes"
+
+import { fontWeights, headingFont, theme } from "../styles"
 import { defaultFontSizePx } from "../styles/constants"
 import { respondToOrLarger } from "../styles/respond"
 
@@ -102,20 +104,20 @@ export const WhiteButtonStyles = (props: ButtonProps) => {
     padding: ${theme.buttonSizes[props.size].padding};
 
     color: ${theme.white.text};
-    background: #FCFCFC;
-    border: 2.5px solid #DEDEDE;
+    background: var(--tone-bg-neutral-11);
+    border: 2.5px solid var(--tone-border-neutral-26);
 
     &:hover,
     &:focus {
       color: ${theme.white.text};
-      box-shadow: 0 0 0 1px #FCFCFC;
-      border: 2.5px solid #999999;
+      box-shadow: 0 0 0 1px var(--tone-shadow-neutral-2);
+      border: 2.5px solid var(--tone-border-neutral-53);
     }
 
     &:active {
       color: ${theme.white.text};
-      background-color: #F5F5F5;
-      border: 2.5px solid #999999;
+      background-color: var(--tone-bg-neutral-26);
+      border: 2.5px solid var(--tone-border-neutral-53);
     }
 
     &:disabled {
@@ -131,7 +133,7 @@ export const IconButtonStyles = (props: ButtonProps) => {
   const ICON_BUTTON_STYLES = `
     text-transform: ${props.transform};
     padding: ${theme.buttonSizes[props.size].padding};
-    color: black;
+    color: var(--tone-fg-neutral-44);
     background: none;
     border: 0px;
 
@@ -240,20 +242,20 @@ export const BlueButtonStyles = (props: ButtonProps) => {
     padding: ${theme.buttonSizes[props.size].padding};
 
     color: ${theme.tertiary.text};
-    background-color: ${baseTheme.colors.blue[500]};
+    background-color: ${tones.toneInfo20};
     border: 1.5px solid ${theme.secondary.border};
 
     &:hover,
     &:focus {
-      color: ${baseTheme.colors.blue[700]};
-      box-shadow: 0 0 0 1px ${baseTheme.colors.blue[500]};
-      border: 1.5px solid ${baseTheme.colors.blue[500]};
+      color: ${tones.toneInfo26};
+      box-shadow: 0 0 0 1px ${tones.toneInfo20};
+      border: 1.5px solid ${tones.toneInfo20};
     }
 
     &:active {
-      color: ${baseTheme.colors.blue[700]};
-      background-color: ${baseTheme.colors.blue[600]};
-      border: 1.5px solid ${baseTheme.colors.blue[500]};
+      color: ${tones.toneInfo26};
+      background-color: ${tones.toneInfo23};
+      border: 1.5px solid ${tones.toneInfo20};
     }
 
     &:disabled {
@@ -277,20 +279,20 @@ export const GreenButtonStyles = (props: ButtonProps) => {
 
     &:hover,
     &:focus {
-    color: ${baseTheme.colors.gray[700]};
-      background-color: ${baseTheme.colors.green[700]}4D;
+    color: ${tones.toneNeutral46};
+      background-color: ${withAlpha(tones.toneAccent23, 30.2)};
       border-color: transparent;
 
     }
 
     &:active {
-      background-color: ${baseTheme.colors.green[700]}4D;
-      border-color: ${baseTheme.colors.green[700]}4D;
+      background-color: ${withAlpha(tones.toneAccent23, 30.2)};
+      border-color: ${withAlpha(tones.toneAccent23, 30.2)};
     }
 
     &:disabled {
-      color: ${baseTheme.colors.gray[500]};
-      background-color: ${baseTheme.colors.gray[300]};
+      color: ${tones.toneNeutral41};
+      background-color: ${tones.toneNeutral37};
       border-color: transparent;
       cursor: not-allowed;
       opacity: 0.5;

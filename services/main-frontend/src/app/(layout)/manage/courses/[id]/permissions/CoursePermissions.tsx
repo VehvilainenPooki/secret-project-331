@@ -7,8 +7,9 @@ import { useTranslation } from "react-i18next"
 import type { CourseManagementPagesProps } from "@/app/(layout)/manage/courses/[id]/types"
 import { PermissionPage } from "@/components/PermissionPage"
 import { useCourseQuery } from "@/hooks/useCourseQuery"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const CoursePermissions: React.FC<React.PropsWithChildren<CourseManagementPagesProps>> = ({
   courseId,
@@ -24,7 +25,7 @@ const CoursePermissions: React.FC<React.PropsWithChildren<CourseManagementPagesP
             <h1
               className={css`
                 font-size: clamp(2rem, 3.6vh, 36px);
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 font-family: ${headingFont};
                 font-weight: bold;
               `}

@@ -9,10 +9,10 @@ import { Trans, useTranslation } from "react-i18next"
 import { useLanguageNavigation } from "@/hooks/course-material/language/useLanguageNavigation"
 import { useCourseData } from "@/hooks/course-material/useCourseData"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
-import { baseTheme } from "@/shared-module/common/styles/theme"
 import ietfLanguageTagToHumanReadableName from "@/shared-module/common/utils/ietfLanguageTagToHumanReadableName"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Link, LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { currentPageDataAtom } from "@/state/course-material/selectors"
 
 export interface CourseData {
@@ -100,13 +100,13 @@ const UserOnWrongCourseNotification: React.FC<
           display: flex;
           align-items: center;
           gap: 0.7rem;
-          background: ${baseTheme.colors.yellow[100]};
-          border: 1px solid ${baseTheme.colors.yellow[300]};
+          background: ${tones.toneWarning3};
+          border: 1px solid ${tones.toneWarning6};
           padding: 1rem 1.2rem;
           border-radius: 1rem;
           font-size: 1rem;
           margin: 1rem 0;
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px var(--tone-shadow-neutral-10);
         `}
       >
         <div
@@ -122,7 +122,7 @@ const UserOnWrongCourseNotification: React.FC<
               align-items: center;
               gap: 0.5rem;
               font-weight: 600;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               font-size: 1rem;
               line-height: 1.3;
             `}
@@ -131,7 +131,7 @@ const UserOnWrongCourseNotification: React.FC<
               className={css`
                 width: 1.2rem;
                 height: 1.2rem;
-                color: ${baseTheme.colors.blue[600]};
+                color: ${tones.toneInfo23};
                 flex-shrink: 0;
               `}
             />
@@ -140,7 +140,7 @@ const UserOnWrongCourseNotification: React.FC<
           <div
             className={css`
               font-size: 0.9rem;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               line-height: 1.4;
               margin-bottom: 0.3rem;
             `}
@@ -189,7 +189,7 @@ const UserOnWrongCourseNotification: React.FC<
             <div
               className={css`
                 font-size: 0.8rem;
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
                 line-height: 1.3;
               `}
             >
@@ -205,12 +205,8 @@ const UserOnWrongCourseNotification: React.FC<
     <BreakFromCentered sidebar={false}>
       <div
         className={css`
-          background: linear-gradient(
-            90deg,
-            ${baseTheme.colors.yellow[100]} 0%,
-            ${baseTheme.colors.crimson[100]} 100%
-          );
-          box-shadow: 0 2px 12px rgba(229, 57, 53, 0.08);
+          background: linear-gradient(90deg, ${tones.toneWarning3} 0%, ${tones.toneDanger3} 100%);
+          box-shadow: 0 2px 12px var(--tone-shadow-danger-1);
           padding: 2.5rem 2rem;
           margin: 2rem 0;
           text-align: center;
@@ -220,7 +216,7 @@ const UserOnWrongCourseNotification: React.FC<
           className={css`
             font-size: 1.3rem;
             font-weight: 700;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -241,7 +237,7 @@ const UserOnWrongCourseNotification: React.FC<
               className={css`
                 width: 2.2rem;
                 height: 2.2rem;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 flex-shrink: 0;
               `}
             />
@@ -251,7 +247,7 @@ const UserOnWrongCourseNotification: React.FC<
         <div
           className={css`
             font-size: 1.1rem;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             margin-bottom: 2rem;
             max-width: 600px;
             margin-left: auto;
@@ -295,7 +291,7 @@ const UserOnWrongCourseNotification: React.FC<
           className={css`
             margin-top: 1.2rem;
             font-size: 0.98rem;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
           `}
         >
           {t("or-switch-language-in-settings")}

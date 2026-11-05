@@ -9,8 +9,8 @@ import { useTranslation } from "react-i18next"
 
 import Echarts from "@/components/charts/Echarts"
 import type { CountResult } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { DateField, LoadingRegion, Select, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "./CourseStatsPage"
 import StatsHeader from "./StatsHeader"
@@ -198,7 +198,7 @@ const LineChart: React.FC<LineChartProps> = ({
       <div
         className={css`
           margin-bottom: 2rem;
-          border: 3px solid ${baseTheme.colors.clear[200]};
+          border: 3px solid ${tones.chartNeutral9};
           border-radius: 6px;
           padding: 1rem;
           min-height: ${DEFAULT_CHART_HEIGHT}px;

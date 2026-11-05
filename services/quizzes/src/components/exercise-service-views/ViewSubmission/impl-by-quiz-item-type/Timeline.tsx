@@ -5,7 +5,8 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
-import { baseTheme, headingFont } from "@/shared-module/exercise-react/styles"
+import { tones } from "@/shared-module/components/styles/themes"
+import { headingFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemSubmissionComponentProps } from "."
 import type { UserItemAnswerTimeline } from "../../../../../types/quizTypes/answer"
@@ -38,7 +39,7 @@ const container = css`
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
-    color: #4c5868;
+    color: var(--tone-fg-info-10);
     font-family: ${headingFont};
     letter-spacing: 1;
     z-index: 1;
@@ -164,15 +165,15 @@ const Timeline: React.FunctionComponent<
                   height: 2.5rem;
                   top: calc(50% - 20px);
                   right: -0.938rem;
-                  background: ${selectedTimelineItem ? "#77C299" : "#EBEDEE"};
-                  border: ${selectedTimelineItem ? "none" : "0.125rem solid #898E99"};
+                  background: ${selectedTimelineItem ? "var(--tone-tone-accent-11)" : "var(--tone-tone-neutral-22)"};
+                  border: ${selectedTimelineItem ? "none" : "0.125rem solid var(--tone-tone-neutral-38)"};
                   border-style: ${selectedTimelineItem ? "none" : "dashed"};
                   ${
                     selectedTimelineItem &&
                     `box-shadow:
-                rgba(45, 35, 66, 0) 0 2px 4px,
-                rgba(45, 35, 66, 0) 0 7px 13px -3px,
-                #69AF8A 0 -2px 0 inset;`
+                var(--tone-shadow-info-1) 0 2px 4px,
+                var(--tone-shadow-info-1) 0 7px 13px -3px,
+                var(--tone-shadow-accent-6) 0 -2px 0 inset;`
                   };
                   border-radius: 1.563rem;
                   transition: all 200ms linear;
@@ -194,7 +195,7 @@ const Timeline: React.FunctionComponent<
                   bottom: 0;
                   left: 50%;
                   height: 100%;
-                  border: 0.188rem solid #ebedee;
+                  border: 0.188rem solid var(--tone-border-neutral-7);
                   border-radius: 6.188rem;
                   margin-left: 0.375rem;
                   @media (max-width: 767.98px) {
@@ -211,7 +212,7 @@ const Timeline: React.FunctionComponent<
                   <div>
                     <div
                       className={css`
-                        background-color: ${whatWasChosenWasCorrect ? "#D5EADF" : "#EDD3D6"};
+                        background-color: ${whatWasChosenWasCorrect ? "var(--tone-tone-neutral-25)" : "var(--tone-tone-danger-4)"};
                         border: none;
                         margin: 0;
                         width: 100%;
@@ -231,7 +232,7 @@ const Timeline: React.FunctionComponent<
                       <div
                         className={css`
                           padding: 0.5rem 1rem;
-                          color: ${whatWasChosenWasCorrect ? "#246F46" : "#D75861"};
+                          color: ${whatWasChosenWasCorrect ? "var(--tone-tone-accent-20)" : "var(--tone-tone-danger-14)"};
                           width: 50px;
                           display: flex;
                           align-items: center;
@@ -242,7 +243,7 @@ const Timeline: React.FunctionComponent<
                           <CheckCircle
                             size={20}
                             className={css`
-                              color: ${baseTheme.colors.green[700]};
+                              color: ${tones.toneAccent23};
                             `}
                             aria-label={t("your-answer-was-correct")}
                           />
@@ -250,7 +251,7 @@ const Timeline: React.FunctionComponent<
                           <XmarkCircle
                             size={20}
                             className={css`
-                              color: ${baseTheme.colors.red[700]};
+                              color: ${tones.toneDanger19};
                             `}
                             aria-label={t("your-answer-was-not-correct")}
                           />
@@ -260,7 +261,7 @@ const Timeline: React.FunctionComponent<
                     {!whatWasChosenWasCorrect && modelSolutionCorrectEventName && (
                       <div
                         className={css`
-                          background-color: #f2f2f2;
+                          background-color: var(--tone-bg-neutral-40);
                           padding-top: 0.625rem;
                           padding-left: 1.063rem;
                           padding-right: 1.063rem;
@@ -271,8 +272,8 @@ const Timeline: React.FunctionComponent<
                         <div
                           className={css`
                             font-family: ${headingFont};
-                            color: ${baseTheme.colors.clear[100]};
-                            background-color: ${baseTheme.colors.green[400]};
+                            color: ${tones.toneNeutral12};
+                            background-color: ${tones.toneAccent16};
                             width: fit-content;
                             margin-bottom: 0.4rem;
                             line-height: 100%;

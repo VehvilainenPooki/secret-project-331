@@ -119,7 +119,7 @@ const PageAudioWidgetContent: React.FC<PageAudioWidgetContentProps> = ({ pageId 
         >
           <span
             className={css`
-              color: #333;
+              color: var(--tone-fg-neutral-36);
               font-weight: 500;
               font-family: ${primaryFont};
             `}
@@ -143,7 +143,7 @@ const PageAudioWidgetContent: React.FC<PageAudioWidgetContentProps> = ({ pageId 
                   >
                     <div
                       className={css`
-                        background: #fff;
+                        background: var(--color-surface);
                         font-weight: 500;
                         display: inline-block;
                         justify-content: center;
@@ -155,7 +155,7 @@ const PageAudioWidgetContent: React.FC<PageAudioWidgetContentProps> = ({ pageId 
                     </div>
                     <div
                       className={css`
-                        background: #fff;
+                        background: var(--color-surface);
                         padding: 6px 8px;
                         margin-left: 5px;
                         overflow: hidden;
@@ -165,7 +165,7 @@ const PageAudioWidgetContent: React.FC<PageAudioWidgetContentProps> = ({ pageId 
                     >
                       <TrashIcon
                         className={css`
-                          background: #fff;
+                          background: var(--color-surface);
                         `}
                         onClick={() => {
                           deletePageAudioFile.mutate({
@@ -188,8 +188,8 @@ const PageAudioWidgetContent: React.FC<PageAudioWidgetContentProps> = ({ pageId 
           encType="multipart/form-data"
           className={css`
             margin-top: 20px;
-            border: 1px solid #555;
-            background: #fff;
+            border: 1px solid var(--tone-border-neutral-57);
+            background: var(--color-surface);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -216,7 +216,7 @@ const PageAudioWidgetContent: React.FC<PageAudioWidgetContentProps> = ({ pageId 
 }
 
 const audioDialogCss = css`
-  background: #ecf3f2;
+  background: var(--tone-bg-neutral-41);
 `
 
 const PageAudioWidget: React.FC<React.PropsWithChildren<AudioUploadAttributes>> = ({

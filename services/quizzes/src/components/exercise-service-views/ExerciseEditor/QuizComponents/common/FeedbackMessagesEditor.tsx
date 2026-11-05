@@ -42,7 +42,7 @@ const Title = styled.div`
 // right to keep the fields clear of it.
 const FeedbackCard = styled.div`
   position: relative;
-  border: 1px solid #dfe1e6;
+  border: 1px solid var(--tone-border-neutral-23);
   border-radius: 6px;
   padding: 16px;
   padding-right: 48px;
@@ -66,7 +66,7 @@ const MessageContainer = styled.div`
 `
 
 const EmptyMessageError = styled.div`
-  color: #a84835;
+  color: var(--tone-fg-danger-6);
   font-size: 14px;
   margin-top: 4px;
 `

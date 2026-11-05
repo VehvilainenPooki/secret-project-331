@@ -8,10 +8,10 @@ import type { CourseDesignerPlanSummary } from "@/generated/api/types.generated"
 import { manageCoursePlanRoute } from "@/shared-module/common/utils/routes"
 
 const cardStyles = css`
-  border: 1px solid #d9dde4;
+  border: 1px solid var(--tone-border-neutral-30);
   border-radius: 12px;
   padding: 1rem;
-  background: white;
+  background: var(--color-surface);
 `
 
 const headerStyles = css`
@@ -24,7 +24,7 @@ const headerStyles = css`
 `
 
 const metaStyles = css`
-  color: #5d6776;
+  color: var(--tone-fg-neutral-24);
   font-size: 0.95rem;
   display: flex;
   flex-wrap: wrap;

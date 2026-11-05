@@ -12,10 +12,10 @@ import type {
   SuspectedCheaterStatus,
   UserSuspectedCheaterInfo,
 } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { manageCourseOtherCheatersSuspectedRoute } from "@/shared-module/common/utils/routes"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Badge, Meter, MIDDLE_DOT, QueryResult, Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { ratioPercent, toHours } from "../lib/durations"
 
@@ -31,7 +31,7 @@ const rowCss = css`
   gap: 0.35rem 1.5rem;
   align-items: center;
   padding: 0.85rem 0;
-  border-bottom: 1px solid ${baseTheme.colors.clear[300]};
+  border-bottom: 1px solid ${tones.toneNeutral26};
 
   @media (max-width: 30rem) {
     grid-template-columns: minmax(0, 1fr);
@@ -53,7 +53,7 @@ const courseHeadCss = css`
 
 const courseLinkCss = css`
   font-weight: 600;
-  color: ${baseTheme.colors.blue[600]};
+  color: ${tones.toneInfo23};
   text-decoration: none;
 
   &:hover {
@@ -69,20 +69,20 @@ const meterWrapCss = css`
 
 const meterValueCss = css`
   align-self: flex-end;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-weight: 600;
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 `
 
 const explanationCss = css`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.85rem;
   margin: 0 0 0.75rem;
 `
 
 const metaCss = css`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.85rem;
   font-variant-numeric: tabular-nums;
 `

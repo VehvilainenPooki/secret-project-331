@@ -5,10 +5,10 @@ import type { DOMAttributes } from "react"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const buttonStyle = (clicked: boolean) => css`
-  ${clicked && `box-shadow: inset 0 0 0 2px ${baseTheme.colors.green[400]};`}
+  ${clicked && `box-shadow: inset 0 0 0 2px ${tones.toneAccent16};`}
 `
 
 export const citationId = (cit_n: string, idx: string) => {

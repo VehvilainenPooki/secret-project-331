@@ -30,7 +30,7 @@ export const popoverCss = css`
   border: 1px solid var(--field-border);
   border-radius: calc(var(--control-radius) + 4px);
   background: var(--field-bg);
-  box-shadow: 0 14px 32px rgba(10, 15, 23, 0.18);
+  box-shadow: 0 14px 32px var(--tone-shadow-neutral-18);
 `
 
 export const listBoxCss = css`
@@ -63,29 +63,29 @@ export const listBoxOptionCss = css`
   }
 
   &[data-selected="true"] {
-    background: var(--color-green-600);
-    border-color: var(--color-green-700);
-    color: var(--color-primary-100);
+    background: var(--color-accent);
+    border-color: var(--tone-border-accent-11);
+    color: var(--color-text-on-accent);
     font-weight: 600;
   }
 
   &[data-highlighted="true"]:not([data-selected="true"]) {
-    background: var(--color-green-75);
-    border-color: var(--color-green-300);
-    color: var(--color-green-900);
+    background: var(--tone-bg-accent-3);
+    border-color: var(--tone-border-accent-6);
+    color: var(--tone-fg-accent-13);
   }
 
   &[data-selected="true"][data-highlighted="true"] {
-    background: var(--color-green-700);
-    border-color: var(--color-green-800);
-    color: var(--color-primary-100);
+    background: var(--tone-bg-accent-13);
+    border-color: var(--tone-border-accent-12);
+    color: var(--color-text-on-accent);
   }
 
   &[data-focus-visible="true"] {
     outline: none;
     box-shadow:
-      0 0 0 1px var(--color-green-300),
-      0 0 0 calc(var(--focus-ring-width) + 1px) rgba(31, 105, 100, 0.4);
+      0 0 0 1px var(--tone-shadow-accent-5),
+      0 0 0 calc(var(--focus-ring-width) + 1px) var(--tone-shadow-accent-4);
   }
 
   &[data-disabled="true"] {
@@ -148,7 +148,7 @@ export const fileButtonCss = css`
   padding: 0 var(--control-padding-x-md);
   border: 1px solid var(--field-border);
   border-radius: calc(var(--control-radius) + 4px);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
   color: var(--field-fg);
   cursor: pointer;
   font-size: var(--font-size-md);
@@ -160,7 +160,7 @@ export const fileButtonCss = css`
 
   &:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 var(--focus-ring-width) rgba(8, 69, 122, 0.18);
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--tone-shadow-info-12);
   }
 
   &:disabled {

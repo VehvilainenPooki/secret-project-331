@@ -8,7 +8,7 @@ import { mergeProps, useTooltip, useTooltipTrigger, VisuallyHidden } from "react
 import { useTranslation } from "react-i18next"
 
 import { copyTextToClipboard } from "@/shared-module/common/hooks/useCopyToClipboard"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /** Lets the heading reveal its own anchor link on hover. */
 export const HEADING_ANCHOR_LINK_CLASS = "heading-anchor-link"
@@ -36,19 +36,19 @@ const linkStyles = css`
   transform: translateY(-50%);
   padding: 4px;
   border-radius: 4px;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   opacity: 0;
   transition:
     opacity 0.3s,
     color 0.15s;
 
   &:hover {
-    color: ${baseTheme.colors.green[600]};
+    color: ${tones.toneAccent21};
   }
 
   &:focus-visible {
     opacity: 1;
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
 
@@ -68,8 +68,8 @@ const tooltipStyles = css`
   bottom: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%);
-  background-color: ${baseTheme.colors.gray[700]};
-  color: ${baseTheme.colors.primary[100]};
+  background-color: ${tones.toneNeutral46};
+  color: ${tones.toneNeutral1};
   border-radius: 4px;
   padding: 4px 8px;
   font-size: 12px;

@@ -126,34 +126,34 @@ const MultipleChoiceClickableFeedback: React.FC<
             if (shouldBeSelected !== undefined) {
               isCorrect = userSelected === shouldBeSelected
             }
-            const defaultBorderColor = "#b8b8c8"
+            const defaultBorderColor = "var(--tone-tone-neutral-36)"
 
             let borderColor: string
             let backgroundColor: string
 
             if (shouldBeSelected === undefined) {
               if (userSelected) {
-                borderColor = "#2d4a7f"
-                backgroundColor = "#e6f2ff"
+                borderColor = "var(--tone-tone-info-24)"
+                backgroundColor = "var(--tone-tone-info-3)"
               } else {
                 borderColor = defaultBorderColor
-                backgroundColor = "#ffffff"
+                backgroundColor = "var(--tone-tone-neutral-1)"
               }
             } else if (shouldBeSelected) {
               if (isCorrect) {
-                borderColor = "#16a34a"
-                backgroundColor = "#f0fdf4"
+                borderColor = "var(--tone-tone-accent-17)"
+                backgroundColor = "var(--tone-tone-neutral-4)"
               } else {
-                borderColor = "#bbf7d0"
-                backgroundColor = "#ffffff"
+                borderColor = "var(--tone-tone-accent-5)"
+                backgroundColor = "var(--tone-tone-neutral-1)"
               }
             } else {
               if (isCorrect) {
-                borderColor = "#fecaca"
-                backgroundColor = "#ffffff"
+                borderColor = "var(--tone-tone-danger-5)"
+                backgroundColor = "var(--tone-tone-neutral-1)"
               } else {
-                borderColor = "#c53030"
-                backgroundColor = "#fff5f5"
+                borderColor = "var(--tone-tone-danger-16)"
+                backgroundColor = "var(--tone-tone-neutral-9)"
               }
             }
 
@@ -165,10 +165,10 @@ const MultipleChoiceClickableFeedback: React.FC<
                   background: ${backgroundColor};
                   border-color: ${borderColor};
                   box-shadow:
-                    rgba(45, 35, 66, 0) 0 2px 4px,
-                    rgba(45, 35, 66, 0) 0 7px 13px -3px,
+                    var(--tone-shadow-info-1) 0 2px 4px,
+                    var(--tone-shadow-info-1) 0 7px 13px -3px,
                     ${borderColor} 0 -2px 0 inset;
-                  color: #2d3a4a;
+                  color: var(--tone-fg-info-19);
                   ${userSelected && "font-weight: 600;"}
                   cursor: default;
                   pointer-events: none;
@@ -195,10 +195,10 @@ const MultipleChoiceClickableFeedback: React.FC<
                       height: 1.25rem;
                       color: ${
                         shouldBeSelected === undefined
-                          ? "#2d4a7f"
+                          ? "var(--tone-tone-info-24)"
                           : isCorrect
-                            ? "#16a34a"
-                            : "#c53030"
+                            ? "var(--tone-tone-accent-17)"
+                            : "var(--tone-tone-danger-16)"
                       };
                     `}
                   >
@@ -227,8 +227,8 @@ const MultipleChoiceClickableFeedback: React.FC<
             className={css`
               margin-top: 1rem;
               padding: 1rem;
-              background-color: #f9fafb;
-              border: 1px solid #e5e7eb;
+              background-color: var(--tone-bg-neutral-16);
+              border: 1px solid var(--tone-border-neutral-13);
               border-radius: 0.375rem;
             `}
           >

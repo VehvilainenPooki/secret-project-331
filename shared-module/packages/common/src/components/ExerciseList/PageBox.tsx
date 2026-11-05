@@ -3,7 +3,9 @@
 import styled from "@emotion/styled"
 import React from "react"
 
-import { baseTheme, headingFont } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
+
+import { headingFont } from "../../styles"
 
 const Wrapper = styled.div`
   border-radius: 10px;
@@ -16,10 +18,10 @@ const PageBoxRow = styled.div`
   position: relative;
   padding: 0.6em 1em;
   list-style-type: none;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   text-decoration: none;
   border-radius: 2px;
-  background: #f2f5f7;
+  background: var(--tone-bg-info-2);
   margin: 5px 0 5px 0;
   display: flex;
   justify-content: center;

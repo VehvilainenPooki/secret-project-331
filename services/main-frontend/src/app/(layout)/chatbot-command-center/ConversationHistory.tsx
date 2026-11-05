@@ -8,10 +8,10 @@ import { useTranslation } from "react-i18next"
 import { useChatbotContext } from "@/components/course-material/chatbot/shared/ChatbotContext"
 import type { ChatbotConfiguration } from "@/generated/api/types.generated"
 import type { ChatbotConversation } from "@/generated/course-material-api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { SIDEBAR_WIDTH_PX } from "@/shared-module/common/utils/constants"
 import { emptyStringIfNull } from "@/shared-module/common/utils/strings"
 import { Infobox } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface ConversationHistoryProps {
   conversations: ChatbotConversation[]
@@ -28,9 +28,9 @@ const chatbotLabelCss = css`
   max-width: calc(${SIDEBAR_WIDTH_PX} - 2.1rem);
   text-overflow: ellipsis;
   text-align: left;
-  border: 1px solid ${baseTheme.colors.green[300]};
+  border: 1px solid ${tones.toneAccent12};
   border-radius: 999px;
-  color: ${baseTheme.colors.gray[400]};
+  color: ${tones.toneNeutral39};
 `
 
 const ConversationHistory: React.FC<ConversationHistoryProps> = ({
@@ -71,18 +71,18 @@ const ConversationHistory: React.FC<ConversationHistoryProps> = ({
             border: none;
             width: calc(100%);
             justify-content: flex-start;
-            border-bottom: 1px solid ${baseTheme.colors.gray[75]};
+            border-bottom: 1px solid ${tones.toneNeutral19};
             transition: background-color 0.2s;
 
             &:hover:not(:disabled):not([aria-disabled="true"]) {
-              background: var(--color-green-75);
+              background: var(--tone-bg-accent-3);
               transition: 0.2s;
               cursor: pointer;
             }
             color: var(--field-fg);
 
-            background-color: ${conversation.id === convId ? "var(--color-green-75)" : "transparent"};
-            ${emptyStringIfNull(conversation.id === convId && "border: 1px solid var(--color-green-300);")}
+            background-color: ${conversation.id === convId ? "var(--tone-tone-accent-4)" : "transparent"};
+            ${emptyStringIfNull(conversation.id === convId && "border: 1px solid var(--tone-border-accent-6);")}
             ${emptyStringIfNull(conversation.id === convId && "box-shadow: var(--btn-icon-shadow-hover);")}
           `}
           key={conversation.id}

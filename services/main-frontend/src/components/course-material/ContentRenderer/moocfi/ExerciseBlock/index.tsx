@@ -38,7 +38,6 @@ import HideTextInSystemTests from "@/shared-module/common/components/system-test
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import { useDateStringAsDateNullable } from "@/shared-module/common/hooks/useDateStringAsDate"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { dateDiffInDays } from "@/shared-module/common/utils/dateUtil"
 import { useCurrentPagePathForReturnTo } from "@/shared-module/common/utils/redirectBackAfterLoginOrSignup"
@@ -48,6 +47,7 @@ import { storedAnswerToCapturedAnswerFields } from "@/shared-module/common/utils
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withSuspenseBoundary from "@/shared-module/common/utils/withSuspenseBoundary"
 import { QueryResult, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import {
   type CapturedExerciseTaskAnswer,
@@ -78,16 +78,16 @@ const AWithNoDecoration = styled.a`
 export const exerciseButtonStyles = css`
   align-items: center;
   appearance: none;
-  background-color: #77c299;
+  background-color: var(--tone-bg-accent-9);
   border-radius: 10px;
   border: none;
   max-width: 20rem;
   width: 100%;
   box-shadow:
-    rgba(45, 35, 66, 0) 0 2px 4px,
-    rgba(45, 35, 66, 0) 0 7px 13px -3px,
-    #69af8a 0 -3px 0 inset;
-  color: #313b49;
+    var(--tone-shadow-info-1) 0 2px 4px,
+    var(--tone-shadow-info-1) 0 7px 13px -3px,
+    var(--tone-shadow-accent-6) 0 -3px 0 inset;
+  color: var(--tone-fg-info-18);
   font-weight: medium;
   cursor: pointer;
   display: flex;
@@ -113,18 +113,18 @@ export const exerciseButtonStyles = css`
   &:hover {
     filter: brightness(92%) contrast(110%);
     box-shadow:
-      rgba(45, 35, 66, 0) 0 4px 8px,
-      rgba(45, 35, 66, 0) 0 7px 13px -3px,
-      #69af8a 0 -3px 0 inset;
+      var(--tone-shadow-info-1) 0 4px 8px,
+      var(--tone-shadow-info-1) 0 7px 13px -3px,
+      var(--tone-shadow-accent-6) 0 -3px 0 inset;
   }
 
   &:disabled,
   &[aria-disabled="true"] {
-    background: #929896;
+    background: var(--tone-bg-neutral-84);
     box-shadow:
-      rgba(45, 35, 66, 0) 0 4px 8px,
-      rgba(45, 35, 66, 0) 0 7px 13px -3px,
-      #68716c 0 -3px 0 inset;
+      var(--tone-shadow-info-1) 0 4px 8px,
+      var(--tone-shadow-info-1) 0 7px 13px -3px,
+      var(--tone-shadow-neutral-31) 0 -3px 0 inset;
     cursor: not-allowed;
   }
 
@@ -136,11 +136,11 @@ export const exerciseButtonStyles = css`
 export const makeExerciseButtonMutedStyles = css`
   margin-bottom: 1rem;
   margin-top: 1rem;
-  background-color: ${baseTheme.colors.gray[100]};
+  background-color: ${tones.toneNeutral29};
   box-shadow:
-    rgba(45, 35, 66, 0) 0 4px 8px,
-    rgba(45, 35, 66, 0) 0 7px 13px -3px,
-    ${baseTheme.colors.gray[200]} 0 -3px 0 inset !important;
+    var(--tone-shadow-info-1) 0 4px 8px,
+    var(--tone-shadow-info-1) 0 7px 13px -3px,
+    ${tones.toneNeutral35} 0 -3px 0 inset !important;
 `
 
 const DeadlineText = styled.div<DeadlineProps>`
@@ -152,9 +152,9 @@ const DeadlineText = styled.div<DeadlineProps>`
   margin-bottom: 0.625rem;
   line-height: 140%;
   background: ${(DeadlineProps) =>
-    DeadlineProps.closingSoon ? baseTheme.colors.red["100"] : baseTheme.colors.clear["300"]};
+    DeadlineProps.closingSoon ? tones.toneDanger2 : tones.toneNeutral26};
   color: ${(DeadlineProps) =>
-    DeadlineProps.closingSoon ? baseTheme.colors.red["700"] : baseTheme.colors.green["600"]};
+    DeadlineProps.closingSoon ? tones.toneDanger19 : tones.toneAccent21};
 `
 
 export const getExerciseBlockBeginningScrollingId = (exerciseId: string) => exerciseId
@@ -525,7 +525,7 @@ const ExerciseBlock: React.FC<
                           }
 
                           .heading {
-                            color: #57606f;
+                            color: var(--tone-fg-info-9);
                             font-size: 10px;
                             margin-bottom: 0;
                             line-height: 1.15;
@@ -696,7 +696,7 @@ const ExerciseBlock: React.FC<
                 <div
                   className={css`
                     padding: 0.5rem 0.45rem;
-                    background-color: white;
+                    background-color: var(--color-surface);
                     border-radius: 0.625rem;
                   `}
                 >
@@ -817,11 +817,11 @@ const ExerciseBlock: React.FC<
                       {isExam && !courseMaterialState.examData?.ended && (
                         <div
                           className={css`
-                            background-color: ${baseTheme.colors.green[100]};
-                            color: ${baseTheme.colors.green[700]};
+                            background-color: ${tones.toneAccent7};
+                            color: ${tones.toneAccent23};
                             padding: 0.7rem 1rem;
                             margin: 1rem 0;
-                            border: 1px solid ${baseTheme.colors.green[300]};
+                            border: 1px solid ${tones.toneAccent12};
                             display: flex;
                             align-items: center;
 

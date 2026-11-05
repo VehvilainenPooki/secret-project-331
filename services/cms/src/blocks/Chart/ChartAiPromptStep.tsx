@@ -4,10 +4,11 @@ import { css } from "@emotion/css"
 import React from "react"
 import type { Control } from "react-hook-form"
 
-import { baseTheme, fontWeights, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { ErrorNotice } from "@/shared-module/components"
 import { Button } from "@/shared-module/components/components/Button"
 import { TextArea } from "@/shared-module/components/components/TextArea"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import ChartStepLayout from "./ChartStepLayout"
@@ -58,7 +59,7 @@ const ChartAiPromptStep: React.FC<ChartAiPromptStepProps> = ({
             font-family: ${primaryFont};
             font-size: 0.8125rem;
             font-weight: ${fontWeights.medium};
-            color: ${baseTheme.colors.red[600]};
+            color: ${tones.toneDanger17};
           `}
         >
           {t("ai-generate-needs-data-file")}
@@ -71,7 +72,7 @@ const ChartAiPromptStep: React.FC<ChartAiPromptStepProps> = ({
             className={css`
               font-family: ${primaryFont};
               font-size: 0.8125rem;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
             `}
           >
             {t("ai-generating-chart")}

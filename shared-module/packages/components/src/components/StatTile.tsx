@@ -39,24 +39,24 @@ const rootCss = css`
      neighbours. */
   height: 100%;
   padding: var(--space-4);
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--surface-radius);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
   text-decoration: none;
 `
 
 const toneCss: Record<StatTileTone, string | undefined> = {
   neutral: undefined,
   success: css`
-    border-color: var(--color-green-100);
-    background: var(--color-green-75);
+    border-color: var(--tone-border-accent-2);
+    background: var(--tone-bg-accent-3);
   `,
 }
 
 const valueToneCss: Record<StatTileTone, string | undefined> = {
   neutral: undefined,
   success: css`
-    color: var(--color-green-700);
+    color: var(--tone-fg-accent-8);
   `,
 }
 
@@ -66,8 +66,8 @@ const linkCss = css`
     background 0.15s;
 
   &:hover {
-    border-color: var(--color-gray-300);
-    background: var(--color-clear-100);
+    border-color: var(--tone-border-neutral-52);
+    background: var(--color-surface-sunken);
   }
 
   &:focus-visible {
@@ -81,7 +81,7 @@ const arrowCss = css`
   top: var(--space-4);
   right: var(--space-4);
   display: inline-flex;
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
 `
 
 const valueRowCss = css`
@@ -96,12 +96,12 @@ const valueCss = css`
   font-size: var(--font-size-5);
   font-weight: 700;
   line-height: 1;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-variant-numeric: tabular-nums;
 `
 
 const alertValueCss = css`
-  color: var(--color-crimson-700);
+  color: var(--tone-fg-danger-14);
 `
 
 const deltaCss = css`
@@ -112,13 +112,13 @@ const deltaCss = css`
 
 const deltaToneCss: Record<StatTileDeltaTone, string> = {
   positive: css`
-    color: var(--color-green-700);
+    color: var(--tone-fg-accent-8);
   `,
   negative: css`
-    color: var(--color-crimson-700);
+    color: var(--tone-fg-danger-14);
   `,
   neutral: css`
-    color: var(--color-gray-500);
+    color: var(--color-text-muted);
   `,
 }
 
@@ -126,12 +126,12 @@ const trendCss = css`
   flex: none;
   width: 4rem;
   height: 1.25rem;
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
 `
 
 const labelCss = css`
   font-size: var(--font-size-1);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 const TREND_VIEW_WIDTH = 64

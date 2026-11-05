@@ -10,8 +10,8 @@ import { useTranslation } from "react-i18next"
 import Echarts from "@/components/charts/Echarts"
 import type { CountResult } from "@/generated/api/types.generated"
 import useCourseInstancesQuery from "@/hooks/useCourseInstancesQuery"
-import { baseTheme } from "@/shared-module/common/styles"
 import { LoadingRegion, Select, ErrorNotice } from "@/shared-module/components"
+import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 
 import { DEFAULT_CHART_HEIGHT, InstructionBox } from "./CourseStatsPage"
 import type { Period } from "./LineChart"
@@ -61,7 +61,7 @@ const getTooltipDotStyle = (color: Color | undefined) => css`
   height: 10px;
   border-radius: 50%;
   margin-right: 8px;
-  background-color: ${typeof color === "object" ? "#000" : (color ?? "#000")};
+  background-color: ${typeof color === "object" ? tones.bgNeutral94 : (color ?? tones.bgNeutral94)};
 `
 
 const tooltipContainer = css`
@@ -72,7 +72,7 @@ const tooltipContainer = css`
 const tooltipHeader = css`
   margin-bottom: 8px;
   padding-bottom: 4px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid var(--tone-chart-neutral-10);
   font-weight: bold;
 `
 
@@ -82,7 +82,7 @@ const tooltipValue = css`
 
 const chartContainer = css`
   margin-bottom: 2rem;
-  border: 3px solid ${baseTheme.colors.clear[200]};
+  border: 3px solid ${tones.chartNeutral9};
   border-radius: 6px;
   padding: 1rem;
   min-height: ${DEFAULT_CHART_HEIGHT}px;
@@ -99,26 +99,26 @@ const headerContainer = css`
 
 const getLogScaleButtonStyles = (isLogScale: boolean) => css`
   padding: 0.15rem 0.4rem;
-  border: 1px solid ${isLogScale ? baseTheme.colors.blue[600] : baseTheme.colors.clear[300]};
+  border: 1px solid ${isLogScale ? tones.chartInfo4 : tones.chartNeutral11};
   border-radius: 12px;
-  background: ${isLogScale ? baseTheme.colors.blue[600] : baseTheme.colors.clear[200]};
+  background: ${isLogScale ? tones.chartInfo4 : tones.chartNeutral9};
   cursor: pointer;
   font-size: 11px;
-  color: ${isLogScale ? "white" : baseTheme.colors.gray[600]};
+  color: ${isLogScale ? tones.chartNeutral1 : tones.chartNeutral18};
   transition: all 0.15s ease-in-out;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 500;
-  box-shadow: ${isLogScale ? "inset 0 1px 1px rgba(0,0,0,0.1)" : "none"};
+  box-shadow: ${isLogScale ? "inset 0 1px 1px var(--tone-chart-neutral-10)" : "none"};
 
   &:hover {
-    background: ${isLogScale ? baseTheme.colors.blue[700] : baseTheme.colors.clear[300]};
-    border-color: ${isLogScale ? baseTheme.colors.blue[700] : baseTheme.colors.clear[400]};
+    background: ${isLogScale ? tones.chartInfo5 : tones.chartNeutral11};
+    border-color: ${isLogScale ? tones.chartInfo5 : tones.chartNeutral12};
   }
 
   &:active {
     transform: scale(0.96);
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px 2px var(--tone-chart-neutral-13);
   }
 `
 
@@ -244,36 +244,36 @@ const LineChartByInstance: React.FC<LineChartByInstanceProps> = ({
 
     return {
       color: [
-        baseTheme.colors.blue[600],
-        baseTheme.colors.green[400],
-        baseTheme.colors.crimson[700],
-        baseTheme.colors.yellow[400],
-        baseTheme.colors.purple[600],
-        baseTheme.colors.gray[400],
-        "#5470c6",
-        "#91cc75",
-        "#fc8452",
-        "#73c0de",
-        "#3ba272",
-        "#ea7ccc",
-        "#2f4554",
-        "#61a0a8",
-        "#d48265",
-        "#ca8622",
-        "#bda29a",
-        "#546570",
-        "#f05b72",
-        "#ef5b9c",
-        "#9b8bba",
-        "#4d7c8a",
-        "#e66100",
-        "#956065",
-        "#5b8c5a",
-        "#a65d57",
-        "#4a639c",
-        "#ce8d3e",
-        "#806491",
-        "#c17305",
+        getActiveTheme().tones.chartInfo4,
+        getActiveTheme().tones.chartAccent69,
+        getActiveTheme().tones.chartDanger11,
+        getActiveTheme().tones.chartWarning31,
+        getActiveTheme().tones.chartSpecial4,
+        getActiveTheme().tones.chartNeutral16,
+        getActiveTheme().tones.chartInfo1,
+        getActiveTheme().tones.chartAccent38,
+        getActiveTheme().tones.chartDanger2,
+        getActiveTheme().tones.chartAccent46,
+        getActiveTheme().tones.chartAccent70,
+        getActiveTheme().tones.chartSpecial1,
+        getActiveTheme().tones.chartInfo6,
+        getActiveTheme().tones.chartAccent68,
+        getActiveTheme().tones.chartDanger3,
+        getActiveTheme().tones.chartWarning34,
+        getActiveTheme().tones.chartDanger1,
+        getActiveTheme().tones.chartInfo3,
+        getActiveTheme().tones.chartDanger5,
+        getActiveTheme().tones.chartDanger4,
+        getActiveTheme().tones.chartSpecial2,
+        getActiveTheme().tones.chartAccent72,
+        getActiveTheme().tones.chartWarning35,
+        getActiveTheme().tones.chartDanger7,
+        getActiveTheme().tones.chartAccent71,
+        getActiveTheme().tones.chartDanger6,
+        getActiveTheme().tones.chartInfo2,
+        getActiveTheme().tones.chartWarning33,
+        getActiveTheme().tones.chartSpecial3,
+        getActiveTheme().tones.chartWarning36,
       ],
       xAxis: {
         type: "category" as const,
@@ -329,14 +329,14 @@ const LineChartByInstance: React.FC<LineChartByInstanceProps> = ({
               ${rows}
             </div>`
         },
-        backgroundColor: "rgba(255, 255, 255, 0.95)",
+        backgroundColor: getActiveTheme().tones.chartNeutral3,
         borderWidth: 0,
         shadowBlur: 10,
-        shadowColor: "rgba(0, 0, 0, 0.2)",
+        shadowColor: getActiveTheme().tones.chartNeutral14,
         shadowOffsetX: 1,
         shadowOffsetY: 2,
         textStyle: {
-          color: "#333",
+          color: getActiveTheme().tones.chartNeutral19,
         },
         padding: 0,
       },

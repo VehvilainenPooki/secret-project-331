@@ -20,7 +20,7 @@ interface CodeGiveawayBlockProps {
 const CODE_GIVEAWAY_STATUS_QUERY_KEY = "codeGiveawayStatus"
 
 const Wrapper = styled.div`
-  border: 1px solid #ccc;
+  border: 1px solid var(--tone-border-neutral-41);
   border-radius: 5px;
   padding: 1rem;
 `

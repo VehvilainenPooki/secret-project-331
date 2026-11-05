@@ -16,7 +16,7 @@ const UnaddedDraftNotice: React.FC<UnaddedDraftNoticeProps> = ({ draft }) => {
     <p
       role="status"
       className={css`
-        color: #a45a00;
+        color: var(--tone-fg-warning-2);
         font-size: 14px;
         margin: 8px 0 0;
       `}

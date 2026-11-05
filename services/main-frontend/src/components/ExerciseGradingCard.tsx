@@ -8,9 +8,9 @@ import { GradingDecisionDialog } from "@/components/grading/GradingDecisionDialo
 import { createTeacherGradingDecisionMutation } from "@/generated/api/@tanstack/react-query.generated"
 import type { NewTeacherGradingDecision } from "@/generated/api/types.generated"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { narrowContainerWidthRem } from "@/shared-module/common/styles/constants"
 import { Infobox } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 // oxlint-disable-next-line i18next/no-literal-string
 const warningTone = "warning" as const
@@ -58,15 +58,15 @@ const ExerciseGradingCard: React.FC<ExerciseGradingCardProps> = ({
         max-width: ${narrowContainerWidthRem}rem;
         margin: 0 auto 2rem auto;
         padding: 1.5rem;
-        background-color: ${baseTheme.colors.clear[100]};
+        background-color: ${tones.toneNeutral12};
         border-radius: 0.5rem;
-        border: 1px solid ${baseTheme.colors.clear[200]};
+        border: 1px solid ${tones.toneNeutral22};
       `}
     >
       <h3
         className={css`
           margin: 0 0 1rem 0;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-size: 1.125rem;
           font-weight: 600;
         `}

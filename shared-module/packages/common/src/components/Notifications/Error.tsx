@@ -5,8 +5,9 @@ import { BellXmark } from "@vectopus/atlas-icons-react"
 import { toast } from "react-hot-toast"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import CloseIcon from "../../img/close.svg"
-import { baseTheme } from "../../styles"
 import { respondToOrLarger } from "../../styles/respond"
 import { NotificationWrapper } from "./Base"
 
@@ -54,7 +55,7 @@ const CloseIconWrapper = styled.div`
       opacity: 0.7;
     }
     &:hover {
-      background: ${baseTheme.colors.gray[100]};
+      background: ${tones.toneNeutral29};
       cursor: pointer;
     }
   }
@@ -76,14 +77,14 @@ const ErrorHeader = styled.div`
     font-size: 1.25rem;
   }
   margin-bottom: 0.2rem;
-  color: ${baseTheme.colors.red[700]};
+  color: ${tones.toneDanger19};
   line-height: 18px;
 `
 
 const ErrorMessage = styled.div`
   margin-top: auto;
   display: none;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   ${respondToOrLarger.xs} {
     display: block;
   }
@@ -95,7 +96,7 @@ const ErrorNotification = (props: ErrorNotificationProps) => {
     <NotificationWrapper data-testid="toast-notification">
       <Content>
         <IconWrapper>
-          <BellXmark color={baseTheme.colors.red[700]} />
+          <BellXmark color={tones.toneDanger19} />
         </IconWrapper>
         <TextWrapper role="alert" aria-live="assertive" data-testid="toast-notification-error">
           <ErrorHeader data-testid="toast-notification-error-title">

@@ -6,7 +6,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { CourseMaterialExercise } from "@/generated/course-material-api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import PeerOrSelfReviewViewImpl from "./PeerOrSelfReviewViewImpl"
 
@@ -36,7 +36,7 @@ const PeerOrSelfReviewView: React.FC<React.PropsWithChildren<PeerOrSelfReviewVie
           text-align: center;
           margin-bottom: 1rem;
 
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
         `}
       >
         {props.selfReview ? t("title-self-review") : t("title-peer-review")}

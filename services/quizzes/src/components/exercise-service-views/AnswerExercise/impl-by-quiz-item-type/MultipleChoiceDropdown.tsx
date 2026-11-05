@@ -4,7 +4,8 @@ import { useTranslation } from "react-i18next"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
-import { baseTheme, primaryFont } from "@/shared-module/exercise-react/styles"
+import { tones } from "@/shared-module/components/styles/themes"
+import { primaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemComponentProps } from "."
 import type { UserItemAnswerMultiplechoiceDropdown } from "../../../../../types/quizTypes/answer"
@@ -16,7 +17,7 @@ const SelectInputIcon = () => {
     <svg width="24" height="24" viewBox="0 0 24 24" role="presentation">
       <path
         d="M8.292 10.293a1.009 1.009 0 000 1.419l2.939 2.965c.218.215.5.322.779.322s.556-.107.769-.322l2.93-2.955a1.01 1.01 0 000-1.419.987.987 0 00-1.406 0l-2.298 2.317-2.307-2.327a.99.99 0 00-1.406 0z"
-        fill="#57606f"
+        style={{ fill: tones.fgInfo9 }}
         fillRule="evenodd"
       ></path>
     </svg>
@@ -76,7 +77,7 @@ const MultipleChoiceDropdown: React.FunctionComponent<
                 display: block;
                 font-size: ${quizTheme.quizTitleFontSize} !important;
                 font-weight: 500;
-                color: #4c5868;
+                color: var(--tone-fg-info-10);
                 font-family: ${primaryFont};
                 margin-bottom: 1rem;
               `}
@@ -139,12 +140,12 @@ const MultipleChoiceDropdown: React.FunctionComponent<
             font-size: 1.125rem;
             cursor: pointer;
             /* gray[400] for sufficient contrast against white */
-            border: 0.188rem solid ${baseTheme.colors.gray[400]};
+            border: 0.188rem solid ${tones.toneNeutral39};
             background: none;
             min-height: 2.5rem;
             grid-template-areas: "select";
             align-items: center;
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
             appearance: none;
             background: transparent;
             white-space: nowrap;
@@ -152,7 +153,7 @@ const MultipleChoiceDropdown: React.FunctionComponent<
             text-overflow: ellipsis;
 
             :hover {
-              background: #f9f9f9;
+              background: var(--tone-bg-neutral-17);
             }
           `}
         >

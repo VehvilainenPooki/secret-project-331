@@ -7,8 +7,9 @@ import { useContext } from "react"
 
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import Centered from "@/shared-module/common/components/Centering/Centered"
-import { baseTheme, primaryFont, typography } from "@/shared-module/common/styles"
+import { primaryFont, typography } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useTranslation } from "@/utils/useCmsTranslation"
@@ -46,7 +47,7 @@ const ExerciseEditor: React.FC<React.PropsWithChildren<BlockEditProps<ExerciseAt
         <BreakFromCentered {...breakFromCenteredProps}>
           <div
             className={css`
-              background-color: ${baseTheme.colors.clear[100]};
+              background-color: ${tones.toneNeutral12};
             `}
           >
             <Centered variant="narrow">
@@ -55,7 +56,7 @@ const ExerciseEditor: React.FC<React.PropsWithChildren<BlockEditProps<ExerciseAt
                   className={css`
                     font-family: ${primaryFont};
                     font-size: ${typography.h4};
-                    color: ${baseTheme.colors.gray[500]};
+                    color: ${tones.toneNeutral41};
                     font-weight: bold;
                     margin-bottom: 1.5rem;
                   `}

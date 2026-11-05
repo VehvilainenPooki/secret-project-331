@@ -4,21 +4,21 @@ import styled from "@emotion/styled"
 import { t } from "i18next"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
 
 const Wrapper = styled.div`
-  background: #f7f8f9;
+  background: var(--tone-bg-neutral-20);
   padding: 1.25rem 1.4rem 0.4rem 1.4rem;
   margin-bottom: 1rem;
 
   h2 {
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #edf0f2;
+    border-bottom: 2px solid var(--tone-border-neutral-5);
     font-weight: 600;
     font-size: 22px;
     margin-bottom: 1.4rem;
@@ -57,7 +57,7 @@ const Wrapper = styled.div`
     margin: 0;
     font-size: 1.125rem;
     font-weight: 400;
-    color: ${baseTheme.colors.gray[600]};
+    color: ${tones.toneNeutral44};
   }
 `
 

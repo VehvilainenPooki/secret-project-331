@@ -6,7 +6,8 @@ import { useTranslation } from "react-i18next"
 
 import ContentRenderer from "@/components/course-material/ContentRenderer"
 import type { CourseMaterialExerciseTask } from "@/generated/api/types.generated"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 
 export interface ExerciseAssignmentPreviewProps {
@@ -46,12 +47,12 @@ const ExerciseAssignmentPreview: React.FC<ExerciseAssignmentPreviewProps> = ({ t
   return (
     <div
       className={css`
-        background: ${baseTheme.colors.yellow[75]};
-        border: 2px dashed ${baseTheme.colors.clear[400]};
+        background: ${tones.toneWarning2};
+        border: 2px dashed ${tones.toneNeutral30};
         border-radius: 0.5rem;
         padding: 1.5rem 2rem;
         margin-bottom: 2rem;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 1px 3px var(--tone-shadow-neutral-6);
       `}
     >
       <div
@@ -60,7 +61,7 @@ const ExerciseAssignmentPreview: React.FC<ExerciseAssignmentPreviewProps> = ({ t
           font-weight: 700;
           text-transform: uppercase;
           letter-spacing: 0.08em;
-          color: ${baseTheme.colors.gray[500]};
+          color: ${tones.toneNeutral41};
           margin-bottom: 0.75rem;
           font-family: ${headingFont};
         `}
@@ -70,7 +71,7 @@ const ExerciseAssignmentPreview: React.FC<ExerciseAssignmentPreviewProps> = ({ t
       <div
         className={css`
           font-family: ${headingFont};
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
         `}
       >
         <div

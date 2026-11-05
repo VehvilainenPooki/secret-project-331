@@ -52,9 +52,9 @@ export const sectionCardCss = cx(
   sectionCss,
   css`
     padding: var(--space-4-5);
-    border: 1px solid var(--color-clear-400);
+    border: 1px solid var(--tone-border-neutral-31);
     border-radius: var(--surface-radius);
-    background: var(--color-clear-50);
+    background: var(--color-surface);
   `,
 )
 
@@ -73,7 +73,7 @@ export const sectionCardHeaderCss = css`
      underlined paragraph, where one that spans the full width reads as the card's header. */
   margin: calc(var(--space-4-5) * -1) calc(var(--space-4-5) * -1) 0;
   padding: var(--space-4) var(--space-4-5);
-  border-bottom: 1px solid var(--color-clear-300);
+  border-bottom: 1px solid var(--color-border);
 `
 
 /** Page root for a page of `sectionCardCss` sections; cards need more air between them than blocks. */
@@ -108,7 +108,7 @@ export const subsectionCss = cx(
 export const pageTitleCss = css`
   margin: 0;
   overflow-wrap: anywhere;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-5);
   font-weight: 600;
   line-height: 1.2;
@@ -117,7 +117,7 @@ export const pageTitleCss = css`
 /** A section h2. */
 export const headingCss = css`
   margin: 0;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-3-5);
   font-weight: 600;
   line-height: 1.3;
@@ -127,7 +127,7 @@ export const headingCss = css`
 export const subheadingCss = css`
   margin: 0;
   overflow-wrap: anywhere;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-2);
   font-weight: 600;
   line-height: 1.3;
@@ -136,7 +136,7 @@ export const subheadingCss = css`
 /** Secondary text: the only tier below body copy. */
 export const noteCss = css`
   margin: 0;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
 `
 
@@ -217,9 +217,9 @@ export const cardCss = css`
   display: grid;
   gap: var(--space-3);
   padding: var(--space-4);
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--surface-radius);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
 `
 
 /**
@@ -229,15 +229,15 @@ export const cardCss = css`
  */
 export const bandedCardCss = css`
   display: grid;
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--surface-radius);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
   overflow: hidden;
 
   > * {
     min-width: 0;
     padding: var(--space-5);
-    border-top: 1px solid var(--color-clear-300);
+    border-top: 1px solid var(--color-border);
   }
 
   @media (max-width: 40rem) {
@@ -271,7 +271,7 @@ export const dividedListCss = css`
 
   > li {
     padding-block: var(--space-3);
-    border-top: 1px solid var(--color-clear-300);
+    border-top: 1px solid var(--color-border);
   }
 
   > li:first-of-type {
@@ -306,8 +306,8 @@ export const toolbarCss = css`
   top: 0;
   z-index: 1;
   padding: var(--space-3) 0;
-  border-bottom: 1px solid var(--color-clear-300);
-  background: var(--color-clear-50);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface);
 `
 
 /** Caps the line measure of body copy on the wide teacher and admin surfaces. */
@@ -319,7 +319,7 @@ export const proseCss = css`
 export const emptyStateCss = css`
   margin: 0;
   padding: var(--space-4) 0;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-2);
 `
 
@@ -382,7 +382,7 @@ export const codeValueCss = css`
 export const studentNumberCss = css`
   font-size: var(--font-size-4);
   font-weight: 600;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-variant-numeric: tabular-nums;
 `
 
@@ -395,9 +395,9 @@ export const payloadCss = css`
   padding: var(--space-3);
   max-height: 20rem;
   overflow: auto;
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--surface-radius);
-  background: var(--color-gray-50);
+  background: var(--tone-bg-neutral-31);
   font-size: var(--font-size-1);
   white-space: pre-wrap;
 `

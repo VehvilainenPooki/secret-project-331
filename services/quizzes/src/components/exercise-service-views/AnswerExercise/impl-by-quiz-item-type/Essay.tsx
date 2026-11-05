@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next"
 import TextArea from "@/shared-module/common/components/InputFields/TextAreaField"
 import { wordCount } from "@/shared-module/common/utils/strings"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import useParentDialog from "@/shared-module/exercise-react/react/hooks/useParentDialog"
-import { baseTheme, headingFont, secondaryFont } from "@/shared-module/exercise-react/styles"
+import { headingFont, secondaryFont } from "@/shared-module/exercise-react/styles"
 
 import type { QuizItemComponentProps } from "."
 import type { UserItemAnswerEssay } from "../../../../../types/quizTypes/answer"
@@ -27,7 +28,7 @@ export const container = css`
 
   span {
     font-family: ${headingFont} !important;
-    color: #fff;
+    color: var(--color-text-on-accent);
     font-weight: 500;
     font-size: 0.938rem;
     margin: 0;
@@ -165,10 +166,10 @@ const Essay: React.FunctionComponent<
               width: 100%;
               height: 12.5rem;
               resize: vertical;
-              background: #f4f5f7 !important;
+              background: var(--tone-bg-neutral-28) !important;
               border-radius: 0.25rem;
               /* gray[400] for sufficient contrast against the field background */
-              border: 0.188rem solid ${baseTheme.colors.gray[400]} !important;
+              border: 0.188rem solid ${tones.toneNeutral39} !important;
             }
           `}
           value={text}
@@ -179,7 +180,7 @@ const Essay: React.FunctionComponent<
         <div
           className={css`
             display: flex;
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
             font-family: ${headingFont};
             font-weight: 500;
             margin-bottom: 0.25rem;
@@ -192,7 +193,7 @@ const Essay: React.FunctionComponent<
             display: flex;
             flex-direction: column;
             row-gap: 0.25rem;
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
           `}
         >
           <div

@@ -56,7 +56,7 @@ const dangerZoneCss = css`
   display: grid;
   gap: var(--space-3);
   padding-top: var(--space-3);
-  border-top: 1px solid var(--color-clear-300);
+  border-top: 1px solid var(--color-border);
 `
 
 export interface StudentNumberCardProps {

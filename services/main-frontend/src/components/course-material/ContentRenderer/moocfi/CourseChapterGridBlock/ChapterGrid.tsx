@@ -11,25 +11,26 @@ import { getCourseMaterialChapters } from "@/generated/course-material-api/sdk.g
 import type { ChaptersWithStatus } from "@/generated/course-material-api/types.generated"
 import useTime from "@/hooks/course-material/useTime"
 import { useUserChapterLocks } from "@/hooks/course-material/useUserChapterLocks"
-import { baseTheme, headingFont, secondaryFont } from "@/shared-module/common/styles"
+import { headingFont, secondaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { stringToRandomNumber } from "@/shared-module/common/utils/strings"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import Grid from "./Grid"
 
 const COLORS_ARRAY = [
-  "#215887",
-  "#1F6964",
-  "#822630",
-  "#A84835",
-  "#6245A9",
-  "#313947",
-  "#51309F",
-  "#065853",
-  "#1A2333",
-  "#065853",
-  "#08457A",
+  "var(--tone-tone-info-23)",
+  "var(--tone-tone-accent-21)",
+  "var(--tone-tone-danger-21)",
+  "var(--tone-tone-danger-17)",
+  "var(--tone-tone-special-2)",
+  "var(--tone-tone-neutral-44)",
+  "var(--tone-tone-info-25)",
+  "var(--tone-tone-accent-23)",
+  "var(--tone-tone-neutral-46)",
+  "var(--tone-tone-accent-23)",
+  "var(--tone-tone-info-26)",
 ]
 
 const ChapterGrid: React.FC<React.PropsWithChildren<{ courseId: string }>> = ({ courseId }) => {
@@ -79,7 +80,7 @@ const ChapterGrid: React.FC<React.PropsWithChildren<{ courseId: string }>> = ({ 
           font-style: normal;
           font-weight: 700;
           text-align: center;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           padding-bottom: 0.6em;
           line-height: 140%;
           font-size: clamp(30px, 3.5vw, 48px);
@@ -104,7 +105,7 @@ const ChapterGrid: React.FC<React.PropsWithChildren<{ courseId: string }>> = ({ 
                             className={css`
                               border: dashed 2px;
                               margin: 4rem 0rem 2rem 0rem;
-                              color: #d8dadc;
+                              color: var(--tone-fg-neutral-7);
                               width: 85vw;
                               text-align: center;
                               margin-left: auto;

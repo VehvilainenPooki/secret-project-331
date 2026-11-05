@@ -5,19 +5,21 @@ import styled from "@emotion/styled"
 import Link from "next/link"
 import React from "react"
 
+import { colors } from "@/shared-module/components/styles/themes"
+
 import { primaryFont } from "../styles"
 import { respondToOrLarger } from "../styles/respond"
 
 const Content = styled.div`
   margin: 0 auto;
   max-width: 100%;
-  background: rgb(242, 245, 247);
+  background: var(--tone-bg-info-2);
   display: flex;
   height: auto;
   align-items: center;
   justify-content: space-between;
   padding: 1.6rem;
-  color: #1a2333;
+  color: var(--color-text);
   margin-bottom: 10px;
   overflow: hidden;
   position: relative;
@@ -26,14 +28,14 @@ const Content = styled.div`
   transition: filter 0.2s;
   filter: brightness(100%) contrast(100%);
   &:hover {
-    background-color: rgb(235, 239, 242);
+    background-color: var(--tone-bg-neutral-49);
   }
 
   h3 {
     font-family: ${primaryFont};
     font-size: 22px;
     font-weight: 400;
-    color: #1a2333;
+    color: var(--color-text);
   }
 
   span {
@@ -80,7 +82,7 @@ const TopLevelPage: React.FC<React.PropsWithChildren<TopLevelPageProps>> = ({
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56.957 49" className="right-arrow">
           <path
             d="M32.466,0,29.321,3.146l19.123,19.11H0v4.475H48.444L29.321,45.854,32.466,49l24.49-24.506Z"
-            fill="#1a2333"
+            style={{ fill: colors.text }}
           />
         </svg>
       </Content>

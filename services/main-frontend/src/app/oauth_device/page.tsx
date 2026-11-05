@@ -26,9 +26,9 @@ interface DeviceCodeFields {
 // The shared Button has no destructive variant, so retint `secondary`'s own tokens rather
 // than hardcode colours; this keeps the variant's hover/pressed/disabled behaviour intact.
 const denyButtonStyles = css`
-  --btn-secondary-fg: var(--color-red-700);
-  --btn-secondary-bg-hover: var(--color-red-700);
-  --btn-secondary-border-hover: var(--color-red-700);
+  --btn-secondary-fg: var(--tone-fg-danger-10);
+  --btn-secondary-bg-hover: var(--tone-tone-danger-19);
+  --btn-secondary-border-hover: var(--tone-tone-danger-19);
 `
 
 const DeviceVerificationPage: React.FC = () => {

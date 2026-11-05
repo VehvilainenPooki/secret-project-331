@@ -12,7 +12,7 @@ import Close from "../imgs/close.svg"
 import Tick from "../imgs/tick-03.svg"
 
 const SelectorWrapper = styled.div`
-  background: #e7e7e7;
+  background: var(--tone-bg-neutral-55);
   width: 100%;
   position: relative;
   margin: 0 auto;
@@ -20,7 +20,7 @@ const SelectorWrapper = styled.div`
   min-height: 200px;
 `
 const Header = styled.div`
-  background: #e7e7e7;
+  background: var(--tone-bg-neutral-55);
   display: flex;
   width: 100%;
   height: 50px;
@@ -46,13 +46,13 @@ const StCheck = styled(Tick)`
   position: absolute;
   top: 0px;
   right: 21px;
-  fill: black;
+  fill: var(--tone-fg-neutral-44);
 `
 
 const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(4, auto);
-  background: #ccc;
+  background: var(--tone-bg-neutral-74);
   height: auto;
   padding: 2rem;
 `

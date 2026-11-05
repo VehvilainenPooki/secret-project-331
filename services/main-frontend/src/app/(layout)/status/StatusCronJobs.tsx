@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import { DENSITY_COMPACT } from "@/components/credit-registration/constants"
 import { useStatusCronJobs } from "@/hooks/useStatusCronJobs"
-import { baseTheme } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { QueryResult, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const iconRowCss = css`
   display: flex;
@@ -43,7 +43,7 @@ const StatusCronJobs: React.FC = () => {
               header: t("status-schedule"),
               cell: (cronJob) => (
                 <div className={iconRowCss}>
-                  <Clock size={16} color={baseTheme.colors.blue[600]} />
+                  <Clock size={16} color={tones.toneInfo23} />
                   <span>{cronJob.schedule}</span>
                 </div>
               ),
@@ -53,7 +53,7 @@ const StatusCronJobs: React.FC = () => {
               cell: (cronJob) => (
                 <div className={iconRowCss}>
                   {cronJob.last_schedule_time && (
-                    <CheckCircle size={16} color={baseTheme.colors.green[600]} />
+                    <CheckCircle size={16} color={tones.toneAccent21} />
                   )}
                   <span className={nowrapCss}>
                     {cronJob.last_schedule_time

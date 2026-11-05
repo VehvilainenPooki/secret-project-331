@@ -7,7 +7,8 @@ import { useTranslation } from "react-i18next"
 
 import type { CourseMaterialExerciseTask } from "@/generated/course-material-api/types.generated"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { ExerciseIframeState } from "@/shared-module/exercise-protocol/core/exercise-service-protocol-types"
 import type { Block } from "@/types/courseMaterialBlock"
 import type { CapturedExerciseTaskAnswer } from "@/utils/course-material/exerciseTaskAnswer"
@@ -69,7 +70,7 @@ const ExerciseTask: React.FC<React.PropsWithChildren<ExerciseTaskProps>> = ({
         <div
           className={css`
             font-family: ${headingFont};
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
             p,
             li {
               opacity: 0.9;
@@ -119,9 +120,9 @@ const ExerciseTask: React.FC<React.PropsWithChildren<ExerciseTaskProps>> = ({
           <div
             className={css`
               margin: 1rem 0;
-              background: white;
+              background: var(--color-surface);
               font-weight: 400;
-              color: ${baseTheme.colors.gray[500]};
+              color: ${tones.toneNeutral41};
               padding: 0.75rem 1rem;
               align-items: center;
               display: flex;
@@ -129,7 +130,7 @@ const ExerciseTask: React.FC<React.PropsWithChildren<ExerciseTaskProps>> = ({
 
               svg {
                 margin-right: 0.5rem;
-                color: ${baseTheme.colors.blue[500]};
+                color: ${tones.toneInfo20};
               }
             `}
           >

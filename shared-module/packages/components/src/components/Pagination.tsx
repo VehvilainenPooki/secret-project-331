@@ -42,7 +42,7 @@ const readoutCss = css`
   margin: 0;
   flex: 1 1 auto;
   min-width: 0;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-variant-numeric: tabular-nums;
 `
@@ -77,7 +77,7 @@ const buttonCss = css`
   border: 1px solid transparent;
   border-radius: 999px;
   background: transparent;
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
   font: inherit;
   font-size: var(--font-size-2);
   font-variant-numeric: tabular-nums;
@@ -96,12 +96,12 @@ const buttonCss = css`
   }
 
   &:disabled {
-    color: var(--color-gray-300);
+    color: var(--tone-fg-neutral-12);
     cursor: not-allowed;
   }
 
   &:hover:not(:disabled) {
-    background: var(--color-clear-200);
+    background: var(--tone-bg-neutral-52);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -110,18 +110,18 @@ const buttonCss = css`
 `
 
 const currentButtonCss = css`
-  background: var(--color-gray-700);
-  border-color: var(--color-gray-700);
-  color: var(--color-primary-100);
+  background: var(--tone-bg-neutral-90);
+  border-color: var(--tone-border-neutral-60);
+  color: var(--color-text-on-accent);
   font-weight: 600;
 
   &:hover:not(:disabled) {
-    background: var(--color-gray-700);
+    background: var(--tone-bg-neutral-90);
   }
 `
 
 const gapCss = css`
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
 `
 
 const itemsPerPageCss = css`

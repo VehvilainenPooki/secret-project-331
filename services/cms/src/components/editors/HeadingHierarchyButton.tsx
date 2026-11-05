@@ -72,7 +72,7 @@ const HeadingHierarchyDialogContent: React.FC<{ entries: HeadingHierarchyEntry[]
               className={css`
                 margin-top: 0.35rem;
                 margin-left: ${(entry.level - 1) * 0.9}rem;
-                color: #8a4b00;
+                color: var(--tone-fg-warning-4);
                 font-size: 0.95rem;
                 overflow-wrap: anywhere;
               `}

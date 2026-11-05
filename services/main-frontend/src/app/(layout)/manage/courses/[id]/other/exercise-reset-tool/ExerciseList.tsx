@@ -14,6 +14,7 @@ import type { DatabaseChapter, Exercise, Page } from "@/generated/api/types.gene
 import { useExercises } from "@/hooks/useExercises"
 import { baseTheme, fontWeights, secondaryFont } from "@/shared-module/common/styles"
 import { Button, Checkbox, QueryResults, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ResetFormFields } from "./ResetExercises"
 
@@ -105,7 +106,7 @@ const ExerciseList: React.FC<Props> = ({
             font-weight: ${fontWeights.medium};
             font-family: ${secondaryFont};
             padding-bottom: 20px;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
         >
           {t("title-all-exercises")}
@@ -157,7 +158,7 @@ const ExerciseList: React.FC<Props> = ({
                   <p
                     className={css`
                       font-family: ${secondaryFont};
-                      color: ${baseTheme.colors.gray[700]};
+                      color: ${tones.toneNeutral46};
                       font-weight: ${fontWeights.medium};
                       font-size: ${baseTheme.fontSizes[0]}px;
                       padding-bottom: 10px;
@@ -168,10 +169,10 @@ const ExerciseList: React.FC<Props> = ({
                   </p>
                   <div
                     className={css`
-                      border: 1px solid #ced1d7;
+                      border: 1px solid var(--tone-border-neutral-37);
                       border-radius: 8px;
                       border-width: 1px;
-                      color: ${baseTheme.colors.gray[700]};
+                      color: ${tones.toneNeutral46};
                     `}
                   >
                     <Table

@@ -20,11 +20,11 @@ import useResearchConsentFormAnswers from "@/hooks/course-material/useResearchCo
 import { useUserDetails } from "@/hooks/course-material/useUserDetails"
 import AudioSpeaker from "@/img/course-material/audio-player/audio-speaker.svg"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
-import { baseTheme } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withSuspenseBoundary from "@/shared-module/common/utils/withSuspenseBoundary"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import {
   isMaterialPageAtom,
@@ -61,11 +61,11 @@ export interface AudioFile {
 }
 
 const AudioNotification = styled.div`
-  background: #f0eff9;
+  background: var(--tone-bg-neutral-46);
   padding: 1rem 1rem 1.4rem 1.2rem;
 
   p {
-    color: ${baseTheme.colors.gray[600]};
+    color: ${tones.toneNeutral44};
     margin-bottom: 0.8rem;
   }
 `
@@ -325,7 +325,7 @@ const Page: React.FC<React.PropsWithChildren<Props>> = ({ onRefresh, organizatio
                 width: auto;
                 padding: 0 14px;
                 border: none;
-                background: rgba(101, 84, 192);
+                background: var(--tone-bg-info-6);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -343,7 +343,7 @@ const Page: React.FC<React.PropsWithChildren<Props>> = ({ onRefresh, organizatio
               <AudioSpeaker />
               <span
                 className={css`
-                  color: #fff;
+                  color: var(--color-text-on-accent);
                 `}
               >
                 {t("open-audio-player-button")}

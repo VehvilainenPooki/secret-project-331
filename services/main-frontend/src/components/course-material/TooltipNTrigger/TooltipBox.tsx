@@ -2,19 +2,20 @@
 
 import styled from "@emotion/styled"
 
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export const TooltipBox = styled.div`
   border-radius: 8px;
   min-width: 200px;
   max-width: 400px;
   box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background: ${baseTheme.colors.primary[100]};
-  border: 1px solid ${baseTheme.colors.clear[300]};
+    0 4px 6px -1px var(--tone-shadow-neutral-10),
+    0 2px 4px -1px var(--tone-shadow-neutral-7);
+  background: ${tones.toneNeutral1};
+  border: 1px solid ${tones.toneNeutral26};
   padding: 10px 14px;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-family: ${primaryFont};
   font-size: 14px;
   line-height: 1.5;

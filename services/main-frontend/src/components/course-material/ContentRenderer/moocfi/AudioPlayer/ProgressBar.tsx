@@ -18,7 +18,7 @@ const ProgressBarWrapper = styled.div`
   font-family: ${headingFont};
 `
 const time = css`
-  color: #535a66;
+  color: var(--color-text-muted);
   font-size: 13px;
   line-height: 46px;
   font-weight: 500;

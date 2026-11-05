@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next"
 import type { EmbedAttributes } from "@/../types/GutenbergBlockAttributes"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import { baseTheme } from "@/shared-module/common/styles/theme"
+import { tones } from "@/shared-module/components/styles/themes"
 import aspectRatioFromClassName from "@/utils/course-material/aspectRatioFromClassName"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
@@ -361,9 +362,9 @@ export const YoutubeEmbedBlock: React.FC<EmbedAttributes> = (props) => {
               display: flex;
               justify-content: center;
               align-items: center;
-              background-color: ${baseTheme.colors.gray[100]};
+              background-color: ${tones.toneNeutral29};
               aspect-ratio: ${aspectRatioFromClassName(className) || "16/9"};
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
               font-size: ${baseTheme.fontSizes[1]}px;
               padding: 1rem;
               text-align: center;
@@ -392,8 +393,8 @@ export const YoutubeEmbedBlock: React.FC<EmbedAttributes> = (props) => {
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  background-color: ${baseTheme.colors.gray[700]};
-                  color: ${baseTheme.colors.gray[300]};
+                  background-color: ${tones.toneNeutral46};
+                  color: ${tones.toneNeutral37};
                   transition: opacity 0.3s ease;
                   z-index: 1;
                 `}
@@ -405,6 +406,7 @@ export const YoutubeEmbedBlock: React.FC<EmbedAttributes> = (props) => {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  {/* YouTube's brand red; a logo keeps its color in every theme. */}
                   <path
                     d="M66.52 7.74C65.7 4.78 63.34 2.42 60.38 1.6C55.08 0 34 0 34 0C34 0 12.92 0 7.62 1.6C4.66 2.42 2.3 4.78 1.48 7.74C0 13.52 0 25 0 25C0 25 0 36.48 1.48 42.26C2.3 45.22 4.66 47.58 7.62 48.4C12.92 50 34 50 34 50C34 50 55.08 50 60.38 48.4C63.34 47.58 65.7 45.22 66.52 42.26C68 36.48 68 25 68 25C68 25 68 13.52 66.52 7.74Z"
                     fill="#FF0000"
@@ -446,7 +448,7 @@ export const YoutubeEmbedBlock: React.FC<EmbedAttributes> = (props) => {
               font-size: ${baseTheme.fontSizes[0]}px;
               margin-top: 0.5em;
               margin-bottom: 1em;
-              color: ${baseTheme.colors.gray[400]};
+              color: ${tones.toneNeutral39};
             `}
             dangerouslySetInnerHTML={{ __html: sanitizeCourseMaterialHtml(caption) }}
           ></figcaption>

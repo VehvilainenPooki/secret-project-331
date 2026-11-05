@@ -13,9 +13,9 @@ import DropdownMenu from "@/components/DropdownMenu"
 import useAuthorizeMultiple from "@/shared-module/common/hooks/useAuthorizeMultiple"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import DownIcon from "@/shared-module/common/img/down.svg"
-import { baseTheme } from "@/shared-module/common/styles"
 import { manageChatbotRoute } from "@/shared-module/common/utils/routes"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { removeSavedChatbotAnonymousToken } from "@/utils/anonymousTokenLocalStorage"
 import { createChatbotTranscript } from "@/utils/course-material/createChatbotTranscript"
 import { downloadStringAsFile } from "@/utils/course-material/downloadStringAsFile"
@@ -42,13 +42,13 @@ const headerContainerStyle = css`
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: ${baseTheme.colors.green[300]};
+  background-color: ${tones.toneAccent12};
   border-radius: 10px 10px 0px 0px;
 `
 
 const iconStyle = css`
-  background-color: ${baseTheme.colors.green[100]};
-  color: ${baseTheme.colors.green[400]};
+  background-color: ${tones.toneAccent7};
+  color: ${tones.toneAccent16};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -69,21 +69,21 @@ const buttonStyle = css`
   cursor: pointer;
   border-radius: 50%;
   border: none;
-  color: ${baseTheme.colors.green[700]};
-  background-color: ${baseTheme.colors.green[300]};
+  color: ${tones.toneAccent23};
+  background-color: ${tones.toneAccent12};
   box-shadow: none;
   padding: 6px 14px;
 
   &:hover,
   &[data-hovered] {
-    background: ${baseTheme.colors.green[400]};
-    border-color: ${baseTheme.colors.green[400]};
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+    background: ${tones.toneAccent16};
+    border-color: ${tones.toneAccent16};
+    box-shadow: 0 2px 4px var(--tone-shadow-neutral-8);
   }
   &[data-pressed] {
-    background: ${baseTheme.colors.green[500]};
-    border-color: ${baseTheme.colors.green[500]};
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+    background: ${tones.toneAccent19};
+    border-color: ${tones.toneAccent19};
+    box-shadow: 0 1px 2px var(--tone-shadow-neutral-13);
   }
 `
 
@@ -135,7 +135,7 @@ const ChatbotChatHeader: React.FC<ChatbotChatHeaderProps> = (props) => {
       icon: (
         <AddMessage
           className={css`
-            color: ${baseTheme.colors.green[700]};
+            color: ${tones.toneAccent23};
             position: relative;
             top: -0.25rem;
           `}
@@ -155,7 +155,7 @@ const ChatbotChatHeader: React.FC<ChatbotChatHeaderProps> = (props) => {
       icon: (
         <ArrowDownToBracket
           className={css`
-            color: ${baseTheme.colors.green[700]};
+            color: ${tones.toneAccent23};
             position: relative;
             height: 22px;
             width: 22px;
@@ -198,7 +198,7 @@ const ChatbotChatHeader: React.FC<ChatbotChatHeaderProps> = (props) => {
       icon: (
         <Pencil
           className={css`
-            color: ${baseTheme.colors.green[700]};
+            color: ${tones.toneAccent23};
             position: relative;
             height: 22px;
             width: 22px;
@@ -249,7 +249,7 @@ const ChatbotChatHeader: React.FC<ChatbotChatHeaderProps> = (props) => {
           // oxlint-disable-next-line i18next/no-literal-string
           menuButtonTestId="chatbot-header-menu-button"
           controlButtonClassName={buttonStyle}
-          controlButtonIconColor={`${baseTheme.colors.green[700]}`}
+          controlButtonIconColor={`${tones.toneAccent23}`}
           controlButtonAriaLabel={t("label-actions")}
           controlButtonTooltipText={t("label-actions")}
           controlButtonIconWidth={24}

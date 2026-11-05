@@ -6,8 +6,8 @@ import type { ColumnDef } from "@tanstack/react-table"
 import React, { useDeferredValue, useMemo } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { TeacherChapterLockStatus } from "@/utils/chapterLockingStatus"
 import { getTeacherChapterLockLabel } from "@/utils/chapterLockingStatus"
 
@@ -41,13 +41,13 @@ const round2 = (n: number) => Math.round(n * 100) / 100
 const lockStatusColor = (status: TeacherChapterLockStatus | undefined) => {
   switch (status) {
     case "unlocked":
-      return baseTheme.colors.green[700]
+      return tones.toneAccent23
     case "completed_and_locked":
-      return baseTheme.colors.blue[700]
+      return tones.toneInfo26
     case "not_unlocked_yet":
-      return baseTheme.colors.crimson[700]
+      return tones.toneDanger22
     default:
-      return baseTheme.colors.gray[600]
+      return tones.toneNeutral44
   }
 }
 

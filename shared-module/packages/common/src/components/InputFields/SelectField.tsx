@@ -74,11 +74,11 @@ const SelectField = forwardRef<HTMLSelectElement, SelectMenuProps>(
 
             .select {
               width: 100%;
-              border: 2px solid #e0e0e0;
+              border: 2px solid var(--tone-border-neutral-25);
               border-radius: 3px;
               font-size: 16px;
               cursor: ${disabled ? "default" : "pointer"};
-              background: #f9f9f9;
+              background: var(--tone-bg-neutral-17);
               display: grid;
               grid-template-areas: "select";
               align-items: center;
@@ -96,12 +96,12 @@ const SelectField = forwardRef<HTMLSelectElement, SelectMenuProps>(
               margin-right: 10px;
               height: 0.8em;
               line-height: 0;
-              background-color: #1a2333;
+              background-color: var(--tone-bg-neutral-90);
               clip-path: polygon(52% 80%, 0 20%, 100% 20%);
               opacity: 0.6;
             }
             label {
-              color: #333;
+              color: var(--tone-fg-neutral-36);
               font-size: 14px;
               font-weight: 500;
               ${rest.labelStyle}

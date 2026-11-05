@@ -41,7 +41,7 @@ const container = css`
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
-    color: #4c5868;
+    color: var(--tone-fg-info-10);
     font-family: ${headingFont};
     letter-spacing: 1;
     z-index: 1;
@@ -110,7 +110,7 @@ const right = css`
   }
 `
 const StyledTime = styled.div`
-  background-color: #f3f5f7;
+  background-color: var(--tone-bg-neutral-29);
   border-radius: 0.125rem;
   border: none;
   margin: 0;
@@ -118,12 +118,12 @@ const StyledTime = styled.div`
   display: flex;
 `
 const StyledButton = styled.button`
-  background-color: #f3f5f7;
+  background-color: var(--tone-bg-neutral-29);
   width: 5rem;
   justify-self: end;
   height: auto;
   margin: 0;
-  color: #4c5868;
+  color: var(--tone-fg-info-10);
   position: relative;
   border: none;
   display: flex;
@@ -167,15 +167,15 @@ const Timeline: React.FunctionComponent<
                   height: 2.5rem;
                   top: calc(50% - 20px);
                   right: -0.125rem;
-                  background: ${selectedTimelineItem ? "#77C299" : "#EBEDEE"};
-                  border: ${selectedTimelineItem ? "none" : "0.125rem solid #898E99"};
+                  background: ${selectedTimelineItem ? "var(--tone-tone-accent-11)" : "var(--tone-tone-neutral-22)"};
+                  border: ${selectedTimelineItem ? "none" : "0.125rem solid var(--tone-tone-neutral-38)"};
                   border-style: ${selectedTimelineItem ? "none" : "dashed"};
                   ${
                     selectedTimelineItem &&
                     `box-shadow:
-                  rgba(45, 35, 66, 0) 0 2px 4px,
-                  rgba(45, 35, 66, 0) 0 7px 13px -3px,
-                  #69AF8A 0 -2px 0 inset;`
+                  var(--tone-shadow-info-1) 0 2px 4px,
+                  var(--tone-shadow-info-1) 0 7px 13px -3px,
+                  var(--tone-shadow-accent-6) 0 -2px 0 inset;`
                   };
                   border-radius: 1.563rem;
                   transition: all 200ms linear;
@@ -202,7 +202,7 @@ const Timeline: React.FunctionComponent<
                   bottom: 0;
                   left: 50%;
                   height: 60%;
-                  border: 0.188rem solid #ebedee;
+                  border: 0.188rem solid var(--tone-border-neutral-7);
                   border-radius: 6.188rem;
                   margin-left: 0.375rem;
                   @media (max-width: 767.98px) {
@@ -269,7 +269,7 @@ const Timeline: React.FunctionComponent<
                       className={css`
                         padding: 0.5rem 0.125rem 0.5rem 0.5rem;
                         width: 100%;
-                        color: #4c5868;
+                        color: var(--tone-fg-info-10);
                       `}
                     >
                       {selectedTimelineEventDetails?.name ?? t("deleted-option")}
@@ -312,9 +312,9 @@ const Timeline: React.FunctionComponent<
             className={css`
               padding: 0.875rem;
               border-radius: 0.5rem;
-              background-color: #fff4e6;
-              border: 2px solid #cc7a00;
-              color: #b83900;
+              background-color: var(--tone-bg-warning-3);
+              border: 2px solid var(--tone-border-warning-4);
+              color: var(--tone-fg-danger-7);
               font-size: 1rem;
               line-height: 1.5;
             `}

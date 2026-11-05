@@ -70,8 +70,8 @@ const EmailCalloutEditor: React.FC<
           display: flex;
           gap: 14px;
           padding: 20px;
-          background-color: #edf3f2;
-          border: 1px solid #dae6e5;
+          background-color: var(--tone-bg-accent-3);
+          border: 1px solid var(--tone-border-accent-2);
           border-radius: 8px;
         `}
       >

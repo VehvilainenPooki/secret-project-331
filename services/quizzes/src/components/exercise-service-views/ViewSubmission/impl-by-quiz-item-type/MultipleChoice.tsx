@@ -30,23 +30,23 @@ const gradingOption = css`
   padding: 0 1rem;
   border-radius: 0.375rem;
   font-size: 1.125rem;
-  color: #4c5868;
-  border: 0.125rem solid #d8d8d8;
+  color: var(--tone-fg-info-10);
+  border: 0.125rem solid var(--tone-border-neutral-33);
 `
 
 const gradingOptionWrongAndSelected = css`
-  background: #fbeef0;
-  border: 0.125rem solid #f5d0d3;
+  background: var(--tone-bg-neutral-43);
+  border: 0.125rem solid var(--tone-border-danger-1);
 `
 
 const gradingOptionSelected = css`
-  background: #f4f4f4;
-  border: 0.125rem solid #d8d8d8;
+  background: var(--tone-bg-neutral-32);
+  border: 0.125rem solid var(--tone-border-neutral-33);
 `
 
 const gradingOptionCorrectAndSelected = css`
   background: ${quizTheme.gradingCorrectItemBackground};
-  border: 0.125rem solid #69af8a;
+  border: 0.125rem solid var(--tone-border-accent-7);
 `
 
 const MultipleChoiceSubmission: React.FC<
@@ -90,7 +90,7 @@ const MultipleChoiceSubmission: React.FC<
         id={titleId}
         className={css`
           font-weight: 500;
-          color: #4c5868;
+          color: var(--tone-fg-info-10);
           font-family: ${primaryFont};
           font-size: 1.25rem;
           margin-bottom: 1rem;
@@ -201,13 +201,13 @@ const MultipleChoiceSubmission: React.FC<
                     {correctAnswer === true && (
                       <div
                         className={css`
-                          background: #9dc7b1;
+                          background: var(--tone-bg-accent-7);
                           font-size: 0.625rem;
                           text-transform: uppercase;
                           font-weight: bold;
                           padding: 0.3125rem 0.375rem 0.25rem 0.375rem;
                           border-radius: 0.125rem;
-                          color: #14261c;
+                          color: var(--tone-fg-neutral-38);
                         `}
                       >
                         {t("correct-option")}
@@ -216,13 +216,13 @@ const MultipleChoiceSubmission: React.FC<
                     {correctAnswer === false && (
                       <div
                         className={css`
-                          background: #eedbdd;
+                          background: var(--tone-bg-neutral-66);
                           font-size: 0.625rem;
                           text-transform: uppercase;
                           font-weight: bold;
                           padding: 0.3125rem 0.375rem 0.25rem 0.375rem;
                           border-radius: 0.125rem;
-                          color: #b12632;
+                          color: var(--tone-fg-danger-9);
                         `}
                       >
                         {t("incorrect-option")}
@@ -257,12 +257,12 @@ const RowSubmissionFeedback: React.FC<React.PropsWithChildren<RowSubmissionFeedb
       className={css`
         margin: 0 0.5rem 1rem 0;
         display: flex;
-        color: #4c5868;
+        color: var(--tone-fg-info-10);
         font-size: 1.125rem;
         border-left: ${
           correct
             ? `0.375rem solid ${quizTheme.gradingCorrectItemBorderColor}`
-            : `0.375rem solid #ebcbcd`
+            : `0.375rem solid var(--tone-tone-danger-6)`
         };
         box-sizing: border-box;
         background: ${quizTheme.feedbackBackground};

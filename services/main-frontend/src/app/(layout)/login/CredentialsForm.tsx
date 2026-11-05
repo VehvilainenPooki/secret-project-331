@@ -7,10 +7,10 @@ import { useForm } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
 import { PasswordField } from "@/components/forms/PasswordField"
-import { baseTheme } from "@/shared-module/common/styles"
 import { useCurrentPagePathForReturnTo } from "@/shared-module/common/utils/redirectBackAfterLoginOrSignup"
 import { signUpRoute } from "@/shared-module/common/utils/routes"
 import { Button, TextField, Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface CredentialsFormProps {
   onSubmit: (email: string, password: string) => Promise<void>
@@ -65,7 +65,7 @@ export const CredentialsForm: React.FC<CredentialsFormProps> = ({
         {t("login-description")}{" "}
         <a
           className={css`
-            color: ${baseTheme.colors.blue[600]};
+            color: ${tones.toneInfo23};
           `}
           href="https://mooc.fi"
         >
@@ -97,9 +97,9 @@ export const CredentialsForm: React.FC<CredentialsFormProps> = ({
         className={css`
           &:not(:empty) {
             padding: 1rem;
-            border: 2px solid ${baseTheme.colors.red[500]};
+            border: 2px solid ${tones.toneDanger15};
             font-weight: bold;
-            color: ${baseTheme.colors.red[500]};
+            color: ${tones.toneDanger15};
           }
         `}
       >
@@ -126,7 +126,7 @@ export const CredentialsForm: React.FC<CredentialsFormProps> = ({
           gap: 0.25rem;
 
           a {
-            color: ${baseTheme.colors.blue[600]};
+            color: ${tones.toneInfo23};
           }
         `}
       >

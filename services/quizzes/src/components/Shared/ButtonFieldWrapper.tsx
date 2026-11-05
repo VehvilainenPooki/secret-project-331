@@ -12,33 +12,33 @@ export const ButtonFieldWrapper = styled.div`
   }
 
   .button-accept {
-    background-color: #78ab46;
-    color: white;
+    background-color: var(--tone-bg-accent-11);
+    color: var(--color-text-on-accent);
     :hover {
-      background-color: #78ab46;
+      background-color: var(--tone-bg-accent-11);
       opacity: 0.6;
-      color: #000;
+      color: var(--tone-fg-neutral-44);
     }
   }
 
   .button-reject {
-    background-color: #ff1744;
-    color: white;
+    background-color: var(--tone-bg-danger-12);
+    color: var(--color-text-on-accent);
 
     :hover {
-      background-color: #ff1744;
+      background-color: var(--tone-bg-danger-12);
       opacity: 0.6;
-      color: #000;
+      color: var(--tone-fg-neutral-44);
     }
   }
   .button-plagiarism {
-    background-color: #b26500;
-    color: white;
+    background-color: var(--tone-bg-warning-9);
+    color: var(--color-text-on-accent);
 
     :hover {
-      background-color: #b26500;
+      background-color: var(--tone-bg-warning-9);
       opacity: 0.6;
-      color: #000;
+      color: var(--tone-fg-neutral-44);
     }
   }
 `

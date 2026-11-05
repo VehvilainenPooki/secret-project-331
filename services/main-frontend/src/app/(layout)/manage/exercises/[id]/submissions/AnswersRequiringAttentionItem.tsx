@@ -18,9 +18,10 @@ import type {
   NewTeacherGradingDecision,
 } from "@/generated/api/types.generated"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme, headingFont, primaryFont } from "@/shared-module/common/styles"
+import { headingFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { dateToString } from "@/shared-module/common/utils/time"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import FlaggedPeerReviewAccordion from "./FlaggedPeerReviewAccordion"
 import PeerOrSelfReviewAccordion from "./PeerOrSelfReviewAccordion"
@@ -127,7 +128,7 @@ const AnswersRequiringAttentionItem: React.FC<Props> = ({
               margin-top: 0;
               margin-bottom: 1em;
               font-family: ${primaryFont};
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               font-weight: 500;
               font-size: 20px;
               line-height: 20px;
@@ -146,12 +147,12 @@ const AnswersRequiringAttentionItem: React.FC<Props> = ({
           <div
             className={css`
               margin-top: 1.5rem;
-              background: ${baseTheme.colors.primary[100]};
+              background: ${tones.toneNeutral1};
               border-radius: 0.625rem;
               padding: 1rem 1.25rem 1.5rem;
               box-shadow:
-                rgba(15, 23, 42, 0.06) 0 1px 2px,
-                rgba(15, 23, 42, 0.04) 0 0 0 1px;
+                var(--tone-shadow-info-7) 0 1px 2px,
+                var(--tone-shadow-info-3) 0 0 0 1px;
             `}
           >
             <GradingDecisionControls

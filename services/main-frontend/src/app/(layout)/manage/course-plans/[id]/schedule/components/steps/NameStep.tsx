@@ -3,8 +3,8 @@
 import { css } from "@emotion/css"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { useWizardTextField } from "../../hooks/useWizardStepFields"
 
@@ -16,7 +16,7 @@ const fieldStyles = css`
 
 const hintStyles = css`
   margin-top: 0.75rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.9rem;
 `
 

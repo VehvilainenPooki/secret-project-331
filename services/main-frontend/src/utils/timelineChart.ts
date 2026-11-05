@@ -1,22 +1,22 @@
-// Shared palette + constants for the user activity/completion timelines. Colors use baseTheme tokens
-// where one matches; the rgba fills and SCREAMING_CASE echarts enum strings stay literal (both ignored
-// by the i18next literal-string lint).
+// Shared palette + constants for the user activity/completion timelines. Colors are the active
+// theme's chart tones, read as values because echarts draws on a canvas; the SCREAMING_CASE echarts
+// enum strings stay literal (ignored by the i18next literal-string lint).
 
 import { escape } from "lodash"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { getActiveTheme } from "@/shared-module/components/styles/themes"
 
 // One categorical palette, shared by the cross-course Gantt (indexed by course order) and the per-course
 // timeline (indexed by module order). Near-collision hues are omitted so adjacent series stay distinct.
 export const SERIES_COLORS = [
-  baseTheme.colors.blue[600],
-  baseTheme.colors.green[600],
-  baseTheme.colors.purple[600],
-  baseTheme.colors.crimson[600],
-  baseTheme.colors.red[600],
-  baseTheme.colors.gray[500],
-  baseTheme.colors.blue[800],
-  baseTheme.colors.green[800],
+  getActiveTheme().tones.chartInfo4,
+  getActiveTheme().tones.chartAccent73,
+  getActiveTheme().tones.chartSpecial4,
+  getActiveTheme().tones.chartDanger10,
+  getActiveTheme().tones.chartDanger9,
+  getActiveTheme().tones.chartNeutral17,
+  getActiveTheme().tones.chartInfo7,
+  getActiveTheme().tones.chartAccent75,
 ]
 
 // Non-translatable echarts enum strings, grouped under SCREAMING_CASE keys so the i18next
@@ -49,7 +49,10 @@ export const TIME_AXIS_LABEL = {
 } as const
 
 /** Subtle alternating background bands for the time axis (splitArea): faint gray tint / transparent. */
-export const SPLIT_AREA_COLORS = ["rgba(83,90,102,0.04)", "rgba(255,255,255,0)"]
+export const SPLIT_AREA_COLORS = [
+  getActiveTheme().tones.chartNeutral4,
+  getActiveTheme().tones.chartNeutral2,
+]
 
 /** Line break for the (raw-HTML) echarts tooltip strings both timelines build. */
 export const LINE_BREAK = "<br />"
@@ -62,13 +65,13 @@ export const LINE_BREAK = "<br />"
 export const escapeHtml = escape
 
 /** Faint neutral fill for the enrolled→last-activity span track behind the density violins. */
-export const TRACK_FILL = "rgba(83,90,102,0.10)"
+export const TRACK_FILL = getActiveTheme().tones.chartNeutral8
 
 /** Fallback color for marks with no module. */
-export const NEUTRAL_MARK_COLOR = baseTheme.colors.gray[400]
+export const NEUTRAL_MARK_COLOR = getActiveTheme().tones.chartNeutral16
 
 /** Non-alarming accent for completions still awaiting review (info tone, not error red). */
-export const REVIEW_ACCENT = baseTheme.colors.blue[700]
+export const REVIEW_ACCENT = getActiveTheme().tones.chartInfo5
 
 /** Palette lookup that wraps around for indices past the palette length. */
 export function colorAt(palette: string[], index: number): string {

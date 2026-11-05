@@ -51,7 +51,7 @@ const TopLevelPages: React.FC<React.PropsWithChildren<TopLevelPagesProps>> = ({ 
               font-family: ${headingFont};
               font-size: clamp(30px, 3.5vw, 46px);
               font-weight: 700;
-              color: #1a2333;
+              color: var(--color-text);
               text-align: center;
               margin-bottom: 1.5rem;
               opacity: 0.9;

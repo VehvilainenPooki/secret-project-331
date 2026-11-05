@@ -14,8 +14,8 @@ import {
 } from "react-aria-components"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { TooltipBox } from "./TooltipBox"
 
@@ -31,19 +31,19 @@ const StyledButton = styled(ReactAriaButton)`
   transition: background-color 0.15s ease;
 
   &:hover {
-    background-color: ${baseTheme.colors.clear[100]};
+    background-color: ${tones.toneNeutral12};
   }
 
   &:focus {
-    outline: 2px solid ${baseTheme.colors.blue[500]};
+    outline: 2px solid ${tones.toneInfo20};
     outline-offset: 2px;
-    background-color: ${baseTheme.colors.clear[100]};
+    background-color: ${tones.toneNeutral12};
   }
 
   &[data-popover-open="true"] {
-    outline: 2px solid ${baseTheme.colors.blue[500]};
+    outline: 2px solid ${tones.toneInfo20};
     outline-offset: 2px;
-    background-color: ${baseTheme.colors.clear[100]};
+    background-color: ${tones.toneNeutral12};
   }
 `
 

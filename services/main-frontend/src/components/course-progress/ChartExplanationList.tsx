@@ -51,7 +51,7 @@ const dotCss = css`
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 0 0 1px var(--tone-shadow-neutral-13);
 
   @media (forced-colors: active) {
     forced-color-adjust: none;

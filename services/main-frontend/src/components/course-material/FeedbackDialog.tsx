@@ -11,9 +11,10 @@ import { useTranslation } from "react-i18next"
 import { postFeedback } from "@/generated/course-material-api/sdk.generated"
 import type { FeedbackBlock } from "@/generated/course-material-api/types.generated"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, monospaceFont, primaryFont } from "@/shared-module/common/styles"
+import { monospaceFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button, TextArea } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   currentlyOpenFeedbackDialogAtom,
   selectionAtom,
@@ -135,10 +136,10 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
           position: fixed;
           max-width: 500px;
           width: calc(100% - 40px);
-          background: ${baseTheme.colors.primary[100]};
-          border: 2px solid ${baseTheme.colors.gray[200]};
+          background: ${tones.toneNeutral1};
+          border: 2px solid ${tones.toneNeutral35};
           border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px var(--tone-shadow-neutral-10);
           bottom: 100px;
           right: 20px;
           left: 20px;
@@ -162,11 +163,11 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
             padding: 1rem 1.5rem;
             position: sticky;
             top: 0;
-            background: ${baseTheme.colors.primary[100]};
+            background: ${tones.toneNeutral1};
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+            border-bottom: 1px solid ${tones.toneNeutral29};
             z-index: 1;
           `}
         >
@@ -176,7 +177,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
               font-family: ${primaryFont};
               font-size: 1.25rem;
               font-weight: 600;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
               margin: 0;
             `}
           >
@@ -201,14 +202,14 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
               width: 40px;
               height: 40px;
               margin-right: -0.5rem;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
 
               &:hover {
-                background-color: ${baseTheme.colors.gray[100]};
+                background-color: ${tones.toneNeutral29};
               }
 
               &:focus-visible {
-                outline: 3px solid ${baseTheme.colors.green[600]};
+                outline: 3px solid ${tones.toneAccent21};
                 outline-offset: 2px;
               }
             `}
@@ -233,8 +234,8 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
               <div
                 key={`${c.comment}-${i}`}
                 className={css`
-                  background: ${baseTheme.colors.clear[100]};
-                  border: 1px solid ${baseTheme.colors.gray[200]};
+                  background: ${tones.toneNeutral12};
+                  border: 1px solid ${tones.toneNeutral35};
                   border-radius: 6px;
                   padding: 1rem;
                   margin-bottom: 1rem;
@@ -243,16 +244,16 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
                 {c.selectedText.length > 0 && (
                   <div
                     className={css`
-                      background: ${baseTheme.colors.green[100]};
+                      background: ${tones.toneAccent7};
                       padding: 0.75rem;
                       border-radius: 4px;
                       margin-bottom: 0.75rem;
                       font-family: ${monospaceFont};
                       font-size: 0.875rem;
-                      color: ${baseTheme.colors.green[700]};
+                      color: ${tones.toneAccent23};
                       overflow: hidden;
                       text-overflow: ellipsis;
-                      border: 1px solid ${baseTheme.colors.green[200]};
+                      border: 1px solid ${tones.toneAccent9};
                     `}
                   >
                     {c.selectedText}
@@ -260,7 +261,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
                 )}
                 <div
                   className={css`
-                    color: ${baseTheme.colors.gray[600]};
+                    color: ${tones.toneNeutral44};
                     margin-bottom: 0.75rem;
                   `}
                 >
@@ -268,7 +269,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
                 </div>
                 <button
                   className={css`
-                    color: ${baseTheme.colors.gray[600]};
+                    color: ${tones.toneNeutral44};
                     font-size: 0.875rem;
                     cursor: pointer;
                     padding: 0;
@@ -277,7 +278,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
                     transition: color 0.2s ease;
 
                     &:hover {
-                      color: ${baseTheme.colors.red[600]};
+                      color: ${tones.toneDanger17};
                     }
                   `}
                   onClick={() => setComments((cs) => [...cs.slice(0, i), ...cs.slice(i + 1)])}
@@ -289,7 +290,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
           ) : (
             <div
               className={css`
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
                 text-align: center;
                 padding: 2rem 0;
               `}
@@ -302,15 +303,15 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
         <div
           className={css`
             padding: 1.5rem;
-            border-top: 1px solid ${baseTheme.colors.gray[200]};
-            background: ${baseTheme.colors.primary[100]};
+            border-top: 1px solid ${tones.toneNeutral35};
+            background: ${tones.toneNeutral1};
           `}
         >
           {selection.text.length > 0 ? (
             <div
               className={css`
-                background: ${baseTheme.colors.green[100]};
-                border: 1px solid ${baseTheme.colors.green[200]};
+                background: ${tones.toneAccent7};
+                border: 1px solid ${tones.toneAccent9};
                 border-radius: 6px;
                 padding: 1rem;
                 margin-bottom: 1rem;
@@ -326,7 +327,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
               >
                 <div
                   className={css`
-                    color: ${baseTheme.colors.green[700]};
+                    color: ${tones.toneAccent23};
                     font-weight: 500;
                     font-size: 0.875rem;
                   `}
@@ -346,13 +347,13 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
               </div>
               <div
                 className={css`
-                  color: ${baseTheme.colors.gray[600]};
+                  color: ${tones.toneNeutral44};
                   font-size: 0.875rem;
                   line-height: 1.5;
-                  background: ${baseTheme.colors.primary[100]};
+                  background: ${tones.toneNeutral1};
                   padding: 0.75rem;
                   border-radius: 4px;
-                  border: 1px solid ${baseTheme.colors.gray[200]};
+                  border: 1px solid ${tones.toneNeutral35};
                 `}
               >
                 {selection.text}
@@ -361,8 +362,8 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
           ) : (
             <div
               className={css`
-                background: ${baseTheme.colors.clear[100]};
-                border: 1px solid ${baseTheme.colors.gray[200]};
+                background: ${tones.toneNeutral12};
+                border: 1px solid ${tones.toneNeutral35};
                 border-radius: 6px;
                 padding: 1rem;
                 margin-bottom: 1rem;
@@ -375,7 +376,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
 
               <div
                 className={css`
-                  color: ${baseTheme.colors.gray[600]};
+                  color: ${tones.toneNeutral44};
                   font-size: 0.875rem;
                   line-height: 1.5;
                 `}
@@ -383,7 +384,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
                 {t("commenting-on-whole-page")}
                 <span
                   className={css`
-                    color: ${baseTheme.colors.gray[500]};
+                    color: ${tones.toneNeutral41};
                     font-size: 0.8125rem;
                     display: block;
                     margin-top: 0.25rem;
@@ -415,7 +416,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
             {charactersLeft >= 0 && charactersLeft < 200 && (
               <span
                 className={css`
-                  color: ${baseTheme.colors.gray[500]};
+                  color: ${tones.toneNeutral41};
                   font-size: 0.875rem;
                 `}
               >
@@ -425,7 +426,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
             {charactersLeft < 0 && (
               <span
                 className={css`
-                  color: ${baseTheme.colors.red[600]};
+                  color: ${tones.toneDanger17};
                   font-size: 0.875rem;
                 `}
               >
@@ -437,7 +438,7 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
           {(error || mutation.isError) && (
             <div
               className={css`
-                color: ${baseTheme.colors.red[600]};
+                color: ${tones.toneDanger17};
                 margin-bottom: 1rem;
                 font-size: 0.875rem;
               `}
@@ -483,22 +484,22 @@ const FeedbackDialog: React.FC<React.PropsWithChildren<Props>> = ({ courseId, pa
               className={css`
                 min-width: 100px;
                 width: 100%;
-                background: ${baseTheme.colors.green[600]};
-                border-color: ${baseTheme.colors.green[600]};
-                color: ${baseTheme.colors.primary[100]};
+                background: ${tones.toneAccent21};
+                border-color: ${tones.toneAccent21};
+                color: ${tones.toneNeutral1};
 
                 ${respondToOrLarger.xxs} {
                   width: auto;
                 }
 
                 &:hover {
-                  background: ${baseTheme.colors.green[700]};
-                  border-color: ${baseTheme.colors.green[700]};
+                  background: ${tones.toneAccent23};
+                  border-color: ${tones.toneAccent23};
                 }
 
                 &:disabled {
-                  background: ${baseTheme.colors.gray[400]};
-                  border-color: ${baseTheme.colors.gray[400]};
+                  background: ${tones.toneNeutral39};
+                  border-color: ${tones.toneNeutral39};
                 }
               `}
             >

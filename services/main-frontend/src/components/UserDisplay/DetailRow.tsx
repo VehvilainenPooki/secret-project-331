@@ -3,7 +3,7 @@
 import { css } from "@emotion/css"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 function DetailRow({ label, value }: { label: string; value: React.ReactNode }) {
   return (
@@ -13,7 +13,7 @@ function DetailRow({ label, value }: { label: string; value: React.ReactNode }) 
         flex-direction: column;
         gap: 0.25rem;
         padding: 0.5rem 0;
-        border-bottom: 1px solid ${baseTheme.colors.clear[300]};
+        border-bottom: 1px solid ${tones.toneNeutral26};
         &:last-of-type {
           border-bottom: none;
         }
@@ -25,7 +25,7 @@ function DetailRow({ label, value }: { label: string; value: React.ReactNode }) 
           font-weight: 600;
           text-transform: uppercase;
           letter-spacing: 0.05em;
-          color: ${baseTheme.colors.gray[500]};
+          color: ${tones.toneNeutral41};
         `}
       >
         {label}
@@ -33,7 +33,7 @@ function DetailRow({ label, value }: { label: string; value: React.ReactNode }) 
       <span
         className={css`
           font-size: 0.9rem;
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
         `}
       >
         {value}

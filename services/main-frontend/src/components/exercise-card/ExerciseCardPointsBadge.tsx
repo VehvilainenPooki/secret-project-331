@@ -6,6 +6,7 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import { headingFont } from "@/shared-module/common/styles"
+import { colors } from "@/shared-module/components/styles/themes"
 
 import { exerciseCardPillShell } from "./exerciseCardPillShell"
 
@@ -37,12 +38,12 @@ const ExerciseCardPointsBadge: React.FC<React.PropsWithChildren<ExerciseCardPoin
             align-items: center;
             flex-wrap: nowrap;
             line-height: 100%;
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             z-index: 999;
           }
 
           .heading {
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             font-size: 12px;
             display: inline-block;
             margin-bottom: 2px;
@@ -51,7 +52,7 @@ const ExerciseCardPointsBadge: React.FC<React.PropsWithChildren<ExerciseCardPoin
           sup,
           sub {
             font-family: ${headingFont} !important;
-            color: #57606f;
+            color: var(--tone-fg-info-9);
             font-size: 15px;
             font-weight: 500;
             margin: 0;
@@ -68,7 +69,13 @@ const ExerciseCardPointsBadge: React.FC<React.PropsWithChildren<ExerciseCardPoin
         <span className="heading">{t("points-label")}</span>
         <div className="points">
           <span aria-hidden="true">
-            <CheckCircle size={16} weight="bold" color="#394F77" />
+            <CheckCircle
+              size={16}
+              weight="bold"
+              className={css`
+                color: ${colors.badgeIcon};
+              `}
+            />
           </span>
           <span data-testid={dataTestId} className={pointsScoreStyles}>
             <sup>{score ?? "-"}</sup>/<sub>{maxScore}</sub>

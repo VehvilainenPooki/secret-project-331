@@ -6,8 +6,9 @@ import React from "react"
 
 import { useVerticalResizeHandle } from "@/hooks/useVerticalResizeHandle"
 import MonacoEditor from "@/shared-module/common/components/monaco/MonacoEditor"
-import { baseTheme, fontWeights, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, primaryFont } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components/components/Button"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 // Config/identifier strings kept out of i18next/no-literal-string.
@@ -43,7 +44,7 @@ const headerLabelStyles = css`
   margin: 0;
   font-family: ${primaryFont};
   font-size: 0.8125rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-weight: ${fontWeights.medium};
 `
 
@@ -96,7 +97,7 @@ const VegaJsonEditor: React.FC<VegaJsonEditorProps> = ({
             role="status"
             className={css`
               font-size: 0.75rem;
-              color: ${baseTheme.colors.red[600]};
+              color: ${tones.toneDanger17};
             `}
           >
             {isValidJson ? "" : t("invalid-json")}
@@ -123,8 +124,7 @@ const VegaJsonEditor: React.FC<VegaJsonEditorProps> = ({
                  include it. */
               flex: 0 0 auto;
               height: ${heightPx}px;
-              border: 1px solid
-                ${isValidJson ? baseTheme.colors.gray[400] : baseTheme.colors.red[400]};
+              border: 1px solid ${isValidJson ? tones.toneNeutral39 : tones.toneDanger10};
               border-radius: 4px;
               overflow: hidden;
               /* MonacoEditorImpl adds a height-less wrapper div; force it to fill so the editor can
@@ -184,7 +184,7 @@ const VegaJsonEditor: React.FC<VegaJsonEditorProps> = ({
                 /* :focus, not :focus-visible — a click focuses the handle to enable the arrow
                  keys, and that has to be visible. */
                 &:focus {
-                  outline: 2px solid ${baseTheme.colors.green[600]};
+                  outline: 2px solid ${tones.toneAccent21};
                   outline-offset: -2px;
                 }
                 /* Grip: a short bar that darkens on hover/focus. */
@@ -193,11 +193,11 @@ const VegaJsonEditor: React.FC<VegaJsonEditorProps> = ({
                   width: 2rem;
                   height: 3px;
                   border-radius: 3px;
-                  background: ${baseTheme.colors.gray[400]};
+                  background: ${tones.toneNeutral39};
                 }
                 &:hover::after,
                 &:focus::after {
-                  background: ${baseTheme.colors.gray[600]};
+                  background: ${tones.toneNeutral44};
                 }
               `}
             />
@@ -210,7 +210,7 @@ const VegaJsonEditor: React.FC<VegaJsonEditorProps> = ({
                 text-align: center;
                 font-family: ${primaryFont};
                 font-size: 0.75rem;
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
               `}
             >
               {t("vega-json-resize-hint")}

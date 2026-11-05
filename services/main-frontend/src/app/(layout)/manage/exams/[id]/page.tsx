@@ -16,7 +16,7 @@ import {
 import { getOrganization } from "@/generated/api/sdk.generated"
 import { withSignedIn } from "@/shared-module/common/contexts/LoginStateContext"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme, headingFont, typography } from "@/shared-module/common/styles"
+import { headingFont, typography } from "@/shared-module/common/styles"
 import { assertNotNullOrUndefined } from "@/shared-module/common/utils/nullability"
 import {
   manageCourseByIdRoute,
@@ -33,6 +33,7 @@ import {
   TextField,
   ErrorNotice,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { examPointsCsvHref, examSubmissionsCsvHref } from "@/utils/exportDownloadUrls"
 
 import EditExamDialog from "../EditExamDialog"
@@ -139,7 +140,7 @@ const ManageExam: React.FC = () => {
                 font-size: ${typography.h4};
                 font-weight: 700;
                 line-height: 1.2;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 margin: 0 0 1rem 0;
               `}
             >
@@ -150,7 +151,7 @@ const ManageExam: React.FC = () => {
               className={css`
                 padding-bottom: 1rem;
                 margin-bottom: 1rem;
-                border-bottom: 1px solid ${baseTheme.colors.clear[300]};
+                border-bottom: 1px solid ${tones.toneNeutral26};
               `}
             >
               <DescriptionList
@@ -282,7 +283,7 @@ const ManageExam: React.FC = () => {
                 font-family: ${headingFont};
                 font-size: ${typography.h5};
                 font-weight: 600;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 margin: 0 0 0.5rem 0;
               `}
             >

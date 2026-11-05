@@ -7,12 +7,13 @@ import React, { forwardRef } from "react"
 import type { FieldError } from "react-hook-form"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { primaryFont } from "../../styles/typography"
 import { errorToDescription } from "../../utils/strings"
 
-const ERRORCOLOR = baseTheme.colors.red[600]
-const DEFAULTCOLOR = "#dedede"
+const ERRORCOLOR = tones.toneDanger17
+const DEFAULTCOLOR = "var(--tone-tone-neutral-28)"
 
 interface InputExtraProps {
   error?: string | undefined
@@ -23,7 +24,7 @@ interface InputExtraProps {
 const NO_COLOR_FIELD_PADDING = "padding: 8px 10px 10px 10px;"
 
 const Input = styled.input<InputExtraProps>`
-  background: #fcfcfc;
+  background: var(--tone-bg-neutral-11);
   border-width: 2px;
   border-style: solid;
   border-radius: 3px;
@@ -42,7 +43,7 @@ const Input = styled.input<InputExtraProps>`
 
   &:focus,
   &:active {
-    border-color: #55b3f5;
+    border-color: var(--tone-border-info-3);
   }
 
   @media (max-width: 767.98px) {
@@ -51,7 +52,7 @@ const Input = styled.input<InputExtraProps>`
 `
 
 const errorClass = css`
-  color: ${baseTheme.colors.red[600]};
+  color: ${tones.toneDanger17};
   font-size: 14px;
   display: inline-block;
 `
@@ -97,13 +98,13 @@ const FileField = forwardRef<HTMLInputElement, FileFieldProps>(
           aria-label={`${rest.label}${rest.required === true && ` (${t("required")})`}`}
           className={cx(
             css`
-              color: #333;
+              color: var(--tone-fg-neutral-36);
               font-family: ${primaryFont};
               font-weight: 500;
               font-size: 14px;
               display: block;
               margin-bottom: 2px;
-              ${disabled && `color: ${baseTheme.colors.gray[400]};`}
+              ${disabled && `color: ${tones.toneNeutral39};`}
               ${disabled && `cursor: not-allowed;`}
             `,
             rest.labelStyle,

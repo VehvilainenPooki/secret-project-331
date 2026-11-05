@@ -19,8 +19,8 @@ const InstructionBoxEditor: React.FC<
     <BlockWrapper>
       <div
         className={css`
-          background: #fafbfb;
-          border: 1px solid #e2e4e6;
+          background: var(--tone-bg-neutral-13);
+          border: 1px solid var(--color-border);
           padding: 1rem;
         `}
       >

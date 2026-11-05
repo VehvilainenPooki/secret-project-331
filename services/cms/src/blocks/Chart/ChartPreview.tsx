@@ -6,7 +6,8 @@ import { VegaLite } from "react-vega"
 
 import { useDebouncedElementWidth } from "@/shared-module/common/hooks/useDebouncedElementWidth"
 import { useFontLoaded } from "@/shared-module/common/hooks/useFontLoaded"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import { wouldSideScrollOnMobile } from "./chartSpec"
@@ -34,7 +35,7 @@ export const chartCaptionStyle = css`
   margin: 0.5rem 0 0;
   font-family: ${primaryFont};
   font-size: 0.875rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   text-align: center;
 `
 
@@ -93,23 +94,13 @@ const ChartPreview: React.FC<ChartPreviewProps> = ({
       `}
     >
       {!isValidJson && (
-        <div
-          className={messageStyle(
-            baseTheme.colors.red[100],
-            baseTheme.colors.red[400],
-            baseTheme.colors.red[700],
-          )}
-        >
+        <div className={messageStyle(tones.toneDanger2, tones.toneDanger10, tones.toneDanger19)}>
           {t("chart-block-invalid-spec-error")}
         </div>
       )}
       {isValidJson && !hasData && (
         <div
-          className={messageStyle(
-            baseTheme.colors.gray[100],
-            baseTheme.colors.gray[400],
-            baseTheme.colors.gray[700],
-          )}
+          className={messageStyle(tones.toneNeutral29, tones.toneNeutral39, tones.toneNeutral46)}
         >
           {t("chart-block-no-data-file")}
         </div>
@@ -147,12 +138,12 @@ const ChartPreview: React.FC<ChartPreviewProps> = ({
           className={css`
             margin: 0.75rem 0 0;
             padding: 0.75rem 1rem;
-            background: ${baseTheme.colors.yellow[100]};
-            border: 1px solid ${baseTheme.colors.yellow[300]};
+            background: ${tones.toneWarning3};
+            border: 1px solid ${tones.toneWarning6};
             border-radius: 4px;
             font-family: ${primaryFont};
             font-size: 0.8125rem;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
         >
           {t("chart-block-mobile-scroll-warning")}

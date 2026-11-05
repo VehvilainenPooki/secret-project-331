@@ -1,6 +1,8 @@
 import { fireEvent, render, screen } from "@testing-library/react"
 import { vi } from "vitest"
 
+import { resolveThemeVars } from "@/shared-module/components/styles/themes"
+
 import type { UserItemAnswerMatrix } from "../../../../../../../types/quizTypes/answer"
 import type { PublicSpecQuizItemMatrix } from "../../../../../../../types/quizTypes/publicSpec"
 import Matrix from "../Matrix"
@@ -76,7 +78,7 @@ describe("Matrix accessibility", () => {
     renderMatrix()
     const styleText = allCssText()
     // jsdom's CSSOM serializes hex colors to rgb(), so accept either form of #8b8f96.
-    expect(styleText).toMatch(/#8b8f96|rgb\(139,\s*143,\s*150\)/i)
+    expect(resolveThemeVars(styleText)).toMatch(/#8b8f96|rgb\(139,\s*143,\s*150\)/i)
     expect(styleText).not.toContain("#e1e1e1")
   })
 

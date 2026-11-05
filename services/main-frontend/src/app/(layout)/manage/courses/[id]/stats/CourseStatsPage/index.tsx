@@ -2,17 +2,17 @@
 
 import styled from "@emotion/styled"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export { DEFAULT_CHART_HEIGHT } from "./constants"
 
 export const InstructionBox = styled.div`
-  background-color: ${baseTheme.colors.clear[100]};
-  border-left: 4px solid ${baseTheme.colors.blue[600]};
+  background-color: ${tones.toneNeutral12};
+  border-left: 4px solid ${tones.toneInfo23};
   padding: 1rem;
   margin-bottom: 2rem;
   border-radius: 4px;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   font-size: 0.9rem;
   line-height: 1.5;
 `

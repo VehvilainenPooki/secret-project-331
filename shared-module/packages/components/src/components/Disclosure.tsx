@@ -31,10 +31,10 @@ export interface DisclosureProps {
 const CHEVRON_DIRECTION = "right" as const
 
 const rootCss = css`
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--surface-radius);
   overflow: hidden;
-  background: var(--color-clear-50);
+  background: var(--color-surface);
 `
 
 const rootPlainCss = css`
@@ -55,7 +55,7 @@ const triggerCss = css`
   background: transparent;
   text-align: left;
   cursor: pointer;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font: inherit;
 
   &:focus-visible {
@@ -86,7 +86,7 @@ const chevronCss = css`
   display: inline-flex;
   flex: none;
   transition: transform 0.2s ease;
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
 
   &[data-expanded="true"] {
     transform: rotate(90deg);
@@ -108,7 +108,7 @@ const summaryCss = css`
      to nothing and painting over it. */
   flex: 0 1 auto;
   min-width: 0;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-weight: 400;
 `

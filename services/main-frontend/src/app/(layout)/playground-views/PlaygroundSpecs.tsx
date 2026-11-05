@@ -19,7 +19,7 @@ export interface PlaygroundSpecsProps {
 }
 
 const StyledPre = styled.pre`
-  background-color: rgba(218, 230, 229, 0.4);
+  background-color: var(--tone-bg-neutral-33);
   border-radius: 6px;
   padding: 1rem;
   font-size: 13px;

@@ -17,9 +17,9 @@ import {
 } from "@/generated/api/sdk.generated"
 import type { SuspectedCheaterStatus } from "@/generated/api/types.generated"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme } from "@/shared-module/common/styles"
 import { courseUserStatusSummaryRoute } from "@/shared-module/common/utils/routes"
 import { Button, Link, QueryResult, Table, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface CourseCheatersProps {
   courseId: string
@@ -154,14 +154,14 @@ const CourseCheaterTabs: React.FC<React.PropsWithChildren<CourseCheatersProps>> 
         emptyFallback={
           <div
             className={css`
-              background: #e4e5e6;
+              background: var(--tone-bg-neutral-60);
               padding: 1.25rem;
               text-align: center;
               display: flex;
               justify-content: center;
               align-items: center;
               border-radius: 6px;
-              color: ${baseTheme.colors.gray[700]};
+              color: ${tones.toneNeutral46};
 
               span {
                 margin-left: 0.4rem;

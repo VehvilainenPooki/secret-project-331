@@ -20,7 +20,7 @@ const LandingPageCopyTextEditor: React.FC<
         <div
           className={css`
             padding: 1rem;
-            background: #ecf3f2;
+            background: var(--tone-bg-neutral-41);
             text-align: center;
             font-family: ${headingFont};
           `}

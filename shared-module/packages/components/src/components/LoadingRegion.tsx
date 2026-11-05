@@ -59,7 +59,7 @@ const contentCss = css`
 
 const captionCss = css`
   font-size: var(--font-size-1);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-family: var(--font-sans);
 `
 

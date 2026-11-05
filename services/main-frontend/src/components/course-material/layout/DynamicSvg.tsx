@@ -4,7 +4,7 @@ import { css } from "@emotion/css"
 import React, { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface DynamicSvgProps {
   src: string // URL of the SVG
@@ -39,7 +39,7 @@ const DynamicSvg: React.FC<DynamicSvgProps> = ({ src }) => {
     <div
       className={css`
         path {
-          fill: ${baseTheme.colors.gray[500]};
+          fill: ${tones.toneNeutral41};
         }
 
         svg {

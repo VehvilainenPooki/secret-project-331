@@ -10,8 +10,8 @@ import type {
   PeerOrSelfReviewSubmissionWithSubmissionOwner,
 } from "@/generated/api/types.generated"
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Disclosure, Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface PeerOrSelfReviewSubmissionSummaryAccordionProps {
   peerOrSelfReviewSubmission: PeerOrSelfReviewSubmissionWithSubmissionOwner
@@ -21,14 +21,14 @@ export interface PeerOrSelfReviewSubmissionSummaryAccordionProps {
 }
 
 const questionLabelClass = css`
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-weight: 500;
 `
 const numberBadgeClass = css`
   padding: 0.05rem 0.4rem;
   border-radius: 3px;
-  background: ${baseTheme.colors.green[100]};
-  color: ${baseTheme.colors.green[700]};
+  background: ${tones.toneAccent7};
+  color: ${tones.toneAccent23};
   font-weight: 600;
 `
 
@@ -48,8 +48,8 @@ const PeerOrSelfReviewSubmissionSummaryAccordion = ({
     >
       <Disclosure
         className={css`
-          border-color: ${baseTheme.colors.green[200]};
-          background: ${baseTheme.colors.green[50]};
+          border-color: ${tones.toneAccent9};
+          background: ${tones.toneAccent2};
           font-size: 0.8rem;
         `}
         title={
@@ -88,14 +88,14 @@ const PeerOrSelfReviewSubmissionSummaryAccordion = ({
             {showSubmissionBeingReviewed && (
               <span
                 className={css`
-                  color: ${baseTheme.colors.gray[600]};
+                  color: ${tones.toneNeutral44};
                 `}
               >
                 {t("label-submission-being-reviewed")}:{" "}
                 <Link
                   href={`/submissions/${peerOrSelfReviewSubmission.exercise_slide_submission_id}`}
                   className={css`
-                    color: ${baseTheme.colors.blue[600]};
+                    color: ${tones.toneInfo23};
                     text-decoration: none;
                     &:hover {
                       text-decoration: underline;
@@ -171,10 +171,10 @@ const PeerOrSelfReviewSubmissionSummaryAccordion = ({
                       <div
                         className={css`
                           padding: 0.4rem 0.5rem;
-                          background: ${baseTheme.colors.primary[100]};
-                          border: 1px solid ${baseTheme.colors.clear[200]};
+                          background: ${tones.toneNeutral1};
+                          border: 1px solid ${tones.toneNeutral22};
                           border-radius: 3px;
-                          color: ${baseTheme.colors.gray[600]};
+                          color: ${tones.toneNeutral44};
                           line-height: 1.5;
                           white-space: pre-wrap;
                         `}

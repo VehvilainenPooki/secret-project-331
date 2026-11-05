@@ -5,11 +5,11 @@ import { RichText } from "@wordpress/block-editor"
 import React from "react"
 
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
-import { baseTheme } from "@/shared-module/common/styles"
 import {
   CMS_EDITOR_SIDEBAR_THRESHOLD,
   CMS_EDITOR_SIDEBAR_WIDTH,
 } from "@/shared-module/common/utils/constants"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 
@@ -30,7 +30,7 @@ const CourseObjectiveSectionEditor: React.FC<
       >
         <div
           className={css`
-            background: ${baseTheme.colors.clear[100]};
+            background: ${tones.toneNeutral12};
             width: 100%;
             border-radius: 1px;
             transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);

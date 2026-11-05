@@ -6,8 +6,9 @@ import type { ReactNode } from "react"
 import { toast } from "react-hot-toast"
 import { useTranslation } from "react-i18next"
 
+import { tones } from "@/shared-module/components/styles/themes"
+
 import CloseIcon from "../../img/close.svg"
-import { baseTheme } from "../../styles"
 import { respondToOrLarger } from "../../styles/respond"
 import { NotificationWrapper } from "./Base"
 
@@ -86,7 +87,7 @@ const SuccessHeader = styled.div<{ color: string }>`
 const SuccessMessage = styled.div`
   margin-top: auto;
   display: none;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   ${respondToOrLarger.xs} {
     display: block;
   }
@@ -98,11 +99,11 @@ const SuccessNotification = (props: SuccessNotificationProps) => {
     <NotificationWrapper data-testid="toast-notification">
       <Content>
         <IconWrapper>
-          {props.icon ?? <CheckCircle color={baseTheme.colors.green[600]} size={20} />}
+          {props.icon ?? <CheckCircle color={tones.toneAccent21} size={20} />}
         </IconWrapper>
         <TextWrapper role="alert" data-testid="toast-notification-success">
           <SuccessHeader
-            color={props.headerColor ?? baseTheme.colors.green[600]}
+            color={props.headerColor ?? tones.toneAccent21}
             data-testid="toast-notification-success-title"
           >
             {props.header ??
@@ -119,7 +120,7 @@ const SuccessNotification = (props: SuccessNotificationProps) => {
         </TextWrapper>
         {props.toastId && (
           <CloseIconWrapper
-            hoverBackgroundColor={props.closeHoverBackgroundColor ?? baseTheme.colors.gray[300]}
+            hoverBackgroundColor={props.closeHoverBackgroundColor ?? tones.toneNeutral37}
             onClick={() => toast.remove(props.toastId)}
           >
             <CloseIcon />

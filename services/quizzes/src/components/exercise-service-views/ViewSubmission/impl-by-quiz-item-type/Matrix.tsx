@@ -6,8 +6,8 @@ import { VisuallyHidden } from "react-aria-components"
 import { useTranslation } from "react-i18next"
 
 import { MatrixFrame, MatrixTable } from "@/components/Shared/MatrixGrid"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 import { type MatrixShape, matrixShape } from "@/util/matrix"
 
@@ -37,26 +37,26 @@ const VERDICTS: Record<
   }
 > = {
   correct: {
-    background: baseTheme.colors.green[75],
-    iconColor: baseTheme.colors.green[600],
+    background: tones.bgAccent3,
+    iconColor: tones.fgAccent7,
     Icon: CheckCircle,
     labelKey: "matrix-cell-verdict-correct",
   },
   incorrect: {
-    background: baseTheme.colors.red[75],
-    iconColor: baseTheme.colors.red[600],
+    background: tones.bgDanger3,
+    iconColor: tones.fgDanger6,
     Icon: XmarkCircle,
     labelKey: "matrix-cell-verdict-incorrect",
   },
   missing: {
-    background: baseTheme.colors.gray[75],
-    iconColor: baseTheme.colors.gray[500],
+    background: tones.bgNeutral48,
+    iconColor: colors.textMuted,
     Icon: MinusCircle,
     labelKey: "matrix-cell-verdict-missing",
   },
   extra: {
-    background: baseTheme.colors.yellow[100],
-    iconColor: baseTheme.colors.red[600],
+    background: tones.bgWarning2,
+    iconColor: tones.fgDanger6,
     Icon: PlusCircle,
     labelKey: "matrix-cell-verdict-extra",
   },
@@ -149,7 +149,7 @@ const MatrixSubmission: React.FC<
               })}
             />
             <Caption>
-              <CheckCircle color={baseTheme.colors.green[600]} size={18} />
+              <CheckCircle color={tones.toneAccent21} size={18} />
               <span>{t("correct-option-tag")}</span>
             </Caption>
           </div>
@@ -161,7 +161,7 @@ const MatrixSubmission: React.FC<
             margin-top: 0.75rem;
             font-family: ${primaryFont};
             font-size: 0.875rem;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
             text-align: center;
           `}
         >
@@ -191,7 +191,7 @@ const Caption = styled.div`
   gap: 0.3rem;
   margin-top: 0.563rem;
   font-family: ${primaryFont};
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   font-weight: 500;
   font-size: 1rem;
 `
@@ -238,8 +238,8 @@ const MatrixGrid: React.FC<MatrixGridProps> = ({ rows, columns, frame, cellAt })
                       padding-right: ${verdict ? "0.5rem" : "0"};
                       box-sizing: border-box;
                       text-align: center;
-                      color: ${baseTheme.colors.gray[600]};
-                      background-color: ${verdict?.background ?? "#FFFFFF"};
+                      color: ${tones.toneNeutral44};
+                      background-color: ${verdict?.background ?? "var(--tone-tone-neutral-1)"};
                     `}
                   >
                     <MatrixFrame column={column} row={row} frame={frame} />

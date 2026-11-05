@@ -193,7 +193,7 @@ const EmailEditor: React.FC<React.PropsWithChildren<EmailEditorProps>> = ({
         flex-direction: column;
         align-items: stretch;
         gap: var(--space-3);
-        background: #f5f6f7;
+        background: var(--color-surface-sunken);
         padding: var(--space-4);
       `}
     >

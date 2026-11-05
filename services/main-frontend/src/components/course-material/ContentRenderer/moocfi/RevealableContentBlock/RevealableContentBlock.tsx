@@ -36,8 +36,8 @@ const RevealableContentBlock: React.FC<
       <div
         className={css`
           padding: 1rem;
-          background: #f2f2f2;
-          color: #4c5868;
+          background: var(--tone-bg-neutral-40);
+          color: var(--tone-fg-info-10);
         `}
       >
         <Centered variant={"narrow"}>

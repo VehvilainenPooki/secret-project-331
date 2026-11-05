@@ -16,7 +16,7 @@ import {
 import type { CourseModule, CourseModuleThresholdInfo } from "@/generated/api/types.generated"
 import { useCourseStructure } from "@/hooks/useCourseStructure"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import {
   Button,
@@ -26,6 +26,7 @@ import {
   TextField,
   ErrorNotice,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface CheatersThresholdConfigProps {
   courseId: string
@@ -157,7 +158,7 @@ export default function CheatersThresholdConfig({ courseId }: CheatersThresholdC
       <h1
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}
@@ -167,7 +168,7 @@ export default function CheatersThresholdConfig({ courseId }: CheatersThresholdC
       <div
         className={css`
           min-height: 9.375rem;
-          border: 1px solid #cdcdcd;
+          border: 1px solid var(--tone-border-neutral-39);
           border-radius: 4px;
           margin: 1.25rem 0 2.5rem 0;
           padding: 1.245rem;
@@ -181,7 +182,7 @@ export default function CheatersThresholdConfig({ courseId }: CheatersThresholdC
             }
           }
           .description {
-            color: #707070;
+            color: var(--tone-fg-neutral-21);
             margin-bottom: 0.625rem;
           }
           .duration-threshold {
@@ -347,7 +348,7 @@ export default function CheatersThresholdConfig({ courseId }: CheatersThresholdC
                   {showsImplicitDefault && (
                     <span
                       className={css`
-                        color: ${baseTheme.colors.gray[500]};
+                        color: ${tones.toneNeutral41};
                         font-size: 0.875rem;
                       `}
                     >
@@ -357,7 +358,7 @@ export default function CheatersThresholdConfig({ courseId }: CheatersThresholdC
                   {disablesCheck && (
                     <span
                       className={css`
-                        color: ${baseTheme.colors.gray[500]};
+                        color: ${tones.toneNeutral41};
                         font-size: 0.875rem;
                       `}
                     >

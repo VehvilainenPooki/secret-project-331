@@ -5,8 +5,8 @@ import React from "react"
 
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 
-const EXERCISE_CARD_HEADER_BACKGROUND = "#5372B2"
-const EXERCISE_CARD_HEADER_FOREGROUND = "#ffffff"
+const EXERCISE_CARD_HEADER_BACKGROUND = "var(--tone-tone-info-17)"
+const EXERCISE_CARD_HEADER_FOREGROUND = "var(--tone-tone-neutral-1)"
 
 export interface ExerciseCardHeaderProps {
   title: React.ReactNode

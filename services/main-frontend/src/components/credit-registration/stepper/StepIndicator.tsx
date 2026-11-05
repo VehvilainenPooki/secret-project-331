@@ -15,7 +15,7 @@ const NARROW = "@media (max-width: 32rem)"
 
 const countCss = css`
   margin: 0 0 var(--space-3);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-weight: 600;
 `
@@ -62,8 +62,8 @@ const segmentCss = css`
 `
 
 const doneSegmentCss = css`
-  background: var(--color-green-75);
-  color: var(--color-green-700);
+  background: var(--tone-bg-accent-3);
+  color: var(--tone-fg-accent-8);
   font-weight: 500;
 `
 
@@ -71,14 +71,14 @@ const clickableSegmentCss = css`
   cursor: pointer;
 
   &:hover {
-    border-color: var(--color-green-600);
+    border-color: var(--tone-border-accent-10);
   }
 `
 
 const currentSegmentCss = css`
-  background: var(--color-green-600);
-  box-shadow: 0 2px 8px rgba(31, 105, 100, 0.25);
-  color: var(--color-clear-50);
+  background: var(--color-accent);
+  box-shadow: 0 2px 8px var(--tone-shadow-accent-3);
+  color: var(--color-text-on-accent);
   font-size: 16px;
   font-weight: 700;
 
@@ -88,8 +88,8 @@ const currentSegmentCss = css`
 `
 
 const upcomingSegmentCss = css`
-  border: 1px dashed var(--color-gray-200);
-  color: var(--color-gray-500);
+  border: 1px dashed var(--tone-border-neutral-49);
+  color: var(--color-text-muted);
   font-weight: 500;
 `
 
@@ -106,19 +106,19 @@ const markCss = css`
 `
 
 const doneMarkCss = css`
-  background: var(--color-green-600);
-  color: var(--color-clear-50);
+  background: var(--color-accent);
+  color: var(--color-text-on-accent);
   font-size: 14px;
 `
 
 const currentMarkCss = css`
-  background: var(--color-clear-50);
-  color: var(--color-green-600);
+  background: var(--color-surface);
+  color: var(--tone-fg-accent-7);
 `
 
 const upcomingMarkCss = css`
-  border: 1.5px solid var(--color-gray-300);
-  color: var(--color-gray-500);
+  border: 1.5px solid var(--tone-border-neutral-52);
+  color: var(--color-text-muted);
 `
 
 const labelCss = css`

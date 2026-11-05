@@ -5,9 +5,9 @@ import React, { useEffect, useRef, useState } from "react"
 import { useHover, VisuallyHidden } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 
 import type { BlockRendererProps } from "../.."
@@ -117,12 +117,12 @@ const FlipCardBlock: React.FC<React.PropsWithChildren<BlockRendererProps<FlipCar
               height: 100%;
               margin: 0px !important;
               padding: 0px !important;
-              background-color: ${baseTheme.colors.gray[100]};
+              background-color: ${tones.toneNeutral29};
               border-radius: 10px;
               overflow: hidden;
               backface-visibility: hidden;
 
-              ${!currentIsImage && `border: 3px solid ${baseTheme.colors.gray[300]};`}
+              ${!currentIsImage && `border: 3px solid ${tones.toneNeutral37};`}
 
               display: flex;
               flex-direction: column;
@@ -155,14 +155,14 @@ const FlipCardBlock: React.FC<React.PropsWithChildren<BlockRendererProps<FlipCar
               height: 100%;
               margin: 0px !important;
               padding: 0px !important;
-              background-color: ${baseTheme.colors.gray[100]};
+              background-color: ${tones.toneNeutral29};
               border-radius: 10px;
               overflow: hidden;
               backface-visibility: hidden;
 
               transform: rotateY(180deg);
 
-              ${!currentIsImage && `border: 3px solid ${baseTheme.colors.gray[300]};`}
+              ${!currentIsImage && `border: 3px solid ${tones.toneNeutral37};`}
 
               display: flex;
               flex-direction: column;

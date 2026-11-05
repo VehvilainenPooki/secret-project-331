@@ -4,8 +4,8 @@ import { css } from "@emotion/css"
 import React from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 import ConfirmActionBubble from "./ConfirmActionBubble"
@@ -31,14 +31,14 @@ const linkStyle = css`
   overflow-wrap: anywhere;
   padding: 0.4rem 0.6rem;
   border-radius: 6px;
-  background-color: ${baseTheme.colors.clear[50]};
-  border: 1px solid ${baseTheme.colors.green[300]};
+  background-color: ${tones.toneNeutral1};
+  border: 1px solid ${tones.toneAccent12};
 `
 
 const missingPayloadStyle = css`
   margin: 0.5rem 0 0;
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
 `
 
 /** A confirm bubble for `generate_password_reset_link`, showing the link only in this browser. */

@@ -14,7 +14,7 @@ import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutati
 import { dateToDateTimeLocalString } from "@/shared-module/common/utils/time"
 import { Checkbox, DateTimeLocalField, TextField } from "@/shared-module/components"
 
-const DEFAULT_COLOR = "#000000"
+const DEFAULT_COLOR = "var(--tone-tone-neutral-49)"
 
 // Shared with ChapterFormDialog.tsx, whose footer submit button targets this form by id.
 export const NEW_CHAPTER_FORM_ID = "new-chapter-form"

@@ -137,8 +137,8 @@ const surfaceCss = css`
   width: min(95vw, var(--dialog-width-cap));
   max-height: 90vh;
   overflow: hidden;
-  background: var(--color-clear-50);
-  color: var(--color-gray-700);
+  background: var(--color-surface);
+  color: var(--color-text);
   border-radius: var(--surface-radius);
   outline: none;
 
@@ -187,7 +187,7 @@ const headerCss = css`
   padding-bottom: var(--space-4);
 
   &[data-has-title="true"] {
-    border-bottom: 1px solid var(--color-clear-300);
+    border-bottom: 1px solid var(--color-border);
   }
 
   /* Floats over the body so an untitled dialog does not spend a row on the close button. */
@@ -239,11 +239,11 @@ const closeButtonCss = css`
   cursor: pointer;
   font-size: var(--font-size-4);
   line-height: 1;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: var(--color-clear-200);
+    background-color: var(--tone-bg-neutral-52);
   }
 
   &:focus-visible {
@@ -275,7 +275,7 @@ const footerCss = css`
   justify-content: flex-end;
   gap: var(--space-3);
   padding: var(--space-4) var(--dialog-edge-padding) var(--dialog-edge-padding);
-  border-top: 1px solid var(--color-clear-300);
+  border-top: 1px solid var(--color-border);
 
   ${below("xs")} {
     flex-direction: column;

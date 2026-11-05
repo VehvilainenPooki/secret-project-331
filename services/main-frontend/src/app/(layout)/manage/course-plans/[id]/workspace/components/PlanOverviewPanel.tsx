@@ -6,8 +6,8 @@ import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 
 import type { CourseDesignerStage } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, Dialog, Meter, METER_KIND, Select, TONE } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { SCHEDULE_STAGE_ORDER } from "../../schedule/scheduleConstants"
 import { useAdjustScheduleDialogState } from "../hooks/useAdjustScheduleDialogState"
@@ -33,10 +33,10 @@ const summaryCardStyles = css`
   gap: 1.25rem 2rem;
   align-items: center;
   padding: 1.1rem 1.25rem;
-  background: ${baseTheme.colors.green[25]};
-  border: 1px solid ${baseTheme.colors.green[100]};
+  background: ${tones.toneAccent1};
+  border: 1px solid ${tones.toneAccent7};
   border-radius: 10px;
-  box-shadow: 0 1px 0 ${baseTheme.colors.green[100]};
+  box-shadow: 0 1px 0 ${tones.toneAccent7};
 
   @media (max-width: 540px) {
     grid-template-columns: minmax(0, 1fr);
@@ -45,8 +45,8 @@ const summaryCardStyles = css`
 `
 
 const summaryCardNeutralStyles = css`
-  background: ${baseTheme.colors.gray[50]};
-  border: 1px solid ${baseTheme.colors.gray[100]};
+  background: ${tones.toneNeutral14};
+  border: 1px solid ${tones.toneNeutral29};
   box-shadow: none;
 `
 
@@ -55,27 +55,27 @@ const summaryEyebrowStyles = css`
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0 0 0.35rem 0;
 `
 
 const summaryPhaseNameStyles = css`
   font-size: 1.4rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   margin: 0;
   line-height: 1.2;
 `
 
 const summaryStatusLineStyles = css`
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0.45rem 0 0 0;
 `
 
 const summaryNoActiveTextStyles = css`
   font-size: 0.95rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   margin: 0;
   line-height: 1.45;
 `
@@ -112,7 +112,7 @@ const timelineListStyles = css`
     top: 1.4rem;
     bottom: 1.4rem;
     width: 2px;
-    background: ${baseTheme.colors.gray[100]};
+    background: ${tones.toneNeutral29};
   }
 `
 
@@ -127,8 +127,8 @@ const timelineRowStyles = css`
 `
 
 const timelineRowCurrentStyles = css`
-  background: ${baseTheme.colors.green[25]};
-  border: 1px solid ${baseTheme.colors.green[100]};
+  background: ${tones.toneAccent1};
+  border: 1px solid ${tones.toneAccent7};
   padding-left: 0.35rem;
   padding-right: 0.8rem;
 `
@@ -144,26 +144,26 @@ const timelineNodeCurrentStyles = css`
   width: 14px;
   height: 14px;
   border-radius: 999px;
-  background: ${baseTheme.colors.green[600]};
+  background: ${tones.toneAccent21};
   box-shadow:
-    0 0 0 3px ${baseTheme.colors.green[100]},
-    0 0 0 5px ${baseTheme.colors.green[25]};
+    0 0 0 3px ${tones.toneAccent7},
+    0 0 0 5px ${tones.toneAccent1};
 `
 
 const timelineNodePlannedStyles = css`
   width: 10px;
   height: 10px;
   border-radius: 999px;
-  border: 2px solid ${baseTheme.colors.gray[200]};
-  background: ${baseTheme.colors.primary[100]};
+  border: 2px solid ${tones.toneNeutral35};
+  background: ${tones.toneNeutral1};
 `
 
 const timelineNodeCompletedStyles = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: ${baseTheme.colors.green[600]};
-  background: ${baseTheme.colors.primary[100]};
+  color: ${tones.toneAccent21};
+  background: ${tones.toneNeutral1};
   border-radius: 999px;
 `
 
@@ -184,23 +184,23 @@ const timelineRowHeaderStyles = css`
 
 const timelineStageNameStyles = css`
   font-weight: 500;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   font-size: 0.95rem;
 `
 
 const timelineStageNameCurrentStyles = css`
   font-weight: 600;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 1rem;
 `
 
 const timelineStageDateStyles = css`
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[400]};
+  color: ${tones.toneNeutral39};
 `
 
 const timelineStageDateCurrentStyles = css`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const statusPillBaseStyles = css`
@@ -215,18 +215,18 @@ const statusPillBaseStyles = css`
 `
 
 const statusPillInProgressStyles = css`
-  background: ${baseTheme.colors.green[100]};
-  color: ${baseTheme.colors.green[700]};
+  background: ${tones.toneAccent7};
+  color: ${tones.toneAccent23};
 `
 
 const statusPillCompletedStyles = css`
-  background: ${baseTheme.colors.gray[75]};
-  color: ${baseTheme.colors.gray[500]};
+  background: ${tones.toneNeutral19};
+  color: ${tones.toneNeutral41};
 `
 
 const statusPillPlannedStyles = css`
-  background: ${baseTheme.colors.clear[100]};
-  color: ${baseTheme.colors.gray[500]};
+  background: ${tones.toneNeutral12};
+  color: ${tones.toneNeutral41};
 `
 
 const actionBarStyles = css`
@@ -235,13 +235,13 @@ const actionBarStyles = css`
   justify-content: flex-end;
   gap: 0.75rem;
   padding-top: 1rem;
-  border-top: 1px solid ${baseTheme.colors.gray[100]};
+  border-top: 1px solid ${tones.toneNeutral29};
   flex-wrap: wrap;
 `
 
 const actionBarHelperTextStyles = css`
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   margin: 0;
   flex: 1;
   min-width: 0;
@@ -256,7 +256,7 @@ const adjustDialogContentStyles = css`
 const adjustDescriptionStyles = css`
   margin: 0;
   font-size: 0.95rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   line-height: 1.5;
 `
 
@@ -264,21 +264,21 @@ const adjustPreviewCardStyles = css`
   display: flex;
   flex-direction: column;
   padding: 0.9rem 1rem;
-  background: ${baseTheme.colors.gray[50]};
-  border: 1px solid ${baseTheme.colors.gray[100]};
+  background: ${tones.toneNeutral14};
+  border: 1px solid ${tones.toneNeutral29};
   border-radius: 8px;
 `
 
 const adjustPreviewBodyStyles = css`
   margin: 0;
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   line-height: 1.5;
 
   & + & {
     margin-top: 0.55rem;
     padding-top: 0.55rem;
-    border-top: 1px dashed ${baseTheme.colors.gray[100]};
+    border-top: 1px dashed ${tones.toneNeutral29};
   }
 `
 

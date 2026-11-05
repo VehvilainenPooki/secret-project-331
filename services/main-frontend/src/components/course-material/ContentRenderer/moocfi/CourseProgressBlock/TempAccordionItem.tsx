@@ -5,8 +5,9 @@ import { animated, useSpring } from "@react-spring/web"
 
 import ArrowDown from "@/shared-module/common/img/caret-arrow-down.svg"
 import ArrowUp from "@/shared-module/common/img/caret-arrow-up.svg"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { runCallbackIfEnterPressed } from "@/shared-module/common/utils/accessibility"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const AnimatedDiv = animated("div")
 
@@ -30,7 +31,7 @@ const TempAccordion: React.FC<
         role="button"
         tabIndex={0}
         className={css`
-          background-color: rgb(242, 245, 247);
+          background-color: var(--tone-bg-info-2);
           font-family: ${headingFont};
           margin-bottom: ${open ? "3px" : "6px"};
           cursor: pointer;
@@ -40,7 +41,7 @@ const TempAccordion: React.FC<
           padding: 1rem 2rem;
 
           &:hover {
-            background: rgb(235, 239, 242);
+            background: var(--tone-bg-neutral-49);
           }
         `}
       >
@@ -48,7 +49,7 @@ const TempAccordion: React.FC<
           className={css`
             flex: 1;
             font-weight: 500;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             opacity: 0.9;
           `}
         >

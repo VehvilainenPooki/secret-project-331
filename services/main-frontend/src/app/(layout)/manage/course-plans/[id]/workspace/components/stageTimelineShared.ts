@@ -2,14 +2,14 @@ import { css } from "@emotion/css"
 
 import type { StageMonth } from "@/app/(layout)/manage/course-plans/[id]/schedule/scheduleMappers"
 import type { CourseDesignerStage } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones, withAlpha } from "@/shared-module/components/styles/themes"
 
 export const STAGE_ACCENTS: Record<CourseDesignerStage, string> = {
-  Analysis: baseTheme.colors.green[600],
-  Design: baseTheme.colors.green[600],
-  Development: baseTheme.colors.green[600],
-  Implementation: baseTheme.colors.green[600],
-  Evaluation: baseTheme.colors.green[600],
+  Analysis: tones.toneAccent21,
+  Design: tones.toneAccent21,
+  Development: tones.toneAccent21,
+  Implementation: tones.toneAccent21,
+  Evaluation: tones.toneAccent21,
 }
 
 /** Month key for timeline comparisons. */
@@ -45,24 +45,24 @@ export const tabBandBaseStyles = css`
 
 export const tabBandUnselectedStyles = css`
   &:hover {
-    background: ${baseTheme.colors.gray[75]};
+    background: ${tones.toneNeutral19};
     border-radius: 10px;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+    box-shadow: 0 2px 8px var(--tone-shadow-info-7);
   }
 `
 
 export const tabBandSelectedStyles = (accent: string) => css`
-  background: ${accent}20;
+  background: ${withAlpha(accent, 12.55)};
   box-shadow:
-    0 2px 6px rgba(15, 23, 42, 0.08),
-    0 1px 3px rgba(15, 23, 42, 0.05);
+    0 2px 6px var(--tone-shadow-info-8),
+    0 1px 3px var(--tone-shadow-info-5);
   border-bottom: 3px solid ${accent};
   border-radius: 8px 8px 0 0;
 `
 
 export const tabBandFocusRingStyles = css`
-  outline: 2px solid ${baseTheme.colors.green[500]};
+  outline: 2px solid ${tones.toneAccent19};
   outline-offset: 2px;
 `
 
@@ -76,7 +76,7 @@ export const tabBandDividerStyles = css`
     bottom: 8px;
     left: -8px;
     width: 1px;
-    background: ${baseTheme.colors.gray[200]};
+    background: ${tones.toneNeutral35};
   }
 `
 
@@ -90,8 +90,8 @@ export const stagePillStyles = css`
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  background: ${baseTheme.colors.gray[100]};
-  border: 1px solid ${baseTheme.colors.gray[300]};
+  background: ${tones.toneNeutral29};
+  border: 1px solid ${tones.toneNeutral37};
   white-space: nowrap;
   line-height: 1;
 `
@@ -99,21 +99,21 @@ export const stagePillStyles = css`
 export const stagePillSelectedStyles = (accent: string) => css`
   background: ${accent};
   border-color: ${accent};
-  color: white;
+  color: var(--color-text-on-accent);
   box-shadow:
-    0 1px 4px rgba(15, 23, 42, 0.15),
-    0 0 0 1px ${accent}33;
+    0 1px 4px var(--tone-shadow-info-11),
+    0 0 0 1px ${withAlpha(accent, 20)};
 `
 
 export const stagePillCompletedStyles = css`
-  background: ${baseTheme.colors.gray[50]};
-  border-color: ${baseTheme.colors.gray[200]};
-  color: ${baseTheme.colors.gray[500]};
+  background: ${tones.toneNeutral14};
+  border-color: ${tones.toneNeutral35};
+  color: ${tones.toneNeutral41};
 `
 
 export const stagePillFutureStyles = (accent: string) => css`
-  border-color: ${accent}80;
-  color: ${accent}b3;
+  border-color: ${withAlpha(accent, 50.2)};
+  color: ${withAlpha(accent, 70.2)};
 `
 
 export const stageMonthsRowStyles = css`
@@ -131,7 +131,7 @@ export const activeStageDotStyles = css`
   width: 7px;
   height: 7px;
   border-radius: 999px;
-  background: ${baseTheme.colors.green[500]};
+  background: ${tones.toneAccent19};
   flex-shrink: 0;
   margin-right: 0.3rem;
 
@@ -140,7 +140,7 @@ export const activeStageDotStyles = css`
     position: absolute;
     inset: -5px;
     border-radius: inherit;
-    border: 1px solid rgba(34, 197, 94, 0.5);
+    border: 1px solid var(--tone-border-accent-3);
     opacity: 0;
     transform: scale(0.9);
     animation: workspace-timeline-tab-pulse 2s ease-out infinite;

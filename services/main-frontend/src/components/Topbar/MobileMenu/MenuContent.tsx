@@ -37,7 +37,7 @@ export const MenuContent: React.FC<MenuContentProps> = ({
               padding: 12px 20px 8px;
               font-size: 12px;
               font-weight: 600;
-              color: #6b7280;
+              color: var(--tone-fg-neutral-20);
               text-transform: uppercase;
               letter-spacing: 0.05em;
             `}
@@ -67,7 +67,7 @@ export const MenuContent: React.FC<MenuContentProps> = ({
             <div
               className={css`
                 height: 1px;
-                background: #e5e7eb;
+                background: var(--tone-bg-neutral-56);
                 margin: 12px 16px;
               `}
             />

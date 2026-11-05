@@ -9,7 +9,7 @@ export const styledRangeInput = css`
     --range-progress: 0;
     -webkit-appearance: none;
     position: relative;
-    background: #dddee0;
+    background: var(--tone-bg-neutral-67);
     width: 100%;
     height: 4px;
     cursor: pointer;
@@ -18,7 +18,7 @@ export const styledRangeInput = css`
   /* Input range - firefox */
   input[type="range"]::-moz-range-track {
     position: relative;
-    background: #dddee0;
+    background: var(--tone-bg-neutral-67);
     width: 100%;
     height: 4px;
     cursor: pointer;
@@ -28,7 +28,7 @@ export const styledRangeInput = css`
   input[type="range"]::before {
     content: "";
     height: 4px;
-    background: #767b85;
+    background: var(--tone-bg-neutral-86);
     width: var(--range-progress);
     border-bottom-left-radius: 2px;
     border-top-left-radius: 2px;
@@ -39,7 +39,7 @@ export const styledRangeInput = css`
 
   /* played progress length - firefox */
   input[type="range"]::-moz-range-progress {
-    background: #767b85;
+    background: var(--tone-bg-neutral-86);
     border-bottom-left-radius: 2px;
     border-top-left-radius: 2px;
     height: 4px;
@@ -51,8 +51,8 @@ export const styledRangeInput = css`
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #f9f9f9;
-    border: 4px solid #313947;
+    background-color: var(--tone-bg-neutral-17);
+    border: 4px solid var(--tone-border-neutral-58);
     cursor: pointer;
     position: relative;
   }
@@ -67,10 +67,10 @@ export const styledRangeInput = css`
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background: #f9f9f9;
+    background: var(--tone-bg-neutral-17);
     cursor: pointer;
     border: transparent;
-    border: 4px solid #313947;
+    border: 4px solid var(--tone-border-neutral-58);
     position: relative;
   }
   /* dragging thumb - firefox */

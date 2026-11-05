@@ -12,9 +12,10 @@ import { getAgentPagePreviewOptions } from "@/generated/api/@tanstack/react-quer
 import Centered from "@/shared-module/common/components/Centering/Centered"
 import NoIndexMeta from "@/shared-module/common/components/NoIndexMeta"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const CURRENT_PAGE = "page"
 
@@ -51,8 +52,8 @@ function AgentPreviewPage() {
       <header
         data-testid="agent-preview-banner"
         className={css`
-          background: ${baseTheme.colors.gray[700]};
-          color: ${baseTheme.colors.clear[100]};
+          background: ${tones.toneNeutral46};
+          color: ${tones.toneNeutral12};
           padding: 0.5rem 1rem;
           font-size: 0.875rem;
           text-align: center;

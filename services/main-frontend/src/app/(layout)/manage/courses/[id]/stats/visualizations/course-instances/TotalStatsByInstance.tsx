@@ -13,10 +13,10 @@ import {
   useTotalUsersStartedCourseByInstanceQuery,
 } from "@/hooks/stats"
 import useCourseInstancesQuery from "@/hooks/useCourseInstancesQuery"
-import { baseTheme } from "@/shared-module/common/styles"
 import { formatNumber } from "@/shared-module/common/utils/numbers"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResults, Table, type TableColumn } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface TotalStatsByInstanceProps {
   courseId: string
@@ -27,7 +27,7 @@ const tableStyles = css`
 `
 
 const numberCellStyles = css`
-  color: ${baseTheme.colors.green[600]};
+  color: ${tones.toneAccent21};
   font-weight: 600;
 `
 

@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import React from "react"
 
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
-import { baseTheme } from "@/shared-module/exercise-react/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { QuizItemSubmissionComponentProps } from "."
 import type { UserItemAnswerCheckbox } from "../../../../../types/quizTypes/answer"
@@ -18,8 +18,7 @@ const Option = styled.div<StyledProps>`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 3px solid
-    ${({ checked }) => (checked ? baseTheme.colors.green[400] : baseTheme.colors.red[400])};
+  border: 3px solid ${({ checked }) => (checked ? tones.toneAccent16 : tones.toneDanger10)};
   border-radius: 3px;
   margin-bottom: 10px;
   padding: 5px;

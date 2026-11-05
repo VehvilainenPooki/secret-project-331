@@ -14,7 +14,6 @@ import {
 } from "@/generated/api/@tanstack/react-query.generated"
 import type { ExternalCourseOutput } from "@/generated/api/types.generated"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { nullIfEmptyString } from "@/shared-module/common/utils/strings"
 import {
   Button,
@@ -24,6 +23,7 @@ import {
   useDialog,
   ErrorNotice,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ContentDisplayBox from "../manage/course-auditing/CourseCard/ContentDisplayBox"
 
@@ -135,7 +135,7 @@ const ExternalCourseCard: React.FC<ExternalCourseCardProps> = ({ externalCourse 
         key={externalCourse.id}
         className={css`
           padding: 1rem;
-          border: 1px solid rgba(0, 0, 0, 0.12);
+          border: 1px solid var(--tone-border-neutral-24);
         `}
         data-testid="external-course-card"
       >
@@ -160,7 +160,7 @@ const ExternalCourseCard: React.FC<ExternalCourseCardProps> = ({ externalCourse 
             </h1>
             <div
               className={css`
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
                 font-size: 1rem;
                 display: flex;
                 flex-wrap: wrap;

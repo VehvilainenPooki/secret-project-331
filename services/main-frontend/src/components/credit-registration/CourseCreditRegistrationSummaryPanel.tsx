@@ -143,14 +143,14 @@ const headerRowCss = css`
 
 const strongLineCss = css`
   font-weight: 600;
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 /** The owner-group heading: lighter than the module name row it can otherwise be mistaken for. */
 const groupHeadingCss = css`
   font-size: var(--font-size-1);
   font-weight: 500;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   letter-spacing: 0.02em;
   text-transform: uppercase;
 `
@@ -170,14 +170,14 @@ const reasonRowCss = css`
 `
 
 const reasonCountCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
   font-variant-numeric: tabular-nums;
   text-align: right;
 `
 
 const supportNoteCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
 `
 

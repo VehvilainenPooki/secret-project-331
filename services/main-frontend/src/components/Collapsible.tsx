@@ -6,8 +6,8 @@ import { useTranslation } from "react-i18next"
 
 import ArrowDown from "@/shared-module/common/img/caret-arrow-down.svg"
 import ArrowUp from "@/shared-module/common/img/caret-arrow-up.svg"
-import { baseTheme } from "@/shared-module/common/styles"
 import { runCallbackIfEnterPressed } from "@/shared-module/common/utils/accessibility"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export interface CollapsibleProps {
   title: string
@@ -20,7 +20,7 @@ const Collapsible: React.FC<React.PropsWithChildren<CollapsibleProps>> = ({ chil
   return (
     <div
       className={css`
-        background: ${baseTheme.colors.clear[200]};
+        background: ${tones.toneNeutral22};
       `}
     >
       <div
@@ -32,8 +32,8 @@ const Collapsible: React.FC<React.PropsWithChildren<CollapsibleProps>> = ({ chil
         aria-label={visible ? t("show") : t("hide")}
         className={css`
           align-items: stretch;
-          background: ${baseTheme.colors.gray[100]};
-          border: 1px solid ${baseTheme.colors.gray[200]};
+          background: ${tones.toneNeutral29};
+          border: 1px solid ${tones.toneNeutral35};
           display: flex;
           flex-direction: row;
           padding: 0.5rem 0 0.5rem 2rem;

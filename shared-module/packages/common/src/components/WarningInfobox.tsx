@@ -3,15 +3,15 @@
 import { css } from "@emotion/css"
 import { ExclamationTriangle } from "@vectopus/atlas-icons-react"
 
-import { baseTheme } from "../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const WarningInfobox: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <div
       className={css`
         padding: 0.7rem 1rem;
-        border: 2px solid ${baseTheme.colors.yellow[700]};
-        background-color: ${baseTheme.colors.yellow[100]};
+        border: 2px solid ${tones.toneWarning11};
+        background-color: ${tones.toneWarning3};
         border-radius: 8px;
         display: flex;
         align-items: center;
@@ -21,7 +21,7 @@ const WarningInfobox: React.FC<React.PropsWithChildren> = ({ children }) => {
     >
       <ExclamationTriangle
         className={css`
-          color: ${baseTheme.colors.yellow[800]};
+          color: ${tones.toneWarning12};
           margin-right: 0.5rem;
           flex-shrink: 0;
         `}

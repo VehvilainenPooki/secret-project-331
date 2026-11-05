@@ -23,7 +23,7 @@ const EssayFeedback: React.FC<
           flex: 1;
           flex-wrap: wrap;
           margin: 0.5;
-          background: white;
+          background: var(--color-surface);
           flex-direction: column;
         `}
       >
@@ -31,7 +31,7 @@ const EssayFeedback: React.FC<
           className={css`
             display: block;
             font-family: ${primaryFont};
-            color: #676e7b;
+            color: var(--tone-fg-neutral-22);
             font-size: 1.125rem;
             font-weight: 500;
             white-space: pre-wrap;
@@ -50,7 +50,7 @@ const EssayFeedback: React.FC<
           font-family: ${primaryFont};
           font-weight: 600;
           font-size: 1.125rem;
-          color: #4c5868;
+          color: var(--tone-fg-info-10);
           margin: 1rem 0;
         `}
       >

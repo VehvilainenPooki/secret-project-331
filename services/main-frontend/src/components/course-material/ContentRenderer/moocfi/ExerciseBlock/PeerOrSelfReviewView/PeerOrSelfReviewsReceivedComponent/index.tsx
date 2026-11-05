@@ -11,8 +11,9 @@ import { useTranslation } from "react-i18next"
 import { fetchPeerReviewDataReceivedByExerciseIdOptions } from "@/generated/course-material-api/@tanstack/react-query.generated"
 import type { PeerOrSelfReviewsReceived as PeerOrSelfReviewsReceivedData } from "@/generated/course-material-api/types.generated"
 import useUserInfo from "@/shared-module/common/hooks/useUserInfo"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { Button, Disclosure, QueryResult, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ReceivedPeerOrSelfReview from "./ReceivedPeerOrSelfReview"
 
@@ -20,15 +21,15 @@ const Notification = styled.span`
   display: inline-block;
   width: 22px;
   height: 22px;
-  background: #44827e;
-  color: #fff;
+  background: var(--tone-bg-accent-12);
+  color: var(--color-text-on-accent);
   line-height: 112%;
   font-size: 15px;
   font-family: ${headingFont};
   border-radius: 50%;
   text-align: center;
   margin-left: 0.5rem;
-  border: 1px solid ${baseTheme.colors.green[100]};
+  border: 1px solid ${tones.toneAccent7};
 `
 
 interface PeerReviewProps {

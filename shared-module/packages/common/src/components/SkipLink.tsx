@@ -2,11 +2,11 @@
 
 import styled from "@emotion/styled"
 
-import { baseTheme } from "../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const SkipLink = styled.a`
-  background: ${baseTheme.colors.green[600]};
-  color: ${baseTheme.colors.clear[100]};
+  background: ${tones.toneAccent21};
+  color: ${tones.toneNeutral12};
   font-weight: 700;
   left: 50%;
   padding: 6px;

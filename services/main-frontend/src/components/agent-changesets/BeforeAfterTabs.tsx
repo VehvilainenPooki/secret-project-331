@@ -8,7 +8,7 @@ import { mergeProps, useFocusRing, useHover, useTab, useTabPanel } from "react-a
 import { useTranslation } from "react-i18next"
 
 import { tabPillCss, TabStrip } from "@/components/Tabs/tabStrip"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ORIENTATION = "horizontal"
 const CHANGES = "changes"
@@ -23,10 +23,10 @@ export const STICKY_TOP_PROPERTY = "--agent-review-sticky-top"
 
 const panelCss = css`
   min-width: 0;
-  border: 1px solid ${baseTheme.colors.gray[100]};
+  border: 1px solid ${tones.toneNeutral29};
   border-radius: 8px;
   padding: 1rem;
-  background: ${baseTheme.colors.clear[100]};
+  background: ${tones.toneNeutral12};
   overflow: hidden;
 `
 

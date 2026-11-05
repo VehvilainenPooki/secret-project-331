@@ -13,9 +13,10 @@ import useTime from "@/hooks/course-material/useTime"
 import Centered from "@/shared-module/common/components/Centering/Centered"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { courseMaterialAtom } from "@/state/course-material"
 import { viewParamsAtom } from "@/state/course-material/params"
 import { refetchViewAtom } from "@/state/course-material/selectors"
@@ -167,20 +168,16 @@ export default function ExamPageShell({
 
   if (enrollmentTag === "StudentTimeUp") {
     const timeUpMessageClass = css`
-      background: linear-gradient(
-        140deg,
-        ${baseTheme.colors.blue[100]},
-        ${baseTheme.colors.clear[100]}
-      );
-      border: 1px solid ${baseTheme.colors.blue[300]};
-      border-left: 8px solid ${baseTheme.colors.blue[600]};
+      background: linear-gradient(140deg, ${tones.toneInfo5}, ${tones.toneNeutral12});
+      border: 1px solid ${tones.toneInfo8};
+      border-left: 8px solid ${tones.toneInfo23};
       border-radius: 8px;
       padding: 0.75rem 1rem;
       margin: 1rem 0;
       font-family: ${primaryFont};
       font-size: clamp(0.95rem, 2.2vw, 1rem);
       line-height: 1.45;
-      color: ${baseTheme.colors.gray[700]};
+      color: ${tones.toneNeutral46};
     `
     return (
       <Centered variant="default">

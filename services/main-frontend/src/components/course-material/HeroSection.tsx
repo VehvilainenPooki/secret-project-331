@@ -6,8 +6,9 @@ import React, { useRef } from "react"
 
 import { useCornerTapFlip } from "@/hooks/course-material/useCornerTapFlip"
 import { respondToOrLarger } from "@/shared-module/common//styles/respond"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { INCLUDE_THIS_HEADING_IN_HEADINGS_NAVIGATION_CLASS } from "@/shared-module/common/utils/constants"
+import { tones } from "@/shared-module/components/styles/themes"
 import { COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM } from "@/utils/course-material/constants"
 import { escapeUrlForCss } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
@@ -60,12 +61,12 @@ const TextBox = styled.div<TextBoxProps>`
     z-index: 20;
     margin-bottom: 0.5rem;
     line-height: 120%;
-    color: ${({ color }) => (color ? color : baseTheme.colors.gray[700])};
+    color: ${({ color }) => (color ? color : tones.toneNeutral46)};
   }
 
   .chapter {
     font-size: 18px;
-    color: ${({ color }) => (color ? color : baseTheme.colors.gray[700])};
+    color: ${({ color }) => (color ? color : tones.toneNeutral46)};
     opacity: 0.9;
     text-align: ${({ direction }) => direction};
     font-weight: 500;
@@ -75,7 +76,7 @@ const TextBox = styled.div<TextBoxProps>`
   }
 
   span {
-    color: ${({ color }) => (color ? color : baseTheme.colors.gray[700])};
+    color: ${({ color }) => (color ? color : tones.toneNeutral46)};
     font-size: 18px;
     opacity: 0.9;
     z-index: 20;
@@ -146,7 +147,7 @@ const HeroSection: React.FC<React.PropsWithChildren<CardProps>> = ({
         margin-bottom: 3rem;
         /** There should not be empty space before the hero section, so we'll undo the default block margin **/
         margin-top: -${COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM}rem;
-        background-color: ${backgroundColor || baseTheme.colors.clear[100]};
+        background-color: ${backgroundColor || tones.toneNeutral12};
         position: relative;
         touch-action: manipulation;
 

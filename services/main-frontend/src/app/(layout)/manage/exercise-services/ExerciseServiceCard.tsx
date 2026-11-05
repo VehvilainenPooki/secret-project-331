@@ -172,7 +172,7 @@ const ExerciseServiceCard: React.FC<React.PropsWithChildren<ExerciseServiceCardP
         className={css`
           margin: 8px;
           padding: 1rem;
-          border: 1px solid rgba(0, 0, 0, 0.12);
+          border: 1px solid var(--tone-border-neutral-24);
           /* Override card's overflow */
           overflow: visible !important;
         `}
@@ -209,7 +209,7 @@ const ExerciseServiceCard: React.FC<React.PropsWithChildren<ExerciseServiceCardP
                 margin: 0;
                 font-weight: 400;
                 font-size: 1rem;
-                color: rgba(0, 0, 0, 0.6);
+                color: var(--tone-fg-neutral-26);
               `}
             >
               {editing || t("header-slug", { slug: service.slug })}

@@ -4,8 +4,8 @@ import { css } from "@emotion/css"
 import { useTranslation } from "react-i18next"
 
 import { useUserCourseProgress } from "@/hooks/useUserCourseProgress"
-import { baseTheme } from "@/shared-module/common/styles"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export function CourseProgressSection({ courseId, userId }: { courseId: string; userId: string }) {
   const { t } = useTranslation()
@@ -18,7 +18,7 @@ export function CourseProgressSection({ courseId, userId }: { courseId: string; 
           className={css`
             margin-top: 0.5rem;
             padding-top: 1rem;
-            border-top: 2px solid ${baseTheme.colors.clear[300]};
+            border-top: 2px solid ${tones.toneNeutral26};
           `}
         >
           <h4
@@ -27,7 +27,7 @@ export function CourseProgressSection({ courseId, userId }: { courseId: string; 
               font-weight: 600;
               text-transform: uppercase;
               letter-spacing: 0.05em;
-              color: ${baseTheme.colors.gray[500]};
+              color: ${tones.toneNeutral41};
               margin: 0 0 0.75rem 0;
             `}
           >
@@ -45,7 +45,7 @@ export function CourseProgressSection({ courseId, userId }: { courseId: string; 
                 key={mod.course_module_id}
                 className={css`
                   padding: 0.5rem;
-                  background: ${baseTheme.colors.clear[100]};
+                  background: ${tones.toneNeutral12};
                   border-radius: 6px;
                   font-size: 0.85rem;
                 `}
@@ -53,7 +53,7 @@ export function CourseProgressSection({ courseId, userId }: { courseId: string; 
                 <div
                   className={css`
                     font-weight: 600;
-                    color: ${baseTheme.colors.gray[700]};
+                    color: ${tones.toneNeutral46};
                     margin-bottom: 0.25rem;
                   `}
                 >
@@ -61,7 +61,7 @@ export function CourseProgressSection({ courseId, userId }: { courseId: string; 
                 </div>
                 <div
                   className={css`
-                    color: ${baseTheme.colors.gray[600]};
+                    color: ${tones.toneNeutral44};
                   `}
                 >
                   {mod.score_maximum !== null && mod.score_maximum !== undefined

@@ -23,7 +23,7 @@ const rowCss = css`
   padding: 14px 0;
 
   & + & {
-    border-top: 1px solid var(--color-clear-300);
+    border-top: 1px solid var(--color-border);
   }
 `
 
@@ -36,7 +36,7 @@ const rowTitleCss = css`
 const closingCss = css`
   padding: 14px var(--space-4);
   border-radius: var(--surface-radius);
-  background: var(--color-clear-100);
+  background: var(--color-surface-sunken);
 `
 
 export interface OverviewPageProps {

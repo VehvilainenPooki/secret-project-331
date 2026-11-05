@@ -4,10 +4,11 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import useMedia from "@/shared-module/common/hooks/useMedia"
-import { baseTheme, headingFont, primaryFont } from "@/shared-module/common/styles"
+import { headingFont, primaryFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withNoSsr from "@/shared-module/common/utils/withNoSsr"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
@@ -52,13 +53,13 @@ const TableBox: React.FC<React.PropsWithChildren<BlockRendererProps<TableBoxAttr
           }
 
           th {
-            background-color: ${baseTheme.colors.green[500]};
+            background-color: ${tones.toneAccent19};
             align-items: center;
             margin-bottom: 5px;
             font-family: ${headingFont};
             font-size: 17px;
             font-weight: bold;
-            color: #ffffff;
+            color: var(--color-text-on-accent);
             padding: 12px 10px;
             border: none;
           }
@@ -67,18 +68,18 @@ const TableBox: React.FC<React.PropsWithChildren<BlockRendererProps<TableBoxAttr
             border-top: none !important;
 
             th {
-              background-color: ${baseTheme.colors.green[200]};
+              background-color: ${tones.toneAccent9};
               text-align: left;
-              color: ${baseTheme.colors.green[600]};
+              color: ${tones.toneAccent21};
               border: none !important;
             }
           }
 
           td {
-            background-color: ${baseTheme.colors.green[100]};
+            background-color: ${tones.toneAccent7};
             align-items: center;
             padding: 10px;
-            color: ${baseTheme.colors.green[700]};
+            color: ${tones.toneAccent23};
             font-family: ${primaryFont};
             font-size: 18px;
             font-weight: 500;
@@ -90,7 +91,7 @@ const TableBox: React.FC<React.PropsWithChildren<BlockRendererProps<TableBoxAttr
           caption {
             font-size: 15px;
             text-align: center;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
             margin-top: 10px;
           }
         `}

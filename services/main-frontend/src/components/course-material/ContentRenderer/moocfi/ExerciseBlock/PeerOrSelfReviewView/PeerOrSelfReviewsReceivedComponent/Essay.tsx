@@ -9,14 +9,14 @@ const Wrapper = styled.div`
 
   h4 {
     font-size: 16px !important;
-    color: #215887;
+    color: var(--tone-fg-info-11);
     line-height: 1.4;
     margin-bottom: 0.8rem;
     font-weight: 500;
   }
 
   span {
-    color: #535a66;
+    color: var(--color-text-muted);
   }
 `
 

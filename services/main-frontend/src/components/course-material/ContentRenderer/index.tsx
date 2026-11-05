@@ -8,10 +8,10 @@ import React, { createContext, useContext } from "react"
 import { useTranslation } from "react-i18next"
 
 import { BreakFromCenteredDisabledContext } from "@/shared-module/common/components/Centering/BreakFromCentered"
-import { baseTheme } from "@/shared-module/common/styles"
 import { linkWithExtraIconClass } from "@/shared-module/common/styles/constants"
 import dynamicImport from "@/shared-module/common/utils/dynamicImport"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { Block } from "@/types/courseMaterialBlock"
 import {
   COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM,
@@ -198,7 +198,7 @@ export const blockToRendererMap: Record<string, any> = {
 export const BlockRendererOverridesContext = createContext<Record<string, any>>({})
 
 const highlightedBlockStyles = css`
-  outline: 2px solid ${baseTheme.colors.red[400]};
+  outline: 2px solid ${tones.toneDanger10};
   outline-offset: 10px;
 `
 
@@ -259,7 +259,7 @@ const ContentRenderer: React.FC<React.PropsWithChildren<ContentRendererProps>> =
         // Ensure accessibility in an ugly way for target _blank
         const elements = `<span class="screen-reader-only"> ${t(
           "screen-reader-opens-in-new-tab",
-        )}</span><svg aria-hidden="true" width="16px" height="16px" viewBox="0 0 24 24"><g stroke-width="2.1" stroke="#666" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 13.5 17 19.5 5 19.5 5 7.5 11 7.5"></polyline><path d="M14,4.5 L20,4.5 L20,10.5 M20,4.5 L11,13.5"></path></g></svg>`
+        )}</span><svg aria-hidden="true" width="16px" height="16px" viewBox="0 0 24 24"><g stroke-width="2.1" style="stroke:var(--tone-fg-neutral-25)" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 13.5 17 19.5 5 19.5 5 7.5 11 7.5"></polyline><path d="M14,4.5 L20,4.5 L20,10.5 M20,4.5 L11,13.5"></path></g></svg>`
         const text = node.innerHTML
         node.innerHTML = text + elements
       }
@@ -331,21 +331,21 @@ const ContentRenderer: React.FC<React.PropsWithChildren<ContentRendererProps>> =
           text-underline-offset: 4.6px;
           text-decoration-thickness: 1.6px;
           a {
-            color: #1072ea;
+            color: var(--tone-fg-info-3);
             &:hover {
-              color: #096df1;
+              color: var(--tone-fg-info-5);
             }
             &:active {
-              color: #0870d9;
+              color: var(--tone-fg-info-7);
             }
             &:visited {
-              color: #8050f2;
+              color: var(--tone-fg-info-6);
             }
           }
 
           /* Styling for inline code elements */
           code:not(pre code) {
-            background: #e5e5e5;
+            background: var(--tone-bg-neutral-58);
             padding: 0 0.4rem 0.2rem 0.4rem;
             border-radius: 3px;
           }

@@ -5,8 +5,8 @@ import React from "react"
 
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import Centered from "@/shared-module/common/components/Centering/Centered"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 import InnerBlocks from "../util/InnerBlocks"
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
   /* Outer lines */
   .line {
     position: absolute;
-    background: #cecfd3;
+    background: var(--tone-bg-neutral-72);
     z-index: 0;
     pointer-events: none;
   }
@@ -55,7 +55,7 @@ const Wrapper = styled.div`
     left: 10px;
     right: 10px;
     top: 24px;
-    background: #e2e3e7;
+    background: var(--tone-bg-neutral-63);
     z-index: 0;
   }
 
@@ -77,7 +77,7 @@ const Wrapper = styled.div`
     margin: 0 0 1rem 0 !important;
     padding: 0 !important;
     font-weight: 700 !important;
-    color: ${baseTheme.colors.gray[700]} !important;
+    color: ${tones.toneNeutral46} !important;
   }
 
   .content #about-this-course {
@@ -106,7 +106,7 @@ const Wrapper = styled.div`
   .content li::marker {
     content: "☉  ";
     font-size: 1rem;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   }
 
   /* Subheadings */
@@ -114,8 +114,8 @@ const Wrapper = styled.div`
     margin: 1.5rem 0 0 0 !important;
     padding-top: 0.75rem !important;
     font-weight: 700 !important;
-    color: ${baseTheme.colors.gray[700]};
-    border-top: 2px solid #e2e3e7;
+    color: ${tones.toneNeutral46};
+    border-top: 2px solid var(--tone-border-neutral-17);
   }
 
   /* Remove trailing empty space */

@@ -49,7 +49,7 @@ const PagesInChapter: React.FC<React.PropsWithChildren<PagesInChapterProps>> = (
               font-size: 1.5rem;
               font-weight: 500;
               text-align: center;
-              color: #1a2333;
+              color: var(--color-text);
               margin-bottom: 1.6rem;
 
               ${respondToOrLarger.md} {

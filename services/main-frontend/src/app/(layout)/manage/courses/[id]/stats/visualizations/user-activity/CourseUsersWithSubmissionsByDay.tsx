@@ -8,9 +8,9 @@ import { useTranslation } from "react-i18next"
 
 import Echarts from "@/components/charts/Echarts"
 import { getCourseDailyUsersWhoSubmittedSomethingOptions } from "@/generated/api/@tanstack/react-query.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import StatsHeader from "../../StatsHeader"
 import NoDataMessage from "../NoDataMessage"
@@ -40,12 +40,12 @@ const CourseUsersWithSubmissionsByDay: React.FC<
 
       <div
         className={css`
-          background-color: ${baseTheme.colors.clear[100]};
-          border-left: 4px solid ${baseTheme.colors.blue[600]};
+          background-color: ${tones.toneNeutral12};
+          border-left: 4px solid ${tones.toneInfo23};
           padding: 1rem;
           margin-bottom: 2rem;
           border-radius: 4px;
-          color: ${baseTheme.colors.gray[600]};
+          color: ${tones.toneNeutral44};
           font-size: 0.9rem;
           line-height: 1.5;
         `}
@@ -56,7 +56,7 @@ const CourseUsersWithSubmissionsByDay: React.FC<
       <div
         className={css`
           margin-bottom: 2rem;
-          border: 3px solid ${baseTheme.colors.clear[200]};
+          border: 3px solid ${tones.toneNeutral22};
           border-radius: 6px;
           padding: 1rem;
           min-height: 300px;

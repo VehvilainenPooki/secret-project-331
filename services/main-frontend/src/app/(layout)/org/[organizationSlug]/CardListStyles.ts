@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export const CardList = styled.ul`
   margin: 1rem 0;
@@ -14,7 +14,7 @@ export const CardList = styled.ul`
 export const CardListItem = styled.li`
   margin: 0.5rem 0;
   padding: 1.5rem;
-  background-color: ${baseTheme.colors.primary[100]};
-  border: 1px solid ${baseTheme.colors.clear[300]};
+  background-color: ${tones.toneNeutral1};
+  border: 1px solid ${tones.toneNeutral26};
   border-radius: 6px;
 `

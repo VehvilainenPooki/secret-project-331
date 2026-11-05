@@ -11,9 +11,9 @@ import type { TFunction } from "i18next"
 import { createElement, type ReactNode } from "react"
 
 import type { AnalysisWorkspaceV1, CourseDesignerStage } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { stringToNumberOrNull } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 export const STAGE_ANALYSIS: CourseDesignerStage = "Analysis"
 export const FIELD_CREDITS = "credits"
@@ -263,8 +263,8 @@ export const stickyToolbarStyles = css`
   z-index: 3;
   padding: 0.9rem 1rem 1rem;
   margin: 0 0 0.5rem 0;
-  background: ${baseTheme.colors.clear[100]};
-  border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+  background: ${tones.toneNeutral12};
+  border-bottom: 1px solid ${tones.toneNeutral29};
 
   ${respondToOrLarger.md} {
     padding-left: 1.5rem;
@@ -299,18 +299,18 @@ export const sectionNavLinkStyles = css`
   align-items: center;
   font-size: 0.85rem;
   font-weight: 500;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   text-decoration: none;
   padding: 0.35rem 0.1rem;
   border-bottom: 2px solid transparent;
 
   &:hover {
-    color: ${baseTheme.colors.gray[900]};
-    border-bottom-color: ${baseTheme.colors.gray[300]};
+    color: ${tones.toneNeutral48};
+    border-bottom-color: ${tones.toneNeutral37};
   }
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
     border-radius: 0.2rem;
   }
@@ -318,8 +318,8 @@ export const sectionNavLinkStyles = css`
 
 export const sectionNavLinkActiveStyles = css`
   font-weight: 600;
-  color: ${baseTheme.colors.gray[900]};
-  border-bottom-color: ${baseTheme.colors.green[600]};
+  color: ${tones.toneNeutral48};
+  border-bottom-color: ${tones.toneAccent21};
 `
 
 export const sectionCardStyles = css`
@@ -328,28 +328,28 @@ export const sectionCardStyles = css`
   gap: 0;
   padding: 1rem 1.1rem;
   border-radius: 0.5rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
-  background: ${baseTheme.colors.gray[50]};
+  border: 1px solid ${tones.toneNeutral35};
+  background: ${tones.toneNeutral14};
 `
 
 export const sectionAccentByIndex = [
   css`
-    border-left: 4px solid ${baseTheme.colors.green[600]};
+    border-left: 4px solid ${tones.toneAccent21};
   `,
   css`
-    border-left: 4px solid ${baseTheme.colors.green[500]};
+    border-left: 4px solid ${tones.toneAccent19};
   `,
   css`
-    border-left: 4px solid ${baseTheme.colors.blue[600]};
+    border-left: 4px solid ${tones.toneInfo23};
   `,
   css`
-    border-left: 4px solid ${baseTheme.colors.blue[500]};
+    border-left: 4px solid ${tones.toneInfo20};
   `,
   css`
-    border-left: 4px solid ${baseTheme.colors.purple[600]};
+    border-left: 4px solid ${tones.toneSpecial2};
   `,
   css`
-    border-left: 4px solid ${baseTheme.colors.green[800]};
+    border-left: 4px solid ${tones.toneAccent25};
   `,
 ]
 
@@ -373,15 +373,15 @@ export const sectionToggleStyles = css`
   cursor: pointer;
   text-align: left;
   font: inherit;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   border-radius: 0.35rem;
 
   &:hover {
-    background: ${baseTheme.colors.gray[100]};
+    background: ${tones.toneNeutral29};
   }
 
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[600]};
+    outline: 2px solid ${tones.toneAccent21};
     outline-offset: 2px;
     border-radius: 0.25rem;
   }
@@ -391,7 +391,7 @@ export const sectionChevronStyles = (expanded: boolean) => css`
   display: inline-flex;
   flex-shrink: 0;
   line-height: 0;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   transform: rotate(${expanded ? "180deg" : "0deg"});
   transition: transform 0.15s ease;
 `
@@ -405,7 +405,7 @@ export const sectionBodyStyles = css`
 export const sectionTitleStyles = css`
   font-size: 1.15rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   margin: 0;
 `
 
@@ -417,22 +417,22 @@ export const sectionHeaderIconWrapStyles = css`
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 0.375rem;
-  background: ${baseTheme.colors.green[50]};
-  color: ${baseTheme.colors.green[700]};
+  background: ${tones.toneAccent2};
+  color: ${tones.toneAccent23};
 `
 
 export const subsectionTitleStyles = css`
   font-size: 0.85rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   margin: 0.25rem 0 0 0;
   padding-bottom: 0.35rem;
-  border-bottom: 1px solid ${baseTheme.colors.gray[200]};
+  border-bottom: 1px solid ${tones.toneNeutral35};
 `
 
 export const staticTextStyles = css`
   font-size: 0.9rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   line-height: 1.55;
   margin: 0;
   white-space: pre-line;
@@ -459,8 +459,8 @@ export const contributorsListStyles = css`
 
 export const contributorCardStyles = css`
   border-radius: 0.5rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
-  background: ${baseTheme.colors.clear[50]};
+  border: 1px solid ${tones.toneNeutral35};
+  background: ${tones.toneNeutral1};
   padding: 1rem 1rem 1.1rem;
   display: flex;
   flex-direction: column;
@@ -477,14 +477,14 @@ export const contributorCardLeadStyles = css`
 export const contributorCardTitleStyles = css`
   font-size: 0.95rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[900]};
+  color: ${tones.toneNeutral48};
   margin: 0 0 0.35rem 0;
   line-height: 1.35;
 `
 
 export const contributorDutiesStyles = css`
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   margin: 0;
   line-height: 1.5;
 `
@@ -518,27 +518,27 @@ export const modeAndPeriodsRowStyles = css`
 export const uhCalloutStyles = css`
   margin-top: 0.5rem;
   border-radius: 0.5rem;
-  border: 1px solid ${baseTheme.colors.blue[200]};
-  background: ${baseTheme.colors.blue[25]};
+  border: 1px solid ${tones.toneInfo7};
+  background: ${tones.toneInfo1};
   padding: 0.85rem 1rem;
 `
 
 export const uhCalloutTitleStyles = css`
   font-size: 0.9rem;
   font-weight: 600;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
   margin: 0 0 0.5rem 0;
 `
 
 export const uhLineStyles = css`
   font-size: 0.85rem;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   margin: 0.35rem 0;
   line-height: 1.5;
 `
 
 const uhLinkStyles = css`
-  color: ${baseTheme.colors.green[700]};
+  color: ${tones.toneAccent23};
   text-decoration: underline;
   word-break: break-all;
 `

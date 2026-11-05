@@ -2,10 +2,10 @@
 
 import { css, cx } from "@emotion/css"
 
-import { baseTheme } from "../../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const NavLinkStyles = css`
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
@@ -15,7 +15,7 @@ const NavLinkStyles = css`
   /* margin: 0.5rem 1.5rem; */
   outline: none;
   &:focus-visible {
-    outline: 2px solid ${baseTheme.colors.green[500]};
+    outline: 2px solid ${tones.toneAccent19};
     outline-offset: 2px;
   }
   /*
@@ -27,7 +27,7 @@ const NavLinkStyles = css`
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: ${baseTheme.colors.gray[700]};
+    background-color: ${tones.toneNeutral46};
     transform-origin: bottom right;
     transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
   }

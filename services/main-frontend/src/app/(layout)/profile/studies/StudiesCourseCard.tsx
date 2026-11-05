@@ -64,13 +64,13 @@ export interface StudiesCourseCardProps {
 
 /** A course with every module behind it says so in the band, not only in a line of small print. */
 const completedHeaderCss = css`
-  border-bottom-color: var(--color-green-200);
-  background: var(--color-green-100);
+  border-bottom-color: var(--tone-border-accent-4);
+  background: var(--tone-bg-accent-4);
 `
 
 /** The band's small print, held legible against the completed tint. */
 const completedFactsCss = css`
-  color: var(--color-green-700);
+  color: var(--tone-fg-accent-8);
 `
 
 /** One module: name and status, then its small print, then its figures. */
@@ -84,7 +84,7 @@ const courseTitleCss = css`
   margin: 0;
   min-width: 0;
   overflow-wrap: anywhere;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-3);
   font-weight: 600;
   line-height: 1.3;
@@ -93,7 +93,7 @@ const courseTitleCss = css`
 /** A step below the course title, so a card of several modules reads as one course with extras. */
 const moduleNameCss = css`
   margin: 0;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-2);
   font-weight: 600;
   line-height: 1.3;
@@ -101,13 +101,13 @@ const moduleNameCss = css`
 
 /** The result is the datum beside the name's label, so it carries less weight. */
 const resultCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 500;
 `
 
 /** A module that is passed, or has nothing left to reach. */
 const achievedCss = css`
-  color: var(--color-green-700);
+  color: var(--tone-fg-accent-8);
   font-weight: 600;
 `
 
@@ -154,17 +154,17 @@ const examRowCss = css`
   gap: var(--space-3);
   max-width: ${FIGURE_WIDTH};
   font-size: var(--font-size-1);
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
 `
 
 const examResultCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 600;
 `
 
 /** Holds a bare figure to the same weight and digit width as the `Meter` value above it. */
 const figureValueCss = css`
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 `

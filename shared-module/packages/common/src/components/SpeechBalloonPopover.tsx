@@ -6,7 +6,8 @@ import React from "react"
 import type { PopoverProps } from "react-aria-components"
 import { Dialog, OverlayArrow, Popover } from "react-aria-components"
 
-import { baseTheme } from "../styles"
+import { colors, tones } from "@/shared-module/components/styles/themes"
+
 import { respondToOrLarger } from "../styles/respond"
 
 interface SpeechBalloonPopoverProps extends Omit<PopoverProps, "children"> {
@@ -18,10 +19,10 @@ interface SpeechBalloonPopoverProps extends Omit<PopoverProps, "children"> {
 }
 
 const COLORS = {
-  bg: "#ffffff",
-  border: baseTheme.colors.green[400],
-  text: baseTheme.colors.gray[700],
-  shadow: "rgba(0, 0, 0, 0.4)",
+  bg: "var(--color-surface)",
+  border: tones.borderAccent8,
+  text: colors.text,
+  shadow: "var(--tone-shadow-neutral-27)",
 }
 
 // modified from SpeechBalloon

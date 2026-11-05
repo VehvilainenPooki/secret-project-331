@@ -58,42 +58,42 @@ const tones: Record<InfoboxTone, { icon: React.ComponentType<{ size?: number }>;
   neutral: {
     icon: MinusCircle,
     css: css`
-      border-color: var(--color-gray-400);
-      background: var(--color-gray-50);
-      --infobox-icon: var(--color-gray-500);
+      border-color: var(--color-border-strong);
+      background: var(--tone-bg-neutral-31);
+      --infobox-icon: var(--color-text-muted);
     `,
   },
   info: {
     icon: InfoCircle,
     css: css`
-      border-color: var(--color-blue-500);
-      background: var(--color-blue-25);
-      --infobox-icon: var(--color-blue-500);
+      border-color: var(--tone-border-info-8);
+      background: var(--tone-bg-info-1);
+      --infobox-icon: var(--tone-fg-info-8);
     `,
   },
   success: {
     icon: CheckCircle,
     css: css`
-      border-color: var(--color-green-600);
-      background: var(--color-green-50);
-      --infobox-icon: var(--color-green-600);
+      border-color: var(--tone-border-accent-10);
+      background: var(--tone-bg-accent-2);
+      --infobox-icon: var(--tone-fg-accent-7);
     `,
   },
   warning: {
     icon: ExclamationTriangle,
     css: css`
-      border-color: var(--color-yellow-700);
-      background: var(--color-yellow-100);
+      border-color: var(--tone-border-warning-3);
+      background: var(--tone-bg-warning-2);
       /* The yellow ramp is not contrast-safe as ink, so the icon stays grey. */
-      --infobox-icon: var(--color-gray-700);
+      --infobox-icon: var(--color-text);
     `,
   },
   danger: {
     icon: ExclamationTriangle,
     css: css`
-      border-color: var(--color-crimson-600);
-      background: var(--color-crimson-75);
-      --infobox-icon: var(--color-crimson-600);
+      border-color: var(--tone-border-danger-10);
+      background: var(--tone-bg-danger-4);
+      --infobox-icon: var(--tone-fg-danger-12);
     `,
   },
 }
@@ -117,7 +117,7 @@ const bodyCss = css`
 const headingCss = css`
   display: block;
   margin-bottom: var(--space-2);
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-weight: 600;
 `
 

@@ -10,9 +10,9 @@ import { useTranslation } from "react-i18next"
 import type { PlaygroundSettings } from "@/app/(layout)/playground-tabs/page"
 import { DEFAULT_SERVICE_INFO_URL } from "@/constants/playground"
 import DebugModal from "@/shared-module/common/components/DebugModal"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Checkbox, TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import type { ExerciseServiceInfoApi } from "@/utils/playgroundSchemas"
 
 const serviceInfoStatusRow = css`
@@ -50,9 +50,9 @@ const PlayGroundSettings: React.FC<PlayGroundSettingsProps> = ({
         {!serviceInfoQuery.isLoading && (
           <div className={serviceInfoStatusRow}>
             {isValidServiceInfo ? (
-              <CheckCircle color={baseTheme.colors.green[400]} size={16} />
+              <CheckCircle color={tones.toneAccent16} size={16} />
             ) : (
-              <BellXmark color={baseTheme.colors.red[500]} size={16} />
+              <BellXmark color={tones.toneDanger15} size={16} />
             )}
             <span>{isValidServiceInfo ? t("valid-service-info") : t("invalid-service-info")}</span>
             <DebugModal data={serviceInfoQuery.data} buttonSize="small" />

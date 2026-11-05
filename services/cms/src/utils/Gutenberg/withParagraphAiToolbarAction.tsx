@@ -10,8 +10,8 @@ import { chevronRight } from "@wordpress/icons"
 import { useContext } from "react"
 import { toast } from "react-hot-toast"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { LoadingRegion, type PromptControls, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
 import PageContext from "../../contexts/PageContext"
@@ -38,9 +38,9 @@ const SUBMENU_TRANSLATE = "translate" as const
 
 type SubmenuState = AiActionGroupId | typeof SUBMENU_TONE | typeof SUBMENU_TRANSLATE | null
 
-const BORDER_COLOR = baseTheme.colors.gray[200]
-const ACCENT_COLOR = baseTheme.colors.green[600]
-const TEXT_COLOR = baseTheme.colors.gray[700]
+const BORDER_COLOR = tones.toneNeutral35
+const ACCENT_COLOR = tones.toneAccent21
+const TEXT_COLOR = tones.toneNeutral46
 
 interface ParagraphBlockProps {
   name: string
@@ -390,7 +390,7 @@ const withParagraphAiToolbarAction = createHigherOrderComponent((BlockEdit) => {
               padding: 0.75rem 1rem;
               border-radius: 4px;
               border: 1px solid ${BORDER_COLOR};
-              background: #f9fafb;
+              background: var(--tone-bg-neutral-16);
               color: ${TEXT_COLOR};
               font-size: 0.9rem;
             `}
@@ -433,7 +433,7 @@ const withParagraphAiToolbarAction = createHigherOrderComponent((BlockEdit) => {
                 padding: 0.75rem 1rem;
                 border-radius: 4px;
                 border: 2px solid ${isSelected ? ACCENT_COLOR : BORDER_COLOR};
-                background: #fff;
+                background: var(--color-surface);
                 color: inherit;
                 cursor: pointer;
                 white-space: pre-wrap;

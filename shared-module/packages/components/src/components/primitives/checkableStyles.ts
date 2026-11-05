@@ -71,7 +71,7 @@ export const switchTrackCss = css`
   padding: 3px;
   border-radius: 999px;
   background: var(--switch-track-off);
-  box-shadow: inset 0 0 0 1px rgba(10, 15, 23, 0.12);
+  box-shadow: inset 0 0 0 1px var(--tone-shadow-neutral-11);
   transition:
     background-color 0.18s ease,
     box-shadow 0.18s ease;
@@ -81,13 +81,13 @@ export const switchTrackCss = css`
   }
 
   &[data-pressed="true"] {
-    box-shadow: inset 0 0 0 1px rgba(10, 15, 23, 0.18);
+    box-shadow: inset 0 0 0 1px var(--tone-shadow-neutral-18);
   }
 
   &[data-focus-visible="true"] {
     box-shadow:
       0 0 0 var(--focus-ring-width) var(--switch-focus-ring),
-      inset 0 0 0 1px rgba(10, 15, 23, 0.12);
+      inset 0 0 0 1px var(--tone-shadow-neutral-11);
   }
 
   &[data-invalid="true"] {
@@ -114,7 +114,7 @@ export const switchThumbCss = css`
   height: 24px;
   border-radius: 999px;
   background: var(--switch-thumb);
-  box-shadow: 0 1px 4px rgba(10, 15, 23, 0.18);
+  box-shadow: 0 1px 4px var(--tone-shadow-neutral-18);
   transform: translateX(0);
   transition: transform 0.18s ease;
 
@@ -123,7 +123,7 @@ export const switchThumbCss = css`
   }
 
   &[data-pressed="true"] {
-    box-shadow: 0 1px 3px rgba(10, 15, 23, 0.14);
+    box-shadow: 0 1px 3px var(--tone-shadow-neutral-14);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -142,7 +142,7 @@ export const choiceIndicatorCss = css`
   height: 20px;
   border: 1px solid var(--field-border);
   background: var(--field-bg);
-  color: var(--color-primary-100);
+  color: var(--color-text-on-accent);
   transition:
     border-color 0.18s ease,
     background-color 0.18s ease,
@@ -154,7 +154,7 @@ export const choiceIndicatorCss = css`
   }
 
   &[data-focus-visible="true"] {
-    box-shadow: 0 0 0 var(--focus-ring-width) rgba(8, 69, 122, 0.18);
+    box-shadow: 0 0 0 var(--focus-ring-width) var(--tone-shadow-info-12);
   }
 
   &[data-invalid="true"] {
@@ -163,7 +163,7 @@ export const choiceIndicatorCss = css`
 
   &[data-invalid="true"][data-focus-visible="true"] {
     box-shadow:
-      0 0 0 var(--focus-ring-width) rgba(8, 69, 122, 0.18),
+      0 0 0 var(--focus-ring-width) var(--tone-shadow-info-12),
       inset 0 0 0 1px var(--field-error-border);
     border-color: var(--field-error-border);
   }

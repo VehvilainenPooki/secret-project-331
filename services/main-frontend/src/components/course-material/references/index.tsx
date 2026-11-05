@@ -8,7 +8,8 @@ import { createPortal } from "react-dom"
 import { useTranslation } from "react-i18next"
 
 import TooltipNTrigger from "@/components/course-material/TooltipNTrigger"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const openAnimation = keyframes`
 0% { opacity: 0; }
@@ -23,15 +24,15 @@ const TextWrapper = styled.div`
   padding: 0;
   margin: 0;
   margin-top: 4rem;
-  background: ${baseTheme.colors.clear[100]};
+  background: ${tones.toneNeutral12};
 
   details[open] summary ~ * {
     animation: ${openAnimation} 0.3s ease-in-out;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   }
 
   details {
-    border-left: 4px solid ${baseTheme.colors.blue[300]};
+    border-left: 4px solid ${tones.toneInfo8};
   }
 
   details[open] > div {
@@ -50,7 +51,7 @@ const TextWrapper = styled.div`
     list-style: none;
     outline: 0;
     height: auto;
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     justify-content: center;
   }
 
@@ -59,12 +60,12 @@ const TextWrapper = styled.div`
   }
 
   details[open] > summary {
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
   }
 
   details summary:after {
     content: "+";
-    color: ${baseTheme.colors.blue[400]};
+    color: ${tones.toneInfo11};
     position: absolute;
     font-size: 3rem;
     line-height: 0.3;
@@ -268,7 +269,7 @@ const ReferenceComponent: React.FC<ReferenceProps> = ({ data }) => {
                 key={id}
                 id={`ref-${index + 1}`}
                 className={css`
-                  ${active === `ref-${index + 1}` && `background: ${baseTheme.colors.blue[100]};`}
+                  ${active === `ref-${index + 1}` && `background: ${tones.toneInfo5};`}
                 `}
               >
                 {text}

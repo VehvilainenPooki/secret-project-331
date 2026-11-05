@@ -8,9 +8,9 @@ import { useTranslation } from "react-i18next"
 
 import Echarts from "@/components/charts/Echarts"
 import { getCourseDailySubmissionCountsOptions } from "@/generated/api/@tanstack/react-query.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
@@ -54,7 +54,7 @@ const CourseSubmissionsByDay: React.FC<React.PropsWithChildren<CourseSubmissions
       <div
         className={css`
           margin-bottom: 2rem;
-          border: 3px solid ${baseTheme.colors.clear[200]};
+          border: 3px solid ${tones.toneNeutral22};
           border-radius: 6px;
           padding: 1rem;
           min-height: 300px;

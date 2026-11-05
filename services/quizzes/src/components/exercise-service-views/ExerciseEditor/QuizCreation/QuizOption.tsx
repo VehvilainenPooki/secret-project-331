@@ -28,7 +28,7 @@ const QuizCard = styled.div<QuizCardProps>`
   all: unset;
   width: auto;
   height: auto;
-  background-color: #f5f6f7;
+  background-color: var(--color-surface-sunken);
   padding: 16px;
   margin: 5px;
   ${(props) =>
@@ -39,7 +39,7 @@ const QuizCard = styled.div<QuizCardProps>`
   `}
   &:hover {
     cursor: pointer;
-    background-color: #e0e0e0;
+    background-color: var(--tone-bg-neutral-65);
   }
 `
 
@@ -54,7 +54,7 @@ const QuizCardDescription = styled.div`
   margin-top: 6px;
   font-size: 17px;
   overflow-wrap: break-word;
-  color: #767b85;
+  color: var(--tone-fg-neutral-16);
 `
 
 const QuizItemOption: React.FC<QuizOptionProps> = ({ quizOption }) => {

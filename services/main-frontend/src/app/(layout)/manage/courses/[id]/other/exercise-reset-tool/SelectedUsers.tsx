@@ -9,6 +9,7 @@ import type { UserDetail } from "@/generated/api/types.generated"
 import { baseTheme, fontWeights } from "@/shared-module/common/styles"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import { Button, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import UserSearch from "./UserSearch"
 
@@ -43,7 +44,7 @@ const SelectedUsers: React.FC<Props> = ({
           className={css`
             font-size: ${baseTheme.fontSizes[1]}px;
             font-weight: ${fontWeights.semibold};
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
         >
           {t("label-selected-users")}
@@ -60,7 +61,7 @@ const SelectedUsers: React.FC<Props> = ({
         className={css`
           padding-bottom: 25px;
           font-weight: ${fontWeights.normal};
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-size: ${baseTheme.fontSizes[0]}px;
         `}
       >
@@ -73,7 +74,7 @@ const SelectedUsers: React.FC<Props> = ({
               align-items: center;
               height: 74px;
               border-radius: 2px;
-              background: #f2f3f5;
+              background: var(--tone-bg-neutral-39);
             `}
           >
             <XmarkCircle />

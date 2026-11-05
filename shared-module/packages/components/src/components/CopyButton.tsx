@@ -58,10 +58,10 @@ const rootCss = css`
   align-items: center;
   justify-content: center;
   padding: var(--space-1) var(--space-2);
-  border: 1px solid var(--color-clear-400);
+  border: 1px solid var(--tone-border-neutral-31);
   border-radius: var(--control-radius);
-  background: var(--color-clear-50);
-  color: var(--color-gray-500);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
   cursor: pointer;
   font-size: var(--font-size-1);
   line-height: 1;
@@ -70,11 +70,11 @@ const rootCss = css`
     border-color 0.15s;
 
   &[data-pressed="true"] {
-    background: var(--color-clear-200);
+    background: var(--tone-bg-neutral-52);
   }
   &:hover {
-    color: var(--color-gray-700);
-    border-color: var(--color-gray-300);
+    color: var(--color-text);
+    border-color: var(--tone-border-neutral-52);
   }
   &:focus-visible {
     outline: var(--focus-ring-width) solid var(--focus-ring-color);
@@ -85,8 +85,8 @@ const rootCss = css`
     opacity: 0.5;
   }
   &[aria-disabled="true"]:hover {
-    color: var(--color-gray-500);
-    border-color: var(--color-clear-400);
+    color: var(--color-text-muted);
+    border-color: var(--tone-border-neutral-31);
   }
 `
 
@@ -95,10 +95,10 @@ const glyphCss = css`
   animation: ${popIn} 0.18s ease;
 
   &[data-status="copied"] {
-    color: var(--color-green-600);
+    color: var(--tone-fg-accent-7);
   }
   &[data-status="error"] {
-    color: var(--color-red-500);
+    color: var(--tone-fg-danger-2);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -114,8 +114,8 @@ const tooltipCss = css`
   white-space: nowrap;
   padding: 2px 8px;
   border-radius: 4px;
-  background: var(--color-gray-700);
-  color: var(--color-gray-100);
+  background: var(--tone-bg-neutral-90);
+  color: var(--tone-fg-neutral-6);
   font-size: var(--font-size-1);
   line-height: 1.4;
   pointer-events: none;

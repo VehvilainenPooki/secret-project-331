@@ -13,7 +13,6 @@ import { pageTitleCss } from "@/components/credit-registration/styles"
 import { getCoursesForAuditingOptions } from "@/generated/api/@tanstack/react-query.generated"
 import type { CourseAuditingData } from "@/generated/api/types.generated"
 import { withSignedIn } from "@/shared-module/common/contexts/LoginStateContext"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import withSuspenseBoundary from "@/shared-module/common/utils/withSuspenseBoundary"
 import {
@@ -29,6 +28,7 @@ import {
   type TriStateToggleStates,
   Tooltip,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import CourseCard from "./CourseCard/CourseCard"
 import CourseDataFilterForm from "./CourseDataFilterForm"
@@ -63,7 +63,7 @@ export const FieldSet = styled.fieldset`
   display: flex;
   flex-flow: column;
   margin-bottom: 1rem;
-  border: 1px solid ${baseTheme.colors.gray[200]};
+  border: 1px solid ${tones.toneNeutral35};
   border-radius: 4px;
   padding: 1rem;
   gap: 1rem;

@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import { LINK_INHERIT } from "@/components/credit-registration/constants"
 import createFlaggedSuspectedCheaterCountHook from "@/hooks/count/useFlaggedSuspectedCheaterCount"
-import { baseTheme } from "@/shared-module/common/styles"
 import { manageCourseOtherCheatersSuspectedRoute } from "@/shared-module/common/utils/routes"
 import { Link } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface SuspectedCheatersReviewBannerProps {
   courseId: string
@@ -42,13 +42,13 @@ const SuspectedCheatersReviewBanner: React.FC<SuspectedCheatersReviewBannerProps
         padding: 0.9rem 1.2rem;
         border-radius: 6px;
         text-decoration: none;
-        background: ${baseTheme.colors.red[100]};
-        border: 1px solid ${baseTheme.colors.red[300]};
-        color: ${baseTheme.colors.red[700]};
+        background: ${tones.toneDanger2};
+        border: 1px solid ${tones.toneDanger8};
+        color: ${tones.toneDanger19};
         font-weight: 500;
 
         &:hover {
-          background: ${baseTheme.colors.red[200]};
+          background: ${tones.toneDanger7};
         }
       `}
     >

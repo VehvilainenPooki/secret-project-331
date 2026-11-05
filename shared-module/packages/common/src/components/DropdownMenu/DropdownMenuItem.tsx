@@ -4,7 +4,7 @@ import { css } from "@emotion/css"
 import Link from "next/link"
 import React from "react"
 
-import { baseTheme } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface DropdownMenuItemWithOnClick {
   label: string
@@ -28,10 +28,10 @@ interface DropdownMenuProps {
 const itemInnerStyles = css`
   border: none;
   padding: 0.5rem 1.5rem;
-  background-color: white;
+  background-color: var(--color-surface);
   cursor: pointer;
   display: block;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-weight: 600;
   text-decoration: none;
   width: 100%;

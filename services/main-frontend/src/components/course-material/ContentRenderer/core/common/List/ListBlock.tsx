@@ -6,9 +6,9 @@ import { useContext } from "react"
 import type { ListAttributes } from "@/../types/GutenbergBlockAttributes"
 import InnerBlocks from "@/components/course-material/ContentRenderer/util/InnerBlocks"
 import ParsedText from "@/components/course-material/ParsedText"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import { fontSizeMapper, mobileFontSizeMapper } from "@/styles/course-material/fontSizeMapper"
 
 import type { BlockRendererProps } from "../../.."
@@ -45,7 +45,7 @@ const ListBlock: React.FC<React.PropsWithChildren<BlockRendererProps<ListAttribu
       }
 
       li::marker {
-        color: ${baseTheme.colors.gray[600]};
+        color: ${tones.toneNeutral44};
       }
     `,
     LIST_BLOCK_CLASS_NAME,

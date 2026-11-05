@@ -5,7 +5,7 @@ import { css, keyframes } from "@emotion/css"
 import styled from "@emotion/styled"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const bounce = keyframes`
   0%,
@@ -33,7 +33,7 @@ const Dot = styled.span<DotProps>`
   width: 3px;
   height: 3px;
   margin: 0 2px;
-  background-color: ${baseTheme.colors.gray[400]};
+  background-color: ${tones.toneNeutral39};
   border-radius: 50%;
   animation-name: ${bounce};
   animation-duration: 1.3s;

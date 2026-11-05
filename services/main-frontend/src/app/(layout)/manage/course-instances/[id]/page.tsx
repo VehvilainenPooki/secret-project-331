@@ -37,7 +37,7 @@ const detailsCss = css`
     width: 100%;
     margin: var(--space-2) 0;
     border: none;
-    border-top: 1px solid var(--color-clear-300);
+    border-top: 1px solid var(--color-border);
   }
 `
 

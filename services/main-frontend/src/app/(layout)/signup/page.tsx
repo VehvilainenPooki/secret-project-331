@@ -19,13 +19,14 @@ import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import countries from "@/shared-module/common/locales/en/countries.json"
 import "@/shared-module/common/init/registerAuthApiClients"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import {
   useCurrentPagePathForReturnTo,
   validateReturnToRouteOrDefault,
 } from "@/shared-module/common/utils/redirectBackAfterLoginOrSignup"
 import withSuspenseBoundary from "@/shared-module/common/utils/withSuspenseBoundary"
 import { Button, Checkbox, ComboBox, TextField, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface CreateUserErrorResponse {
   message?: string
@@ -56,7 +57,7 @@ const Wrapper = styled.div`
 
   h1 {
     font-size: clamp(30px, 3vw, 34px);
-    color: ${baseTheme.colors.gray[700]};
+    color: ${tones.toneNeutral46};
     text-align: center;
     font-family: ${headingFont};
     font-weight: 600;
@@ -68,7 +69,7 @@ const Wrapper = styled.div`
     text-align: center;
     margin: 0.5rem 0 2rem 0;
     a {
-      color: #065853;
+      color: var(--tone-fg-accent-8);
       font-weight: 600;
       /* Underline links so they are distinguishable by more than colour alone (WCAG 1.4.1). */
       text-decoration: underline;
@@ -94,10 +95,10 @@ const Wrapper = styled.div`
     a {
       text-decoration: underline;
       font-size: 20px;
-      color: ${baseTheme.colors.blue[600]};
+      color: ${tones.toneInfo23};
 
       &:hover {
-        color: ${baseTheme.colors.blue[700]};
+        color: ${tones.toneInfo26};
       }
     }
   }
@@ -265,7 +266,7 @@ const CreateAccountForm: React.FC = () => {
           className={css`
             margin: 2rem 0;
             padding: 1rem;
-            background-color: ${baseTheme.colors.green[100]};
+            background-color: ${tones.toneAccent7};
             line-height: 1.7;
             display: flex;
             align-items: center;
@@ -466,15 +467,15 @@ const CreateAccountForm: React.FC = () => {
           className={css`
             margin: 1rem 0;
             padding: 1rem;
-            background-color: ${baseTheme.colors.red[100]};
-            border-left: 4px solid ${baseTheme.colors.red[500]};
+            background-color: ${tones.toneDanger2};
+            border-left: 4px solid ${tones.toneDanger15};
             border-radius: 4px;
           `}
         >
           <p
             className={css`
               margin: 0;
-              color: ${baseTheme.colors.red[700]};
+              color: ${tones.toneDanger19};
               font-weight: 500;
             `}
           >
@@ -485,7 +486,7 @@ const CreateAccountForm: React.FC = () => {
             className={css`
               display: inline-block;
               margin-top: 0.5rem;
-              color: ${baseTheme.colors.blue[600]};
+              color: ${tones.toneInfo23};
               text-decoration: underline;
               font-weight: 500;
             `}

@@ -20,7 +20,7 @@ interface ReviewProps {
 }
 
 const Wrapper = styled.div`
-  background: #f5f6f7;
+  background: var(--color-surface-sunken);
   padding: 0 !important;
 
   &:not(:last-child) {
@@ -29,7 +29,7 @@ const Wrapper = styled.div`
 `
 const Heading = styled.div`
   padding: 1rem;
-  border-bottom: 2px solid #ebedee;
+  border-bottom: 2px solid var(--tone-border-neutral-7);
 `
 
 const PeerOrSelfReviewsReceived: React.FunctionComponent<ReviewProps> = ({

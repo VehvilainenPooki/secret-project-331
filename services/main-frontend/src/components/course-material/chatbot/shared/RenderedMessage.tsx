@@ -9,7 +9,8 @@ import "highlight.js/styles/atom-one-dark.css"
 
 import { createPortal } from "react-dom"
 
-import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
+import { monospaceFont } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import { planCitationPortals } from "@/utils/course-material/chatbotCitationPortals"
 import { REMOVE_CITATIONS_REGEX } from "@/utils/course-material/chatbotCitationRegexes"
 import { getRemarkable } from "@/utils/course-material/getRemarkable"
@@ -38,17 +39,17 @@ const messageStyle = css`
     border-collapse: collapse;
   }
   thead {
-    background-color: ${baseTheme.colors.clear[200]};
+    background-color: ${tones.toneNeutral22};
   }
   tbody td {
     text-align: center;
     padding: 5px;
   }
   tbody tr:nth-child(odd) {
-    background-color: #ffffff;
+    background-color: var(--color-surface);
   }
   tbody tr:nth-child(even) {
-    background-color: ${baseTheme.colors.clear[200]};
+    background-color: ${tones.toneNeutral22};
   }
   pre {
     /*the pre element corresponds to md raw text, this property
@@ -69,7 +70,7 @@ const messageStyle = css`
     border: none;
     margin-right: 1px;
     cursor: default;
-    background-color: ${baseTheme.colors.green[200]};
+    background-color: ${tones.toneAccent9};
     font-family: ${monospaceFont};
     padding: 0 0.525em 0 0.525em;
     border-radius: 1em;

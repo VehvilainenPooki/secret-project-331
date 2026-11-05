@@ -4,8 +4,8 @@ import { VisuallyHidden } from "react-aria"
 import { useTranslation } from "react-i18next"
 
 import { MatrixInputGrid, useMatrixGrid } from "@/components/Shared/MatrixGrid"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 import {
   emptyMatrixGrid,
   isFilledRectangle,
@@ -88,14 +88,14 @@ const Matrix: React.FunctionComponent<
             padding: 0;
             max-width: 28rem;
             font-size: 0.875rem;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
             text-align: center;
           `}
         >
           {gaps.length > 0 && (
             <li
               className={css`
-                color: ${baseTheme.colors.red[700]};
+                color: ${tones.toneDanger19};
                 font-weight: 600;
               `}
             >

@@ -7,12 +7,12 @@ export const dialogCss = css`
 `
 
 export const pickerRootCss = css`
-  --picker-accent-bg: var(--color-green-600);
-  --picker-accent-fg: var(--color-primary-100);
-  --picker-accent-soft: var(--color-green-75);
-  --picker-accent-hover: var(--color-green-50);
-  --picker-focus-ring: rgba(31, 105, 100, 0.4);
-  --picker-focus-ring-strong: rgba(31, 105, 100, 0.55);
+  --picker-accent-bg: var(--color-accent);
+  --picker-accent-fg: var(--color-text-on-accent);
+  --picker-accent-soft: var(--tone-tone-accent-4);
+  --picker-accent-hover: var(--tone-tone-accent-2);
+  --picker-focus-ring: var(--tone-border-accent-5);
+  --picker-focus-ring-strong: var(--tone-tone-accent-14);
   font-family: var(--font-sans);
 `
 
@@ -114,7 +114,7 @@ export const calendarNavButtonCss = css`
   &:focus-visible {
     outline: none;
     background: var(--picker-accent-soft);
-    color: var(--color-green-800);
+    color: var(--tone-fg-accent-11);
     box-shadow: 0 0 0 var(--focus-ring-width) var(--picker-focus-ring);
   }
 
@@ -125,7 +125,7 @@ export const calendarNavButtonCss = css`
 
   &:hover:not(:disabled) {
     background: var(--picker-accent-soft);
-    color: var(--color-green-800);
+    color: var(--tone-fg-accent-11);
   }
 `
 
@@ -191,7 +191,7 @@ export const calendarCellButtonCss = css`
 
 /** Today, not selected, not keyboard-focused */
 export const calendarCellTodayOnlyCss = css`
-  box-shadow: inset 0 0 0 1px var(--color-green-500);
+  box-shadow: inset 0 0 0 1px var(--tone-shadow-accent-7);
 `
 
 /** Keyboard focus, not selected, not today */
@@ -202,7 +202,7 @@ export const calendarCellKeyboardFocusCss = css`
 /** Today + keyboard focus, not selected */
 export const calendarCellTodayKeyboardFocusCss = css`
   box-shadow:
-    inset 0 0 0 1px var(--color-green-500),
+    inset 0 0 0 1px var(--tone-shadow-accent-7),
     0 0 0 2px var(--picker-focus-ring-strong);
 `
 
@@ -248,7 +248,7 @@ export const quickActionsCss = css`
   gap: var(--space-2);
   padding-top: var(--space-2);
   margin-top: var(--space-1);
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  border-top: 1px solid var(--tone-border-neutral-4);
 `
 
 export const quickActionChipCss = css`
@@ -257,10 +257,10 @@ export const quickActionChipCss = css`
   justify-content: center;
   min-height: 28px;
   padding: 4px 10px;
-  border: 1px solid var(--color-green-200);
+  border: 1px solid var(--tone-border-accent-4);
   border-radius: 999px;
   background: var(--picker-accent-hover);
-  color: var(--color-green-800);
+  color: var(--tone-fg-accent-11);
   cursor: pointer;
   font: inherit;
   font-size: 0.75rem;
@@ -286,8 +286,8 @@ export const quickActionChipCss = css`
 
   &:hover:not(:disabled) {
     background: var(--picker-accent-soft);
-    border-color: var(--color-green-300);
-    color: var(--color-green-900);
+    border-color: var(--tone-border-accent-6);
+    color: var(--tone-fg-accent-13);
   }
 `
 
@@ -299,7 +299,7 @@ export const chooserPanelCss = css`
 `
 
 export const chooserTitleCss = css`
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
   font-size: 0.6875rem;
   font-weight: 500;
   line-height: 1.25;
@@ -335,7 +335,7 @@ export const chooserPagerCss = css`
 `
 
 export const chooserSectionLabelCss = css`
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
   font-size: 0.625rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -371,7 +371,7 @@ export const chooserGridOptionCss = css`
   &:focus-visible {
     outline: none;
     box-shadow:
-      0 0 0 1px var(--color-green-300),
+      0 0 0 1px var(--tone-shadow-accent-5),
       0 0 0 calc(var(--focus-ring-width) + 1px) var(--picker-focus-ring);
   }
 
@@ -383,20 +383,20 @@ export const chooserGridOptionCss = css`
 
   &:hover:not(:disabled) {
     background: var(--picker-accent-soft);
-    border-color: var(--color-green-300);
-    color: var(--color-green-900);
+    border-color: var(--tone-border-accent-6);
+    color: var(--tone-fg-accent-13);
   }
 `
 
 export const chooserGridOptionSelectedCss = css`
   background: var(--picker-accent-bg);
   color: var(--picker-accent-fg);
-  border-color: var(--color-green-700);
+  border-color: var(--tone-border-accent-11);
   font-weight: 600;
 
   &:hover:not(:disabled) {
-    background: var(--color-green-700);
-    border-color: var(--color-green-800);
+    background: var(--tone-bg-accent-13);
+    border-color: var(--tone-border-accent-12);
     color: var(--picker-accent-fg);
   }
 `
@@ -408,14 +408,14 @@ export const timePanelCss = css`
   align-self: stretch;
   align-content: start;
   padding: 0 0 0 var(--space-3);
-  border-left: 1px solid rgba(31, 105, 100, 0.12);
+  border-left: 1px solid var(--tone-border-accent-1);
   background: transparent;
 
   /* When stacked below the calendar on mobile, the divider becomes a top border. */
   ${below("xs")} {
     padding: var(--space-3) 0 0 0;
     border-left: 0;
-    border-top: 1px solid rgba(31, 105, 100, 0.12);
+    border-top: 1px solid var(--tone-border-accent-1);
   }
 `
 
@@ -426,7 +426,7 @@ export const standaloneTimePanelCss = css`
 `
 
 export const timePanelHeadingCss = css`
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
   font-size: 0.625rem;
   font-weight: 500;
   line-height: 1.25;
@@ -488,7 +488,7 @@ export const timeStepperBtnCss = css`
   border: 0;
   border-radius: calc(var(--control-radius) - 1px);
   background: transparent;
-  color: var(--color-green-800);
+  color: var(--tone-fg-accent-11);
   cursor: pointer;
   font: inherit;
   font-size: 1rem;
@@ -570,10 +570,10 @@ export const timeShortcutButtonCss = css`
   justify-content: center;
   min-height: 26px;
   padding: 4px 8px;
-  border: 1px solid var(--color-green-200);
+  border: 1px solid var(--tone-border-accent-4);
   border-radius: 999px;
   background: var(--picker-accent-hover);
-  color: var(--color-green-800);
+  color: var(--tone-fg-accent-11);
   cursor: pointer;
   font: inherit;
   font-size: 0.6875rem;
@@ -594,7 +594,7 @@ export const timeShortcutButtonCss = css`
 
   &:hover:not(:disabled) {
     background: var(--picker-accent-soft);
-    border-color: var(--color-green-300);
-    color: var(--color-green-900);
+    border-color: var(--tone-border-accent-6);
+    color: var(--tone-fg-accent-13);
   }
 `

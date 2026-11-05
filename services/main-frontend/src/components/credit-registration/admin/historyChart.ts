@@ -2,7 +2,7 @@ import type {
   CreditRegistrationHistory,
   CreditRegistrationHistoryDay,
 } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const MS_PER_DAY = 86_400_000
 const DAY_LENGTH = 10
@@ -20,9 +20,9 @@ export const HISTORY_RANGES = [
 ] as const
 
 /** Chart ink read off the theme; ECharts cannot resolve a CSS variable. */
-export const GRID_LINE_COLOR = baseTheme.colors.gray[75]
-export const AXIS_TEXT_COLOR = baseTheme.colors.gray[500]
-export const MINOR_TEXT_COLOR = baseTheme.colors.gray[400]
+export const GRID_LINE_COLOR = tones.toneNeutral19
+export const AXIS_TEXT_COLOR = tones.toneNeutral41
+export const MINOR_TEXT_COLOR = tones.toneNeutral39
 export const LINE_WIDTH = 2
 const GAP_OPACITY = 0.7
 /** Ends the y-axis on a number a reader can divide by, rather than on the tallest day's depth. */

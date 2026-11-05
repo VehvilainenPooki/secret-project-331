@@ -4,18 +4,19 @@ import { css, cx } from "@emotion/css"
 import type { InputHTMLAttributes } from "react"
 import React, { forwardRef } from "react"
 
-import { baseTheme } from "../../styles"
+import { tones } from "@/shared-module/components/styles/themes"
+
 import { dateToString } from "../../utils/time"
 
 const errorStyle = css`
-  color: #f76d82;
+  color: var(--tone-fg-danger-1);
   font-size: 14px;
   display: inline-block;
   margin-top: -15px;
 `
 
 const warningStyle = css`
-  color: #b3440d;
+  color: var(--tone-fg-danger-5);
   font-size: 14px;
   display: inline-block;
   margin-top: -15px;
@@ -59,13 +60,13 @@ const DateTimeLocal = forwardRef<HTMLInputElement, TimePickerProps>(
 
               input {
                 padding: 8px 10px 10px 10px;
-                border: 2px solid #dedede;
+                border: 2px solid var(--tone-border-neutral-26);
                 border-radius: 3px;
                 outline: none;
 
                 &:focus,
                 &:active {
-                  border-color: #55b3f5;
+                  border-color: var(--tone-border-info-3);
                 }
 
                 @media (max-width: 767.98px) {
@@ -74,7 +75,7 @@ const DateTimeLocal = forwardRef<HTMLInputElement, TimePickerProps>(
               }
 
               span {
-                color: #333;
+                color: var(--tone-fg-neutral-36);
                 font-size: 14px;
                 font-weight: 500;
                 margin-bottom: 0.2rem;
@@ -82,7 +83,7 @@ const DateTimeLocal = forwardRef<HTMLInputElement, TimePickerProps>(
             }
 
             small {
-              color: ${baseTheme.colors.gray[500]};
+              color: ${tones.toneNeutral41};
               font-size: 12px;
               text-align: left;
               width: 100%;

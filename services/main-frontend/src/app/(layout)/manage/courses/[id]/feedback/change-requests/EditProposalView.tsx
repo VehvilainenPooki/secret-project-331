@@ -19,13 +19,14 @@ import DiffFormatter from "@/shared-module/common/components/DiffFormatter"
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
 import TimeComponent from "@/shared-module/common/components/TimeComponent"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme, primaryFont, typography } from "@/shared-module/common/styles"
+import { primaryFont, typography } from "@/shared-module/common/styles"
 import { manageUserRoute, pageRoute } from "@/shared-module/common/utils/routes"
 import { Button, Link, Radio, RadioGroup, TextArea } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const ImportantText = styled.div`
   white-space: pre-wrap;
-  border: 1px solid #ccc;
+  border: 1px solid var(--tone-border-neutral-41);
   padding: 0.5rem;
   margin: 0;
   font-family: ${primaryFont};
@@ -34,12 +35,12 @@ const ImportantText = styled.div`
 const ProposalExplanation = styled.p`
   margin-top: 0.5rem;
   font-weight: 500;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   font-size: 0.9rem;
   line-height: 1.4;
   padding: 0.5rem;
-  background-color: #f8f9fa;
-  border-left: 3px solid #6c757d;
+  background-color: var(--tone-bg-neutral-18);
+  border-left: 3px solid var(--tone-border-neutral-56);
   border-radius: 0 4px 4px 0;
 `
 
@@ -274,7 +275,7 @@ const EditProposalView: React.FC<React.PropsWithChildren<Props>> = ({
   return (
     <div
       className={css`
-        border: 1px solid #e5e5e5;
+        border: 1px solid var(--tone-border-neutral-15);
         margin-bottom: 2rem;
         margin-top: 2rem;
         padding: 1rem;

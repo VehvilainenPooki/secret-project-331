@@ -4,40 +4,40 @@ import { css } from "@emotion/css"
 import { format } from "date-fns"
 
 import { COURSE_PLAN_MONTH_ICONS } from "@/app/(layout)/manage/course-plans/monthIcons"
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { StageMonth } from "../../schedule/scheduleMappers"
 
 const timelineMonthBlockStyles = css`
   min-width: 84px;
   border-radius: 12px;
-  border: 1px solid ${baseTheme.colors.gray[200]};
-  background: ${baseTheme.colors.primary[100]};
+  border: 1px solid ${tones.toneNeutral35};
+  background: ${tones.toneNeutral1};
   padding: 0.6rem 0.65rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 2px 8px var(--tone-shadow-neutral-4);
 `
 
 const timelineMonthBlockMonthStyles = css`
   font-size: 0.78rem;
   font-weight: 700;
-  color: ${baseTheme.colors.gray[600]};
+  color: ${tones.toneNeutral44};
   line-height: 1.1;
 `
 
 const timelineMonthBlockYearStyles = css`
   font-size: 0.72rem;
-  color: ${baseTheme.colors.gray[400]};
+  color: ${tones.toneNeutral39};
   line-height: 1.1;
 `
 
 const timelineMonthBlockIconStyles = css`
   width: 18px;
   height: 18px;
-  color: ${baseTheme.colors.green[600]};
+  color: ${tones.toneAccent21};
   display: flex;
   align-items: center;
   justify-content: center;

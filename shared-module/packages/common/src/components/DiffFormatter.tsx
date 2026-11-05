@@ -44,7 +44,7 @@ const DiffFormatter: React.FC<React.PropsWithChildren<DiffFormatterProps>> = ({
               role="note"
               aria-label={t("added-text")}
               className={css`
-                background-color: #abf2bc;
+                background-color: var(--tone-bg-accent-5);
                 padding: 2px;
               `}
             >
@@ -61,7 +61,7 @@ const DiffFormatter: React.FC<React.PropsWithChildren<DiffFormatterProps>> = ({
               role="note"
               aria-label={t("removed-text")}
               className={css`
-                background-color: #ffc1c0;
+                background-color: var(--tone-bg-danger-10);
                 padding: 2px;
               `}
             >

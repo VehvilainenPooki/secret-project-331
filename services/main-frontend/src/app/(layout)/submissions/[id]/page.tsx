@@ -287,8 +287,8 @@ const Submission: React.FC = () => {
 
       <div
         className={css`
-          background-color: #f8f9fa;
-          color: #f8f9fa;
+          background-color: var(--tone-bg-neutral-18);
+          color: var(--tone-fg-neutral-2);
           padding: 1.5rem 2rem;
           max-width: ${narrowContainerWidthRem}rem;
           margin: 2rem auto;

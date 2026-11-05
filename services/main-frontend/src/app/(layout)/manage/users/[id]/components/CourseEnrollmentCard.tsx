@@ -51,7 +51,7 @@ const titleRowCss = css`
 
 const courseNameCss = css`
   font-weight: 600;
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 const progressCss = css`

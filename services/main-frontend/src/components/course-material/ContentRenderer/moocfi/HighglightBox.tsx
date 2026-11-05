@@ -4,9 +4,10 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import ParsedText from "@/components/course-material/ParsedText"
-import { baseTheme, monospaceFont } from "@/shared-module/common/styles"
+import { monospaceFont } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from ".."
 
@@ -21,9 +22,9 @@ const HightlightBlock: React.FC<
   return (
     <div
       className={css`
-        background-color: #fafbfb;
+        background-color: var(--tone-bg-neutral-13);
         margin: 1rem 0;
-        border: 1px solid #e2e4e6;
+        border: 1px solid var(--color-border);
         padding: 1rem 0rem;
 
         ${respondToOrLarger.md} {
@@ -55,7 +56,7 @@ const HightlightBlock: React.FC<
           tag="span"
           tagProps={{
             className: css`
-              color: ${baseTheme.colors.green[700]};
+              color: ${tones.toneAccent23};
               font-weight: 700;
               font-family: ${monospaceFont};
               margin-right: 0.25em;

@@ -59,7 +59,7 @@ const DisplayTrack = ({ tracks, audioRef, setDuration, progressBarRef }: Display
         <div>
           <p
             className={css`
-              color: #24053b;
+              color: var(--tone-fg-special-3);
               font-size: 18px;
               margin-bottom: 0;
               padding: 2px;

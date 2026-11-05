@@ -13,9 +13,9 @@ import {
   getUserCourseEnrollmentsOptions,
   getUserCourseSubmissionTimesOptions,
 } from "@/generated/api/@tanstack/react-query.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { Disclosure, ErrorNotice, LoadingRegion, Table } from "@/shared-module/components"
+import { getActiveTheme, tones } from "@/shared-module/components/styles/themes"
 import { computeModuleRows, formatDuration } from "@/utils/moduleTimeline"
 import {
   colorAt,
@@ -39,13 +39,13 @@ const OTHER_KEY = "__other__"
 const SUBMISSION_CAP = 5000
 const DAY_MS = 24 * 60 * 60 * 1000
 const LANE = "activity"
-const MARK_BORDER = "#ffffff"
+const MARK_BORDER = getActiveTheme().tones.chartNeutral1
 const SUBMISSION_SIZE = 9
 const COMPLETION_SIZE = 16
 
 const noteCss = css`
   margin-top: 0.5rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.chartNeutral17};
   font-size: 0.85rem;
 `
 

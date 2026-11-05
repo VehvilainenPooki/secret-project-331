@@ -14,8 +14,8 @@ import type {
 } from "@/generated/course-material-api/types.generated"
 import useAdditionalQuestions from "@/hooks/course-material/useAdditionalQuestions"
 import useCourse from "@/hooks/course-material/useCourse"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, Checkbox, Radio, RadioGroup, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import SelectMarketingConsentForm from "./SelectMarketingConsentForm"
 
@@ -24,7 +24,7 @@ const courseInstanceGroupCss = css`
 `
 
 const GreenText = styled.span`
-  color: ${baseTheme.colors.green[700]};
+  color: ${tones.toneAccent23};
 `
 
 const AdditionalQuestionWrapper = styled.div`

@@ -8,16 +8,16 @@ import React from "react"
 import { Trans, useTranslation } from "react-i18next"
 
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { dateToString } from "@/shared-module/common/utils/time"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const TimerContainer = styled.div`
   border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 8px ${baseTheme.colors.clear[300]};
+  box-shadow: 0 2px 8px ${tones.toneNeutral26};
 
   ${respondToOrLarger.sm} {
     flex-direction: row;
@@ -27,8 +27,8 @@ const TimerContainer = styled.div`
 
 const InfoBoxLightGreenMedium = styled.div`
   align-items: center;
-  background-color: ${baseTheme.colors.green[100]};
-  color: ${baseTheme.colors.green[700]};
+  background-color: ${tones.toneAccent7};
+  color: ${tones.toneAccent23};
   display: flex;
   flex: 2;
   flex-direction: column;
@@ -46,8 +46,8 @@ const InfoBoxLightGreenMedium = styled.div`
 const InfoBoxDarkGreenSmall = styled.div`
   padding: 0.75rem 1rem;
   flex: 1;
-  background-color: ${baseTheme.colors.green[700]};
-  color: white;
+  background-color: ${tones.toneAccent23};
+  color: var(--color-text-on-accent);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,7 +79,7 @@ const ExamTimer: React.FC<React.PropsWithChildren<ExamTimerProps>> = ({
         <InfoBoxLightGreenMedium>
           <CheckCircle
             className={css`
-              color: ${baseTheme.colors.green[200]};
+              color: ${tones.toneAccent9};
               margin-right: 0.5rem;
             `}
           />
@@ -88,7 +88,7 @@ const ExamTimer: React.FC<React.PropsWithChildren<ExamTimerProps>> = ({
               Max score:{" "}
               <div
                 className={css`
-                  color: ${baseTheme.colors.green[100]};
+                  color: ${tones.toneAccent7};
                   text-transform: lowercase;
                 `}
               >

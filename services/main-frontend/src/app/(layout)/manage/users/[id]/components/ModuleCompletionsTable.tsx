@@ -40,12 +40,12 @@ const secondaryDurationCss = css`
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-2);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
 `
 
 const suspiciouslyFastCss = css`
-  color: var(--color-crimson-700);
+  color: var(--tone-fg-danger-14);
 `
 
 /**

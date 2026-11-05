@@ -17,7 +17,7 @@ export const headingsCss = css`
   h2,
   h3,
   h4 {
-    color: var(--color-gray-700);
+    color: var(--color-text);
     font-weight: 600;
     line-height: 1.3;
   }
@@ -37,7 +37,7 @@ export const headingsCss = css`
 /** The one h1 a chatbot management page gets. */
 export const pageTitleCss = css`
   margin: 0 0 1rem;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-5);
   font-weight: 600;
   line-height: 1.2;
@@ -46,7 +46,7 @@ export const pageTitleCss = css`
 /** A section heading under the page title, such as the one above the chatbot list. */
 export const sectionHeadingCss = css`
   margin: 0 0 0.5rem;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-3-5);
   font-weight: 600;
   line-height: 1.3;

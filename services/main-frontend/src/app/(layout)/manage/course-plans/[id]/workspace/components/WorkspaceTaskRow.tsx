@@ -5,8 +5,8 @@ import { Trash } from "@vectopus/atlas-icons-react"
 import { useTranslation } from "react-i18next"
 
 import type { CourseDesignerPlanStageTask } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button, Checkbox } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { useWorkspaceTaskCompletionField } from "../hooks/useWorkspaceTaskCompletionField"
 
@@ -15,7 +15,7 @@ const taskRowStyles = css`
   align-items: flex-start;
   gap: 0.5rem;
   padding: 0.4rem 0;
-  border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+  border-bottom: 1px solid ${tones.toneNeutral29};
   min-width: 0;
 
   :last-child {
@@ -48,10 +48,10 @@ const taskDeleteButtonStyles = css`
   min-width: 0;
   opacity: 0;
   transition: opacity 120ms ease;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 
   :hover {
-    color: ${baseTheme.colors.crimson[600]};
+    color: ${tones.toneDanger21};
   }
 
   @media (hover: none) {
@@ -66,13 +66,13 @@ const taskTitleStyles = css`
   min-height: 1.25rem;
   font-size: 0.95rem;
   line-height: 1.25;
-  color: ${baseTheme.colors.gray[800]};
+  color: ${tones.toneNeutral47};
   overflow-wrap: break-word;
 `
 
 const taskTitleCompletedStyles = css`
   text-decoration: line-through;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 interface WorkspaceTaskRowProps {

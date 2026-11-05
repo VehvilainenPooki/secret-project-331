@@ -7,9 +7,9 @@ import { useTranslation } from "react-i18next"
 
 import { useCornerTapFlip } from "@/hooks/course-material/useCornerTapFlip"
 import DefaultSVG from "@/shared-module/common/img/hero-default-bg-image.svg"
-import { baseTheme } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { COURSE_MATERIAL_DEFAULT_BLOCK_MARGIN_REM } from "@/utils/course-material/constants"
 import { escapeUrlForCss } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
@@ -53,7 +53,7 @@ const TextBox = styled.div<TextBoxProps>`
   h1 {
     z-index: 20;
     margin-bottom: 0.8rem;
-    color: ${({ color }) => (color ? color : baseTheme.colors.gray[700])};
+    color: ${({ color }) => (color ? color : tones.toneNeutral46)};
     margin-top: 1.5rem;
 
     font-weight: bold;
@@ -80,7 +80,7 @@ const TextBox = styled.div<TextBoxProps>`
 
   .hero-subtitle {
     width: 100%;
-    color: ${({ color }) => (color ? color : baseTheme.colors.gray[700])};
+    color: ${({ color }) => (color ? color : tones.toneNeutral46)};
     ${respondToOrLarger.md} {
       width: 600px;
     }

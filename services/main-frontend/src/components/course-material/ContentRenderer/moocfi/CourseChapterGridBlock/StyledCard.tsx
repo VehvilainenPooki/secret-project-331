@@ -11,17 +11,17 @@ import { stringToRandomNumber } from "@/shared-module/common/utils/strings"
 import ChapterGridCard from "./ChapterGridCard"
 
 const COLORS_ARRAY = [
-  "#215887",
-  "#1F6964",
-  "#822630",
-  "#A84835",
-  "#6245A9",
-  "#313947",
-  "#51309F",
-  "#065853",
-  "#1A2333",
-  "#065853",
-  "#08457A",
+  "var(--tone-tone-info-23)",
+  "var(--tone-tone-accent-21)",
+  "var(--tone-tone-danger-21)",
+  "var(--tone-tone-danger-17)",
+  "var(--tone-tone-special-2)",
+  "var(--tone-tone-neutral-44)",
+  "var(--tone-tone-info-25)",
+  "var(--tone-tone-accent-23)",
+  "var(--tone-tone-neutral-46)",
+  "var(--tone-tone-accent-23)",
+  "var(--tone-tone-info-26)",
 ] as const
 
 export interface StyledCardProps {

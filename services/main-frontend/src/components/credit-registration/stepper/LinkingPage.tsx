@@ -40,8 +40,8 @@ const factIconCss = css`
   height: 40px;
   margin: -8px 0;
   border-radius: 50%;
-  background: var(--color-green-75);
-  color: var(--color-green-600);
+  background: var(--tone-bg-accent-3);
+  color: var(--tone-fg-accent-7);
 `
 
 const factTitleCss = css`
@@ -51,7 +51,7 @@ const factTitleCss = css`
 const factDetailCss = css`
   grid-column: 2;
   margin-top: var(--space-1);
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 const Fact: React.FC<{

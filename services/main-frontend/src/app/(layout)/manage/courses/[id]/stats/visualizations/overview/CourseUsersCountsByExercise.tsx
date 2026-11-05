@@ -8,9 +8,9 @@ import { useTranslation } from "react-i18next"
 
 import Echarts from "@/components/charts/Echarts"
 import { getCourseUsersCountsByExerciseOptions } from "@/generated/api/@tanstack/react-query.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { InstructionBox } from "../../CourseStatsPage"
 import StatsHeader from "../../StatsHeader"
@@ -83,7 +83,7 @@ const CourseUsersCountsByExercise: React.FC<
                 <div
                   className={css`
                     margin-bottom: 1.5rem;
-                    border: 3px solid ${baseTheme.colors.clear[200]};
+                    border: 3px solid ${tones.chartNeutral9};
                     border-radius: 6px;
                     padding: 1rem;
                   `}
@@ -92,7 +92,7 @@ const CourseUsersCountsByExercise: React.FC<
                   <div>
                     <h3
                       className={css`
-                        color: ${baseTheme.colors.gray[400]};
+                        color: ${tones.chartNeutral16};
                         font-size: 1.3rem;
                       `}
                     >{`${t("chapter")} ${chapterData[0]?.chapter_number}`}</h3>

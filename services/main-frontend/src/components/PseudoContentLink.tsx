@@ -4,8 +4,8 @@ import { css } from "@emotion/css"
 import React from "react"
 
 import { LINK_INHERIT } from "@/components/credit-registration/constants"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Link, type LinkProps } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 type PseudoContentLinkProps = Omit<
   Extract<LinkProps, { styledAsButton?: false | undefined }>,
@@ -34,7 +34,7 @@ const PseudoContentLink: React.FC<PseudoContentLinkProps> = ({ children, ...link
         }
 
         &:focus-visible {
-          outline: 4px solid ${baseTheme.colors.green[500]};
+          outline: 4px solid ${tones.toneAccent19};
           outline-offset: 2px;
         }
 

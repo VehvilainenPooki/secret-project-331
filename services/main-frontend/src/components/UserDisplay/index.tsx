@@ -7,9 +7,10 @@ import { mergeProps, useButton, useOverlayTrigger } from "react-aria"
 import { useTranslation } from "react-i18next"
 
 import { extractUserDetail, useUserDetails } from "@/hooks/useUserDetails"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import { courseUserStatusSummaryRoute } from "@/shared-module/common/utils/routes"
 import { Link, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { CourseProgressSection } from "./CourseProgressSection"
 import { UserDetailsContent } from "./UserDetailsContent"
@@ -79,15 +80,15 @@ const popEnterKeyframes = keyframes`
 `
 
 const popoverStyle = css`
-  background: ${baseTheme.colors.primary[100]};
-  border: 1px solid ${baseTheme.colors.clear[300]};
+  background: ${tones.toneNeutral1};
+  border: 1px solid ${tones.toneNeutral26};
   border-radius: 12px;
   padding: 1rem 1.25rem;
   min-width: 280px;
   max-width: 360px;
   max-height: 80vh;
   overflow-y: auto;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 32px var(--tone-shadow-neutral-13);
 
   &[data-entering] {
     animation: ${popEnterKeyframes} 120ms ease-out;
@@ -103,19 +104,19 @@ const badgeStyle = css`
   min-width: 0;
   padding: 0.25rem 0.5rem;
   border-radius: 9999px;
-  background: ${baseTheme.colors.clear[200]};
-  border: 1px solid ${baseTheme.colors.clear[300]};
+  background: ${tones.toneNeutral22};
+  border: 1px solid ${tones.toneNeutral26};
   font-family: ${primaryFont};
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.15s ease;
 
   &:hover {
-    background: ${baseTheme.colors.clear[300]};
+    background: ${tones.toneNeutral26};
   }
   &:focus {
-    outline: 2px solid ${baseTheme.colors.blue[500]};
+    outline: 2px solid ${tones.toneInfo20};
     outline-offset: 2px;
   }
 `
@@ -146,7 +147,7 @@ const UserDisplay: React.FC<UserDisplayProps> = ({ userId, courseId, prefetchedI
     <span
       className={css`
         font-family: ${primaryFont};
-        color: ${baseTheme.colors.gray[600]};
+        color: ${tones.toneNeutral44};
         font-size: 0.9rem;
       `}
     >
@@ -178,10 +179,10 @@ const UserDisplay: React.FC<UserDisplayProps> = ({ userId, courseId, prefetchedI
             height: 1.5rem;
             flex-shrink: 0;
             border-radius: 50%;
-            background: ${baseTheme.colors.green[200]};
+            background: ${tones.toneAccent9};
             font-size: 0.8rem;
             font-weight: 600;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
           aria-hidden
         >

@@ -6,8 +6,8 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 
 import type { ClientToolName } from "@/generated/course-material-api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Button } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { ClientToolBubbleProps } from "./clientToolRegistry"
 
@@ -53,37 +53,37 @@ const BUBBLE_CLASS_BY_STATE: Record<
   "safe-open": cx(
     bubbleBaseStyle,
     css`
-      background-color: ${tint(baseTheme.colors.green[400], "26")};
-      border: 2px solid ${baseTheme.colors.green[400]};
+      background-color: ${tint(tones.toneAccent16, "26")};
+      border: 2px solid ${tones.toneAccent16};
     `,
   ),
   "safe-closed": cx(
     bubbleBaseStyle,
     css`
-      background-color: ${tint(baseTheme.colors.green[400], "14")};
-      border: 2px solid ${baseTheme.colors.green[300]};
+      background-color: ${tint(tones.toneAccent16, "14")};
+      border: 2px solid ${tones.toneAccent12};
     `,
   ),
   "danger-open": cx(
     bubbleBaseStyle,
     css`
-      background-color: ${tint(baseTheme.colors.red[400], "26")};
-      border: 2px solid ${baseTheme.colors.red[400]};
+      background-color: ${tint(tones.toneDanger10, "26")};
+      border: 2px solid ${tones.toneDanger10};
     `,
   ),
   "danger-closed": cx(
     bubbleBaseStyle,
     css`
-      background-color: ${tint(baseTheme.colors.red[400], "14")};
-      border: 2px solid ${baseTheme.colors.red[300]};
+      background-color: ${tint(tones.toneDanger10, "14")};
+      border: 2px solid ${tones.toneDanger8};
     `,
   ),
   neutral: cx(
     bubbleBaseStyle,
     css`
-      background-color: ${baseTheme.colors.gray[100]};
-      border: 2px solid ${baseTheme.colors.gray[200]};
-      color: ${baseTheme.colors.gray[600]};
+      background-color: ${tones.toneNeutral29};
+      border: 2px solid ${tones.toneNeutral35};
+      color: ${tones.toneNeutral44};
     `,
   ),
 }
@@ -96,7 +96,7 @@ const titleStyle = css`
 const hintStyle = css`
   margin: 0.25rem 0 0.75rem;
   font-size: 0.8rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 const rowsStyle = css`
@@ -120,14 +120,14 @@ const successIconStyle = css`
   flex: none;
   width: 1.1rem;
   height: 1.1rem;
-  color: ${baseTheme.colors.green[600]};
+  color: ${tones.toneAccent21};
 `
 
 const declinedIconStyle = css`
   flex: none;
   width: 1.1rem;
   height: 1.1rem;
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
 `
 
 /**

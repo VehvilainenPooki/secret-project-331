@@ -74,9 +74,9 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
     <div
       className={css`
         padding: 1rem;
-        border: 1px solid #ddd;
+        border: 1px solid var(--tone-border-neutral-29);
         border-radius: 4px;
-        background-color: #f9f9f9;
+        background-color: var(--tone-bg-neutral-17);
         margin-bottom: 1rem;
       `}
     >
@@ -102,10 +102,10 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
               key={index}
               className={css`
                 padding: 0.5rem;
-                background-color: #f8d7da;
-                border: 1px solid #dc3545;
+                background-color: var(--tone-bg-danger-6);
+                border: 1px solid var(--tone-border-danger-7);
                 border-radius: 4px;
-                color: #721c24;
+                color: var(--tone-fg-danger-13);
                 margin-bottom: 0.5rem;
                 font-size: 0.875rem;
               `}
@@ -127,10 +127,10 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
               key={index}
               className={css`
                 padding: 0.5rem;
-                background-color: #fff3cd;
-                border: 1px solid #ffc107;
+                background-color: var(--tone-bg-warning-4);
+                border: 1px solid var(--tone-border-warning-2);
                 border-radius: 4px;
-                color: #856404;
+                color: var(--tone-fg-warning-3);
                 margin-bottom: 0.5rem;
                 font-size: 0.875rem;
               `}
@@ -165,15 +165,16 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
                 padding: 0.5rem;
                 margin-bottom: 0.5rem;
                 border-radius: 4px;
-                background-color: ${isDetected ? "#d4edda" : "#f8f9fa"};
-                border: 1px solid ${isDetected ? "#c3e6cb" : "#dee2e6"};
+                background-color: ${isDetected ? "var(--tone-tone-accent-6)" : "var(--tone-tone-neutral-6)"};
+                border: 1px solid
+                  ${isDetected ? "var(--tone-tone-accent-8)" : "var(--tone-tone-neutral-27)"};
                 font-size: 0.875rem;
               `}
             >
               <code
                 className={css`
                   font-weight: 600;
-                  color: ${isDetected ? "#155724" : "#495057"};
+                  color: ${isDetected ? "var(--tone-tone-accent-24)" : "var(--tone-tone-neutral-42)"};
                 `}
               >
                 {`{{${placeholder}}}`}
@@ -182,7 +183,7 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
                 <span
                   className={css`
                     margin-left: 0.5rem;
-                    color: #dc3545;
+                    color: var(--tone-fg-danger-3);
                     font-size: 0.75rem;
                   `}
                 >
@@ -193,7 +194,7 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
                 <span
                   className={css`
                     margin-left: 0.5rem;
-                    color: #155724;
+                    color: var(--tone-fg-accent-9);
                     font-size: 0.75rem;
                   `}
                 >
@@ -206,7 +207,7 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
                 <div
                   className={css`
                     margin-top: 0.25rem;
-                    color: #6c757d;
+                    color: var(--tone-fg-neutral-19);
                     font-size: 0.75rem;
                   `}
                 >
@@ -222,10 +223,10 @@ const PlaceholderInfo: React.FC<React.PropsWithChildren<PlaceholderInfoProps>> =
         <div
           className={css`
             padding: 0.5rem;
-            background-color: #fff3cd;
-            border: 1px solid #ffc107;
+            background-color: var(--tone-bg-warning-4);
+            border: 1px solid var(--tone-border-warning-2);
             border-radius: 4px;
-            color: #856404;
+            color: var(--tone-fg-warning-3);
             font-size: 0.875rem;
           `}
         >

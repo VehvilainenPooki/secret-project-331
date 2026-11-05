@@ -26,8 +26,9 @@ import Centered from "@/shared-module/common/components/Centering/Centered"
 import DebugModal from "@/shared-module/common/components/DebugModal"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme, headingFont } from "@/shared-module/common/styles"
+import { headingFont } from "@/shared-module/common/styles"
 import { Button, Menu, useDialog } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import ChapterFormDialog from "./ChapterFormDialog"
 import ChapterImageDialog from "./ChapterImageDialog"
@@ -143,7 +144,7 @@ const ManageCourseStructure: React.FC<React.PropsWithChildren<ManageCourseStruct
       <h1
         className={css`
           font-size: clamp(2rem, 3.6vh, 36px);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}
@@ -153,7 +154,7 @@ const ManageCourseStructure: React.FC<React.PropsWithChildren<ManageCourseStruct
       <h2
         className={css`
           font-size: var(--font-size-4);
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}
@@ -193,14 +194,14 @@ const ManageCourseStructure: React.FC<React.PropsWithChildren<ManageCourseStruct
                   <div
                     className={css`
                       padding-top: 3rem;
-                      background-color: ${n % 2 === 0 ? baseTheme.colors.clear[100] : "white"};
+                      background-color: ${n % 2 === 0 ? tones.toneNeutral12 : "white"};
                     `}
                   >
                     <Centered variant="default">
                       <h2
                         className={css`
                           font-size: 1.875rem;
-                          color: ${baseTheme.colors.gray[500]};
+                          color: ${tones.toneNeutral41};
                           text-align: center;
                           margin-bottom: 2rem;
                           font-weight: bold;
@@ -349,10 +350,10 @@ const ManageCourseStructure: React.FC<React.PropsWithChildren<ManageCourseStruct
 
       <div
         className={css`
-          background: #f7f8f9;
+          background: var(--tone-bg-neutral-20);
           width: 100%;
           padding: 1rem;
-          color: #4c5868;
+          color: var(--tone-fg-info-10);
           margin-top: 3rem;
 
           .header {
@@ -371,15 +372,21 @@ const ManageCourseStructure: React.FC<React.PropsWithChildren<ManageCourseStruct
         `}
       >
         <span className="header">
-          <BlockProhibited size={18} weight="bold" color="#4C5868" />
+          <BlockProhibited
+            size={18}
+            weight="bold"
+            className={css`
+              color: ${tones.fgInfo10};
+            `}
+          />
           {t("partners-section-heading")}
         </span>
         <p>{t("partners-section-text")}</p>
         <button
           className={css`
-            background: ${baseTheme.colors.gray[100]};
+            background: ${tones.toneNeutral29};
             padding: 8px 20px;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             cursor: pointer;
             width: auto;
             border: none;

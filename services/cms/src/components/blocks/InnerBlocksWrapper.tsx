@@ -10,7 +10,7 @@ const InnerBlocksWrapper: React.FC<React.PropsWithChildren<{ title: string }>> =
     <div
       className={css`
         width: 100%;
-        border: 1px solid #e2e2e2;
+        border: 1px solid var(--tone-border-neutral-21);
         padding: 1rem;
       `}
     >

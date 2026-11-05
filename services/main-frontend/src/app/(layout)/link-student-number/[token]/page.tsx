@@ -46,7 +46,7 @@ import type { InfoboxTone } from "@/shared-module/components"
 import { Button, Infobox, Link, QueryResult, Radio, RadioGroup } from "@/shared-module/components"
 
 const wrongAccountActionCss = css`
-  color: var(--color-green-700);
+  color: var(--tone-fg-accent-8);
   text-decoration: underline;
   background: none;
   border: none;
@@ -55,7 +55,7 @@ const wrongAccountActionCss = css`
   cursor: pointer;
 
   &:hover {
-    color: var(--color-green-800);
+    color: var(--tone-fg-accent-11);
   }
 
   &:focus-visible {
@@ -67,7 +67,7 @@ const wrongAccountActionCss = css`
 
 const eyebrowCss = css`
   margin: 0 0 var(--space-3);
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-1);
   font-weight: 500;
 `
@@ -89,18 +89,18 @@ const recordsCss = css`
 const recordCss = css`
   display: grid;
   padding: var(--space-4);
-  border: 1px solid var(--color-clear-300);
+  border: 1px solid var(--color-border);
   border-radius: var(--surface-radius);
 `
 
 // The record the student checks first, so the only border on the page that reads as a boundary.
 const sisuRecordCss = css`
-  border-color: var(--color-gray-400);
+  border-color: var(--color-border-strong);
 `
 
 const recordTitleCss = css`
   margin: 0 0 var(--space-2);
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: 15px;
   font-weight: 500;
 `
@@ -117,7 +117,7 @@ const sisuFactsCss = css`
 
   dd {
     margin: 0;
-    color: var(--color-gray-700);
+    color: var(--color-text);
     font-size: 20px;
     font-weight: 600;
     line-height: 1.3;
@@ -125,7 +125,7 @@ const sisuFactsCss = css`
 `
 
 const factLabelCss = css`
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: var(--font-size-1);
 `
 
@@ -136,19 +136,19 @@ const studentNumberValueCss = css`
 const accountEmailCss = css`
   margin: 0;
   overflow-wrap: anywhere;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: var(--font-size-3);
   font-weight: 600;
 `
 
 const accountNameCss = css`
   margin: var(--space-3) 0 0;
-  color: var(--color-gray-700);
+  color: var(--color-text);
   font-size: 15px;
 
   span:first-child {
     margin-right: var(--space-2);
-    color: var(--color-gray-500);
+    color: var(--color-text-muted);
   }
 `
 
@@ -159,7 +159,7 @@ const mismatchCss = css`
 `
 
 const mismatchHighlightCss = css`
-  background: var(--color-yellow-300);
+  background: var(--tone-bg-warning-6);
 `
 
 const outcomeCss = css`

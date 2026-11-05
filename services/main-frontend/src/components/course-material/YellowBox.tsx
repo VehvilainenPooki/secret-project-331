@@ -2,12 +2,12 @@
 
 import styled from "@emotion/styled"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const YellowBox = styled.div`
   padding: 1rem;
-  background-color: ${baseTheme.colors.yellow[200]};
-  color: #493f13;
+  background-color: ${tones.toneWarning5};
+  color: var(--tone-fg-warning-7);
   margin: 1rem 0;
   font-size: 1rem;
   line-height: 140%;

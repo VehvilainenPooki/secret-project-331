@@ -16,11 +16,12 @@ import {
 import useUserResearchConsentQuery from "@/hooks/useUserResearchConsentQuery"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
 import { courseFrontPageRoute } from "@/shared-module/common/utils/routes"
 import { Button, Link, QueryResult } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { settingsCardCss } from "@/styles/sharedStyles"
 
 import OAuthGrantsSection from "./OAuthGrantsSection"
@@ -90,7 +91,7 @@ const PermissionsSettingsPage: React.FC = () => {
             align-items: center;
             margin-bottom: 1.25rem;
             padding-bottom: 1rem;
-            border-bottom: 1px solid ${baseTheme.colors.gray[100]};
+            border-bottom: 1px solid ${tones.toneNeutral29};
           `}
         >
           <div
@@ -107,7 +108,7 @@ const PermissionsSettingsPage: React.FC = () => {
                 justify-content: center;
                 width: 32px;
                 height: 32px;
-                background: ${baseTheme.colors.green[75]};
+                background: ${tones.toneAccent4};
                 border-radius: 6px;
                 flex-shrink: 0;
               `}
@@ -115,7 +116,7 @@ const PermissionsSettingsPage: React.FC = () => {
               <LinesClipboard
                 size={16}
                 className={css`
-                  color: ${baseTheme.colors.green[700]};
+                  color: ${tones.toneAccent23};
                 `}
               />
             </div>
@@ -123,7 +124,7 @@ const PermissionsSettingsPage: React.FC = () => {
               className={css`
                 font-size: 1.0625rem;
                 font-weight: ${fontWeights.semibold};
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 margin: 0;
               `}
             >
@@ -152,7 +153,7 @@ const PermissionsSettingsPage: React.FC = () => {
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 0.03em;
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
                 margin-bottom: 0.375rem;
               `}
             >
@@ -162,7 +163,7 @@ const PermissionsSettingsPage: React.FC = () => {
               data-testid="general-research-consent-value"
               className={css`
                 font-size: 0.9375rem;
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 font-weight: 500;
               `}
             >
@@ -201,7 +202,7 @@ const PermissionsSettingsPage: React.FC = () => {
                 font-weight: 500;
                 text-transform: uppercase;
                 letter-spacing: 0.03em;
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
                 margin: 0 0 0.75rem 0;
               `}
             >
@@ -226,8 +227,8 @@ const PermissionsSettingsPage: React.FC = () => {
                         justify-content: space-between;
                         align-items: center;
                         padding: 0.875rem 1rem;
-                        background: ${baseTheme.colors.gray[50]};
-                        border: 1px solid ${baseTheme.colors.gray[100]};
+                        background: ${tones.toneNeutral14};
+                        border: 1px solid ${tones.toneNeutral29};
                         border-radius: 8px;
                       `}
                     >
@@ -236,7 +237,7 @@ const PermissionsSettingsPage: React.FC = () => {
                         className={css`
                           font-size: 0.9375rem;
                           font-weight: 500;
-                          color: ${baseTheme.colors.gray[700]};
+                          color: ${tones.toneNeutral46};
                         `}
                       >
                         {data.course_name}
@@ -247,13 +248,13 @@ const PermissionsSettingsPage: React.FC = () => {
                           className={css`
                             font-size: 0.8125rem;
                             font-weight: 500;
-                            color: ${baseTheme.colors.green[700]};
+                            color: ${tones.toneAccent23};
                             text-decoration: none;
                             padding: 0.375rem 0.625rem;
                             border-radius: 6px;
                             transition: all 0.15s ease;
                             &:hover {
-                              background: ${baseTheme.colors.green[75]};
+                              background: ${tones.toneAccent4};
                             }
                           `}
                         >
@@ -277,7 +278,7 @@ const PermissionsSettingsPage: React.FC = () => {
           className={cx(
             settingsCardCss,
             css`
-              border-color: ${baseTheme.colors.red[100]};
+              border-color: ${tones.toneDanger2};
             `,
           )}
         >
@@ -288,7 +289,7 @@ const PermissionsSettingsPage: React.FC = () => {
               gap: 0.625rem;
               margin-bottom: 1.25rem;
               padding-bottom: 1rem;
-              border-bottom: 1px solid ${baseTheme.colors.red[100]};
+              border-bottom: 1px solid ${tones.toneDanger2};
             `}
           >
             <div
@@ -298,7 +299,7 @@ const PermissionsSettingsPage: React.FC = () => {
                 justify-content: center;
                 width: 32px;
                 height: 32px;
-                background: ${baseTheme.colors.red[75]};
+                background: ${tones.toneDanger1};
                 border-radius: 6px;
                 flex-shrink: 0;
               `}
@@ -306,7 +307,7 @@ const PermissionsSettingsPage: React.FC = () => {
               <XmarkCircle
                 size={16}
                 className={css`
-                  color: ${baseTheme.colors.red[700]};
+                  color: ${tones.toneDanger19};
                 `}
               />
             </div>
@@ -314,7 +315,7 @@ const PermissionsSettingsPage: React.FC = () => {
               className={css`
                 font-size: 1.0625rem;
                 font-weight: ${fontWeights.semibold};
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
                 margin: 0;
               `}
             >

@@ -65,7 +65,7 @@ const ExerciseSubmissionList: React.FC<React.PropsWithChildren<Props>> = ({
               <LinkIcon
                 size={20}
                 className={css`
-                  color: #868b93;
+                  color: var(--tone-fg-neutral-14);
                 `}
               />
             </Link>

@@ -6,8 +6,8 @@ import { ColorPalette, Notice, PanelBody, Placeholder } from "@wordpress/compone
 import { cover as icon } from "@wordpress/icons"
 import React from "react"
 
-import { baseTheme } from "@/shared-module/common/styles"
 import { Checkbox } from "@/shared-module/components"
+import { colors, tones } from "@/shared-module/components/styles/themes"
 import { useAttributeForm } from "@/utils/useAttributeForm"
 import { useTranslation } from "@/utils/useCmsTranslation"
 
@@ -25,19 +25,19 @@ const checkboxGroupCss = css`
 `
 
 const DEFAULT_BACKGROUND_COLORS = [
-  { color: "#FFFFFF", name: "white" },
-  { color: "#663399", name: "rebeccapurple" },
-  { color: baseTheme.colors.blue[100], name: "lightblue" },
+  { color: "var(--color-text-on-accent)", name: "white" },
+  { color: "var(--tone-fg-special-2)", name: "rebeccapurple" },
+  { color: tones.fgInfo1, name: "lightblue" },
 ]
 
 const DEFAULT_FONT_COLORS = [
-  { color: baseTheme.colors.gray[700], name: "gray-1" },
-  { color: baseTheme.colors.gray[600], name: "gray-2" },
-  { color: baseTheme.colors.gray[500], name: "gray-3" },
+  { color: colors.text, name: "gray-1" },
+  { color: tones.fgNeutral35, name: "gray-2" },
+  { color: colors.textMuted, name: "gray-3" },
 ]
 
-const WHITE = "#FFFFFF"
-const GRAY = baseTheme.colors.gray[700]
+const WHITE = "var(--tone-tone-neutral-1)"
+const GRAY = tones.toneNeutral46
 
 // Attribute keys
 const BACKGROUND_IMAGE = "backgroundImage"

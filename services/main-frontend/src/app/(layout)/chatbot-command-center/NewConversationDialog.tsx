@@ -9,9 +9,9 @@ import { useTranslation } from "react-i18next"
 
 import { useChatbotContext } from "@/components/course-material/chatbot/shared/ChatbotContext"
 import type { ChatbotConfiguration, Course } from "@/generated/api/types.generated"
-import { baseTheme } from "@/shared-module/common/styles"
 import { Dialog, TextField } from "@/shared-module/components"
 import { listBoxEmptyStateCss } from "@/shared-module/components/components/primitives/selectStyles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 interface NewConversationDialogProps {
   chatbots: ChatbotConfiguration[]
@@ -50,12 +50,12 @@ const buttonCss = css`
   transition: background-color 0.2s;
 
   &:hover:not(:disabled):not([aria-disabled="true"]) {
-    background: var(--color-green-75);
-    border-color: var(--color-green-300);
+    background: var(--tone-bg-accent-3);
+    border-color: var(--tone-border-accent-6);
     cursor: pointer;
   }
   color: var(--field-fg);
-  border: 1px solid ${baseTheme.colors.gray[100]};
+  border: 1px solid ${tones.toneNeutral29};
   text-align: left;
   background: none;
   border-radius: 7px;

@@ -6,7 +6,8 @@ import React, { useRef } from "react"
 import { useTabList } from "react-aria"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme, fontWeights } from "@/shared-module/common/styles"
+import { fontWeights } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 
 /**
  * The container both tab strips share: `Tabs` (state-driven) and `RouteTabList` (route-driven).
@@ -24,8 +25,8 @@ export const tabStripCss = css`
   gap: 4px;
   padding: 4px;
   margin-bottom: 1.5rem;
-  background: ${baseTheme.colors.gray[75]};
-  border: 1px solid ${baseTheme.colors.gray[100]};
+  background: ${tones.toneNeutral19};
+  border: 1px solid ${tones.toneNeutral29};
   border-radius: 8px;
 `
 
@@ -86,25 +87,21 @@ export function tabPillCss({
     cursor: ${isDisabled ? "not-allowed" : "pointer"};
     font-weight: ${isSelected ? fontWeights.semibold : fontWeights.medium};
     color: ${
-      isDisabled
-        ? baseTheme.colors.gray[300]
-        : isSelected
-          ? baseTheme.colors.green[700]
-          : baseTheme.colors.gray[500]
+      isDisabled ? tones.toneNeutral37 : isSelected ? tones.toneAccent23 : tones.toneNeutral41
     };
-    background: ${isSelected ? baseTheme.colors.clear[50] : "transparent"};
+    background: ${isSelected ? tones.toneNeutral1 : "transparent"};
     ${
       isSelected &&
       css`
         box-shadow:
-          0 1px 3px rgba(0, 0, 0, 0.08),
-          0 1px 2px rgba(0, 0, 0, 0.06);
+          0 1px 3px var(--tone-shadow-neutral-8),
+          0 1px 2px var(--tone-shadow-neutral-7);
       `
     }
     ${
       isFocusVisible &&
       css`
-        outline: 2px solid ${baseTheme.colors.green[400]};
+        outline: 2px solid ${tones.toneAccent16};
         outline-offset: 2px;
       `
     }
@@ -113,8 +110,8 @@ export function tabPillCss({
       !isSelected &&
       !isDisabled &&
       css`
-        color: ${baseTheme.colors.gray[700]};
-        background: rgba(255, 255, 255, 0.5);
+        color: ${tones.toneNeutral46};
+        background: var(--tone-bg-neutral-4);
       `
     }
   `

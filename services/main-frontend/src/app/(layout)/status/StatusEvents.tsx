@@ -8,9 +8,9 @@ import { useTranslation } from "react-i18next"
 
 import { DENSITY_COMPACT } from "@/components/credit-registration/constants"
 import { useStatusEvents } from "@/hooks/useStatusEvents"
-import { baseTheme } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { QueryResult, Select, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const FILTER_ALL = "all" as const
 const FILTER_ERROR = "error" as const
@@ -94,7 +94,7 @@ const StatusEvents: React.FC = () => {
             />
             <span
               className={css`
-                color: ${baseTheme.colors.gray[500]};
+                color: ${tones.toneNeutral41};
                 font-size: 0.9rem;
               `}
             >
@@ -125,13 +125,13 @@ const StatusEvents: React.FC = () => {
                     `}
                   >
                     {event.type_ === "Error" && (
-                      <XmarkCircle size={16} color={baseTheme.colors.red[600]} />
+                      <XmarkCircle size={16} color={tones.toneDanger17} />
                     )}
                     {event.type_ === "Warning" && (
-                      <ExclamationTriangle size={16} color={baseTheme.colors.yellow[700]} />
+                      <ExclamationTriangle size={16} color={tones.toneWarning11} />
                     )}
                     {(!event.type_ || event.type_ === "Normal") && (
-                      <InfoCircle size={16} color={baseTheme.colors.blue[600]} />
+                      <InfoCircle size={16} color={tones.toneInfo23} />
                     )}
                     <span>{event.type_ || t("status-normal")}</span>
                   </div>

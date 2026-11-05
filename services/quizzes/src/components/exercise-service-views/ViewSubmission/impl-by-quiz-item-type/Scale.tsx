@@ -28,7 +28,7 @@ const Scale: React.FC<
         padding: 0.625rem;
         flex-direction: column;
         margin-bottom: 0.625rem;
-        background: white;
+        background: var(--color-surface);
         ${respondToOrLarger.md} {
           flex-direction: row;
           flex-wrap: wrap;
@@ -41,7 +41,7 @@ const Scale: React.FC<
           className={css`
             flex: 5;
             margin: 0.5rem 0;
-            color: #4c5868;
+            color: var(--tone-fg-info-10);
             font-family: ${primaryFont};
             font-size: 1.25rem;
             margin-bottom: 1rem;
@@ -77,20 +77,20 @@ const Scale: React.FC<
                   font-weight: 500;
                   line-height: 1.2;
                   span {
-                    color: #4c5868;
+                    color: var(--tone-fg-info-10);
                     font-size: 1.125rem;
                     :after {
                       display: inline-block;
                       position: absolute;
                       top: 1px;
                       content: "";
-                      background-color: #fff;
+                      background-color: var(--color-surface);
                       width: 1.2em;
                       height: 1.2em;
                       border-radius: 50%;
                       margin-left: 0.375em;
                       transition: 0.25s ease;
-                      box-shadow: inset 0 0 0 0.15em #dfe1e6;
+                      box-shadow: inset 0 0 0 0.15em var(--tone-shadow-neutral-12);
                     }
                   }
 
@@ -99,8 +99,8 @@ const Scale: React.FC<
                     left: -9999px;
                     &:checked + span {
                       &:after {
-                        box-shadow: inset 0 0 0 0.33em #b4bac3;
-                        border: 0.188rem solid #dfe1e6;
+                        box-shadow: inset 0 0 0 0.33em var(--tone-shadow-neutral-25);
+                        border: 0.188rem solid var(--tone-border-neutral-23);
                       }
                     }
                   }

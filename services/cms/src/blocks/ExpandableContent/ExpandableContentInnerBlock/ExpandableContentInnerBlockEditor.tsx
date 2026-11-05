@@ -4,8 +4,9 @@ import { css } from "@emotion/css"
 import { useBlockProps } from "@wordpress/block-editor"
 import React from "react"
 
-import { baseTheme, fontWeights, headingFont, primaryFont } from "@/shared-module/common/styles"
+import { fontWeights, headingFont, primaryFont } from "@/shared-module/common/styles"
 import { TextField } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import RegisteredInnerBlocks from "@/utils/Gutenberg/RegisteredInnerBlocks"
 import type { BlockEditProps } from "@/utils/Gutenberg/types"
 import { useAttributeForm } from "@/utils/useAttributeForm"
@@ -33,8 +34,8 @@ const ExpandableContentInnerBlockEditor: React.FC<
           box-sizing: border-box;
           padding: 1rem;
           border-radius: 4px;
-          border: 1px solid ${baseTheme.colors.gray[400]};
-          background: ${baseTheme.colors.clear[100]};
+          border: 1px solid ${tones.toneNeutral39};
+          background: ${tones.toneNeutral12};
           margin: 0.5rem 0;
         `}
       >
@@ -43,7 +44,7 @@ const ExpandableContentInnerBlockEditor: React.FC<
             margin: 0 0 0.5rem 0;
             font-family: ${primaryFont};
             font-size: 0.8125rem;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             font-weight: ${fontWeights.medium};
           `}
         >
@@ -56,7 +57,7 @@ const ExpandableContentInnerBlockEditor: React.FC<
             gap: 0.5rem;
             padding-bottom: 0.875rem;
             font-family: ${headingFont};
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
           `}
         >
           <TextField
@@ -73,12 +74,12 @@ const ExpandableContentInnerBlockEditor: React.FC<
                 margin: 0;
               }
               input {
-                border: 1px solid ${baseTheme.colors.gray[500]} !important;
+                border: 1px solid ${tones.toneNeutral41} !important;
                 border-radius: 4px !important;
-                background: ${baseTheme.colors.clear[100]} !important;
+                background: ${tones.toneNeutral12} !important;
                 font-family: ${headingFont};
                 font-weight: ${fontWeights.semibold};
-                color: ${baseTheme.colors.gray[700]};
+                color: ${tones.toneNeutral46};
               }
             `}
           />
@@ -88,7 +89,7 @@ const ExpandableContentInnerBlockEditor: React.FC<
             margin: 0 0 0.5rem 0;
             font-family: ${primaryFont};
             font-size: 0.8125rem;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             font-weight: ${fontWeights.medium};
           `}
         >
@@ -96,8 +97,8 @@ const ExpandableContentInnerBlockEditor: React.FC<
         </p>
         <div
           className={css`
-            background: ${baseTheme.colors.clear[100]};
-            border: 1px dashed ${baseTheme.colors.gray[600]};
+            background: ${tones.toneNeutral12};
+            border: 1px dashed ${tones.toneNeutral44};
             border-radius: 4px;
             padding: 1rem;
             width: 100%;

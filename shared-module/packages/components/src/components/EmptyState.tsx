@@ -10,12 +10,12 @@ const rootCss = css`
   gap: var(--space-3);
   padding: var(--space-6) var(--space-4);
   text-align: center;
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
 `
 
 const iconCss = css`
   font-size: var(--font-size-5);
-  color: var(--color-gray-400);
+  color: var(--tone-fg-neutral-16);
   line-height: 1;
 `
 
@@ -23,7 +23,7 @@ const titleCss = css`
   margin: 0;
   font-size: var(--font-size-3);
   font-weight: 600;
-  color: var(--color-gray-700);
+  color: var(--color-text);
 `
 
 const hintCss = css`

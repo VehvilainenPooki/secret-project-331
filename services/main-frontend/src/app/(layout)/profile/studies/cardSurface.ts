@@ -8,12 +8,12 @@ import { dividedListCss, sectionHeaderCss } from "@/components/credit-registrati
  */
 export const studiesCardCss = css`
   display: grid;
-  border: 1px solid var(--color-clear-400);
+  border: 1px solid var(--tone-border-neutral-31);
   border-radius: var(--surface-radius);
-  background: var(--color-clear-50);
+  background: var(--color-surface);
   box-shadow:
-    0 1px 2px rgba(26, 35, 51, 0.04),
-    0 2px 6px rgba(26, 35, 51, 0.05);
+    0 1px 2px var(--tone-shadow-info-2),
+    0 2px 6px var(--tone-shadow-info-4);
   /* Clips the title band's tint to the rounded corners. */
   overflow: hidden;
 `
@@ -23,8 +23,8 @@ export const studiesCardHeaderCss = cx(
   sectionHeaderCss,
   css`
     padding: var(--space-4);
-    border-bottom: 1px solid var(--color-green-100);
-    background: var(--color-green-75);
+    border-bottom: 1px solid var(--tone-border-accent-2);
+    background: var(--tone-bg-accent-3);
   `,
 )
 

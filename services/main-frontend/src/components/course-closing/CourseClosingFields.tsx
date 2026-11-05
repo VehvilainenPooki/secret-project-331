@@ -56,13 +56,13 @@ const subheadingStyles = css`
 
 const secondaryStyles = css`
   margin-left: 0.5rem;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
   font-size: 0.875em;
 `
 
 const mutedStyles = css`
   margin: 0;
-  color: var(--color-gray-500);
+  color: var(--color-text-muted);
 `
 
 const compareByName = (a: ClosingSuccessorCandidate, b: ClosingSuccessorCandidate) =>

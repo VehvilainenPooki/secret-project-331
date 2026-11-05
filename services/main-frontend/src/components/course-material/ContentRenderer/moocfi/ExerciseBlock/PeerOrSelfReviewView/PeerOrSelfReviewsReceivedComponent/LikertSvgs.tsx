@@ -1,5 +1,7 @@
 "use client"
 
+// Illustrated rating faces: their colors are part of the drawing, so they stay literal in every theme.
+
 export const Agree = () => {
   return (
     <svg

@@ -30,7 +30,6 @@ import type {
 } from "@/generated/api/types.generated"
 import TimeComponent from "@/shared-module/common/components/TimeComponent"
 import useToastMutationOptions from "@/shared-module/common/hooks/useToastMutationOptions"
-import { baseTheme } from "@/shared-module/common/styles"
 import { courseMaterialFrontPageHref } from "@/shared-module/common/utils/cross-routing"
 import { nullIfFalsy, omitUndefined } from "@/shared-module/common/utils/nullability"
 import { manageCourseByIdRoute } from "@/shared-module/common/utils/routes"
@@ -48,6 +47,7 @@ import {
   TONE,
   ErrorNotice,
 } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import { contentRowStyles, FieldSet, Legend, type CourseDataFilter } from "../page"
 import ContentDisplayBox from "./ContentDisplayBox"
@@ -55,7 +55,7 @@ import CourseMetadata from "./CourseMetadata"
 import EditModuleFields from "./EditModuleFields"
 
 const linkStyles = css`
-  color: ${baseTheme.colors.green[700]};
+  color: ${tones.toneAccent23};
   text-decoration: underline;
 `
 
@@ -301,7 +301,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
         key={id}
         className={css`
           padding: 1rem;
-          border: 1px solid rgba(0, 0, 0, 0.12);
+          border: 1px solid var(--tone-border-neutral-24);
         `}
         data-testid="course-auditing-card"
       >
@@ -344,7 +344,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
             </div>
             <div
               className={css`
-                color: ${baseTheme.colors.gray[600]};
+                color: ${tones.toneNeutral44};
                 font-size: 1rem;
                 display: flex;
                 flex-wrap: wrap;
@@ -556,7 +556,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
               className={css`
                 font-size: 1.15rem;
                 font-weight: 600;
-                color: ${baseTheme.colors.gray[900]};
+                color: ${tones.toneNeutral48};
                 margin: 0.5rem 0rem;
               `}
             >
@@ -606,7 +606,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
                             content: "•";
                             position: absolute;
                             left: 0;
-                            color: ${baseTheme.colors.green[600]};
+                            color: ${tones.toneAccent21};
                           }
                         `}
                       >
@@ -642,7 +642,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
                             content: "•";
                             position: absolute;
                             left: 0;
-                            color: ${baseTheme.colors.green[600]};
+                            color: ${tones.toneAccent21};
                           }
                         `}
                       >
@@ -709,7 +709,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
                   className={css`
                     font-size: 1.15rem;
                     font-weight: 600;
-                    color: ${baseTheme.colors.gray[900]};
+                    color: ${tones.toneNeutral48};
                     margin: 0.5rem 0rem;
                   `}
                 >

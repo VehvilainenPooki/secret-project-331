@@ -52,16 +52,16 @@ const submitButtonCss = css`
 
   &&:disabled {
     opacity: 1;
-    background: var(--color-gray-100);
-    border-color: var(--color-gray-100);
-    color: var(--color-gray-500);
+    background: var(--tone-bg-neutral-67);
+    border-color: var(--tone-border-neutral-27);
+    color: var(--color-text-muted);
   }
 `
 
 const resendLineCss = css`
   text-align: center;
   font-size: var(--font-size-1);
-  color: var(--color-gray-600);
+  color: var(--tone-fg-neutral-35);
 `
 
 const resendButtonCss = css`
@@ -70,7 +70,7 @@ const resendButtonCss = css`
   background: none;
   font: inherit;
   font-weight: 600;
-  color: var(--color-green-700);
+  color: var(--tone-fg-accent-8);
   cursor: pointer;
 
   &:hover {
@@ -85,7 +85,7 @@ const resendButtonCss = css`
 
   &:disabled {
     font-weight: 500;
-    color: var(--color-gray-600);
+    color: var(--tone-fg-neutral-35);
     cursor: default;
     text-decoration: none;
   }

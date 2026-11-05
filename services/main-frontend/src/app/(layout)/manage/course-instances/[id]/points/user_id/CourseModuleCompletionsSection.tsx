@@ -12,21 +12,21 @@ import { useCourseStructure } from "@/hooks/useCourseStructure"
 import BooleanAsText from "@/shared-module/common/components/BooleanAsText"
 import DebugModal from "@/shared-module/common/components/DebugModal"
 import HideTextInSystemTests from "@/shared-module/common/components/system-tests/HideTextInSystemTests"
-import { baseTheme } from "@/shared-module/common/styles"
 import { dateToString } from "@/shared-module/common/utils/time"
 import { ErrorNotice, QueryResults, Spinner } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 const Section = styled.section`
   margin: 2rem 0;
 `
 
 const ModuleCard = styled.div`
-  background: ${baseTheme.colors.clear[100]};
-  border: 1px solid ${baseTheme.colors.clear[200]};
+  background: ${tones.toneNeutral12};
+  border: 1px solid ${tones.toneNeutral22};
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin-bottom: 1rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0.125rem 0.25rem var(--tone-shadow-neutral-6);
 `
 
 const ModuleHeader = styled.div`
@@ -35,25 +35,25 @@ const ModuleHeader = styled.div`
   align-items: center;
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid ${baseTheme.colors.clear[200]};
+  border-bottom: 1px solid ${tones.toneNeutral22};
 `
 
 const ModuleTitle = styled.h3`
   margin: 0;
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 1.125rem;
 `
 
 const CompletionDate = styled.span`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.875rem;
 `
 
 const ReviewBanner = styled.div`
-  background: ${baseTheme.colors.red[100]};
-  border: 1px solid ${baseTheme.colors.red[500]};
+  background: ${tones.toneDanger2};
+  border: 1px solid ${tones.toneDanger15};
   border-radius: 0.375rem;
-  color: ${baseTheme.colors.red[800]};
+  color: ${tones.toneDanger20};
   font-weight: 600;
   margin-bottom: 1rem;
   padding: 0.75rem 1rem;
@@ -72,12 +72,12 @@ const InfoItem = styled.div`
 `
 
 const Label = styled.span`
-  color: ${baseTheme.colors.gray[500]};
+  color: ${tones.toneNeutral41};
   font-size: 0.875rem;
 `
 
 const Value = styled.span`
-  color: ${baseTheme.colors.gray[700]};
+  color: ${tones.toneNeutral46};
   font-size: 1rem;
 `
 
@@ -104,7 +104,7 @@ const CourseModuleCompletionsSection: React.FC<CourseModuleCompletionsSectionPro
     <h2
       className={css`
         margin-bottom: 1.5rem;
-        color: ${baseTheme.colors.gray[700]};
+        color: ${tones.toneNeutral46};
         font-size: 1.5rem;
       `}
     >
@@ -120,7 +120,7 @@ const CourseModuleCompletionsSection: React.FC<CourseModuleCompletionsSectionPro
           {heading}
           <p
             className={css`
-              color: ${baseTheme.colors.gray[500]};
+              color: ${tones.toneNeutral41};
               font-size: 1rem;
             `}
           >

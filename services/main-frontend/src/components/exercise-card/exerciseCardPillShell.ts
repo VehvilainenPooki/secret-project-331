@@ -8,17 +8,17 @@ export const exerciseCardPillShell = css`
   font-family: ${secondaryFont} !important;
   text-transform: uppercase;
   border-radius: 10px;
-  background: #f0f0f0;
+  background: var(--tone-bg-neutral-45);
   height: 60px;
   padding: 8px 16px 6px 16px;
-  color: #57606f;
+  color: var(--tone-fg-info-9);
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   gap: 16px;
   box-shadow:
-    rgba(45, 35, 66, 0) 0 2px 4px,
-    rgba(45, 35, 66, 0) 0 7px 13px -3px,
-    #c4c4c4 0 -3px 0 inset;
+    var(--tone-shadow-info-1) 0 2px 4px,
+    var(--tone-shadow-info-1) 0 7px 13px -3px,
+    var(--tone-shadow-neutral-22) 0 -3px 0 inset;
 `

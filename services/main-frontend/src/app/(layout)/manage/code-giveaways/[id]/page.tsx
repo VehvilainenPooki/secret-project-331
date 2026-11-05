@@ -11,8 +11,9 @@ import {
   getCodeGiveawayCodesOptions,
 } from "@/generated/api/@tanstack/react-query.generated"
 import { usePageTitle } from "@/shared-module/common/hooks/usePageTitle"
-import { baseTheme, headingFont, typography } from "@/shared-module/common/styles"
+import { headingFont, typography } from "@/shared-module/common/styles"
 import { Button, Link, QueryResults, Table } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import { codeGiveawayCodesCsvHref } from "@/utils/exportDownloadUrls"
 
 import CodeGiveawayCode from "./CodeGiveawayCode"
@@ -47,7 +48,7 @@ const CodeGiveawayPage = () => {
       <h1
         className={css`
           font-size: ${typography.h4};
-          color: ${baseTheme.colors.gray[700]};
+          color: ${tones.toneNeutral46};
           font-family: ${headingFont};
           font-weight: bold;
         `}

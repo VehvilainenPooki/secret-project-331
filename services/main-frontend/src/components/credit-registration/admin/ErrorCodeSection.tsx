@@ -49,11 +49,11 @@ const deltaCss = css`
 `
 
 const risingIconCss = css`
-  color: var(--color-crimson-700);
+  color: var(--tone-fg-danger-14);
 `
 
 const fallingIconCss = css`
-  color: var(--color-green-700);
+  color: var(--tone-fg-accent-8);
 `
 
 const DELTA_ICON_SIZE = 12

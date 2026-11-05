@@ -8,6 +8,7 @@ import type { EmbedAttributes } from "@/../types/GutenbergBlockAttributes"
 import BreakFromCentered from "@/shared-module/common/components/Centering/BreakFromCentered"
 import { baseTheme } from "@/shared-module/common/styles/theme"
 import { LoadingRegion, ErrorNotice } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 import aspectRatioFromClassName from "@/utils/course-material/aspectRatioFromClassName"
 import { sanitizeCourseMaterialHtml } from "@/utils/course-material/sanitizeCourseMaterialHtml"
 
@@ -72,7 +73,7 @@ export const VimeoEmbedBlock: React.FC<
                 font-size: ${baseTheme.fontSizes[0]}px;
                 margin-top: 0.5em;
                 margin-bottom: 1em;
-                color: ${baseTheme.colors.gray[400]};
+                color: ${tones.toneNeutral39};
               `}
               dangerouslySetInnerHTML={{ __html: sanitizeCourseMaterialHtml(props.caption ?? "") }}
             ></figcaption>

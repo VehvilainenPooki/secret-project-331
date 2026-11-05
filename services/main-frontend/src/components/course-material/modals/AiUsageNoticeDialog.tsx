@@ -10,9 +10,9 @@ import { getAiUsageNoticeAcknowledgementQueryKey } from "@/generated/course-mate
 import { acknowledgeAiUsageNotice } from "@/generated/course-material-api/sdk.generated"
 import type { CourseAiPolicy } from "@/generated/course-material-api/types.generated"
 import useToastMutation from "@/shared-module/common/hooks/useToastMutation"
-import { baseTheme } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
 import { Button, Checkbox, Dialog, ErrorNotice, TransLink } from "@/shared-module/components"
+import { tones } from "@/shared-module/components/styles/themes"
 
 // The University of Helsinki guidelines on using AI to support learning.
 // Only fi/sv/en versions are published; other languages fall back to the English page.
@@ -166,7 +166,7 @@ const AiUsageNoticeDialog: React.FC<React.PropsWithChildren<AiUsageNoticeDialogP
           <p
             className={css`
               margin: 0;
-              color: ${baseTheme.colors.gray[600]};
+              color: ${tones.toneNeutral44};
             `}
           >
             {t("ai-usage-notice-paragraph-2")}

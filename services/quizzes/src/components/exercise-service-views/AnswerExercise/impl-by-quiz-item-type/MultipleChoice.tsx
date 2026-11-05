@@ -180,10 +180,10 @@ const MultipleChoice: React.FunctionComponent<
         <div
           className={css`
             font-size: 0.813rem;
-            color: #564f23;
+            color: var(--tone-fg-warning-6);
             margin: 0.6rem 0;
             width: 100%;
-            background: #f6f2da;
+            background: var(--tone-bg-warning-5);
             font-size: 1.125rem;
             padding: 0.75rem 0.875rem;
             display: flex;

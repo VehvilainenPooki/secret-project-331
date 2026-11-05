@@ -7,8 +7,9 @@ import { VegaLite } from "react-vega"
 
 import { useDebouncedElementWidth } from "@/shared-module/common/hooks/useDebouncedElementWidth"
 import { useFontLoaded } from "@/shared-module/common/hooks/useFontLoaded"
-import { baseTheme, primaryFont } from "@/shared-module/common/styles"
+import { primaryFont } from "@/shared-module/common/styles"
 import withErrorBoundary from "@/shared-module/common/utils/withErrorBoundary"
+import { tones } from "@/shared-module/components/styles/themes"
 
 import type { BlockRendererProps } from "../.."
 import { useChartNaturalHeight } from "./useChartNaturalHeight"
@@ -58,12 +59,12 @@ const ChartBlock: React.FC<React.PropsWithChildren<BlockRendererProps<ChartBlock
         <div
           className={css`
             padding: 1rem;
-            background: ${baseTheme.colors.red[100]};
-            border: 1px solid ${baseTheme.colors.red[400]};
+            background: ${tones.toneDanger2};
+            border: 1px solid ${tones.toneDanger10};
             border-radius: 4px;
             font-family: ${primaryFont};
             font-size: 0.875rem;
-            color: ${baseTheme.colors.red[700]};
+            color: ${tones.toneDanger19};
             min-height: ${MIN_HEIGHT}px;
             display: flex;
             align-items: center;
@@ -102,12 +103,12 @@ const ChartBlock: React.FC<React.PropsWithChildren<BlockRendererProps<ChartBlock
         <div
           className={css`
             padding: 1rem;
-            background: ${baseTheme.colors.gray[100]};
-            border: 1px solid ${baseTheme.colors.gray[400]};
+            background: ${tones.toneNeutral29};
+            border: 1px solid ${tones.toneNeutral39};
             border-radius: 4px;
             font-family: ${primaryFont};
             font-size: 0.875rem;
-            color: ${baseTheme.colors.gray[700]};
+            color: ${tones.toneNeutral46};
             min-height: ${MIN_HEIGHT}px;
             display: flex;
             align-items: center;
@@ -122,7 +123,7 @@ const ChartBlock: React.FC<React.PropsWithChildren<BlockRendererProps<ChartBlock
             margin: 0.5rem 0 0;
             font-family: ${primaryFont};
             font-size: 0.875rem;
-            color: ${baseTheme.colors.gray[600]};
+            color: ${tones.toneNeutral44};
             text-align: center;
           `}
         >

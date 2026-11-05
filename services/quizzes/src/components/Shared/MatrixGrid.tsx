@@ -3,7 +3,7 @@ import styled from "@emotion/styled"
 import React, { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import { baseTheme } from "@/shared-module/common/styles"
+import { tones } from "@/shared-module/components/styles/themes"
 import { primaryFont } from "@/shared-module/exercise-react/styles"
 import {
   blankCellsInsideShape,
@@ -16,11 +16,11 @@ import {
 export const MatrixTable = styled.table`
   /* Room for the frame brackets, which overhang the grid by 4px and would be clipped by the iframe */
   margin: 4px auto;
-  background-color: #e2e4e6;
+  background-color: var(--tone-bg-neutral-62);
   border-collapse: collapse;
   td {
     /* Lightest gray with 3:1 against both cell backgrounds (WCAG 1.4.11); kept 1px so the frame dominates */
-    border: 1px solid #8b8f96;
+    border: 1px solid var(--tone-border-neutral-54);
   }
   /* Only inner lines, so the grid has no outer edge */
   td:first-child {
@@ -120,22 +120,22 @@ interface CellInputStyleProps {
 const cellBackground = ({ column, row, cellText, frame, isGap }: CellInputStyleProps) => {
   if (isGap) {
     // Strongest red tint that keeps 3:1 against the grid lines and focus outline
-    return "#FFF4F4"
+    return "var(--tone-tone-neutral-10)"
   }
   if (cellText === "" && (column >= frame.columns || row >= frame.rows)) {
-    return "#F5F6F7"
+    return "var(--tone-tone-neutral-12)"
   }
-  return "#FFFFFF"
+  return "var(--tone-tone-neutral-1)"
 }
 
 // Red inner border makes a gap read as an error even though its tint has to stay pale
-const GAP_BORDER = `box-shadow: inset 0 0 0 2px ${baseTheme.colors.red[600]};`
+const GAP_BORDER = `box-shadow: inset 0 0 0 2px ${tones.toneDanger17};`
 
 const cellInputStyle = (props: CellInputStyleProps) =>
   `
     position: relative;
     font-size: 1.375rem;
-    color: #313947;
+    color: var(--tone-fg-neutral-35);
     font-family: ${primaryFont};
     display: block;
     width: 3.125rem;
@@ -145,7 +145,7 @@ const cellInputStyle = (props: CellInputStyleProps) =>
 
     &:focus-visible {
       /* Lightest green with 3:1 against both cell backgrounds; 2px meets the AAA minimum (WCAG 2.4.13) */
-      outline: 2px solid #519a96;
+      outline: 2px solid var(--tone-border-accent-9);
       outline-offset: -3px;
       z-index: 2;
     }
@@ -220,7 +220,7 @@ const BORDER_STYLES = `
   z-index: 1;
 `
 // green[600] is ~6:1 against the cell background, so the frame stands out from the grid
-const BORDER_CONSTANT = `3px solid ${baseTheme.colors.green[600]}`
+const BORDER_CONSTANT = `3px solid ${tones.toneAccent21}`
 
 interface MatrixFrameProps {
   column: number
