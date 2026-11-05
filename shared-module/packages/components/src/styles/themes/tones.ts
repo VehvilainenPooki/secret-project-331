@@ -241,7 +241,7 @@ export const lightTones = {
   borderNeutral51: "#9CA3AF",
   borderNeutral52: gray[300],
   borderNeutral53: "#999999",
-  borderNeutral54: gray[300],
+  borderNeutral54: "#8B8F96",
   borderNeutral55: gray[400],
   borderNeutral56: "#6C757D",
   borderNeutral57: gray[500],
