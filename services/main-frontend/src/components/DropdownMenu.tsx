@@ -11,7 +11,7 @@ import { omitUndefined } from "@/shared-module/common/utils/nullability"
 
 import TopBarMenuButton from "./Topbar/TopBarMenuButton"
 
-const itemRow = css`
+export const itemRow = css`
   display: flex;
   align-items: center;
   align-content: flex-start;
@@ -46,7 +46,7 @@ const itemIcon = css`
   opacity: 0.9;
 `
 
-const popoverStyle = css`
+export const popoverStyle = css`
   background: var(--color-surface);
   border: 1px solid var(--tone-border-neutral-13);
   border-radius: 12px;

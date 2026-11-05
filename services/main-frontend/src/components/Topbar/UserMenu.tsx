@@ -5,7 +5,6 @@ import { css } from "@emotion/css"
 import React, { useContext, useState } from "react"
 import { Menu, MenuItem, MenuTrigger, Popover, Separator } from "react-aria-components"
 
-import ThemeSelect from "@/shared-module/common/components/ThemeSelect"
 import LoginStateContext from "@/shared-module/common/contexts/LoginStateContext"
 import { respondToOrLarger } from "@/shared-module/common/styles/respond"
 import { omitUndefined } from "@/shared-module/common/utils/nullability"
@@ -175,14 +174,6 @@ const UserMenu: React.FC<React.PropsWithChildren<UserMenuProps>> = ({ menuOption
             {displayEmail}
           </div>
         </div>
-
-        <ThemeSelect
-          className={css`
-            padding: 8px 12px;
-            border-bottom: 1px solid var(--tone-border-neutral-13);
-            margin-bottom: 4px;
-          `}
-        />
 
         <Menu
           data-testid="topbar-user-menu-popover"

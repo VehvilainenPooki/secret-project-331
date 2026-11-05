@@ -20,6 +20,7 @@ import { MobileMenuButton } from "./MobileMenu/MobileMenuButton"
 import { MobileMenuOverlay } from "./MobileMenu/MobileMenuOverlay"
 import QuickActionsMenu from "./QuickActionsMenu"
 import SearchButton from "./SearchButton"
+import ThemeMenu from "./ThemeMenu"
 import UserMenu from "./UserMenu"
 
 interface MenuOption {
@@ -358,6 +359,10 @@ const Topbar: React.FC<TopbarProps> = ({
             </div>
 
             <MobileMenuButton state={menuState} />
+
+            {/* Theme is the rightmost item and outside the clusters above, so it is there for
+                everyone at every width, signed in or not. */}
+            <ThemeMenu />
           </div>
         </div>
       </header>
